@@ -5,7 +5,7 @@
 
 ### Descripción de los Participantes 
 
-Nombre: Lautaro Valenzuela
+-Nombre: Lautaro Valenzuela
 Edad: 22
 Localidad: San Miguel
 Dedicación: Estudiante de Progrmación Web Full Stack. Estudiante universitario de Contador Público en primer año.
