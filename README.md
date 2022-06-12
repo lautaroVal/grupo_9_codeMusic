@@ -18,6 +18,13 @@ Y hoy estoy haciendo este curso porque tenía curiosidad, hace tiempo, de sumerg
 -Dedicacion: Estudiante de Programacion Web Full Stack. Estudiante de la carrera Lic. en Psicologia, primer año. Trabajo en un negocio propio.
 -Biografia: Naci en San Miguel. Tengo estudios primarios y secundarios finalizados. Actualmente vivo con mi pareja y tenemos un comercio en comun orientado a los productos de granja. 
 
+-Nombre: Nahiara Belvedere
+-Edad: 20
+-Localidad: Bella Vista, San Miguel
+-Dedicacion: Estudiante de tecnicatura en programación en la UNAHUR. También estudiante de programación Web Full Stack en Digital House. Trabajo de atención al cliente en call center de Banco Provincia.
+-Biografia: Naci en moron, pero siempre vivi en Bella Vista. Terminé el secundario en 2019 con la orientación en Ciencias Sociales, pero desde chica siempre supe que era otra cosa lo que me apasionaba, asi que empece la carrera en el 2020 pero empezo la pandemia y en ese momento no contaba con wifi en mi casa asi que tuve que abandonar. Pude volver a retomar la carrera recien el año pasado. 
+
+
 
 
 
