@@ -1,8 +1,7 @@
-# Temática del sitio Web: Instrumentos musicales. 
+# Temática del sitio Web: Venta de Instrumentos Musicales.
 
-## Audiencia: Público en General
-## 
-<!-- ¿Cómo ajustaremos nuestra oferta a ese público? -->
+## Audiencia: Público en General:
+#### *Nuestro proctudo se ajusta a todo publico, para que fluya la creatividad con un sin fin de instrumentos acorde para cada edad y usuario.*
 
 ### Descripción de los Participantes 
 
