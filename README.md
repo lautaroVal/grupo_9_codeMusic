@@ -21,6 +21,3 @@ Y hoy estoy haciendo este curso porque tenía curiosidad, hace tiempo, de sumerg
 
 
 
-
-
-
