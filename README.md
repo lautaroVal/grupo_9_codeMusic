@@ -3,6 +3,10 @@
 ## Audiencia: Público en General:
 #### *Nuestro proctudo se ajusta a todo publico, para que fluya la creatividad con un sin fin de instrumentos acorde para cada edad y usuario.*
 
+### Links de paginas que nos inspiraron:
+- https://www.famusic.com.ar/?mshops-cookie-isguest=false&mshops-redirection-timestamp=1655341080969&mshops-cookie-cp=1923%7C1642018065687
+- https://www.kaironmusic.com.ar/comprar/
+
 ### Descripción de los Participantes 
 
 - **Nombre**: `Lautaro Valenzuela`
