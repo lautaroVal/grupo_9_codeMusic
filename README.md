@@ -4,8 +4,10 @@
 #### *Nuestro proctudo se ajusta a todo publico, para que fluya la creatividad con un sin fin de instrumentos acorde para cada edad y usuario.*
 
 ### Links de paginas que nos inspiraron:
-- https://www.famusic.com.ar/?mshops-cookie-isguest=false&mshops-redirection-timestamp=1655341080969&mshops-cookie-cp=1923%7C1642018065687
+- https://www.famusic.com.ar/
 - https://www.kaironmusic.com.ar/comprar/
+- https://www.cdmarket.com.ar/
+- https://www.casalibertella.com/
 
 ### Descripción de los Participantes 
 
