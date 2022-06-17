@@ -39,8 +39,18 @@ ___
 - **Nombre**: `Mansilla Marcos`
 - **Edad**: `32`
 - **Localidad**: `Berisso, Buenos Aires`
-- **Dedicacion**: Tecnico Electromecanico, Trabajos de Pintura, Reparto de Gas envasado Desarrolador Full Stack.
+- **Dedicacion**: Tecnico Electromecanico, Trabajos de Pintura, Reparto de Gas envasado, Desarrolador Full Stack.
 - **Biografia**: *Naci y creci siempre en la misma ciudad, siempre tuve de cerca la tecnologia, me gusta y actualmente estoy cursando para poder trabajar y dedicarme al ambiente que siempre me gusto. Ademas me gusta mucho la naturaleza, la musica y los momentos de ocios*
+
+___
+
+### Sitios de Referencia
+
+- https://www.kaironmusic.com.ar/
+- https://www.famusic.com.ar/
+- https://www.casalibertella.com/
+- https://www.grid.com.ar/
+- https://www.cdmarket.com.ar/
 
 
 
