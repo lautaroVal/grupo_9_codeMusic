@@ -1,5 +1,5 @@
-# Temática del sitio Web: Venta de Instrumentos Musicales.
-
+# Code Music
+## Temática del sitio Web: Venta de Instrumentos Musicales.
 ## Audiencia: Público en General:
 #### *Nuestro proctudo se ajusta a todo publico, para que fluya la creatividad con un sin fin de instrumentos acorde para cada edad y usuario.*
 
@@ -42,7 +42,7 @@ ___
 
 -  <a href="https://www.kaironmusic.com.ar/"> Kairon Music</a> = Motivo: Colores, Footer, secciones de los productos.
 -  <a href="https://www.famusic.com.ar/"> FaMusic</a> = Motivo: El logo, los colores, Carrusel y secciones.
--  <a href="https://www.casalibertella.com/">   Casa Libertella</a> = Motivo: La visualización de los productos del mismo rubro que nuestro sitio.
+-  <a href="https://www.casalibertella.com/"> Casa Libertella</a> = Motivo: La visualización de los productos del mismo rubro que nuestro sitio.
 -  <a href="https://www.grid.com.ar/"> Grid</a> = Motivo: El Header, diseño, tamaños, maquetación y color.
 -  <a href="https://www.cdmarket.com.ar/"> CDMarket</a> = Motivo: El diseño del Body y carruseles.
  
