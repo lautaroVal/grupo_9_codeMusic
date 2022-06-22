@@ -40,11 +40,12 @@ ___
 
 ### Sitios de Referencia
 
--  <a href="https://www.kaironmusic.com.ar/"> Kairon Music</a>
-- https://www.famusic.com.ar/
-- https://www.casalibertella.com/
-- https://www.grid.com.ar/
-- https://www.cdmarket.com.ar/
+-  <a href="https://www.kaironmusic.com.ar/"> Kairon Music</a> = Motivo: Colores, Footer, secciones de los productos.
+-  <a href="https://www.famusic.com.ar/"> FaMusic</a> = Motivo: El logo, los colores, Carrusel y secciones.
+-  <a href="https://www.casalibertella.com/"> FaMusic</a> = Motivo: La visualización de los productos del mismo rubro que nuestro sitio.
+-  <a href="https://www.grid.com.ar/"> FaMusic</a> = Motivo: El Header, diseño, tamaños, maquetación y color.
+-  <a href="https://www.cdmarket.com.ar/"> FaMusic</a> = Motivo: El diseño del Body y carruseles.
+ 
 
 
 
