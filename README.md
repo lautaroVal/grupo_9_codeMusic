@@ -22,7 +22,7 @@ ___
 
 ___
 
-- **Nombre**: `Nahiara Stefania Belvedere Salinas`
+- **Nombre**: `Nahiara Belvedere`
 - **Edad**: `20`
 - **Localidad**: `Bella Vista, San Miguel`
 - **Dedicacion**: Estudiante de tecnicatura en programación en la UNAHUR. También estudiante de programación Web Full Stack en Digital House. Trabajo de atención al cliente en call center de Banco Provincia.
