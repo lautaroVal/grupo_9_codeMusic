@@ -42,11 +42,11 @@ ___
 
 ### Sitios de Referencia
 
--  <a href="https://www.kaironmusic.com.ar/"> Kairon Music</a> = Motivo: Colores, Footer, secciones de los productos.
--  <a href="https://www.famusic.com.ar/"> FaMusic</a> = Motivo: El logo, los colores, Carrusel y secciones.
--  <a href="https://www.casalibertella.com/"> Casa Libertella</a> = Motivo: La visualización de los productos del mismo rubro que nuestro sitio.
--  <a href="https://www.grid.com.ar/"> Grid</a> = Motivo: El Header, diseño, tamaños, maquetación y color.
--  <a href="https://www.cdmarket.com.ar/"> CDMarket</a> = Motivo: El diseño del Body y carruseles.
+-  <a href="https://www.kaironmusic.com.ar/" target="_blank"> Kairon Music</a> = Motivo: Colores, Footer, secciones de los productos.
+-  <a href="https://www.famusic.com.ar/" target="_blank"> FaMusic</a> = Motivo: El logo, los colores, Carrusel y secciones.
+-  <a href="https://www.casalibertella.com/" target="_blank"> Casa Libertella</a> = Motivo: La visualización de los productos del mismo rubro que nuestro sitio.
+-  <a href="https://www.grid.com.ar/" target="_blank"> Grid</a> = Motivo: El Header, diseño, tamaños, maquetación y color.
+-  <a href="https://www.cdmarket.com.ar/" target="_blank"> CDMarket</a> = Motivo: El diseño del Body y carruseles.
  
 
 
