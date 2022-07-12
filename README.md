@@ -3,7 +3,7 @@
 ## Temática del sitio Web: Venta de Instrumentos Musicales.
 ## Audiencia: Público en General:
 
-#### *Nuestro proctudo se ajusta a todo publico, para que fluya la creatividad con un sin fin de instrumentos acorde para cada edad y usuario.*
+#### *Somos un grupo de estudiantes de Programacion Full Stack, teniendo nuestro primer desafio al crear un e-commers e ir aprendiendo en el camino. Con muchos animos de progresar y de seguir aprendiendo.*
 
 ### Descripción de los Participantes 
 
@@ -35,7 +35,7 @@ ___
 - **Nombre**: `Mansilla Marcos`
 - **Edad**: `32`
 - **Localidad**: `Berisso, Buenos Aires`
-- **Dedicacion**: Tecnico Electromecanico, Trabajos de Pintura, Reparto de Gas envasado, Desarrolador Full Stack.
+- **Dedicacion**: Tecnico Electromecanico, Trabajos de Pintura, Reparto de Gas envasado, Programador web Full Stack.
 - **Biografia**: *Naci y creci siempre en la misma ciudad, siempre tuve de cerca la tecnologia, me gusta y actualmente estoy cursando para poder trabajar y dedicarme al ambiente que siempre me gusto. Ademas me gusta mucho la naturaleza, la musica y los momentos de ocios*
 
 ___
