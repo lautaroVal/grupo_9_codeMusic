@@ -12,3 +12,5 @@ app.get('/productDetail', (req,res) => res.sendFile(path.resolve(__dirname, 'vie
 app.get('/productCart', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')));
 app.get('/register', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'register.html')));
 app.get('/login', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'login.html')));
+
+/* Recuerden cuando bajan todo hacer el "npm i express" */
