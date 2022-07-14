@@ -5,6 +5,8 @@
 
 #### *Somos un grupo de estudiantes de Programacion Full Stack, teniendo nuestro primer desafio al crear un e-commers e ir aprendiendo en el camino. Con muchos animos de progresar y de seguir aprendiendo.*
 
+![CODEMUSIC (10)](https://user-images.githubusercontent.com/106128572/179086049-f4ebd33b-0047-46ec-af4b-8af44a6038f2.png)
+
 ### Descripción de los Participantes 
 
 - **Nombre**: `Lautaro Valenzuela`
