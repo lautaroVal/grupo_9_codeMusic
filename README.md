@@ -3,7 +3,7 @@
 ## Temática del sitio Web: Venta de Instrumentos Musicales.
 ## Audiencia: Público en General:
 
-#### *Somos un grupo de estudiantes de Programación Full Stack, teniendo nuestro primer desafío al crear un e-commerce e ir aprendiendo en el camino. Con muchos ánimos de progresar y de seguir aprendiendo.*
+#### *Somos un grupo de estudiantes de Programación Web Full Stack, teniendo nuestro primer desafío al crear un e-commerce e ir aprendiendo en el camino. Con muchos ánimos de progresar y de seguir aprendiendo.*
 
 ![CODEMUSIC (10)](https://user-images.githubusercontent.com/106128572/179086049-f4ebd33b-0047-46ec-af4b-8af44a6038f2.png)
 
