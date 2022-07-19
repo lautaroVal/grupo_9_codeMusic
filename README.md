@@ -5,7 +5,8 @@
 
 #### *Somos un grupo de estudiantes de Programación Web Full Stack, teniendo nuestro primer desafío al crear un e-commerce e ir aprendiendo en el camino. Con muchos ánimos de progresar y de seguir aprendiendo.*
 
-![CODEMUSIC (10)](https://user-images.githubusercontent.com/106128572/179086049-f4ebd33b-0047-46ec-af4b-8af44a6038f2.png)
+![Diseño sin título](https://user-images.githubusercontent.com/106128572/179658494-a3c542c4-30f9-44c5-9570-2883ba74f688.gif)
+
 
 ### Descripción de los Participantes 
 
