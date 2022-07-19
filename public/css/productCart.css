@@ -1,3 +1,83 @@
 .logo-container {
    padding-left: 100px;
 }
+
+* {
+   margin: 0;
+}
+
+
+.detalle {
+   font-size: 20px;
+   list-style: none;
+   display: flex;
+   justify-content: space-around;
+   margin-top: 30px;
+}
+
+.contenedor-header {
+   background-color: black;
+   width: 100%;
+   height: 100px;
+
+}
+.contenedor-barraBusqueda {
+   text-align: center;
+
+}
+
+.contenedor-barraBusqueda input {
+   text-align: center;
+   color: white;
+   border-radius: 20px;
+   width: 30%;
+   height: 30px;
+}
+
+
+h1 {
+   text-align: center;
+   padding: 10px;
+   margin: 0px;
+}
+
+.contenedor-menu {
+   list-style: none;
+   display: flex;
+   justify-content: space-around;
+   font-size: 20px;
+   margin: 20px;
+}
+
+.contenedor-productos {
+   list-style: none;
+}
+
+.contenedor-imagenBateria {
+   width: 160px;
+   margin: 0px 100px 0px 100px;
+}
+
+.contenedor-imagenGuitarra {
+   width: 70px;
+   margin: 0px 150px 0px 150px;
+}
+
+
+.contenedor-footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 120px;
+ background-color: black;
+ border-radius: 70px 0 0 0;
+}
+
+.contenedor-footer div {
+   font-size: 15px;
+   text-align: center;
+   color: white;
+   list-style: none;
+   float:left;
+   margin: 5px 60px 5px 70px;
+}
