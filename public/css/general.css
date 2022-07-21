@@ -1,3 +1,18 @@
+:root{
+    --ColorNegro: #0000;
+    --ColorAzul: #202040;
+    --ColorGris: #F2F5F9;
+    --ColorBlanco: #FFFFFF;
+
+}
 *{
+    box-sizing: border-box;
+    margin: 0;
+    
+
+}
+
+body {
+    font-family: 'Montserrat';
 
 }
