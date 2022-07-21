@@ -4,7 +4,8 @@
   "description": "- **Nombre**: `Lautaro Valenzuela`\r - **Edad**: `22`\r - **Localidad**: `San Miguel`\r - **Dedicación**: Estudiante de Progrmación Web Full Stack. Estudiante universitario de Contador Público en primer año.\r - **Biografia**: *Nací el 10/03/2000 en el Palomar, Bs As, Argentina. Actualmente vivo en San miguel. Mi educación alcanzada es: Secundario Técnico finalizado en 2019, titulo Maestro Mayor de obras. Estudie 2 años en un conservatorio de musica pero no lo finalizé. Mis hobbies son tocar la guitarra y el piano. Tambien me gusta jugar un poco al futbol.\r Y hoy estoy haciendo este curso porque tenía curiosidad, hace tiempo, de sumergirme en el mundo de la tecnología por eso aproveché la oportunidad con entusiasmo.*",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
