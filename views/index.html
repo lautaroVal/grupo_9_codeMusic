@@ -9,25 +9,28 @@
     
     <title>Home</title>
 </head>
-<body>
-    <header>
-        <div>
-          <button><i class="fa fa-bars"></i></button>
+<body class="index">
+    <header class="index_header">
 
-          <div>
-            <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo"></a>
-          </div>
+        <div class="index_header_topnavbar">
+            <div class="index_header_topnavbar_div">
+                <button class="index_hambur"><i class="fa fa-bars"></i></button>
 
-          <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
-          <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo" class="index_logo"></a>
+
+                <a href="/login" class="index_header_login"><i class="fa-solid fa-circle-user" ></i></a>
+                <a href="/productCart" class="index_header_cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+       
+       
         
-            <form action="/productDetail" method="get">
-                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
+            <form action="/productDetail" method="get" class="index_header_form">
+                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?" >
                 <button  onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+            </form>       
         </div>
         
-        <nav class="home-navbar">
+        <nav class="index_header_navbar">
             <ul>
                 <li><a href="#guitar" >Guitarras</a></li>
                 <li><a href="">Baterias</a></li>
@@ -39,7 +42,7 @@
     </header>
 
     <main>
-        <figure>
+        <figure class="figure-banner">
             <img src="/img/banner-codemusic.jpg" alt="Carrusel">
         </figure>
 
@@ -350,7 +353,7 @@
 
     </main>
 
-    <footer>
+    <footer class="index_header">
         <section>
         <h2>CODE MUSIC</h2>
         <ul>
