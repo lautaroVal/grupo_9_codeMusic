@@ -1,25 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/985c010c44.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/117c6921aa.js" crossorigin="anonymous">
     <title>detalleProducto</title>
 </head>
-<body>
-    <header>
-        <h1>HOla</h1>
+
+<body class="productDetail">
+    <header class="productDetail_header">
+
+        <div class="productDetail_img">
+              <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo"></a>
+        </div>
+
+        <div>
+            <form action="/productDetail" method="get">
+                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
+                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div>
+            <button><i class="fa fa-bars"></i></button>
+            <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <nav class="">
+            <ul>
+                <li><a href="#guitar">Guitarras</a></li>
+                <li><a href="">Baterias</a></li>
+                <li><a href="">Teclados y pianos</a></li>
+                <li><a href="">Micrófonos y sonido</a></li>
+                <li><a href="">Instrumentos de vientos</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main class="productDetail_main">
+        
+        <aside>
+
+        </aside>
+
+        <section>
+            <img width="300px" src="/img/BateriaMapex.jpg" alt="">
+        </section>
+
+        <aside>
+            <div>
+                <span>$173,338</span>
+                <span>en</span>
+                <span>12 x $14.444</span>
+                <span>91</span>
+                <span>sin interes</span>
+            </div>
+        </aside>
+
+        <section>
+
+        </section>
+
+        <section>
+
+        </section>
 
     </main>
 
-    <footer>
+    <footer class="productDetail_footer">
 
     </footer>
-    
+
 </body>
+
 </html>
