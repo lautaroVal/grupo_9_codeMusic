@@ -3,8 +3,9 @@
     color: #F2F5F9;
 }
 
-.index_hambur i {
+.index_hambur {
     background-color: none;
+    border: none;
 }
 
 .index_header {
@@ -22,7 +23,7 @@
 }
 
 .index_logo{
-    width: 60px;
+    width: 80px;
 }
 
 .index_header_login {
