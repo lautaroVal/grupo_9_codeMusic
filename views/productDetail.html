@@ -11,26 +11,27 @@
 </head>
 
 <body class="productDetail">
-    <header class="productDetail_header">
+    <header class="index_header">
 
-        <div class="productDetail_img">
-              <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo"></a>
-        </div>
+        <div class="index_header_topnavbar">
+            <div class="index_header_topnavbar_div">
+                <button class="index_hambur"><i class="fa fa-bars"></i></button>
 
-        <div>
-            <form action="/productDetail" method="get">
+                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo" class="index_logo"></a>
+
+                <a href="/login" class="index_header_login"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="/productCart" class="index_header_cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+
+
+            <form action="/productDetail" method="get" class="index_header_form">
                 <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
                 <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
 
-        <div>
-            <button><i class="fa fa-bars"></i></button>
-            <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
-            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-
-        <nav class="">
+        <nav class="index_header_navbar">
             <ul>
                 <li><a href="#guitar">Guitarras</a></li>
                 <li><a href="">Baterias</a></li>
@@ -40,9 +41,10 @@
             </ul>
         </nav>
     </header>
+    </header>
 
     <main class="productDetail_main">
-        
+
         <aside>
 
         </aside>

@@ -1,0 +1,50 @@
+/* HEADER */
+.index {
+    color: #F2F5F9;
+}
+
+.index_header{
+    background-color: var(--ColorNegro);
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.index_header_topnavbar_div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.index_hambur{
+    background-color: var(--ColorNegro);
+    border: none;
+    color: var(--ColorBlanco);
+}
+
+.index_logo{
+    width: 40%;
+}
+
+.index_header_form{
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+    height: 20px;
+    align-items: center;
+}
+
+.index_header_login {
+}
+
+.index_header_cart {
+    display: none;
+}
+
+
+
+.index_header_navbar{
+    display: none;
+}
