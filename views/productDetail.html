@@ -11,27 +11,23 @@
 </head>
 
 <body class="productDetail">
-    <header class="index_header">
+    <header class="productDetail_header">
 
-        <div class="index_header_topnavbar">
-            <div class="index_header_topnavbar_div">
-                <button class="index_hambur"><i class="fa fa-bars"></i></button>
-
-                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo" class="index_logo"></a>
-
-                <a href="/login" class="index_header_login"><i class="fa-solid fa-circle-user"></i></a>
-                <a href="/productCart" class="index_header_cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <section class="productDetail_header_top">
+            <div class="productDetail_header_top_burger">
+                <button><i class="fa fa-bars"></i></button>
             </div>
+            <div class="productDetail_header_top_logo">
+                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt=""></a>
+            </div>
+            <div class="productDetail_header_top_icon">
+                <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
+                <a class="productDetail_header_top_icon_cart" href="/productCart"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </section>
 
-
-
-            <form action="/productDetail" method="get" class="index_header_form">
-                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
-                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-
-        <nav class="index_header_navbar">
+        <nav class="productDetail_header_navbar">
             <ul>
                 <li><a href="#guitar">Guitarras</a></li>
                 <li><a href="">Baterias</a></li>
@@ -40,13 +36,19 @@
                 <li><a href="">Instrumentos de vientos</a></li>
             </ul>
         </nav>
-    </header>
+
+        <div class="productDetail_header_search">
+            <form action="/productDetail" method="get">
+                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
+                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
     </header>
 
     <main class="productDetail_main">
 
         <aside>
-
         </aside>
 
         <section>
@@ -74,6 +76,37 @@
     </main>
 
     <footer class="productDetail_footer">
+        <section class="productDetail_footer_nav">
+            <nav>
+                <h3>CODE MUSIC</h3>
+                <br>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Sobre Nosotros</a></li>
+                    <li><a href="">Preguntas Frecuentes</a></li>
+                    <li><a href="">Terminos y Condiciones</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <section class="productDetail_footer_contac">
+            <div>
+                <h3>CONTACTANOS</h3>
+                <br>
+                <p>Av. Rivadavia 1565, CABA</p>
+                <p>(011) 7875-8564</p>
+                <p>info@codemusic.com.ar</p>
+            </div>
+            <br>
+            <section class="productDetail_footer_redes">
+                <h3>REDES SOCIALES</h3>
+                <div>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </section>
+        </section>
 
     </footer>
 

@@ -16,3 +16,19 @@
 body {
     font-family: 'Montserrat';
 }
+li{
+    list-style: none;
+}
+
+ul, ol{
+    padding-left: 0;
+ }
+
+a{
+    text-decoration: none;
+    color: var(--ColorBlanco);
+}
+
+p{
+    font-size: 15px;
+}

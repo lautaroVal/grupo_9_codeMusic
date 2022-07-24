@@ -1,50 +1,116 @@
 /* HEADER */
-.index {
-    color: #F2F5F9;
-}
+.index, .productDetail {
+    background-color: var(--ColorGris);
+    color: var(--ColorGris);
+ }
 
-.index_header{
+.index_header, .productDetail_header{
     background-color: var(--ColorNegro);
     padding: 20px;
     margin-bottom: 20px;
-
-}
-
-.index_header_topnavbar_div{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: center;
-    margin-bottom: 10px;
+    position: relative;
+
 }
 
-.index_hambur{
-    background-color: var(--ColorNegro);
-    border: none;
-    color: var(--ColorBlanco);
-}
+/* header top */
 
-.index_logo{
-    width: 40%;
-}
-
-.index_header_form{
+.index_header_topnavbar_div, .productDetail_header_top{
     display: flex;
-    width: 100%; 
-    justify-content: center;
-    height: 20px;
+    text-align: center; 
     align-items: center;
+    width: auto;
+    margin: auto;
+    position: relative;
+    justify-content: space-between;
 }
 
-.index_header_login {
+.index_hambur, .productDetail_header_top_burger button{
+    background-color: var(--ColorNegro);
+    color: var(--ColorBlanco);
+    font-size: 18px;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
 }
 
-.index_header_cart {
+.index_logo, .productDetail_header_top_logo{
+    width: 60%;
+}
+
+.index_logo, .productDetail_header_top_logo img{
+    width: 48%;
+}
+
+.index_header_login, .productDetail_header_top_icon {
+    font-size: 25px;
+    
+}
+
+.index_header_cart, .productDetail_header_top_icon_cart {
     display: none;
 }
 
+    /* header nav */
 
-
-.index_header_navbar{
+.index_header_navbar, .productDetail_header_navbar li{
     display: none;
+    list-style: none;
+    list-style-type: none;
+    margin: 3px;
+    text-decoration: none;
+    
+}
+
+    /* header search */
+
+.index_header_form, .productDetail_header_search{
+    margin: auto;
+    position: relative;
+    padding: 5px;
+}
+
+.productDetail_header_search form{
+ 
+    
+}
+
+.productDetail_header_search form input{
+    height: 26px;
+    width: auto;
+    
+}
+
+.productDetail_header_search form button{
+    position: absolute;
+    outline: none;
+    right: 8px;
+    top: 8px;
+}
+
+
+@media (min-width: 768px) {
+
+    .index_header_topnavbar_div, .productDetail_header_top{
+        gap: 25%;
+
+    }
+
+    .index_logo, .productDetail_header_top_logo img{
+        display: flex;
+        margin: auto;
+        width: 45%;
+        padding-bottom: 15px;
+    }
+
+    .index_header_form, .productDetail_header_search{
+        display: flex;
+        margin-left: 29%;
+    }
+
+    .productDetail_header_search form{
+       
+    }
+
 }
