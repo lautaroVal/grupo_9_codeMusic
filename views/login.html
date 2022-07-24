@@ -10,31 +10,38 @@
 </head>
 <body>
     <header>
-        <div>
-            <button><i class="fa fa-bars"></i></button>
-  
-            <div>
-              <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo"></a>
+        class="productDetail_header">
+
+        <section class="login_header_top">
+            <div class="login_header_top_burger">
+                <button><i class="fa fa-bars"></i></button>
             </div>
-  
-            <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
-            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-          
-              <form action="/productDetail" method="get">
-                  <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
-                  <button  onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
-              </form>
-          </div>
-          
-          <nav class="home-navbar">
-              <ul>
-                  <li><a href="#guitar" >Guitarras</a></li>
-                  <li><a href="">Baterias</a></li>
-                  <li><a href="">Teclados y pianos</a></li>
-                  <li><a href="">Micrófonos y sonido</a></li>
-                  <li><a href="">Instrumentos de vientos</a></li>
-              </ul>
-          </nav>
+            <div class="login_header_top_logo">
+                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt=""></a>
+            </div>
+            <div class="login_header_top_icon">
+                <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
+                <a class="login_header_top_icon_cart" href="/productCart"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </section>
+
+        <nav class="login_header_navbar">
+            <ul>
+                <li><a href="#guitar">Guitarras</a></li>
+                <li><a href="">Baterias</a></li>
+                <li><a href="">Teclados y pianos</a></li>
+                <li><a href="">Micrófonos y sonido</a></li>
+                <li><a href="">Instrumentos de vientos</a></li>
+            </ul>
+        </nav>
+
+        <div class="login_header_search">
+            <form action="/login" method="get">
+                <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
+                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
     </header>
 
     <main>
