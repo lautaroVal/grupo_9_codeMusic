@@ -10,11 +10,19 @@
 </head>
 <body>
     <header class="productCart_header">
-        <img class="productCart_header_LOGOTIPO" src="/grupo_9_codeMusic/public/img/LOGO-CODEMUSIC.png" alt="Logo CODEMUSIC">
+        <div class="productCart_header_LOGOTIPO">
+            <img src="/grupo_9_codeMusic/public/img/LOGO-CODEMUSIC.png" alt="Logo CODEMUSIC">
+        </div>
+        <div class="productDetail_header_search">
+            <form action="/productDetail" method="get">
+                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
+            </form>
+        </div>
     </header>
     <main>
         <h1>Carrito de Compras</h1>
         <br>
+            <div>
                 <section class="productCart_main_contenedor">
                     <article>
                         <ul class="productCart_main_menu">
@@ -25,21 +33,27 @@
                     </article>  
 
                     <article class="productCart_detalleProducto">
-                        <div class="productCart_detalleProducto">
-                            <img class="productCart_detalleProducto_imagenbateria" src="/grupo_9_codeMusic/public/img/bateriaMapex.jpg">
-                            <p class="productCart_detalleProducto_nombreProducto_bateria">Bateria Mapex Prodigy</p>
-                        </div>
-                        <p class="productCart_detalleProducto_menubateria">boton boton</p>
-                        <p class="productCart_detalleProducto_menubateria">$109.780</p>
+                        <img class="productCart_detalleProducto_imagenbateria" src="/grupo_9_codeMusic/public/img/bateriaMapex.jpg">
+                    <div>
+                        <p class="productCart_detalleProducto_nombreProducto_bateria">Bateria Mapex Prodigy</p>
+                        <p class="productCart_detalleProducto_botonbateria">boton boton</p>
+                    </div>
+                    <div class="productCart_detalleProducto_">
+                        <p class="productCart_detalleProducto_precioBateria">$109.780</p>
+                        <img class="productCart_detalleProducto_basura" src="/grupo_9_codeMusic/public/img/logoBasura.png">
+                    </div>
                     </article>
 
                     <article class="productCart_detalleProducto">
-                        <div class="productCart_detalleProducto">
-                            <img class="productCart_detalleProducto_imagenguitarra" src="/grupo_9_codeMusic/public/img/GuitarraElectrica.jpg">
-                             <p class="productCart_detalleProducto_nombreProducto_guitarra">Guitarra eléctrica Epiphone</p>
-                        </div>
+                        <img class="productCart_detalleProducto_imagenguitarra" src="/grupo_9_codeMusic/public/img/GuitarraElectrica.jpg">
+                    <div>
+                        <p class="productCart_detalleProducto_nombreProducto_guitarra">Guitarra eléctrica Epiphone</p>
                         <p class="productCart_detalleProducto_menuguitarra">boton boton</p>
-                        <p class="productCart_detalleProducto_menuguitarra">$9.375,88</p>
+                    </div>
+                    <div class="productCart_detalleProducto_">
+                        <p class="productCart_detalleProducto_precioBateria">$9.375,88</p>
+                        <img class="productCart_detalleProducto_basura" src="/grupo_9_codeMusic/public/img/logoBasura.png">
+                    </div>
                     </article>
                 </section> 
             </div>
@@ -50,41 +64,44 @@
                         <img class="productCart_main_compra_logovisa" src="/grupo_9_codeMusic/public/img/logoVisa.png" alt="logo visa">
                         <img class="productCart_main_compra_logovisa" src="/grupo_9_codeMusic/public/img/logoMastercard.png" alt="logo mastercard">
                     </div>
-                        <button class="productCart_main_compra_boton">COMPRAR</button>
+                    <div>
                         <p class="productCart_main_compra_total">Total $119.155,88</p>
-                </div>
+                        <button class="productCart_main_compra_boton">COMPRAR</button>  
+                    </div>
     </main>
     <footer class="productCart_footer">
-        <section>
-            <div>
+        <section class="productCart_footer_nav">
+            <nav>
+                <h3>CODE MUSIC</h3>
                 <br>
-                <p>CODE MUSIC</p>
-                <br>
-                <li>Inicio</li>
-                <li>Sobre Nosotros</li>
-                <li>Preguntas Frecuentes</li>
-                <li>Terminos y Condiciones</li>
-            </div>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Sobre Nosotros</a></li>
+                    <li><a href="">Preguntas Frecuentes</a></li>
+                    <li><a href="">Terminos y Condiciones</a></li>
+                </ul>
+            </nav>
         </section>
-        <section>
+        
+        <section class="productCart_footer_contac">
             <div>
+                <h3>CONTACTANOS</h3>
                 <br>
-                <p>CONTACTANOS</p>
-                <br>
-                <p>Av. Rivadavia 1565, CABA
-                    (011) 7875-8564
-                    <br>
-                info@codemusic.com.ar
-            </p>
+                <p>Av. Rivadavia 1565, CABA</p>
+                <p>(011) 7875-8564</p>
+                <p>info@codemusic.com.ar</p>
             </div>
+            <br>
+            <section class="productCart_footer_redes">
+                <h3>REDES SOCIALES</h3>
+                <div>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </section>
         </section>
-        <section>
-            <div>
-                <br>
-                <p>REDES SOCIALES</p>
-                <br>
-            </div>
-        </section>
+
     </footer>
 </body>
 </html>

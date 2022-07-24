@@ -10,14 +10,36 @@
 .productCart_header {
    background-color: black;
    width: 100%;
-   height: 100px;
-   display: flex;
+   height: 160px;
 }
 
 .productCart_header_LOGOTIPO {
-   width: 160px;
-   margin-top: 6px;
+   text-align: center;
 }
+
+.productCart_header_LOGOTIPO img {
+   width: 240px;
+   height: 80px;
+   padding: 10px;
+}
+
+    /* header search */
+
+    .index_header_form, .productDetail_header_search{
+      margin: auto;
+      position: relative;
+      padding: 5px;
+      text-align: center;
+  }
+
+  .productDetail_header_search form input{
+      height: 26px;
+      width: 250px;
+      border: 0px solid black;
+      border-radius: 10px;
+      text-align: center;
+  }
+  
 
 /* Main */
 
@@ -32,7 +54,7 @@ h1 {
    list-style: none;
    display: flex;
    justify-content: space-evenly;
-   font-size: 20px;
+   font-size: 15px;
    padding: 0px;
 }
 
@@ -42,6 +64,7 @@ h1 {
 .productCart_detalleProducto {
    display: flex;
    justify-content: space-evenly;
+   margin-left: 50px;
 }
 
 /* Main productos bateria */
@@ -54,13 +77,24 @@ h1 {
 
 .productCart_detalleProducto_nombreProducto_bateria {
    margin-top: 30px;
+   font-size: 13px;
 }
 
-.productCart_detalleProducto_menubateria {
+.productCart_detalleProducto_botonbateria {
    display: flex;
    justify-content: space-evenly;
    margin-right: 100px;
    margin-top: 30px;
+}
+
+.productCart_detalleProducto_ {
+   display: flex;
+   justify-content: space-evenly;
+
+}
+
+.productCart_detalleProducto_precioBateria {
+   margin-top: 35px;
 }
 
 
@@ -69,16 +103,30 @@ h1 {
 .productCart_detalleProducto_imagenguitarra {
    width: 160px;
    height: 120px;
+   margin-left: 10px;
 }
 
-.productCart_detalleProducto_nombreProducto_guitarra {
-   
-}
 
 .productCart_detalleProducto_menuguitarra {
    display: flex;
    justify-content: space-evenly;
    margin-right: 110px;
+}
+
+
+.productCart_detalleProducto_nombreProducto_guitarra {
+   margin-top: 30px;
+   font-size: 13px;
+   margin-right: 20px;
+   margin-bottom: 30px;
+}
+
+
+.productCart_detalleProducto_basura {
+   width: 20px;
+   height: 20px;
+   margin-top: 30px;
+   margin-left: 15px;
 }
 
 /* Seccion Compra */
@@ -87,78 +135,80 @@ h1 {
    display: flex;
    justify-content: space-evenly;
    flex-wrap: wrap;
+   margin-right: 20px;
+   margin-top: 30px;
 }
 
 
 .productCart_main_compra_envioGratis_logo {
-   width: 40px;
+   width: 70px;
+   height: 60px;
 }
 
 .productCart_main_compra_envioGratis {
-   margin-top: 20px;
-   margin-left: 5px;
+   padding: 10px;
+   margin-top: 10px;
 }
 
 .productCart_main_compra_logovisa {
    width: 50px;
-   margin-left: 10px;
+   height: 50px;
+   margin-bottom: 0px;
 }
 
 .productCart_main_compra_container {
    display: flex;
-   margin: 0px 10px 0px 100px;
 }
 
 .productCart_main_compra_boton {
  background-color: #202040;
  color: white;
+ border: 1px solid white;
+ padding: 5px 10px;
+ margin-bottom: 20px;
+ margin-left: 40px;
 }
 
 .productCart_main_compra_total {
    display: flex;
    font-weight: bold;
-   margin-left: -100px;
-   margin-top: 5px;
-   font-size: 25px;
+   margin-bottom: 20px;
+   font-size: 20px;
 }
-
 
 /* Footer */
 
-
 .productCart_footer {
+   background-color: black;
+   color: var(--ColorGris);
+   display: flex;
+   margin-top: 5px;
+   padding: 10px;
+   border-radius: 55px 5px 5px 5px;
+   gap: 13px;
+   text-align: start;
+   color: white;
 
- display: flex;
- width: 100%;
- height: 20%;
- background-color: black;
- border-radius: 70px 0 0 0;
 }
 
-.productCart_footer div {
-   font-size: 15px;
-   text-align: center;
-   color: white;
-   list-style: none;
-   float:left;
-   margin: 5px 60px 5px 70px;
+.productCart_footer_nav{
+   margin-top: 10px;
+}
+
+.productCart_footer_nav a {
+   text-decoration: none;
+}
+
+.productCart_footer_contac{
+   margin-top: 10px;
+}
+
+.productCart_footer_redes i{
+   font-size: 25px;
+   padding: 2px;
+   margin: 3px;
 }
 
 
 /* Media Queries */
 
-/* celular */
-
-@media (max-width : 460px) {
-   h1 {
-      font-size: 10px;
-   }
-
-   .productCart_main_compra_container {
-      flex-direction: column;
-   }
-
-   .productCart_main_compra {
-      flex-direction: column;
-   }
-}

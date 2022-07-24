@@ -1,0 +1,26 @@
+/* footer */
+
+.productDetail_footer {
+    background-color: var(--ColorNegro);
+    color: var(--ColorGris);
+    display: flex;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 55px 5px 5px 5px;
+    gap: 13px;
+    text-align:start;
+}
+
+.productDetail_footer_nav{
+    margin-top: 10px;
+}
+
+.productDetail_footer_contac{
+    margin-top: 10px;
+}
+
+.productDetail_footer_redes i{
+    font-size: 25px;
+    padding: 2px;
+    margin: 3px;
+}
