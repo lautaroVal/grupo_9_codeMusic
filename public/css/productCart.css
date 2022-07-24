@@ -1,83 +1,164 @@
-.logo-container {
-   padding-left: 100px;
-}
-
 * {
    margin: 0;
-}
-
-
-.detalle {
-   font-size: 20px;
+   padding: 0;
+   font-family: 'Montserrat';
    list-style: none;
-   display: flex;
-   justify-content: space-around;
-   margin-top: 30px;
 }
 
-.contenedor-header {
+/* Header */
+
+.productCart_header {
    background-color: black;
    width: 100%;
    height: 100px;
-
-}
-.contenedor-barraBusqueda {
-   text-align: center;
-
+   display: flex;
 }
 
-.contenedor-barraBusqueda input {
-   text-align: center;
-   color: white;
-   border-radius: 20px;
-   width: 30%;
-   height: 30px;
+.productCart_header_LOGOTIPO {
+   width: 160px;
+   margin-top: 6px;
 }
 
+/* Main */
 
 h1 {
    text-align: center;
    padding: 10px;
    margin: 0px;
+   margin-top: 10px;
 }
 
-.contenedor-menu {
+.productCart_main_menu {
    list-style: none;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-evenly;
    font-size: 20px;
-   margin: 20px;
+   padding: 0px;
 }
 
-.contenedor-productos {
-   list-style: none;
+
+/* Main productos */
+
+.productCart_detalleProducto {
+   display: flex;
+   justify-content: space-evenly;
 }
 
-.contenedor-imagenBateria {
+/* Main productos bateria */
+
+.productCart_detalleProducto_imagenbateria {
+   width: 150px;
+   height: 120px;
+   display: flex;
+}
+
+.productCart_detalleProducto_nombreProducto_bateria {
+   margin-top: 30px;
+}
+
+.productCart_detalleProducto_menubateria {
+   display: flex;
+   justify-content: space-evenly;
+   margin-right: 100px;
+   margin-top: 30px;
+}
+
+
+/* Main productos guitarra */
+
+.productCart_detalleProducto_imagenguitarra {
    width: 160px;
-   margin: 0px 100px 0px 100px;
+   height: 120px;
 }
 
-.contenedor-imagenGuitarra {
-   width: 70px;
-   margin: 0px 150px 0px 150px;
+.productCart_detalleProducto_nombreProducto_guitarra {
+   
+}
+
+.productCart_detalleProducto_menuguitarra {
+   display: flex;
+   justify-content: space-evenly;
+   margin-right: 110px;
+}
+
+/* Seccion Compra */
+
+.productCart_main_compra {
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
 }
 
 
-.contenedor-footer {
- position: absolute;
- bottom: 0;
+.productCart_main_compra_envioGratis_logo {
+   width: 40px;
+}
+
+.productCart_main_compra_envioGratis {
+   margin-top: 20px;
+   margin-left: 5px;
+}
+
+.productCart_main_compra_logovisa {
+   width: 50px;
+   margin-left: 10px;
+}
+
+.productCart_main_compra_container {
+   display: flex;
+   margin: 0px 10px 0px 100px;
+}
+
+.productCart_main_compra_boton {
+ background-color: #202040;
+ color: white;
+}
+
+.productCart_main_compra_total {
+   display: flex;
+   font-weight: bold;
+   margin-left: -100px;
+   margin-top: 5px;
+   font-size: 25px;
+}
+
+
+/* Footer */
+
+
+.productCart_footer {
+
+ display: flex;
  width: 100%;
- height: 120px;
+ height: 20%;
  background-color: black;
  border-radius: 70px 0 0 0;
 }
 
-.contenedor-footer div {
+.productCart_footer div {
    font-size: 15px;
    text-align: center;
    color: white;
    list-style: none;
    float:left;
    margin: 5px 60px 5px 70px;
+}
+
+
+/* Media Queries */
+
+/* celular */
+
+@media (max-width : 460px) {
+   h1 {
+      font-size: 10px;
+   }
+
+   .productCart_main_compra_container {
+      flex-direction: column;
+   }
+
+   .productCart_main_compra {
+      flex-direction: column;
+   }
 }
