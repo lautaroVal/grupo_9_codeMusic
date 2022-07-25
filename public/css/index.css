@@ -84,6 +84,8 @@ MAIN */
   /*   background-color: #F2F5F9; */
 }
 
+/* MAIN CARROUSEL */
+
 .figure_banner {
     width: 100%;
     margin: 0 auto 20px;
@@ -95,8 +97,10 @@ MAIN */
     margin: 0;
 }
 
+/* MAIN PRODUCTS */
+
 .main_container {
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -106,20 +110,27 @@ MAIN */
 .index_section_products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
 }
 
-.index_product {
+/* .index_product */
+main div section article {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 46.5%;
-    max-width: 193px;
+    max-width: 160px;
     border-radius: 10px;
     background-color: var(--ColorBlanco);
     margin-bottom: 20px;
     text-align: center;
     padding: 10px;
+}
+
+/* .index_product */
+main div section article:hover {
+    box-shadow: 1px 1px 10px rgb(84, 115, 138);
 }
 
 .index_product_img {
@@ -170,6 +181,14 @@ MAIN */
     color: var(--ColorAzul);
 }
 
+/* MAIN ARTICLES OCULTOS */
+
+.index_product_hide, .index_product_hide2 {
+    display: none;
+}
+
+/* MAIN INFO */
+
 .index_section_info {
     background-color: var(--ColorBlanco);
     color: var(--ColorNegro);
@@ -191,6 +210,11 @@ MAIN */
 .index_section_info article i {
     color: var(--ColorAzul);
     margin-bottom: 20px;
+    transition: 1s;
+}
+
+.index_section_info article i:hover {
+    transform: rotate(360deg);
 }
 
 .index_section_info article h4 {
@@ -231,26 +255,62 @@ FOOTER */
     margin: 3px;
 }
 
-
+/* 
+----------------------------------------------------------------------- */
 @media (min-width: 768px) {
 
+    /* MAIN  CARROUSEL */
 .figure_banner {
     height: initial;
 }
 
-.index_product {
-
+/* MAIN PRODUCTS */
+.main_container {
+    width: 98%;
+    justify-content: center;
 }
 
+.index_section_products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   /*  gap: 1px; */
 }
 
+main div section article {
+    width: ;
+    max-width: ;
+}
+
+.index_product_hide {
+    display: flex;
+}
+
+/* MAIN INFO */
+
+.index_section_info {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+}
+
+
+}
+/* 
+----------------------------------------------------------------------- */
 @media (min-width: 1024px) {
 
     .main_container {
         
     }
     .index_section_products {
-        justify-content: space-between;
+        justify-content: space-around;
     }
+
+    .index_product_hide2 {
+        display: flex;
+    }
+
+
 
 }
