@@ -13,23 +13,18 @@
 
 <body class="index">
     <header class="index_header">
-        <div class="index_header_topnavbar">
-            <div class="index_header_topnavbar_div">
-                <button class="index_hambur"><i class="fa fa-bars"></i></button>
-
+        <section class="index_header_top">
+            <div class="index_header_top_burger">
+                <button><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="index_header_top_logo">
                 <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo" class="index_logo"></a>
-
+            </div>
+            <div class="index_header_top_icon">
                 <a href="/login" class="index_header_login"><i class="fa-solid fa-circle-user"></i></a>
                 <a href="/productCart" class="index_header_cart"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-
-
-
-            <form action="/productDetail" method="get" class="index_header_form">
-                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?" lass="index_header_form_input">
-                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
+        </section>
 
         <nav class="index_header_navbar">
             <ul>
@@ -40,6 +35,14 @@
                 <li><a href="">Instrumentos de vientos</a></li>
             </ul>
         </nav>
+
+        <div class="index_header_search">
+            <form action="/productDetail" method="get" class="index_header_search_form">
+                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?" class="index_header_form_input">
+                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
     </header>
 
     <main>
@@ -69,7 +72,7 @@
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
                 </article>
-                <article class="index_product">
+                <!-- <article class="index_product">
                     <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
@@ -108,7 +111,7 @@
                     <p class="index_product_envío"> Envío Gratis</p>
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
-                </article>
+                </article> -->
             </section>
 
             <section>
@@ -146,8 +149,28 @@
 
             </section>
 
-            <section class="index_section_products" id="Guitar">
+            <section class="index_section_products">
                 <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <!-- <article class="index_product">
                     <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
@@ -186,27 +209,7 @@
                     <p class="index_product_envío"> Envío Gratis</p>
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
+                </article> -->
             </section>
 
             <section class="index_section_products" id="Guitar">
@@ -230,7 +233,7 @@
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
                 </article>
-                <article class="index_product">
+                <!-- <article class="index_product">
                     <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
@@ -269,11 +272,31 @@
                     <p class="index_product_envío"> Envío Gratis</p>
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
-                </article>
+                </article> -->
             </section>
 
-            <section class="index_section_products" id="Guitar">
+            <section class="index_section_products">
                 <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <!-- <article class="index_product">
                     <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
@@ -312,31 +335,31 @@
                     <p class="index_product_envío"> Envío Gratis</p>
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
+                </article> -->
             </section>
 
-            <section class="index_section_products" id="Guitar">
+            <section class="index_section_products">
                 <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <!-- <article class="index_product">
                     <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
@@ -375,31 +398,31 @@
                     <p class="index_product_envío"> Envío Gratis</p>
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
+                </article> -->
             </section>
 
-            <section class="index_section_products" id="Guitar">
+            <section class="index_section_products">
                 <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <article class="index_product">
+                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <hr>
+                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
+                    <div class="index_product_bottom">
+                    <p class="precio">$53.515 <em class="decimales">66</em></p>
+                    <p class="index_product_envío"> Envío Gratis</p>
+                    <a href="#" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+                <!-- <article class="index_product">
                     <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
@@ -438,27 +461,7 @@
                     <p class="index_product_envío"> Envío Gratis</p>
                     <a href="#" class="index_button_product">Ver más</a>
                     </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                    <p class="precio">$53.515 <em class="decimales">66</em></p>
-                    <p class="index_product_envío"> Envío Gratis</p>
-                    <a href="#" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
+                </article> -->
             </section>
         </div>
 
