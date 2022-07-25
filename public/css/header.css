@@ -194,7 +194,7 @@
 
     /* header top */
 
-    .productDetail_header_top {
+    .productDetail_header_top, .index_header {
         width: 100%;
         align-items: center;
         position: relative;
