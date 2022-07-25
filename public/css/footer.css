@@ -23,11 +23,16 @@
 }
 
 /* footer redes */
+.login_footer_redes , .register_footer_redes h3 {
+    display: none;
+ 
+}
 .login_footer_redes i , .register_footer_redes i {
     font-size: 25px;
     padding: 2px;
     margin: 3px;
     border-radius: none;
+    display: ;
 }
 
 /* footer suscrip */

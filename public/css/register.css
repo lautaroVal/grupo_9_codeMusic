@@ -1,0 +1,52 @@
+.register_main {
+    
+}
+.register_inicio h1 {
+    color: #301B3F;
+    margin-top: 10px;
+    text-align: center;
+}
+.register_inicio-cuenta p {
+    color: var(--ColorNegro);
+    font-size: 13px;
+    text-align: center;
+
+}
+.register_txt p {
+    color: var(--ColorNegro);
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.register_form {
+    color: var(--ColorNegro);
+    margin-bottom: 50px;
+}
+.register_div {
+    margin-bottom: 25px;
+    
+}
+.register_div button {
+    display: inline-block;
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #301B3F;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.register_label {
+    width: 100%;
+    margin-top: 30px;
+
+}
+.register_input {
+    width: 100%;
+    height: 20px;
+    margin-top: 7px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+
+}
