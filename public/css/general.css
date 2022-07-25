@@ -3,13 +3,13 @@
     --ColorAzul: #202040;
     --ColorGris: #F2F5F9;
     --ColorBlanco: #FFFFFF;
+    --ColorVerde: #46A656;
 
 }
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;    
 
 }
 

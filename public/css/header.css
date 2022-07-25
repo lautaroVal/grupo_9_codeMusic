@@ -101,6 +101,70 @@
 }
 
 
+/*  prueba menu 
+.productDetail_header_top_burger a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid #456789;
+    max-width: 200px;
+    background: #234567;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+  }
+
+  .productDetail_header_top_burger input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .productDetail_header_top_burger .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+  }
+  
+  .productDetail_header_top_burger input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .productDetail_header_top_burger {
+    color: white;
+    background: #123456;
+    min-height: 48px;
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .productDetail_header_top_burger nav {
+    display: none;
+  }
+  
+  .productDetail_header_top_burger input:checked ~ nav {
+    display: block;
+  }
+  
+  .productDetail_header_top_burger input:checked ~ .fa-bars {
+    display: none;
+  }
+  
+  .productDetail_header_top_burger input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+ 
+ */
+
+
+
+
 @media (min-width: 768px) {
     /* header */
 

@@ -1,0 +1,78 @@
+.productDetail_main{
+    color: black;
+}
+
+/* main top*/
+.productDetail_main_section_top{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* main top izq */
+
+.productDetail_main_section_top_izq{
+    width: 18%;
+}
+
+.productDetail_main_section_top_izq article{
+    width: 30%;
+}
+
+.productDetail_main_section_top_izq img{
+   width: 200px;
+}
+
+/* main top centr */
+
+.productDetail_main_section_top_centr{
+    width: 52%;
+}
+
+.productDetail_main_section_top_centr img{
+    width: 95%;
+}
+
+/* main top derch */
+
+.productDetail_main_section_top_derech{
+    width: 30%;
+}
+
+.productDetail_main_section_top_derech_price{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* main bottom */
+
+.productDetail_main_section_bottom{
+    width: 100%;
+}
+
+.productDetail_main_section_top_derech_cuotas{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.productDetail_main_section_top_derech_cuotas span{
+    color: var(--ColorVerde);
+}
+
+.productDetail_main_section_top_derech_tarjetas{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.productDetail_main_section_top_derech_colores{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.productDetail_main_section_top_derech_colores img{
+    width: 100px;
+    height: 100px;
+}
