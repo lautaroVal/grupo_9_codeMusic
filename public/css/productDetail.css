@@ -1,4 +1,5 @@
 .productDetail_main{
+    background-color: var(--ColorGris);
     color: black;
 }
 
@@ -7,12 +8,15 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: space-around;
 }
 
 /* main top izq */
 
 .productDetail_main_section_top_izq{
     width: 18%;
+    background-color: var(--ColorBlanco);
+
 }
 
 .productDetail_main_section_top_izq article{
@@ -27,6 +31,8 @@
 
 .productDetail_main_section_top_centr{
     width: 52%;
+    background-color: var(--ColorBlanco);
+
 }
 
 .productDetail_main_section_top_centr img{
@@ -36,19 +42,14 @@
 /* main top derch */
 
 .productDetail_main_section_top_derech{
-    width: 30%;
+    width: 25%;
+    background-color: var(--ColorBlanco);
 }
 
 .productDetail_main_section_top_derech_price{
     font-size: 35px;
     margin-top: 10px;
     margin-bottom: 5px;
-}
-
-/* main bottom */
-
-.productDetail_main_section_bottom{
-    width: 100%;
 }
 
 .productDetail_main_section_top_derech_cuotas{
@@ -61,8 +62,11 @@
 }
 
 .productDetail_main_section_top_derech_tarjetas{
+    display: flex;
+    gap: 20px;
     font-size: 40px;
     margin-bottom: 10px;
+    margin-left: 14px;
 }
 
 .productDetail_main_section_top_derech_colores{
@@ -70,9 +74,46 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 .productDetail_main_section_top_derech_colores img{
     width: 100px;
     height: 100px;
+}
+
+.productDetail_main_section_top_derech_stock h4{
+    font-size: 21px;
+    color: var(--ColorVerde);
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.productDetail_main_section_top_derech_stock div{
+    display: flex;
+    gap: 7px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.productDetail_main_section_top_derech_stock div h6{
+    color: rgba(184, 184, 187, 0.562);
+}
+
+.productDetail_main_section_top_derech_button button{
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 85%;
+    font-size: 20px;
+    background-color: var(--ColorAzul);
+    color: var(--ColorBlanco);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* main bottom */
+
+.productDetail_main_section_bottom{
+    width: 100%;
 }
