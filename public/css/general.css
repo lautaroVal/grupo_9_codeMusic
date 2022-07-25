@@ -1,5 +1,5 @@
 :root{
-    --ColorNegro: #0000;
+    --ColorNegro: #000000;
     --ColorAzul: #202040;
     --ColorGris: #F2F5F9;
     --ColorBlanco: #FFFFFF;
@@ -8,9 +8,26 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     
 }
 
 body {
     font-family: 'Montserrat';
+}
+li{
+    list-style: none;
+}
+
+ul, ol{
+    padding-left: 0;
+ }
+
+a{
+    text-decoration: none;
+    color: var(--ColorBlanco);
+}
+
+p{
+    font-size: 15px;
 }

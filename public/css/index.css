@@ -1,5 +1,5 @@
 /* HEADER */
-.index {
+/* .index {
     color: #F2F5F9;
 }
 .index_header {
@@ -62,38 +62,37 @@
 }
 
 .index_header_form_input {
-    /* position: relative; */
 }
 
 .index_header_form button {
-   /*  border: none;
-    background-color: transparent;*/
     padding: 2px; 
-  /*   position: absolute;
-    right: 74px;  */
     align-self: center;
 }
 
 .index_header_form i {
-    /* color: salmon; */
+    
 }
 
 .index_header_navbar {
     display: none;
-}
+} */
 
-/* MAIN */
+/* --------------------------------------------------- 
+MAIN */
+
 .index {
-    background-color: #F2F5F9;
+  /*   background-color: #F2F5F9; */
 }
 
-.figure-banner {
+.figure_banner {
     width: 100%;
+    height: 150px;
     margin: 0 auto 20px;
 }
 
-.figure-banner img {
+.figure_banner img {
     width: 100%; 
+    height: 100%;
     margin: 0;
 }
 
@@ -105,59 +104,130 @@
     margin: auto;
 }
 
-.main_container section {
+.index_section_products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.main_container section article {
+.index_product {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 45%;
+    width: 46.5%;
+    max-width: 193px;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: var(--ColorBlanco);
     margin-bottom: 20px;
-    justify-self: center;
-}
-
-.main_container section article img {
-    width: 40%;
-    margin: auto; 
-    padding: 5px;
-}
-
-.main_container section article div {
-    color: #000000;
     text-align: center;
-    line-height: 10px;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
-h3 {
+.index_product_img {
+    height: 140px;
+}
+
+.index_product_img img {
+    width: 55px;
+    margin: auto; 
+}
+
+.index_product_title {
     color: #000000;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.index_product_bottom {
+    color: #000000;
+    line-height: 20px;
+}
+
+.precio{  
 }
 
 .decimales  {
     font-size: 6px;
+    display: inline-flex;
+    align-content: flex-start;
 }
-.button-product {
+
+.index_product_envío {
+    color: blue;
+    margin-bottom: 10px;
+}
+
+.index_button_product {
     font-size: 13px;
-    padding: 10px;
+    padding: 3px 18px;
     background-color: #202040;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
-/* FOOTER */
+.index_button_product:hover {
+    color: blue;
+}
 
-.index_header {
+/* 
+----------------------------------------------------
+FOOTER */
+
+/* .index_header {
     background-color: #000000;
 }
 
 .index_header h2 {
     color: #ffffff;
+} */
+
+.index_footer{
+    background-color: var(--ColorNegro);
+    color: var(--ColorGris);
+    display: flex;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 55px 5px 5px 5px;
+    gap: 13px;
+    text-align:start;
+}
+
+.index_footer_nav{
+    margin-top: 10px;
+}
+
+.productDetail_footer_contac{
+    margin-top: 10px;
+}
+
+.productDetail_footer_redes i{
+    font-size: 25px;
+    padding: 2px;
+    margin: 3px;
+}
+
+
+@media (min-width: 768px) {
+
+.figure_banner {
+    height: initial;
+}
+
+.index_product {
+
+}
+
+}
+
+@media (min-width: 1024px) {
+
+    .main_container {
+        
+    }
+    .index_section_products {
+        justify-content: space-between;
+    }
+
 }
