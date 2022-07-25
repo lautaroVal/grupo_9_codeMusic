@@ -1,8 +1,9 @@
 :root{
     --ColorNegro: #000000;
-    --ColorAzul: #202040;
+    --ColorAzulOscuro: #202040;
     --ColorGris: #F2F5F9;
     --ColorBlanco: #FFFFFF;
+    --ColorAzul: #0000ff;
 
 }
 *{

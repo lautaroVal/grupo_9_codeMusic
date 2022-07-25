@@ -154,7 +154,7 @@ MAIN */
 }
 
 .index_product_envío {
-    color: blue;
+    color: var(--ColorAzul);
     margin-bottom: 10px;
 }
 
@@ -167,20 +167,44 @@ MAIN */
 }
 
 .index_button_product:hover {
-    color: blue;
+    color: var(--ColorAzul);
+}
+
+.index_section_info {
+    background-color: var(--ColorBlanco);
+    color: var(--ColorNegro);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.index_section_info article {
+    text-align: center;
+    width: 40%; 
+    margin-bottom: 20px;
+}
+
+.index_section_info article i {
+    color: var(--ColorAzul);
+    margin-bottom: 20px;
+}
+
+.index_section_info article h4 {
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+.index_section_info article p {
+    font-size: 10px;
 }
 
 /* 
 ----------------------------------------------------
 FOOTER */
-
-/* .index_header {
-    background-color: #000000;
-}
-
-.index_header h2 {
-    color: #ffffff;
-} */
 
 .index_footer{
     background-color: var(--ColorNegro);
