@@ -75,3 +75,54 @@
     color: #611696;
     
 }
+
+@media (min-width: 1024px) {
+    
+    
+    }
+    .register_div {
+        display: flex;
+        flex-direction: column;
+        
+        
+    
+        
+    }  
+
+    .register_label {
+        width: 50%;
+        margin-top: 0px;
+        margin-left: 20%;
+       
+    }
+
+    .register_input {
+        width: 60%;
+        height: 35px;
+    
+       
+        padding-left: 7px ;
+        margin-left: 20%;
+    }
+
+    .register_div button {
+        height: 30px;
+        width: 50%;
+        margin-left: 25%;
+        
+    }
+
+    .register_inicio-cuenta p {
+       padding-top: 20px;
+      
+        
+        
+    
+        
+       
+        
+    
+    
+
+    
+}
