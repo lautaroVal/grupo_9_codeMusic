@@ -10,15 +10,38 @@
 </head>
 <body>
     <header class="productCart_header">
-        <div class="productCart_header_LOGOTIPO">
-            <img src="/grupo_9_codeMusic/public/img/LOGO-CODEMUSIC.png" alt="Logo CODEMUSIC">
-        </div>
-        <div class="productDetail_header_search">
-            <form action="/productDetail" method="get">
-                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
+
+        <section class="productCart_header_top">
+            <div class="productCart_header_top_burger">
+                <button><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="productCart_header_top_logo">
+                <a href="/"><img src="/grupo_9_codeMusic/public/img/LOGO-CODEMUSIC.png" alt=""></a>
+            </div>
+            <div class="productCart_header_top_icon">
+                <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
+                <a class="productCart_header_top_icon_cart" href="/productCart"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </section>
+        <nav class="productCart_header_navbar">
+            <ul>
+                <li><a href="#guitar">Guitarras</a></li>
+                <li><a href="">Baterias</a></li>
+                <li><a href="">Teclados y pianos</a></li>
+                <li><a href="">Micrófonos y sonido</a></li>
+                <li><a href="">Instrumentos de vientos</a></li>
+            </ul>
+        </nav>
+        <div class="productCart_header_search">
+            <form action="/productCart" method="get">
+                <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
+                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
+
     </header>
+
     <main>
         <h1>Carrito de Compras</h1>
         <br>
@@ -36,7 +59,7 @@
                         <img class="productCart_detalleProducto_imagenbateria" src="/grupo_9_codeMusic/public/img/bateriaMapex.jpg">
                     <div>
                         <p class="productCart_detalleProducto_nombreProducto_bateria">Bateria Mapex Prodigy</p>
-                        <p class="productCart_detalleProducto_botonbateria">boton boton</p>
+                        <button class="boton">+  1  -</button>        
                     </div>
                     <div class="productCart_detalleProducto_">
                         <p class="productCart_detalleProducto_precioBateria">$109.780</p>
@@ -48,10 +71,10 @@
                         <img class="productCart_detalleProducto_imagenguitarra" src="/grupo_9_codeMusic/public/img/GuitarraElectrica.jpg">
                     <div>
                         <p class="productCart_detalleProducto_nombreProducto_guitarra">Guitarra eléctrica Epiphone</p>
-                        <p class="productCart_detalleProducto_menuguitarra">boton boton</p>
+                        <button class="boton">+  1  -</button>
                     </div>
                     <div class="productCart_detalleProducto_">
-                        <p class="productCart_detalleProducto_precioBateria">$9.375,88</p>
+                        <p class="productCart_detalleProducto_precioBateria">$9.375</p>
                         <img class="productCart_detalleProducto_basura" src="/grupo_9_codeMusic/public/img/logoBasura.png">
                     </div>
                     </article>
@@ -102,6 +125,12 @@
             </section>
         </section>
 
+        <section class="productCart_footer_suscrip">
+            <h3>Recibi ofertas en tu mail</h3>
+            <input type="text" name="nombre">
+            <input type="text" name="mail">
+            <button type="submit">Suscribirme</button>
+        </section>
     </footer>
 </body>
 </html>
