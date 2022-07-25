@@ -1,8 +1,8 @@
 /* HEADER */
 .index,
 .productDetail {
-/*     background-color: var(--ColorGris);
-    color: var(--ColorGris); */
+    background-color: var(--ColorGris);
+    color: var(--ColorGris);
 }
 
 .index_header,
