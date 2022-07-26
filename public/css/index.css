@@ -107,6 +107,13 @@ MAIN */
     margin: auto;
 }
 
+h1 {
+    color: var(--ColorAzulOscuro);
+    margin-bottom: 20px;
+    font-weight:bolder;
+    font-family: Hind ;
+}
+
 .index_section_products {
     display: flex;
     flex-wrap: wrap;
@@ -189,8 +196,8 @@ main div section article:hover {
 
 /* MAIN INFO */
 
-.index_section_info {
-    background-color: var(--ColorBlanco);
+.index_div_info {
+   /*  background-color: var(--ColorBlanco); */
     color: var(--ColorNegro);
     display: flex;
     flex-wrap: wrap;
@@ -198,33 +205,56 @@ main div section article:hover {
     justify-content: space-around;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin: 70px auto;
 }
 
-.index_section_info article {
+.index_div_info article {
     text-align: center;
     width: 40%; 
     margin-bottom: 20px;
 }
 
-.index_section_info article i {
+.index_div_info article i {
     color: var(--ColorAzul);
     margin-bottom: 20px;
     transition: 1s;
 }
 
-.index_section_info article i:hover {
+.index_div_info article i:hover {
     transform: rotate(360deg);
 }
 
-.index_section_info article h4 {
-    font-size: 10px;
+.index_div_info article h4 {
+    font-size: 14px;
     margin-bottom: 8px;
 }
 
-.index_section_info article p {
-    font-size: 10px;
+.index_div_info article p {
+    font-size: 12px;
 }
+
+/* MAIN MARCAS */
+
+.index_div_marcas {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.index_div_marcas div {
+    background-color: var(--ColorBlanco);
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.index_div_marcas img {
+    width: 90px;
+}
+
+
+
 
 /* 
 ----------------------------------------------------
@@ -288,7 +318,7 @@ main div section article {
 
 /* MAIN INFO */
 
-.index_section_info {
+.index_div_info {
     display: flex;
     flex-wrap: nowrap; 
     justify-content: space-between;
@@ -301,7 +331,7 @@ main div section article {
 @media (min-width: 1024px) {
 
     .main_container {
-        
+    
     }
     .index_section_products {
         justify-content: space-around;
@@ -310,7 +340,6 @@ main div section article {
     .index_product_hide2 {
         display: flex;
     }
-
 
 
 }
