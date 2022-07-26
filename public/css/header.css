@@ -5,7 +5,9 @@
 }
 
 .index_header,
-.productDetail_header , .register_header {
+.productDetail_header , 
+.register_header ,
+.login_header{
     background-color: var(--ColorNegro);
     padding: 10px;
     margin-bottom: 10px;
@@ -18,7 +20,10 @@
 /* header top */
 
 .index_header_topnavbar_div,
-.productDetail_header_top , .register_header_top  {
+.productDetail_header_top , 
+.register_header_top ,
+.login_header_top
+  {
     display: flex;
     text-align: center;
     align-items: center;
@@ -29,7 +34,10 @@
 }
 
 .index_hambur,
-.productDetail_header_top_burger button , .register_header_top_burger button {
+.productDetail_header_top_burger button , 
+.register_header_top_burger button ,
+.login_header_top_burger button
+{
     background-color: var(--ColorNegro);
     color: var(--ColorBlanco);
     font-size: 18px;
@@ -39,29 +47,39 @@
 }
 
 .index_logo,
-.productDetail_header_top_logo, .register_header_top_logo {
+.productDetail_header_top_logo, 
+.register_header_top_logo,
+.login_header_top_logo {
     width: 70%;
 }
 
-.productDetail_header_top_logo img , .register_header_top_logo img {
+.productDetail_header_top_logo img ,
+.register_header_top_logo img,
+.login_header_top_logo img {
     width: 40%;
 }
 
 .index_header_login,
-.productDetail_header_top_icon, .register_header_top_icon {
+.productDetail_header_top_icon, 
+.register_header_top_icon ,
+.login_header_top_icon {
     font-size: 25px;
 
 }
 
 .index_header_cart,
-.productDetail_header_top_icon_cart , .register_header_top_icon_cart {
+.productDetail_header_top_icon_cart ,
+.register_header_top_icon_cart ,
+.login_header_top_icon_cart {
     display: none;
 }
 
 /* header nav */
 
 .index_header_navbar,
-.productDetail_header_navbar li , .register_header_navbar li {
+.productDetail_header_navbar li ,
+.register_header_navbar li ,
+.login_header_navbar li{
     display: none;
     list-style: none;
     list-style-type: none;
@@ -74,13 +92,15 @@
 
 .index_header_form,
 .productDetail_header_search , 
-.register_header_search {
+.register_header_search,
+.login_header_search {
     margin: auto;
     position: relative;
 }
 
 .productDetail_header_search form input ,
-.register_header_search form input {
+.register_header_search form input,
+.login_header_search form input {
     height: 26px;
     width: auto;
     border-radius: 10px;
@@ -88,7 +108,8 @@
 }
 
 .productDetail_header_search form button ,
-.register_header_search form button {
+.register_header_search form button ,
+.login_header_search form button {
     position: absolute;
     outline: none;
     right: 6px;
@@ -98,7 +119,8 @@
 }
 
 .productDetail_header_search form button i ,
-.register_header_search form button i {
+.register_header_search form button i ,
+.login_header_search form button i {
     border: none;
     background-color: transparent;
 }
@@ -108,7 +130,8 @@
     /* header */
 
     .productDetail_header ,
-    .register_header {
+    .register_header,
+    .login_header {
         display: flex;
         flex-wrap: wrap;
         margin: 2px;
@@ -117,7 +140,8 @@
     /* header top */
 
     .productDetail_header_top ,
-    .register_header_top{
+    .register_header_top,
+    .login_header_top{
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -125,7 +149,8 @@
 
     .index_hambur,
     .productDetail_header_top_burger button ,
-    .register_header_top_burger button {
+    .register_header_top_burger button,
+    .login_header_top_burger {
         font-size: 28px;
         width: 38px;
         height: 38px;
@@ -133,13 +158,15 @@
 
     .index_logo,
     .productDetail_header_top_logo
-    .register_header_top_logo {
+    .register_header_top_logo,
+    .login_header_top_logo {
         width: 60%;
         position: relative;
     }
 
     .productDetail_header_top_logo img ,
-    .register_header_top_icon_logo img {
+    .register_header_top_icon_logo img ,
+    .login_header_top_logo img {
         margin: auto;
         width: 40%;
         position: relative;
@@ -149,7 +176,8 @@
 
     .index_header_login,
     .productDetail_header_top_icon,
-    .register_header_top_icon {
+    .register_header_top_icon,
+    .login_header_top_icon {
         display: flex;
         gap: 0 18px;
         font-size: 30px;
@@ -158,7 +186,8 @@
 
     .index_header_cart,
     .productDetail_header_top_icon_cart,
-    .register_header_top_icon_cart {
+    .register_header_top_icon_cart ,
+    .login_header_top_icon_cart {
         display: inline-block;
 
     }
@@ -172,7 +201,8 @@
     }
 
     .productDetail_header_search form input ,
-    .register_header_search form input {
+    .register_header_search form input ,
+    .login_header_search form input {
         height: 36px;
         width: 200%;
         position: relative;
@@ -180,7 +210,8 @@
     }
 
     .productDetail_header_search form button ,
-    .register_header_search form button {
+    .register_header_search form button ,
+    .login_header_search form button {
         position: absolute;
         outline: none;
         font-size: 18px;
@@ -190,7 +221,8 @@
     }
 
     .productDetail_header_search form button i ,
-    .register_header_search form button i{
+    .register_header_search form button i ,
+    .login_header_search form button i {
         border: none;
         background-color: transparent;
     }
@@ -201,7 +233,8 @@
     /* header */
 
     .productDetail_header,
-    .register_header {
+    .register_header,
+    .login_header {
         display: flex;
         flex-wrap: wrap;
         padding: 2px;
@@ -210,7 +243,8 @@
     /* header top */
 
     .productDetail_header_top,
-    .register_header_top {
+    .register_header_top ,
+    .login_header_top{
         width: 100%;
         align-items: center;
         position: relative;
@@ -218,20 +252,23 @@
 
     .index_hambur,
     .productDetail_header_top_burger button,
-    .register_header_top_burger button {
+    .register_header_top_burger button ,
+    .login_header_top_burger button {
         display: none;
     }
 
     .index_logo,
     .productDetail_header_top_logo,
-    .register_header_top_logo {
+    .register_header_top_logo ,
+    .login_header_top_logo {
         width: 58%;
         position: relative;
         right: 330px;
     }
 
     .productDetail_header_top_logo img,
-    .register_header_top_icon_logo img {
+    .register_header_top_icon_logo img ,
+    .login_header_top_logo img {
         margin: auto;
         width: 40%;
         position: relative;
@@ -239,7 +276,8 @@
 
     .index_header_login,
     .productDetail_header_top_icon,
-    .register_header_top_icon {
+    .register_header_top_icon ,
+    .login_header_top_icon {
         display: flex;
         position: relative;
         bottom: 5px;
@@ -249,7 +287,8 @@
 
     .index_header_cart,
     .productDetail_header_top_icon_cart,
-    .register_header_top_icon_cart {
+    .register_header_top_icon_cart ,
+    .login_header_top_icon_cart {
         display: inline-block;
 
     }
@@ -258,7 +297,8 @@
 
     .index_header_form,
     .productDetail_header_search ,
-    .register_header_search{
+    .register_header_search ,
+    .login_header_search{
         bottom: 130px;
         left: 30px;
     }
@@ -267,7 +307,8 @@
 
     .index_header_navbar,
     .productDetail_header_navbar ,
-    .register_header_navbar{
+    .register_header_navbar ,
+    .login_header_navbar{
         position: relative;
         background-color: var(--ColorAzul);
         margin: 0;
@@ -278,7 +319,8 @@
 
     .index_header_navbar,
     .productDetail_header_navbar ul,
-    .register_header_navbar ul{
+    .register_header_navbar ul ,
+    .login_header_navbar ul{
         display: flex;
         margin: auto;
         gap: 0 65px;
@@ -286,7 +328,8 @@
 
     .index_header_navbar,
     .productDetail_header_navbar li,
-    .register_header_navbar li {
+    .register_header_navbar li ,
+    .login_header_navbar li {
         display: flex;
         margin: auto;
         list-style: none;

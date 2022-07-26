@@ -36,7 +36,7 @@
     background-color: #202040;
     color: white;
     text-transform: uppercase;
-    border-radius: 10px;
+    border-radius: 20px;
     
     
     
@@ -52,7 +52,7 @@
     width: 90%;
     height: 25px;
     margin-top: 7px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #D9D9D9;
     padding-left: 10px;
     margin-left: 10px;
@@ -104,7 +104,7 @@
     }
 
     .register_div button {
-        height: 30px;
+        height: 35px;
         width: 50%;
         margin-left: 25%;
         

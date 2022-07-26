@@ -77,6 +77,43 @@
     
 }
 
+
+@media (min-width: 768px) {
+
+    .login_inicio-cuenta p {
+        padding-top: 20px;
+}
+     .login_inicio h1 {
+       margin-top: 20px;
+       
+     }
+     .login_div {
+        display: flex;
+        flex-direction: column;
+     }
+     .login_label {
+        width: 50%;
+        margin-left: 40px
+     }
+     .login_input {
+        width: 85%;
+        height: 40px;
+        padding-left: 7px ;
+        margin-left: 50px;
+     }
+     .login_div button {
+        height: 40px;
+        width: 75%;
+        margin-left: 85px;
+        border-radius: 20px;
+     }
+     .login_olvidaste-contra p {
+        padding-bottom: 20px;
+        text-align: right;
+        margin-right: 40px;
+     }
+}
+
 @media (min-width: 1024px) {
     
     
@@ -99,7 +136,7 @@
 
     .login_input {
         width: 60%;
-        height: 35px;
+        height: 40px;
     
        
         padding-left: 7px ;
@@ -107,7 +144,7 @@
     }
 
     .login_div button {
-        height: 30px;
+        height: 40px;
         width: 50%;
         margin-left: 25%;
         
@@ -116,7 +153,12 @@
     .login_inicio-cuenta p {
        padding-top: 20px;
       
-        
+    }
+    .login_olvidaste-contra p {
+        padding-bottom: 20px;
+        text-align: right;
+        margin-right: 18%;
+     }
         
     }
         
@@ -126,4 +168,3 @@
     
 
     
-}

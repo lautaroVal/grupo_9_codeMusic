@@ -1,6 +1,8 @@
 /* footer */
 
-.login_footer , .register_footer {
+.productDetail_footer,
+.login_footer ,
+.register_footer {
     background-color: var(--ColorNegro);
     color: var(--ColorGris);
     display: flex;
@@ -12,40 +14,44 @@
 
 /* footer nav */
 
-.login_footer_nav , .register_footer_nav {
+.productDetail_footer_nav,
+.login_footer_nav,
+.register_footer_nav {
     margin-top: 10px;
 }
 
 /* footer contac */
 
-.login_footer_contac , .register_footer_contac {
+.productDetail_footer_contac,
+.register_footer_contac,
+.login_footer_contac {
     margin-top: 10px;
 }
 
 /* footer redes */
-.login_footer_redes , .register_footer_redes h3 {
-    display: none;
- 
-}
-.login_footer_redes i , .register_footer_redes i {
+.productDetail_footer_redes i ,
+.login_footer_redes i ,
+.register_footer_redes {
     font-size: 25px;
     padding: 2px;
     margin: 3px;
     border-radius: none;
-    
 }
 
 /* footer suscrip */
 
-.login_footer_suscrip , .register_footer_suscrip{
+.producDetail_footer_suscrip ,
+.login_footer_suscrip,
+.register_footer_suscrip {
     display: none;
     flex-direction: column;
     gap: 5px 0;
 }
 
-.login_footer_suscrip input,
-button , .register_footer_suscrip input,
-button{
+.producDetail_footer_suscrip input
+button ,
+.login_footer_suscrip input button,
+.register_footer_suscrip input button {
     padding: 3px;
     margin-bottom: 2px;
     border-radius: 5px;
@@ -56,27 +62,35 @@ button{
 
     /* footer*/
 
-    .login_footer , .register_footer {
+    .productDetail_footer ,
+     .login_footer ,
+     .register_footer{
         justify-content: space-around;
 
     }
 
     /* footer nav */
 
-    .login_footer_nav , .register_footer_nav{
+    .productDetail_footer_nav,
+    .login_footer_nav,
+    .register_footer_nav {
         margin-top: 10px;
     }
 
     /* footer contac */
 
-    .login_footer_contac , .register_footer_contac {
+    .productDetail_footer_contac,
+     .login_footer_contac,
+     .register_footer_contac{
         display: flex;
         margin-top: 10px;
         gap: 20px;
     }
 
     /* footer redes */
-    .login_footer_redes i  , .register_footer_redes i{
+    .productDetail_footer_redes i ,
+    .login_footer_redes i,
+    .register_footer_redes i{
         font-size: 25px;
         padding: 2px;
         margin: 3px;
@@ -87,7 +101,9 @@ button{
 
     /* footer suscrip */
 
-    .login_footer_suscrip , .register_footer_suscrip {
+    .producDetail_footer_suscrip,
+    .login_footer_suscrip,
+    .register_footer_suscrip {
         display: flex;
     }
 
