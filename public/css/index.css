@@ -88,7 +88,7 @@ MAIN */
 
 .figure_banner {
     width: 100%;
-    margin: 0 auto 20px;
+    margin: 0 auto 5px;
 }
 
 .figure_banner img {
@@ -107,6 +107,20 @@ MAIN */
     margin: auto;
 }
 
+.index_medios_de_pago {
+    height: 80px;
+    padding: 0px;
+    text-align: center;
+    font-family: sans-serif;
+    /* font-size: 15px; */
+    margin: 0 auto 20px;
+    width: 100%;
+}
+
+.index_medios_de_pago img {
+    width: 290px;
+}
+
 h1 {
     color: var(--ColorAzulOscuro);
     margin-bottom: 20px;
@@ -119,6 +133,21 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
+    margin-bottom: 70px;
+}
+
+#guitarras {
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-méline-waxx-165971.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+   /*  height: 100%; */
+   width: 100%;
+}
+
+#guitarras h2 {
+    color: var(--ColorBlanco);
 }
 
 /* .index_product */
@@ -205,7 +234,7 @@ main div section article:hover {
     justify-content: space-around;
     padding: 10px;
     border-radius: 5px;
-    margin: 70px auto;
+    margin: 0px auto 70px;
 }
 
 .index_div_info article {
@@ -241,6 +270,7 @@ main div section article:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 90px;
 }
 
 .index_div_marcas div {
@@ -300,12 +330,21 @@ FOOTER */
     justify-content: center;
 }
 
+.index_medios_de_pago img {
+    width: 360px;
+}
+
 .index_section_products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
    /*  gap: 1px; */
 }
+
+#guitarras {
+   width: auto;
+}
+
 
 main div section article {
     width: ;
