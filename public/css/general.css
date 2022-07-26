@@ -1,10 +1,9 @@
 :root{
     --ColorNegro: #000000;
     --ColorAzul: #202040;
-    --ColorGris: #e5eaee;
+    --ColorGris: #F2F5F9;
     --ColorBlanco: #FFFFFF;
     --ColorVerde: #46A656;
-
 }
 *{
     box-sizing: border-box;
