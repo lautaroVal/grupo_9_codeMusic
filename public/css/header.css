@@ -6,7 +6,7 @@
 }
 
 .index_header,
-.productDetail_header {
+.productDetail_header, .productCart_header {
     background-color: var(--ColorNegro);
     padding: 10px;
     margin-bottom: 10px;
@@ -19,7 +19,7 @@
 /* header top */
 
 .index_header_topnavbar_div,
-.productDetail_header_top {
+.productDetail_header_top, .productCart_header_top {
     display: flex;
     text-align: center;
     align-items: center;
@@ -30,7 +30,7 @@
 }
 
 .index_hambur,
-.productDetail_header_top_burger button {
+.productDetail_header_top_burger, .productCart_header_top_burger button {
     background-color: var(--ColorNegro);
     color: var(--ColorBlanco);
     font-size: 18px;
@@ -40,29 +40,29 @@
 }
 
 .index_logo,
-.productDetail_header_top_logo {
+.productDetail_header_top_logo, .productCart_header_top_logo {
     width: 70%;
 }
 
-.productDetail_header_top_logo img {
+.productDetail_header_top_logo, .productCart_header_top_icon img {
     width: 40%;
 }
 
 .index_header_login,
-.productDetail_header_top_icon {
+.productDetail_header_top_icon, .productCart_header_top_icon {
     font-size: 25px;
 
 }
 
 .index_header_cart,
-.productDetail_header_top_icon_cart {
+.productDetail_header_top_icon_cart, .productCart_header_top_icon_cart {
     display: none;
 }
 
 /* header nav */
 
 .index_header_navbar,
-.productDetail_header_navbar li {
+.productDetail_header_navbar, .productCart_header_navbar li {
     display: none;
     list-style: none;
     list-style-type: none;
@@ -74,19 +74,19 @@
 /* header search */
 
 .index_header_form,
-.productDetail_header_search {
+.productDetail_header_search, .productCart_header_search {
     margin: auto;
     position: relative;
 }
 
-.productDetail_header_search form input {
+.productDetail_header_search, .productCart_header_search form input {
     height: 26px;
     width: auto;
     border-radius: 10px;
 
 }
 
-.productDetail_header_search form button {
+.productDetail_header_search, .productCart_header_search form button {
     position: absolute;
     outline: none;
     right: 6px;
@@ -95,7 +95,7 @@
 
 }
 
-.productDetail_header_search form button i {
+.productDetail_header_search, .productCart_header_search form button i {
     border: none;
     background-color: transparent;
 }

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/grupo_9_codeMusic/public/css/productCart.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/117c6921aa.js" crossorigin="anonymous">
-    <title>carritoCompra</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/985c010c44.js" crossorigin="anonymous"></script>
+    <title>CarritoCompra</title>
 </head>
-<body>
+<body class="productCart">
     <header class="productCart_header">
 
         <section class="productCart_header_top">
@@ -34,7 +34,7 @@
             </ul>
         </nav>
         <div class="productCart_header_search">
-            <form action="/productCart" method="get">
+            <form action="/productDetail" method="get">
                 <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
                 <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
@@ -125,12 +125,14 @@
             </section>
         </section>
 
-        <section class="productCart_footer_suscrip">
+        <section class="producCart_footer_suscrip">
             <h3>Recibi ofertas en tu mail</h3>
             <input type="text" name="nombre">
             <input type="text" name="mail">
             <button type="submit">Suscribirme</button>
         </section>
+
     </footer>
+
 </body>
 </html>
