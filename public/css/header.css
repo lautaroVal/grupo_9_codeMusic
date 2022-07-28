@@ -1,11 +1,10 @@
 /* HEADER */
-.index,
+
 .productDetail {
     background-color: var(--ColorGris);
     color: var(--ColorGris);
 }
 
-.index_header,
 .productDetail_header {
     background-color: var(--ColorNegro);
     padding: 10px;
@@ -18,7 +17,6 @@
 
 /* header top */
 
-.index_header_topnavbar_div,
 .productDetail_header_top {
     display: flex;
     text-align: center;
@@ -29,7 +27,6 @@
     justify-content: space-between;
 }
 
-.index_hambur,
 .productDetail_header_top_burger button {
     background-color: var(--ColorNegro);
     color: var(--ColorBlanco);
@@ -39,7 +36,6 @@
     border-radius: 4px;
 }
 
-.index_logo,
 .productDetail_header_top_logo {
     width: 70%;
 }
@@ -48,20 +44,18 @@
     width: 40%;
 }
 
-.index_header_login,
 .productDetail_header_top_icon {
     font-size: 25px;
 
 }
 
-.index_header_cart,
+
 .productDetail_header_top_icon_cart {
     display: none;
 }
 
 /* header nav */
 
-.index_header_navbar,
 .productDetail_header_navbar li {
     display: none;
     list-style: none;
@@ -73,7 +67,6 @@
 
 /* header search */
 
-.index_header_form,
 .productDetail_header_search {
     margin: auto;
     position: relative;
@@ -118,14 +111,12 @@
         justify-content: space-around;
     }
 
-    .index_hambur,
     .productDetail_header_top_burger button {
         font-size: 28px;
         width: 38px;
         height: 38px;
     }
 
-    .index_logo,
     .productDetail_header_top_logo {
         width: 60%;
         position: relative;
@@ -139,7 +130,6 @@
         padding-bottom: 5px;
     }
 
-    .index_header_login,
     .productDetail_header_top_icon {
         display: flex;
         gap: 0 18px;
@@ -147,7 +137,6 @@
 
     }
 
-    .index_header_cart,
     .productDetail_header_top_icon_cart {
         display: inline-block;
 
@@ -155,7 +144,6 @@
 
     /* header search */
 
-    .index_header_form,
     .productDetail_header_search {
         position: relative;
     }
@@ -200,12 +188,10 @@
         position: relative;
     }
 
-    .index_hambur,
     .productDetail_header_top_burger button {
         display: none;
     }
 
-    .index_logo,
     .productDetail_header_top_logo {
         width: 58%;
         position: relative;
@@ -218,7 +204,6 @@
         position: relative;
     }
 
-    .index_header_login,
     .productDetail_header_top_icon {
         display: flex;
         position: relative;
@@ -227,7 +212,6 @@
         font-size: 30px;
     }
 
-    .index_header_cart,
     .productDetail_header_top_icon_cart {
         display: inline-block;
 
@@ -235,7 +219,6 @@
 
     /* header search */
 
-    .index_header_form,
     .productDetail_header_search {
         bottom: 130px;
         left: 30px;
@@ -243,7 +226,6 @@
 
     /* header nav */
 
-    .index_header_navbar,
     .productDetail_header_navbar {
         position: relative;
         background-color: var(--ColorAzul);
@@ -253,14 +235,12 @@
         border-radius: 10px ;
     }
 
-    .index_header_navbar,
     .productDetail_header_navbar ul{
         display: flex;
         margin: auto;
         gap: 0 65px;
     }
 
-    .index_header_navbar,
     .productDetail_header_navbar li {
         display: flex;
         margin: auto;

@@ -81,8 +81,7 @@ button {
 
     /* footer suscrip */
 
-    .producDetail_footer_suscrip,
-    .productCart_footer_suscrip {
+    .producDetail_footer_suscrip {
         display: flex;
     }
 }
