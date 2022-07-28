@@ -1,0 +1,126 @@
+
+.register_inicio h1 {
+    color: #301B3F;
+    margin-top: 10px;
+    text-align: center;
+}
+.register_inicio-cuenta p {
+    color: var(--ColorNegro);
+    font-size: 13px;
+    text-align: center;
+
+}
+.register_txt p {
+    color: var(--ColorNegro);
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.register_form {
+    color: var(--ColorNegro);
+    margin-bottom: 50px;
+}
+.register_div {
+    margin-bottom: 25px;
+    padding-left: 10px;
+    
+
+    
+}
+.register_div button {
+    display: inline-block;
+    width: 80%;
+    margin-left: 30px;
+    margin-right: 20px;
+    background-color: #202040;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 20px;
+    
+    
+    
+}
+.register_label {
+    width: 90%;
+    margin-top: 30px;
+    padding: 10px;
+    
+
+}
+.register_input {
+    width: 90%;
+    height: 25px;
+    margin-top: 7px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    padding-left: 10px;
+    margin-left: 10px;
+    
+
+}
+
+.register_p_a {
+    text-align: center;
+    
+    
+}
+.register_p_a p {
+    font-size: 13px;
+    
+}
+.register_p_a p a {
+    color: #611696;
+    
+}
+
+@media (min-width: 1024px) {
+    
+    
+    
+    .register_div {
+        display: flex;
+        flex-direction: column;
+        
+        
+    
+        
+    }  
+
+    .register_label {
+        width: 50%;
+        margin-top: 0px;
+        margin-left: 20%;
+       
+    }
+
+    .register_input {
+        width: 60%;
+        height: 35px;
+    
+       
+        padding-left: 7px ;
+        margin-left: 20%;
+    }
+
+    .register_div button {
+        height: 35px;
+        width: 50%;
+        margin-left: 25%;
+        
+    }
+
+    .register_inicio-cuenta p {
+       padding-top: 20px;
+      
+        
+        
+    }
+        
+       
+        
+    
+    
+
+    
+}

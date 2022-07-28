@@ -4,20 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/117c6921aa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/117c6921aa.js" crossorigin="anonymous">
     <title>login</title>
+
 </head>
-<body>
-    <header>
-        <h1>HOla</h1>
+<body class="login">
+    <header class="productDetail_header">
+
+        <section class="productDetail_header_top">
+            <div class="productDetail_header_top_burger">
+                <button><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="productDetail_header_top_logo">
+                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt=""></a>
+            </div>
+            <div class="productDetail_header_top_icon">
+                <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
+                <a class="productDetail_header_top_icon_cart" href="/productCart"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </section>
+
+        <nav class="productDetail_header_navbar">
+            <ul>
+                <li><a href="#guitar">Guitarras</a></li>
+                <li><a href="">Baterias</a></li>
+                <li><a href="">Teclados y pianos</a></li>
+                <li><a href="">Micrófonos y sonido</a></li>
+                <li><a href="">Instrumentos de vientos</a></li>
+            </ul>
+        </nav>
+
+        <div class="productDetail_header_search">
+            <form action="/productDetail" method="get">
+                <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
+                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
     </header>
 
-    <main>
+    <main class="login_main">
+      <section class="login_inicio">
+        <div class="login_inicio-cuenta"><p> Inicio > Mi cuenta > Login</p></div>
+       <div class="login_inica-s"><h1>Iniciá sesión</h1></div>
+        
+        <form class="login_form" action="/login" method="post">
+            
+            <div class="login_div">
+                <label class="login_label" for="Email">Email</label>
+                <input class="login_input" type="email" id="Email" placeholder="Ej: tunombre@email.com ">
+            </div>
+            
+            <div class="login_div">
+                <label class="login_label" for="password">Contraseña</label>
+                <input class="login_input" type="password" id="password" placeholder="Escribe tu contraseña">
+            </div>
+            <div class="login_olvidaste-contra">
+                <p> ¿Olvidaste tu contraseña? </p>
+              </div>
+            
+            <div class="login_div">
+                <button type="submit">iniciar sesión</button>
+            </div>
+            <div class="login_p_a">
+                <p> ¿No tenés cuenta aún? <a href="/register">Registrate</a></p>
+              </div>
+            
+        </form>
+
+      </section>
+        
+
 
     </main>
 
-    <footer>
+    <footer class="productDetail_footer">
+        <section class="productDetail_footer_nav">
+            <nav>
+                <h3>CODE MUSIC</h3>
+                <br>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Sobre Nosotros</a></li>
+                    <li><a href="">Preguntas Frecuentes</a></li>
+                    <li><a href="">Terminos y Condiciones</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <section class="productDetail_footer_contac">
+            <div>
+                <h3>CONTACTANOS</h3>
+                <br>
+                <p>Av. Rivadavia 1565, CABA</p>
+                <p>(011) 7875-8564</p>
+                <p>info@codemusic.com.ar</p>
+            </div>
+            <br>
+            <section class="productDetail_footer_redes">
+                <h3>REDES SOCIALES</h3>
+                <div>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </section>
+        </section>
+
+        <section class="producDetail_footer_suscrip">
+            <h3>Recibi ofertas en tu mail</h3>
+            <input type="text" name="nombre">
+            <input type="text" name="mail">
+            <button type="submit">Suscribirme</button>
+        </section>
 
     </footer>
     
