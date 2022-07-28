@@ -53,7 +53,7 @@ ___
 ### TRELLO
 
 -  <a href="https://trello.com/invite/b/IugzWu9B/24dbea82b67dcc6688b52107fffb9708/proyecto-integrador" target="_blank"> Trello</a>
-https://trello.com/invite/b/IugzWu9B/24dbea82b67dcc6688b52107fffb9708/proyecto-integrador
+
 
  
 
