@@ -82,8 +82,8 @@
 
                 <div class="productDetail_main_section_top_derech_colores">
                     <h5>Color azul</h5>
-                    <article><img src="/img/BateriaMapex.jpg" alt="art1"></article>
-                    <article class="productDetail_main_section_top_derech_colores_art2"><img src="/img/BATERIA-MAPEX.jpg" alt="art2">
+                    <article><img width="100px" src="/img/BateriaMapex.jpg" alt="art1"></article>
+                    <article class="productDetail_main_section_top_derech_colores_art2"><img width="100px" src="/img/BATERIA-MAPEX.jpg" alt="art2">
                     </article>
                 </div>
 
@@ -91,7 +91,14 @@
                     <h4>Stock disponible</h4>
                     <div>
                         <h5>cantidad:</h5>
-                        <h5>1 unidad</h5>
+                        <form action="" method="POST">
+                            <select name="cantidad" id="cantidad">
+                                <option value="1">1 unidad</option>
+                                <option value="2">2 unidades</option>
+                                <option value="3">3 unidades</option>
+                                <option value="4">4 unidades</option>
+                            </select>
+                        </form>
                         <h6>(disponible 3)</h6>
                     </div>
                 </div>
@@ -101,6 +108,35 @@
                     <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </aside>
+
+            <div class="productDetail_div_info">
+                <article>
+                    <i class="fa-solid fa-truck"></i>
+                    <h4>Envío Gratis</h4>
+                    <p>Órdenes mayores a $22.999</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-shop"></i>
+                    <h4>Atención presencial</h4>
+                    <p>Lun a Vie 11 a 16 hs <br>Sáb 11 a 14 hs</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-rotate"></i>
+                    <h4>Garantía Devoluciones y Cambios</h4>
+                    <p>En todos los productos</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h4>Asesoramiento</h4>
+                    <p>¡Pre y postventa!</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Atencón online y telefónica</h4>
+                    <p>¡Contáctanos!</p>
+                </article>
+            </div>
+
 
         </section>
 
@@ -124,7 +160,6 @@
             </div>
             <div>
                 <h5>Descripción</h5>
-
                 <h5>MAPEX® PRODIGY</h5>
                 <p>Excelente batería MAPEX PRODIGY  <p> 
                 <p>
@@ -134,7 +169,6 @@
                     de contacto. Incluye TODO lo que precisas
                      para tocar
                 </p>
-
                 <h6>*** BANQUETA, FIERROS Y PLATOS MAPEX INCLUÍDOS ***</h6>
 
             </div>
@@ -175,7 +209,7 @@
             </section>
         </section>
 
-        <section class="producDetail_footer_suscrip">
+        <section class="productCart_footer_suscrip">
             <h3>Recibi ofertas en tu mail</h3>
             <input type="text" name="nombre">
             <input type="text" name="mail">
