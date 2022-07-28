@@ -12,7 +12,6 @@ app.get('/productCart', (req,res) => res.sendFile(path.resolve(__dirname, 'views
 app.get('/register', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'register.html')));
 app.get('/login', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'login.html')));
 
-
-app.listen(port, () => console.log('server running in http//localhost:' + port));
+app.listen(port, () => console.log('server running in http://localhost:' + port));
 
 /* Recuerden cuando bajan todo hacer el "npm i express" */
