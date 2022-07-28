@@ -1,22 +1,22 @@
 /* HEADER */
-.productCart, .index {
+.productDetail {
     background-color: var(--ColorGris);
     color: var(--ColorGris);
 }
 
-.index_header {
+.index_header,
+.productCart_header, .productDetail_header {
     background-color: var(--ColorNegro);
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
-
 }
 
 /* header top */
 
-.index_header_top {
+.productCart_header_top, .productDetail_header_top {
     display: flex;
     text-align: center;
     align-items: center;
@@ -26,7 +26,7 @@
     justify-content: space-between;
 }
 
-.index_header_top_burger button {
+.productCart_header_top_burger button, .productDetail_header_top_burger button {
     background-color: var(--ColorNegro);
     color: var(--ColorBlanco);
     font-size: 18px;
@@ -35,26 +35,27 @@
     border: none;
 }
 
-.index_header_top_logo {
+.productCart_header_top_logo, .productDetail_header_top_logo {
     width: 70%;
 }
 
-.index_logo {
+.productCart_header_top_logo img,
+.productDetail_header_top_logo img {
     width: 40%;
 }
 
-.index_header_top_icon {
+.productCart_header_top_icon, .productDetail_header_top_icon {
     font-size: 25px;
 
 }
 
-.index_header_cart {
+.productCart_header_top_icon_cart, .productDetail_header_top_icon_cart {
     display: none;
 }
 
 /* header nav */
 
-.index_header_navbar li {
+.productCart_header_navbar li, .productDetail_header_navbar li {
     display: none;
     list-style: none;
     list-style-type: none;
@@ -65,23 +66,30 @@
 
 /* header search */
 
-.index_header_search {
+.productCart_header_search, .productDetail_header_search {
     margin: auto;
     position: relative;
 }
 
-.index_header_form_input {
+.productCart_header_search form input,
+.productDetail_header_search form input {
     height: 26px;
     width: auto;
     border-radius: 10px;
 
 }
 
-.index_header_search_form button {
+.productCart_header_search form button,
+.productDetail_header_search form button {
     position: absolute;
     outline: none;
     right: 6px;
     top: 3px;
+    border: none;
+}
+
+.productCart_header_search form button i,
+.productDetail_header_search form button i {
     border: none;
     background-color: transparent;
 }
@@ -94,7 +102,8 @@
 @media (min-width: 768px) {
     /* header */
 
-    .index_header {
+    .productCart_header,
+    .productDetail_header {
         display: flex;
         flex-wrap: wrap;
         margin: 2px;
@@ -102,24 +111,26 @@
 
     /* header top */
 
-    .index_header_top {
+    .productCart_header_top,
+    .productDetail_header_top {
         width: 100%;
         display: flex;
         justify-content: space-around;
     }
 
-    .index_header_top_burger button {
+    .productCart_header_top_burger button, .productDetail_header_top_burger button {
         font-size: 28px;
         width: 38px;
         height: 38px;
     }
 
-    .index_header_top_logo {
+    .productCart_header_top_logo, .productDetail_header_top_logo {
         width: 60%;
         position: relative;
     }
 
-    .index_logo {
+    .productCart_header_top_logo img,
+    .productDetail_header_top_logo img {
         margin: auto;
         width: 40%;
         position: relative;
@@ -127,32 +138,34 @@
         padding-bottom: 5px;
     }
 
-    .index_header_top_icon {
+    .productCart_header_top_icon, .productDetail_header_top_icon {
         display: flex;
         gap: 0 18px;
         font-size: 30px;
 
     }
 
-    .index_header_cart {
+    .productCart_header_top_icon_cart, .productDetail_header_top_icon_cart {
         display: inline-block;
 
     }
 
     /* header search */
 
-    .index_header_search {
+    .productCart_header_search, .productDetail_header_search {
         position: relative;
     }
 
-    .index_header_form_input {
+    .productCart_header_search form input,
+    .productDetail_header_search form input {
         height: 36px;
         width: 200%;
         position: relative;
         right: 85px;
     }
 
-    .index_header_search_form button {
+    .productCart_header_search form button,
+    .productDetail_header_search form button {
         position: absolute;
         outline: none;
         font-size: 18px;
@@ -161,7 +174,8 @@
         background-color: transparent;
     }
 
-    .index_header_search_form button i {
+    .productCart_header_search form button i,
+    .productDetail_header_search form button i {
         border: none;
         background-color: transparent;
     }
@@ -171,7 +185,8 @@
 
     /* header */
 
-    .index_header {
+    .productCart_header,
+    .productDetail_header {
         display: flex;
         flex-wrap: wrap;
         padding: 2px;
@@ -179,29 +194,36 @@
 
     /* header top */
 
-    .index_header_top {
+    .productCart_header_top,
+    .productDetail_header_top {
         width: 100%;
         align-items: center;
         position: relative;
     }
 
-    .index_header_top_burger button {
+    .productCart_header_top_burger button,
+    .productDetail_header_top_burger button {
         display: none;
     }
 
-    .index_header_top_logo {
+    .productCart_header_top_logo, .productDetail_header_top_burger button {
+        display: none;
+    }
+
+    .productDetail_header_top_logo, .productCart_header_top_logo {
         width: 58%;
         position: relative;
         right: 330px;
     }
 
-    .index_logo {
+    .productCart_header_top_logo img,
+    .productDetail_header_top_logo img {
         margin: auto;
         width: 40%;
         position: relative;
     }
 
-    .index_header_top_icon {
+    .productCart_header_top_icon, .productDetail_header_top_icon {
         display: flex;
         position: relative;
         bottom: 5px;
@@ -209,36 +231,36 @@
         font-size: 30px;
     }
 
-    .index_header_cart {
+    .productCart_header_top_icon_cart, .productDetail_header_top_icon_cart {
         display: inline-block;
 
     }
 
     /* header search */
 
-    .index_header_search {
+    .productCart_header_search, .productDetail_header_search {
         bottom: 130px;
         left: 30px;
     }
 
     /* header nav */
 
-    .index_header_navbar {
+    .productCart_header_navbar, .productDetail_header_navbar {
         position: relative;
         background-color: var(--ColorAzulOscuro);
         margin: 0;
         padding: 10px;
         width: 100%;
-        border-radius: 10px ;
+        border-radius: 10px;
     }
 
-    .index_header_navbar ul {
+    .productCart_header_navbar ul, .productDetail_header_navbar ul {
         display: flex;
         margin: auto;
         gap: 0 65px;
     }
 
-    .index_header_navbar li {
+    .productCart_header_navbar li, .productDetail_header_navbar li {
         display: flex;
         margin: auto;
         list-style: none;
