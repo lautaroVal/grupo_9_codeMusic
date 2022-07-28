@@ -47,6 +47,14 @@ ___
 -  <a href="https://www.casalibertella.com/" target="_blank"> Casa Libertella</a> = Motivo: La visualización de los productos del mismo rubro que nuestro sitio.
 -  <a href="https://www.grid.com.ar/" target="_blank"> Grid</a> = Motivo: El Header, diseño, tamaños, maquetación y color.
 -  <a href="https://www.cdmarket.com.ar/" target="_blank"> CDMarket</a> = Motivo: El diseño del Body y carruseles.
+
+___
+
+### TRELLO
+
+-  <a href="https://trello.com/invite/b/IugzWu9B/24dbea82b67dcc6688b52107fffb9708/proyecto-integrador" target="_blank"> Trello</a>
+https://trello.com/invite/b/IugzWu9B/24dbea82b67dcc6688b52107fffb9708/proyecto-integrador
+
  
 
 
