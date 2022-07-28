@@ -1,0 +1,150 @@
+h1 {
+   text-align: center;
+   padding: 10px;
+   margin: 0px;
+   margin-top: 10px;
+}
+
+.productCart_main_menu {
+   list-style: none;
+   display: flex;
+   justify-content: space-evenly;
+   font-size: 15px;
+   padding: 0px;
+}
+
+
+/* Main productos */
+
+.productCart_detalleProducto {
+   display: flex;
+   justify-content: space-evenly;
+   margin-left: 50px;
+}
+
+.boton {
+   background-color: white;
+   border: 1px solid black;
+   font-size: 20px;
+   padding: 0px 20px;
+}
+
+/* Main productos bateria */
+
+.productCart_detalleProducto_imagenbateria {
+   width: 150px;
+   height: 120px;
+   display: flex;
+}
+
+.productCart_detalleProducto_nombreProducto_bateria {
+
+   margin-top: 30px;
+   font-size: 13px;
+   margin-right: 20px;
+   margin-bottom: 30px;
+}
+
+.productCart_detalleProducto_botonbateria {
+   display: flex;
+   justify-content: space-evenly;
+   margin-right: 100px;
+   margin-top: 30px;
+}
+
+.productCart_detalleProducto_ {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.productCart_detalleProducto_precioBateria {
+   padding-right: 30px;
+   padding-top: 35px;
+   font-style: bold;
+}
+
+/* Main productos guitarra */
+
+.productCart_detalleProducto_imagenguitarra {
+   width: 160px;
+   height: 120px;
+   margin-left: 10px;
+}
+
+
+.productCart_detalleProducto_menuguitarra {
+   display: flex;
+   justify-content: space-evenly;
+   margin-right: 110px;
+   font-style: bold;
+}
+
+
+.productCart_detalleProducto_nombreProducto_guitarra {
+   margin-top: 30px;
+   font-size: 13px;
+   margin-right: 20px;
+   margin-bottom: 30px;
+}
+
+
+.productCart_detalleProducto_basura {
+   width: 20px;
+   height: 20px;
+   margin-top: 32px;
+   margin-left: 0px;
+}
+
+/* Seccion Compra */
+
+.productCart_main_compra {
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   margin-right: 20px;
+   margin-top: 30px;
+}
+
+
+.productCart_main_compra_envioGratis_logo {
+   width: 70px;
+   height: 60px;
+}
+
+.productCart_main_compra_envioGratis {
+   padding: 10px;
+   margin-top: 10px;
+}
+
+.productCart_main_compra_logovisa {
+   width: 50px;
+   height: 50px;
+   margin-bottom: 0px;
+}
+
+.productCart_main_compra_container {
+   display: flex;
+}
+
+.productCart_main_compra_boton {
+ background-color: white;
+ color: black;
+ border: 2px solid black;
+ padding: 10px 15px;
+ margin-bottom: 20px;
+ margin-left: 40px;
+ transition: all 700ms;
+}
+
+.productCart_main_compra_boton:hover {
+   background-color: black;
+   color: white;
+   border: 2px solid black;
+}
+
+.productCart_main_compra_total {
+   display: flex;
+   font-weight: bold;
+   margin-bottom: 20px;
+   font-size: 20px;
+}

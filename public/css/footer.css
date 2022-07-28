@@ -23,6 +23,7 @@
 }
 
 /* footer redes */
+
 .productDetail_footer_redes i {
     font-size: 25px;
     padding: 2px;
@@ -32,14 +33,13 @@
 
 /* footer suscrip */
 
-.producDetail_footer_suscrip {
+.productCart_footer_suscrip {
     display: none;
     flex-direction: column;
     gap: 5px 0;
 }
 
-.producDetail_footer_suscrip input,
-button {
+.productCart_footer_suscrip input button {
     padding: 3px;
     margin-bottom: 2px;
     border-radius: 5px;
@@ -70,6 +70,7 @@ button {
     }
 
     /* footer redes */
+    
     .productDetail_footer_redes i {
         font-size: 25px;
         padding: 2px;
@@ -81,8 +82,7 @@ button {
 
     /* footer suscrip */
 
-    .producDetail_footer_suscrip {
+    .productCart_footer_suscrip {
         display: flex;
     }
-
 }
