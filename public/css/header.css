@@ -1,6 +1,6 @@
 /* HEADER */
 
-.productDetail, .productCart {
+.productDetail {
     background-color: var(--ColorGris);
     color: var(--ColorGris);
 }
