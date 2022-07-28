@@ -64,6 +64,7 @@ h1 {
 .productCart_detalleProducto_precioBateria {
    padding-right: 30px;
    padding-top: 35px;
+   font-style: bold;
 }
 
 /* Main productos guitarra */
@@ -79,6 +80,7 @@ h1 {
    display: flex;
    justify-content: space-evenly;
    margin-right: 110px;
+   font-style: bold;
 }
 
 
@@ -93,8 +95,8 @@ h1 {
 .productCart_detalleProducto_basura {
    width: 20px;
    height: 20px;
-   margin-top: 30px;
-   margin-left: 15px;
+   margin-top: 32px;
+   margin-left: 0px;
 }
 
 /* Seccion Compra */
@@ -135,6 +137,7 @@ h1 {
  padding: 10px 15px;
  margin-bottom: 20px;
  margin-left: 40px;
+ transition: all 700ms;
 }
 
 .productCart_main_compra_boton:hover {
