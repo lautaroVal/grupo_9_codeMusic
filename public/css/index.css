@@ -136,23 +136,26 @@ MAIN */
     margin-bottom: 70px;
 }
 
-#guitarras {
+#guitarras, #batterys, #pianos, #microphones, #winds  {
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-méline-waxx-165971.jpg') no-repeat center center;
     background-size: cover;
     padding: 20px; 
     display: flex;
     align-items: center;
-   /*  height: 100%; */
-   width: 100%;
+    width: 100%;
+    justify-content: center;
 }
 
-#guitarras h2 {
+#guitarras h2, #batterys h2, #pianos h2, #microphones h2, #winds h2 {
     color: var(--ColorBlanco);
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
 }
 
 
 /* .index_product */
-.index_section_products article {
+.index_product, .index_product_hide, .index_product_hide2{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -161,6 +164,7 @@ MAIN */
     border-radius: 10px;
     background-color: var(--ColorBlanco);
     margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
     padding: 10px;
 }
@@ -206,7 +210,7 @@ MAIN */
 .index_button_product {
     font-size: 13px;
     padding: 3px 18px;
-    background-color: #202040;
+    background-color: var(--ColorAzulOscuro);
     border-radius: 10px;
     margin-top: 10px;
 }
@@ -282,8 +286,6 @@ MAIN */
 }
 
 
-
-
 /* 
 ----------------------------------------------------
 FOOTER */
@@ -339,8 +341,12 @@ FOOTER */
    /*  gap: 1px; */
 }
 
-#guitarras {
-   width: auto;
+#guitarras, #batterys, #pianos, #microphones, #winds {
+   width: 150px;
+}
+
+#batterys, #microphones {
+    order: 1;
 }
 
 .index_product_hide {
