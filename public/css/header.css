@@ -45,7 +45,7 @@
     width: 70%;
 }
 
-.productCart_header_top_logo img {
+.productCart_header_top_logo img, .productDetail_header_top_logo img {
     width: 40%;
 }
 
@@ -80,14 +80,14 @@
     position: relative;
 }
 
-.productCart_header_search form input {
+.productCart_header_search form input, .productDetail_header_search form input {
     height: 26px;
     width: auto;
     border-radius: 10px;
 
 }
 
-.productCart_header_search form button {
+.productCart_header_search form button, .productDetail_header_search form button {
     position: absolute;
     outline: none;
     right: 6px;
@@ -96,7 +96,7 @@
 
 }
 
-.productCart_header_search form button i {
+.productCart_header_search form button i, .productDetail_header_search form button i {
     border: none;
     background-color: transparent;
 }
@@ -105,7 +105,7 @@
 @media (min-width: 768px) {
     /* header */
 
-    .productCart_header {
+    .productCart_header, .productDetail_header {
         display: flex;
         flex-wrap: wrap;
         margin: 2px;
@@ -113,7 +113,7 @@
 
     /* header top */
 
-    .productCart_header_top {
+    .productCart_header_top, .productDetail_header_top {
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -132,7 +132,7 @@
         position: relative;
     }
 
-    .productCart_header_top_logo img {
+    .productCart_header_top_logo img, .productDetail_header_top_logo img {
         margin: auto;
         width: 40%;
         position: relative;
@@ -161,14 +161,14 @@
         position: relative;
     }
 
-    .productCart_header_search form input {
+    .productCart_header_search form input, .productDetail_header_search form input {
         height: 36px;
         width: 200%;
         position: relative;
         right: 85px;
     }
 
-    .productCart_header_search form button {
+    .productCart_header_search form button, .productDetail_header_search form button {
         position: absolute;
         outline: none;
         font-size: 18px;
@@ -177,7 +177,7 @@
         background-color: transparent;
     }
 
-    .productCart_header_search form button i {
+    .productCart_header_search form button i, .productDetail_header_search form button i {
         border: none;
         background-color: transparent;
     }
@@ -187,7 +187,7 @@
 
     /* header */
 
-    .productCart_header {
+    .productCart_header, .productDetail_header {
         display: flex;
         flex-wrap: wrap;
         padding: 2px;
@@ -195,13 +195,13 @@
 
     /* header top */
 
-    .productCart_header_top {
+    .productCart_header_top, .productDetail_header_top {
         width: 100%;
         align-items: center;
         position: relative;
     }
 
-    .productCart_header_top_burger button {
+    .productCart_header_top_burger button, .productDetail_header_top_burger button {
         display: none;
     }
 
@@ -216,7 +216,7 @@
         right: 330px;
     }
 
-    .productCart_header_top_logo img {
+    .productCart_header_top_logo img, .productDetail_header_top_logo img {
         margin: auto;
         width: 40%;
         position: relative;
