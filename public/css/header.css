@@ -1,12 +1,12 @@
 /* HEADER */
 
-.productDetail {
+.index,
+.productCart {
     background-color: var(--ColorGris);
     color: var(--ColorGris);
 }
 
-.index_header,
-.productCart_header {
+.index_header {
     background-color: var(--ColorNegro);
     padding: 10px;
     margin-bottom: 10px;
@@ -18,8 +18,7 @@
 
 /* header top */
 
-.index_header_top,
-.productCart_header_top {
+.index_header_top {
     display: flex;
     text-align: center;
     align-items: center;
@@ -29,8 +28,7 @@
     justify-content: space-between;
 }
 
-.index_header_top_burger button,
-.productCart_header_top_burger button {
+.index_header_top_burger button {
     background-color: var(--ColorNegro);
     color: var(--ColorBlanco);
     font-size: 18px;

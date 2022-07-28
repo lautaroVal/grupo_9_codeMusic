@@ -8,37 +8,41 @@
     <script src="https://kit.fontawesome.com/985c010c44.js" crossorigin="anonymous"></script>
     <title>CarritoCompra</title>
 </head>
-<body class="productCart">
-    <header class="productCart_header">
 
-        <section class="productCart_header_top">
-            <div class="productCart_header_top_burger">
+
+<body class="productCart">
+    <header class="index_header">
+        <section class="index_header_top">
+            <div class="index_header_top_burger">
                 <button><i class="fa fa-bars"></i></button>
             </div>
-            <div class="productCart_header_top_logo">
-                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt=""></a>
+            <div class="index_header_top_logo">
+                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Logo" class="index_logo"></a>
             </div>
-            <div class="productCart_header_top_icon">
-                <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
-                <a class="productCart_header_top_icon_cart" href="/productCart"><i
-                        class="fa-solid fa-cart-shopping"></i></a>
+            <div class="index_header_top_icon">
+                <a href="/login" class="index_header_login"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="/productCart" class="index_header_cart"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </section>
-        <nav class="productCart_header_navbar">
+
+        <nav class="index_header_navbar">
             <ul>
                 <li><a href="#guitar">Guitarras</a></li>
-                <li><a href="">Baterias</a></li>
-                <li><a href="">Teclados y pianos</a></li>
-                <li><a href="">Micrófonos y sonido</a></li>
-                <li><a href="">Instrumentos de vientos</a></li>
+                <li><a href="#battery">Baterias</a></li>
+                <li><a href="#piano">Teclados y pianos</a></li>
+                <li><a href="#microphone">Micrófonos y sonido</a></li>
+                <li><a href="#wind">Instrumentos de vientos</a></li>
             </ul>
         </nav>
-        <div class="productCart_header_search">
-            <form action="/productDetail" method="get">
-                <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
+
+        <div class="index_header_search">
+            <form action="/productDetail" method="get" class="index_header_search_form">
+                <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?" class="index_header_form_input">
                 <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
+
+    </header>
 
     </header>
 
@@ -92,8 +96,8 @@
                         <button class="productCart_main_compra_boton">COMPRAR</button>  
                     </div>
     </main>
-    <footer class="productCart_footer">
-        <section class="productCart_footer_nav">
+    <footer class="index_footer">
+        <section class="index_footer_nav">
             <nav>
                 <h3>CODE MUSIC</h3>
                 <br>
@@ -106,7 +110,7 @@
             </nav>
         </section>
         
-        <section class="productCart_footer_contac">
+        <section class="index_footer_contac">
             <div>
                 <h3>CONTACTANOS</h3>
                 <br>
@@ -115,7 +119,7 @@
                 <p>info@codemusic.com.ar</p>
             </div>
             <br>
-            <section class="productCart_footer_redes">
+            <section class="index_footer_redes">
                 <h3>REDES SOCIALES</h3>
                 <div>
                     <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -125,7 +129,7 @@
             </section>
         </section>
 
-        <section class="producCart_footer_suscrip">
+        <section class="index_footer_suscrip">
             <h3>Recibi ofertas en tu mail</h3>
             <input type="text" name="nombre">
             <input type="text" name="mail">
