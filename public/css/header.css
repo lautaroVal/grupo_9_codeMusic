@@ -1,5 +1,5 @@
 /* HEADER */
-.productDetail {
+.index, .productDetail {
     background-color: var(--ColorGris);
     color: var(--ColorGris);
 }
