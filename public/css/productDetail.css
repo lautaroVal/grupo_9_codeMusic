@@ -129,15 +129,16 @@
     margin: 10px;
     width: 65%;
     font-size: 15px;
-    background-color: var(--ColorAzulOscuro);
-    color: var(--ColorBlanco);
+    background-color: white;
+    color: black;
     padding: 5px;
     border-radius: 10px;
     transition: 1.2s;
 }
 
 .productDetail_main_section_top_derech_button button:hover{
-    background-color: var(--ColorAzul);
+    background-color: black;
+    color: white;
     box-shadow: 8px 3px 20px -1px var(--ColorNegro);
 }
 
