@@ -4,6 +4,9 @@
     background-color: var(--ColorNegro);
     color: var(--ColorGris);
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
     margin: 5px;
     padding: 10px;
     border-radius: 55px 5px 5px 5px;
@@ -52,6 +55,7 @@
 
     .productDetail_footer {
         justify-content: space-around;
+        flex-direction: row;
 
     }
 

@@ -18,6 +18,7 @@
 /* main top izq */
 .productDetail_main_section_top_izq {
     display: none;
+    width: 100%;
     background-color: var(--colorGris);
 }
 
@@ -26,11 +27,23 @@
 .productDetail_main_section_top_centr {
     background-color: var(--colorGris);
     width: 100%;
+    border-radius: 8px;
 }
 
 .productDetail_main_section_top_centr img {
-    width: 310px;
+    width: 98%;
+    position: relative;
+    left: 2px;
     margin: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.productDetail_main_section_top_centr img:hover{
+    transition: 1.2s;
+    transform: scale(1.03);
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
 }
 
 /* main top derech */
@@ -42,10 +55,11 @@
     margin-right: 5px;
     width: 98%;
     background-color: var(--ColorBlanco);
+    transition: 1.2s;
 }
 
 .productDetail_main_section_top_derech:hover {
-    box-shadow: 1px 1px 10px rgb(84, 115, 138);
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
 }
 
 .productDetail_main_section_top_derech_price {
@@ -85,13 +99,18 @@
     width: 100%;
 }
 
-.productDetail_main_section_top_derech_colores img {
-    width: 100px;
+.productDetail_main_section_top_derech_colores div{
+    width: 30%;
 }
 
-.productDetail_main_section_top_derech_colores_art2 img {
-    width: 65px;
-    height: 60px;
+.productDetail_main_section_top_derech_colores img {
+    width: 15vh;
+    transition: 1.2s;
+}
+
+.productDetail_main_section_top_derech_colores img:hover{
+    transform: scale(1.2);
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
 }
 
 .productDetail_main_section_top_derech_stock h4 {
@@ -216,12 +235,13 @@
         margin: 15px 10px;
     }
 
-    .productDetail_main_section_top_derech_colores {
-        display: flex;
-        margin: 15px;
-        align-items: center;
-        gap: 10px 15px;
-        width: 100%;
+    .productDetail_main_section_top_derech_colores div{
+        width: 16%;
+    }
+    
+    .productDetail_main_section_top_derech_colores img {
+        width: 20vh;
+        transition: 1.2s;
     }
 
     .productDetail_main_section_top_derech_colores h5 {
@@ -334,7 +354,6 @@
     }
 
     .productDetail_main_section_top_izq article{
-        border-radius: 5px;
         background-color: var(--ColorBlanco);
         height: 150px;
         width: 150px;
@@ -344,22 +363,22 @@
     }
 
     .productDetail_main_section_top_izq article:hover{
-        box-shadow: 10px 10px 20px 10px var(--ColorNegro);
+        box-shadow: 8px 3px 20px -1px var(--ColorNegro);
     }
 
-    .productDetail_main_section_top_izq_marca img {
-        width: 130px;
+    .productDetail_main_section_top_izq article img{
+        width: 93%;
         position: relative;
-        left: 12px;
-        top: 10px;
+        left: 5px;
+        top: 5px;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: cover;
     }
 
-    .productDetail_main_section_top_izq_fto1 img {
-        width: 165px;
-    }
-
-    .productDetail_main_section_top_izq_fto2 img {
-        width: 130px;
+    .productDetail_main_section_top_izq article img:hover{
+        transition: 1.3s;
+        transform: scale(1.2);
     }
 
     /* main top centr */
