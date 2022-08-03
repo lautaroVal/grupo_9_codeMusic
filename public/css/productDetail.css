@@ -350,7 +350,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        width: 18%;
+        width: 15%;
     }
 
     .productDetail_main_section_top_izq article{
@@ -384,7 +384,7 @@
     /* main top centr */
 
     .productDetail_main_section_top_centr {
-        width: 50%;
+        width: 55%;
     }
 
     .productDetail_main_section_top_centr img {
@@ -394,7 +394,7 @@
     /* main top derch */
 
     .productDetail_main_section_top_derech {
-        width: 29%;
+        width: 28%;
     }
 
     .productDetail_main_section_top_derech_price {
@@ -419,19 +419,17 @@
     }
 
     .productDetail_main_section_top_derech_colores {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+
     }
 
+    .productDetail_main_section_top_derech_colores div{
+        width: 25%;
+    }
+    
     .productDetail_main_section_top_derech_colores img {
-        width: 100px;
+        width: 11vh;
     }
 
-    .productDetail_main_section_top_derech_colores_art2 img {
-        width: 64px;
-        height: 59px;
-    }
 
     .productDetail_main_section_top_derech_stock h4 {
         font-size: 21px;
