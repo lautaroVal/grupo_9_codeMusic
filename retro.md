@@ -1,39 +1,39 @@
 # Retrospectiva (Grupo 9)
-
 ---
+
 ## Retro Sprint 1
 
-## Seguir Haciendo:
+### Seguir Haciendo:
 *Empatía, compañerismo, buena comunicación, reuniones de zoom. Comunicación por Whatsapp.*
 
-## Hacer Más:
+### Hacer Más:
 *Reuniones. Organizar tarjetitas de Trello. GitHub. Retrospectiva. Ser ordenados en los codigos y archivos para tener menos conflictos* 
 
-## Empezar a Hacer:
+### Empezar a Hacer:
 *Daylis, Respetar las 3 preguntas de las daylis. Demo.*
 
-## Dejar De Hacer:
+### Dejar De Hacer:
 *Procastinar sobre las tareas dadas a cada uno*
 
-## Hacer Menos:
+### Hacer Menos:
 *Daylis extensas, tener muchos canales de comunicación.*
 ---
 
-# Retro Sprint 2
+## Retro Sprint 2
 
 
-## Seguir Haciendo:
+### Seguir Haciendo:
 seguir con la empatia entre compañeros,
 
-## Hacer Más:
+### Hacer Más:
 motivarnos entre nosotros
 
-## Empezar a Hacer:
+### Empezar a Hacer:
 hacer los sprint con mas tiempo, organizarnos mejor,
 
-## Dejar De Hacer:
+### Dejar De Hacer:
 * No dejar las tareas para otro dia, dejar de SUESTIMAR los sprint!!!...
 no avisar en los cambios generales*
 
-## Hacer Menos:
+### Hacer Menos:
 *Usar selectores de etiquetas y descendentes que cause que nos pisemos al unir.*
