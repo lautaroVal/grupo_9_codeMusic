@@ -11,6 +11,8 @@ app.get('/productDetail', (req,res) => res.sendFile(path.resolve(__dirname, 'vie
 app.get('/productCart', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')));
 app.get('/register', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'register.html')));
 app.get('/login', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'login.html')));
+app.get('/productAdd', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productAdd.html')));
+app.get('/productEdit', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productEdit.html')));
 
 app.listen(port, () => console.log('server running in http://localhost:' + port));
 /* Recuerden cuando bajan todo hacer el "npm i express" */
