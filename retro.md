@@ -17,22 +17,23 @@
 
 ### Hacer Menos:
 *Daylis extensas, tener muchos canales de comunicación.*
+
 ---
 
 ## Retro Sprint 2
 
 
 ### Seguir Haciendo:
-seguir con la empatia entre compañeros,
+*Seguir con la empatia entre compañeros*
 
 ### Hacer Más:
-motivarnos entre nosotros
+*Motivarnos entre nosotros*
 
 ### Empezar a Hacer:
-hacer los sprint con mas tiempo, organizarnos mejor,
+*Hacer los sprint con mas tiempo, organizarnos mejor,*
 
 ### Dejar De Hacer:
-* No dejar las tareas para otro dia, dejar de SUESTIMAR los sprint!!!...
+*No dejar las tareas para otro dia, dejar de SUESTIMAR los sprint!!!...
 no avisar en los cambios generales*
 
 ### Hacer Menos:
