@@ -79,8 +79,6 @@
 
 /* --------------------------------------------------- 
 MAIN */
-.index {
-}
 
 /* MAIN CARROUSEL */
 
@@ -138,9 +136,9 @@ MAIN */
     margin: auto;
     margin-bottom: 5px;
 }
-
+/* 
 #guitarras, #batterys, #pianos, #microphones, #winds  {  
-}
+} */
 
 #guitarras{
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-méline-waxx-165971.jpg') no-repeat center center;
@@ -242,9 +240,11 @@ MAIN */
 
 .decimales  {
     font-size: 6px;
-    display: inline-flex;
-    align-content: flex-start;
+    position: relative;
+    top: -6px;
+    right: -2px;
 }
+
 
 .index_product_envío {
     color: var(--ColorAzul);
