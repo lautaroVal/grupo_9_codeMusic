@@ -97,13 +97,17 @@
     
     .productCart_footer_suscrip input {
         background-color: var(--ColorNegro);
-        color: var(--ColorBlanco);
-        font-size: 8px;
+        font-size: 10px;
         font-weight:100;
         padding: 3px 2px;
         border: none;
         border-bottom: 1px solid white;
     }
+
+    .productCart_footer_suscrip ::placeholder {
+        color: salmon;
+    }
+
 
     .productCart_footer_suscrip form button {
         padding: 5px 0px;

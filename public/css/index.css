@@ -1,84 +1,4 @@
-/* HEADER */
-/* .index {
-    color: #F2F5F9;
-}
-.index_header {
-    background-color: #000000;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.index_header_topnavbar_div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.index_hambur {
-    background-color: #000000;
-    border: none;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-
-.index_hambur:hover {
-    box-shadow: #c8e73bdc;
-}
-
-.index_hambur i {
-    font-size: 25px;
-}
-
-.index_logo {
-    width: 105px;
-    height: 2.2em;
-    padding: 0;
-}
-
-.index_header_login {
-    font-size: 25px;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-
-.index_header_login:hover {
-    box-shadow: hsl(71, 78%, 57%);
-}
-
-.index_header_cart {
-    display: none;
-}
-
-.index_header_form {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 20px;
-    
-}
-
-.index_header_form_input {
-}
-
-.index_header_form button {
-    padding: 2px; 
-    align-self: center;
-}
-
-.index_header_form i {
-    
-}
-
-.index_header_navbar {
-    display: none;
-} */
-
-/* --------------------------------------------------- 
-MAIN */
+/* MAIN */ 
 
 /* MAIN CARROUSEL */
 
@@ -239,10 +159,11 @@ MAIN */
 }
 
 .decimales  {
-    font-size: 6px;
+    font-size: 7px;
     position: relative;
     top: -6px;
-    right: -2px;
+    right: 0px;
+    font-weight: 500;
 }
 
 
@@ -330,6 +251,18 @@ MAIN */
 
 .index_div_marcas img {
     width: 90px;
+}
+
+/* Whatsapp */
+#whatsapp  {
+    background-color: green;
+    color: #000000;
+    bottom: 90px;
+    position: fixed;
+    right: 10px;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 50%;
 }
 
 
