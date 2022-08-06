@@ -57,6 +57,9 @@ ___
 
 -  <a href="https://trello.com/invite/b/IugzWu9B/24dbea82b67dcc6688b52107fffb9708/proyecto-integrador" target="_blank"> Trello</a>
 
+###FIGMA 
+- <a href="https://www.figma.com/file/I5e7w7A5tfnc3DbIbWO7Ud/CodeMusic?node-id=297%3A919"> Figma</a>
+
 
 
 
