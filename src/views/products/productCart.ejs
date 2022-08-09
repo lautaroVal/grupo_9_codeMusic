@@ -1,49 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://kit.fontawesome.com/985c010c44.js" crossorigin="anonymous"></script>
-    <title>CarritoCompra</title>
-</head>
+    <%- include('../partials/head') %> 
+
 <body>
-    <header class="productDetail_header">
+    <%- include('../partials/header') %>
 
-        <section class="productDetail_header_top">
-            <div class="productDetail_header_top_burger">
-            <button><i class="fa fa-bars"></i></button>
-            
-            </div>
-            <div class="productDetail_header_top_logo">
-                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt=""></a>
-            </div>
-            <div class="productDetail_header_top_icon">
-                <a href="/users/login"><i class="fa-solid fa-circle-user"></i></a>
-                <a class="productDetail_header_top_icon_cart" href="/products/productCart"><i
-                        class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </section>
-
-        <nav class="productDetail_header_navbar">
-            <ul>
-                <li><a href="#guitar">Guitarras</a></li>
-                <li><a href="#battery">Baterias</a></li>
-                <li><a href="#piano">Teclados y pianos</a></li>
-                <li><a href="#microphone">Micrófonos y sonido</a></li>
-                <li><a href="#wind">Instrumentos de vientos</a></li>
-            </ul>
-        </nav>
-
-        <div class="productDetail_header_search">
-            <form action="/productDetail" method="get">
-                <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
-                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-
-    </header>
 
 
     <main>
@@ -97,47 +58,8 @@
                     </div>
     </main>
 
-    <footer class="productDetail_footer">
-        <section class="productDetail_footer_nav">
-            <nav>
-                <h3>CODE MUSIC</h3>
-                <br>
-                <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Sobre Nosotros</a></li>
-                    <li><a href="">Preguntas Frecuentes</a></li>
-                    <li><a href="">Terminos y Condiciones</a></li>
-                </ul>
-            </nav>
-        </section>
+    <%- include('../partials/footer') %> 
 
-        <section class="productDetail_footer_contac">
-            <div>
-                <h3>CONTACTANOS</h3>
-                <br>
-                <p>Av. Rivadavia 1565, CABA</p>
-                <p>(011) 7875-8564</p>
-                <p>info@codemusic.com.ar</p>
-            </div>
-            <br>
-            <section class="productDetail_footer_redes">
-                <h3>REDES SOCIALES</h3>
-                <div>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </section>
-        </section>
-
-        <section class="productCart_footer_suscrip">
-            <h3>Recibi ofertas en tu mail</h3>
-            <input type="text" name="nombre">
-            <input type="text" name="mail">
-            <button type="submit">Suscribirme</button>
-        </section>
-
-    </footer>
 
 </body>
 </html>

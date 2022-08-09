@@ -1,0 +1,34 @@
+<header class="productDetail_header">
+    <section class="productDetail_header_top">
+        <div class="productDetail_header_top_burger">
+            <button><i class="fa fa-bars"></i></button>
+
+        </div>
+        <div class="productDetail_header_top_logo">
+            <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Code Music"></a>
+        </div>
+        <div class="productDetail_header_top_icon">
+            <a href="/users/login"><i class="fa-solid fa-circle-user"></i></a>
+            <a class="productDetail_header_top_icon_cart" href="/products/productCart"><i
+                    class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </section>
+
+    <nav class="productDetail_header_navbar">
+        <ul>
+            <li><a href="#guitar">Guitarras</a></li>
+            <li><a href="#battery">Baterias</a></li>
+            <li><a href="#piano">Teclados y pianos</a></li>
+            <li><a href="#microphone">Micrófonos y sonido</a></li>
+            <li><a href="#wind">Instrumentos de vientos</a></li>
+        </ul>
+    </nav>
+
+    <div class="productDetail_header_search">
+        <form action="/products/productDetail" method="get">
+            <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
+            <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+
+</header>
