@@ -19,6 +19,7 @@ app.set('view engine', 'ejs');
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+
 app.use(methodOverride('_method'));
 
 /* app.use('/', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'index.html')));

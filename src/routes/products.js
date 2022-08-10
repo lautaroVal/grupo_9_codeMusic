@@ -9,4 +9,8 @@ router
     .get('/productAdd', productAdd)
     .get('/productEdit', productEdit)
 
+
+    .put('/productAdd', productAdd)
+    .put('/productEdit', productEdit)
+    
 module.exports = router;
