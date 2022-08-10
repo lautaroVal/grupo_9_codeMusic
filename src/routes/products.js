@@ -6,7 +6,7 @@ const {productDetail, productCart, productAdd, productEdit} = require('../contro
 router
     .get('/productDetail', productDetail)
     .get('/productCart', productCart)
-    .put('/productAdd', productAdd)
-    .put('/productEdit', productEdit)
+    .get('/productAdd', productAdd)
+    .get('/productEdit', productEdit)
 
 module.exports = router;

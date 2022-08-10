@@ -42,7 +42,7 @@
 
 .productDetail_main_section_top_centr img:hover{
     transition: 1.2s;
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 8px 3px 20px -1px var(--ColorNegro);
 }
 
@@ -58,9 +58,9 @@
     transition: 1.2s;
 }
 
-.productDetail_main_section_top_derech:hover {
-    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
-}
+ .productDetail_main_section_top_derech:hover {
+    box-shadow: 4px 3px 20px -1px var(--ColorNegro);
+} 
 
 .productDetail_main_section_top_derech_price {
     font-size: 35px;
