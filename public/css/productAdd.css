@@ -1,0 +1,7 @@
+.main_formulario_contenedor {
+    text-align: center;
+}
+
+.main_formulario_contenedor input label {
+    text-align: left;
+}

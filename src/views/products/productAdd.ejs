@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %> 
+<body>
+    <%- include('../partials/header') %>
+    <main class="main_formulario_contenedor">
+        <h4>Agrega un producto</h4>
+        <form action="" method="post">
+            
+            <div>
+                <label for="Name">Nombre del producto</label>
+                <input type="Name" id="Name" placeholder="Ejempo: Guitarra Electrica">
+            </div>
+            <div>
+                <label for="Description">Descripcion</label>
+                <input type="Description" id="Description" placeholder="Guitarra electrica Les Paul Ephipone">
+            </div>
+
+            <div>
+                <label for="Imagen" >Imagen de producto</label>
+                <input type="file" name="imagen" id="imagen" accept=".jpg, .png" required><br><br>
+            </div>
+
+            <div>
+                <p>Elige una categoria: 
+                    <select name="category">
+                      <option>Guitarras</option>
+                      <option>Baterias</option>
+                      <option>Teclados y Pianos</option>
+                      <option>Microfonos y Sonido</option>
+                      <option>Instrumentos de Viento</option>
+                    </select>
+                 </p>
+            </div>
+
+            <div>
+                <label for="Colores">Colores disponibles</label>
+                <p class="checkboxs"><input type="checkbox" name="color" id="color" value="color">Negro</p>
+                <p class="checkboxs"><input type="checkbox" name="color" id="color" value="color">Rojo</p>
+                <p class="checkboxs"><input type="checkbox" name="color" id="color" value="color">Blanco</p>
+            </div>
+
+            <div>
+                <label for="precio">Precio</label>
+                <input type="price" id="Description" placeholder="Ejemplo: $50.000">
+            </div>
+            
+            <div class="formulario_enviar">
+                <button type="submit">Enviar</button>
+            </div>
+            
+        </form>
+
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
