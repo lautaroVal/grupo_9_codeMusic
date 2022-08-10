@@ -3,7 +3,7 @@ const path = require('path');
 const port = 3049;
 
 const methodOverride = require('method-override');
-
+ 
 
 const app = express();
 
@@ -20,6 +20,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use(methodOverride('_method'));
+ 
 
 /* app.use('/', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'index.html')));
 app.use('/productDetail', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')));
