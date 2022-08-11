@@ -102,10 +102,10 @@
         padding: 3px 2px;
         border: none;
         border-bottom: 1px solid white;
+        color: white;
     }
 
     .productCart_footer_suscrip ::placeholder {
-        color: salmon;
     }
 
 
