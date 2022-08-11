@@ -258,8 +258,10 @@
 
     .productCart_header_navbar ul, .productDetail_header_navbar ul {
         display: flex;
-        margin: auto;
-        gap: 0 65px;
+        margin: 10px;
+        gap: 0 55px;
+        text-align: center;
+        
     }
 
     .productCart_header_navbar li, .productDetail_header_navbar li {
@@ -268,5 +270,12 @@
         list-style: none;
         list-style-type: none;
         text-decoration: none;
+        border-radius: 10px;
+        padding: 8px;
+        transition: 1.2s;
+    }
+
+    .productCart_header_navbar li, .productDetail_header_navbar li:hover{
+        background-color: black;
     }
 }
