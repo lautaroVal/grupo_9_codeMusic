@@ -10,6 +10,16 @@
     padding: 20px;
 }
 
+.main_formulario input{
+    width: 90%;
+    height: 32px;
+    margin-top: 7px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
 .main_formulario input label{
     padding: 5px 10px;
     margin-left: 5px;
@@ -18,10 +28,12 @@
 
 
 .main_formulario button {
-    padding: 10px 25px;
-    font-size: 15px;
-    border-radius: 5px;
-    transition: 1.2s;
+    display: inline-block;
+    width: 80%;
+    margin-left: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    transition: 0.5s;
 }
 
 .main_formulario button:hover {
@@ -29,4 +41,3 @@
     color: white;
     border: 2px solid #202040;
 }
-
