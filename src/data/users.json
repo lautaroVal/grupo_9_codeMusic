@@ -1,11 +1,38 @@
 [
-    { 
+    {
         "id": "1",
-        "firstName": "name" ,
-        "lastName": "null" , 
-        "email": "null",
-        "password": "null",
-        "category": "null",
+        "firstName": "Lautaro",
+        "lastName": "Valenzuela",
+        "email": "Lautaro@gmail",
+        "password": "**********",
+        "category": "admin",
+        "image": "null"
+    },
+    {
+        "id": "2",
+        "firstName": "Nahiara",
+        "lastName": "Beldevere",
+        "email": "Nahiara@gmail",
+        "password": "**********",
+        "category": "user",
+        "image": "null"
+    },
+    {
+        "id": "3",
+        "firstName": "Belen",
+        "lastName": "Romero",
+        "email": "Belen@gmail",
+        "password": "**********",
+        "category": "admin",
+        "image": "null"
+    },    
+    {
+        "id": "4",
+        "firstName": "Marcos",
+        "lastName": "Mansilla",
+        "email": "Marcos@gmail",
+        "password": "**********",
+        "category": "user",
         "image": "null"
     }
-    ]
+]
