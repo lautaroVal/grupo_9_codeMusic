@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const port = 3049;
+const morgan = require('morgan'); /* hay que hacer npm i morgan para instalar las dependencias de morgan.. */
 
 const methodOverride = require('method-override');
 
@@ -16,6 +17,9 @@ var productsRouter = require('./routes/products');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: false }));
+app.use(morgan('dev'));
+app.use(express.json());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
