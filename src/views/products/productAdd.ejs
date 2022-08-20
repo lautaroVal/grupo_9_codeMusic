@@ -2,24 +2,35 @@
 <html lang="en">
     <%- include('../partials/head') %> 
 <body>
-    <header class="productDetail_header">
-        <section class="productDetail_header_top">
-            <div class="productDetail_header_top_burger">
-                <button><i class="fa fa-bars"></i></button>
-    
+    <header class="productDetail_header_container">
+        <div class="productDetail_header">
+            <section class="productDetail_header_top">
+                <div class="productDetail_header_top_burger">
+                    <button><i class="fa fa-bars"></i></button>
+        
+                </div>
+                <div class="productDetail_header_top_logo">
+                    <a href="/">
+                        <img src="/img/LOGO-CODEMUSIC.png" alt="Code Music">
+                    </a>
+                </div>
+                <div class="productDetail_header_top_icon">
+                    <a href="/products/productEdit" class="productDetail_header_top_add">Editar producto</a>
+                    <a href="/users/login" class="productDetail_header_top_icon_login"><i class="fa-solid fa-circle-user"></i></a>
+                    <a href="/products/productCart" class="productDetail_header_top_icon_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+            </section>
+            
+            <div class="productDetail_header_search">
+                <form action="/products/productDetail" method="get">
+                    <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
+                    <button onclick="alert('Procesando tu petición')"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
             </div>
-            <div class="productDetail_header_top_logo">
-                <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Code Music"></a>
-            </div>
-            <a href="/products/productEdit" class="productDetail_header_top_add">Editar<br>Producto</a>
-            <div class="productDetail_header_top_icon">
-                <a href="/users/login" class="productDetail_header_top_icon_login"><i class="fa-solid fa-circle-user"></i></a>
-                <a href="/products/productCart" class="productDetail_header_top_icon_cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </div>
-        </section>
-    
+        </div>
+        
         <nav class="productDetail_header_navbar">
             <ul>
                 <li><a href="..#guitar">Guitarras</a></li>
@@ -29,15 +40,8 @@
                 <li><a href="..#wind">Instrumentos de vientos</a></li>
             </ul>
         </nav>
-    
-        <div class="productDetail_header_search">
-            <form action="/products/productDetail" method="get">
-                <input type="text" name="búsqueda" placeholder=" ¿Qué estás buscando?">
-                <button onclick="alert('No encontramos nada')"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-    
-    </header>
+        
+        </header>
 
     <main class="main_formulario">
         
