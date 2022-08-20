@@ -3,6 +3,14 @@
     flex-direction: column;
 }
 
+.main_formulario form {
+    background-color: var(--ColorBlanco);
+    border: var(--ColorNegro) 1px solid;
+    border-radius: 20px;
+    width: 50%;
+    
+}
+
 .main_formulario div {
     display: flex;
     flex-direction: column;
@@ -23,7 +31,6 @@
     margin-left: 10px;
 }
 
-
 .main_formulario button {
     display: inline-block;
     width: 60%;
@@ -40,4 +47,11 @@
     background-color: #202040;
     color: white;
     border: 2px solid #202040;
+}
+
+@media (min-width: 1024px) {
+
+    .main_formulario form{
+    max-width: 600px;
+    }
 }
