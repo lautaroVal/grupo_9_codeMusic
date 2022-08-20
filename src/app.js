@@ -7,6 +7,8 @@ const methodOverride = require('method-override');
 const app = express();
 
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json()); 
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
