@@ -4,10 +4,13 @@
     color: var(--ColorGris);
 }
 
+.productDetail_header_container {
+    margin-bottom: 15px;
+}
+
 .productDetail_header {
     background-color: var(--ColorNegro);
     padding: 10px;
-    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -17,12 +20,11 @@
 
 .productDetail_header_top {
     display: flex;
-    text-align: center;
     align-items: center;
-    width: auto;
-    margin: auto;
-    position: relative;
+    /* position: relative; */
     justify-content: space-between;
+    margin: auto;
+    width: 100%;
 }
 
 .productDetail_header_top_burger button {
@@ -36,18 +38,28 @@
 
 .productDetail_header_top_logo {
     width: 40%;
+    max-width: 220px;
+    margin:auto;
 }
 
 .productDetail_header_top_logo img {
     width: 100%;
 }
 
-.productDetail_header_top_icon_login {
-    font-size: 25px;
+.productDetail_header_top_icon {
+    position:relative;
+    display: flex;
+    align-items: center;
 }
 
 .productDetail_header_top_add {
+    position: absolute;
+    right: 35px;
     font-size: 13px;
+}
+
+.productDetail_header_top_icon_login {
+    font-size: 25px;
 }
 
 .productDetail_header_top_icon_cart {
@@ -72,11 +84,15 @@
     position: relative;
 }
 
+.productDetail_header_search form {
+    width: 100%;
+}
+
 .productDetail_header_search form input {
     height: 26px;
-    width: auto;
+    min-width: 175px;
     border-radius: 10px;
-
+    padding: 2px;
 }
 
 .productDetail_header_search form button {
@@ -105,7 +121,6 @@
     .productDetail_header {
         display: flex;
         flex-wrap: wrap;
-        margin: 2px;
     }
 
     /* header top */
@@ -125,26 +140,29 @@
     .productDetail_header_top_logo {
         width: 60%;
         position: relative;
+        left: 22px;
+        padding-bottom: 5px;
     }
 
     .productDetail_header_top_logo img {
         margin: auto;
-        width: 40%;
-        position: relative;
-        left: 20px;
-        padding-bottom: 5px;
     }
+
 
     .productDetail_header_top_icon {
         display: flex;
         gap: 0 18px;
         font-size: 30px;
+    }
 
+    .productDetail_header_top_add {
+        position: absolute;
+        right: 92px;
     }
 
     .productDetail_header_top_icon_cart {
         display: inline-block;
-
+        font-size: 25;
     }
 
     /* header search */
@@ -180,21 +198,20 @@
     /* header */
 
     .productDetail_header {
+        height: 150px;
         display: flex;
         flex-wrap: wrap;
-        padding: 2px;
+        padding: 20px;
+        margin: 0;
     }
 
     /* header top */
 
     .productDetail_header_top {
         width: 100%;
-        align-items: center;
-        position: relative;
-    }
-
-    .productDetail_header_top_burger button {
-        display: none;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 0;
     }
 
     .productDetail_header_top_burger button {
@@ -202,15 +219,18 @@
     }
 
     .productDetail_header_top_logo {
-        width: 58%;
-        position: relative;
-        right: 400px;
+        order: -3;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        left: 0;
     }
-
+    
     .productDetail_header_top_logo img {
-        margin: auto;
-        width: 40%;
-        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: 0;
     }
 
     .productDetail_header_top_icon {
@@ -223,12 +243,13 @@
 
     .productDetail_header_top_icon_cart {
         display: flex;
+        font-size: 25px;
     }
 
     /* header search */
 
     .productDetail_header_search {
-        bottom: 130px;
+        bottom: 43px;
         left: 30px;
     }
 
@@ -238,14 +259,13 @@
         position: relative;
         background-color: #38184C;
         margin: 0;
-        padding: 10px;
+        padding: 12px;
         width: 100%;
         border-radius: 10px;
     }
 
     .productDetail_header_navbar ul {
         display: flex;
-        margin: 10px;
         gap: 0 55px;
         text-align: center;
         
@@ -258,8 +278,8 @@
         list-style-type: none;
         text-decoration: none;
         border-radius: 10px;
-        padding: 8px;
-        transition: 1.2s;
+        padding: 6px;
+        transition: 0.8s;
     }
 
     .productDetail_header_navbar li:hover{

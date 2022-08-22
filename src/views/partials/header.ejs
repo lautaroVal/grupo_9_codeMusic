@@ -1,36 +1,40 @@
-<header class="productDetail_header">
+<header class="productDetail_header_container">
+<div class="productDetail_header">
     <section class="productDetail_header_top">
         <div class="productDetail_header_top_burger">
             <button><i class="fa fa-bars"></i></button>
 
         </div>
         <div class="productDetail_header_top_logo">
-            <a href="/"><img src="/img/LOGO-CODEMUSIC.png" alt="Code Music"></a>
+            <a href="/">
+                <img src="/img/LOGO-CODEMUSIC.png" alt="Code Music">
+            </a>
         </div>
-        <a href="/products/productAdd" class="productDetail_header_top_add">Nuevo<br>Producto</a>
         <div class="productDetail_header_top_icon">
+            <a href="/products/productAdd" class="productDetail_header_top_add">Vender</a>
             <a href="/users/login" class="productDetail_header_top_icon_login"><i class="fa-solid fa-circle-user"></i></a>
             <a href="/products/productCart" class="productDetail_header_top_icon_cart">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>
     </section>
-
-    <nav class="productDetail_header_navbar">
-        <ul>
-            <li><a href="..#guitar">Guitarras</a></li>
-            <li><a href="..#battery">Baterias</a></li>
-            <li><a href="..#piano">Teclados y pianos</a></li>
-            <li><a href="..#microphone">Micrófonos y sonido</a></li>
-            <li><a href="..#wind">Instrumentos de vientos</a></li>
-        </ul>
-    </nav>
-
+    
     <div class="productDetail_header_search">
         <form action="/products/productDetail" method="get">
             <input type="text" name="búsqueda" placeholder="¿Qué estás buscando?">
             <button onclick="alert('Procesando tu petición')"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
+</div>
+
+<nav class="productDetail_header_navbar">
+    <ul>
+        <li><a href="..#guitar">Guitarras</a></li>
+        <li><a href="..#battery">Baterias</a></li>
+        <li><a href="..#piano">Teclados y pianos</a></li>
+        <li><a href="..#microphone">Micrófonos y sonido</a></li>
+        <li><a href="..#wind">Instrumentos de vientos</a></li>
+    </ul>
+</nav>
 
 </header>
