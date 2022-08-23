@@ -1,7 +1,7 @@
 const {loadProducts, storeProducts} = require('../data/productsModule');
 
 module.exports = {
-    
+    /* DETAIL */
     productDetail: (req,res) => {
 
 		const products = loadProducts();
@@ -11,15 +11,16 @@ module.exports = {
 			productId
 	})
 	},
-
+	/* CART */
     productCart: (req,res) => res.render('products/productCart'),
 
-
+	/* CREATE */
     productAdd: (req, res) => {
 		return res.render('products/productAdd')
 	},
+
     productAddStore: (req, res) => {
-		const {name, price, discount, description, category, image, decimals, colors, estado} = req.body
+		const {name, price, discount, description, category, image, decimals, colors, estado, cuotas} = req.body
 		const products = loadProducts();
 
 		const newProduct = {
@@ -32,14 +33,15 @@ module.exports = {
             colors: +colors,
 			category: +category ,
             decimals: +decimals,
-            estado: +estado
+            estado: +estado,
+			cuotas: +cuotas
 		}
 		const productsModify = [...products, newProduct];
 		storeProducts(productsModify)
 		return res.redirect('/products/products')
 	},
 
-
+	/* EDIT */
     productEdit: (req,res) => {
         const products = loadProducts();
 		const product = products.find(product => product.id === +req.params.id);
@@ -48,7 +50,7 @@ module.exports = {
 		})
     },
 
-
+	/* LISTA DE PRODUCTS */
     productsList: (req, res) => {
 		const products = loadProducts();
 		return res.render('products/products', {
