@@ -1,40 +1,33 @@
 const express = require('express');
 const router = express.Router();
 
-const {productDetail, productCart, productAdd, productEdit, productsList, productAddStore} = require('../controllers/productsController')
+const { productDetail, productCart, productAdd, productEdit, productsList, productAddStore, update } = require('../controllers/productsController')
 
 router
-            /*Detalle de un producto particular*/
-    .get('/productDetail/:id/', productDetail)
+        /* Listado de productos */
+        .get('/', productsList)
 
-            /*  */
-    .get('/productCart', productCart)
+        /*Formulario de creación de productos  */
+        .get('/productAdd', productAdd)
 
-            /*Formulario de creación de productos  */
-    .get('/productAdd', productAdd)
-    .post('/productAdd', productAddStore)
+        /*Detalle de un producto particular*/
+        .get('/productDetail/:id/', productDetail)
 
-            /*  */
-    .get('/productEdit', productEdit)
+        /* Acción de creación (a donde se envía el formulario)*/
+        .post('/productAdd', productAddStore)
 
-            /*  */
-    .put('/productEdit/:id', update)
+        /* Formulario de edición de productos */
+        .get('/productEdit', productEdit)
 
-    .get('/products', productsList)
+        /* Acción de edición (a donde se envía el formulario): */
+        .put('/productEdit/:id', update)
 
-    
-    
+        /* Acción de borrado */
+        .delete('/products/:id')
+
+        /* Carrito de compras */
+        .get('/productCart', productCart)
+
+
 module.exports = router;
 
-/* 1. /
-
-
-3. /products/:id (GET)
-
-4. /products (POST)
-Acción de creación (a donde se envía el formulario)
-5. /products/:id/edit (GET)
-Formulario de edición de productos
-6. /products/:id (PUT)
-Acción de edición (a donde se envía el formulario):
-7. /products/:id (DELETE) */

@@ -21,7 +21,7 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "oferta"
    },
    {
       "id": 3,
@@ -81,7 +81,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 8,
@@ -93,7 +93,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 9,
@@ -105,7 +105,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 10,
@@ -117,7 +117,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 11,
@@ -129,19 +129,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
-   },
-   {
-      "id": 12,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "guitarras",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 13,
@@ -153,7 +141,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 14,
@@ -165,7 +153,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 15,
@@ -177,7 +165,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 16,
@@ -189,7 +177,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 17,
@@ -201,19 +189,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
-   },
-   {
-      "id": 18,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "baterias",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 19,
@@ -224,7 +200,7 @@
       "colors": "null",
       "price": "537598",
       "decimals": 0,
-      "discount": " ",
+      "discount": "no-oferta",
       "estado": "oferta"
    },
    {
@@ -237,7 +213,7 @@
       "price": "186760",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "no-oferta"
    },
    {
       "id": 21,
@@ -249,7 +225,7 @@
       "price": "186760",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "no-oferta"
    },
    {
       "id": 22,
@@ -261,103 +237,55 @@
       "price": "186760",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
-   },
-   {
-      "id": 23,
-      "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
-      "description": "null",
-      "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
-      "category": "teclados",
-      "colors": "null",
-      "price": "186760",
-      "decimals": 0,
-      "discount": " ",
-      "estado": "oferta"
-   },
-   {
-      "id": 24,
-      "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
-      "description": "null",
-      "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
-      "category": "teclados",
-      "colors": "null",
-      "price": "186760",
-      "decimals": 0,
-      "discount": " ",
-      "estado": "oferta"
-   },
-   {
-      "id": 25,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "microfonos",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "estado": ""
-   },
-   {
-      "id": 26,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "microfonos",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 27,
       "name": "name",
       "description": "null",
       "image": "null",
-      "category": "microfonos",
+      "category": "microfonosYSonidos",
       "colors": "null",
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 28,
       "name": "name",
       "description": "null",
       "image": "null",
-      "category": "microfonos",
+      "category": "microfonosYSonidos",
       "colors": "null",
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 29,
       "name": "name",
       "description": "null",
       "image": "null",
-      "category": "microfonos",
+      "category": "microfonosYSonidos",
       "colors": "null",
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 30,
       "name": "name",
       "description": "null",
       "image": "null",
-      "category": "microfonos",
+      "category": "microfonosYSonidos",
       "colors": "null",
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 31,
@@ -366,10 +294,10 @@
       "image": "D_NQ_NP_917263-MLA41662325703_052020-F.jpg",
       "category": "deVientos",
       "colors": "Dorado",
-      "price": "145.9",
+      "price": "145950",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "no-oferta"
    },
    {
       "id": 32,
@@ -378,10 +306,10 @@
       "image": "D_NQ_NP_622687-MLA40150077419_122019-O.jpg",
       "category": "deVientos",
       "colors": "Negro",
-      "price": "215.4",
+      "price": "215488",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 33,
@@ -393,7 +321,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 34,
@@ -405,7 +333,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 35,
@@ -417,7 +345,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    },
    {
       "id": 36,
@@ -429,6 +357,6 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": ""
+      "estado": "no-oferta"
    }
 ]
