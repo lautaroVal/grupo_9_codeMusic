@@ -21,66 +21,21 @@
 
             <h1>OFERTAS</h1>
             <section class="index_section_products">
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                        <p class="precio">$53.515 <em class="decimales">66</em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
-                        <a href="/products/productDetail" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                        <p class="precio">$53.515 <em class="decimales">66</em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
-                        <a href="/products/productDetail" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product_hide">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                        <p class="precio">$53.515 <em class="decimales">66</em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
-                        <a href="/products/productDetail" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product_hide">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                        <p class="precio">$53.515 <em class="decimales">66</em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
-                        <a href="/products/productDetail" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product_hide2">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                        <p class="precio">$53.515 <em class="decimales">66</em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
-                        <a href="/products/productDetail" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
-                <article class="index_product_hide2">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
-                    <div class="index_product_bottom">
-                        <p class="precio">$53.515 <em class="decimales">66</em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
-                        <a href="/products/productDetail" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
+                <% ofertas.forEach(product => { %>
+                 
+                    <article class="index_product">
+                        <div class="index_product_img"><img src="/img/imgProducts/<%= product.image%>" alt="product"></div>
+                        <hr>
+                        <h3 class="index_product_title"><%= product.name %>  </h3>
+                        <div class="index_product_bottom">
+                            <p class="precio">$<%= product.price %><em class="decimales"></em></p>
+                            <p class="index_product_envío"> Envío Gratis</p>
+                            <a href="/products/productDetail" class="index_button_product">Ver más</a>
+                        </div>
+                    </article>
+
+                <% }) %>
+                
             </section>
 
             <div class="index_div_info">
@@ -332,7 +287,7 @@
                     </p>
                 </div>
                 <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <div class="index_product_img"><img src="/img/imgProducts/D_NQ_NP_738608-MLA44112471285_112020-O.webp" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
                     <div class="index_product_bottom">
@@ -342,7 +297,7 @@
                     </div>
                 </article>
                 <article class="index_product">
-                    <div class="index_product_img"><img src="/img/GuitarraElectrica.jpg" alt="product"></div>
+                    <div class="index_product_img"><img src="/img/imgProducts/D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title">Guitarra eléctrica Epiphone SG pecial de caoba ebony </h3>
                     <div class="index_product_bottom">

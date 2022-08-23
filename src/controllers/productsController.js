@@ -1,4 +1,5 @@
 
+const {loadProducts, storeProducts} = require('../data/products');
 
 
 module.exports = {
@@ -11,6 +12,7 @@ module.exports = {
 
     productEdit: (req,res) => res.render('products/productEdit'),
 }
+
 
 
 /* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')), */
