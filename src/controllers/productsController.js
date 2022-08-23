@@ -1,18 +1,18 @@
-
 const {loadProducts, storeProducts} = require('../data/productsModule');
-
-
 
 module.exports = {
     
-    productDetail: (req,res) => res.render('products/productDetail'),
-
-
+    productDetail: (req,res) => {
+		const products = loadProducts();
+		const {id} = req.params;
+		const productId = products.find(product => product.id === +id)
+		return res.render('products/productDetail/:id/',{
+			productId
+	})
+	},
 
 
     productCart: (req,res) => res.render('products/productCart'),
-
-
 
 
     productAdd: (req, res) => {
@@ -40,11 +40,7 @@ module.exports = {
 	},
 
 
-
-
     productEdit: (req,res) => res.render('products/productEdit'),
-
-
 
 
     productsList: (req, res) => {
@@ -54,12 +50,8 @@ module.exports = {
 			/* toThousand */
 		})
 	}
-
 }
-
-
 
 
 /* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')), */
 /* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')) */
-
