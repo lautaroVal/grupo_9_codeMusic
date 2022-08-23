@@ -40,8 +40,6 @@ module.exports = {
 	},
 
 
-
-
     productEdit: (req,res) => res.render('products/productEdit'),
 
 
