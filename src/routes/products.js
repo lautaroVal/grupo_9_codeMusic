@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {productDetail, productCart, productAdd, productEdit, productsList} = require('../controllers/productsController')
+const {productDetail, productCart, productAdd, productEdit, productsList, productAddStore} = require('../controllers/productsController')
 
 router
             /*Detalle de un producto particular*/
@@ -13,7 +13,7 @@ router
 
             /*Formulario de creación de productos  */
     .get('/productAdd', productAdd)
-    .post('/productAdd', productAdd)
+    .post('/productAdd', productAddStore)
 
             /*  */
     .get('/productEdit', productEdit)
