@@ -3,7 +3,10 @@
 ## Temática del sitio Web: Venta de Instrumentos Musicales.
 ## Audiencia: Público en General:
 
-#### *Somos un grupo de estudiantes de Programacion Full Stack, teniendo nuestro primer desafio al crear un e-commers e ir aprendiendo en el camino. Con muchos animos de progresar y de seguir aprendiendo.*
+#### *Somos un grupo de estudiantes de Programación Web Full Stack, teniendo nuestro primer desafío al crear un e-commerce e ir aprendiendo en el camino. Con muchos ánimos de progresar y de seguir aprendiendo.*
+
+![Diseño sin título](https://user-images.githubusercontent.com/106128572/179658494-a3c542c4-30f9-44c5-9570-2883ba74f688.gif)
+
 
 ### Descripción de los Participantes 
 
@@ -11,7 +14,7 @@
 - **Edad**: `22`
 - **Localidad**: `San Miguel`
 - **Dedicación**: Estudiante de Progrmación Web Full Stack. Estudiante universitario de Contador Público en primer año.
-- **Biografia**: *Nací el 10/03/2000 en el Palomar, Bs As, Argentina. Actualmente vivo en San miguel. Mi educación alcanzada es: Secundario Técnico finalizado en 2019, titulo Maestro Mayor de obras. Estudie 2 años en un conservatorio de musica pero no lo finalizé. Mis hobbies son tocar la guitarra y el piano. Tambien me gusta jugar un poco al futbol.
+- **Biografia**: *Nací en el 2000 en el Palomar, Bs As, Argentina. Actualmente vivo en San miguel. Mi educación alcanzada es: Secundario Técnico finalizado en 2019, titulo Maestro Mayor de obras. Estudie 2 años en un conservatorio de musica pero no lo finalizé. Mis hobbies son tocar la guitarra y el piano. Tambien me gusta jugar un poco al futbol.
 Y hoy estoy haciendo este curso porque tenía curiosidad, hace tiempo, de sumergirme en el mundo de la tecnología por eso aproveché la oportunidad con entusiasmo.*
 
 ___
@@ -42,7 +45,7 @@ ___
 
 ### Sitios de Referencia
 
--  <a href="https://www.kaironmusic.com.ar/" target="_blank"> Kairon Music</a> = Motivo: Colores, Footer, secciones de los productos.
+-  <a href="https://www.baires.rocks/"> Baires Rock</a> = Motivo: Colores, Footer, secciones de los productos.
 -  <a href="https://www.famusic.com.ar/" target="_blank"> FaMusic</a> = Motivo: El logo, los colores, Carrusel y secciones.
 -  <a href="https://www.casalibertella.com/" target="_blank"> Casa Libertella</a> = Motivo: La visualización de los productos del mismo rubro que nuestro sitio.
 -  <a href="https://www.grid.com.ar/" target="_blank"> Grid</a> = Motivo: El Header, diseño, tamaños, maquetación y color.
@@ -56,6 +59,16 @@ ___
 
 
  
+ ___
+
+### TRELLO
+
+-  <a href="https://trello.com/invite/b/IugzWu9B/24dbea82b67dcc6688b52107fffb9708/proyecto-integrador" target="_blank"> Trello</a>
+
+### FIGMA 
+
+- <a href="https://www.figma.com/file/I5e7w7A5tfnc3DbIbWO7Ud/CodeMusic?node-id=297%3A919"> Figma</a>
+
 
 
 
