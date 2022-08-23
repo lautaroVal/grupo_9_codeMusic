@@ -9,6 +9,13 @@ module.exports = {
     productAdd: (req,res) => res.render('products/productAdd'),
 
     productEdit: (req,res) => res.render('products/productEdit'),
+
+    productsList: (req, res) => {
+        const products = loadProducts()
+
+        res.render('products',{
+            products
+    })
 }
 
 
