@@ -7,11 +7,23 @@ module.exports = {
     
     productDetail: (req,res) => res.render('products/productDetail'),
 
+
+
+
     productCart: (req,res) => res.render('products/productCart'),
+
+
+
 
     productAdd: (req,res) => res.render('products/productAdd'),
 
+
+
+
     productEdit: (req,res) => res.render('products/productEdit'),
+
+
+
 
     productsList: (req, res) => {
 		const products = loadProducts();
