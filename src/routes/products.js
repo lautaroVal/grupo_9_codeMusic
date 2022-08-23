@@ -18,7 +18,7 @@ router
     .get('/productEdit/:id', productEdit)
 
             /*  */
-    .put('/productEdit/:id', productEdit)
+    .put('/productEdit/:id', update)
 
     .get('/products', productsList)
 
