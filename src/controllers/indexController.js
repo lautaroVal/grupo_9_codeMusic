@@ -7,14 +7,14 @@ module.exports = {
 		const guitarras = products.filter(product => product.category === "guitarras");
         const baterias = products.filter(product => product.category === "baterias");
 		const teclados = products.filter(product => product.category === "teclados");
-        const microfonos = products.filter(product => product.category === "microfonos");
+        const microfonosYSonidos = products.filter(product => product.category === "microfonosYSonidos");
         const deVientos = products.filter(product => product.category === "deVientos");
 		res.render('index',{
 			ofertas,
 			guitarras,
             baterias,
             teclados,
-            microfonos,
+            microfonosYSonidos,
             deVientos
 			/* toThousand */
 		})},
