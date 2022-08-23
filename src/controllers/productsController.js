@@ -12,7 +12,6 @@ module.exports = {
 	})
 	},
 
-
     productCart: (req,res) => res.render('products/productCart'),
 
 
@@ -38,11 +37,16 @@ module.exports = {
 		const productsModify = [...products, newProduct];
 		storeProducts(productsModify)
 		return res.redirect('/products/products')
-
 	},
 
 
-    productEdit: (req,res) => res.render('products/productEdit'),
+    productEdit: (req,res) => {
+        const products = loadProducts();
+		const product = products.find(product => product.id === +req.params.id);
+		res.render('products/:id/edit', {
+			product
+		})
+    },
 
 
     productsList: (req, res) => {

@@ -15,13 +15,10 @@ router
     .post('/productAdd', productAddStore)
 
             /*  */
-    .get('/productEdit', productEdit)
+    .get('/productEdit/:id', productEdit)
 
             /*  */
-    .put('/productAdd', productAdd)
-
-            /*  */
-    .put('/productEdit', productEdit)
+    .put('/productEdit/:id', productEdit)
 
     .get('/products', productsList)
     
