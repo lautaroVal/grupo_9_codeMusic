@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {productDetail, productCart, productAdd, productEdit} = require('../controllers/productsController')
+const {productDetail, productCart, productAdd, productEdit, productsList} = require('../controllers/productsController')
 
 router
             /*Detalle de un producto particular*/
@@ -23,6 +23,8 @@ router
 
             /*  */
     .put('/productEdit', productEdit)
+
+    .get('/products', productsList)
     
 module.exports = router;
 
