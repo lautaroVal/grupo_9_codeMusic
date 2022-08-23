@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "Yamaha Pacifica 012 Black",
         "description": "La serie Yamaha Pacifica es una gama creada en los años 90, la cual sigue vigente a día de hoy gracias a una gran variedad de modelos y una versatilidad sin igual.",
         "image": "guitarra_electrica_yamaha_pacifica_012_dark__0",
@@ -9,7 +9,7 @@
         "price": "209.60"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "Batería Yamaha Stage de 5 piezas",
         "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
         "image": "81WrWqbKTL._AC_SX679_",
