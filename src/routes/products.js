@@ -15,7 +15,7 @@ router
     .post('/productAdd', productAddStore)
 
             /*  */
-    .get('/productEdit/:id', productEdit)
+    .get('/productEdit', productEdit)
 
             /*  */
     .put('/productEdit/:id', productEdit)

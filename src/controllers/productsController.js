@@ -43,7 +43,7 @@ module.exports = {
     productEdit: (req,res) => {
         const products = loadProducts();
 		const product = products.find(product => product.id === +req.params.id);
-		res.render('products/:id/edit', {
+		res.render('products/productEdit', {
 			product
 		})
     },
