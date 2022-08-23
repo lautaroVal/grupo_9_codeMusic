@@ -5,8 +5,7 @@ const {productDetail, productCart, productAdd, productEdit, productsList, produc
 
 router
             /*Detalle de un producto particular*/
-    .get('/productDetail', productDetail)
-    .get('/productDetail/:id', productDetail)
+    .get('/productDetail/:id/', productDetail)
 
             /*  */
     .get('/productCart', productCart)

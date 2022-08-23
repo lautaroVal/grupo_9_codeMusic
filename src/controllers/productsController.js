@@ -2,14 +2,17 @@ const {loadProducts, storeProducts} = require('../data/productsModule');
 
 module.exports = {
     
-    productDetail: (req,res) => res.render('products/productDetail'),
-
-
+    productDetail: (req,res) => {
+		const products = loadProducts();
+		const {id} = req.params;
+		const productId = products.find(product => product.id === +id)
+		return res.render('products/productDetail/:id/',{
+			productId
+	})
+	},
 
 
     productCart: (req,res) => res.render('products/productCart'),
-
-
 
 
     productAdd: (req, res) => {
