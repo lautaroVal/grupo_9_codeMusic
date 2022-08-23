@@ -81,7 +81,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 8,
@@ -93,7 +93,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 9,
@@ -105,7 +105,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 10,
@@ -117,7 +117,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 11,
@@ -129,7 +129,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 12,
@@ -141,7 +141,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 13,
@@ -153,7 +153,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 14,
@@ -165,7 +165,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 15,
@@ -177,7 +177,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 16,
@@ -189,7 +189,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 17,
@@ -201,7 +201,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 18,
@@ -213,7 +213,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 19,
@@ -297,7 +297,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 26,
@@ -309,7 +309,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 27,
@@ -321,7 +321,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 28,
@@ -333,7 +333,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 29,
@@ -345,7 +345,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 30,
@@ -357,7 +357,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 31,
@@ -381,7 +381,7 @@
       "price": "$215.4",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 33,
@@ -393,7 +393,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 34,
@@ -405,7 +405,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 35,
@@ -417,7 +417,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    },
    {
       "id": 36,
@@ -429,6 +429,6 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": ""
    }
 ]

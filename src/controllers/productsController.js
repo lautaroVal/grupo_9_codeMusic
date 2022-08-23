@@ -20,7 +20,7 @@ module.exports = {
 		return res.render('products/productAdd')
 	},
     productAddStore: (req, res) => {
-		const {name, price, discount, description, category, image, decimals, colors} = req.body
+		const {name, price, discount, description, category, image, decimals, colors, estado} = req.body
 		const products = loadProducts();
 
 		const newProduct = {
@@ -32,7 +32,8 @@ module.exports = {
 			image: 'guitarra_electrica_yamaha_pacifica_012_dark.jpg',
             colors: +colors,
 			category: +category ,
-            decimals: +decimals
+            decimals: +decimals,
+            estado: +estado
 		}
 		const productsModify = [...products, newProduct];
 		storeProducts(productsModify)
