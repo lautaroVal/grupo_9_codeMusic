@@ -2,6 +2,7 @@
 const {loadProducts, storeProducts} = require('../data/productsModule');
 
 
+
 module.exports = {
     
     productDetail: (req,res) => res.render('products/productDetail'),
@@ -19,7 +20,9 @@ module.exports = {
 			/* toThousand */
 		})
 	}
+
 }
+
 
 
 
