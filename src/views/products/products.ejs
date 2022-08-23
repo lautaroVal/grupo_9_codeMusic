@@ -2,9 +2,10 @@
 <html lang="en">
     <%- include('../partials/head') %> 
 <body>
-    <header class="productDetail_header_container">
+    <%- include('../partials/header') %>
         <main>
 
+            <section class="index_section_products">
             <% products.forEach(product => { %>
                  
                 <article class="index_product">
@@ -19,13 +20,10 @@
                 </article>
 
             <% }) %>
-
-
-
-
+        </section>
 
         </main>
-        <%- include('./partials/footer') %> 
+        <%- include('../partials/footer') %> 
 
     </body>
     
