@@ -4,69 +4,75 @@
       "name": "Yamaha Pacifica 012 Black",
       "description": "La serie Yamaha Pacifica es una gama creada en los años 90, la cual sigue vigente a día de hoy gracias a una gran variedad de modelos y una versatilidad sin igual.",
       "image": "guitarra_electrica_yamaha_pacifica_012_dark__0.jpg",
-      "category": "ofertas",
+      "category": "guitarras",
       "colors": "Black | Red Metallic | Dark Blue Metallic",
       "price": "101941",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
       "id": 2,
       "name": "Batería Yamaha Stage de 5 piezas",
       "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
       "image": "81WrWq-bKTL._AC_SX679_.jpg",
-      "category": "ofertas",
+      "category": "baterias",
       "colors": "Rojo arándano | Raven Black | Pure White",
       "price": "409600",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "no-oferta"
    },
    {
       "id": 3,
       "name": "Teclado YAMAHA PSR453",
       "description": "Elementos básicos para aprender a tocar, como el botón de acceso directo a la configuración de piano y la función “Yamaha Education Suite”, así como funciones que se utilizan durante las actuaciones en directo, como los botones de control de sintetizador para obtener un control en tiempo real de filtros, efectos, envolvente de sonido y. Se pueden agregar nuevos colores para los distintos estilos musicales mediante el uso de 150 patrones distintos y 40 arpegios. Estas sencillas prestaciones, junto con el acabado en negro mate del instrumento, han puesto este teclado en el punto de mira de los intérpretes.",
       "image": "340333000-1-300x300.jpg",
-      "category": "ofertas",
+      "category": "teclados",
       "colors": "Negro",
       "price": "78764",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
       "id": 4,
       "name": "Teclado Casio Ct S100 Casiotone 61",
       "description": "Diseño portátil, delgado y elegante. Con el CTS100, podes disfrutar de la música en cualquier momento y lugar. Su tamaño compacto de 930 mm x 256 mm x 73 mm es un 30 % más pequeño en volumen que los modelos CTK1500 y CTK1550. Llevarlo es muy sencillo, gracias a un mango en la parte superior del teclado y un peso de solo 3,3 kg. El diseño incorpora bordes y esquinas redondeados, lo cual permite transportarlo con mayor seguridad. Una interfaz fácil de usar para todos, simple e intuitiva que cuenta con un diseño organizado con menos botones.",
       "image": "D_821154-MLA42066070556_062020-F-600x288.jpg",
-      "category": "ofertas",
+      "category": "teclados",
       "colors": "Negro",
       "price": "43279",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
       "id": 5,
       "name": "Marshall Mg30fx",
       "description": "30 watts 4 canales Parlante Custom de 10 Con Reverb Efectos: Phaser Flanger, Delay, Chorus Ecualizador de 3 bandas Entradas: Jack 6.3mm (Guitarra) y Minijack 3.5mm (Auxiliar) Salida de auriculares: 3.5mm Entrada para footswitch (no incluido) Afinador Botón de tap tempo Forrado en Tolex negroDimensiones: 42 x 48 x 22,6 cm Peso: 10 kg",
       "image": "D_NQ_NP_674442-MLA46543861330_062021-O.JPEG",
-      "category": "ofertas",
+      "category": "microfonosYSonidos",
       "colors": "Negro",
       "price": "95063",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
       "id": 6,
       "name": "Ibanez IBZ10G",
       "description": "Amplificador Guitarra Ibanez IBZ10GU Combo 10 Watts Este amplificador de guitarra de 10 vatios le proporciona una distorsión crujiente que esperaría de una pila mucho más grande. El gabinete tiene un diseño de respaldo abierto para su respuesta de bajo nivel, mientras que el ecualizador de 3 bandas mantiene intactos sus agudos. El Ibanez IBZ10G es un pequeño amplificador de práctica para guitarra. Cuenta con 10 vatios de potencia, altavoz de 6.5 ¿ y 2 bandas de ecualización. El IBZ10G está diseñado para guitarra eléctrica, pero también puede usar una guitarra acústica. Otras características incluyen gabinete cerrado para mayor respuesta de graves, un interruptor de encendido / apagado de distorsión y control de volumen. También hay un conector para auriculares para práctica privada (y para mantener a otros fuera de su estuche), y una entrada auxiliar para su iPod, reproductor de CD, etc.",
       "image": "1410171854593622_01_medium.jpg",
-      "category": "ofertas",
+      "category": "microfonosYSonidos",
       "colors": "negro",
       "price": "45999",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 1,
+      "id": 7,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -74,10 +80,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 8,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -85,10 +92,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 9,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -96,10 +104,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 10,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -107,10 +116,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 11,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -118,10 +128,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 12,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -129,10 +140,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 13,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -140,10 +152,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 14,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -151,10 +164,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 15,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -162,10 +176,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 16,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -173,10 +188,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 17,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -184,10 +200,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 18,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -195,10 +212,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 19,
       "name": "Korg Pa700 Teclado Arranger Profesional 61 Teclas",
       "description": "null",
       "image": "D_NQ_NP_738608-MLA44112471285_112020-O.webp",
@@ -206,10 +224,11 @@
       "colors": "null",
       "price": "537598",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 1,
+      "id": 20,
       "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
       "description": "null",
       "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
@@ -217,10 +236,11 @@
       "colors": "null",
       "price": "186760",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 1,
+      "id": 21,
       "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
       "description": "null",
       "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
@@ -228,10 +248,11 @@
       "colors": "null",
       "price": "186760",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 1,
+      "id": 22,
       "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
       "description": "null",
       "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
@@ -239,10 +260,11 @@
       "colors": "null",
       "price": "186760",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 1,
+      "id": 23,
       "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
       "description": "null",
       "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
@@ -250,10 +272,11 @@
       "colors": "null",
       "price": "186760",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 1,
+      "id": 24,
       "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
       "description": "null",
       "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
@@ -261,10 +284,11 @@
       "colors": "null",
       "price": "186760",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 1,
+      "id": 25,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -272,10 +296,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 26,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -283,10 +308,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 27,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -294,10 +320,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 28,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -305,10 +332,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 29,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -316,10 +344,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 30,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -327,10 +356,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 7,
+      "id": 31,
       "name": "Saxo Alto Lincoln Winds Jyas-1102 Dorado Con Estuche",
       "description": "SAXO ALTO Mi b dorado con estuche",
       "image": "D_NQ_NP_917263-MLA41662325703_052020-F.jpg",
@@ -338,10 +368,11 @@
       "colors": "Dorado",
       "price": "$145.9",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": "oferta"
    },
    {
-      "id": 8,
+      "id": 32,
       "name": "Clarinete Yamaha Ycl-255 Ycl255 Nuevo Con Estuche",
       "description": "CLARINETE YAMAHA YCL-255. El nuevo YCL-255 es el comienzo perfecto para los jóvenes estudiantes de clarinete. Hecho en resistente resina ABS, son fáciles de sujetar. Con su nuevo apoyo para el pulgar ajustable y anilla para el cordón, ofrecen todavía una mayor comodidad al tocar. Al eliminar el anillo de metal de la campana, hemos dado al instrumento un peso aún más ligero, pero sin comprometer su robustez. Una afinación muy precisa, y una respuesta inmediata, ayuda a los estudiantes a producir un sonido redondo y claro. Llaves Nickel Silver para un timbre claro y enfocado. Nuevo apoyo para el pulgar ajustable, con anillo para el cordón. Un nuevo y ajustable apoyo para el pulgar, se ajusta a dierentes tamaños de mano, ayudando al intérprete a desarrollar una técnica correcta. Además, la anilla del cordón permite sujetar el instrumento con menos esfuerzo. Tornillos resistentes y soldadruas de plata dan a este nuevo instrumento una extraordinaria durabilidad. Una nueva campana hecha en resina ABS plástica resistente, permite que el instrumento sea ligero y tenga una respuesta mejorada. La cámara de resonancia de la campana, ayuda a la proyección del sonido y mejora la afinación en las notas más graves. Un barrilete de65 mm basado en los incluidos en los modelos de gama alta de Yamaha.El atractivo acabado mate, simula la veta de la madera, a la vez que proporciona la durabilidad añadida de la resina plástica ABS.",
       "image": "D_NQ_NP_622687-MLA40150077419_122019-O.jpg",
@@ -349,10 +380,11 @@
       "colors": "Negro",
       "price": "$215.4",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 33,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -360,10 +392,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 34,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -371,10 +404,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 35,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -382,10 +416,11 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    },
    {
-      "id": 1,
+      "id": 36,
       "name": "name",
       "description": "null",
       "image": "null",
@@ -393,6 +428,7 @@
       "colors": "null",
       "price": "null",
       "decimals": 0,
-      "discount": " "
+      "discount": " ",
+      "estado": ""
    }
 ]

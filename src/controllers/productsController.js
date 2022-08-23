@@ -1,25 +1,26 @@
-
 const {loadProducts, storeProducts} = require('../data/productsModule');
-
-
 
 module.exports = {
     
-    productDetail: (req,res) => res.render('products/productDetail'),
+    productDetail: (req,res) => {
 
-
+		const products = loadProducts();
+		
+		const productId = products.find(product => product.id === +req.params.id);
+		return res.render('products/productDetail',{
+			productId
+	})
+	},
 
 
     productCart: (req,res) => res.render('products/productCart'),
-
-
 
 
     productAdd: (req, res) => {
 		return res.render('products/productAdd')
 	},
     productAddStore: (req, res) => {
-		const {name, price, discount, description, category, image, decimals, colors} = req.body
+		const {name, price, discount, description, category, image, decimals, colors, estado} = req.body
 		const products = loadProducts();
 
 		const newProduct = {
@@ -31,7 +32,8 @@ module.exports = {
 			image: 'guitarra_electrica_yamaha_pacifica_012_dark.jpg',
             colors: +colors,
 			category: +category ,
-            decimals: +decimals
+            decimals: +decimals,
+            estado: +estado
 		}
 		const productsModify = [...products, newProduct];
 		storeProducts(productsModify)
@@ -43,8 +45,6 @@ module.exports = {
     productEdit: (req,res) => res.render('products/productEdit'),
 
 
-
-
     productsList: (req, res) => {
 		const products = loadProducts();
 		return res.render('products/products', {
@@ -52,12 +52,8 @@ module.exports = {
 			/* toThousand */
 		})
 	}
-
 }
-
-
 
 
 /* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')), */
 /* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')) */
-
