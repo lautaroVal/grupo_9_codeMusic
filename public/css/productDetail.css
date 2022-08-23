@@ -40,7 +40,7 @@
     object-fit: cover;
 }
 
-.productDetail_main_section_top_centr img:hover{
+.productDetail_main_section_top_centr img:hover {
     transition: 1.2s;
     transform: scale(1.01);
     box-shadow: 8px 3px 20px -1px var(--ColorNegro);
@@ -58,9 +58,9 @@
     transition: 1.2s;
 }
 
- .productDetail_main_section_top_derech:hover {
+.productDetail_main_section_top_derech:hover {
     box-shadow: 4px 3px 20px -1px var(--ColorNegro);
-} 
+}
 
 .productDetail_main_section_top_derech_price {
     font-size: 35px;
@@ -87,7 +87,7 @@
     margin-left: 14px;
 }
 
-.productDetail_main_section_top_derech_tarjetas img{
+.productDetail_main_section_top_derech_tarjetas img {
     width: 70px;
 }
 
@@ -99,7 +99,7 @@
     width: 100%;
 }
 
-.productDetail_main_section_top_derech_colores div{
+.productDetail_main_section_top_derech_colores div {
     width: 30%;
 }
 
@@ -108,7 +108,7 @@
     transition: 1.2s;
 }
 
-.productDetail_main_section_top_derech_colores img:hover{
+.productDetail_main_section_top_derech_colores img:hover {
     transform: scale(1.2);
     box-shadow: 8px 3px 20px -1px var(--ColorNegro);
 }
@@ -139,8 +139,10 @@
 }
 
 .productDetail_main_section_top_derech_button {
-    align-items: center;
-    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 
@@ -155,10 +157,21 @@
     transition: 1.2s;
 }
 
-.productDetail_main_section_top_derech_button button:hover{
+.productDetail_main_section_top_derech_button button:hover {
     background-color: black;
     color: white;
     box-shadow: 8px 3px 20px -1px var(--ColorNegro);
+}
+
+.productDetail_main_section_top_derech_button #edit_button {
+    background-color: #551A8B;
+    width: 32%;
+}
+
+
+.productDetail_main_section_top_derech_button #delete_button {
+    background-color: red;
+    width: 32%;
 }
 
 .productDetail_div_info {
@@ -199,6 +212,7 @@
         background-color: var(--colorGris);
         width: 100%;
         justify-content: center;
+        padding: 10px;
     }
 
     .productDetail_main_section_top_centr img {
@@ -235,10 +249,10 @@
         margin: 15px 10px;
     }
 
-    .productDetail_main_section_top_derech_colores div{
+    .productDetail_main_section_top_derech_colores div {
         width: 16%;
     }
-    
+
     .productDetail_main_section_top_derech_colores img {
         width: 20vh;
         transition: 1.2s;
@@ -353,7 +367,7 @@
         width: 15%;
     }
 
-    .productDetail_main_section_top_izq article{
+    .productDetail_main_section_top_izq article {
         background-color: var(--ColorBlanco);
         height: 150px;
         width: 150px;
@@ -362,21 +376,21 @@
         transition: 1.2s;
     }
 
-    .productDetail_main_section_top_izq article:hover{
+    .productDetail_main_section_top_izq article:hover {
         box-shadow: 8px 3px 20px -1px var(--ColorNegro);
     }
 
-    .productDetail_main_section_top_izq article img{
+    .productDetail_main_section_top_izq article img {
         width: 93%;
         position: relative;
         left: 5px;
         top: 5px;
         border-radius: 10px;
         overflow: hidden;
-        object-fit: cover;
+        object-fit: contain;
     }
 
-    .productDetail_main_section_top_izq article img:hover{
+    .productDetail_main_section_top_izq article img:hover {
         transition: 1.3s;
         transform: scale(1.2);
     }
@@ -418,10 +432,10 @@
         margin-left: 14px;
     }
 
-    .productDetail_main_section_top_derech_colores div{
+    .productDetail_main_section_top_derech_colores div {
         width: 25%;
     }
-    
+
     .productDetail_main_section_top_derech_colores img {
         width: 11vh;
         border-radius: 5px;

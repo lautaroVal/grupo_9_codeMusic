@@ -22,7 +22,6 @@ module.exports = {
 
     productCart: (req,res) => res.render('products/productCart'),
 
-
     productAdd: (req, res) => {
 		return res.render('products/productAdd')
 	},
@@ -46,7 +45,7 @@ module.exports = {
 
 		const productsModify = [...products, newProduct];
 		storeProducts(productsModify)
-		return res.redirect('/products/products')
+		return res.redirect('/products')
 	},
 	
 	
