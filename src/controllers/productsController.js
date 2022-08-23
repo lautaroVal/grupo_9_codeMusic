@@ -1,5 +1,5 @@
 
-const {loadProducts, storeProducts} = require('../data/products');
+const {loadProducts, storeProducts} = require('../data/productsModule');
 
 
 module.exports = {
@@ -13,11 +13,12 @@ module.exports = {
     productEdit: (req,res) => res.render('products/productEdit'),
 
     productsList: (req, res) => {
-        const products = loadProducts()
-
-        res.render('products',{
-            products
-    })
+		const products = loadProducts();
+		return res.render('products/products', {
+			products,
+			/* toThousand */
+		})
+	}
 }
 
 
