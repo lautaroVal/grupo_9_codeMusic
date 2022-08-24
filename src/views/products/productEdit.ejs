@@ -19,7 +19,12 @@
 
             <div>
                 <label for="imagen" >Imagen de producto</label>
-                <input type="file" name="imagen" id="imagen" accept="image/*" value="<%= product.image %>"><br><br>
+                <input type="file" name="image" id="imagen" accept="image/*" value="<%= product.image %>"><br><br>
+            </div>
+
+            <div>
+                <label for="imagen" >Imagen de producto</label>
+                <input type="text" name="imageText" id="imagen"><br><br>
             </div>
             
             <div>
@@ -40,8 +45,8 @@
 
             <div>
                 <label for="estado">Oferta:</label>
-                <input type="radio" name="estado" id="estado" value="oferta"<%= product.estado === "oferta" && "checked" %>> En oferta 
-                <input type="radio" name="estado" id="estado" value="no-oferta"<%= product.estado === "no-oferta" && "checked" %>> Sin oferta
+                <input type="radio" name="status" id="estado" value="oferta"<%= product.estado === "oferta" && "checked" %>> En oferta 
+                <input type="radio" name="status" id="estado" value="no-oferta"<%= product.estado === "no-oferta" && "checked" %>> Sin oferta
             </div>
 
              <div>

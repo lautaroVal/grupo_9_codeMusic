@@ -208,32 +208,18 @@
    },
    {
       "id": 17,
-      "name": "name",
-      "description": "null",
+      "name": "Sin imagen",
+      "description": "",
       "image": "null",
       "category": "baterias",
       "colors": "null",
-      "price": "null",
+      "price": 500000,
       "decimals": 0,
-      "discount": " ",
-      "status": "",
-      "coutas": 12
+      "discount": null,
+      "coutas": 12,
+      "color": "negro"
    },
    {
-      "id": 18,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "baterias",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "status": "",
-      "coutas": 12
-   },
-   {
-
       "id": 19,
       "name": "Korg Pa700 Teclado Arranger Profesional 61 Teclas",
       "description": "null",
@@ -423,5 +409,35 @@
       "decimals": 0,
       "discount": " ",
       "estado": "no-oferta"
+   },
+   {
+      "id": 31,
+      "name": "gibson",
+      "description": "la mejor",
+      "price": 200000,
+      "discount": 5,
+      "image": "https://media.istockphoto.com/photos/red-gibson-les-paul-custom-picture-id503188327?k=20&m=503188327&s=612x612&w=0&h=cZ1_Q10-C7CIPSza677ejnwgely1ZiuWjsE_y53xbyc=",
+      "category": "guitarras"
+   },
+   {
+      "id": 32,
+      "name": "les paul",
+      "description": "guitarra negra",
+      "price": 100000,
+      "discount": null,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "category": "guitarras",
+      "color": "negro",
+      "status": "no-oferta"
+   },
+   {
+      "id": 33,
+      "name": "gibson3",
+      "description": "la mejor",
+      "price": 200000,
+      "discount": 5,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Gibson_LP_Classic.png",
+      "category": "guitarras",
+      "status": "oferta"
    }
 ]

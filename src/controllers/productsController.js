@@ -29,7 +29,7 @@ module.exports = {
 	},
 
 	productAddStore: (req, res) => {
-		const { name, price, discount, description, category, image,imageText, colors,status} = req.body
+		const { name, price, discount, description, category,imageText, color,status} = req.body
 
 		const products = loadProducts();
 
@@ -41,7 +41,7 @@ module.exports = {
 			price: +price,
 			discount: +discount,
 			image: imageText || 'guitarra_electrica_yamaha_pacifica_012_dark.jpg',
-			colors,
+			color,
 			category,
 			status
 		}
@@ -63,7 +63,7 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
-		const { name, price, category, description, estado} = req.body;
+		const { name, price, category, description, status, color, discount,imageText} = req.body;
 
 
 		const producstModify = products.map(product => {
@@ -74,10 +74,13 @@ module.exports = {
 					description: description.trim(),
 					price: +price,
 					category,
-					estado
+					discount: +discount,
+					image: imageText || product.image ||'guitarra_electrica_yamaha_pacifica_012_dark.jpg',
+					color,
+					status
 				}
 			}
-			return productc
+			return product
 		})
 		storeProducts(producstModify);
 		return res.redirect('/products/productDetail/' + req.params.id);
@@ -89,7 +92,7 @@ module.exports = {
 		const {id} = req.params;
 		const productDelete = products.filter(products => products.id !== +id);
 		storeProducts(productDelete);
-		return res.redirect('/products/productDetail');
+		return res.redirect('/products');
 	}
 }
 

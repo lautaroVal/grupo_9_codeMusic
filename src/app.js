@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json()); 
+app.use(express.json());
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -17,6 +17,7 @@ var productsRouter = require('./routes/products');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(express.json());
@@ -24,8 +25,14 @@ app.use(express.json());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/*', (req, res, next) => {
+    try {
+        
+    } catch (error) {
+        res.send(error)
+    }
+});
 
-app.use(methodOverride('_method'));
 
 /* app.use('/', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'index.html')));
 app.use('/productDetail', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')));
