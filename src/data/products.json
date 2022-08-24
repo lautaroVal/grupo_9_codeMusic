@@ -9,7 +9,8 @@
       "price": "101941",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "oferta",
+      "coutas": 12
    },
    {
       "id": 2,
@@ -21,7 +22,8 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "oferta",
+      "coutas": 12
    },
    {
       "id": 3,
@@ -33,7 +35,8 @@
       "price": "78764",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "oferta",
+      "coutas": 12
    },
    {
       "id": 4,
@@ -45,7 +48,8 @@
       "price": "43279",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "oferta",
+      "coutas": 12
    },
    {
       "id": 5,
@@ -57,7 +61,8 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "oferta",
+      "coutas": 12
    },
    {
       "id": 6,
@@ -69,7 +74,8 @@
       "price": "45999",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta"
+      "estado": "oferta",
+      "coutas": 12
    },
    {
       "id": 7,
@@ -81,7 +87,8 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 8,
@@ -93,7 +100,8 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 9,
@@ -105,7 +113,8 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 10,
@@ -117,7 +126,8 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 11,
@@ -129,7 +139,8 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 12,
@@ -141,7 +152,8 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 13,
@@ -153,7 +165,8 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 14,
@@ -165,7 +178,8 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 15,
@@ -177,7 +191,8 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 16,
@@ -193,6 +208,32 @@
    },
    {
       "id": 17,
+      "name": "name",
+      "description": "null",
+      "image": "null",
+      "category": "baterias",
+      "colors": "null",
+      "price": "null",
+      "decimals": 0,
+      "discount": " ",
+      "estado": "",
+      "coutas": 12
+   },
+   {
+      "id": 18,
+      "name": "name",
+      "description": "null",
+      "image": "null",
+      "category": "baterias",
+      "colors": "null",
+      "price": "null",
+      "decimals": 0,
+      "discount": " ",
+      "estado": "",
+      "coutas": 12
+   },
+   {
+      "id": 19,
       "name": "Korg Pa700 Teclado Arranger Profesional 61 Teclas",
       "description": "null",
       "image": "D_NQ_NP_738608-MLA44112471285_112020-O.webp",
@@ -225,7 +266,8 @@
       "price": "186760",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 20,
@@ -237,7 +279,8 @@
       "price": "186760",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 21,
@@ -249,7 +292,8 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 22,
@@ -261,7 +305,8 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 23,
@@ -273,7 +318,8 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 24,
@@ -289,27 +335,29 @@
    },
    {
       "id": 25,
-      "name": "Saxo Alto Lincoln Winds Jyas-1102 Dorado Con Estuche",
-      "description": "SAXO ALTO Mi b dorado con estuche",
-      "image": "D_NQ_NP_917263-MLA41662325703_052020-F.jpg",
-      "category": "deVientos",
-      "colors": "Dorado",
-      "price": "145950",
+      "name": "name",
+      "description": "null",
+      "image": "null",
+      "category": "microfonos",
+      "colors": "null",
+      "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "",
+      "coutas": 12
    },
    {
       "id": 26,
-      "name": "Clarinete Yamaha Ycl-255 Ycl255 Nuevo Con Estuche",
-      "description": "CLARINETE YAMAHA YCL-255. El nuevo YCL-255 es el comienzo perfecto para los jóvenes estudiantes de clarinete. Hecho en resistente resina ABS, son fáciles de sujetar. Con su nuevo apoyo para el pulgar ajustable y anilla para el cordón, ofrecen todavía una mayor comodidad al tocar. Al eliminar el anillo de metal de la campana, hemos dado al instrumento un peso aún más ligero, pero sin comprometer su robustez. Una afinación muy precisa, y una respuesta inmediata, ayuda a los estudiantes a producir un sonido redondo y claro. Llaves Nickel Silver para un timbre claro y enfocado. Nuevo apoyo para el pulgar ajustable, con anillo para el cordón. Un nuevo y ajustable apoyo para el pulgar, se ajusta a dierentes tamaños de mano, ayudando al intérprete a desarrollar una técnica correcta. Además, la anilla del cordón permite sujetar el instrumento con menos esfuerzo. Tornillos resistentes y soldadruas de plata dan a este nuevo instrumento una extraordinaria durabilidad. Una nueva campana hecha en resina ABS plástica resistente, permite que el instrumento sea ligero y tenga una respuesta mejorada. La cámara de resonancia de la campana, ayuda a la proyección del sonido y mejora la afinación en las notas más graves. Un barrilete de65 mm basado en los incluidos en los modelos de gama alta de Yamaha.El atractivo acabado mate, simula la veta de la madera, a la vez que proporciona la durabilidad añadida de la resina plástica ABS.",
-      "image": "D_NQ_NP_622687-MLA40150077419_122019-O.jpg",
-      "category": "deVientos",
-      "colors": "Negro",
-      "price": "215488",
+      "name": "name",
+      "description": "null",
+      "image": "null",
+      "category": "microfonos",
+      "colors": "null",
+      "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "",
+      "coutas": 12
    },
    {
       "id": 27,
@@ -321,7 +369,8 @@
       "price": "145950",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 28,
@@ -333,7 +382,8 @@
       "price": "215488",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 29,
@@ -345,7 +395,8 @@
       "price": "145950",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 30,
@@ -377,6 +428,7 @@
       "colors": null,
       "category": null,
       "decimals": null,
-      "estado": null
+      "estado": null,
+      "coutas": 12
    }
 ]
