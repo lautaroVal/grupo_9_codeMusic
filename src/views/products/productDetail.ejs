@@ -73,9 +73,12 @@
                 </div>
 
                 <div class="productDetail_main_section_top_derech_button">
-                    <button type="button">Comprar</button>
-                    <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
-                    <button type="button"><a href="/products/productEdit">Editar producto</a></button>
+                    <button type="button" style="cursor: pointer;"> Comprar</button>
+                    <button type="button" style="cursor: pointer;"> Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
+
+                    <form action="/products/delete/?_method=delete" method="POST" >
+                        <button type="submit" style="cursor: pointer;" >ELIMINAR</button>
+                    </form>
                 </div>
             </aside>
 
