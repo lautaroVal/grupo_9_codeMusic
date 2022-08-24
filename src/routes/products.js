@@ -11,14 +11,13 @@ router
         .get('/productAdd', productAdd)
 
         /*Detalle de un producto particular*/
-        .get('/productDetail/:id/', productDetail)
+        .get('/productDetail/:id', productDetail)
 
         /* Acción de creación (a donde se envía el formulario)*/
         .post('/productAdd', productAddStore)
 
         /* Formulario de edición de productos */
         .get('/edit/:id', productEdit)
-
         /* Acción de edición (a donde se envía el formulario): */
         .put('/productEdit/:id', update)
 
