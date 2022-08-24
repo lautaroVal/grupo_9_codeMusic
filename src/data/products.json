@@ -233,6 +233,7 @@
       "coutas": 12
    },
    {
+
       "id": 19,
       "name": "Korg Pa700 Teclado Arranger Profesional 61 Teclas",
       "description": "null",
@@ -243,6 +244,19 @@
       "decimals": 0,
       "discount": "no-oferta",
       "status": "no-oferta"
+   },
+   {
+      "id": 20,
+      "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
+      "description": "null",
+      "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
+      "category": "teclados",
+      "colors": "null",
+      "price": "186760",
+      "decimals": 0,
+      "discount": " ",
+      "estado": "no-oferta",
+      "coutas": 12
    },
    {
       "id": 20,
@@ -386,61 +400,28 @@
       "status": "no-oferta"
    },
    {
-      "id": 31,
-      "price": null,
-      "discount": null,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "colors": null,
-      "category": null,
-      "decimals": null,
-      "status": null
-   },
-   {
-      "id": 32,
-      "price": null,
-      "discount": null,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "colors": null,
-      "category": null,
-      "decimals": null,
-      "status": null,
+      "id": 29,
+      "name": "Saxo Alto Lincoln Winds Jyas-1102 Dorado Con Estuche",
+      "description": "SAXO ALTO Mi b dorado con estuche",
+      "image": "D_NQ_NP_917263-MLA41662325703_052020-F.jpg",
+      "category": "deVientos",
+      "colors": "Dorado",
+      "price": "145950",
+      "decimals": 0,
+      "discount": " ",
+      "estado": "no-oferta",
       "coutas": 12
    },
    {
-      "id": 33,
-      "name": "guitarra",
-      "description": "la mejor",
-      "price": 200000,
-      "discount": 5,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "category": null
-   },
-   {
-      "id": 34,
-      "name": "les paul",
-      "description": "guitarra les paul",
-      "price": 82000,
-      "discount": 10,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "category": "Guitarras"
-   },
-   {
-      "id": 35,
-      "name": "les paul 2",
-      "description": "guitarra les paul 2",
-      "price": 82000,
-      "discount": 25,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Gibson_LP_Classic.png",
-      "category": "Guitarras"
-   },
-   {
-      "id": 36,
-      "name": "guitarra gibson",
-      "description": "la mejor",
-      "price": 82000,
-      "discount": 5,
-      "image": "https://media.istockphoto.com/photos/red-gibson-les-paul-custom-picture-id503188327?k=20&m=503188327&s=612x612&w=0&h=cZ1_Q10-C7CIPSza677ejnwgely1ZiuWjsE_y53xbyc=",
-      "category": "Guitarras",
-      "status": "oferta"
+      "id": 30,
+      "name": "Clarinete Yamaha Ycl-255 Ycl255 Nuevo Con Estuche",
+      "description": "CLARINETE YAMAHA YCL-255. El nuevo YCL-255 es el comienzo perfecto para los jóvenes estudiantes de clarinete. Hecho en resistente resina ABS, son fáciles de sujetar. Con su nuevo apoyo para el pulgar ajustable y anilla para el cordón, ofrecen todavía una mayor comodidad al tocar. Al eliminar el anillo de metal de la campana, hemos dado al instrumento un peso aún más ligero, pero sin comprometer su robustez. Una afinación muy precisa, y una respuesta inmediata, ayuda a los estudiantes a producir un sonido redondo y claro. Llaves Nickel Silver para un timbre claro y enfocado. Nuevo apoyo para el pulgar ajustable, con anillo para el cordón. Un nuevo y ajustable apoyo para el pulgar, se ajusta a dierentes tamaños de mano, ayudando al intérprete a desarrollar una técnica correcta. Además, la anilla del cordón permite sujetar el instrumento con menos esfuerzo. Tornillos resistentes y soldadruas de plata dan a este nuevo instrumento una extraordinaria durabilidad. Una nueva campana hecha en resina ABS plástica resistente, permite que el instrumento sea ligero y tenga una respuesta mejorada. La cámara de resonancia de la campana, ayuda a la proyección del sonido y mejora la afinación en las notas más graves. Un barrilete de65 mm basado en los incluidos en los modelos de gama alta de Yamaha.El atractivo acabado mate, simula la veta de la madera, a la vez que proporciona la durabilidad añadida de la resina plástica ABS.",
+      "image": "D_NQ_NP_622687-MLA40150077419_122019-O.jpg",
+      "category": "deVientos",
+      "colors": "Negro",
+      "price": "215488",
+      "decimals": 0,
+      "discount": " ",
+      "estado": "no-oferta"
    }
 ]

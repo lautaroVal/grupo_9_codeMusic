@@ -30,10 +30,12 @@ module.exports = {
 
 	productAddStore: (req, res) => {
 		const { name, price, discount, description, category, image,imageText, colors,status} = req.body
+
 		const products = loadProducts();
 
 		const newProduct = {
 			id: (products[products.length - 1].id + 1),
+
 			name: name.trim(),
 			description: description.trim(),
 			price: +price,
@@ -60,7 +62,25 @@ module.exports = {
 	},
 
 	update: (req, res) => {
-		
+		const products = loadProducts();
+		const { name, price, category, description, estado} = req.body;
+
+
+		const producstModify = products.map(product => {
+			if (product.id === +req.params.id) {
+				return {
+					...product,
+					name: name.trim(),
+					description: description.trim(),
+					price: +price,
+					category,
+					estado
+				}
+			}
+			return productc
+		})
+		storeProducts(producstModify);
+		return res.redirect('/products/productDetail/' + req.params.id);
 	},
 
 	destroy : (req, res) => {
