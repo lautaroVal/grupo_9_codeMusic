@@ -1,6 +1,15 @@
 const {loadProducts, storeProducts} = require('../data/productsModule');
 
 module.exports = {
+	
+	productsList: (req, res) => {
+		const products = loadProducts();
+		return res.render('products/products', {
+			products,
+			/* toThousand */
+		})
+	},
+
     /* DETAIL */
     productDetail: (req,res) => {
 
@@ -36,28 +45,25 @@ module.exports = {
             estado: +estado,
 			cuotas: +cuotas
 		}
+
 		const productsModify = [...products, newProduct];
 		storeProducts(productsModify)
-		return res.redirect('/products/products')
+		return res.redirect('/products')
 	},
 
 	/* EDIT */
     productEdit: (req,res) => {
         const products = loadProducts();
 		const product = products.find(product => product.id === +req.params.id);
+
 		res.render('products/productEdit', {
 			product
 		})
-    },
+	},
 
-	/* LISTA DE PRODUCTS */
-    productsList: (req, res) => {
-		const products = loadProducts();
-		return res.render('products/products', {
-			products,
-			/* toThousand */
-		})
-	}
+	update: (req, res) => {
+   
+}
 }
 
 

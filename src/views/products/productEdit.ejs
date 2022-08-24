@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head') %> 
-<body>
+<body class="editAdd">
     <%- include('../partials/header') %>
     <main class="main_formulario">
         <h4>Edita un producto</h4>
@@ -10,29 +10,39 @@
 
             
             <div>
-                <label for="Name">Nombre del producto</label>
-                <input type="Name" id="Name" placeholder="Ejempo: Guitarra Electrica">
+                <label for="name">Nombre del producto</label>
+                <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica" value="<%= product.name %>">
             </div>
             <div>
-                <label for="Description">Descripcion</label>
-                <input type="Description" id="Description" placeholder="Guitarra electrica Les Paul Ephipone">
-            </div>
-
-            <div>
-                <label for="Imagen" >Imagen de producto</label>
-                <input type="file" name="imagen" id="imagen" accept=".jpg, .png" required><br><br>
+                <label for="description">Descripcion</label>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, et ab! Ducimus illum ipsa quidem!"> </textarea>
             </div>
 
             <div>
-                <p>Elige una categoria: 
-                    <select name="category">
-                      <option>Guitarras</option>
-                      <option>Baterias</option>
-                      <option>Teclados y Pianos</option>
-                      <option>Microfonos y Sonido</option>
-                      <option>Instrumentos de Viento</option>
+                <label for="imagen" >Imagen de producto</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*" value="<%= product.image %>"><br><br>
+            </div>
+            
+            <div>
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" name="precio" placeholder="Ejemplo: $50.000" value="<%= product.price %>">
+            </div> 
+
+            <div>
+                    <label for="category" class="form-label">Elige una categoria:</label> 
+                    <select name="category" id="category">
+                      <option value="guitarras" <%= product.category === "guitarras" && "selected" %>>Guitarras</option>
+                      <option value="baterias" <%= product.category === "baterias" && "selected" %>>Baterias</option>
+                      <option value="teclados" <%= product.category === "teclados" && "selected" %>>Teclados y Pianos</option>
+                      <option value="microfonosYSonidos" <%= product.category === "microfonosYSonidos" && "selected" %>>Microfonos y Sonido</option>
+                      <option value="deVientos" <%= product.category === "deVientos" && "selected" %>>Instrumentos de Viento</option>
                     </select>
-                 </p>
+            </div>
+
+            <div>
+                <label for="estado">Oferta:</label>
+                <input type="radio" name="oferta" id="estado" value="oferta"<%= product.estado === "oferta" && "checked" %>> En oferta 
+                <input type="radio" name="no-oferta" id="estado" value="no-oferta"<%= product.estado === "no-oferta" && "checked" %>> Sin oferta
             </div>
 
             <div>
@@ -42,10 +52,6 @@
                 <p class="checkboxs"><input type="checkbox" name="color" id="color" value="color">Blanco</p>
             </div>
 
-            <div>
-                <label for="precio">Precio</label>
-                <input type="price" id="Description" placeholder="Ejemplo: $50.000">
-            </div>
             
             <div class="formulario_enviar">
                 <button type="submit">Enviar</button>
