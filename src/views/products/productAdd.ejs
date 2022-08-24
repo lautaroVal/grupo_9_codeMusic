@@ -11,16 +11,21 @@
             
             <div>
                 <label for="Name">Nombre del producto</label>
-                <input type="Name" id="Name" placeholder="Ejempo: Guitarra Electrica">
+                <input type="text" id="Name" name="name" placeholder="Ejempo: Guitarra Electrica">
             </div>
             <div>
                 <label for="Description">Descripcion</label>
-                <input type="Description" id="Description" placeholder="Guitarra electrica Les Paul Ephipone">
+                <input type="text" id="Description" name="description" placeholder="Guitarra electrica Les Paul Ephipone">
             </div>
 
             <div>
                 <label for="Imagen" >Imagen de producto</label>
                 <input type="file" name="imagen" id="imagen" accept=".jpg, .png" ><br><br>
+            </div>
+
+            <div>
+                <label for="imageText" >Imagen de producto</label>
+                <input type="text" name="imageText" id="imageText"><br><br>
             </div>
 
             <div>
@@ -37,14 +42,24 @@
 
             <div class="main_formulario_checkboxs">
                 <label for="Colores">Colores disponibles</label>
-                <p class="checkboxs"><input type="checkbox" name="color" id="color" value="color">Negro</p>
-                <p class="checkboxs"><input type="checkbox" name="color" id="color" value="color">Rojo</p>
-                <p class="checkboxs"><input type="checkbox" name="color" id="color" value="color">Blanco</p>
+                <p class="checkboxs"><input type="radio" name="color" id="color" value="negro">Negro</p>
+                <p class="checkboxs"><input type="radio" name="color" id="color" value="rojo">Rojo</p>
+                <p class="checkboxs"><input type="radio" name="color" id="color" value="blanco">Blanco</p>
+            </div>
+
+            <div>
+                <label for="estado">Oferta:</label>
+                <input type="radio" name="status" id="estado" value="oferta"> En oferta 
+                <input type="radio" name="status" id="estado" value="no-oferta"> Sin oferta
             </div>
 
             <div>
                 <label for="precio">Precio</label>
-                <input type="price" id="Description" placeholder="Ejemplo: $50.000">
+                <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000">
+            </div>
+            <div>
+                <label for="discount">descuento</label>
+                <input type="number" id="discount" name="discount">
             </div>
             
             <div class="formulario_enviar">

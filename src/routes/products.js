@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { productDetail, productCart, productAdd, productEdit, productsList, productAddStore, update} = require('../controllers/productsController')
+const { productDetail, productCart, productAdd, productEdit, productsList, productAddStore, update, destroy} = require('../controllers/productsController')
 
 router
         /* Listado de productos */
@@ -23,7 +23,7 @@ router
         .put('/productEdit/:id', update)
 
         /* Acción de borrado */
-        .delete('/products/:id')
+        .delete('/delete/:id', destroy)
 
         /* Carrito de compras */
         .get('/productCart', productCart)

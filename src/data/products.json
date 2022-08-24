@@ -9,7 +9,7 @@
       "price": "101941",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta",
+      "status": "oferta",
       "coutas": 12
    },
    {
@@ -22,7 +22,7 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta",
+      "status": "oferta",
       "coutas": 12
    },
    {
@@ -35,7 +35,7 @@
       "price": "78764",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta",
+      "status": "oferta",
       "coutas": 12
    },
    {
@@ -48,7 +48,7 @@
       "price": "43279",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta",
+      "status": "oferta",
       "coutas": 12
    },
    {
@@ -61,7 +61,7 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta",
+      "status": "oferta",
       "coutas": 12
    },
    {
@@ -74,7 +74,7 @@
       "price": "45999",
       "decimals": 0,
       "discount": " ",
-      "estado": "oferta",
+      "status": "oferta",
       "coutas": 12
    },
    {
@@ -87,7 +87,7 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -100,7 +100,7 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -113,7 +113,7 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -126,7 +126,7 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -139,7 +139,7 @@
       "price": "78400",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -152,7 +152,7 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -165,7 +165,7 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -178,7 +178,7 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -191,7 +191,7 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -204,7 +204,7 @@
       "price": "409600",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "status": "no-oferta"
    },
    {
       "id": 17,
@@ -216,7 +216,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "",
+      "status": "",
       "coutas": 12
    },
    {
@@ -229,7 +229,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "",
+      "status": "",
       "coutas": 12
    },
    {
@@ -242,32 +242,7 @@
       "price": "537598",
       "decimals": 0,
       "discount": "no-oferta",
-      "estado": "no-oferta"
-   },
-   {
-      "id": 18,
-      "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
-      "description": "null",
-      "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
-      "category": "teclados",
-      "colors": "null",
-      "price": "186760",
-      "decimals": 0,
-      "discount": " ",
-      "estado": "no-oferta"
-   },
-   {
-      "id": 19,
-      "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
-      "description": "null",
-      "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
-      "category": "teclados",
-      "colors": "null",
-      "price": "186760",
-      "decimals": 0,
-      "discount": " ",
-      "estado": "no-oferta",
-      "coutas": 12
+      "status": "no-oferta"
    },
    {
       "id": 20,
@@ -279,7 +254,7 @@
       "price": "186760",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -292,7 +267,7 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -305,7 +280,7 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -318,7 +293,7 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -331,7 +306,7 @@
       "price": "95063",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "status": "no-oferta"
    },
    {
       "id": 25,
@@ -343,7 +318,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "",
+      "status": "",
       "coutas": 12
    },
    {
@@ -356,7 +331,7 @@
       "price": "null",
       "decimals": 0,
       "discount": " ",
-      "estado": "",
+      "status": "",
       "coutas": 12
    },
    {
@@ -369,7 +344,7 @@
       "price": "145950",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -382,7 +357,7 @@
       "price": "215488",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -395,7 +370,7 @@
       "price": "145950",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta",
+      "status": "no-oferta",
       "coutas": 12
    },
    {
@@ -408,7 +383,7 @@
       "price": "215488",
       "decimals": 0,
       "discount": " ",
-      "estado": "no-oferta"
+      "status": "no-oferta"
    },
    {
       "id": 31,
@@ -418,7 +393,7 @@
       "colors": null,
       "category": null,
       "decimals": null,
-      "estado": null
+      "status": null
    },
    {
       "id": 32,
@@ -428,7 +403,44 @@
       "colors": null,
       "category": null,
       "decimals": null,
-      "estado": null,
+      "status": null,
       "coutas": 12
+   },
+   {
+      "id": 33,
+      "name": "guitarra",
+      "description": "la mejor",
+      "price": 200000,
+      "discount": 5,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "category": null
+   },
+   {
+      "id": 34,
+      "name": "les paul",
+      "description": "guitarra les paul",
+      "price": 82000,
+      "discount": 10,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "category": "Guitarras"
+   },
+   {
+      "id": 35,
+      "name": "les paul 2",
+      "description": "guitarra les paul 2",
+      "price": 82000,
+      "discount": 25,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Gibson_LP_Classic.png",
+      "category": "Guitarras"
+   },
+   {
+      "id": 36,
+      "name": "guitarra gibson",
+      "description": "la mejor",
+      "price": 82000,
+      "discount": 5,
+      "image": "https://media.istockphoto.com/photos/red-gibson-les-paul-custom-picture-id503188327?k=20&m=503188327&s=612x612&w=0&h=cZ1_Q10-C7CIPSza677ejnwgely1ZiuWjsE_y53xbyc=",
+      "category": "Guitarras",
+      "status": "oferta"
    }
 ]
