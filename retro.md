@@ -1,7 +1,7 @@
 # Retrospectiva (Grupo 9)
 ---
 
-## Retro Sprint 1
+## Retro Sprint 2
 
 ### Seguir Haciendo:
 *Empatía, compañerismo, buena comunicación, reuniones de zoom. Comunicación por Whatsapp.*
@@ -20,7 +20,7 @@
 
 ---
 
-## Retro Sprint 2
+## Retro Sprint 3
 
 
 ### Seguir Haciendo:
@@ -38,3 +38,23 @@ no avisar en los cambios generales*
 
 ### Hacer Menos:
 *Usar selectores de etiquetas y descendentes que cause que nos pisemos al unir.*
+
+---
+
+## Retro Sprint 4
+
+### Seguir Haciendo:
+*Seguir con la empatia entre compañeros*
+
+### Hacer Más:
+*Motivarnos entre nosotros*
+
+### Empezar a Hacer:
+*Hacer los sprint con mas tiempo, organizarnos mejor,*
+
+### Dejar De Hacer:
+*No dejar las tareas para otro dia, dejar de SUESTIMAR los sprint!!!...
+no avisar en los cambios generales*
+
+### Hacer Menos:
+*Entrar en detalles no tan importantes que nos atrase o perjudique*

@@ -87,7 +87,8 @@
       "price": 78400,
       "decimals": 0,
       "discount": null,
-      "coutas": 12
+      "coutas": 12,
+      "status": "no-oferta"
    },
    {
       "id": 8,

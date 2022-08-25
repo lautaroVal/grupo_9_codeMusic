@@ -1,4 +1,6 @@
 const { loadProducts, storeProducts } = require('../data/productsModule');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 const limitSeis = (arr) => {
 	let newArr = []
@@ -26,7 +28,8 @@ module.exports = {
 			baterias,
 			teclados,
 			microfonosYSonidos,
-			deVientos
+			deVientos,
+			toThousand
 
 			/* toThousand */
 		})

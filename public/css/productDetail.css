@@ -164,14 +164,27 @@
 }
 
 .productDetail_main_section_top_derech_button #edit_button {
-    background-color: #551A8B;
-    width: 32%;
+    margin: 10px;
+    width: 25%;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    padding: 0;
+    border-radius: 10px;
+    transition: 1.2s;
+}
+.productDetail_main_section_top_derech_button #edit_button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
+
 }
 
-
-.productDetail_main_section_top_derech_button #delete_button {
-    background-color: red;
-    width: 32%;
+.productDetail_main_section_top_derech_button #edit_button a{
+    color: black;
+}
+.productDetail_main_section_top_derech_button #edit_button a:hover{
+    color: white;
 }
 
 .productDetail_div_info {

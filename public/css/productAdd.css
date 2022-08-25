@@ -13,11 +13,8 @@
     width: 50%;
     color: var(--ColorNegro);
     background-color: var(--ColorGris);
-    max-width: 420px;
-    margin: auto;
-    margin-bottom: 50px;
     margin-top: 20px;
-    padding: 30px;
+    padding: 20px;
     font-family: 'calibri';
     box-shadow: 0px 0px 5px;
     display: flex;
@@ -29,7 +26,6 @@
 .main_formulario div {
     display: flex;
     flex-direction: column;
-    gap: 0;
     padding: 0;
     margin-bottom: 20px;
 }
@@ -55,12 +51,21 @@
     width: 100%;
     background: var(--ColorBlanco);
     color: var(--ColorNegro);
+    padding: 5px;
     border: 1px solid #551A8B;
 }
 
 .main_formulario textarea {
     border: 1px solid #551A8B;
     background-color: var(--ColorBlanco);
+}
+
+.main_formulario_radio div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 
 .main_formulario button {
@@ -71,7 +76,7 @@
     align-self: center;
     margin-left: 30px;
     margin-right: 20px;
-    padding: 8px;
+    padding: 10px;
     text-transform: uppercase;
     border-radius: 20px;
     transition: 0.3s;
