@@ -1,5 +1,7 @@
 const { loadProducts, storeProducts } = require('../data/productsModule');
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 module.exports = {
 
 	productsList: (req, res) => {
@@ -17,7 +19,8 @@ module.exports = {
 
 		const productId = products.find(product => product.id === +req.params.id);
 		return res.render('products/productDetail', {
-			productId
+			productId,
+			toThousand
 		})
 	},
 	/* CART */
