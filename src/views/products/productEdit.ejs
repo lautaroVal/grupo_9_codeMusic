@@ -14,7 +14,7 @@
             </div>
             <div>
                 <label for="description">Descripcion</label>
-                <textarea name="description" id="description" cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, et ab! Ducimus illum ipsa quidem!"> </textarea>
+                <textarea name="description" id="description" cols="50" rows="10"><%= product.description %></textarea>
             </div>
 
             <div>
@@ -45,8 +45,8 @@
 
             <div>
                 <label for="estado">Oferta:</label>
-                <input type="radio" name="status" id="estado" value="oferta"<%= product.estado === "oferta" && "checked" %>> En oferta 
-                <input type="radio" name="status" id="estado" value="no-oferta"<%= product.estado === "no-oferta" && "checked" %>> Sin oferta
+                <input type="radio" name="status" id="estado" value="oferta"<%= product.status === "oferta" && "checked" %>> En oferta 
+                <input type="radio" name="status" id="estado" value="no-oferta"<%= product.status === "no-oferta" && "checked" %>> Sin oferta
             </div>
 
              <div>
