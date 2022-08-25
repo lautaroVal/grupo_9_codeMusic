@@ -31,10 +31,10 @@
 }
 
 .productDetail_main_section_top_centr img {
-    width: 98%;
+    width: 38%;
     position: relative;
     left: 2px;
-    margin: 5px;
+    margin: auto;
     border-radius: 5px;
     overflow: hidden;
     object-fit: cover;
@@ -216,7 +216,7 @@
     }
 
     .productDetail_main_section_top_centr img {
-        width: 480px;
+        width: 30%;
         align-items: center;
     }
 
@@ -399,10 +399,11 @@
 
     .productDetail_main_section_top_centr {
         width: 55%;
+        
     }
 
     .productDetail_main_section_top_centr img {
-        width: 100%;
+        width: 60%;
     }
 
     /* main top derch */
