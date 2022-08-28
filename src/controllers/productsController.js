@@ -102,3 +102,4 @@ module.exports = {
 
 /* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')), */
 /* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')) */
+
