@@ -25,13 +25,15 @@ app.use(express.json());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-app.use('/*', (req, res, next) => {
+
+
+/* app.use('/*', (req, res, next) => {
     try {
         
     } catch (error) {
         res.send(error)
     }
-});
+}); */
 
 
 /* app.use('/', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'index.html')));
