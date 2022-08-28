@@ -14,7 +14,7 @@
 - **Edad**: `22`
 - **Localidad**: `San Miguel`
 - **Dedicación**: Estudiante de Progrmación Web Full Stack. Estudiante universitario de Contador Público en primer año.
-- **Biografia**: *Nací en el 2000 en el Palomar, Bs As, Argentina. Actualmente vivo en San miguel. Mi educación alcanzada es: Secundario Técnico finalizado en 2019, titulo Maestro Mayor de obras. Estudie 2 años en un conservatorio de musica pero no lo finalizé. Mis hobbies son tocar la guitarra y el piano. Tambien me gusta jugar un poco al futbol.
+- **Biografia**: *Actualmente vivo en San miguel. Mi educación alcanzada es: Secundario Técnico finalizado en 2019, titulo Maestro Mayor de obras. Estudie 2 años en un conservatorio de musica pero no lo finalizé. Mis hobbies son tocar la guitarra y el piano. Tambien me gusta jugar un poco al futbol.
 Y hoy estoy haciendo este curso porque tenía curiosidad, hace tiempo, de sumergirme en el mundo de la tecnología por eso aproveché la oportunidad con entusiasmo.*
 
 ___
@@ -52,14 +52,6 @@ ___
 -  <a href="https://www.cdmarket.com.ar/" target="_blank"> CDMarket</a> = Motivo: El diseño del Body y carruseles.
 
 ___
-
-### TRELLO
-
--  <a href="https://trello.com/invite/b/IugzWu9B/24dbea82b67dcc6688b52107fffb9708/proyecto-integrador" target="_blank"> Trello</a>
-
-
- 
- ___
 
 ### TRELLO
 
