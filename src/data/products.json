@@ -32,11 +32,12 @@
       "image": "340333000-1-300x300.jpg",
       "category": "teclados",
       "colors": "Negro",
-      "price": "78764",
+      "price": 787640,
       "decimals": 0,
-      "discount": " ",
+      "discount": null,
       "status": "oferta",
-      "coutas": 12
+      "coutas": 12,
+      "color": "negro"
    },
    {
       "id": 4,
