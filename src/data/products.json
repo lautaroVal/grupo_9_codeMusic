@@ -309,32 +309,6 @@
       "status": "no-oferta"
    },
    {
-      "id": 25,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "microfonos",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "status": "",
-      "coutas": 12
-   },
-   {
-      "id": 26,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "microfonos",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "status": "",
-      "coutas": 12
-   },
-   {
       "id": 27,
       "name": "Saxo Alto Lincoln Winds Jyas-1102 Dorado Con Estuche",
       "description": "SAXO ALTO Mi b dorado con estuche",
@@ -439,14 +413,5 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Gibson_LP_Classic.png",
       "category": "guitarras",
       "status": "oferta"
-   },
-   {
-      "id": 34,
-      "name": "guitarra criolla",
-      "description": "",
-      "price": 30000,
-      "discount": null,
-      "image": "data:image/jpeg;base64,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",
-      "category": "guitarras"
    }
 ]
