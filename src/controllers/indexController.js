@@ -30,8 +30,17 @@ module.exports = {
 			microfonosYSonidos,
 			deVientos,
 			toThousand
-
-			/* toThousand */
 		})
 	},
+	search: (req, res) => {
+		let {keywords} = req.query;
+        const products = loadProducts();
+
+        let result = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()));
+
+        return res.render("products/results",{
+            keywords,
+            result
+        })
+	}
 };

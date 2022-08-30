@@ -258,32 +258,6 @@
       "status": "no-oferta"
    },
    {
-      "id": 25,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "microfonos",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "status": "",
-      "coutas": 12
-   },
-   {
-      "id": 26,
-      "name": "name",
-      "description": "null",
-      "image": "null",
-      "category": "microfonos",
-      "colors": "null",
-      "price": "null",
-      "decimals": 0,
-      "discount": " ",
-      "status": "",
-      "coutas": 12
-   },
-   {
       "id": 27,
       "name": "Saxo Alto Lincoln Winds Jyas-1102 Dorado Con Estuche",
       "description": "SAXO ALTO Mi b dorado con estuche",
