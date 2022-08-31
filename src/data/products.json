@@ -32,11 +32,12 @@
       "image": "340333000-1-300x300.jpg",
       "category": "teclados",
       "colors": "Negro",
-      "price": "78764",
+      "price": 787640,
       "decimals": 0,
-      "discount": " ",
+      "discount": null,
       "status": "oferta",
-      "coutas": 12
+      "coutas": 12,
+      "color": "negro"
    },
    {
       "id": 4,
@@ -117,19 +118,6 @@
       "coutas": 12
    },
    {
-      "id": 11,
-      "name": "Guitarra eléctrica Epiphone Les Paul Special VE",
-      "description": "null",
-      "image": "GuitarraElectrica.jpg",
-      "category": "guitarras",
-      "colors": "null",
-      "price": "78400",
-      "decimals": 0,
-      "discount": " ",
-      "status": "no-oferta",
-      "coutas": 12
-   },
-   {
       "id": 12,
       "name": "Batería Yamaha Stage de 5 piezas",
       "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
@@ -194,19 +182,6 @@
       "status": "no-oferta"
    },
    {
-      "id": 17,
-      "name": "Sin imagen",
-      "description": "",
-      "image": "null",
-      "category": "baterias",
-      "colors": "null",
-      "price": 500000,
-      "decimals": 0,
-      "discount": null,
-      "coutas": 12,
-      "color": "negro"
-   },
-   {
       "id": 19,
       "name": "Korg Pa700 Teclado Arranger Profesional 61 Teclas",
       "description": "null",
@@ -217,32 +192,6 @@
       "decimals": 0,
       "discount": "no-oferta",
       "status": "no-oferta"
-   },
-   {
-      "id": 20,
-      "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
-      "description": "null",
-      "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
-      "category": "teclados",
-      "colors": "null",
-      "price": "186760",
-      "decimals": 0,
-      "discount": " ",
-      "estado": "no-oferta",
-      "coutas": 12
-   },
-   {
-      "id": 20,
-      "name": "Piano Digital Teclado Yamaha P45 88 Teclas",
-      "description": "null",
-      "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
-      "category": "teclados",
-      "colors": "null",
-      "price": "186760",
-      "decimals": 0,
-      "discount": " ",
-      "status": "no-oferta",
-      "coutas": 12
    },
    {
       "id": 20,
@@ -389,9 +338,10 @@
       "name": "gibson",
       "description": "la mejor",
       "price": 200000,
-      "discount": 5,
+      "discount": null,
       "image": "https://media.istockphoto.com/photos/red-gibson-les-paul-custom-picture-id503188327?k=20&m=503188327&s=612x612&w=0&h=cZ1_Q10-C7CIPSza677ejnwgely1ZiuWjsE_y53xbyc=",
-      "category": "guitarras"
+      "category": "guitarras",
+      "color": "rojo"
    },
    {
       "id": 32,
@@ -409,9 +359,10 @@
       "name": "gibson3",
       "description": "la mejor",
       "price": 200000,
-      "discount": 5,
+      "discount": null,
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Gibson_LP_Classic.png",
       "category": "guitarras",
-      "status": "oferta"
+      "status": "oferta",
+      "color": "dorado"
    }
 ]
