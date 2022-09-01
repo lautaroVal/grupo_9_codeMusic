@@ -12,14 +12,18 @@ module.exports = {
     processLogin: (req,res) => {
         let errors = validationResult(req);
 
-        if(errors.isEmpy()) {
-            let {id, name, username} = loadUsers().find(user = user.email === req.body.email)
-            
-            return res.redirect('/')
-        } else {
+        if(errors.isEmpty()) {
+            let {id, firstName, lastName} = loadUsers().find(user => user.email === req.body.email)
+
+            req.session.userLogin ={
+                id,
+                firstName,
+                lastName,
+            };
+             return res.redirect('/') } else {
             return res.render('/login', {
                 title : 'login',
-                errors : errors.maped()
+                errors : errors.mapped()
             })
         }
         return res.send(req.body)
