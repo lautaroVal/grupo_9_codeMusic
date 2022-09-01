@@ -30,6 +30,11 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 
 
+app.use(function(req, res, next) {
+    next(createError(404));
+  });
+  
+
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
@@ -40,6 +45,11 @@ app.use(function(err, req, res, next) {
     res.render('not-found');
   });
 
+  
+  app.listen(port, () => console.log('server running in http://localhost:' + port));
+
+
+  
 /* app.use('/*', (req, res, next) => {
     try {
         
@@ -55,6 +65,5 @@ app.use('/productCart', (req,res) => res.sendFile(path.resolve(__dirname, 'views
 app.use('/register', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'register.html')));
 app.use('/login', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'login.html'))); */
 
-app.listen(port, () => console.log('server running in http://localhost:' + port));
 /* Recuerden cuando bajan todo hacer el "npm i express" */
 

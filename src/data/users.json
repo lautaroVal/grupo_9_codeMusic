@@ -1,38 +1,46 @@
 [
-    {
-        "id": "1",
-        "firstName": "Lautaro",
-        "lastName": "Valenzuela",
-        "email": "Lautaro@gmail",
-        "password": "**********",
-        "category": "admin",
-        "image": "null"
-    },
-    {
-        "id": "2",
-        "firstName": "Nahiara",
-        "lastName": "Beldevere",
-        "email": "Nahiara@gmail",
-        "password": "**********",
-        "category": "user",
-        "image": "null"
-    },
-    {
-        "id": "3",
-        "firstName": "Belen",
-        "lastName": "Romero",
-        "email": "Belen@gmail",
-        "password": "**********",
-        "category": "admin",
-        "image": "null"
-    },    
-    {
-        "id": "4",
-        "firstName": "Marcos",
-        "lastName": "Mansilla",
-        "email": "Marcos@gmail",
-        "password": "**********",
-        "category": "user",
-        "image": "null"
-    }
+   {
+      "id": "1",
+      "firstName": "Lautaro",
+      "lastName": "Valenzuela",
+      "email": "Lautaro@gmail",
+      "password": "123",
+      "category": "admin",
+      "image": "null"
+   },
+   {
+      "id": "2",
+      "firstName": "Nahiara",
+      "lastName": "Beldevere",
+      "email": "Nahiara@gmail",
+      "password": "123",
+      "category": "user",
+      "image": "null"
+   },
+   {
+      "id": "3",
+      "firstName": "Belen",
+      "lastName": "Romero",
+      "email": "Belen@gmail",
+      "password": "123",
+      "category": "admin",
+      "image": "null"
+   },
+   {
+      "id": "4",
+      "firstName": "Marcos",
+      "lastName": "Mansilla",
+      "email": "Marcos@gmail",
+      "password": "123",
+      "category": "user",
+      "image": "null"
+   },
+   {
+      "id": "41",
+      "image": null
+   },
+   {
+      "id": "411",
+      "image": null
+   }
 ]

@@ -58,3 +58,24 @@ no avisar en los cambios generales*
 
 ### Hacer Menos:
 *Entrar en detalles no tan importantes que nos atrase o perjudique*
+
+
+---
+
+## Retro Sprint 5
+
+### Seguir Haciendo:
+*Seguir con la empatia entre compañeros*
+
+### Hacer Más:
+*Motivarnos entre nosotros*
+
+### Empezar a Hacer:
+*Hacer los sprint con mas tiempo, organizarnos mejor,*
+
+### Dejar De Hacer:
+*No dejar las tareas para otro dia, dejar de SUESTIMAR los sprint!!!...
+no avisar en los cambios generales*
+
+### Hacer Menos:
+*Entrar en detalles no tan importantes que nos atrase o perjudique*
