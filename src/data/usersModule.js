@@ -12,8 +12,6 @@ const storeUsers = (users) => {
 }
 
 
-
-
 module.exports = {
     loadUsers,
     storeUsers

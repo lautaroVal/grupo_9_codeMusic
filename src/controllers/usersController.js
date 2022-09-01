@@ -9,9 +9,22 @@ module.exports = {
     login: (req,res) => {
         return res.render('users/login')
     },
-/*     userRegister: (req,res) => {
-        return res.render('users/userRegister')
-    } */
+    processLogin: (req,res) => {
+        let errors = validationResult(req);
+
+        if(errors.isEmpy()) {
+            let {id, name, username} = loadUsers().find(user = user.email === req.body.email)
+            
+            return res.redirect('/')
+        } else {
+            return res.render('/login', {
+                title : 'login',
+                errors : errors.maped()
+            })
+        }
+        return res.send(req.body)
+
+    },
     userRegister : (req,res) => {
 
         let errors = validationResult(req);
@@ -41,5 +54,5 @@ module.exports = {
                 old : req.body
             })
         }
-    },
+    }
 }

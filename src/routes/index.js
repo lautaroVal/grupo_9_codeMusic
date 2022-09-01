@@ -10,4 +10,3 @@ router
     .get('/search', search)
     
 module.exports = router;
-
