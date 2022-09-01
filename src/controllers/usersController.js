@@ -24,7 +24,7 @@ module.exports = {
                 firstName :firstName,
                 lastName : lastName,
                 email : email,
-                password : bcryptjs.hashSync(password,12),
+                password : password,
                 category : category,
                 image : null
             }
