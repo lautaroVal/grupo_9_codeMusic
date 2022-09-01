@@ -15,31 +15,74 @@
 
           <div class="register_txt"><p>Creá tu cuenta y comprá desde tu casa.</p></div>
           
-          <form class="register_form" action="/register" method="post">
+          <form class="register_form" action="/users/register" method="POST">
               <div class="register_div">
-                  <label class="register_label" for="Nombre y Apellido">Nombre y Apellido</label>
-                  <input class="register_input" type="text" id="Nombre y apellido" placeholder="Ej: Maria Gauna">
+                  <label class="register_label" for="nombre">Nombre:</label>
+                  <input class="register_input" type="text" name="firstName" id="nombre" placeholder="Ej: Maria Gauna">
+                  <% if (locals.errors && errors.firstName) { %>
+                    <p class="register_errors">
+                      <%= errors.firstName.msg %> 
+                  </p>
+                  <% } %>
               </div>
+
               <div class="register_div">
-                  <label class="register_label" for="Email">Email</label>
-                  <input class="register_input" type="email" id="Email" placeholder="Ej: tunombre@email.com ">
+                <label class="register_label" for="Nombre y Apellido">Apellido:</label>
+                <input class="register_input" type="text" name="lastName" id="Nombre y apellido" placeholder="Ej: Gonzalez">
+                <% if (locals.errors && errors.firstName) { %>
+                    <p class="register_errors">
+                      <%= errors.firstName.msg %> 
+                  </p>
+                  <% } %>
+            </div>
+            
+              <div class="register_div">
+                  <label class="register_label" for="Email">Email:</label>
+                  <input class="register_input" type="text" name="email" id="Email" placeholder="Ej: tunombre@email.com ">
+                  <% if (locals.errors && errors.firstName) { %>
+                    <p class="register_errors">
+                      <%= errors.firstName.msg %> 
+                  </p>
+                  <% } %>
               </div>
+
               <div class="register_div">
-                  <label class="register_label" for="Telefono">Teléfono (opcional)</label>
-                  <input class="register_input" type="tel" id="Teléfono" placeholder="Ej: 1524647589">
+                  <label class="register_label" for="Telefono">Teléfono(opcional):</label>
+                  <input class="register_input" type="number" name="telephone" id="Telefono" placeholder="Ej: 1524647589">
+                  <% if (locals.errors && errors.firstName) { %>
+                    <p class="register_errors">
+                      <%= errors.firstName.msg %> 
+                  </p>
+                  <% } %>
               </div>
+
               <div class="register_div">
-                  <label class="register_label" for="password">Contraseña</label>
-                  <input class="register_input" type="password" id="password" placeholder="Escribe tu contraseña">
+                  <label class="register_label" for="password">Contraseña:</label>
+                  <input class="register_input" type="password" name="password" id="password" placeholder="Escribe tu contraseña">
+                  <% if (locals.errors && errors.firstName) { %>
+                    <p class="register_errors">
+                      <%= errors.firstName.msg %> 
+                  </p>
+                  <% } %>
               </div>
+
               <div class="register_div">
-                  <label class="register_label" for="password">Confirmar Contraseña</label>
-                  <input class="register_input" type="password" id="password" placeholder="Confirma tu contraseña" >
-                 
+                  <label class="register_label" for="password2">Confirmar Contraseña:</label>
+                  <input class="register_input" type="password" name="password2" id="password2" placeholder="Confirma tu contraseña" >
+                  <% if (locals.errors && errors.firstName) { %>
+                    <p class="register_errors">
+                      <%= errors.firstName.msg %> 
+                  </p>
+                  <% } %>
+              </div>
+
+              <div>
+                <label for="terminos">Acepto <a href="#" style="list-style:none ;">términos y condiciones</a></label>
+                <input type="checkbox" id="terminos" name="terminos">
               </div>
             
               <div class="register_div">
-                  <button type="submit">Crear cuenta</button>
+                  <button type="submit" style="cursor: pointer;">Crear cuenta</button>
               </div> 
               <div class="register_p_a">
                 <p> ¿Ya tenés cuenta? <a href="/users/login">Iniciá sesión</a></p>
