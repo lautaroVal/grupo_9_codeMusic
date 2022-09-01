@@ -1,46 +1,42 @@
 [
    {
-      "id": "1",
+      "id": 1,
       "firstName": "Lautaro",
       "lastName": "Valenzuela",
       "email": "Lautaro@gmail",
+      "telephone": 12345679,
       "password": "123",
       "category": "admin",
-      "image": "null"
-   },
-   {
-      "id": "2",
-      "firstName": "Nahiara",
-      "lastName": "Beldevere",
-      "email": "Nahiara@gmail",
-      "password": "123",
-      "category": "user",
-      "image": "null"
-   },
-   {
-      "id": "3",
-      "firstName": "Belen",
-      "lastName": "Romero",
-      "email": "Belen@gmail",
-      "password": "123",
-      "category": "admin",
-      "image": "null"
-   },
-   {
-      "id": "4",
-      "firstName": "Marcos",
-      "lastName": "Mansilla",
-      "email": "Marcos@gmail",
-      "password": "123",
-      "category": "user",
-      "image": "null"
-   },
-   {
-      "id": "41",
       "image": null
    },
    {
-      "id": "411",
+      "id": 2,
+      "firstName": "Nahiara",
+      "lastName": "Beldevere",
+      "email": "Nahiara@gmail",
+      "telephone": 123457789,
+      "password": "123",
+      "category": "user",
+      "image": null
+   },
+   {
+      "id": 3,
+      "firstName": "Belen",
+      "lastName": "Romero",
+      "email": "Belen@gmail",
+      "telephone": 123446789,
+      "password": "123",
+      "category": "admin",
+      "image": null
+   },
+   {
+      "id": 4,
+      "firstName": "Marcos",
+      "lastName": "Mansilla",
+      "email": "Marcos@gmail",
+      "telephone": 123456789,
+      "password": "123",
+      "category": "user",
       "image": null
    }
 ]

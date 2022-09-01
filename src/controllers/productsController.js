@@ -7,6 +7,7 @@ module.exports = {
 	productsList: (req, res) => {
 		const products = loadProducts();
 		return res.render('products/products', {
+			title: "Listado de productos",
 			products,
 			/* toThousand */
 		})
@@ -19,16 +20,26 @@ module.exports = {
 
 		const productId = products.find(product => product.id === +req.params.id);
 		return res.render('products/productDetail', {
+			title: "Detalle de producto",
 			productId,
 			toThousand
 		})
 	},
 	/* CART */
-	productCart: (req, res) => res.render('products/productCart'),
+	productCart: (req, res) => {
+		const products = loadProducts();
+		const productId = products.find(product => product.id === +req.params.id);
+	
+	res.render('products/productCart', {
+		title: "Carrito de compras",
+		productId
+	})},
 
 	/* CREATE */
 	productAdd: (req, res) => {
-		return res.render('products/productAdd')
+		return res.render('products/productAdd', {
+			title: "Crear producto"
+		})
 	},
 
 	productAddStore: (req, res) => {
@@ -38,7 +49,6 @@ module.exports = {
 
 		const newProduct = {
 			id: (products[products.length - 1].id + 1),
-
 			name: name.trim(),
 			description: description.trim(),
 			price: +price,
@@ -60,6 +70,7 @@ module.exports = {
 		const product = products.find(product => product.id === +req.params.id);
 
 		res.render('products/productEdit', {
+			title: "Edición de producto",
 			product
 		})
 	},

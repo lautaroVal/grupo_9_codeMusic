@@ -41,6 +41,7 @@ module.exports = {
       "status"
     );
     res.render("index", {
+      title: "Code Music",
       oferta,
       guitarras,
       baterias,
@@ -57,6 +58,7 @@ module.exports = {
 	let result = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()));
 
 	return res.render("products/results",{
+    title: "Resultado de búsqueda",
 		keywords,
 		result
 	})

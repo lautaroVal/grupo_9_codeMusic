@@ -23,7 +23,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(express.json());
-// app.use(session({secret: 'secreto'}));
+app.use(session({secret: 'secreto'}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
