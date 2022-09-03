@@ -18,7 +18,8 @@
           <form class="register_form" action="/users/register" method="POST">
               <div class="register_div">
                   <label class="register_label" for="nombre">Nombre:</label>
-                  <input class="register_input" type="text" name="firstName" id="nombre" placeholder="Ej: Maria Gauna">
+                  <input class="register_input" type="text" name="firstName" id="nombre" 
+                  value="<%= locals.old && old.firstName ? old.firstName : null%>" placeholder="Ej: Maria Gauna">
                   <% if (locals.errors && errors.firstName) { %>
                     <p class="register_errors">
                       <%= errors.firstName.msg %> 
@@ -27,31 +28,31 @@
               </div>
 
               <div class="register_div">
-                <label class="register_label" for="Nombre y Apellido">Apellido:</label>
-                <input class="register_input" type="text" name="lastName" id="Nombre y apellido" placeholder="Ej: Gonzalez">
-                <% if (locals.errors && errors.firstName) { %>
+                <label class="register_label" for="apellido">Apellido:</label>
+                <input class="register_input" type="text" name="lastName" id="apellido" value="<%= locals.old && old.lastName ? old.lastName : null%>" placeholder="Ej: Gonzalez">
+                <% if (locals.errors && errors.lastName) { %>
                     <p class="register_errors">
-                      <%= errors.firstName.msg %> 
+                      <%= errors.lastName.msg %> 
                   </p>
                   <% } %>
             </div>
             
               <div class="register_div">
                   <label class="register_label" for="Email">Email:</label>
-                  <input class="register_input" type="text" name="email" id="Email" placeholder="Ej: tunombre@email.com ">
-                  <% if (locals.errors && errors.firstName) { %>
+                  <input class="register_input" type="text" name="email" id="Email" value="<%= locals.old && old.email ? old.email : null%>" placeholder="Ej: tunombre@email.com ">
+                  <% if (locals.errors && errors.email) { %>
                     <p class="register_errors">
-                      <%= errors.firstName.msg %> 
+                      <%= errors.email.msg %> 
                   </p>
                   <% } %>
               </div>
 
               <div class="register_div">
                   <label class="register_label" for="Telefono">Teléfono(opcional):</label>
-                  <input class="register_input" type="number" name="telephone" id="Telefono" placeholder="Ej: 1524647589">
-                  <% if (locals.errors && errors.firstName) { %>
+                  <input class="register_input" type="number" name="telephone" id="Telefono" value="<%= locals.old && old.telephone ? old.telephone : null%>" placeholder="Ej: 1524647589">
+                  <% if (locals.errors && errors.telephone) { %>
                     <p class="register_errors">
-                      <%= errors.firstName.msg %> 
+                      <%= errors.telephone.msg %> 
                   </p>
                   <% } %>
               </div>
@@ -59,9 +60,9 @@
               <div class="register_div">
                   <label class="register_label" for="password">Contraseña:</label>
                   <input class="register_input" type="password" name="password" id="password" placeholder="Escribe tu contraseña">
-                  <% if (locals.errors && errors.firstName) { %>
+                  <% if (locals.errors && errors.password) { %>
                     <p class="register_errors">
-                      <%= errors.firstName.msg %> 
+                      <%= errors.password.msg %> 
                   </p>
                   <% } %>
               </div>
@@ -69,9 +70,9 @@
               <div class="register_div">
                   <label class="register_label" for="password2">Confirmar Contraseña:</label>
                   <input class="register_input" type="password" name="password2" id="password2" placeholder="Confirma tu contraseña" >
-                  <% if (locals.errors && errors.firstName) { %>
+                  <% if (locals.errors && errors.password2) { %>
                     <p class="register_errors">
-                      <%= errors.firstName.msg %> 
+                      <%= errors.password2.msg %> 
                   </p>
                   <% } %>
               </div>
@@ -79,6 +80,11 @@
               <div>
                 <label for="terminos">Acepto <a href="#" style="list-style:none ;">términos y condiciones</a></label>
                 <input type="checkbox" id="terminos" name="terminos">
+                <% if (locals.errors && errors.terminos) { %>
+                    <p class="register_errors">
+                      <%= errors.terminos.msg %> 
+                  </p>
+                  <% } %>
               </div>
             
               <div class="register_div">
