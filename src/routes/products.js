@@ -3,18 +3,20 @@ const router = express.Router();
 
 const { productDetail, productCart, productAdd, productEdit, productsList, productAddStore, update, destroy} = require('../controllers/productsController')
 
+const productAddValidator = require('../validations/productAddValidator')
+
 router
         /* Listado de productos */
         .get('/', productsList)
 
         /*Formulario de creación de productos  */
         .get('/productAdd', productAdd)
+       
+        /* Acción de creación (a donde se envía el formulario)*/
+        .post('/productAdd', productAddValidator, productAddStore)
 
         /*Detalle de un producto particular*/
         .get('/productDetail/:id', productDetail)
-
-        /* Acción de creación (a donde se envía el formulario)*/
-        .post('/productAdd', productAddStore)
 
         /* Formulario de edición de productos */
         .get('/edit/:id', productEdit)
@@ -26,9 +28,6 @@ router
 
         /* Carrito de compras */
         .get('/productCart', productCart)
-
-        /* 
-        .get('/search', search) */
 
 
 module.exports = router;

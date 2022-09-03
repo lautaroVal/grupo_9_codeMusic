@@ -356,5 +356,115 @@
       "decimals": 0,
       "discount": " ",
       "estado": "no-oferta"
+   },
+   {
+      "id": 31,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 32,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 33,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 34,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 35,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 36,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 37,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 38,
+      "name": "k",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 39,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 40,
+      "name": "",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
+   },
+   {
+      "id": 41,
+      "name": "123",
+      "description": "",
+      "price": 0,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "negro",
+      "category": "guitarras"
    }
 ]
