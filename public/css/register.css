@@ -20,12 +20,13 @@
 .register_form {
     color: var(--ColorNegro);
     margin-bottom: 50px;
+    min-width: 300px;
+    max-width: 600px;
+    margin:0 auto;
 }
 .register_div {
     margin-bottom: 25px;
     padding-left: 10px;
-    
-
     
 }
 .register_div button {
@@ -46,15 +47,11 @@
 
 }
 .register_input {
-    width: 90%;
     height: 25px;
     margin-top: 7px;
     border-radius: 20px;
     background-color: #D9D9D9;
     padding-left: 10px;
-    margin-left: 10px;
-    
-
 }
 
 .register_p_a {
@@ -71,6 +68,10 @@
     
 }
 
+.register_errors {
+    color: red;
+}
+
 @media (min-width: 1024px) {
     
     
@@ -78,26 +79,24 @@
     .register_div {
         display: flex;
         flex-direction: column;
-        
+      
         
     
         
     }  
 
     .register_label {
-        width: 50%;
+      
         margin-top: 0px;
-        margin-left: 20%;
+  
        
     }
 
     .register_input {
-        width: 60%;
-        height: 35px;
-    
        
+        height: 35px;  
         padding-left: 7px ;
-        margin-left: 20%;
+
     }
 
     .register_div button {
@@ -114,6 +113,7 @@
         
     }
         
+    
        
         
     
