@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const registerValidator = require('../validations/registerValidator')
 
 
 
 const {register, login, processLogin, userRegister, processRegister} = require('../controllers/usersController');
 /* const loginValidator = require('../validations/loginValidator'); */
-const registerValidator = require('../validations/registerValidator')
 
 
 router
