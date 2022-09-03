@@ -24,10 +24,8 @@
 .register_div {
     margin-bottom: 25px;
     padding-left: 10px;
-    
-
-    
 }
+
 .register_div button {
     display: inline-block;
     width: 80%;
@@ -38,12 +36,11 @@
     text-transform: uppercase;
     border-radius: 20px;
 }
+
 .register_label {
     width: 90%;
     margin-top: 30px;
     padding: 10px;
-    
-
 }
 .register_input {
     width: 90%;
@@ -53,22 +50,18 @@
     background-color: #D9D9D9;
     padding-left: 10px;
     margin-left: 10px;
-    
-
 }
 
 .register_p_a {
-    text-align: center;
-    
-    
+    text-align: center;    
 }
+
 .register_p_a p {
-    font-size: 13px;
-    
+    font-size: 13px;    
 }
+
 .register_p_a p a {
-    color: #611696;
-    
+    color: #611696;    
 }
 
 @media (min-width: 1024px) {
@@ -93,9 +86,7 @@
 
     .register_input {
         width: 60%;
-        height: 35px;
-    
-       
+        height: 35px;   
         padding-left: 7px ;
         margin-left: 20%;
     }
@@ -103,21 +94,11 @@
     .register_div button {
         height: 35px;
         width: 50%;
-        margin-left: 25%;
-        
+        margin-left: 25%; 
     }
 
     .register_inicio-cuenta p {
-       padding-top: 20px;
-      
-        
-        
+       padding-top: 20px;        
     }
-        
-       
-        
-    
-    
 
-    
 }

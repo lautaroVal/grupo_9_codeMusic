@@ -18,7 +18,7 @@ module.exports = {
     processRegister: (req, res)=> {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            const {firstName,lastName,email,telephone,password,category,image} = req.body;
+            const {firstName,lastName,email,telephone,password} = req.body;
             let users = loadUsers();
             
             let newUser = {
