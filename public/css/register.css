@@ -1,4 +1,10 @@
-
+ .register_main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin: 0 auto;
+    flex-direction: column;
+} 
 .register_inicio h1 {
     color: #301B3F;
     margin-top: 10px;
@@ -17,41 +23,48 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
 .register_form {
+    display: flex;
+    flex-wrap: wrap;
     color: var(--ColorNegro);
-    margin-bottom: 50px;
-    min-width: 300px;
-    max-width: 600px;
     margin:0 auto;
+    gap: 20px 0;
 }
+
 .register_div {
-    margin-bottom: 25px;
-    padding-left: 10px;
-    
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.register_label {
+    margin: auto;
+    margin-bottom: 10px 10px;
+}
+.register_label a{
+    color: black;
+    margin: auto;
+    gap: 20px;
+}
+
+.register_input {
+    width: 300PX;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    margin: auto;
 }
 
 .register_div button {
-    display: inline-block;
-    width: 80%;
+    width: 160px;
+    height: 35px;
     margin-left: 30px;
     margin-right: 20px;
     background-color: #202040;
     color: white;
     text-transform: uppercase;
     border-radius: 20px;
-}
-
-.register_label {
-    width: 90%;
-    margin-top: 30px;
-    padding: 10px;
-}
-.register_input {
-    height: 25px;
-    margin-top: 7px;
-    border-radius: 20px;
-    background-color: #D9D9D9;
-    padding-left: 10px;
 }
 
 .register_p_a {
@@ -70,47 +83,21 @@
     color: red;
 }
 
-@media (min-width: 1024px) {
-    
-    
-    
-    .register_div {
+
+@media (min-width: 768px) {
+    .register_form {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
-      
-        
-    
-        
-    }  
-
-    .register_label {
-      
-        margin-top: 0px;
-  
-       
     }
-
     .register_input {
-        width: 60%;
-        height: 35px;   
-        padding-left: 7px ;
-
+        width: 500px;
     }
+}
 
-    .register_div button {
-        height: 35px;
-        width: 50%;
-        margin-left: 25%; 
+
+@media (min-width: 1024px) {
+    .register_input {
+        width: 600px;
     }
-
-    .register_inicio-cuenta p {
-       padding-top: 20px;        
-    }
-        
-    
-       
-        
-    
-    
-
 }

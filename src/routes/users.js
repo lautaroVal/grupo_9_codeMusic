@@ -4,15 +4,11 @@ const registerValidator = require('../validations/registerValidator')
 
 
 
-const {register, login, processLogin, userRegister, processRegister} = require('../controllers/usersController');
-/* const loginValidator = require('../validations/loginValidator'); */
+const {register, login, processRegister} = require('../controllers/usersController');
 
 
 router
     .get('/register', register)
     .post('/register', registerValidator, processRegister)
     .get('/login', login)
-    /* .post('/login', loginValidator, processLogin) */
-    /* .get('/userRegister', userRegister) */
-
 module.exports = router;

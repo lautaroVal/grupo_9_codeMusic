@@ -77,9 +77,9 @@
                   <% } %>
               </div>
 
-              <div>
-                <label for="terminos">Acepto <a href="#" style="list-style:none ;">términos y condiciones</a></label>
-                <input type="checkbox" id="terminos" name="terminos">
+              <div class="register_div">
+                <label class="register_label" for="terminos"><a href="#">Acepto </a>terminos y condiciones</label>
+                <input  type="checkbox" id="terminos" name="terminos">
                 <% if (locals.errors && errors.terminos) { %>
                     <p class="register_errors">
                       <%= errors.terminos.msg %> 
