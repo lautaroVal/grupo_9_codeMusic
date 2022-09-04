@@ -40,12 +40,11 @@
 
 .register_label {
     margin: auto;
-    margin-bottom: 10px 10px;
+    margin-bottom: 10px;
 }
 .register_label a{
     color: black;
     margin: auto;
-    gap: 20px;
 }
 
 .register_input {

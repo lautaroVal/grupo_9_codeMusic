@@ -45,22 +45,6 @@ module.exports = {
             })
         }
     }
-    /* processLogin: (req,res) => {
-        let errors = validationResult(req);
-        return res.send(req.body)
-    
-        if(errors.isEmpy()) {
-            let {id, name, username} = loadUsers().find(user = user.email === req.body.email)
-            
-            return res.redirect('/')
-        } else {
-            return res.render('/login', {
-                title : 'login',
-                errors : errors.mapped()
-            })
-        }
-    }, */
-
 }
 
 
