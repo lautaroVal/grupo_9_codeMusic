@@ -1,13 +1,13 @@
-const { body, check } = require('express-validator');
+const { body } = require('express-validator');
 
 module.exports = [
-    check('firstName')
+    body('firstName')
         .notEmpty().withMessage("Debe ingresar un nombre.").bail()
         .isAlpha('en-US').withMessage('Debe ingresar solo letras.').bail()
         .isLength({ min: 3 }).withMessage('Debe contener 3 caracteres como mínimo.').bail()
         .isLength({ max: 60 }).withMessage('Debe contener 60 caracteres como máximo.'),
 
-    check('lastName')
+    body('lastName')
         .notEmpty().withMessage("Debe ingresar un apellido.").bail()
         .isAlpha('en-US').withMessage('Debe ingresar solo letras.').bail()
         .isLength({ min: 3 }).withMessage('Debe contener 3 caracteres como mínimo.')
@@ -15,16 +15,12 @@ module.exports = [
 
     body('email')
         .notEmpty().withMessage("Debe ingresar un email.").bail()
-        .isEmail().withMessage('Debe ingresar un correo electrónico válido.')
-        .custom((value, {req}) => {
-            let user = users.find(user => user.email === value.trim());
-           return !!!user;
-        }).withMessage('El email ya se encuentra registrado'),
+        .isEmail().withMessage('Debe ingresar un correo electrónico válido.'),
 
-    check('telephone')
+    body('telephone')
         .notEmpty().withMessage("Debe ingresar un numero"),
 
-    check('password')
+    body('password')
         .notEmpty().withMessage("Debe ingresar una contraseña.").bail()
         .isLength({ min: 6, max: 12 }).withMessage('Debe tener entre 6 y 12 caracteres.'),
 
@@ -37,10 +33,7 @@ module.exports = [
             } else{
                 return true
             }
-        }).withMessage('Las contraseñas no coinciden'),
-    check('terms')
-        .isString('on').withMessage('Debes aceptar las bases y condiciones')
-    
+        }).withMessage('Las contraseñas no coinciden')
         
 ]
 

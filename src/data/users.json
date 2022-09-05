@@ -41,11 +41,11 @@
    },
    {
       "id": 5,
-      "firstName": "asd",
-      "lastName": "ass",
-      "email": "Marcosmansilla19899@hotmail.com",
-      "telephone": 12341234,
-      "password": "$2a$12$nCK/m8aqXze/b/IRnV1p3OsFqHkB7GxU26I.DCDA9v3isxLdQMUoS",
+      "firstName": "Marcos",
+      "lastName": "masdasd",
+      "email": "cobra_mansilla1989@hotmail.com",
+      "telephone": 543345543,
+      "password": "$2a$12$d9yJtc0l7BgYKujnClrhbu5fuZ/tlRgi7Vz/jro5g9h.gTvsVdCF2",
       "category": "user",
       "image": "default-users-image.jpg"
    },
@@ -53,9 +53,9 @@
       "id": 6,
       "firstName": "Marcos",
       "lastName": "Mansilla",
-      "email": "Marcosmansilla1989@hotmail.com",
-      "telephone": 2222222,
-      "password": "$2a$12$rphjZUZoiL9qfp6rUjdD8.U5G2k3gy5Dbjbvxmti.2F54JbSpuS/C",
+      "email": "asdasd@gmail.com",
+      "telephone": 123123123,
+      "password": "$2a$12$/ZpS2flEdkltqg1GlYvhlOlbR03oGlKgSGxMpf0a4o8JNO0EJMe.G",
       "category": "user",
       "image": "default-users-image.jpg"
    }
