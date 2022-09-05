@@ -58,5 +58,15 @@
       "password": "$2a$12$/ZpS2flEdkltqg1GlYvhlOlbR03oGlKgSGxMpf0a4o8JNO0EJMe.G",
       "category": "user",
       "image": "default-users-image.jpg"
+   },
+   {
+      "id": 7,
+      "firstName": "Marcos",
+      "lastName": "Mansilla",
+      "email": "vida_injusta@hotmail.com",
+      "telephone": 321321321,
+      "password": "$2a$12$O0rp1aQcK.KR9WmyyBRLu.RXHsuYIUAmq9JKgLDcGXH76ZPiXW19i",
+      "category": "user",
+      "image": "default-users-image.jpg"
    }
 ]
