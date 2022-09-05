@@ -19,7 +19,7 @@ module.exports = {
         } else {
             return res.render('/login', {
                 title : 'login',
-                errors : errors.maped()
+                errors : errors.mapped()
             })
         }
         return res.send(req.body)
