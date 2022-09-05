@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-const users = require("../data/productsModule").loadProducts();
+const users = require("../data/usersModule").loadUsers();
 
 module.exports = [
     body('firstName')
@@ -38,6 +38,8 @@ module.exports = [
             } else{
                 return true
             }
-        }).withMessage('Las contraseñas no coinciden')
+        }).withMessage('Las contraseñas no coinciden'),
+        body('terminos')
+        .isString('on').withMessage('Debes aceptar las bases y condiciones')
 ]
 

@@ -72,11 +72,12 @@
       "image": "1410171854593622_01_medium.jpg",
       "category": "microfonosYSonidos",
       "colors": "negro",
-      "price": "45999",
+      "price": 45999,
       "decimals": 0,
-      "discount": 0,
+      "discount": null,
       "status": "oferta",
-      "coutas": 12
+      "coutas": 12,
+      "color": "negro"
    },
    {
       "id": 7,
