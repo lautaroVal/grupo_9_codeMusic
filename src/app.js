@@ -23,7 +23,11 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(express.json());
-// app.use(session({secret: 'secreto'}));
+app.use(session({
+  secret: 'Code Music secret',
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -32,7 +36,7 @@ app.use('/products', productsRouter);
 
 app.use(function(req, res, next) {
     next(createError(404));
-  });
+  }); 
   
 
 app.use(function(err, req, res, next) {
