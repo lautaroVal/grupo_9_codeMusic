@@ -11,5 +11,5 @@ module.exports = [
     .custom((value, {req}) => {
         let user = users.find(user => user.email === req.body.email.trim() && bcryptjs.compareSync(value,user.password));
         return !!user
-    }).withMessage('Credenciales invalidas'),
+    }).withMessage('Credenciales invalidas')
 ]

@@ -15,6 +15,35 @@ module.exports = {
         })
     },
 
+    processLogin : (req,res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+
+        let {id,firstName,lastName, category, image} = loadUsers().find(user => user.email === req.body.email);
+
+        req.session.userLogin ={
+            id,
+            firstName,
+            lastName,
+            category,
+            image
+        };
+
+/*         if(req.body.remember){
+            res.cookie('craftsy16',req.session.userLogin,{
+                maxAge : 1000 * 60
+            })
+        } */
+
+            return res.redirect('/')
+        }else {
+            return res.render('users/login',{
+                title: 'Login',
+                errors : errors.mapped()
+            })
+        }
+    },
+
     processRegister: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){

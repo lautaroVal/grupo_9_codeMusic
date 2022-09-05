@@ -1,4 +1,5 @@
 const { body } = require('express-validator');
+const users = require("../data/productsModule").loadProducts();
 
 module.exports = [
     body('firstName')
@@ -15,7 +16,11 @@ module.exports = [
 
     body('email')
         .notEmpty().withMessage("Debe ingresar un email.").bail()
-        .isEmail().withMessage('Debe ingresar un correo electrónico válido.'),
+        .isEmail().withMessage('Debe ingresar un correo electrónico válido.')
+        .custom((value, {req}) => {
+            let user = users.find(user => user.email === value.trim());
+           return !!!user;
+        }).withMessage('El email ya se encuentra registrado'),
 
     body('telephone')
         .notEmpty().withMessage("Debe ingresar un numero"),
@@ -34,6 +39,5 @@ module.exports = [
                 return true
             }
         }).withMessage('Las contraseñas no coinciden')
-        
 ]
 
