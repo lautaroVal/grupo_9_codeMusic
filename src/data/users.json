@@ -10,16 +10,6 @@
       "image": "default-users-image.jpg"
    },
    {
-      "id": 2,
-      "firstName": "Nahiara",
-      "lastName": "Belvedere",
-      "email": "Nahiara@gmail.com",
-      "telephone": 123457789,
-      "password": "12344567",
-      "category": "user",
-      "image": null
-   },
-   {
       "id": 3,
       "firstName": "Belen",
       "lastName": "Romero",
@@ -46,6 +36,36 @@
       "email": "cobra_mansilla1989@hotmail.com",
       "telephone": 543345543,
       "password": "$2a$12$d9yJtc0l7BgYKujnClrhbu5fuZ/tlRgi7Vz/jro5g9h.gTvsVdCF2",
+      "category": "user",
+      "image": "default-users-image.jpg"
+   },
+   {
+      "id": 6,
+      "firstName": "Marcos",
+      "lastName": "Mansilla",
+      "email": "asdasd@gmail.com",
+      "telephone": 123123123,
+      "password": "$2a$12$/ZpS2flEdkltqg1GlYvhlOlbR03oGlKgSGxMpf0a4o8JNO0EJMe.G",
+      "category": "user",
+      "image": "default-users-image.jpg"
+   },
+   {
+      "id": 7,
+      "firstName": "Lautaro",
+      "lastName": "Valenzuela",
+      "email": "Lautaros@gmail.com",
+      "telephone": 1154659878,
+      "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
+      "category": "user",
+      "image": "default-users-image.jpg"
+   },
+   {
+      "id": 8,
+      "firstName": "nahiara",
+      "lastName": "salinas",
+      "email": "nahiarabelvedere@gmail.com",
+      "telephone": 1123260927,
+      "password": "$2a$12$15KnR7ILAZxZfCE97lIhjOISRIy8omQNFEOZJHmhphzEBaoapriMe",
       "category": "user",
       "image": "default-users-image.jpg"
    }
