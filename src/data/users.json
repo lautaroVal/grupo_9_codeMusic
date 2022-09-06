@@ -1,6 +1,6 @@
 [
    {
-      "id": 7,
+      "id": 1,
       "firstName": "Lautaro",
       "lastName": "Valenzuela",
       "email": "Lautaros@gmail.com",
@@ -10,63 +10,23 @@
       "image": "default-users-image.jpg"
    },
    {
-      "id": 3,
-      "firstName": "Belen",
-      "lastName": "Romero",
-      "email": "Belen@gmail.com",
-      "telephone": 123446789,
-      "password": "12345678",
-      "category": "admin",
-      "image": null
-   },
-   {
-      "id": 4,
-      "firstName": "Marcos",
-      "lastName": "Mansilla",
-      "email": "Marcos@gmail.com",
-      "telephone": 123456789,
-      "password": "123456789",
-      "category": "user",
-      "image": null
-   },
-   {
-      "id": 5,
-      "firstName": "Marcos",
-      "lastName": "masdasd",
-      "email": "cobra_mansilla1989@hotmail.com",
-      "telephone": 543345543,
-      "password": "$2a$12$d9yJtc0l7BgYKujnClrhbu5fuZ/tlRgi7Vz/jro5g9h.gTvsVdCF2",
-      "category": "user",
-      "image": "default-users-image.jpg"
-   },
-   {
-      "id": 6,
-      "firstName": "Marcos",
-      "lastName": "Mansilla",
-      "email": "asdasd@gmail.com",
-      "telephone": 123123123,
-      "password": "$2a$12$/ZpS2flEdkltqg1GlYvhlOlbR03oGlKgSGxMpf0a4o8JNO0EJMe.G",
-      "category": "user",
-      "image": "default-users-image.jpg"
-   },
-   {
-      "id": 7,
-      "firstName": "Lautaro",
-      "lastName": "Valenzuela",
-      "email": "Lautaros@gmail.com",
-      "telephone": 1154659878,
-      "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
-      "category": "user",
-      "image": "default-users-image.jpg"
-   },
-   {
-      "id": 8,
+      "id": 2,
       "firstName": "nahiara",
       "lastName": "salinas",
       "email": "nahiarabelvedere@gmail.com",
       "telephone": 1123260927,
       "password": "$2a$12$15KnR7ILAZxZfCE97lIhjOISRIy8omQNFEOZJHmhphzEBaoapriMe",
-      "category": "user",
+      "category": "admin",
+      "image": "default-users-image.jpg"
+   },
+   {
+      "id": 3,
+      "firstName": "marcos",
+      "lastName": "Mansilla",
+      "email": "cobra_mansilla1989@hotmail.com",
+      "telephone": 123123123,
+      "password": "$2a$12$83opvDwghebLgrQHbdDbjuQ9k3SnhPrp40eyZna/kwHL1L4vRhCyy",
+      "category": "admin",
       "image": "default-users-image.jpg"
    },
    {

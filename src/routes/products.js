@@ -4,7 +4,7 @@ const router = express.Router();
 const { productDetail, productCart, productAdd, productEdit, productsList, productAddStore, update, destroy} = require('../controllers/productsController');
 
 const productAddValidator = require('../validations/productAddValidator');
-const uploadImages = require('../middlewares/uploadImg');
+const uploadImges = require('../middlewares/uploadImg')
 const adminUserCheck = require('../middlewares/adminUserCheck');
 
 router
