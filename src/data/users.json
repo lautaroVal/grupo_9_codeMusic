@@ -1,13 +1,13 @@
 [
    {
-      "id": 1,
+      "id": 7,
       "firstName": "Lautaro",
       "lastName": "Valenzuela",
-      "email": "Lautaro@gmail.com",
-      "telephone": 12345679,
-      "password": "123456",
+      "email": "Lautaros@gmail.com",
+      "telephone": 1154659878,
+      "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
       "category": "admin",
-      "image": null
+      "image": "default-users-image.jpg"
    },
    {
       "id": 2,
@@ -46,26 +46,6 @@
       "email": "cobra_mansilla1989@hotmail.com",
       "telephone": 543345543,
       "password": "$2a$12$d9yJtc0l7BgYKujnClrhbu5fuZ/tlRgi7Vz/jro5g9h.gTvsVdCF2",
-      "category": "user",
-      "image": "default-users-image.jpg"
-   },
-   {
-      "id": 6,
-      "firstName": "Marcos",
-      "lastName": "Mansilla",
-      "email": "asdasd@gmail.com",
-      "telephone": 123123123,
-      "password": "$2a$12$/ZpS2flEdkltqg1GlYvhlOlbR03oGlKgSGxMpf0a4o8JNO0EJMe.G",
-      "category": "user",
-      "image": "default-users-image.jpg"
-   },
-   {
-      "id": 7,
-      "firstName": "Lautaro",
-      "lastName": "Valenzuela",
-      "email": "Lautaros@gmail.com",
-      "telephone": 1154659878,
-      "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
       "category": "user",
       "image": "default-users-image.jpg"
    }
