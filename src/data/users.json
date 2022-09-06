@@ -68,5 +68,15 @@
       "password": "$2a$12$pyPfjwDfJ6MyLhi5xFyyqOTGqwXqFNYzD1tZY9/0yuR31j0AUT4rC",
       "category": "user",
       "image": "default-users-image.jpg"
+   },
+   {
+      "id": 8,
+      "firstName": "nahiara",
+      "lastName": "salinas",
+      "email": "nahiarabelvedere@gmail.com",
+      "telephone": 1123260927,
+      "password": "$2a$12$15KnR7ILAZxZfCE97lIhjOISRIy8omQNFEOZJHmhphzEBaoapriMe",
+      "category": "user",
+      "image": "default-users-image.jpg"
    }
 ]
