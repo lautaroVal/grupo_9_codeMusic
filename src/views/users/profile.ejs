@@ -12,7 +12,7 @@
                     <hr>
                     <img src="/img/users/default-users-image.jpg" alt="usuario">
 
-                    <form class="profile_main_form" action="/users/profile?_method=PUT" method="post">
+                    <form class="profile_main_form" action="/users/profile?_method=PUT" method="post" enctype="multipart/form-data">
                         <div class="profile_main_form_div1">
 
                             <div>
@@ -130,7 +130,7 @@
                             </div>
                             <div>
                                 <label for="avatar">Subir imagen de perfil</label>
-                                <input hidden type="file" id="avatar">
+                                <input hidden type="file" id="avatar" name="avatar">
                             </div>
 
                             <div>

@@ -489,5 +489,27 @@
       "color": "dorado",
       "category": "microfonosYSonidos",
       "status": "no-oferta"
+   },
+   {
+      "id": 44,
+      "name": "microfono",
+      "description": "asdasd",
+      "price": 123123,
+      "discount": 0,
+      "image": "Img-1662489560501.jpg",
+      "color": "dorado",
+      "category": "microfonosYSonidos",
+      "status": "no-oferta"
+   },
+   {
+      "id": 45,
+      "name": "bater",
+      "description": "123123",
+      "price": 123123123,
+      "discount": 0,
+      "image": "",
+      "color": "negro",
+      "category": "baterias",
+      "status": "no-oferta"
    }
 ]
