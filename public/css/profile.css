@@ -1,0 +1,61 @@
+
+.profile_main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+}
+.profile_main_section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 10px 0px;   
+}
+.profile_main_section img{
+    width: 100px;
+}
+.profile_main_form{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--ColorNegro);
+    margin:0 auto;
+    gap: 20px 0;
+    flex-direction: column;
+}
+.profile_main_form_div1, .profile_main_form_div2, .profile_main_form_div3, .profile_main_form_div4{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--ColorNegro);
+    gap: 20px ;
+    flex-direction: column;
+    margin: 2px 5px;
+}
+.profile_main_form_div1 div, .profile_main_form_div4 div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.profile_main_form_div1 div input, .profile_main_form_div4 div input{
+    height: 30px;
+    border-radius: 5px;
+}
+.profile_main_form_div4 div select{
+    height: 30px;
+    border-radius: 5px;
+}
+.profile_main_form_div4 div button{
+    height: 30px;
+    border-radius: 5px;
+}
+@media (min-width: 768px) {
+    .profile_main_form_div1 div input, .profile_main_form_div4 div input{
+        width: 333px;
+    }
+}
+@media (min-width: 1024px) {
+    .profile_main_form_div1 div input, .profile_main_form_div4 div input{
+        width: 633px;
+    }
+}

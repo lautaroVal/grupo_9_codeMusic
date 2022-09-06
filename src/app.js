@@ -4,7 +4,8 @@ const port = 3049;
 const morgan = require('morgan'); /* hay que hacer npm i morgan para instalar las dependencias de morgan.. */
 const session = require('express-session');
 
-const localsUserCheck = require('./middlewares/localsUserCheck') 
+const localsUserCheck = require('./middlewares/localsUserCheck');
+const cookieCheck = require('./middlewares/cookieCheck');
 
 const methodOverride = require('method-override');
 
@@ -30,6 +31,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(cookieCheck)
 app.use(localsUserCheck);
 
 app.use('/', indexRouter);

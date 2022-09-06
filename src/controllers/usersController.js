@@ -60,11 +60,12 @@ module.exports = {
             image
         };
 
-/*         if(req.body.remember){
-            res.cookie('craftsy16',req.session.userLogin,{
+        if(req.body.remember){
+            res.cookie('codeMusic',req.session.userLogin,{
                 maxAge : 1000 * 60
             })
-        } */
+        }
+        
             return res.redirect('/')
         }else {
             return res.render('users/login',{
