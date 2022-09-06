@@ -78,6 +78,11 @@
                     <button type="button" id="edit_button"><a href="/products/edit/<%= productId.id%>">Editar</a></button>
                     <form action="/products/delete/<%= productId.id %>?_method=DELETE" method="POST" >
                         <button type="submit" style="cursor: pointer;" >Eliminar</button>
+                        <% if (users) { %>
+                            <p class="register_errors">
+                              <%= errors.name.msg %> 
+                          </p>
+                          <% } %>
                     </form>
 
                 </div>
