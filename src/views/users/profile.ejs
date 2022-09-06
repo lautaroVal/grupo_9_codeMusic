@@ -2,18 +2,18 @@
 <html lang="es">
     <%- include('../partials/head') %> 
 
-<body class="login">
+<body class="profile">
     <%- include('../partials/header') %>
 
 
-    <main class="login_main">
-      <section class="login_inicio">
+    <main class="profile_main">
+      <section class="profile_main_section">
         <h3>Mi perfil </h3>
         <hr>
-        <img src="/img/users/default-users-image.jpg" width="200px" alt="usuario">
+        <img src="/img/users/default-users-image.jpg" alt="usuario">
 
-        <form action="post">
-          <div>
+        <form class="profile_main_form" action="/users/profile?_method=PUT" method="post">
+        <div>
               <label for="nombre">Nombre</label>
               <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre">
           </div>
