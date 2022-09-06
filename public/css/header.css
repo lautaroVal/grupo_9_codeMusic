@@ -155,9 +155,8 @@
         font-size: 30px;
     }
 
-    .productDetail_header_top_add {
-        position: absolute;
-        right: 92px;
+    .productDetail_header_top_li {
+        font-size: 14px;
     }
 
     .productDetail_header_top_icon_cart {
