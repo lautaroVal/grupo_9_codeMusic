@@ -46,8 +46,7 @@ module.exports = {
 
 	productAddStore: (req, res) => {
 		let errors = validationResult(req)
-		
-		if (!errors.isEmpty) {
+		if (errors.isEmpty()) {
 			const { name, price, discount, description, category, imageText, color, status } = req.body
 			const products = loadProducts();
 

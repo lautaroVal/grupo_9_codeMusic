@@ -467,5 +467,27 @@
       "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
       "color": "negro",
       "category": "guitarras"
+   },
+   {
+      "id": 42,
+      "name": "bateria",
+      "description": "la mejor bateria",
+      "price": 200000,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "rojo",
+      "category": "baterias",
+      "status": "no-oferta"
+   },
+   {
+      "id": 43,
+      "name": "microfono",
+      "description": "qweqwe",
+      "price": 123123,
+      "discount": 0,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+      "color": "dorado",
+      "category": "microfonosYSonidos",
+      "status": "no-oferta"
    }
 ]
