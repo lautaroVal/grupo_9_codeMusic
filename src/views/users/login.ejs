@@ -15,10 +15,10 @@
             
             <div class="login_div">
                 <label class="login_label" for="Email">Email</label>
-                <input class="login_input" type="email" name="email" id="Email" placeholder="Ej: tunombre@email.com ">
+                <input class="login_input" type="text" name="email" id="Email" placeholder="Ej: tunombre@email.com " value="<%= locals.old && old.email ? old.email : null%>">
                 <% if (locals.errors && errors.email) { %>
                   <p class="login_errors">
-                    <%= errors.password.msg %> 
+                    <%= errors.email.msg %> 
                 </p>
                 <% } %>
             </div>
@@ -31,6 +31,10 @@
                     <%= errors.password.msg %> 
                 </p>
                 <% } %>
+            </div>
+            <div class="login_div">
+            <label class="login_label" for="recordarme">Recordarme</label>
+            <input  type="checkbox" id="recordarme" name="recordarme">
             </div>
             <div class="login_olvidaste-contra">
                 <p> ¿Olvidaste tu contraseña? </p>

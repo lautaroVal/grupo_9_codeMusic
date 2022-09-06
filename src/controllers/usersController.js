@@ -34,12 +34,15 @@ module.exports = {
                 maxAge : 1000 * 60
             })
         } */
-
-            return res.redirect('/')
+            return res.render('users/profile', {
+                title: 'Mi perfil'
+            }
+            )
         }else {
             return res.render('users/login',{
                 title: 'Login',
-                errors : errors.mapped()
+                errors : errors.mapped(),
+                old: req.body
             })
         }
     },
