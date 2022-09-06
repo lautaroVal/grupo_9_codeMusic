@@ -5,13 +5,14 @@ const { productDetail, productCart, productAdd, productEdit, productsList, produ
 
 const productAddValidator = require('../validations/productAddValidator');
 const uploadImges = require('../middlewares/uploadImg')
+const adminUserCheck = require('../middlewares/adminUserCheck');
 
 router
         /* Listado de productos */
         .get('/', productsList)
 
         /*Formulario de creación de productos  */
-        .get('/productAdd', productAdd)
+        .get('/productAdd',adminUserCheck, productAdd)
        
         /* Acción de creación (a donde se envía el formulario)*/
         .post('/productAdd', productAddValidator, productAddStore)
@@ -20,7 +21,7 @@ router
         .get('/productDetail/:id', productDetail)
 
         /* Formulario de edición de productos */
-        .get('/edit/:id', productEdit)
+        .get('/edit/:id',adminUserCheck, productEdit)
         /* Acción de edición (a donde se envía el formulario): */
         .put('/productEdit/:id', update)
 

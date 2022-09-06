@@ -11,12 +11,25 @@
             </a>
         </div>
         <div class="productDetail_header_top_icon">
+<<<<<<< HEAD
             <
             <a href="/products/productAdd" class="productDetail_header_top_add">Vender</a>
+=======
+            <% if (locals.userLogin) { %>
+                <ul>
+                    <% if (userLogin.category === "admin") { %>
+                        <a href="/products/productAdd" class="productDetail_header_top_li">Vender</a>
+                    <% } %>
+                <a href="/users/profile" class="productDetail_header_top_li">Mi perfil</a>
+                <a href="/users/logout" class="productDetail_header_top_li">Salir</a>
+                </ul>
+            <% }else{ %>
+>>>>>>> 59e903509bff2a8b51448ccecfeab17aa02fbb30
             <a href="/users/login" class="productDetail_header_top_icon_login"><i class="fa-solid fa-circle-user"></i></a>
             <a href="/products/productCart" class="productDetail_header_top_icon_cart">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
+            <% } %>
         </div>
     </section>
     

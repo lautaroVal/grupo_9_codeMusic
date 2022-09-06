@@ -1,23 +1,13 @@
 [
    {
-      "id": 1,
+      "id": 7,
       "firstName": "Lautaro",
       "lastName": "Valenzuela",
-      "email": "Lautaro@gmail.com",
-      "telephone": 12345679,
-      "password": "123456",
+      "email": "Lautaros@gmail.com",
+      "telephone": 1154659878,
+      "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
       "category": "admin",
-      "image": null
-   },
-   {
-      "id": 2,
-      "firstName": "Nahiara",
-      "lastName": "Belvedere",
-      "email": "Nahiara@gmail.com",
-      "telephone": 123457789,
-      "password": "12344567",
-      "category": "user",
-      "image": null
+      "image": "default-users-image.jpg"
    },
    {
       "id": 3,

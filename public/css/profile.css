@@ -11,3 +11,10 @@
 .profile_main_section img{
     width: 100px;
 }
+.profile_main_form{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--ColorNegro);
+    margin:0 auto;
+    gap: 20px 0;
+}
