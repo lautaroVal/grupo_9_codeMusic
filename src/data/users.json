@@ -68,5 +68,15 @@
       "password": "$2a$12$15KnR7ILAZxZfCE97lIhjOISRIy8omQNFEOZJHmhphzEBaoapriMe",
       "category": "user",
       "image": "default-users-image.jpg"
+   },
+   {
+      "id": 9,
+      "firstName": "nahiara",
+      "lastName": "salinas",
+      "email": "nahisalinas@gmail.com",
+      "telephone": 3837891983,
+      "password": "$2a$12$GevwkfYpTbPkUJ54pCktEuadg3hSERRIp3mEEgyJ0AqPMSgv21iPS",
+      "category": "admin",
+      "image": "default-users-image.jpg"
    }
 ]

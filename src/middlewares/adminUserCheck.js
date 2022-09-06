@@ -5,3 +5,11 @@ if(req.session.userLogin && req.session.userLogin.category === "admin"){
     res.redirect('/')
 }
 }
+
+module.exports = (req, res, next) =>{
+    if(req.session.userLogin && req.session.userLogin.category === "admin"){
+        next()
+    }else{
+        res.redirect('/')
+    }
+    }

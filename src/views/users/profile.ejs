@@ -12,14 +12,19 @@
         <hr>
         <img src="/img/users/default-users-image.jpg" width="200px" alt="usuario">
 
-        <form action="post">
+        <form action="" method="post">
           <div>
               <label for="nombre">Nombre</label>
-              <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre">
+              <input type="text" name="firstName" id="nombre" placeholder="Escribí tu nombre">
+              <% if (locals.errors && errors.firstName) { %>
+                <p>
+                  <%= errors.name.msg %> 
+              </p>
+              <% } %>
           </div>
           <div>
               <label for="apellido">Apellido</label>
-              <input type="text" name="apellido" id="nombre" placeholder="Escribí tu apellido">
+              <input type="text" name="lastName" id="nombre" placeholder="Escribí tu apellido">
           </div>
           <div>
               <label for="usuario">Nombre de usuario</label>
@@ -49,19 +54,19 @@
               <h5>Generos de música favoritos</h5>
               <hr>
               <div>
-                  <input value="musica" type="checkbox" id="musica" name="genero">
+                  <input value="musica" type="checkbox" id="musica" name="generomusic">
                   <label for="musica">Rock</label>
               </div>
               <div>
-                  <input value="musica" type="checkbox" id="musica" name="genero">
+                  <input value="musica" type="checkbox" id="musica" name="generomusic">
                   <label for="musica">Jazz</label>
               </div>
               <div>
-                  <input value="musica" type="checkbox" id="musica" name="genero">
+                  <input value="musica" type="checkbox" id="musica" name="generomusic">
                   <label for="musica">Musica Clasica</label>
               </div>
               <div>
-                <input value="musica" type="checkbox" id="musica" name="genero">
+                <input value="musica" type="checkbox" id="musica" name="generomusic">
                 <label for="musica">Pop</label>
             </div>
           </div>
@@ -99,12 +104,12 @@
               </div>
             <div>
                 <label for="calle">Calle y altura</label>
-                <input type="text" id="calle" placeholder="ej: Calle falsa 123">
+                <input type="text" name="domicilio" id="calle" placeholder="ej: Calle falsa 123">
             </div>
               <div>
             <div>
                 <label for="localidad">Localidad</label>
-                <input type="text" id="localidad" placeholder="ej: San miguel">
+                <input type="text" name="localidad" id="localidad" placeholder="ej: San miguel">
             </div>
           <div>
               <h5>Acerca de mí</h5>
