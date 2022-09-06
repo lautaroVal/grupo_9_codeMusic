@@ -7,7 +7,7 @@
             <main class="main_formulario">
                 <h4>Agrega un producto</h4>
 
-                <form class="main_formulario_contenedor" action="/products/productAdd" method="POST">
+                <form class="main_formulario_contenedor" action="/products/productAdd" method="POST" enctype="multipart/form-data">
 
                     <div>
                         <label for="Name">Nombre del producto</label>
@@ -100,7 +100,6 @@
                         </div>
 
                 </form>
-
             </main>
 
             <%- include('../partials/footer') %>

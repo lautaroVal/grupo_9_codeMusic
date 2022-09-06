@@ -45,19 +45,19 @@ module.exports = {
 	},
 
 	productAddStore: (req, res) => {
-		let errors = validationResult(req)
-		
-		if (!errors.isEmpty) {
+		let errors = validationResult(req);
+		if (errors.isEmpty()) {
 			const { name, price, discount, description, category, imageText, color, status } = req.body
 			const products = loadProducts();
+		/* 	let images = req.files.map(file => file.filename); */
 
 			const newProduct = {
 				id: (products[products.length - 1].id + 1),
-				name: name.trim(),
-				description: description.trim(),
+				name: name,
+				description: description,
 				price: +price,
 				discount: +discount,
-				image: imageText || 'guitarra_electrica_yamaha_pacifica_012_dark.jpg',
+				image: imageText || 'guitarra_electrica_yamaha_pacifica_012_dark.jpg' || images, 
 				color,
 				category,
 				status
