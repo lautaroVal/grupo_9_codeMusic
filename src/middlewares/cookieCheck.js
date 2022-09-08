@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
-    if(req.cookies.codeMusic){
-        req.session.userLogin = req.cookies.codeMusic
+    if(req.cookies.remember){
+        req.session.userLogin = req.cookies.remember;
     }
     next();
 }

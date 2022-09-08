@@ -409,46 +409,6 @@
       "category": "guitarras"
    },
    {
-      "id": 36,
-      "name": "",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
-   },
-   {
-      "id": 37,
-      "name": "",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
-   },
-   {
-      "id": 38,
-      "name": "k",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
-   },
-   {
-      "id": 39,
-      "name": "",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
-   },
-   {
       "id": 40,
       "name": "",
       "description": "",
@@ -467,61 +427,5 @@
       "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
       "color": "negro",
       "category": "guitarras"
-   },
-   {
-      "id": 42,
-<<<<<<< HEAD
-      "price": null,
-      "discount": null,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg"
-   },
-   {
-      "id": 43,
-      "price": null,
-      "discount": null,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg"
-=======
-      "name": "bateria",
-      "description": "la mejor bateria",
-      "price": 200000,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "rojo",
-      "category": "baterias",
-      "status": "no-oferta"
-   },
-   {
-      "id": 43,
-      "name": "microfono",
-      "description": "qweqwe",
-      "price": 123123,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "dorado",
-      "category": "microfonosYSonidos",
-      "status": "no-oferta"
-   },
-   {
-      "id": 44,
-      "name": "microfono",
-      "description": "asdasd",
-      "price": 123123,
-      "discount": 0,
-      "image": "Img-1662489560501.jpg",
-      "color": "dorado",
-      "category": "microfonosYSonidos",
-      "status": "no-oferta"
-   },
-   {
-      "id": 45,
-      "name": "bater",
-      "description": "123123",
-      "price": 123123123,
-      "discount": 0,
-      "image": "",
-      "color": "negro",
-      "category": "baterias",
-      "status": "no-oferta"
->>>>>>> a7389ab69815ad83c8cf7953cb401032990a03d8
    }
 ]

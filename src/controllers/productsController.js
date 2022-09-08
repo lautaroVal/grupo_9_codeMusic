@@ -45,15 +45,9 @@ module.exports = {
 	},
 
 	productAddStore: (req, res) => {
-<<<<<<< HEAD
-		let errors = validationResult(req);
-		if (errors.isEmpty()) {
-			const { name, price, discount, description, category, imageText, color, status } = req.body
-=======
 		let errors = validationResult(req)
 		if (errors.isEmpty()) {
 			const { name, price, discount, description, category, color, status } = req.body
->>>>>>> a7389ab69815ad83c8cf7953cb401032990a03d8
 			const products = loadProducts();
 		/* 	let images = req.files.map(file => file.filename); */
 
@@ -63,11 +57,7 @@ module.exports = {
 				description: description,
 				price: +price,
 				discount: +discount,
-<<<<<<< HEAD
-				image: imageText || 'guitarra_electrica_yamaha_pacifica_012_dark.jpg' || images, 
-=======
 				image: req.file ? req.file.filename : null,
->>>>>>> a7389ab69815ad83c8cf7953cb401032990a03d8
 				color,
 				category,
 				status

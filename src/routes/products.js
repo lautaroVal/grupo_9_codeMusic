@@ -15,11 +15,8 @@ router
         .get('/productAdd',adminUserCheck, productAdd)
        
         /* Acción de creación (a donde se envía el formulario)*/
-<<<<<<< HEAD
-        .post('/productAdd',/* uploadImages.single('imagen'), */ productAddValidator, productAddStore)
-=======
+
         .post('/productAdd',uploadImges.single('imagen'), productAddValidator, productAddStore)
->>>>>>> a7389ab69815ad83c8cf7953cb401032990a03d8
 
         /*Detalle de un producto particular*/
         .get('/productDetail/:id', productDetail)
