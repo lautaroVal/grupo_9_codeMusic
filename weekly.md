@@ -25,3 +25,12 @@
 ---
 
 ### SPRINT 5
+
+# Qué hizo ayer.
+### Se requirio la ayuda del profesor con los ultimos detalles ya que nos encontramos con inconvenientes para realizar la entrega del sprint 5.
+
+# Si se encontró con algún impedimento.
+### Nos encontramos con impedimentos al momento de implementar multer, eso demoro la entrega del sprint y tuvimos que recurrir a ayuda de un profesor para poder seguir avanzando.
+
+# Qué va a hacer hoy.
+### Terminar algunos detalles del sprint 5 y motivarnos con el siguiente sprint para no atrasarnos y poder entregar a tiempo.
