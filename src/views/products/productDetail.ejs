@@ -75,9 +75,14 @@
                 <div class="productDetail_main_section_top_derech_button">
                     <button type="button">Comprar</button>
                     <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
-                    <button type="button" id="edit_button"><a href="/products/edit/<%= productId.id%>">Editar</a></button>
-                    <form action="/products/delete/<%= productId.id %>?_method=DELETE" method="POST" >
-                        <button type="submit" style="cursor: pointer;" >Eliminar</button>
+                    <% if (locals.userLogin) { %>
+                       
+                            <% if (userLogin.category === "admin") { %>
+                            <button type="button" id="edit_button"><a href="/products/edit/<%= productId.id%>">Editar</a></button>
+                            <form action="/products/delete/<%= productId.id %>?_method=DELETE" method="POST" >
+                            <button type="submit" style="cursor: pointer;" >Eliminar</button>
+                             <% } %>
+                             <% } %>
                     </form>
 
                 </div>

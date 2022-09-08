@@ -83,5 +83,8 @@ module.exports = {
         req.session.destroy();
         return res.redirect('/');
     },
+    update: (req,res) => {
+/*         return res.send(req.body)
+ */    }
 }
 
