@@ -46,9 +46,8 @@ module.exports = {
 
 	productAddStore: (req, res) => {
 		let errors = validationResult(req)
-		
-		if (!errors.isEmpty) {
-			const { name, price, discount, description, category, imageText, color, status } = req.body
+		if (errors.isEmpty()) {
+			const { name, price, discount, description, category, color, status } = req.body
 			const products = loadProducts();
 
 			const newProduct = {
@@ -57,7 +56,7 @@ module.exports = {
 				description: description.trim(),
 				price: +price,
 				discount: +discount,
-				image: imageText || 'guitarra_electrica_yamaha_pacifica_012_dark.jpg',
+				image: req.file ? req.file.filename : null,
 				color,
 				category,
 				status

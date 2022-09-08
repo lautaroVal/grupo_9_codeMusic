@@ -9,7 +9,7 @@
             <% products.forEach(product => { %>
                  
                 <article class="index_product">
-                    <div class="index_product_img"><img src="<%= /http/.test(product.image) ? product.image : "/img/imgProducts/" + product.image %>" alt="product"></div>
+                    <div class="index_product_img"><img src="/img/imgProducts/<%=product.image ?  product.image: 'dp.jpg' %>" alt="product"></div>
                     <!-- <div class="index_product_img"><img src="/img/imgProducts/<%= product.image%>" alt="product"></div> -->
                     <hr>
                     <h3 class="index_product_title"><%= product.name %>  </h3>

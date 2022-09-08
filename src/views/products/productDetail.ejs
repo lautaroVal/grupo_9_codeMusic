@@ -76,23 +76,13 @@
                     <button type="button">Comprar</button>
                     <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
                     <% if (locals.userLogin) { %>
-                        <ul>
+                       
                             <% if (userLogin.category === "admin") { %>
-                    <button type="button" id="edit_button"><a href="/products/edit/<%= productId.id%>">Editar</a></button>
-                    <form action="/products/delete/<%= productId.id %>?_method=DELETE" method="POST" >
-                        <% } %>
-                                <% }else{ %>
-
-                                    <% } %>
-                    
-                        <% if (locals.userLogin) { %>
-                            <ul>
-                                <% if (userLogin.category === "admin") { %>
-                                    <button type="submit" style="cursor: pointer;" >Eliminar</button>
-                                <% } %>
-                                <% }else{ %>
-
-                                    <% } %>
+                            <button type="button" id="edit_button"><a href="/products/edit/<%= productId.id%>">Editar</a></button>
+                            <form action="/products/delete/<%= productId.id %>?_method=DELETE" method="POST" >
+                            <button type="submit" style="cursor: pointer;" >Eliminar</button>
+                             <% } %>
+                             <% } %>
                     </form>
 
                 </div>
