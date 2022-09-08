@@ -65,17 +65,17 @@ no avisar en los cambios generales*
 ## Retro Sprint 5
 
 ### Seguir Haciendo:
-*Seguir con la empatia entre compañeros*
+*Dividir las tareas para que sea mucho mas práctico.*
 
 ### Hacer Más:
-*Motivarnos entre nosotros*
+*Seguir motivandonos para poder terminar la cursada.*
 
 ### Empezar a Hacer:
-*Hacer los sprint con mas tiempo, organizarnos mejor,*
+*Realizar mas reuniones y ser mas puntuales con las entregas de los sprint.*
 
 ### Dejar De Hacer:
-*No dejar las tareas para otro dia, dejar de SUESTIMAR los sprint!!!...
-no avisar en los cambios generales*
+*Demorarnos con la entrega de los sprint.*
 
 ### Hacer Menos:
 *Entrar en detalles no tan importantes que nos atrase o perjudique*
+
