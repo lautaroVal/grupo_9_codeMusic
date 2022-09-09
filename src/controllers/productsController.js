@@ -88,7 +88,7 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
-		const { name, price, category, description, status, color, discount, imageText } = req.body;
+		const { name, price, category, description, status, color, discount,image } = req.body;
 
 
 		const producstModify = products.map(product => {
@@ -100,7 +100,7 @@ module.exports = {
 					price: +price,
 					category,
 					discount: +discount,
-					image: imageText || product.image || 'guitarra_electrica_yamaha_pacifica_012_dark.jpg',
+					image: product.image,
 					color,
 					status
 				}

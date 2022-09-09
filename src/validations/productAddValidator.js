@@ -7,7 +7,7 @@ module.exports = [
     .isLength({max: 80}).withMessage('Debe contener 60 caracteres como máximo.'),
     body('imagen')
     .custom((value,{req}) => {
-        if(req.files[0]){
+        if(req.file){
             return true
         }else {
             return false
