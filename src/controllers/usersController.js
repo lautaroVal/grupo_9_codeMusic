@@ -8,11 +8,11 @@ module.exports = {
             title: 'Register'
         })
     },
-    
+
     processRegister: (req, res) => {
         let errors = validationResult(req);
-        if(errors.isEmpty()){
-            const {firstName,lastName,email,telephone,password} = req.body;
+        if (errors.isEmpty()) {
+            const { firstName, lastName, email, telephone, password } = req.body;
             let users = loadUsers();
 
             let newUser = {
@@ -46,45 +46,48 @@ module.exports = {
         })
     },
 
-    processLogin : (req,res) => {
+    processLogin: (req, res) => {
         let errors = validationResult(req);
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
 
-        let {id,firstName,lastName, category, image} = loadUsers().find(user => user.email === req.body.email);
+            let { id, firstName, lastName, category, image, email} = loadUsers().find(user => user.email === req.body.email);
 
-        req.session.userLogin = {
-            id,
-            firstName,
-            lastName,
-            category,
-            image
-        };
+            req.session.userLogin = {
+                id,
+                firstName,
+                lastName,
+                category,
+                email,
+                image
+            };
 
-        if(req.body.remember) {
-            res.cookie('remember',req.session.userLogin,{
-                maxAge : 1000 * 60
-            })
-        };
-        
+            if (req.body.remember) {
+                res.cookie('remember', req.session.userLogin, {
+                    maxAge: 1000 * 60
+                })
+            };
+
             return res.redirect('/')
-        }else {
-            return res.render('users/login',{
+        } else {
+            return res.render('users/login', {
                 title: 'Login',
-                errors : errors.mapped()
+                errors: errors.mapped()
             })
         }
     },
     profile: (req, res) => {
+        const user = req.session.userLogin
         return res.render('users/profile', {
-            title: 'Perfil de usuario'
+            title: 'Perfil de usuario',
+            user
         })
     },
+    update: (req, res) => {
+/*         return res.send(req.body)
+ */    },
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
     },
-    update: (req,res) => {
-/*         return res.send(req.body)
- */    }
-}
 
+}

@@ -17,12 +17,12 @@
 
                             <div>
                                 <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre">
+                                <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre" value="<%= user.firstName %>">
                             </div>
 
                             <div>
                                 <label for="apellido">Apellido</label>
-                                <input type="text" name="apellido" id="nombre" placeholder="Escribí tu apellido">
+                                <input type="text" name="apellido" id="nombre" placeholder="Escribí tu apellido" value="<%= user.lastName %>">
                             </div>
 
                             <div>
@@ -34,7 +34,7 @@
                             <div>
                                 <label for="email">Correo electrónico</label>
                                 <input type="email" name="email" id="email" placeholder="Escribí tu correo electrónico"
-                                    disabled>
+                                value="<%= user.email %>" disabled >
                             </div>
 
                         </div>

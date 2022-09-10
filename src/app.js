@@ -3,10 +3,10 @@ const path = require('path');
 const port = 3049;
 const morgan = require('morgan'); /* hay que hacer npm i morgan para instalar las dependencias de morgan.. */
 const session = require('express-session');
-
+const cookieParse = require('cookie-parser')
 const localsUserCheck = require('./middlewares/localsUserCheck');
-/* const cookieCheck = require('./middlewares/cookieCheck');
- */
+const cookieCheck = require('./middlewares/cookieCheck');
+
 const methodOverride = require('method-override');
 
 const app = express();
@@ -19,6 +19,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 
+app.use(cookieParse());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
@@ -31,8 +32,9 @@ app.use(session({
   saveUninitialized: true
 }));
 
-/* app.use(cookieCheck);
- */app.use(localsUserCheck);
+app.use(cookieCheck);
+app.use(localsUserCheck);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

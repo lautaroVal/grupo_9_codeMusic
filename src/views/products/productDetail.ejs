@@ -33,7 +33,7 @@
 
                 <div>
                     <p class="productDetail_main_section_top_derech_price">$<%= toThousand( productId.price) %> </p>
-                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand(productId.price / 12) %>  sin interes</span>
+                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((productId.price / 12).toFixed(2)) %>  sin interes</span>
                     </p>
 
                 </div>
