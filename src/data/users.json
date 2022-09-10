@@ -6,8 +6,8 @@
       "email": "Lautaros@gmail.com",
       "telephone": 1154659878,
       "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
-      "category": "admin",
-      "image": "default-users-image.jpg"
+      "category": "Admin",
+      "avatar": "default-users-image.jpg"
    },
    {
       "id": 2,
@@ -16,8 +16,8 @@
       "email": "nahiarabelvedere@gmail.com",
       "telephone": 1123260927,
       "password": "$2a$12$15KnR7ILAZxZfCE97lIhjOISRIy8omQNFEOZJHmhphzEBaoapriMe",
-      "category": "admin",
-      "image": "default-users-image.jpg"
+      "category": "Admin",
+      "avatar": "default-users-image.jpg"
    },
    {
       "id": 3,
@@ -26,8 +26,8 @@
       "email": "cobra_mansilla1989@hotmail.com",
       "telephone": 123123123,
       "password": "$2a$12$83opvDwghebLgrQHbdDbjuQ9k3SnhPrp40eyZna/kwHL1L4vRhCyy",
-      "category": "admin",
-      "image": "default-users-image.jpg"
+      "category": "Admin",
+      "avatar": "default-users-image.jpg"
    },
    {
       "id": 4,
@@ -36,7 +36,7 @@
       "email": "nahisalinas@gmail.com",
       "telephone": 3837891983,
       "password": "$2a$12$GevwkfYpTbPkUJ54pCktEuadg3hSERRIp3mEEgyJ0AqPMSgv21iPS",
-      "category": "admin",
-      "image": "default-users-image.jpg"
+      "category": "Admin",
+      "avatar": "default-users-image.jpg"
    }
 ]

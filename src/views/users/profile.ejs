@@ -9,32 +9,50 @@
                 <section class="profile_main_section">
 
                     <h3>Mi perfil </h3>
-                    <hr>
-                    <img src="/img/users/default-users-image.jpg" alt="usuario">
+                    
+                    <img src="<%="/img/users/default-users-image.jpg"%>" alt="usuario" class="profile_img">
+                    <div class="profile_main_divAvatar">
+                        <label for="avatar" style="cursor:pointer;" class="profile_main_divAvatar_label">Cambiar imagen de perfil</label>
+                        <input hidden type="file" id="avatar" name="avatar">
+                    </div>
 
                     <form class="profile_main_form" action="/users/profile?_method=PUT" method="post" enctype="multipart/form-data">
                         <div class="profile_main_form_div1">
 
                             <div>
                                 <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre" value="<%= user.firstName %>">
+                                <input type="text" name="firstName" id="nombre" placeholder="Escribí tu nombre" class="profile_controls" value="<%= user.firstName %>">
                             </div>
 
                             <div>
                                 <label for="apellido">Apellido</label>
-                                <input type="text" name="apellido" id="nombre" placeholder="Escribí tu apellido" value="<%= user.lastName %>">
+                                <input type="text" name="lastName" id="nombre" placeholder="Escribí tu apellido" class="profile_controls" value="<%= user.lastName %>">
                             </div>
 
                             <div>
                                 <label for="usuario">Nombre de usuario</label>
-                                <input type="text" name="usuario" id="usuario"
-                                    placeholder="Escribí tu nombre de usuario">
+                                <input type="text" name="username" id="usuario"
+                                    placeholder="Escribí tu nombre de usuario" class="profile_controls">
                             </div>
 
                             <div>
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" name="email" id="email" placeholder="Escribí tu correo electrónico"
+                                <input type="email" name="email" id="email" placeholder="Escribí tu correo electrónico" class="profile_controls"
                                 value="<%= user.email %>" disabled >
+                            </div>
+                            <div >
+                                <label for="Telefono">Teléfono(opcional):</label>
+                                <input type="number" name="telephone" id="Telefono" placeholder="Ej: 1524647589" class="profile_controls" value="<%= user.telephone %>" >
+                                <% if (locals.errors && errors.telephone) { %>
+                                  <p class="register_errors">
+                                    <%= errors.telephone.msg %> 
+                                </p>
+                                <% } %>
+                            </div>
+                            <div>
+                                <label for="category">Categoría</label>
+                                <input type="text" name="category" id="category" placeholder="Escribí tu correo electrónico" class="profile_controls"
+                                value="<%= user.category %>" disabled >
                             </div>
 
                         </div>
@@ -44,39 +62,39 @@
                             <hr>
                             <div>
                                 <input value="f" type="radio" id="femenino" name="genero">
-                                <label>Femenino</label>
+                                <label for="femenino">Femenino</label>
                             </div>
 
                             <div>
                                 <input value="m" type="radio" id="masculino" name="genero">
-                                <label>Masculino</label>
+                                <label for="masculino">Masculino</label>
                             </div>
 
                             <div>
-                                <input value="n" type="radio" id="nobinario" name="genero">
-                                <label>No binario</label>
+                                <input value="o" type="radio" id="otro" name="genero">
+                                <label for="otro">Otro</label>
                             </div>
 
                         </div>
 
                         <div class="profile_main_form_div3">
-                            <h5>Generos de música favoritos</h5>
+                            <h5>Géneros de música favoritos</h5>
                             <hr>
                             <div>
-                                <input value="musica" type="checkbox" id="musica" name="genero">
-                                <label for="musica">Rock</label>
+                                <input value="Rock" type="checkbox" id="Rock" name="musicaFav">
+                                <label for="Rock">Rock</label>
                             </div>
                             <div>
-                                <input value="musica" type="checkbox" id="musica" name="genero">
-                                <label for="musica">Jazz</label>
+                                <input value="Jazz" type="checkbox" id="Jazz" name="musicaFav">
+                                <label for="Jazz">Jazz</label>
                             </div>
                             <div>
-                                <input value="musica" type="checkbox" id="musica" name="genero">
-                                <label for="musica">Musica Clasica</label>
+                                <input value="Clásica" type="checkbox" id="Clásica" name="musicaFav">
+                                <label for="Clásica">Música Clásica</label>
                             </div>
                             <div>
-                                <input value="musica" type="checkbox" id="musica" name="genero">
-                                <label for="musica">Pop</label>
+                                <input value="Pop" type="checkbox" id="Pop" name="musicaFav">
+                                <label for="Pop">Pop</label>
                             </div>
                         </div>
 
@@ -85,57 +103,53 @@
                             <hr>
                             <div>
                                 <label for="provincia">Selecciona tu provincia</label>
-                                <select name="provincia" id="provincia">
+                                <select name="provincia" id="provincia" class="profile_controls">
                                     <option value="" hidden selected>Selecciona tu provincia</option>
-                                    <option value="ciudad autónoma de buenos aires">Buenos Aires</option>
-                                    <option value="provincia de buenos aires">Corrientes</option>
-                                    <option value="provincia de buenos aires">Entre Rios</option>
-                                    <option value="provincia de buenos aires">Misiones</option>
-                                    <option value="provincia de buenos aires">Santa Fe</option>
-                                    <option value="provincia de buenos aires">Tucuman</option>
-                                    <option value="provincia de buenos aires">Mendoza</option>
-                                    <option value="provincia de buenos aires">Jujuy</option>
-                                    <option value="provincia de buenos aires">Catamarca</option>
-                                    <option value="provincia de buenos aires">Chaco</option>
-                                    <option value="provincia de buenos aires">La Rioja</option>
-                                    <option value="provincia de buenos aires">San Luis</option>
-                                    <option value="provincia de buenos aires">San Juan</option>
-                                    <option value="provincia de buenos aires">Cordoba</option>
-                                    <option value="provincia de buenos aires">Neuquen</option>
-                                    <option value="provincia de buenos aires">Chubut</option>
-                                    <option value="provincia de buenos aires">Tucuman</option>
-                                    <option value="provincia de buenos aires">Santa Cruz</option>
-                                    <option value="provincia de buenos aires">Tierra del Fuego</option>
-                                    <option value="provincia de buenos aires">Rio Negro</option>
-                                    <option value="provincia de buenos aires">Salta</option>
-                                    <option value="provincia de buenos aires">Santiago del Estero</option>
+                                    <option value="Buenos Aires">Buenos Aires</option>
+                                    <option value="Corrientes">Corrientes</option>
+                                    <option value="Entre Ríos">Entre Ríos</option>
+                                    <option value="Misiones">Misiones</option>
+                                    <option value="Santa Fé">Santa Fé</option>
+                                    <option value="Tucuman">Tucuman</option>
+                                    <option value="Mendoza">Mendoza</option>
+                                    <option value="Jujuy">Jujuy</option>
+                                    <option value="Catamarca">Catamarca</option>
+                                    <option value="Chaco">Chaco</option>
+                                    <option value="La Rioja">La Rioja</option>
+                                    <option value="San Luis">San Luis</option>
+                                    <option value="San Juan">San Juan</option>
+                                    <option value="Córdoba">Córdoba</option>
+                                    <option value="Neuquén">Neuquén</option>
+                                    <option value="Chubut">Chubut</option>
+                                    <option value="Tucumán">Tucumán</option>
+                                    <option value="Santa Cruz">Santa Cruz</option>
+                                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                                    <option value="Río Negro">Río Negro</option>
+                                    <option value="Salta">Salta</option>
+                                    <option value="Santiago del Estero">Santiago del Estero</option>
                                     <option value="provincia de buenos aires"></option>
                                 </select>
+                            </div>
+                            
+                            <div>
+                                <label for="localidad">Localidad</label>
+                                <input type="text" id="localidad" name="localidad" placeholder="Ej: San Miguel" class="profile_controls">
                             </div>
 
                             <div>
                                 <label for="calle">Calle y altura</label>
-                                <input type="text" id="calle" placeholder="ej: Calle falsa 123">
+                                <input type="text" id="calle" name="calle" placeholder="Ej: Calle 123" class="profile_controls">
                             </div>
 
                             <div>
-                                <label for="localidad">Localidad</label>
-                                <input type="text" id="localidad" placeholder="ej: San miguel">
+                                <label for="biografia">Acerca de mí</label>
+                                <textarea name="biografia" id="biografia" cols="30" rows="5" class="profile_controls_textarea"></textarea>
+
                             </div>
 
                             <div>
-                                <h5>Acerca de mí</h5>
-                                <textarea name="biografia" id="biografia" cols="30" rows="5"></textarea>
-
-                            </div>
-                            <div>
-                                <label for="avatar">Subir imagen de perfil</label>
-                                <input hidden type="file" id="avatar" name="avatar">
-                            </div>
-
-                            <div>
-                                <a href="">Cancelar</a>
-                                <button type="submit">Guardar cambios</button>
+                                <button type="button" class="profile_main_form_button"><a href="/">Cancelar</a></button>
+                                <button type="submit" class="profile_main_form_button" style="cursor:pointer ;">Guardar cambios</button>
                             </div>
                         </div>
                     </form>

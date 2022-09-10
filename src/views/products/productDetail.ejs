@@ -33,7 +33,7 @@
 
                 <div>
                     <p class="productDetail_main_section_top_derech_price">$<%= toThousand( productId.price) %> </p>
-                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((productId.price / 12).toFixed(2)) %>  sin interes</span>
+                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((productId.price / 12).toFixed(2)) %>  sin interés</span>
                     </p>
 
                 </div>
@@ -77,7 +77,7 @@
                     <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
                     <% if (locals.userLogin) { %>
                        
-                            <% if (userLogin.category === "admin") { %>
+                            <% if (userLogin.category === "Admin") { %>
                             <button type="button" id="edit_button"><a href="/products/edit/<%= productId.id%>">Editar</a></button>
                             <form action="/products/delete/<%= productId.id %>?_method=DELETE" method="POST" >
                             <button type="submit" style="cursor: pointer;" >Eliminar</button>

@@ -95,8 +95,8 @@ module.exports = {
 			if (product.id === +req.params.id) {
 				return {
 					...product,
-					name: name.trim(),
-					description: description.trim(),
+					name: name,
+					description: description,
 					price: +price,
 					category,
 					discount: +discount,

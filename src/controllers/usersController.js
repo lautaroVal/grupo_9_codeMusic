@@ -22,8 +22,8 @@ module.exports = {
                 email: email,
                 telephone: +telephone,
                 password: bcryptjs.hashSync(password, 12),
-                category: "user",
-                image: "default-users-image.jpg"
+                category: "User",
+                avatar: "default-users-image.jpg"
             }
 
             let usersModify = [...users, newUser];
@@ -50,19 +50,20 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-            let { id, firstName, lastName, category, image, email} = loadUsers().find(user => user.email === req.body.email);
+            let { id, firstName, lastName, email, telephone, category, avatar} = loadUsers().find(user => user.email === req.body.email);
 
             req.session.userLogin = {
                 id,
                 firstName,
                 lastName,
-                category,
                 email,
-                image
+                telephone,
+                category,
+                avatar
             };
 
             if (req.body.remember) {
-                res.cookie('remember', req.session.userLogin, {
+                res.cookie('codeMusic', req.session.userLogin, {
                     maxAge: 1000 * 60
                 })
             };
@@ -75,40 +76,50 @@ module.exports = {
             })
         }
     },
-    
+
     profile: (req, res) => {
-        const user = req.session.userLogin
+        let users = loadUsers();
+        const user = users.find(user => user.id === req.session.userLogin.id);
         return res.render('users/profile', {
             title: 'Perfil de usuario',
-            user
+            user,
         })
     },
     
     update: (req,res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            const {firstName,lastName,email,password,telephone, category, image} = req.body;
             let users = loadUsers();
+            const {avatar,firstName,lastName,userName,email,category,genero,password,telephone,musicaFav,provincia,localidad,calle,biografia } = req.body;
             
-            let newUser = {
-                id : users.length > 0 ? users[users.length - 1].id + 1 : 1,
+            const usersModify = users.map(user => {
+                if (user.id === +req.session.userLogin.id) {
+                    return {
+                ...user,
+                avatar : avatar,
                 firstName :firstName.trim(),
                 lastName : lastName.trim(),
+                userName : userName.trim(),
                 email : email.trim(),
-                password : bcryptjs.hashSync(password,12),
-                telephone : telephone.trim(),
-                category : 'admin',
-                image : image
+                category,
+                genero,
+                musicaFav,
+                provincia,
+                localidad : localidad.trim(),
+                calle : calle.trim(),
+                biografia : biografia.trim(),
+                password,
+                telephone : +telephone,
             }
-            
-            let usersModify = [...users, newUser];
-            
+        }
+        return user;
+    })   
             storeUsers(usersModify);
-            
             return res.redirect('/users/profile');
+
         }else{
-            return res.render('index',{
-                title: '',
+            return res.render('users/profile',{
+                title: 'Perfil de usuario',
                 errors : errors.mapped(),
                 old : req.body
             })
@@ -117,8 +128,9 @@ module.exports = {
     
     logout: (req, res) => {
         req.session.destroy();
+        res.cookie('codeMusic',null,{maxAge: -1});
         return res.redirect('/');
-    },
+    }
 }
 
 
