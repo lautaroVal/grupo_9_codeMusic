@@ -14,30 +14,21 @@
    },
    {
       "id": 2,
-      "name": "Batería Yamaha Stage de 5 piezas",
-      "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
       "image": "81WrWq-bKTL._AC_SX679_.jpg",
-      "category": "baterias",
       "colors": "Rojo arándano | Raven Black | Pure White",
-      "price": "409600",
+      "price": null,
       "decimals": 0,
-      "discount": " ",
-      "status": "oferta",
+      "discount": null,
       "coutas": 12
    },
    {
       "id": 3,
-      "name": "Teclado YAMAHA PSR453",
-      "description": "Elementos básicos para aprender a tocar, como el botón de acceso directo a la configuración de piano y la función “Yamaha Education Suite”, así como funciones que se utilizan durante las actuaciones en directo, como los botones de control de sintetizador para obtener un control en tiempo real de filtros, efectos, envolvente de sonido y. Se pueden agregar nuevos colores para los distintos estilos musicales mediante el uso de 150 patrones distintos y 40 arpegios. Estas sencillas prestaciones, junto con el acabado en negro mate del instrumento, han puesto este teclado en el punto de mira de los intérpretes.",
       "image": "340333000-1-300x300.jpg",
-      "category": "teclados",
       "colors": "Negro",
-      "price": 787640,
+      "price": null,
       "decimals": 0,
-      "discount": 0,
-      "status": "oferta",
-      "coutas": 12,
-      "color": "negro"
+      "discount": null,
+      "coutas": 12
    },
    {
       "id": 4,
@@ -120,14 +111,9 @@
    },
    {
       "id": 33,
-      "name": "Guitarra Ibanez Amh90 Artcore Expressionist Pr Blue Metallic",
-      "description": "Marca: Ibanez. Origen: Indonesia. Garantía: 6 meses. Especificaciones técnicas:Tipo de mango: AM Expressionist - 3 piezas Nato/MapleCuerpo: LindenTrastera: Ébano de MacassarTrastes: 22Puente: Gibraltar PerformerEspaciado de cuerdas: 10.5mmCordal: VT06Micrófonos: 2x Super 58 (alnico, pasivos)Calibre de cuerdas: .010/.013/.017/.030/.042/.052Cejilla: PlásticaColor de hardware: Dorado",
-      "price": 265200,
-      "discount": 0,
+      "price": null,
+      "discount": null,
       "image": "D_NQ_NP_2X_636157-MLA50024611111_052022-F(1).jpg",
-      "category": "guitarras",
-      "status": "oferta",
-      "color": "Azul",
       "cuotas": 12
    },
    {
@@ -366,13 +352,9 @@
    },
    {
       "id": 33,
-      "name": "",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
+      "price": null,
+      "discount": null,
+      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg"
    },
    {
       "id": 34,

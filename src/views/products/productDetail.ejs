@@ -22,18 +22,18 @@
             </aside>
 
             <article class="productDetail_main_section_top_centr">
-                <img src="<%= /http/.test(productId.image) ? productId.image : "/img/imgProducts/" + productId.image %>" alt="centro">
+                <img src="<%= /http/.test(product.image) ? product.image : "/img/imgProducts/" + product.image %>" alt="centro">
             </article>
 
             <aside class="productDetail_main_section_top_derech">
                 <div class="productDetail_main_section_top_derech_title">
-                    <h2><%= productId.name %> </h2>
-                    <h5> <%= productId.description %></h5>
+                    <h2><%= product.name %> </h2>
+                    <h5> <%= product.description %></h5>
                 </div>
 
                 <div>
-                    <p class="productDetail_main_section_top_derech_price">$<%= toThousand( productId.price) %> </p>
-                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((productId.price / 12).toFixed(2)) %>  sin interés</span>
+                    <p class="productDetail_main_section_top_derech_price">$<%= toThousand( product.price) %> </p>
+                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((product.price / 12).toFixed(2)) %>  sin interes</span>
                     </p>
 
                 </div>
@@ -78,8 +78,8 @@
                     <% if (locals.userLogin) { %>
                        
                             <% if (userLogin.category === "Admin") { %>
-                            <button type="button" id="edit_button"><a href="/products/edit/<%= productId.id%>">Editar</a></button>
-                            <form action="/products/delete/<%= productId.id %>?_method=DELETE" method="POST" >
+                            <button type="button" id="edit_button"><a href="/products/edit/<%= product.id%>">Editar</a></button>
+                            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
                             <button type="submit" style="cursor: pointer;" >Eliminar</button>
                              <% } %>
                              <% } %>

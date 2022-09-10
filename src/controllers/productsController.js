@@ -19,10 +19,10 @@ module.exports = {
 
 		const products = loadProducts();
 
-		const productId = products.find(product => product.id === +req.params.id);
+		const product = products.find(product => product.id === +req.params.id);
 		return res.render('products/productDetail', {
 			title: "Detalle de producto",
-			productId,
+			product,
 			toThousand
 		})
 	},
@@ -88,7 +88,7 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
-		const { name, price, category, description, status, color, discount,image } = req.body;
+		const { name, price, category, description, status, color, discount} = req.body;
 
 
 		const producstModify = products.map(product => {

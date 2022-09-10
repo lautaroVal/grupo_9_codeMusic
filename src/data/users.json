@@ -3,11 +3,12 @@
       "id": 1,
       "firstName": "Lautaro",
       "lastName": "Valenzuela",
-      "email": "Lautaros@gmail.com",
       "telephone": 1154659878,
-      "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
-      "category": "Admin",
-      "avatar": "default-users-image.jpg"
+      "username": "Lautaro33",
+      "provincia": "",
+      "localidad": "",
+      "calle": "",
+      "biografia": ""
    },
    {
       "id": 2,
@@ -23,11 +24,13 @@
       "id": 3,
       "firstName": "marcos",
       "lastName": "Mansilla",
-      "email": "cobra_mansilla1989@hotmail.com",
+      "email": "marcos@gmail.com",
       "telephone": 123123123,
-      "password": "$2a$12$83opvDwghebLgrQHbdDbjuQ9k3SnhPrp40eyZna/kwHL1L4vRhCyy",
-      "category": "Admin",
-      "avatar": "default-users-image.jpg"
+      "username": "Mark",
+      "provincia": "",
+      "localidad": "",
+      "calle": "",
+      "biografia": ""
    },
    {
       "id": 4,
@@ -38,5 +41,34 @@
       "password": "$2a$12$GevwkfYpTbPkUJ54pCktEuadg3hSERRIp3mEEgyJ0AqPMSgv21iPS",
       "category": "Admin",
       "avatar": "default-users-image.jpg"
+   },
+   {
+      "id": 5,
+      "firstName": "Lautaro",
+      "lastName": "Valenzuela",
+      "username": "JUANCHO",
+      "provincia": "Tucuman",
+      "localidad": "San Miguel",
+      "calle": "123",
+      "musicaFav": "Clásica",
+      "genero": "m",
+      "telephone": 1151753300,
+      "biografia": "tutututututu"
+   },
+   {
+      "id": 6,
+      "firstName": "Joaqui",
+      "lastName": "Gonzalez",
+      "email": "Joaquing@gmail.com",
+      "username": "joachon",
+      "provincia": "",
+      "localidad": "Devoto",
+      "calle": "",
+      "telephone": 1151753454,
+      "password": "$2a$12$gCT2JDO1mhm8b0MDLgRfIOdPgROU8mjc2PLsw4Ul8u3JCZKqSXM/e",
+      "avatar": [
+         "default-users-image.jpg"
+      ],
+      "biografia": ""
    }
 ]

@@ -10,18 +10,19 @@
 
                     <h3>Mi perfil </h3>
                     
-                    <img src="<%="/img/users/default-users-image.jpg"%>" alt="usuario" class="profile_img">
-                    <div class="profile_main_divAvatar">
-                        <label for="avatar" style="cursor:pointer;" class="profile_main_divAvatar_label">Cambiar imagen de perfil</label>
-                        <input hidden type="file" id="avatar" name="avatar">
-                    </div>
-
+                    
                     <form class="profile_main_form" action="/users/profile?_method=PUT" method="post" enctype="multipart/form-data">
+                        <img src="<%="/img/users/default-users-image.jpg"%>" alt="usuario" class="profile_img">
+                        <div class="profile_main_divAvatar">
+                            <label for="avatar" style="cursor:pointer;" class="profile_main_divAvatar_label">Cambiar imagen de perfil</label>
+                            <input hidden type="file" id="avatar" name="avatar" >
+                        </div>
                         <div class="profile_main_form_div1">
 
                             <div>
                                 <label for="nombre">Nombre</label>
                                 <input type="text" name="firstName" id="nombre" placeholder="Escribí tu nombre" class="profile_controls" value="<%= user.firstName %>">
+                                <p class="text-danger"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></p>
                             </div>
 
                             <div>
@@ -32,7 +33,8 @@
                             <div>
                                 <label for="usuario">Nombre de usuario</label>
                                 <input type="text" name="username" id="usuario"
-                                    placeholder="Escribí tu nombre de usuario" class="profile_controls">
+                                    placeholder="Escribí tu nombre de usuario" class="profile_controls" value="<%= user.username ? user.username : null %>">
+                                    <p class="text-danger"><%= locals.errors && errors.username ? errors.username.msg : null %></p>
                             </div>
 
                             <div>
