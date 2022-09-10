@@ -400,32 +400,24 @@
    },
    {
       "id": 35,
-      "name": "",
-      "description": "",
-      "price": 0,
+      "name": "microfono",
+      "description": "123asd",
+      "price": 123123,
       "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
+      "image": "Img-1662748204107.jpg",
+      "color": "dorado",
+      "category": "microfonosYSonidos",
+      "status": "no-oferta"
    },
    {
-      "id": 40,
-      "name": "",
-      "description": "",
-      "price": 0,
+      "id": 36,
+      "name": "microfono2",
+      "description": "321321",
+      "price": 321321,
       "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
-   },
-   {
-      "id": 41,
-      "name": "123",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
+      "image": "Img-1662748495883.jpg",
+      "color": "dorado",
+      "category": "microfonosYSonidos",
+      "status": "no-oferta"
    }
 ]

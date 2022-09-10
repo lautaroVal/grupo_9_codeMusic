@@ -75,6 +75,7 @@ module.exports = {
             })
         }
     },
+    
     profile: (req, res) => {
         const user = req.session.userLogin
         return res.render('users/profile', {
@@ -82,12 +83,42 @@ module.exports = {
             user
         })
     },
-    update: (req, res) => {
-/*         return res.send(req.body)
- */    },
+    
+    update: (req,res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const {firstName,lastName,email,password,telephone, category, image} = req.body;
+            let users = loadUsers();
+            
+            let newUser = {
+                id : users.length > 0 ? users[users.length - 1].id + 1 : 1,
+                firstName :firstName.trim(),
+                lastName : lastName.trim(),
+                email : email.trim(),
+                password : bcryptjs.hashSync(password,12),
+                telephone : telephone.trim(),
+                category : 'admin',
+                image : image
+            }
+            
+            let usersModify = [...users, newUser];
+            
+            storeUsers(usersModify);
+            
+            return res.redirect('/users/profile');
+        }else{
+            return res.render('index',{
+                title: '',
+                errors : errors.mapped(),
+                old : req.body
+            })
+        }
+    },
+    
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
     },
-
 }
+
+
