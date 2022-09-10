@@ -14,20 +14,28 @@
    },
    {
       "id": 2,
+      "name": "Batería Yamaha Stage de 5 piezas",
+      "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
       "image": "81WrWq-bKTL._AC_SX679_.jpg",
+      "category": "baterias",
       "colors": "Rojo arándano | Raven Black | Pure White",
-      "price": null,
+      "price": "409600",
       "decimals": 0,
-      "discount": null,
+      "discount": " ",
+      "status": "oferta",
       "coutas": 12
    },
    {
       "id": 3,
+      "name": "Teclado YAMAHA PSR453",
+      "description": "Elementos básicos para aprender a tocar, como el botón de acceso directo a la configuración de piano y la función “Yamaha Education Suite”, así como funciones que se utilizan durante las actuaciones en directo, como los botones de control de sintetizador para obtener un control en tiempo real de filtros, efectos, envolvente de sonido y. Se pueden agregar nuevos colores para los distintos estilos musicales mediante el uso de 150 patrones distintos y 40 arpegios. Estas sencillas prestaciones, junto con el acabado en negro mate del instrumento, han puesto este teclado en el punto de mira de los intérpretes.",
       "image": "340333000-1-300x300.jpg",
+      "category": "teclados",
       "colors": "Negro",
-      "price": null,
+      "price": "78764",
       "decimals": 0,
       "discount": null,
+      "status": "oferta",
       "coutas": 12
    },
    {
