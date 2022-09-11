@@ -55,12 +55,14 @@ module.exports = {
 				id: (products[products.length - 1].id + 1),
 				name: name,
 				description: description,
-				price: +price,
-				discount: +discount,
 				image: req.file ? req.file.filename : null,
-				color,
 				category,
-				status
+				color,
+				price: +price,
+				decimals: null,
+				discount: +discount,
+				status,
+				cuotas: 12
 			}
 
 			const productsModify = [...products, newProduct];
@@ -88,6 +90,7 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
+		return res.send(req.body)
 		const { name, price, category, description, status, color, discount} = req.body;
 
 

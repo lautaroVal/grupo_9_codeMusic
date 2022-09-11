@@ -5,7 +5,7 @@
     <body class="editAdd">
         <%- include('../partials/header') %>
             <main class="main_formulario">
-                <h4>Editar producto <%= product.name %>
+                <h4>Editar producto: <%= product.name %>
                 </h4>
 
                 <form class="main_formulario_contenedor" action="/products/productEdit/<%= product.id %>?_method=PUT"
@@ -57,11 +57,18 @@
                     <div>
                         <label for="color" class="form-label">Elige un color:</label>
                         <select name="color" id="color">
+
                             <option value="negro" <%=product.color==="negro" && "selected" %>>Negro</option>
                             <option value="blanco" <%=product.color==="blanco" && "selected" %>>Blanco</option>
                             <option value="rojo" <%=product.color==="rojo" && "selected" %>>Rojo</option>
                             <option value="dorado" <%=product.color==="dorado" && "selected" %>>Dorado</option>
                             <option value="plateado" <%=product.color==="plateado" && "selected" %>>Plateado</option>
+                            <option value="marron" <%=product.color==="marron" && "selected" %>>Marrón</option>
+                            <option value="azul" <%=product.color==="azul" && "selected" %>>Azul</option>
+                            <option value="amarillo" <%=product.color==="amarillo" && "selected" %>>Amarillo</option>
+                            <option value="verde" <%=product.color==="verde" && "selected" %>>Verde</option>
+                            <option value="naranja" <%=product.color==="naranja" && "selected" %>>Naranja</option>
+                            <option value="violeta" <%=product.color==="violeta" && "selected" %>>Violeta</option>
                         </select>
                     </div>
 
