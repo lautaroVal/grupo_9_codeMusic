@@ -90,8 +90,8 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
-		return res.send(req.body)
-		const { name, price, category, description, status, color, discount} = req.body;
+		/* return res.send(req.body) */
+		const { name, description, category, color, price, discount, status} = req.body;
 
 
 		const producstModify = products.map(product => {
@@ -100,11 +100,11 @@ module.exports = {
 					...product,
 					name: name,
 					description: description,
-					price: +price,
+					image: req.file ? req.file.filename : product.image,
 					category,
-					discount: +discount,
-					image: product.image,
 					color,
+					price: +price,
+					discount: +discount,
 					status
 				}
 			}

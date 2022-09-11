@@ -29,17 +29,6 @@
                     </div>
 
                     <div>
-                        <label for="imagen">Imagen de producto</label>
-                        <input type="text" name="imageText" id="imagen"><br><br>
-                    </div>
-
-                    <div>
-                        <label for="precio">Precio</label>
-                        <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000"
-                            value="<%= product.price %>">
-                    </div>
-
-                    <div>
                         <label for="category" class="form-label">Elige una categoria:</label>
                         <select name="category" id="category">
                             <option value="guitarras" <%=product.category==="guitarras" && "selected" %>>Guitarras
@@ -71,6 +60,13 @@
                             <option value="violeta" <%=product.color==="violeta" && "selected" %>>Violeta</option>
                         </select>
                     </div>
+                    
+                    <div>
+                        <label for="precio">Precio</label>
+                        <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000"
+                            value="<%= product.price %>">
+                    </div>
+
 
                     <div>
                         <label for="estado">Oferta:</label>
