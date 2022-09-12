@@ -86,19 +86,19 @@
                             <h5>Géneros de música favoritos</h5>
                             <hr>
                             <div>
-                                <input value="Rock" type="checkbox" id="Rock" name="musicaFav" <%=user.musicaFav.includes("Rock") && "checked" %>>
+                                <input value="Rock" type="checkbox" id="Rock" name="musicaFav" <%= user.musicaFav.includes("Rock") && "checked" %>>
                                 <label for="Rock">Rock</label>                            
                             </div>
                             <div>
-                                <input value="Jazz" type="checkbox" id="Jazz" name="musicaFav" <%=user.musicaFav.includes("Jazz") && "checked" %>>
+                                <input value="Jazz" type="checkbox" id="Jazz" name="musicaFav" <%= user.musicaFav.includes("Jazz") && "checked" %>>
                                 <label for="Jazz">Jazz</label>
                             </div>
                             <div>
-                                <input value="Clásica" type="checkbox" id="Clásica" name="musicaFav" <%=user.musicaFav.includes("Clásica") && "checked" %>>
+                                <input value="Clásica" type="checkbox" id="Clásica" name="musicaFav" <%= user.musicaFav.includes("Clásica") && "checked" %>>
                                 <label for="Clásica">Música Clásica</label>
                             </div>
                             <div>
-                                <input value="Pop" type="checkbox" id="Pop" name="musicaFav" <%=user.musicaFav.includes("Pop") && "checked" %>>
+                                <input value="Pop" type="checkbox" id="Pop" name="musicaFav" <%= user.musicaFav.includes("Pop") && "checked" %>>
                                 <label for="Pop">Pop</label>
                             </div>
                         </div>
