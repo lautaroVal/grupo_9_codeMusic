@@ -400,5 +400,18 @@
       "status": "no-oferta",
       "coutas": 12,
       "color": "negro"
+   },
+   {
+      "id": 30,
+      "name": "microfono",
+      "description": "asdasadasd",
+      "image": "Img-1663006720912.jpg",
+      "category": "microfonosYSonidos",
+      "color": "plateado",
+      "price": 123123,
+      "decimals": null,
+      "discount": null,
+      "status": "oferta",
+      "cuotas": 12
    }
 ]

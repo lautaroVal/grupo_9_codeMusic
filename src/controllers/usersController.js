@@ -84,6 +84,7 @@ module.exports = {
         }
     },
 
+    
     profile: (req, res) => {
         let users = loadUsers();
         const user = users.find(user => user.id === req.session.userLogin.id);
