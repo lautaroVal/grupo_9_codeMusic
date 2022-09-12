@@ -57,7 +57,7 @@
       "lastName": "Vucetich",
       "email": "Joaquing@gmail.com",
       "username": "joachon",
-      "provincia": "Tucumán",
+      "provincia": "Tucuman",
       "localidad": "San Miguel",
       "calle": "123",
       "telephone": 1151754566,
@@ -68,6 +68,8 @@
       "genero": "otro",
       "musicaFav": [
          "Rock",
+         "Jazz",
+         "Clásica",
          "Pop"
       ]
    },
