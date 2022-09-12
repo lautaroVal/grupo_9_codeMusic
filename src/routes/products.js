@@ -16,7 +16,7 @@ router
        
         /* Acción de creación (a donde se envía el formulario)*/
 
-        .post('/productAdd',uploadImges.single('imagen'), productAddValidator, productAddStore)
+        .post('/productAdd',uploadImges.single('image'), productAddValidator, productAddStore)
 
         /*Detalle de un producto particular*/
         .get('/productDetail/:id', productDetail)
@@ -24,7 +24,7 @@ router
         /* Formulario de edición de productos */
         .get('/edit/:id',adminUserCheck, productEdit)
         /* Acción de edición (a donde se envía el formulario): */
-        .put('/productEdit/:id', update)
+        .put('/productEdit/:id', uploadImges.single('image'), update)
 
         /* Acción de borrado */
         .delete('/delete/:id', destroy)

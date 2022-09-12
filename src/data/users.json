@@ -4,10 +4,20 @@
       "firstName": "Lautaro",
       "lastName": "Valenzuela",
       "email": "Lautaros@gmail.com",
-      "telephone": 1154659878,
-      "password": "$2a$12$ixml/C65wa6ZXwXTFLZ4Mu9Gh/HzX1URPhCqiIxVBMX4WIsT0hByy",
+      "username": "lauti",
+      "provincia": "Buenos Aires",
+      "localidad": "San Miguel",
+      "calle": "La Juana",
+      "musicaFav": [
+         "Clásica",
+         "Pop"
+      ],
+      "genero": "masculino",
+      "telephone": 1151753300,
+      "password": "$2a$12$SwOa6U/Kl4dngzvraFYFE.X7rp0rqd9rwFj3Ly3Tfe18t5zOd/8ji",
       "category": "Admin",
-      "avatar": "default-users-image.jpg"
+      "avatar": "Img-1662863297885.jpg",
+      "biografia": "Soy estudiante de programación :)"
    },
    {
       "id": 2,
@@ -23,11 +33,13 @@
       "id": 3,
       "firstName": "marcos",
       "lastName": "Mansilla",
-      "email": "cobra_mansilla1989@hotmail.com",
+      "email": "marcos@gmail.com",
       "telephone": 123123123,
-      "password": "$2a$12$83opvDwghebLgrQHbdDbjuQ9k3SnhPrp40eyZna/kwHL1L4vRhCyy",
-      "category": "Admin",
-      "avatar": "default-users-image.jpg"
+      "username": "Mark",
+      "provincia": "",
+      "localidad": "",
+      "calle": "",
+      "biografia": ""
    },
    {
       "id": 4,
@@ -38,5 +50,44 @@
       "password": "$2a$12$GevwkfYpTbPkUJ54pCktEuadg3hSERRIp3mEEgyJ0AqPMSgv21iPS",
       "category": "Admin",
       "avatar": "default-users-image.jpg"
+   },
+   {
+      "id": 5,
+      "firstName": "Joaquin",
+      "lastName": "Vucetich",
+      "email": "Joaquing@gmail.com",
+      "username": "joachon",
+      "provincia": "Tucumán",
+      "localidad": "San Miguel",
+      "calle": "123",
+      "telephone": 1151754566,
+      "password": "$2a$12$gCT2JDO1mhm8b0MDLgRfIOdPgROU8mjc2PLsw4Ul8u3JCZKqSXM/e",
+      "category": "User",
+      "avatar": "Img-1662862707980.jpg",
+      "biografia": "Hola soy el joachon",
+      "genero": "otro",
+      "musicaFav": [
+         "Rock",
+         "Jazz",
+         "Clásica",
+         "Pop"
+      ]
+   },
+   {
+      "id": 6,
+      "firstName": "Emanuel",
+      "lastName": "Arroyo",
+      "email": "emaA@gmail.com",
+      "username": "Ema",
+      "provincia": "Buenos Aires",
+      "localidad": "",
+      "calle": "",
+      "musicaFav": "Rock",
+      "genero": "masculino",
+      "biografia": "",
+      "telephone": 1154659878,
+      "password": "$2a$12$e8dtcTq4KuXWVEe4jBVVmu/hWlQmM78q3hlL6pyAKV3V8Yi55FmT2",
+      "category": "Admin",
+      "avatar": "Img-1662864085586.png"
    }
 ]

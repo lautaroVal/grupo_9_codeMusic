@@ -19,10 +19,10 @@ module.exports = {
 
 		const products = loadProducts();
 
-		const productId = products.find(product => product.id === +req.params.id);
+		const product = products.find(product => product.id === +req.params.id);
 		return res.render('products/productDetail', {
 			title: "Detalle de producto",
-			productId,
+			product,
 			toThousand
 		})
 	},
@@ -55,12 +55,14 @@ module.exports = {
 				id: (products[products.length - 1].id + 1),
 				name: name,
 				description: description,
-				price: +price,
-				discount: +discount,
 				image: req.file ? req.file.filename : null,
-				color,
 				category,
-				status
+				color,
+				price: +price,
+				decimals: null,
+				discount: +discount,
+				status,
+				cuotas: 12
 			}
 
 			const productsModify = [...products, newProduct];
@@ -88,7 +90,8 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
-		const { name, price, category, description, status, color, discount,image } = req.body;
+		/* return res.send(req.body) */
+		const { name, description, category, color, price, discount, status} = req.body;
 
 
 		const producstModify = products.map(product => {
@@ -97,11 +100,13 @@ module.exports = {
 					...product,
 					name: name,
 					description: description,
-					price: +price,
+					image: req.file ? req.file.filename : product.image,
 					category,
 					discount: +discount,
 					image: image,
 					color,
+					price: +price,
+					discount: +discount,
 					status
 				}
 			}

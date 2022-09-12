@@ -7,6 +7,8 @@ module.exports = [
     .notEmpty().withMessage("Debe ingresar un nombre.").bail(),
     body('lastName')
     .notEmpty().withMessage("Debe ingresar un apellido.").bail(),
+    body('username')
+    .notEmpty().withMessage("Debe ingresar un nombre de usuario.").bail(),
     body('genero')
     .notEmpty().withMessage("Debe seleccionar un genero").bail(),
     body('generomusic')

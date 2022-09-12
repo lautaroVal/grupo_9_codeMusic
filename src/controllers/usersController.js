@@ -20,6 +20,13 @@ module.exports = {
                 firstName: firstName,
                 lastName: lastName,
                 email: email,
+                username: "",
+                provincia: "",
+                localidad: "",
+                calle: "",
+                musicaFav: "",
+                genero: "",
+                biografia: "",
                 telephone: +telephone,
                 password: bcryptjs.hashSync(password, 12),
                 category: "User",
@@ -64,7 +71,7 @@ module.exports = {
 
             if (req.body.remember) {
                 res.cookie('codeMusic', req.session.userLogin, {
-                    maxAge: 1000 * 60
+                    maxAge: 1000 * 60 * 60
                 })
             };
 
@@ -87,41 +94,60 @@ module.exports = {
     },
     
     update: (req,res) => {
+      
+       /*  return res.send(req.body); */
         let errors = validationResult(req);
         if(errors.isEmpty()){
             let users = loadUsers();
-            const {avatar,firstName,lastName,userName,email,category,genero,password,telephone,musicaFav,provincia,localidad,calle,biografia } = req.body;
+            const {avatar,firstName,lastName,username,genero,telephone,musicaFav,provincia,localidad,calle,biografia } = req.body;
+            let image = req.files.map((file) => file.filename);
             
             const usersModify = users.map(user => {
                 if (user.id === +req.session.userLogin.id) {
                     return {
                 ...user,
-                avatar : avatar,
-                firstName :firstName.trim(),
-                lastName : lastName.trim(),
-                userName : userName.trim(),
-                email : email.trim(),
-                category,
+                avatar : image.length === 0 ? user.avatar : image[0],
+                firstName :firstName?.trim(),
+                lastName : lastName?.trim(),
+                username : username.trim(),
+                category: user.category,
                 genero,
+                email: user.email,
                 musicaFav,
                 provincia,
                 localidad : localidad.trim(),
                 calle : calle.trim(),
                 biografia : biografia.trim(),
-                password,
                 telephone : +telephone,
             }
         }
         return user;
     })   
+            /* return res.send(usersModify); */
+            req.session.userLogin = {
+                id: req.session.userLogin.id,
+                firstName: usersModify.firstName,
+                lastName: usersModify.lastName,
+                telephone,
+                avatar
+            };
+            if (req.body.remember) {
+                res.cookie('codeMusic', req.session.userLogin, {
+                    maxAge: 1000 * 60 * 60
+                })
+            };
+
             storeUsers(usersModify);
-            return res.redirect('/users/profile');
+            return res.redirect('/');
 
         }else{
+            let users = loadUsers();
+            const user = users.find(user => user.id === req.session.userLogin.id);
             return res.render('users/profile',{
                 title: 'Perfil de usuario',
                 errors : errors.mapped(),
-                old : req.body
+                old : req.body,
+                user
             })
         }
     },
