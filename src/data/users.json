@@ -68,11 +68,15 @@
       "email": "emaA@gmail.com",
       "username": "Ema",
       "provincia": "Buenos Aires",
-      "localidad": "",
+      "localidad": "Jose c paz",
       "calle": "",
-      "musicaFav": "Rock",
+      "musicaFav": [
+         "Rock",
+         "Jazz",
+         "Clásica"
+      ],
       "genero": "masculino",
-      "biografia": "",
+      "biografia": "12313123123",
       "telephone": 1154659878,
       "password": "$2a$12$e8dtcTq4KuXWVEe4jBVVmu/hWlQmM78q3hlL6pyAKV3V8Yi55FmT2",
       "category": "Admin",
