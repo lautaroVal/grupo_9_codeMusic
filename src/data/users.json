@@ -64,12 +64,10 @@
       "password": "$2a$12$gCT2JDO1mhm8b0MDLgRfIOdPgROU8mjc2PLsw4Ul8u3JCZKqSXM/e",
       "category": "User",
       "avatar": "Img-1662862707980.jpg",
-      "biografia": "Hola soy el joachon",
+      "biografia": "Hola soy el joachon xDxdD",
       "genero": "otro",
       "musicaFav": [
          "Rock",
-         "Jazz",
-         "Clásica",
          "Pop"
       ]
    },
@@ -92,6 +90,6 @@
       "telephone": 1154659878,
       "password": "$2a$12$e8dtcTq4KuXWVEe4jBVVmu/hWlQmM78q3hlL6pyAKV3V8Yi55FmT2",
       "category": "Admin",
-      "avatar": "Img-1663007738724.jpg"
+      "avatar": "Img-1663007944800.png"
    }
 ]
