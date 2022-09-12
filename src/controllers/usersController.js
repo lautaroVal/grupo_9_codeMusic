@@ -14,7 +14,6 @@ module.exports = {
         if (errors.isEmpty()) {
             const { firstName, lastName, email, telephone, password } = req.body;
             let users = loadUsers();
-
             let newUser = {
                 id: users.length > 0 ? users[users.length - 1].id + 1 : 1,
                 firstName: firstName,
@@ -32,11 +31,8 @@ module.exports = {
                 category: "User",
                 avatar: "default-users-image.jpg"
             }
-
             let usersModify = [...users, newUser];
-
             storeUsers(usersModify);
-
             return res.redirect('/users/login');
         } else {
             return res.render('users/register', {
@@ -84,7 +80,6 @@ module.exports = {
         }
     },
 
-    
     profile: (req, res) => {
         let users = loadUsers();
         const user = users.find(user => user.id === req.session.userLogin.id);
@@ -96,62 +91,62 @@ module.exports = {
     
     update: (req,res) => {
       
-       /*  return res.send(req.body); */
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-            let users = loadUsers();
-            const {avatar,firstName,lastName,username,genero,telephone,musicaFav,provincia,localidad,calle,biografia } = req.body;
-            let image = req.files.map((file) => file.filename);
-            
-            const usersModify = users.map(user => {
-                if (user.id === +req.session.userLogin.id) {
-                    return {
-                ...user,
-                avatar : image.length === 0 ? user.avatar : image[0],
-                firstName :firstName?.trim(),
-                lastName : lastName?.trim(),
-                username : username.trim(),
-                category: user.category,
-                genero,
-                email: user.email,
-                musicaFav,
-                provincia,
-                localidad : localidad.trim(),
-                calle : calle.trim(),
-                biografia : biografia.trim(),
-                telephone : +telephone,
-            }
-        }
-        return user;
-    })   
-            /* return res.send(usersModify); */
-            req.session.userLogin = {
-                id: req.session.userLogin.id,
-                firstName: usersModify.firstName,
-                lastName: usersModify.lastName,
-                telephone,
-                avatar
-            };
-            if (req.body.remember) {
-                res.cookie('codeMusic', req.session.userLogin, {
-                    maxAge: 1000 * 60 * 60
-                })
-            };
-
-            storeUsers(usersModify);
-            return res.redirect('/');
-
-        }else{
-            let users = loadUsers();
-            const user = users.find(user => user.id === req.session.userLogin.id);
-            return res.render('users/profile',{
-                title: 'Perfil de usuario',
-                errors : errors.mapped(),
-                old : req.body,
-                user
-            })
-        }
-    },
+        /*  return res.send(req.body); */
+         let errors = validationResult(req);
+         if(errors.isEmpty()){
+             let users = loadUsers();
+             const {avatar,firstName,lastName,username,genero,telephone,musicaFav,provincia,localidad,calle,biografia } = req.body;
+             let image = req.files.map((file) => file.filename);
+             
+             const usersModify = users.map(user => {
+                 if (user.id === +req.session.userLogin.id) {
+                     return {
+                 ...user,
+                 avatar : image.length === 0 ? user.avatar : image[0],
+                 firstName :firstName?.trim(),
+                 lastName : lastName?.trim(),
+                 username : username.trim(),
+                 category: user.category,
+                 genero,
+                 email: user.email,
+                 musicaFav,
+                 provincia,
+                 localidad : localidad.trim(),
+                 calle : calle.trim(),
+                 biografia : biografia.trim(),
+                 telephone : +telephone,
+             }
+         }
+         return user;
+     })   
+             /* return res.send(usersModify); */
+             req.session.userLogin = {
+                 id: req.session.userLogin.id,
+                 firstName: usersModify.firstName,
+                 lastName: usersModify.lastName,
+                 telephone,
+                 avatar
+             };
+             if (req.body.remember) {
+                 res.cookie('codeMusic', req.session.userLogin, {
+                     maxAge: 1000 * 60 * 60
+                 })
+             };
+ 
+             storeUsers(usersModify);
+             return res.redirect('/');
+ 
+         }else{
+             let users = loadUsers();
+             const user = users.find(user => user.id === req.session.userLogin.id);
+             return res.render('users/profile',{
+                 title: 'Perfil de usuario',
+                 errors : errors.mapped(),
+                 old : req.body,
+                 user
+             })
+         }
+     }, 
     
     logout: (req, res) => {
         req.session.destroy();
