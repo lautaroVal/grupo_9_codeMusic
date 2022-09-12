@@ -100,7 +100,7 @@ module.exports = {
 					price: +price,
 					category,
 					discount: +discount,
-					image: product.image,
+					image: image,
 					color,
 					status
 				}

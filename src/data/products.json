@@ -1,28 +1,20 @@
 [
    {
       "id": 1,
-      "name": "Yamaha Pacifica 012 Black",
-      "description": "La serie Yamaha Pacifica es una gama creada en los años 90, la cual sigue vigente a día de hoy gracias a una gran variedad de modelos y una versatilidad sin igual.",
       "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "category": "guitarras",
       "colors": "Black | Red Metallic | Dark Blue Metallic",
-      "price": "101941",
+      "price": null,
       "decimals": 0,
-      "discount": " ",
-      "status": "oferta",
+      "discount": null,
       "coutas": 12
    },
    {
       "id": 2,
-      "name": "Batería Yamaha Stage de 5 piezas",
-      "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
       "image": "81WrWq-bKTL._AC_SX679_.jpg",
-      "category": "baterias",
       "colors": "Rojo arándano | Raven Black | Pure White",
-      "price": "409600",
+      "price": null,
       "decimals": 0,
-      "discount": " ",
-      "status": "oferta",
+      "discount": null,
       "coutas": 12
    },
    {
@@ -132,15 +124,10 @@
    },
    {
       "id": 31,
-      "name": "Guitarra acústica Cort Standard AF515CE",
-      "description": "Tapa de abeto. Acabado de open pore. Forma del cuerpo: concert. El largo de escala es 648mm. Tiene 6 cuerdas de metal. Guitarra versátil que se adapta a una gran variedad de estilos musicales.r",
-      "price": 61120,
-      "discount": 0,
-      "image": "D_NQ_NP_2X_907196-MLA43642239581_102020-F(1).jpg",
-      "category": "guitarras",
-      "color": "Marrón",
-      "cuotas": 12,
-      "status": "no-oferta"
+      "price": null,
+      "discount": null,
+      "image": null,
+      "cuotas": 12
    },
    {
       "id": 12,
@@ -346,23 +333,13 @@
    },
    {
       "id": 31,
-      "name": "",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
+      "price": null,
+      "discount": null,
+      "image": null
    },
    {
       "id": 32,
-      "name": "",
-      "description": "",
-      "price": 0,
-      "discount": 0,
-      "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
-      "color": "negro",
-      "category": "guitarras"
+      "discount": null
    },
    {
       "id": 33,
