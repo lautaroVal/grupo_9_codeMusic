@@ -97,6 +97,9 @@
       "category": "Admin",
       "avatar": "Img-1663202007245.jpg",
       "genero": "masculino",
-      "musicaFav": "Rock"
+      "musicaFav": [
+         "Rock",
+         "Jazz"
+      ]
    }
 ]

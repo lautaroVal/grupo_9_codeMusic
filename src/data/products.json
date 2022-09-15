@@ -43,11 +43,12 @@
       "image": "D_821154-MLA42066070556_062020-F-600x288.jpg",
       "category": "teclados",
       "colors": "negro",
-      "price": 43279,
+      "price": 432790,
       "decimals": null,
-      "discount": 0,
+      "discount": null,
       "status": "oferta",
-      "coutas": 12
+      "coutas": 12,
+      "color": "negro"
    },
    {
       "id": 5,
