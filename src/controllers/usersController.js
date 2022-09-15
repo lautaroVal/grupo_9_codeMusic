@@ -53,7 +53,7 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-            let { id, firstName, lastName, email, telephone, category, avatar} = loadUsers().find(user => user.email === req.body.email);
+            let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
 
             req.session.userLogin = {
                 id,
@@ -88,69 +88,69 @@ module.exports = {
             user,
         })
     },
-    
-    update: (req,res) => {
-      
+
+    update: (req, res) => {
+
         /*  return res.send(req.body); */
-         let errors = validationResult(req);
-         if(errors.isEmpty()){
-             let users = loadUsers();
-             const {avatar,firstName,lastName,username,genero,telephone,musicaFav,provincia,localidad,calle,biografia } = req.body;
-             let image = req.files.map((file) => file.filename);
-             
-             const usersModify = users.map(user => {
-                 if (user.id === +req.session.userLogin.id) {
-                     return {
-                 ...user,
-                 avatar : image.length === 0 ? user.avatar : image[0],
-                 firstName :firstName?.trim(),
-                 lastName : lastName?.trim(),
-                 username : username.trim(),
-                 category: user.category,
-                 genero,
-                 email: user.email,
-                 musicaFav,
-                 provincia,
-                 localidad : localidad.trim(),
-                 calle : calle.trim(),
-                 biografia : biografia.trim(),
-                 telephone : +telephone,
-             }
-         }
-         return user;
-     })   
-             /* return res.send(usersModify); */
-             req.session.userLogin = {
-                 id: req.session.userLogin.id,
-                 firstName: usersModify.firstName,
-                 lastName: usersModify.lastName,
-                 telephone,
-                 avatar
-             };
-             if (req.body.remember) {
-                 res.cookie('codeMusic', req.session.userLogin, {
-                     maxAge: 1000 * 60 * 60
-                 })
-             };
- 
-             storeUsers(usersModify);
-             return res.redirect('/');
- 
-         }else{
-             let users = loadUsers();
-             const user = users.find(user => user.id === req.session.userLogin.id);
-             return res.render('users/profile',{
-                 title: 'Perfil de usuario',
-                 errors : errors.mapped(),
-                 old : req.body,
-                 user
-             })
-         }
-     }, 
-    
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let users = loadUsers();
+            const { avatar, firstName, lastName, username, genero, telephone, musicaFav, provincia, localidad, calle, biografia } = req.body;
+            let image = req.files.map((file) => file.filename);
+
+            const usersModify = users.map(user => {
+                if (user.id === +req.session.userLogin.id) {
+                    return {
+                        ...user,
+                        avatar: image.length === 0 ? user.avatar : image[0],
+                        firstName: firstName?.trim(),
+                        lastName: lastName?.trim(),
+                        username: username.trim(),
+                        category: user.category,
+                        genero,
+                        email: user.email,
+                        musicaFav,
+                        provincia,
+                        localidad: localidad.trim(),
+                        calle: calle.trim(),
+                        biografia: biografia.trim(),
+                        telephone: +telephone,
+                    }
+                }
+                return user;
+            })
+            /* return res.send(usersModify); */
+            req.session.userLogin = {
+                id: req.session.userLogin.id,
+                firstName: usersModify.firstName,
+                lastName: usersModify.lastName,
+                telephone,
+                avatar
+            };
+            if (req.body.remember) {
+                res.cookie('codeMusic', req.session.userLogin, {
+                    maxAge: 1000 * 60 * 60
+                })
+            };
+
+            storeUsers(usersModify);
+            return res.redirect('/');
+
+        } else {
+            let users = loadUsers();
+            const user = users.find(user => user.id === req.session.userLogin.id);
+            return res.render('users/profile', {
+                title: 'Perfil de usuario',
+                errors: errors.mapped(),
+                old: req.body,
+                user
+            })
+        }
+    },
+
     logout: (req, res) => {
         req.session.destroy();
-        res.cookie('codeMusic',null,{maxAge: -1});
+        res.cookie('codeMusic', null, { maxAge: -1 });
         return res.redirect('/');
     }
 }

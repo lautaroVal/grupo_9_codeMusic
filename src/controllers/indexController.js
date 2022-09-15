@@ -55,7 +55,7 @@ module.exports = {
 	let {keywords} = req.query;
 	const products = loadProducts();
 
-	let result = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()));
+	let result = products.filter(product => product.name?.toLowerCase().includes(keywords.toLowerCase()));
 
 	return res.render("products/results",{
     title: "Resultado de búsqueda",
