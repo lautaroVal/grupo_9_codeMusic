@@ -7,7 +7,6 @@
       "category": "guitarras",
       "color": "negro",
       "price": 101941,
-      "decimals": null,
       "discount": 0,
       "status": "oferta",
       "coutas": 12
@@ -18,7 +17,6 @@
       "category": "baterias",
       "color": "rojo",
       "price": 409600,
-      "decimals": null,
       "discount": 0,
       "status": "oferta",
       "coutas": 12
@@ -31,7 +29,6 @@
       "category": "teclados",
       "color": "negro",
       "price": 78764,
-      "decimals": null,
       "discount": 0,
       "status": "oferta",
       "coutas": 12
@@ -44,7 +41,6 @@
       "category": "teclados",
       "colors": "negro",
       "price": 432790,
-      "decimals": null,
       "discount": null,
       "status": "oferta",
       "coutas": 12,
@@ -58,7 +54,6 @@
       "category": "microfonosYSonidos",
       "colors": "negro",
       "price": 95063,
-      "decimals": null,
       "discount": 0,
       "status": "oferta",
       "coutas": 12
@@ -71,7 +66,6 @@
       "category": "microfonosYSonidos",
       "color": "negro",
       "price": 45999,
-      "decimals": null,
       "discount": null,
       "status": "oferta",
       "coutas": 12
@@ -109,9 +103,9 @@
       "image": "D_NQ_NP_2X_910187-MLA48762610667_012022-F.jpg",
       "category": "guitarras",
       "color": "rojo",
-      "price": 182949,
+      "price": 1829490,
       "decimals": 58,
-      "discount": 0,
+      "discount": null,
       "status": "no-oferta",
       "coutas": 12
    },
@@ -136,7 +130,6 @@
       "category": "guitarras",
       "color": "marrón",
       "price": 61120,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "cuotas": 12
@@ -175,7 +168,6 @@
       "category": "baterias",
       "color": "rojo",
       "price": 409600,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -188,7 +180,6 @@
       "category": "baterias",
       "color": "rojo",
       "price": 409600,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -201,7 +192,6 @@
       "category": "baterias",
       "color": "rojo",
       "price": 409600,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "cuotas": 12
@@ -214,7 +204,6 @@
       "category": "teclados",
       "color": "",
       "price": 537598,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "cuotas": 12
@@ -227,7 +216,6 @@
       "category": "teclados",
       "color": "",
       "price": 537598,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "cuotas": 12
@@ -240,7 +228,6 @@
       "category": "teclados",
       "color": "",
       "price": 537598,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "cuotas": 12
@@ -253,7 +240,6 @@
       "category": "teclados",
       "color": "",
       "price": 186760,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -266,7 +252,6 @@
       "category": "microfonosYSonidos",
       "color": "negro",
       "price": 95063,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -279,7 +264,6 @@
       "category": "microfonosYSonidos",
       "color": "negro",
       "price": 95063,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -292,7 +276,6 @@
       "category": "microfonosYSonidos",
       "color": "negro",
       "price": 95063,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -305,7 +288,6 @@
       "category": "microfonosYSonidos",
       "color": "negro",
       "price": 95063,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "cuotas": 12
@@ -318,7 +300,6 @@
       "category": "deVientos",
       "color": "dorado",
       "price": 150000,
-      "decimals": null,
       "discount": null,
       "status": "no-oferta",
       "coutas": 12
@@ -331,7 +312,6 @@
       "category": "deVientos",
       "colors": "negro",
       "price": 215488,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -344,7 +324,6 @@
       "category": "deVientos",
       "color": "dorado",
       "price": 150000,
-      "decimals": null,
       "discount": null,
       "status": "no-oferta",
       "coutas": 12
@@ -357,7 +336,6 @@
       "category": "deVientos",
       "colors": "negro",
       "price": 215488,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -370,7 +348,6 @@
       "category": "deVientos",
       "color": "dorado",
       "price": 150000,
-      "decimals": null,
       "discount": null,
       "status": "no-oferta",
       "coutas": 12
@@ -383,7 +360,6 @@
       "category": "deVientos",
       "colors": "negro",
       "price": 215488,
-      "decimals": null,
       "discount": 0,
       "status": "no-oferta",
       "coutas": 12
@@ -396,7 +372,6 @@
       "category": "deVientos",
       "colors": "negro",
       "price": 216000,
-      "decimals": null,
       "discount": null,
       "status": "no-oferta",
       "coutas": 12,
@@ -410,7 +385,6 @@
       "category": "microfonosYSonidos",
       "color": "plateado",
       "price": 123123,
-      "decimals": null,
       "discount": null,
       "status": "oferta",
       "cuotas": 12
