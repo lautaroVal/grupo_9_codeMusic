@@ -102,9 +102,9 @@ module.exports = {
 					description: description,
 					image: req.file ? req.file.filename : product.image,
 					category,
+					discount: +discount,
 					color,
 					price: +price,
-					discount: +discount,
 					status
 				}
 			}

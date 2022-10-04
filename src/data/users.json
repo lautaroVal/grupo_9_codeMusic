@@ -30,18 +30,6 @@
       "avatar": "default-users-image.jpg"
    },
    {
-      "id": 3,
-      "firstName": "marcos",
-      "lastName": "Mansilla",
-      "email": "marcos@gmail.com",
-      "telephone": 123123123,
-      "username": "Mark",
-      "provincia": "",
-      "localidad": "",
-      "calle": "",
-      "biografia": ""
-   },
-   {
       "id": 4,
       "firstName": "nahiara",
       "lastName": "salinas",
@@ -90,6 +78,31 @@
       "telephone": 1154659878,
       "password": "$2a$12$e8dtcTq4KuXWVEe4jBVVmu/hWlQmM78q3hlL6pyAKV3V8Yi55FmT2",
       "category": "Admin",
+<<<<<<< HEAD
       "avatar": "Img-1663007944800.png"
+=======
+      "avatar": "Img-1662864085586.png"
+   },
+   {
+      "id": 7,
+      "firstName": "Marcos",
+      "lastName": "Mansilla",
+      "email": "marcos@gmail.com",
+      "username": "Marckk",
+      "provincia": "Buenos Aires",
+      "localidad": "Berisso",
+      "calle": "larrea",
+      "biografia": "Aprendiendo a Programar",
+      "telephone": 1231231233,
+      "password": "$2a$12$VWRWdbyPxNhsuQtChHwMYuTMfBoXE9i0Loon4GDKJE3GsycvdZHpK",
+      "category": "Admin",
+      "avatar": "Img-1663202007245.jpg",
+      "genero": "masculino",
+      "musicaFav": [
+         "Rock",
+         "Jazz",
+         "Clásica"
+      ]
+>>>>>>> 35c99114e022a9428657fd0a3b6743ff6a4ad38c
    }
 ]

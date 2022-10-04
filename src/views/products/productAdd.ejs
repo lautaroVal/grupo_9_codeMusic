@@ -7,17 +7,19 @@
             <main class="main_formulario">
                 <h4>Agrega un producto</h4>
 
-                <form class="main_formulario_contenedor" action="/products/productAdd" method="POST" enctype="multipart/form-data">
+                <form class="main_formulario_contenedor" action="/products/productAdd" method="POST"
+                    enctype="multipart/form-data">
 
                     <div>
                         <label for="Name">Nombre del producto</label>
                         <input type="text" id="Name" name="name" placeholder="Ejempo: Guitarra Electrica">
                         <% if (locals.errors && errors.name) { %>
                             <p class="register_errors">
-                              <%= errors.name.msg %> 
-                          </p>
-                          <% } %>
+                                <%= errors.name.msg %>
+                            </p>
+                            <% } %>
                     </div>
+
                     <div>
                         <label for="imagen">Imagen de producto</label>
                         <input type="file" name="image" id="imagen" accept="image/*"><br><br>
@@ -28,9 +30,9 @@
                         <textarea rows="5" id="Description" name="description"></textarea>
                         <% if (locals.errors && errors.description) { %>
                             <p class="register_errors">
-                              <%= errors.description.msg %> 
-                          </p>
-                          <% } %>
+                                <%= errors.description.msg %>
+                            </p>
+                            <% } %>
                     </div>
 
                     <div>
@@ -38,64 +40,65 @@
                         <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000">
                         <% if (locals.errors && errors.price) { %>
                             <p class="register_errors">
-                              <%= errors.price.msg %> 
-                          </p>
-                          <% } %>
+                                <%= errors.price.msg %>
+                            </p>
+                            <% } %>
                     </div>
 
                     <div>
                         <label for="discount">Descuento</label>
                         <input type="number" id="discount" name="discount">
                     </div>
-                    
+
                     <div>
 
-                            <label for="category" class="form-label">Elige una categoria:</label>
-                            <select name="category" id="category">
-                                <option >Elegir</option>
-                                <option value="guitarras">Guitarras</option>
-                                <option value="baterias">Baterias</option>
-                                <option value="teclados">Teclados y Pianos</option>
-                                <option value="microfonosYSonidos">Microfonos y Sonido</option>
-                                <option value="deVientos">Instrumentos de Viento</option>
-                            </select>
-                            <% if (locals.errors && errors.category) { %>
-                                <p class="register_errors">
-                                  <%= errors.category.msg %> 
-                              </p>
-                              <% } %>
+                        <label for="category" class="form-label">Elige una categoria:</label>
+                        <select name="category" id="category">
+                            <option>Elegir</option>
+                            <option value="guitarras">Guitarras</option>
+                            <option value="baterias">Baterias</option>
+                            <option value="teclados">Teclados y Pianos</option>
+                            <option value="microfonosYSonidos">Microfonos y Sonido</option>
+                            <option value="deVientos">Instrumentos de Viento</option>
+                        </select>
+                        <% if (locals.errors && errors.category) { %>
+                            <p class="register_errors">
+                                <%= errors.category.msg %>
+                            </p>
+                            <% } %>
                     </div>
-                    <div>
+
+                    <div class="main_formulario_radio">
+                        <div>
+                            <label for="color" class="form-label">Elige un color:</label>
+                            <select name="color" id="color">
+                                <option value="negro">Negro</option>
+                                <option value="blanco">Blanco</option>
+                                <option value="rojo">Rojo</option>
+                                <option value="dorado">Dorado</option>
+                                <option value="plateado">Plateado</option>
+                                <option value="marron">Marrón</option>
+                                <option value="azul">Azul</option>
+                                <option value="amarillo">Amarillo</option>
+                                <option value="verde">Verde</option>
+                                <option value="naranja">Naranja</option>
+                                <option value="violeta">Violeta</option>
+                            </select>
+
+                        </div>
                         <div class="main_formulario_radio">
-                            <div >
-                                    <label for="color" class="form-label">Elige un color:</label>
-                                    <select name="color" id="color">
-                                        <option value="negro">Negro</option>
-                                        <option value="blanco">Blanco</option>
-                                        <option value="rojo">Rojo</option>
-                                        <option value="dorado">Dorado</option>
-                                        <option value="plateado">Plateado</option>
-                                        <option value="marron">Marrón</option>
-                                        <option value="azul">Azul</option>
-                                        <option value="amarillo">Amarillo</option>
-                                        <option value="verde">Verde</option>
-                                        <option value="naranja">Naranja</option>
-                                        <option value="violeta">Violeta</option>
-                                    </select>
-
-                            </div>
-                            <div class="main_formulario_radio">
-                                <label for="estado">Oferta:</label>
-                               <p><input type="radio" name="status" id="estado" value="oferta"> En oferta</p>
-                               <p><input type="radio" name="status" id="estado" value="no-oferta"> Sin oferta</p>
-                            </div>
+                            <label for="estado">Oferta:</label>
+                            <p><input type="radio" name="status" id="estado" value="oferta"> En oferta</p>
+                            <p><input type="radio" name="status" id="estado" value="no-oferta"> Sin oferta</p>
                         </div>
+                    </div>
 
-                        <div class="formulario_enviar">
-                            <button type="submit">Enviar</button>
-                        </div>
+                    <div class="formulario_enviar">
+                        <button type="submit">Enviar</button>
+                    </div>
 
                 </form>
+                
             </main>
 
             <%- include('../partials/footer') %>
