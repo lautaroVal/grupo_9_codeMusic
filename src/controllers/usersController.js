@@ -20,12 +20,12 @@ module.exports = {
                 lastName: lastName,
                 email: email,
                 username: "",
-                provincia: "",
-                localidad: "",
-                calle: "",
-                musicaFav: "",
-                genero: "",
-                biografia: "",
+                province: "",
+                location: "",
+                street: "",
+                musicFav: "",
+                gender: "",
+                biography: "",
                 telephone: +telephone,
                 password: bcryptjs.hashSync(password, 12),
                 category: "User",
@@ -95,7 +95,7 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let users = loadUsers();
-            const { avatar, firstName, lastName, username, genero, telephone, musicaFav, provincia, localidad, calle, biografia } = req.body;
+            const { avatar, firstName, lastName, username, gender, telephone, musicFav, province, location, street, biography } = req.body;
             let image = req.files.map((file) => file.filename);
 
             const usersModify = users.map(user => {
@@ -107,13 +107,13 @@ module.exports = {
                         lastName: lastName?.trim(),
                         username: username.trim(),
                         category: user.category,
-                        genero,
+                        gender,
                         email: user.email,
-                        musicaFav,
-                        provincia,
-                        localidad: localidad.trim(),
-                        calle: calle.trim(),
-                        biografia: biografia.trim(),
+                        musicFav,
+                        province,
+                        location: location.trim(),
+                        street: street.trim(),
+                        biography: biography.trim(),
                         telephone: +telephone,
                     }
                 }
