@@ -45,7 +45,7 @@ module.exports = {
 	},
 
 	productAddStore: (req, res) => {
-		let errors = validationResult(req)
+		let errors = validationResult(req);
 		if (errors.isEmpty()) {
 			const { name, price, discount, description, category, color, status } = req.body
 			const products = loadProducts();
@@ -62,7 +62,7 @@ module.exports = {
 				decimals: null,
 				discount: +discount,
 				status,
-				cuotas: 12
+				share: 12
 			}
 
 			const productsModify = [...products, newProduct];
