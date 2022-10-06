@@ -1,4 +1,4 @@
-# Code Music (Sprint )
+# Code Music (Sprint 6)
 
 ## Temática del sitio Web: Venta de Instrumentos Musicales.
 ## Audiencia: Público en General:

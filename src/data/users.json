@@ -79,5 +79,26 @@
       "password": "$2a$12$e8dtcTq4KuXWVEe4jBVVmu/hWlQmM78q3hlL6pyAKV3V8Yi55FmT2",
       "category": "Admin",
       "avatar": "Img-1663007944800.png"
+   },
+   {
+      "id": 7,
+      "firstName": "Marcos",
+      "lastName": "Mansilla",
+      "email": "marcos@gmail.com",
+      "username": "Marckk",
+      "province": "Buenos Aires",
+      "location": "Berisso",
+      "street": "larrea",
+      "biography": "Aprendiendo a Programar",
+      "telephone": 1231231233,
+      "password": "$2a$12$VWRWdbyPxNhsuQtChHwMYuTMfBoXE9i0Loon4GDKJE3GsycvdZHpK",
+      "category": "Admin",
+      "avatar": "Img-1663202007245.jpg",
+      "gender": "masculino",
+      "musicFav": [
+         "Rock",
+         "Jazz",
+         "Clásica"
+      ]
    }
 ]
