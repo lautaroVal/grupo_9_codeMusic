@@ -62,7 +62,7 @@ module.exports = {
 				decimals: null,
 				discount: +discount,
 				status,
-				cuotas: 12
+				share: 12
 			}
 
 			const productsModify = [...products, newProduct];
