@@ -11,39 +11,52 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      description: {
-        type: Sequelize.TEXT
-      },
       price: {
         type: Sequelize.INTEGER
       },
       status: {
         type: Sequelize.TINYINT
       },
-      discount: {
-        type: Sequelize.INTEGER
-      },
       share: {
         type: Sequelize.INTEGER
       },
-      brandsId: {
+      discount: {
         type: Sequelize.INTEGER
+      },
+      description: {
+        type: Sequelize.TEXT
+      },
+      brandsId: {
+        type: Sequelize.INTEGER,
+        model : {
+          tableName : 'Brands'
+        },
+          key : 'id'
       },
       colorsId: {
-        type: Sequelize.INTEGER
-      },
-      imagesId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        model : {
+          tableName : 'Colors'
+        },
+          key : 'id'
       },
       categoriesId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        model : {
+          tableName : 'Categories'
+        },
+          key : 'id'
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
+        type: Sequelize.DATE
+      },
+      deleteAt: {
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
