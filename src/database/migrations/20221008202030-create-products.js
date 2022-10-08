@@ -28,24 +28,30 @@ module.exports = {
       },
       brandsId: {
         type: Sequelize.INTEGER,
-        model : {
-          tableName : 'Brands'
-        },
-          key : 'id'
+        references : {
+          model : {
+            tableName : 'Brands'
+          },
+            key : 'id'
+        }
       },
       colorsId: {
         type: Sequelize.INTEGER,
-        model : {
-          tableName : 'Colors'
-        },
-          key : 'id'
+        references : {
+          model : {
+            tableName : 'Colors'
+          },
+            key : 'id'
+        }
       },
       categoriesId: {
         type: Sequelize.INTEGER,
-        model : {
-          tableName : 'Categories'
-        },
-          key : 'id'
+        references : {
+          model : {
+            tableName : 'Categories'
+          },
+            key : 'id'
+        }
       },
       createdAt: {
         allowNull: false,

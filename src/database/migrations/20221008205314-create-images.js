@@ -13,21 +13,19 @@ module.exports = {
       },
       productsId: {
         type: Sequelize.INTEGER,
-        model : {
-          tableName : 'Products'
-        },
-          key : 'id'
+        references : {
+          model : {
+            tableName : 'Products'
+          },
+            key : 'id'
+        }
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: true,
-        type: Sequelize.DATE
-      },
-      deleteAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE
       }
     });
