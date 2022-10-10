@@ -1,0 +1,171 @@
+/* .login_inicio h1 {
+    color: #301B3F;
+    margin-top: 10px;
+    text-align: center;
+}
+.login_inicio-cuenta p {
+    color: var(--ColorNegro);
+    font-size: 13px;
+    text-align: center;
+
+}
+
+.login_form {
+    color: var(--ColorNegro);
+    margin-bottom: 50px;
+}
+.login_div {
+    margin-bottom: 25px;
+    padding-left: 10px;
+    
+
+    
+}
+.login_div button {
+    display: inline-block;
+    width: 80%;
+    margin-left: 30px;
+    margin-right: 20px;
+    background-color: #202040;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    
+    
+    
+}
+.login_label {
+    width: 90%;
+    margin-top: 30px;
+    padding: 10px;
+    
+
+}
+.login_input {
+    width: 90%;
+    height: 40px;
+    margin-top: 7px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    padding-left: 10px;
+    margin-left: 10px;
+    
+
+}
+
+.login_olvidaste-contra p {
+    font-size: 12px;
+     text-align: end;
+    padding-right: 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    
+  
+}
+
+.login_p_a {
+    text-align: center;
+    
+    
+}
+.login_p_a p {
+    font-size: 13px;
+    
+}
+.login_p_a p a {
+    color: #611696;
+    
+}
+
+
+@media (min-width: 768px) {
+
+    .login_inicio-cuenta p {
+        padding-top: 20px;
+}
+     .login_inicio h1 {
+       margin-top: 20px;
+       
+     }
+     .login_div {
+        display: flex;
+        flex-direction: column;
+     }
+     .login_label {
+        width: 50%;
+        margin-left: 40px
+     }
+     .login_input {
+        width: 85%;
+        height: 40px;
+        padding-left: 7px ;
+        margin-left: 50px;
+     }
+     .login_div button {
+        height: 40px;
+        width: 75%;
+        margin-left: 85px;
+        border-radius: 20px;
+     }
+     .login_olvidaste-contra p {
+        padding-bottom: 20px;
+        text-align: right;
+        margin-right: 40px;
+     }
+}
+
+@media (min-width: 1024px) {
+    
+    
+    
+    .login_div {
+        display: flex;
+        flex-direction: column;
+        
+        
+    
+        
+    }  
+
+    .login_label {
+        width: 50%;
+        margin-top: 0px;
+        margin-left: 20%;
+       
+    }
+
+    .login_input {
+        width: 60%;
+        height: 40px;
+    
+       
+        padding-left: 7px ;
+        margin-left: 20%;
+    }
+
+    .login_div button {
+        height: 40px;
+        width: 50%;
+        margin-left: 25%;
+        
+    }
+
+    .login_inicio-cuenta p {
+       padding-top: 20px;
+      
+    }
+    .login_olvidaste-contra p {
+        padding-bottom: 20px;
+        text-align: right;
+        margin-right: 18%;
+     }
+        
+    }
+        
+       
+        
+    
+    
+
+    
+ */

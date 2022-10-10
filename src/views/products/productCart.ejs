@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head') %> 
+
+<body class="productCart">
+    <%- include('../partials/header') %>
+    <main>
+        <h1>Carrito de Compras</h1>
+        <br>
+            <div>
+                <section class="productCart_main_contenedor">
+                    <article>
+                        <ul class="productCart_main_menu">
+                            <li>Productos</li>
+                            <li>Cantidad</li>
+                            <li>Precio</li>
+                        </ul>
+                    </article>  
+
+                    <article class="productCart_detalleProducto">
+                        <img class="productCart_detalleProducto_imagenbateria" src="/img/bateriaMapex.jpg">
+                    <div>
+                        <p class="productCart_detalleProducto_nombreProducto_bateria"></p>
+                        <button class="boton">+  1  -</button>        
+                    </div>
+                    <div class="productCart_detalleProducto_">
+                        <p class="productCart_detalleProducto_precioBateria">$109.780</p>
+                        <img class="productCart_detalleProducto_basura" src="/img/logoBasura.png">
+                    </div>
+                    </article>
+
+                    <article class="productCart_detalleProducto">
+                        <img class="productCart_detalleProducto_imagenguitarra" src="/img/GuitarraElectrica.jpg">
+                    <div>
+                        <p class="productCart_detalleProducto_nombreProducto_guitarra"></p>
+                        <button class="boton">+  1  -</button>
+                    </div>
+                    <div class="productCart_detalleProducto_">
+                        <p class="productCart_detalleProducto_precioBateria">$19.375</p>
+                        <img class="productCart_detalleProducto_basura" src="/img/logoBasura.png">
+                    </div>
+                    </article>
+                </section> 
+            </div>
+                <div class="productCart_main_compra">
+                    <div class="productCart_main_compra_container">
+                        <img class="productCart_main_compra_envioGratis_logo" src="/img/logoCamion.png" alt="Envio gratis">
+                        <p class="productCart_main_compra_envioGratis">Envío Gratis</p>
+                        <img class="productCart_main_compra_logovisa" src="/img/logoVisa.png" alt="logo visa">
+                        <img class="productCart_main_compra_logovisa" src="/img/logoMastercard.png" alt="logo mastercard">
+                    </div>
+                    <div>
+                        <p class="productCart_main_compra_total">Total $129.155</p>
+                        <button class="productCart_main_compra_boton">COMPRAR</button>  
+                    </div>
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+
+</body>
+</html>

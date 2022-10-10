@@ -1,0 +1,488 @@
+/*  main */
+
+.productDetail_main {
+    background-color: var(--colorGris);
+    color: var(--ColorNegro);
+    width: 100%;
+}
+
+/* main top */
+.productDetail_main_section_top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--colorGris);
+
+}
+
+/* main top izq */
+.productDetail_main_section_top_izq {
+    display: none;
+    width: 100%;
+    background-color: var(--colorGris);
+}
+
+/* main top centr */
+
+.productDetail_main_section_top_centr {
+    background-color: var(--colorGris);
+    width: 100%;
+    border-radius: 8px;
+}
+
+.productDetail_main_section_top_centr img {
+    width: 38%;
+    position: relative;
+    left: 2px;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.productDetail_main_section_top_centr img:hover {
+    transition: 1.2s;
+    transform: scale(1.01);
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
+}
+
+/* main top derech */
+
+.productDetail_main_section_top_derech {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    margin-right: 5px;
+    width: 98%;
+    background-color: var(--ColorBlanco);
+    transition: 1.2s;
+}
+
+.productDetail_main_section_top_derech:hover {
+    box-shadow: 4px 3px 20px -1px var(--ColorNegro);
+}
+
+.productDetail_main_section_top_derech_price {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.productDetail_main_section_top_derech_cuotas {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.productDetail_main_section_top_derech_cuotas span {
+    color: var(--ColorVerde);
+}
+
+.productDetail_main_section_top_derech_tarjetas {
+    display: flex;
+    gap: 20px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 14px;
+}
+
+.productDetail_main_section_top_derech_tarjetas img {
+    width: 70px;
+}
+
+.productDetail_main_section_top_derech_colores {
+    display: flex;
+    margin: 15px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.productDetail_main_section_top_derech_colores div {
+    width: 30%;
+}
+
+.productDetail_main_section_top_derech_colores img {
+    width: 15vh;
+    transition: 1.2s;
+}
+
+.productDetail_main_section_top_derech_colores img:hover {
+    transform: scale(1.2);
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
+}
+
+.productDetail_main_section_top_derech_stock h4 {
+    font-size: 18px;
+    color: var(--ColorVerde);
+    margin: 5px;
+    padding: 3px;
+}
+
+.productDetail_main_section_top_derech_stock div {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.productDetail_main_section_top_derech_stock div form select {
+    background-color: var(--colorGris);
+    color: var(--ColorNegro);
+    outline: none;
+    border-radius: 3px;
+    width: 90px;
+    height: 17px;
+    margin: 1px;
+}
+
+.productDetail_main_section_top_derech_button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+.productDetail_main_section_top_derech_button button {
+    margin: 10px;
+    width: 65%;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1.2s;
+}
+
+.productDetail_main_section_top_derech_button button:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
+}
+
+.productDetail_main_section_top_derech_button #edit_button {
+    margin: 10px;
+    width: 25%;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    padding: 0;
+    border-radius: 10px;
+    transition: 1.2s;
+}
+.productDetail_main_section_top_derech_button #edit_button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 8px 3px 20px -1px var(--ColorNegro);
+
+}
+
+.productDetail_main_section_top_derech_button #edit_button a{
+    color: black;
+}
+.productDetail_main_section_top_derech_button #edit_button a:hover{
+    color: white;
+}
+
+.productDetail_div_info {
+    display: none;
+}
+
+/* main bottom */
+
+.productDetail_main_section_bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.productDetail_main_section_bottom div {
+    width: 100%;
+    background-color: var(--ColorBlanco);
+}
+
+.productDetail_main_section_bottom div p {
+    margin: 3px;
+}
+
+.productDetail_main_section_bottom div h5 {
+    margin: 3px;
+}
+
+@media (min-width: 768px) {
+
+    /* main top centr */
+
+    .productDetail_main_section_top_centr {
+        display: flex;
+        background-color: var(--colorGris);
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .productDetail_main_section_top_centr img {
+        width: 30%;
+        align-items: center;
+    }
+
+    /* main top derech */
+
+    .productDetail_main_section_top_derech {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .productDetail_main_section_top_derech_title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px 0;
+    }
+
+    .productDetail_main_section_top_derech_price {
+        margin: 20px 15px;
+    }
+
+    .productDetail_main_section_top_derech_cuotas {
+        margin: 20px 15px;
+    }
+
+    .productDetail_main_section_top_derech_tarjetas {
+        display: flex;
+        gap: 30px;
+        font-size: 45px;
+        margin: 15px 10px;
+    }
+
+    .productDetail_main_section_top_derech_colores div {
+        width: 16%;
+    }
+
+    .productDetail_main_section_top_derech_colores img {
+        width: 20vh;
+        transition: 1.2s;
+    }
+
+    .productDetail_main_section_top_derech_colores h5 {
+        font-size: 15px;
+    }
+
+    .productDetail_main_section_top_derech_stock h4 {
+        font-size: 20px;
+    }
+
+    .productDetail_main_section_top_derech_stock div {
+        display: flex;
+        gap: 7px;
+        font-size: 20px;
+        margin: 20px 15px;
+    }
+
+    .productDetail_main_section_top_derech_stock div form select {
+        width: 120px;
+        height: 20px;
+    }
+
+    .productDetail_main_section_top_derech_button button {
+        width: 100%;
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .productDetail_div_info {
+        background-color: var(--ColorBlanco);
+        color: var(--ColorNegro);
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px auto 10px;
+    }
+
+    .productDetail_div_info article {
+        text-align: center;
+        width: 40%;
+        margin-bottom: 20px;
+    }
+
+    .productDetail_div_info article i {
+        color: rgb(27, 145, 255);
+        margin-bottom: 20px;
+        transition: 1s;
+    }
+
+    .productDetail_div_info article i:hover {
+        transform: rotate(360deg);
+    }
+
+    .productDetail_div_info article h4 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .productDetail_div_info article p {
+        font-size: 12px;
+    }
+
+    /* main bottom */
+
+    .productDetail_main_section_bottom {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .productDetail_main_section_bottom div {
+        width: 100%;
+        background-color: var(--ColorBlanco);
+    }
+
+    .productDetail_main_section_bottom div p {
+        margin: 5px;
+    }
+
+    .productDetail_main_section_bottom div h5 {
+        margin: 5px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    /* main top */
+
+    .productDetail_main_section_top {
+        display: flex;
+        position: sticky;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 99%;
+    }
+
+    /* main top izq */
+
+    .productDetail_main_section_top_izq {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 15%;
+    }
+
+    .productDetail_main_section_top_izq article {
+        background-color: var(--ColorBlanco);
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+        align-items: center;
+        transition: 1.2s;
+    }
+
+    .productDetail_main_section_top_izq article:hover {
+        box-shadow: 8px 3px 20px -1px var(--ColorNegro);
+    }
+
+    .productDetail_main_section_top_izq article img {
+        width: 93%;
+        position: relative;
+        left: 5px;
+        top: 5px;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    .productDetail_main_section_top_izq article img:hover {
+        transition: 1.3s;
+        transform: scale(1.2);
+    }
+
+    /* main top centr */
+
+    .productDetail_main_section_top_centr {
+        width: 55%;
+        
+    }
+
+    .productDetail_main_section_top_centr img {
+        width: 60%;
+    }
+
+    /* main top derch */
+
+    .productDetail_main_section_top_derech {
+        width: 28%;
+    }
+
+    .productDetail_main_section_top_derech_price {
+        font-size: 35px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
+    .productDetail_main_section_top_derech_cuotas {
+        font-size: 18px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
+    .productDetail_main_section_top_derech_tarjetas {
+        display: flex;
+        gap: 20px;
+        font-size: 40px;
+        margin-bottom: 10px;
+        margin-left: 14px;
+    }
+
+    .productDetail_main_section_top_derech_colores div {
+        width: 25%;
+    }
+
+    .productDetail_main_section_top_derech_colores img {
+        width: 11vh;
+        border-radius: 5px;
+    }
+
+
+    .productDetail_main_section_top_derech_stock h4 {
+        font-size: 21px;
+        margin-bottom: 10px;
+        margin-left: 5px;
+    }
+
+    .productDetail_main_section_top_derech_stock div {
+        display: flex;
+        gap: 7px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .productDetail_main_section_top_derech_button button {
+        margin-top: 15px;
+        margin-left: 20px;
+        width: 80%;
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .productDetail_main_section_top_derech_stock div form select {
+        width: 95px;
+        height: 20px;
+    }
+
+
+}

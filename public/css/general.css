@@ -1,3 +1,36 @@
+:root{
+    --ColorNegro: #000000;
+    --ColorAzulOscuro: #202040;
+    --ColorGris: #F2F5F9;
+    --ColorBlanco: #FFFFFF;
+    --ColorAzul: #0000ff;
+    --ColorVerde: #46A656;
+}
 *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
 
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: var(--ColorGris);
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+ul, ol{
+    padding-left: 0;
+ }
+
+a{
+    text-decoration: none;
+    color: var(--ColorBlanco);
+}
+
+p{
+    font-size: 15px;
 }

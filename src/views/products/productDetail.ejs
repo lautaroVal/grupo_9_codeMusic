@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head') %> 
+
+
+<body class="productDetail">
+    <%- include('../partials/header') %>
+
+
+    <main class="productDetail_main">
+
+        <section class="productDetail_main_section_top">
+
+            <aside class="productDetail_main_section_top_izq">
+                <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo">
+                </article>
+                <article class="productDetail_main_section_top_izq_fto1"><img
+                        src="/img/bateria-mapex-prodigy-standard-negra-5-cuerpos (1).jpg" alt="foto1"></article>
+                <article class="productDetail_main_section_top_izq_fto2"><img
+                        src="/img/bateria-mapex-prodigy-standard-negra-5-cuerpos (2).jpg" alt="foto2"></article>
+            </aside>
+
+            <article class="productDetail_main_section_top_centr">
+                <img src="<%="/img/imgProducts/" + product.image%>" alt="centro">
+            </article>
+
+            <aside class="productDetail_main_section_top_derech">
+                <div class="productDetail_main_section_top_derech_title">
+                    <h2><%= product.name %> </h2>
+                    <h5> <%= product.description %></h5>
+                </div>
+
+                <div>
+                    <p class="productDetail_main_section_top_derech_price">$<%= toThousand( product.price) %> </p>
+                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((product.price / 12).toFixed(2)) %>  sin interes</span>
+                    </p>
+
+                </div>
+
+                <div class="productDetail_main_section_top_derech_tarjetas">
+                    <img src="/img/logoVisa.png" alt="">
+                    <img src="/img/logoMastercard.png" alt="">
+                    <img src="/img/MercadoPago.jpg" alt="">
+                </div>
+
+                <div class="productDetail_main_section_top_derech_colores">
+                    <div>
+                        <h5> Otros Colores</h5>
+                    </div>
+                    <div>
+                        <img  src="/img/Bateria-Mapex-Gris.jpg" alt="art1">
+                    </div>
+
+                    <div class="productDetail_main_section_top_derech_colores_art2"><img src="/img/bateria_mapex_storm_ic.jpg" alt="art2">
+                    </div>
+                </div>
+
+                <div class="productDetail_main_section_top_derech_stock">
+                    <h4>Stock disponible</h4>
+                    <div>
+                        <h5>cantidad:</h5>
+                        <form action="" method="POST">
+                            <select name="cantidad" id="cantidad">
+                                <option value="1">1 unidad</option>
+                                <option value="2">2 unidades</option>
+                                <option value="3">3 unidades</option>
+                                <option value="4">4 unidades</option>
+                            </select>
+                        </form>
+                        <h6>(disponible 3)</h6>
+                    </div>
+                </div>
+
+                <div class="productDetail_main_section_top_derech_button">
+                    <button type="button">Comprar</button>
+                    <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
+                    <% if (locals.userLogin) { %>
+                       
+                            <% if (userLogin.category === "Admin") { %>
+                            <button type="button" id="edit_button"><a href="/products/edit/<%= product.id%>">Editar</a></button>
+                            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                            <button type="submit" style="cursor: pointer;" >Eliminar</button>
+                             <% } %>
+                             <% } %>
+                    </form>
+
+                </div>
+            </aside>
+
+        </section>
+
+        <section class="productDetail_main_section_bottom">
+
+            <div>
+                <h5>Características:</h5>
+                <p>-Tom 12x9"</p>
+                <p>-Tom 13x10"</p>
+                <p>-Tom de piso ("chancha") 16x16"</p>
+                <p>-Redoblante 14x5,5"</p>
+                <p>-Bombo 22x16"</p>
+                <p>-Todos los herrajes son cromados</p>
+            </div>
+            <div>
+                <p>-Incluye todos los fierros.</p>
+                <p>-Color: Bordó, Negro y Azul</p>
+                <p>-Incluye Parches Remo®</p>
+                <p>-Incluye platillos Crash 16" y</p>
+                <p>Hi-Hat 14"</p>
+            </div>
+            <div>
+                <h5>Descripción</h5>
+                <h5>MAPEX® PRODIGY</h5>
+                <p>Excelente batería MAPEX PRODIGY
+                <p>
+                <p>
+                    con acabado recubierto,
+                    los tambores están equipados con Prodigy,
+                    el nuevo modelo que utiliza un solo punto
+                    de contacto. Incluye TODO lo que precisas
+                    para tocar
+                </p>
+                <h6>*** BANQUETA, FIERROS Y PLATOS MAPEX INCLUÍDOS ***</h6>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="productDetail_div_info">
+                <article>
+                    <i class="fa-solid fa-truck"></i>
+                    <h4>Envío Gratis</h4>
+                    <p>Órdenes mayores a $22.999</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-shop"></i>
+                    <h4>Atención presencial</h4>
+                    <p>Lun a Vie 11 a 16 hs <br>Sáb 11 a 14 hs</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-rotate"></i>
+                    <h4>Garantía Devoluciones y Cambios</h4>
+                    <p>En todos los productos</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h4>Asesoramiento</h4>
+                    <p>¡Pre y postventa!</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Atencón online y telefónica</h4>
+                    <p>¡Contáctanos!</p>
+                </article>
+            </div>
+        </section>
+        
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+
+</body>
+
+</html>

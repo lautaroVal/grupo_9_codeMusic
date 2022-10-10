@@ -1,0 +1,364 @@
+/* MAIN */ 
+
+/* MAIN CARROUSEL */
+
+.figure_banner {
+    width: 100%;
+    margin: 0 auto 5px;
+}
+
+.figure_banner img {
+    width: 100%; 
+    min-height: 150px;
+    margin: 0;
+}
+
+/* MAIN PRODUCTS */
+
+.main_container {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.index_medios_de_pago {
+    height: 80px;
+    padding: 0px;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0 auto 20px;
+    width: 100%;
+}
+
+.index_medios_de_pago img {
+    width: 290px;
+}
+
+.index h1 {
+    color: var(--ColorAzulOscuro);
+    margin-bottom: 20px;
+    font-weight:bolder;
+    font-family: Hind ;
+}
+
+.index_section_products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.index_section_products hr {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+/* 
+#guitarras, #batterys, #pianos, #microphones, #winds  {  
+} */
+
+#guitarras{
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-méline-waxx-165971.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+#batterys{
+    background: linear-gradient(rgba(5, 7, 12, 0.415), rgba(5, 7, 12, 0.415)), url('../img/index/pexels-jadson-thomas-542553.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+} 
+#pianos{
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-torsten-dettlaff-2876659.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+} 
+#microphones{
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-wallace-chuck-3587478.jpg') no-repeat -23px center;
+    background-size: cover;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#winds  {
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-cottonbro-4709822.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#guitarras h2, #batterys h2, #pianos h2, #microphones h2, #winds h2 {
+    color: var(--ColorBlanco);
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+}
+
+
+/* .index_product */
+.index_product, .index_product_hide, .index_product_hide2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 46.5%;
+    max-width: 160px;
+    border-radius: 10px;
+    background-color: var(--ColorBlanco);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* .index_product */
+.index_section_products article:hover {
+    box-shadow: 1px 1px 10px rgb(84, 115, 138);
+}
+
+.index_product_img {
+    width: 100%;
+    height: 140px;
+}
+
+.index_product_img img {
+    width: 100%;
+    height: 100%;
+    margin: auto; 
+    object-fit: contain;
+
+}
+
+.index_product_title {
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.index_product_bottom {
+    color: #000000;
+    line-height: 20px;
+}
+
+.decimales  {
+    font-size: 7px;
+    position: relative;
+    top: -6px;
+    right: 0px;
+    font-weight: 500;
+}
+
+
+.index_product_envío {
+    color: var(--ColorAzul);
+    margin-bottom: 10px;
+}
+
+.index_button_product {
+    font-size: 13px;
+    padding: 3px 18px;
+    background-color: var(--ColorBlanco);
+    border-radius: 10px;
+    margin-top: 10px;
+    color: var(--ColorNegro);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+}
+
+.index_button_product:hover {
+    background-color: black;
+    color: white;
+}
+
+/* MAIN ARTICLES OCULTOS */
+
+.index_product_hide, .index_product_hide2 {
+    display: none;
+}
+
+/* MAIN INFO */
+
+.index_div_info {
+   /*  background-color: var(--ColorBlanco); */
+    color: var(--ColorNegro);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0px auto 70px;
+}
+
+.index_div_info article {
+    text-align: center;
+    width: 40%; 
+    margin-bottom: 20px;
+}
+
+.index_div_info article i {
+    color: var(--ColorAzul);
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.index_div_info article i:hover {
+    transform: rotate(360deg);
+}
+
+.index_div_info article h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.index_div_info article p {
+    font-size: 12px;
+}
+
+/* MAIN MARCAS */
+
+.index_div_marcas {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 90px;
+}
+
+.index_div_marcas div {
+    background-color: var(--ColorBlanco);
+    border-radius: 50%;
+    padding: 32px 20px;
+    margin-bottom: 10px;
+    margin: 0 10px 5px;
+}
+
+.index_div_marcas img {
+    width: 90px;
+}
+
+/* Whatsapp */
+#whatsapp  {
+    background-color: green;
+    color: #000000;
+    bottom: 90px;
+    position: fixed;
+    right: 20px;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+/* 
+----------------------------------------------------
+FOOTER */
+
+.index_footer{
+    background-color: var(--ColorNegro);
+    color: var(--ColorGris);
+    display: flex;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 55px 5px 5px 5px;
+    gap: 13px;
+    text-align:start;
+}
+
+.index_footer_nav{
+    margin-top: 10px;
+}
+
+.productDetail_footer_contac{
+    margin-top: 10px;
+}
+
+.productDetail_footer_redes i{
+    font-size: 25px;
+    padding: 2px;
+    margin: 3px;
+}
+
+/* 
+----------------------------------------------------------------------- */
+@media (min-width: 768px) {
+
+    /* MAIN  CARROUSEL */
+.figure_banner {
+    height: initial;
+}
+
+/* MAIN PRODUCTS */
+.main_container {
+    width: 98%;
+    justify-content: center;
+}
+
+.index_medios_de_pago img {
+    width: 360px;
+}
+
+.index_section_products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   /*  gap: 1px; */
+}
+
+#guitarras, #batterys, #pianos, #microphones, #winds {
+   width: 150px;
+}
+
+#batterys, #microphones {
+    order: 1;
+}
+
+.index_product_hide {
+    display: flex;
+}
+
+/* MAIN INFO */
+
+.index_div_info {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+}
+
+
+}
+/* 
+----------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+
+    .index_section_products {
+        justify-content: space-around;
+    }
+
+    .index_product_hide2 {
+        display: flex;
+    }
+
+
+}
