@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Brands'
+            tableName : 'brands'
           },
             key : 'id'
         }
@@ -39,7 +39,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Colors'
+            tableName : 'colors'
           },
             key : 'id'
         }
@@ -48,7 +48,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Categories'
+            tableName : 'categories'
           },
             key : 'id'
         }
@@ -58,11 +58,9 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: true,
         type: Sequelize.DATE
       },
       deleteAt: {
-        allowNull: true,
         type: Sequelize.DATE
       }
     });
