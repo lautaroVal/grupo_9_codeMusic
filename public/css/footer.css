@@ -8,8 +8,8 @@
     text-align: center;
     width: 100%;
     margin: 5px;
-    padding: 10px;
-    border-radius: 55px 5px 5px 5px;
+    padding: 30px 0px;
+    border-radius: 100px 0px 0px 0px;
     gap: 13px;
 }
 
@@ -27,6 +27,10 @@
 
 /* footer redes */
 
+.productDetail_footer_redes {
+    margin-top: 10px;
+}
+
 .productDetail_footer_redes i {
     font-size: 25px;
     padding: 2px;
@@ -38,16 +42,8 @@
 
 .productCart_footer_suscrip {
     display: none;
-    flex-direction: column;
-    gap: 5px 0;
 }
 
-.productCart_footer_suscrip input button {
-    padding: 3px;
-    margin-bottom: 2px;
-    border-radius: 5px;
-    border: none;
-}
 
 @media (min-width: 768px) {
 
@@ -56,7 +52,7 @@
     .productDetail_footer {
         justify-content: space-around;
         flex-direction: row;
-
+        text-align: inherit;
     }
 
     /* footer nav */
@@ -85,8 +81,35 @@
 @media (min-width: 1024px) {
 
     /* footer suscrip */
-
+    
     .productCart_footer_suscrip {
+        margin-top: 10px;
         display: flex;
+    }
+
+    .productCart_footer_suscrip form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px 0;
+        font-style: italic;
+        font-size: 14px;
+    }
+    
+    .productCart_footer_suscrip input {
+        background-color: var(--ColorNegro);
+        font-size: 10px;
+        font-weight:100;
+        padding: 3px 2px;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+    }
+
+    .productCart_footer_suscrip form button {
+        padding: 5px 0px;
+        margin-bottom: 2px;
+        border: none; 
+        width: 100px;
+        margin-top: 10px;
     }
 }

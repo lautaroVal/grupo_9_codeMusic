@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %> 
+<body>
+    <%- include('../partials/header') %>
+        <main>
+
+            <section class="index_section_products">
+            <% products.forEach(product => { %>
+                 
+                <article class="index_product">
+                    <div class="index_product_img"><img src="/img/imgProducts/<%=product.image ?  product.image: 'dp.jpg' %>" alt="product"></div>
+                    <!-- <div class="index_product_img"><img src="/img/imgProducts/<%= product.image%>" alt="product"></div> -->
+                    <hr>
+                    <h3 class="index_product_title"><%= product.name %>  </h3>
+                    <div class="index_product_bottom">
+                        <p class="precio">$<%= product.price %><em class="decimales"></em></p>
+                        <p class="index_product_envío"> Envío Gratis</p>
+                        <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver más</a>
+                    </div>
+                </article>
+
+            <% }) %>
+        </section>
+
+        </main>
+        <%- include('../partials/footer') %> 
+
+    </body>
+    
+    </html>

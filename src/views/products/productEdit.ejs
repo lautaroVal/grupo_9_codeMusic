@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body class="editAdd">
+        <%- include('../partials/header') %>
+            <main class="main_formulario">
+                <h4>Editar producto: <%= product.name %>
+                </h4>
+
+                <form class="main_formulario_contenedor" action="/products/productEdit/<%= product.id %>?_method=PUT"
+                    method="POST" enctype="multipart/form-data">
+
+                    <div>
+                        <label for="name">Nombre del producto</label>
+                        <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica"
+                            value="<%= product.name %>">
+                    </div>
+                    <div>
+                        <label for="description">Descripcion</label>
+                        <textarea name="description" id="description" cols="50"
+                            rows="10"><%= product.description %></textarea>
+                    </div>
+
+                    <div>
+                        <label for="imagen">Imagen de producto</label>
+                        <input type="file" name="image" id="imagen" accept="image/*"
+                            value="<%= product.image %>"><br><br>
+                    </div>
+
+                    <div>
+                        <label for="category" class="form-label">Elige una categoria:</label>
+                        <select name="category" id="category">
+                            <option value="guitarras" <%=product.category==="guitarras" && "selected" %>>Guitarras
+                            </option>
+                            <option value="baterias" <%=product.category==="baterias" && "selected" %>>Baterias</option>
+                            <option value="teclados" <%=product.category==="teclados" && "selected" %>>Teclados y Pianos
+                            </option>
+                            <option value="microfonosYSonidos" <%=product.category==="microfonosYSonidos" && "selected"
+                                %>>Microfonos y Sonido</option>
+                            <option value="deVientos" <%=product.category==="deVientos" && "selected" %>>Instrumentos de
+                                Viento</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="color" class="form-label">Elige un color:</label>
+                        <select name="color" id="color">
+
+                            <option value="negro" <%=product.color==="negro" && "selected" %>>Negro</option>
+                            <option value="blanco" <%=product.color==="blanco" && "selected" %>>Blanco</option>
+                            <option value="rojo" <%=product.color==="rojo" && "selected" %>>Rojo</option>
+                            <option value="dorado" <%=product.color==="dorado" && "selected" %>>Dorado</option>
+                            <option value="plateado" <%=product.color==="plateado" && "selected" %>>Plateado</option>
+                            <option value="marron" <%=product.color==="marron" && "selected" %>>Marrón</option>
+                            <option value="azul" <%=product.color==="azul" && "selected" %>>Azul</option>
+                            <option value="amarillo" <%=product.color==="amarillo" && "selected" %>>Amarillo</option>
+                            <option value="verde" <%=product.color==="verde" && "selected" %>>Verde</option>
+                            <option value="naranja" <%=product.color==="naranja" && "selected" %>>Naranja</option>
+                            <option value="violeta" <%=product.color==="violeta" && "selected" %>>Violeta</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="precio">Precio</label>
+                        <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000"
+                            value="<%= product.price %>">
+                    </div>
+
+
+                    <div>
+                        <label for="status">Oferta:</label>
+                        <input type="radio" name="status" id="status" value="oferta" <%=product.status==="oferta"
+                            && "checked" %>> En oferta
+                        <input type="radio" name="status" id="estado" value="no-oferta" <%=product.status==="no-oferta"
+                            && "checked" %>> Sin oferta
+                    </div>
+
+
+                    <div class="formulario_enviar">
+                        <button type="submit">Enviar</button>
+                    </div>
+
+                </form>
+
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

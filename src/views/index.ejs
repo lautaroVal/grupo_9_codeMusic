@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head') %>
+
+    <body class="index">
+        <%- include('./partials/header') %>
+
+            <main>
+                <figure class="figure_banner">
+                    <img src="/img/index/banner-codemusic.jpg" alt="Carrousel">
+                </figure>
+
+                <div class="main_container">
+
+                    <div class="index_medios_de_pago">
+                        <p>
+                            <img src="\img\index\mp-chicosvg1.jpg" alt="medios de pago">
+                        </p>
+                    </div>
+
+                    <h1>OFERTAS</h1>
+                    <section class="index_section_products">
+                        <% oferta.forEach((product,index)=> { %>
+                            
+                                <article class="index_product">
+                                    <div class="index_product_img"><img
+                                            src="<%= /http/.test(product.image) ? product.image : " /img/imgProducts/" +
+                                            product.image %>" alt="product"></div>
+                                    <hr>
+                                    <h3 class="index_product_title">
+                                        <%= product.name %>
+                                    </h3>
+                                    <div class="index_product_bottom">
+                                        <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
+                                        <p class="index_product_envío"> Envío Gratis</p>
+                                        <a href="/products/productDetail/<%=product.id %>"
+                                            class="index_button_product">Ver más</a>
+                                    </div>
+                                </article>
+                                <% }) %>
+
+                    </section>
+
+                    <div class="index_div_info">
+                        <article>
+                            <i class="fa-solid fa-truck"></i>
+                            <h4>Envío Gratis</h4>
+                            <p>Órdenes mayores a $22.999</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-shop"></i>
+                            <h4>Atención presencial</h4>
+                            <p>Lun a Vie 11 a 16 hs <br>Sáb 11 a 14 hs</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-rotate"></i>
+                            <h4>Garantía Devoluciones y Cambios</h4>
+                            <p>En todos los productos</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-info"></i>
+                            <h4>Asesoramiento</h4>
+                            <p>¡Pre y postventa!</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-phone"></i>
+                            <h4>Atencón online y telefónica</h4>
+                            <p>¡Contáctanos!</p>
+                        </article>
+                    </div>
+
+                    <h1>Nuestras Marcas</h1>
+
+                    <div class="index_div_marcas">
+                        <div>
+                            <img src="/img/index/Logos-07.png" alt="">
+                        </div>
+                        <div>
+                            <img src="/img/index/Logos-08.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-09.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-10.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-11.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-12.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-18.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-30.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-35.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-37.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-39.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-47.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-51.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-64.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-67.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-72.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-208.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-254.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-36.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-38.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-40.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-42.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-45.png" alt="">
+                        </div>
+                        <div>
+                            <img src="\img\index\Logos-48.png" alt="">
+                        </div>
+                    </div>
+
+                    <section class="index_section_products" id="guitar">
+                        <div id="guitarras">
+                            <p>
+                            <h2>Guitarras</h2>
+                            </p>
+                        </div>
+                        <% guitarras.forEach((product,index)=> { %>
+                         
+                            <article class="index_product">
+                                <div class="index_product_img"><img
+                                        src="<%= /http/.test(product.image) ? product.image : " /img/imgProducts/" +
+                                        product.image %>" alt="product"></div>
+                                <hr>
+                                <h3 class="index_product_title">
+                                    <%= product.name %>
+                                </h3>
+                                <div class="index_product_bottom">
+                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
+                                    <p class="index_product_envío"> Envío Gratis</p>
+                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
+                                        más</a>
+                                </div>
+                            </article>
+                        
+                            <%}) %>
+
+                    </section>
+
+                    <section class="index_section_products" id="battery">
+                        <div id="batterys">
+                            <p>
+                            <h2>Baterias</h2>
+                            </p>
+                        </div>
+
+                        <% baterias.forEach(product=> { %>
+
+                            <article class="index_product">
+                                <div class="index_product_img"><img
+                                        src="<%= /http/.test(product.image) ? product.image : " /img/imgProducts/" +
+                                        product.image %>" alt="product"></div>
+                                <hr>
+                                <h3 class="index_product_title">
+                                    <%= product.name %>
+                                </h3>
+                                <div class="index_product_bottom">
+                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
+                                    <p class="index_product_envío"> Envío Gratis</p>
+                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
+                                        más</a>
+                                </div>
+                            </article>
+                            <% }) %>
+
+                    </section>
+
+                    <section class="index_section_products" id="piano">
+                        <div id="pianos">
+                            <p>
+                            <h2>Teclados y pianos</h2>
+                            </p>
+                        </div>
+
+                        <% teclados.forEach(product=> { %>
+
+                            <article class="index_product">
+                                <div class="index_product_img"><img
+                                        src="<%= /http/.test(product.image) ? product.image : " /img/imgProducts/" +
+                                        product.image %>" alt="product"></div>
+                                <hr>
+                                <h3 class="index_product_title">
+                                    <%= product.name %>
+                                </h3>
+                                <div class="index_product_bottom">
+                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
+                                    <p class="index_product_envío"> Envío Gratis</p>
+                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
+                                        más</a>
+                                </div>
+                            </article>
+                            <% }) %>
+
+                    </section>
+
+                    <section class="index_section_products" id="microphone">
+                        <div id="microphones">
+                            <p>
+                            <h2>Micrófonos y sonido</h2>
+                            </p>
+                        </div>
+                        <% microfonosYSonidos.forEach(product=> { %>
+
+                            <article class="index_product">
+                                <div class="index_product_img"><img
+                                        src="<%= /http/.test(product.image) ? product.image : " /img/imgProducts/" +
+                                        product.image %>" alt="product"></div>
+                                <hr>
+                                <h3 class="index_product_title">
+                                    <%= product.name %>
+                                </h3>
+                                <div class="index_product_bottom">
+                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
+                                    <p class="index_product_envío"> Envío Gratis</p>
+                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
+                                        más</a>
+                                </div>
+                            </article>
+                            <% }) %>
+
+                    </section>
+
+                    <section class="index_section_products" id="wind">
+                        <div id="winds">
+                            <p>
+                            <h2>Instrumentos de viento</h2>
+                            </p>
+                        </div>
+                        <% deVientos.forEach(product=> { %>
+
+                            <article class="index_product">
+                                <div class="index_product_img"><img
+                                        src="<%= /http/.test(product.image) ? product.image : " /img/imgProducts/" +
+                                        product.image %>" alt="product"></div>
+                                <hr>
+                                <h3 class="index_product_title">
+                                    <%= product.name %>
+                                </h3>
+                                <div class="index_product_bottom">
+                                    <p class="precio">
+                                        <%= toThousand(product.price) %><em class="decimales">99</em>
+                                    </p>
+                                    <p class="index_product_envío"> Envío Gratis</p>
+                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
+                                        más</a>
+                                </div>
+                            </article>
+                            <% }) %>
+
+                    </section>
+                </div>
+
+            </main>
+
+            <div id="whatsapp" >
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <%- include('./partials/footer') %>
+
+    </body>
+
+</html>
