@@ -9,7 +9,10 @@ const localsUserCheck = require('./middlewares/localsUserCheck');
 const cookieCheck = require('./middlewares/cookieCheck');
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9672505ef0a162f31bdb83e18e5708d33dd99ebe
 const methodOverride = require('method-override');
 
 const app = express();
