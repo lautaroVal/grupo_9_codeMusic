@@ -25,6 +25,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      deleteAt: {
+        allowNull: true,
+        type: Sequelize.DATE
       }
     });
   },
