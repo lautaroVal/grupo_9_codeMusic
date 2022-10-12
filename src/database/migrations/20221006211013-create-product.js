@@ -26,7 +26,7 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
-      brandsId: {
+      brandId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -35,7 +35,7 @@ module.exports = {
             key : 'id'
         }
       },
-      colorsId: {
+      colorId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -44,7 +44,7 @@ module.exports = {
             key : 'id'
         }
       },
-      categoriesId: {
+      categoryId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -60,7 +60,7 @@ module.exports = {
       updatedAt: {
         type: Sequelize.DATE
       },
-      deleteAt: {
+      deletedAt: {
         type: Sequelize.DATE
       }
     });

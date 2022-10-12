@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       musicFav: {
-        type: Sequelize.STRING
+        type: Sequelize.JSON
       },
       genre: {
         type: Sequelize.STRING
@@ -45,7 +45,7 @@ module.exports = {
           key : 'id'
         }
       },
-      categoryId: {
+      rolId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -59,7 +59,9 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        type: Sequelize.DATE
+      },
+      deletedAt: {
         type: Sequelize.DATE
       }
     });
