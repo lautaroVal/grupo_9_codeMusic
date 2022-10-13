@@ -206,7 +206,7 @@
                     <section class="index_section_products" id="piano">
                         <div id="pianos">
                             <p>
-                            <h2>Teclados y pianos</h2>
+                            <h2>Teclados</h2>
                             </p>
                         </div>
 
@@ -275,8 +275,7 @@
                                     <%= product.name %>
                                 </h3>
                                 <div class="index_product_bottom">
-                                    <p class="precio">
-                                        <%= toThousand(product.price) %><em class="decimales">99</em>
+                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em>
                                     </p>
                                     <p class="index_product_envío"> Envío Gratis</p>
                                     <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver

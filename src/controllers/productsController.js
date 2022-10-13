@@ -1,3 +1,4 @@
+const db = require('../database/models');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
 
@@ -45,7 +46,7 @@ module.exports = {
 	},
 
 	productAddStore: (req, res) => {
-		let errors = validationResult(req)
+		let errors = validationResult(req);
 		if (errors.isEmpty()) {
 			const { name, price, discount, description, category, color, status } = req.body
 			const products = loadProducts();
@@ -62,7 +63,7 @@ module.exports = {
 				decimals: null,
 				discount: +discount,
 				status,
-				cuotas: 12
+				share: 12
 			}
 
 			const productsModify = [...products, newProduct];
@@ -102,9 +103,9 @@ module.exports = {
 					description: description,
 					image: req.file ? req.file.filename : product.image,
 					category,
+					discount: +discount,
 					color,
 					price: +price,
-					discount: +discount,
 					status
 				}
 			}

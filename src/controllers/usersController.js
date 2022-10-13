@@ -1,3 +1,4 @@
+const db = require('../database/models');
 const { loadUsers, storeUsers } = require('../data/usersModule');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
@@ -14,29 +15,25 @@ module.exports = {
         if (errors.isEmpty()) {
             const { firstName, lastName, email, telephone, password } = req.body;
             let users = loadUsers();
-
             let newUser = {
                 id: users.length > 0 ? users[users.length - 1].id + 1 : 1,
                 firstName: firstName,
                 lastName: lastName,
                 email: email,
                 username: "",
-                provincia: "",
-                localidad: "",
-                calle: "",
-                musicaFav: "",
-                genero: "",
-                biografia: "",
+                province: "",
+                location: "",
+                street: "",
+                musicFav: "",
+                gender: "",
+                biography: "",
                 telephone: +telephone,
                 password: bcryptjs.hashSync(password, 12),
                 category: "User",
                 avatar: "default-users-image.jpg"
             }
-
             let usersModify = [...users, newUser];
-
             storeUsers(usersModify);
-
             return res.redirect('/users/login');
         } else {
             return res.render('users/register', {
@@ -57,7 +54,7 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-            let { id, firstName, lastName, email, telephone, category, avatar} = loadUsers().find(user => user.email === req.body.email);
+            let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
 
             req.session.userLogin = {
                 id,
@@ -92,37 +89,37 @@ module.exports = {
             user,
         })
     },
-    
-    update: (req,res) => {
-      
-       /*  return res.send(req.body); */
+
+    update: (req, res) => {
+
+        /*  return res.send(req.body); */
         let errors = validationResult(req);
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
             let users = loadUsers();
-            const {avatar,firstName,lastName,username,genero,telephone,musicaFav,provincia,localidad,calle,biografia } = req.body;
+            const { avatar, firstName, lastName, username, gender, telephone, musicFav, province, location, street, biography } = req.body;
             let image = req.files.map((file) => file.filename);
-            
+
             const usersModify = users.map(user => {
                 if (user.id === +req.session.userLogin.id) {
                     return {
-                ...user,
-                avatar : image.length === 0 ? user.avatar : image[0],
-                firstName :firstName?.trim(),
-                lastName : lastName?.trim(),
-                username : username.trim(),
-                category: user.category,
-                genero,
-                email: user.email,
-                musicaFav,
-                provincia,
-                localidad : localidad.trim(),
-                calle : calle.trim(),
-                biografia : biografia.trim(),
-                telephone : +telephone,
-            }
-        }
-        return user;
-    })   
+                        ...user,
+                        avatar: image.length === 0 ? user.avatar : image[0],
+                        firstName: firstName?.trim(),
+                        lastName: lastName?.trim(),
+                        username: username.trim(),
+                        category: user.category,
+                        gender,
+                        email: user.email,
+                        musicFav,
+                        province,
+                        location: location.trim(),
+                        street: street.trim(),
+                        biography: biography.trim(),
+                        telephone: +telephone,
+                    }
+                }
+                return user;
+            })
             /* return res.send(usersModify); */
             req.session.userLogin = {
                 id: req.session.userLogin.id,
@@ -140,21 +137,21 @@ module.exports = {
             storeUsers(usersModify);
             return res.redirect('/');
 
-        }else{
+        } else {
             let users = loadUsers();
             const user = users.find(user => user.id === req.session.userLogin.id);
-            return res.render('users/profile',{
+            return res.render('users/profile', {
                 title: 'Perfil de usuario',
-                errors : errors.mapped(),
-                old : req.body,
+                errors: errors.mapped(),
+                old: req.body,
                 user
             })
         }
     },
-    
+
     logout: (req, res) => {
         req.session.destroy();
-        res.cookie('codeMusic',null,{maxAge: -1});
+        res.cookie('codeMusic', null, { maxAge: -1 });
         return res.redirect('/');
     }
 }
