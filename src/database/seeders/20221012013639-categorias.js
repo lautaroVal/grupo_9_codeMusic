@@ -2,9 +2,6 @@
 
 const categories = [
   {
-    name : 'oferta',
-    createdAt : new Date()},
-  {
     name : 'guitarras',
     createdAt : new Date()},
   {
