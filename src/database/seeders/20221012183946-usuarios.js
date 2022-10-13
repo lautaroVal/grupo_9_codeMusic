@@ -8,23 +8,23 @@ const users = usersDB.map(user => {
   }
 });
 
-/** @type {import('sequelize-cli').Migration} */
+// /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
     
     //  Add seed commands here.
      
       // Example:
-      await queryInterface.bulkInsert('Users', {});
+      await queryInterface.bulkInsert('Users', users, {});
     
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    
+    //  Add commands to revert seed here.
+     
+      // Example:
+    await queryInterface.bulkDelete('Users', null, {});
+    
   }
 };

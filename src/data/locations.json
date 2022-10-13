@@ -1,13 +1,13 @@
 [
     {
-        "province": "Buenos Aires",
-        "location": "San Miguel",
-        "street" : "La Juana"
+      "province": "Buenos Aires",
+      "location": "San Miguel",
+      "street" : "La Juana"
     },
     {
-        "province": "Tucumán",
-        "location": "San Miguel",
-        "street" : "123"
+      "province": "Tucumán",
+      "location": "San Miguel",
+      "street" : "123"
     },
     {
       "province": "Buenos Aires",
