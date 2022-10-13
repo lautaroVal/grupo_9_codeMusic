@@ -2,22 +2,19 @@
 
 const categories = [
   {
-    name : 'oferta',
+    name : 'Guitarras',
     createdAt : new Date()},
   {
-    name : 'guitarras',
+    name : 'Baterias',
     createdAt : new Date()},
   {
-    name : 'baterias',
+    name : 'Teclados',
     createdAt : new Date()},
   {
-    name : 'teclados',
+    name : 'Micrófonos y sonidos',
     createdAt : new Date()},
   {
-    name : 'microfonosYSonidos',
-    createdAt : new Date()},
-  {
-    name : 'deVientos',
+    name : 'Vientos',
     createdAt : new Date()}
 ]
 
