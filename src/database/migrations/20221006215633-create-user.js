@@ -36,23 +36,11 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      avatarId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'avatars'
-          },
-          key : 'id'
-        }
+      avatar: {
+        type: Sequelize.STRING
       },
-      rolId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'roles'
-          },
-          key : 'id'
-        }
+      rol: {
+        type: Sequelize.TINYINT
       },
       createdAt: {
         allowNull: false,
