@@ -1,98 +1,98 @@
 [
     {
         "name": "Yamaha",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Fender",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Taylor",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Shure",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Casio",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Korg",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Ampeg",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Audio-technica",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Behringer",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Beyerdynamic",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Blackstar",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Hercules",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Zildjian",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "D'addario",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Stagg",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Phonic",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Ibanez",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Roland",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Roy Benson",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "BLG Audio",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Bogner Amplification",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Breyer",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Pearl",
-        "category": ""
+        "categoryId": ""
     },
     {
         "name": "Gator Cases",
-        "category": ""
+        "categoryId": ""
     }
 ]
