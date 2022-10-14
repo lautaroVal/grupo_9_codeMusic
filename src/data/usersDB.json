@@ -1,86 +1,69 @@
 [
    {
-      "id": 1,
       "firstName": "Lautaro",
       "lastName": "Valenzuela",
       "email": "Lautaros@gmail.com",
       "username": "lauti",
-      "province": "Buenos Aires",
-      "location": "San Miguel",
-      "street": "La Juana",
       "musicFav": [
          "Clásica",
          "Pop"
       ],
-      "gender": "masculino",
+      "genre": "masculino",
       "telephone": 1151753300,
       "password": "$2a$12$SwOa6U/Kl4dngzvraFYFE.X7rp0rqd9rwFj3Ly3Tfe18t5zOd/8ji",
-      "category": "Admin",
-      "avatar": "Img-1662863297885.jpg",
+      "avatarId": "",
+      "rolId": "Admin",
       "biography": "Soy estudiante de programación :)"
    },
    {
-      "id": 5,
       "firstName": "Joaquin",
       "lastName": "Vucetich",
       "email": "Joaquing@gmail.com",
       "username": "joachon",
-      "province": "Tucumán",
-      "location": "San Miguel",
-      "street": "123",
       "telephone": 1151754566,
       "password": "$2a$12$gCT2JDO1mhm8b0MDLgRfIOdPgROU8mjc2PLsw4Ul8u3JCZKqSXM/e",
-      "category": "User",
-      "avatar": "Img-1662862707980.jpg",
+      "avatarId": "",
+      "rolId": "User",
       "biography": "Hola soy el joachon xDxdD",
-      "gender": "otro",
+      "genre": "otro",
       "musicFav": [
          "Rock",
-         "Jazz",
-         "Clásica",
          "Pop"
       ]
    },
    {
-      "id": 6,
       "firstName": "Emanuel",
       "lastName": "Arroyo",
       "email": "emaA@gmail.com",
       "username": "Ema",
-      "province": "Buenos Aires",
-      "location": "Jose c paz",
-      "street": "",
       "musicFav": [
          "Rock",
          "Jazz",
          "Clásica"
       ],
-      "gender": "masculino",
+      "genre": "masculino",
       "biography": "12313123123",
       "telephone": 1154659878,
       "password": "$2a$12$e8dtcTq4KuXWVEe4jBVVmu/hWlQmM78q3hlL6pyAKV3V8Yi55FmT2",
-      "category": "Admin",
-      "avatar": "Img-1663007944800.png"
+      "avatarId": "",
+      "rolId": "Admin"
+      
    },
    {
-      "id": 7,
       "firstName": "Marcos",
       "lastName": "Mansilla",
       "email": "marcos@gmail.com",
       "username": "Marckk",
-      "province": "Buenos Aires",
-      "location": "Berisso",
-      "street": "larrea",
       "biography": "Aprendiendo a Programar",
       "telephone": 1231231233,
       "password": "$2a$12$VWRWdbyPxNhsuQtChHwMYuTMfBoXE9i0Loon4GDKJE3GsycvdZHpK",
-      "category": "Admin",
-      "avatar": "Img-1663202007245.jpg",
-      "gender": "masculino",
+      "avatarId": "",
+      "rolId": "Admin",
+      "genre": "masculino",
       "musicFav": [
          "Rock",
          "Jazz",
          "Clásica"
       ]
    }
-]
+ ]
