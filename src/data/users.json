@@ -25,15 +25,9 @@
       "lastName": "Vucetich",
       "email": "Joaquing@gmail.com",
       "username": "joachon",
-<<<<<<< HEAD
-      "provincia": "Tucuman",
-      "localidad": "San Miguel",
-      "calle": "123",
-=======
       "province": "Tucumán",
       "location": "San Miguel",
       "street": "123",
->>>>>>> develop
       "telephone": 1151754566,
       "password": "$2a$12$gCT2JDO1mhm8b0MDLgRfIOdPgROU8mjc2PLsw4Ul8u3JCZKqSXM/e",
       "category": "User",
