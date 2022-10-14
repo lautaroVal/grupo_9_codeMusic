@@ -1,95 +1,126 @@
 [
     {
-        "image": "guitarra_electrica_yamaha_pacifica_012_dark.jpg"
+        "name": "guitarra_electrica_yamaha_pacifica_012_dark.jpg",
+        "productId": 1
     },
     {
-        "image": "81WrWq-bKTL._AC_SX679_.jpg"
+        "name": "81WrWq-bKTL._AC_SX679_.jpg",
+        "productId": 2
     },
     {
-        "image": "340333000-1-300x300.jpg"
+        "name": "340333000-1-300x300.jpg",
+        "productId": 3
     },
     {
-        "image": "D_821154-MLA42066070556_062020-F-600x288.jpg"
+        "name": "D_821154-MLA42066070556_062020-F-600x288.jpg",
+        "productId": 4
     },
     {
-        "image": "D_NQ_NP_674442-MLA46543861330_062021-O.JPEG"
+        "name": "D_NQ_NP_674442-MLA46543861330_062021-O.JPEG",
+        "productId": 5
     },
     {
-        "image": "1410171854593622_01_medium.jpg"
+        "name": "1410171854593622_01_medium.jpg",
+        "productId": 6
     },
     {
-        "image": "GuitarraElectrica.jpg"
+        "name": "GuitarraElectrica.jpg",
+        "productId": 7
     },
     {
-        "image": "D_NQ_NP_625727-MLA46364642352_062021-F.jpg"
+        "name": "D_NQ_NP_625727-MLA46364642352_062021-F.jpg",
+        "productId": 8
     },
     {
-        "image": "D_NQ_NP_2X_910187-MLA48762610667_012022-F.jpg"
+        "name": "D_NQ_NP_2X_910187-MLA48762610667_012022-F.jpg",
+        "productId": 9
     },
     {
-        "image": "D_NQ_NP_2X_636157-MLA50024611111_052022-F(1).jpg"
+        "name": "D_NQ_NP_2X_636157-MLA50024611111_052022-F(1).jpg",
+        "productId": 10
     },
     {
-        "image": "D_NQ_NP_2X_907196-MLA43642239581_102020-F(1).jpg"
+        "name": "D_NQ_NP_2X_907196-MLA43642239581_102020-F(1).jpg",
+        "productId": 11
     },
     {
-        "image": "D_NQ_NP_720076-MLA44038833575_112020-O(1).jpg"
+        "name": "D_NQ_NP_720076-MLA44038833575_112020-O(1).jpg",
+        "productId": 12
     },
     {
-        "image": "D_NQ_NP_2X_951992-MLA49272663857_032022-F.jpg"
+        "name": "D_NQ_NP_2X_951992-MLA49272663857_032022-F.jpg",
+        "productId": 13
     },
     {
-        "image": "Img-1665419510064.webp"
+        "name": "Img-1665419510064.webp",
+        "productId": 14
     },
     {
-        "image": "Img-1665419653864.webp"
+        "name": "Img-1665419653864.webp",
+        "productId": 15
     },
     {
-        "image": "Img-1665419103755.webp"
+        "name": "Img-1665419103755.webp",
+        "productId": 16
     },
     {
-        "image": "D_NQ_NP_738608-MLA44112471285_112020-O.webp"
+        "name": "D_NQ_NP_738608-MLA44112471285_112020-O.webp",
+        "productId": 17
     },
     {
-        "image": "Img-1665546092440.webp"
+        "name": "Img-1665546092440.webp",
+        "productId": 18
     },
     {
-        "image": "Img-1665545839011.webp"
+        "name": "Img-1665545839011.webp",
+        "productId": 19
     },
     {
-        "image": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp"
+        "name": "D_NQ_NP_2X_975559-MLA32542990330_102019-F.webp",
+        "productId": 20
     },
     {
-        "image": "Img-1665580720784.webp"
+        "name": "Img-1665580720784.webp",
+        "productId": 21
     },
     {
-        "image": "Img-1665580911181.webp"
+        "name": "Img-1665580911181.webp",
+        "productId": 22
     },
     {
-        "image": "Img-1665581257171.webp"
+        "name": "Img-1665581257171.webp",
+        "productId": 23
     },
     {
-        "image": "Img-1665581841238.webp"
+        "name": "Img-1665581841238.webp",
+        "productId": 24
     },
     {
-        "image": "Img-1663006720912.jpg"
+        "name": "Img-1663006720912.jpg",
+        "productId": 25
     },
     {
-        "image": "Img-1665582301229.webp"
+        "name": "Img-1665582301229.webp",
+        "productId": 26
     },
     {
-        "image": "Img-1665582466134.webp"
+        "name": "Img-1665582466134.webp",
+        "productId": 27
     },
     {
-        "image": "Img-1665582722713.webp"
+        "name": "Img-1665582722713.webp",
+        "productId": 28
     },
     {
-        "image": "D_NQ_NP_917263-MLA41662325703_052020-F.jpg"
+        "name": "D_NQ_NP_917263-MLA41662325703_052020-F.jpg",
+        "productId": 29
     },
     {
-        "image": "Img-1665589306414.webp"
+        "name": "Img-1665589306414.webp",
+        "productId": 30
     },
     {
-        "image": "Img-1662932198273.jpg"
+        "name": "Img-1662932198273.jpg",
+        "productId": 31
     }
 ]
