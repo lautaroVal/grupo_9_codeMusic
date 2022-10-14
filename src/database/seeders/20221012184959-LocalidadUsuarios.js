@@ -1,13 +1,27 @@
 'use strict';
 
-
-const userLocationsDB = require('../../data/userLocations.json');
-const userLocations = userLocationsDB.map(userLocation => {
-  return {
-    ...userLocation,
-    createdAt: new Date()
+const userLocations = [
+  {
+      "userId" : 1,
+      "locationId" : 1,
+      createdAt: new Date()
+  },
+  {
+      "userId" : 2,
+      "locationId" : 2,
+       createdAt: new Date()
+  },
+  {
+      "userId" : 3,
+      "locationId" : 3,
+       createdAt: new Date()
+  },
+  {
+      "userId" : 4,
+      "locationId" : 4,
+       createdAt: new Date()
   }
-});
+]
 
 
 // /** @type {import('sequelize-cli').Migration} */
@@ -17,7 +31,7 @@ module.exports = {
       // Add seed commands here.
      
       // Example:
-      await queryInterface.bulkInsert('userLocations', userLocation, {});
+      await queryInterface.bulkInsert('userLocations', userLocations, {});
     
   },
 

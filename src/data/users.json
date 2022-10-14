@@ -36,6 +36,8 @@
       "gender": "otro",
       "musicFav": [
          "Rock",
+         "Jazz",
+         "Clásica",
          "Pop"
       ]
    },
