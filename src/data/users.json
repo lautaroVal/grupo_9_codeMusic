@@ -82,5 +82,22 @@
          "Jazz",
          "Clásica"
       ]
+   },
+   {
+      "id": 8,
+      "firstName": "Nahiara",
+      "lastName": "Belvedere",
+      "email": "belvederenahiara@gmail.com",
+      "username": "",
+      "province": "",
+      "location": "",
+      "street": "",
+      "musicFav": "",
+      "gender": "",
+      "biography": "",
+      "telephone": 1140876213,
+      "password": "$2a$12$5R6gMafibRQH7nCnYsrV3ORUCUG6XkExD8lcRFtYA7d2Z347QaZFa",
+      "category": "User",
+      "avatar": "default-users-image.jpg"
    }
 ]
