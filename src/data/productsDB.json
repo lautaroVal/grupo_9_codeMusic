@@ -7,7 +7,7 @@
       "discount": 0,
       "description": "La serie Yamaha Pacifica es una gama creada en los años 90, la cual sigue vigente a día de hoy gracias a una gran variedad de modelos y una versatilidad sin igual.",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 1,
       "categoryId": 1
    },
    {
@@ -18,7 +18,7 @@
       "discount": 0,
       "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
       "colorId": 3,
-      "brandId": null,
+      "brandId": 1,
       "categoryId": 2
    },
    {
@@ -29,7 +29,7 @@
       "discount": 0,
       "description": "Elementos básicos para aprender a tocar, como el botón de acceso directo a la configuración de piano y la función “Yamaha Education Suite”, así como funciones que se utilizan durante las actuaciones en directo, como los botones de control de sintetizador para obtener un control en tiempo real de filtros, efectos, envolvente de sonido y. Se pueden agregar nuevos colores para los distintos estilos musicales mediante el uso de 150 patrones distintos y 40 arpegios. Estas sencillas prestaciones, junto con el acabado en negro mate del instrumento, han puesto este teclado en el punto de mira de los intérpretes.",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 1,
       "categoryId": 3
    },
    {
@@ -39,7 +39,7 @@
       "share": 12,
       "discount": null,
       "description": "Diseño portátil, delgado y elegante. Con el CTS100, podes disfrutar de la música en cualquier momento y lugar. Su tamaño compacto de 930 mm x 256 mm x 73 mm es un 30 % más pequeño en volumen que los modelos CTK1500 y CTK1550. Llevarlo es muy sencillo, gracias a un mango en la parte superior del teclado y un peso de solo 3,3 kg. El diseño incorpora bordes y esquinas redondeados, lo cual permite transportarlo con mayor seguridad. Una interfaz fácil de usar para todos, simple e intuitiva que cuenta con un diseño organizado con menos botones.",
-      "brandId": null,
+      "brandId": 5,
       "colorId": 1,
       "categoryId": 3
    },
@@ -51,7 +51,7 @@
       "discount": 0,
       "description": "30 watts 4 canales Parlante Custom de 10 Con Reverb Efectos: Phaser Flanger, Delay, Chorus Ecualizador de 3 bandas Entradas: Jack 6.3mm (Guitarra) y Minijack 3.5mm (Auxiliar) Salida de auriculares: 3.5mm Entrada para footswitch (no incluido) Afinador Botón de tap tempo Forrado en Tolex negroDimensiones: 42 x 48 x 22,6 cm Peso: 10 kg",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 25,
       "categoryId": 4
    },
    {
@@ -62,7 +62,7 @@
       "discount": null,
       "description": "Amplificador Guitarra Ibanez IBZ10GU Combo 10 Watts Este amplificador de guitarra de 10 vatios le proporciona una distorsión crujiente que esperaría de una pila mucho más grande. El gabinete tiene un diseño de respaldo abierto para su respuesta de bajo nivel, mientras que el ecualizador de 3 bandas mantiene intactos sus agudos. El Ibanez IBZ10G es un pequeño amplificador de práctica para guitarra. Cuenta con 10 vatios de potencia, altavoz de 6.5 ¿ y 2 bandas de ecualización. El IBZ10G está diseñado para guitarra eléctrica, pero también puede usar una guitarra acústica. Otras características incluyen gabinete cerrado para mayor respuesta de graves, un interruptor de encendido / apagado de distorsión y control de volumen. También hay un conector para auriculares para práctica privada (y para mantener a otros fuera de su estuche), y una entrada auxiliar para su iPod, reproductor de CD, etc.",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 17,
       "categoryId": 4
    },
    {
@@ -73,7 +73,7 @@
       "discount": null,
       "description": "les paul",
       "colorId": null,
-      "brandId": null,
+      "brandId": 26,
       "categoryId": 1
    },
    {
@@ -84,7 +84,7 @@
       "discount": 0,
       "description": "Fabricada en álamo con acabado de laca poliuretánica. Con 6 cuerdas y 21 trastes de tamaño medium jumbo. El largo de escala es de 25.5 .El puente es fijo. Incluye 2 micrófonos simples. Controles de selector de micrófonos, tono y volumen. Sonidos fuertes y firmes con un estilo propio.",
       "colorId": 6,
-      "brandId": null,
+      "brandId": 2,
       "categoryId": 1
    },
    {
@@ -95,7 +95,7 @@
       "discount": null,
       "description": "Fabricada en caoba con acabado brillante. Con 6 cuerdas y 22 trastes de tamaño medium jumbo. El largo de escala es de 24.72 .El puente es fijo.Incluye 2 micrófonos simples.Controles de selector de micrófonos, tono y volumen.Sonidos fuertes y firmes con un estilo propio.",
       "colorId": 3,
-      "brandId": null,
+      "brandId": 26,
       "categoryId": 1
    },
    {
@@ -106,7 +106,7 @@
       "discount": 0,
       "description": "Estado: Nuevo Marca: Ibanez Origen: Indonesia Garantía: 6 meses (oficial) Especificaciones técnicas: Tipo de mango: AM Expressionist – 3 piezas Nato/Maple Cuerpo: Linden Trastera: Ébano de Macassar Trastes: 22 Puente: Gibraltar Performer Espaciado de cuerdas: 10.5mm Cordal: VT06 Micrófonos: 2x Super 58 (alnico, pasivos) Calibre de cuerdas: .010/.013/.017/.030/.042/.052 Cejilla: Plástica Color de hardware: Dorado",
       "colorId": 3,
-      "brandId": null,
+      "brandId": 17,
       "categoryId": 1
    },
    {
@@ -117,7 +117,7 @@
       "discount": 0,
       "description": "Tapa de abeto. Acabado de open pore. Forma del cuerpo: concert. El largo de escala es 648mm. Tiene 6 cuerdas de metal. Guitarra versátil que se adapta a una gran variedad de estilos musicales.r",
       "colorId": 6,
-      "brandId": null,
+      "brandId": 27,
       "categoryId": 1
    },
    {
@@ -128,7 +128,7 @@
       "discount": 0,
       "description": "BATERIA ACÚSTICA PARQUER 5 CUERPOS ROJA Bombo 22'x16'- Tom de pie 16'x16', Toms 12' y 10' Tambor 14'x 5,5' - Incluye Platos Hihat 14x2 y Crash 16x1 y Banqueta - Pedal de Bombo - Pies: Dobles Cromados",
       "colorId": 3,
-      "brandId": null,
+      "brandId": 28,
       "categoryId": 2
    },
    {
@@ -139,7 +139,7 @@
       "discount": 0,
       "description": "BATERIA ACUSTICA YAMAHA 5 CUERPOS RDP2F5 BURGANDY GLITTER NO INCLUYE FIERROS, PLATILLOS Y PEDALES Bombo de 22” x 16”Timbal base de 16” x 15”Tom de 12” x 8”Tom de 10” x 7”Caja de 14” x 5,5”Sujeciones de tom CL940LB x 2",
       "colorId": 3,
-      "brandId": null,
+      "brandId": 1,
       "categoryId": 2
    },
    {
@@ -150,7 +150,7 @@
       "discount": null,
       "description": "BATERIA MAPEX STORM ROCK\r\n\r\n- 5 cuerpos\r\n- 5 Fierros + Banqueta\r\n- B22\"x18\r\n- TT10\"x7\r\n- TT12\"x8\r\n- TF16\"x14\r\n- R14\"x5\r\n- Poplar",
       "colorId": 2,
-      "brandId": null,
+      "brandId": 29,
       "categoryId": 2
    },
    {
@@ -161,7 +161,7 @@
       "discount": null,
       "description": "BATERIA MAPEX EXPORT LAQUER ESTUDIO\r\n\r\n- 5 cuerpos\r\n- Sin Fierros\r\n- B22\"x18\r\n- TT12\"x8\r\n- TT13\"x9\r\n- TF16\"x16\r\n- R14\"x5\r\n- Poplar-Mahogany",
       "colorId": 6,
-      "brandId": null,
+      "brandId": 23,
       "categoryId": 2
    },
    {
@@ -172,7 +172,7 @@
       "discount": 15,
       "description": "Batería Eléctrica De 5 Cuerpos Sensitiva Con Parches Mesh\r\nARTESIA A50\r\n\r\nTAMBOR DE CALIDAD\r\nLos tambores A-50 han logrado el mejor equilibrio como modelo de entrada. El sonido de batería a gran escala, los pads de batería con parche de malla, los pads de platillos de 3 o 2 zonas y el hardware confiable lo ayudan a descubrir el atractivo de la batería.\r\n\r\nMODULO\r\nEl módulo de sonido compacto de nuevo diseño viene con operación de implementos y diseño de panel funcional de alta visibilidad .\r\nSensibilidad superior\r\nTodos los parches vienen con multisensor que proporciona una detección constante y estable.\r\n\r\n- Varios efectos de reverberación y coro\r\n- LCD retroiluminado blanco con 10 patrones de respaldo para tocar\r\n- Función de grabación rápida\r\n- Función de metrónomo\r\n- Compatibilidad con audio USB y MIDI USB\r\n- Parche de malla de dos zonas\r\n- Parche de tela duradero y de bajo rebote\r\n- Platillos de charles y crash de 2 zonas (arco / borde)\r\n- Platillo ride de 3 zonas (arco / borde / copa)\r\n- Montaje estable y fácil\r\n- Soporte de rack de 4 patas\r\n- Piezas conjuntas de FRP de alta resistencia\r\n\r\nAudio / MIDI\r\n- Salidas de línea (stereo), salida de plug (mini estéreo)\r\n- Entrada de audio (mini estéreo)\r\n- Audio USB: entrada / salida, entrada / salida MIDI USB\r\n- Entrada / salida MIDI salida de 5 pines",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 30,
       "categoryId": 2
    },
    {
@@ -183,7 +183,7 @@
       "discount": 0,
       "description": "",
       "colorId": null,
-      "brandId": null,
+      "brandId": 6,
       "categoryId": 3
    },
    {
@@ -194,7 +194,7 @@
       "discount": null,
       "description": "Piano digital\r\n88 teclas\r\nTeclado PHA-4 con Ivory Feel\r\nGeneración de sonido: 12 sonidos Supernatural Piano, 20 pianos eléctricos y 24 otros sonidos\r\nPolifonía máxima de 256 voces\r\nSistema de altavoces integrado con 2x altavoces de 12 cm (2x 11 W)\r\nFunción de transposición\r\nMetrónomo integrado\r\nGrabación y reproducción de Standard MIDI Files (SMF) y Audio (WAV y MP3) vía memoria USB\r\n30 canciones de acompañamiento\r\nModos de teclado: Normal, Dual, Split y Twin Piano\r\nMedidas: (An x Pr x Al): 1300 x 284 x 151mm\r\nPeso: 14.8 kg\r\nColor: Blanco\r\nIncluye manual de instrucciones, fuente de alimentación externa (PSB-7U), soporte para partituras y pedal Sustain DP-2\r\nConexiones:\r\nBluetooth Audio (V3.0) y Bluetooth MIDI (V4.0)\r\nSalida estéreo de 2x jack de 6,3 mm\r\nSalida de auriculares estéreo minijack de 3,5 mm\r\nSalida de auriculares estéreo Jack de 6,3 mm\r\nEntrada de pedal Jack de 6.3mm\r\nEntrada para unidad de pedal de tres vías KPD-70 (pedal no incluido)\r\nEntrada para fuente de alimentación de 12 V DC\r\nPuerto USB A para intercambio de datos\r\nPuerto USB B para conexión a ordenador",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 18,
       "categoryId": 3
    },
    {
@@ -205,7 +205,7 @@
       "discount": null,
       "description": "Piano digital portátil de 61 teclas Casiotone CT-S1\r\n\r\nRepleto de una variedad de excelentes sonidos que van desde un piano de cola estéreo hasta teclados antiguos y más, el Casiotone CT-S1 de Casio es un piano digital portátil de 61 teclas que se enfoca en un sonido de calidad y una interpretación fácil de usar. Cuenta con 61 teclas sensibles al tacto de tamaño completo, parlantes estéreo incorporados y conectividad versátil que incluye un conector de entrada auxiliar, una salida de auriculares, un puerto micro-USB para conectarlo a su computadora Mac / Windows o dispositivo móvil iOS / Android, y un puerto USB tipo A para usar con el adaptador Bluetooth WU-BT01 disponible por separado.",
       "colorId": 3,
-      "brandId": null,
+      "brandId": 5,
       "categoryId": 3
    },
    {

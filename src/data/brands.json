@@ -1,98 +1,92 @@
 [
     {
-        "name": "Yamaha",
-        "categoryId": ""
+        "name": "Yamaha"
     },
     {
-        "name": "Fender",
-        "categoryId": ""
+        "name": "Fender"
     },
     {
-        "name": "Taylor",
-        "categoryId": ""
+        "name": "Taylor"
     },
     {
-        "name": "Shure",
-        "categoryId": ""
+        "name": "Shure"
     },
     {
-        "name": "Casio",
-        "categoryId": ""
+        "name": "Casio"
     },
     {
-        "name": "Korg",
-        "categoryId": ""
+        "name": "Korg"
     },
     {
-        "name": "Ampeg",
-        "categoryId": ""
+        "name": "Ampeg"
     },
     {
-        "name": "Audio-technica",
-        "categoryId": ""
+        "name": "Audio-technica"
     },
     {
-        "name": "Behringer",
-        "categoryId": ""
+        "name": "Behringer"
     },
     {
-        "name": "Beyerdynamic",
-        "categoryId": ""
+        "name": "Beyerdynamic"
     },
     {
-        "name": "Blackstar",
-        "categoryId": ""
+        "name": "Blackstar"
     },
     {
-        "name": "Hercules",
-        "categoryId": ""
+        "name": "Hercules"
     },
     {
-        "name": "Zildjian",
-        "categoryId": ""
+        "name": "Zildjian"
     },
     {
-        "name": "D'addario",
-        "categoryId": ""
+        "name": "D'addario"
     },
     {
-        "name": "Stagg",
-        "categoryId": ""
+        "name": "Stagg"
     },
     {
-        "name": "Phonic",
-        "categoryId": ""
+        "name": "Phonic"
     },
     {
-        "name": "Ibanez",
-        "categoryId": ""
+        "name": "Ibanez"
     },
     {
-        "name": "Roland",
-        "categoryId": ""
+        "name": "Roland"
     },
     {
-        "name": "Roy Benson",
-        "categoryId": ""
+        "name": "Roy Benson"
     },
     {
-        "name": "BLG Audio",
-        "categoryId": ""
+        "name": "BLG Audio"
     },
     {
-        "name": "Bogner Amplification",
-        "categoryId": ""
+        "name": "Bogner Amplification"
     },
     {
-        "name": "Breyer",
-        "categoryId": ""
+        "name": "Breyer"
     },
     {
-        "name": "Pearl",
-        "categoryId": ""
+        "name": "Pearl"
     },
     {
-        "name": "Gator Cases",
-        "categoryId": ""
+        "name": "Gator Cases"
+    },
+    {
+        "name": "Marshall"
+    },
+    {
+        "name": "Epiphone"
+    },
+    {
+        "name": "Cort"
+    },
+    {
+        "name": "Parquer"
+    },
+    {  
+        "name": "Mapex"
+    },
+    {
+        "name": "Artesia"
     }
 ]
