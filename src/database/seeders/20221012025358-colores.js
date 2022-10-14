@@ -9,7 +9,6 @@ const colors = colorsDB.map(color => {
 }) 
 
 
-
 module.exports = {
   async up (queryInterface, Sequelize) {
     
