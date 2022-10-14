@@ -26,29 +26,29 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
-      brandsId: {
+      brandId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Brands'
+            tableName : 'brands'
           },
             key : 'id'
         }
       },
-      colorsId: {
+      colorId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Colors'
+            tableName : 'colors'
           },
             key : 'id'
         }
       },
-      categoriesId: {
+      categoryId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Categories'
+            tableName : 'categories'
           },
             key : 'id'
         }
@@ -58,11 +58,9 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: true,
         type: Sequelize.DATE
       },
-      deleteAt: {
-        allowNull: true,
+      deletedAt: {
         type: Sequelize.DATE
       }
     });

@@ -13,12 +13,14 @@
    },
    {
       "id": 2,
+      "name": "Batería Yamaha Stage de 5 piezas",
+      "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
       "image": "81WrWq-bKTL._AC_SX679_.jpg",
       "category": "baterias",
       "color": "rojo",
       "price": 409600,
       "discount": 0,
-      "status": "oferta",
+      "status": "no-oferta",
       "share": 12
    },
    {
@@ -162,37 +164,25 @@
    },
    {
       "id": 14,
-      "name": "Batería Yamaha Stage de 5 piezas",
-      "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
-      "image": "81WrWq-bKTL._AC_SX679_.jpg",
+      "name": "Batería Mapex Storm Rock Bombo 22'' Y Fierros",
+      "description": "BATERIA MAPEX STORM ROCK\r\n\r\n- 5 cuerpos\r\n- 5 Fierros + Banqueta\r\n- B22\"x18\r\n- TT10\"x7\r\n- TT12\"x8\r\n- TF16\"x14\r\n- R14\"x5\r\n- Poplar",
+      "image": "Img-1665419510064.webp",
       "category": "baterias",
-      "color": "rojo",
-      "price": 409600,
-      "discount": 0,
+      "color": "blanco",
+      "price": 380199,
+      "discount": null,
       "status": "no-oferta",
       "share": 12
    },
    {
       "id": 15,
-      "name": "Batería Yamaha Stage de 5 piezas",
-      "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
-      "image": "81WrWq-bKTL._AC_SX679_.jpg",
+      "name": "Bateria Pearl Export Laqued Series Bombo 22''",
+      "description": "BATERIA MAPEX EXPORT LAQUER ESTUDIO\r\n\r\n- 5 cuerpos\r\n- Sin Fierros\r\n- B22\"x18\r\n- TT12\"x8\r\n- TT13\"x9\r\n- TF16\"x16\r\n- R14\"x5\r\n- Poplar-Mahogany",
+      "image": "Img-1665419653864.webp",
       "category": "baterias",
-      "color": "rojo",
-      "price": 409600,
-      "discount": 0,
-      "status": "no-oferta",
-      "share": 12
-   },
-   {
-      "id": 16,
-      "name": "Batería Yamaha Stage de 5 piezas",
-      "description": "Esta batería Yamaha de abedul es perfecta para principiantes o profesionales. La costura escalonada en diagonal permite a Yamaha crear cajas de tambor finas ue no se deforman.",
-      "image": "81WrWq-bKTL._AC_SX679_.jpg",
-      "category": "baterias",
-      "color": "rojo",
-      "price": 409600,
-      "discount": 0,
+      "color": "marron",
+      "price": 314809,
+      "discount": null,
       "status": "no-oferta",
       "share": 12
    },
@@ -378,7 +368,7 @@
       "color": "negro"
    },
    {
-      "id": 30,
+      "id": 31,
       "name": "microfono",
       "description": "asdasadasd",
       "image": "Img-1663006720912.jpg",
@@ -386,6 +376,19 @@
       "color": "plateado",
       "price": 123123,
       "discount": null,
+      "status": "no-oferta",
+      "share": 12
+   },
+   {
+      "id": 30,
+      "name": "Bateria Eléctrica Artesia Parches Mesh Doble Zona A50 Cuotas",
+      "description": "Batería Eléctrica De 5 Cuerpos Sensitiva Con Parches Mesh\r\nARTESIA A50\r\n\r\nTAMBOR DE CALIDAD\r\nLos tambores A-50 han logrado el mejor equilibrio como modelo de entrada. El sonido de batería a gran escala, los pads de batería con parche de malla, los pads de platillos de 3 o 2 zonas y el hardware confiable lo ayudan a descubrir el atractivo de la batería.\r\n\r\nMODULO\r\nEl módulo de sonido compacto de nuevo diseño viene con operación de implementos y diseño de panel funcional de alta visibilidad .\r\nSensibilidad superior\r\nTodos los parches vienen con multisensor que proporciona una detección constante y estable.\r\n\r\n- Varios efectos de reverberación y coro\r\n- LCD retroiluminado blanco con 10 patrones de respaldo para tocar\r\n- Función de grabación rápida\r\n- Función de metrónomo\r\n- Compatibilidad con audio USB y MIDI USB\r\n- Parche de malla de dos zonas\r\n- Parche de tela duradero y de bajo rebote\r\n- Platillos de charles y crash de 2 zonas (arco / borde)\r\n- Platillo ride de 3 zonas (arco / borde / copa)\r\n- Montaje estable y fácil\r\n- Soporte de rack de 4 patas\r\n- Piezas conjuntas de FRP de alta resistencia\r\n\r\nAudio / MIDI\r\n- Salidas de línea (stereo), salida de plug (mini estéreo)\r\n- Entrada de audio (mini estéreo)\r\n- Audio USB: entrada / salida, entrada / salida MIDI USB\r\n- Entrada / salida MIDI salida de 5 pines",
+      "image": "Img-1665419103755.webp",
+      "category": "baterias",
+      "color": "negro",
+      "price": 371941,
+      "decimals": null,
+      "discount": 15,
       "status": "oferta",
       "share": 12
    }

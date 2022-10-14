@@ -20,26 +20,6 @@
       "biography": "Soy estudiante de programación :)"
    },
    {
-      "id": 2,
-      "firstName": "nahiara",
-      "lastName": "salinas",
-      "email": "nahiarabelvedere@gmail.com",
-      "telephone": 1123260927,
-      "password": "$2a$12$15KnR7ILAZxZfCE97lIhjOISRIy8omQNFEOZJHmhphzEBaoapriMe",
-      "category": "Admin",
-      "avatar": "default-users-image.jpg"
-   },
-   {
-      "id": 4,
-      "firstName": "nahiara",
-      "lastName": "salinas",
-      "email": "nahisalinas@gmail.com",
-      "telephone": 3837891983,
-      "password": "$2a$12$GevwkfYpTbPkUJ54pCktEuadg3hSERRIp3mEEgyJ0AqPMSgv21iPS",
-      "category": "Admin",
-      "avatar": "default-users-image.jpg"
-   },
-   {
       "id": 5,
       "firstName": "Joaquin",
       "lastName": "Vucetich",

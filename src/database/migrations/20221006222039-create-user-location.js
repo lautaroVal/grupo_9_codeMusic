@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Locations'
+            tableName : 'locations'
           },
           key : 'id'
         }
@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Users'
+            tableName : 'users'
           },
           key : 'id'
         }
@@ -32,7 +32,9 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        type: Sequelize.DATE
+      },
+      deletedAt: {
         type: Sequelize.DATE
       },
       deleteAt: {

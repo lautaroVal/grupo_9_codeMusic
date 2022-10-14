@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "reset-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,6 @@
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
     "express-session": "^1.17.3",
     "express-validator": "^6.14.2",
     "method-override": "^3.0.0",
