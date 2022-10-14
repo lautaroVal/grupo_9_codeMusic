@@ -4,15 +4,12 @@
       "lastName": "Valenzuela",
       "email": "Lautaros@gmail.com",
       "username": "lauti",
-      "musicFav": [
-         "Clásica",
-         "Pop"
-      ],
+      "musicFav":null,
       "genre": "masculino",
       "telephone": 1151753300,
       "password": "$2a$12$SwOa6U/Kl4dngzvraFYFE.X7rp0rqd9rwFj3Ly3Tfe18t5zOd/8ji",
       "avatar": "",
-      "rol": "Admin",
+      "rol": 1,
       "biography": "Soy estudiante de programación :)"
    },
    {
@@ -23,30 +20,23 @@
       "telephone": 1151754566,
       "password": "$2a$12$gCT2JDO1mhm8b0MDLgRfIOdPgROU8mjc2PLsw4Ul8u3JCZKqSXM/e",
       "avatar": "",
-      "rol": "User",
+      "rol": 0,
       "biography": "Hola soy el joachon xDxdD",
       "genre": "otro",
-      "musicFav": [
-         "Rock",
-         "Pop"
-      ]
+      "musicFav":null
    },
    {
       "firstName": "Emanuel",
       "lastName": "Arroyo",
       "email": "emaA@gmail.com",
       "username": "Ema",
-      "musicFav": [
-         "Rock",
-         "Jazz",
-         "Clásica"
-      ],
+      "musicFav":null,
       "genre": "masculino",
       "biography": "12313123123",
       "telephone": 1154659878,
       "password": "$2a$12$e8dtcTq4KuXWVEe4jBVVmu/hWlQmM78q3hlL6pyAKV3V8Yi55FmT2",
       "avatar": "",
-      "rol": "Admin"
+      "rol": 1
       
    },
    {
@@ -58,12 +48,8 @@
       "telephone": 1231231233,
       "password": "$2a$12$VWRWdbyPxNhsuQtChHwMYuTMfBoXE9i0Loon4GDKJE3GsycvdZHpK",
       "avatar": "",
-      "rol": "Admin",
+      "rol": 1,
       "genre": "masculino",
-      "musicFav": [
-         "Rock",
-         "Jazz",
-         "Clásica"
-      ]
+      "musicFav":null
    }
  ]

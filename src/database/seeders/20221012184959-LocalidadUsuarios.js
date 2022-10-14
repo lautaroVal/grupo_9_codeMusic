@@ -17,7 +17,7 @@ module.exports = {
       // Add seed commands here.
      
       // Example:
-      await queryInterface.bulkInsert('userLocation', userLocation, {});
+      await queryInterface.bulkInsert('userLocations', userLocation, {});
     
   },
 
@@ -26,7 +26,7 @@ module.exports = {
       // Add commands to revert seed here.
      
       // Example:
-      await queryInterface.bulkDelete('userLocation', null, {});
+      await queryInterface.bulkDelete('userLocations', null, {});
      
   }
 };
