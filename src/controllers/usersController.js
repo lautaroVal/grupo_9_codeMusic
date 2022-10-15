@@ -1,17 +1,17 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const users = db.user;
+const Users = db.User;
 
 const usersController = {
-    register: function (req, res) {
-        return res.render('users/register', {
-            title: 'Register'
-        })
+    register: (req, res) => {
+        return res.render("users/register", {
+          title: "Register",
+        });
     },
 
     processRegister: (req, res) => {
         const {firstName, lastName, email, telephone, password, password2} = req.body;
-        Users.create({
+        db.User.create({
             firstName,
             lastName,
             email,
@@ -25,44 +25,55 @@ const usersController = {
         })
 
         .catch(error => console.log(error));
-        }
-    // },
+    },
 
-    // login: (req, res) => {
-    //     return res.render('users/login', {
-    //         firstName: 'Login'
-    //     })
-    // },
+    login: (req, res) => {
+        return res.render("users/login", {
+          title: "Login",
+        });
+    },
 
-    // processLogin: (req, res) => {
-    //     let errors = validationResult(req);
-    //     if (errors.isEmpty()) {
+    processLogin: function (req, res) {
 
-    //         let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
+    },
 
-    //         req.session.userLogin = {
-    //             id,
-    //             firstName,
-    //             lastName,
-    //             email,
-    //             telephone,
-    //             category,
-    //             avatar
-    //         };
 
-    //         if (req.body.remember) {
-    //             res.cookie('codeMusic', req.session.userLogin, {
-    //                 maxAge: 1000 * 60 * 60
-    //             })
-    //         };
+//     login: (req, res) => {
+//         return res.render('users/login', {
+//             firstName: 'Login'
+//         })
+//     },
 
-    //         return res.redirect('/')
-    //     } else {
-    //         return res.render('users/login', {
-    //             title: 'Login',
-    //             errors: errors.mapped()
-    //         })
-    //     }
-    }
+//     processLogin: (req, res) => {
+//         let errors = validationResult(req);
+//         if (errors.isEmpty()) {
+
+//             let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
+
+//             req.session.userLogin = {
+//                 id,
+//                 firstName,
+//                 lastName,
+//                 email,
+//                 telephone,
+//                 category,
+//                 avatar
+//             };
+
+//             if (req.body.remember) {
+//                 res.cookie('codeMusic', req.session.userLogin, {
+//                     maxAge: 1000 * 60 * 60
+//                 })
+//             };
+
+//             return res.redirect('/')
+//         } else {
+//             return res.render('users/login', {
+//                 title: 'Login',
+//                 errors: errors.mapped()
+//             })
+//         }
+//     }
+}
 
 module.exports = usersController;
