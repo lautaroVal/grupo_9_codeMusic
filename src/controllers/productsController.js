@@ -45,36 +45,55 @@ module.exports = {
 		})
 	},
 
-	productAddStore: (req, res) => {
-		let errors = validationResult(req);
-		if (errors.isEmpty()) {
-			const { name, price, discount, description, category, color, status } = req.body
-			const products = loadProducts();
-		/* 	let images = req.files.map(file => file.filename); */
+	productAddStore: async (req, res) => {
+		try {
 
-			const newProduct = {
-				id: (products[products.length - 1].id + 1),
-				name: name,
-				description: description,
-				image: req.file ? req.file.filename : null,
-				category,
-				color,
-				price: +price,
-				decimals: null,
-				discount: +discount,
-				status,
-				share: 12
+			let errors = validationResult(req);
+			if (errors.isEmpty()) {
+				const { name, price, discount, description, category, color, status } = req.body
+				/* return res.send(req.files) */
+				const products = loadProducts();
+
+
+				const { id } = await db.Product.create({ ...req.body })
+
+
+				let images = req.files.map(file => {
+					return {
+						   name: file.filename,
+						   productsId: id
+					   }
+				})
+
+				await db.Image.bulkCreate(images)
+
+			/* 	const newProduct = {
+					id: (products[products.length - 1].id + 1),
+					name: name,
+					description: description,
+					image: req.file ? req.file.filename : null,
+					category,
+					color,
+					price: +price,
+					decimals: null,
+					discount: +discount,
+					status,
+					share: 12
+				} */
+
+				/* const productsModify = [...products, newProduct];
+				storeProducts(productsModify) */
+				return res.redirect('/products')
+			} else {
+				return res.render('products/productAdd', {
+					title: "Crear producto",
+					errors: errors.mapped(),
+					old: req.body
+				})
 			}
 
-			const productsModify = [...products, newProduct];
-			storeProducts(productsModify)
-			return res.redirect('/products')
-		}else{
-			return res.render('products/productAdd',{
-				title: "Crear producto",
-				errors: errors.mapped(),
-				old: req.body
-			})
+		} catch (error) {
+			console.log(error);
 		}
 	},
 
@@ -92,7 +111,7 @@ module.exports = {
 	update: (req, res) => {
 		const products = loadProducts();
 		/* return res.send(req.body) */
-		const { name, description, category, color, price, discount, status} = req.body;
+		const { name, description, category, color, price, discount, status } = req.body;
 
 
 		const producstModify = products.map(product => {

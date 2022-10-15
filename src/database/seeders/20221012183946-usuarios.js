@@ -4,6 +4,7 @@ const usersDB = require('../../data/usersDB.json');
 const users = usersDB.map(user => {
   return {
     ...user,
+    musicFav: JSON.stringify(user.musicFav),
     createdAt: new Date()
   }
 });

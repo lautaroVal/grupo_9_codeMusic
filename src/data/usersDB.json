@@ -4,7 +4,10 @@
       "lastName": "Valenzuela",
       "email": "Lautaros@gmail.com",
       "username": "lauti",
-      "musicFav": null,
+      "musicFav": [
+         "Clásica",
+         "Pop"
+      ],
       "genre": "masculino",
       "telephone": 1151753300,
       "password": "$2a$12$SwOa6U/Kl4dngzvraFYFE.X7rp0rqd9rwFj3Ly3Tfe18t5zOd/8ji",
@@ -23,14 +26,23 @@
       "rol": 0,
       "biography": "Hola soy el joachon xDxdD",
       "genre": "otro",
-      "musicFav": null
+      "musicFav": [
+         "Rock",
+         "Jazz",
+         "Clásica",
+         "Pop"
+      ]
    },
    {
       "firstName": "Emanuel",
       "lastName": "Arroyo",
       "email": "emaA@gmail.com",
       "username": "Ema",
-      "musicFav": null,
+      "musicFav": [
+         "Rock",
+         "Jazz",
+         "Clásica"
+      ],
       "genre": "masculino",
       "biography": "12313123123",
       "telephone": 1154659878,
@@ -49,6 +61,10 @@
       "avatar": "",
       "rol": 1,
       "genre": "masculino",
-      "musicFav": null
+      "musicFav": [
+         "Rock",
+         "Jazz",
+         "Clásica"
+      ]
    }
- ]
+]
