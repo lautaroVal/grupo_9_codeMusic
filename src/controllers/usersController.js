@@ -3,49 +3,34 @@ const sequelize = db.sequelize;
 const users = db.user;
 
 const usersController = {
-    register: (req, res) => {
+    register: function (req, res) {
         return res.render('users/register', {
             title: 'Register'
         })
     },
 
     processRegister: (req, res) => {
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            const { firstName, lastName, email, telephone, password } = req.body;
-            let users = loadUsers();
-            let newUser = {
-                id: users.length > 0 ? users[users.length - 1].id + 1 : 1,
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                username: "",
-                province: "",
-                location: "",
-                street: "",
-                musicFav: "",
-                gender: "",
-                biography: "",
-                telephone: +telephone,
-                password: bcryptjs.hashSync(password, 12),
-                category: "User",
-                avatar: "default-users-image.jpg"
-            }
-            let usersModify = [...users, newUser];
-            storeUsers(usersModify);
-            return res.redirect('/users/login');
-        } else {
-            return res.render('users/register', {
-                title: 'Register',
-                errors: errors.mapped(),
-                old: req.body
-            })
+        const {firstName, lastName, email, telephone, password, password2} = req.body;
+        Users.create({
+            firstName,
+            lastName,
+            email,
+            telephone, 
+            password,
+            password2
+        })
+        .then(user => {
+            console.log(user)
+            return res.redirect('/login')
+        })
+
+        .catch(error => console.log(error));
         }
     // },
 
     // login: (req, res) => {
     //     return res.render('users/login', {
-    //         title: 'Login'
+    //         firstName: 'Login'
     //     })
     // },
 
@@ -79,6 +64,5 @@ const usersController = {
     //         })
     //     }
     }
-}
 
 module.exports = usersController;
