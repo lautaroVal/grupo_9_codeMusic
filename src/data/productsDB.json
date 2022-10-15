@@ -216,7 +216,7 @@
       "discount": 0,
       "description": "",
       "colorId": null,
-      "brandId": null,
+      "brandId": 1,
       "categoryId": 3
    },
    {
@@ -227,7 +227,7 @@
       "discount": null,
       "description": "Mini Amplificador para Bajo Blackstar Fly3\r\n\r\n-Combo para bajo eléctrico\r\n-3W\r\n-Altavoz de 3\"\r\n-2 canales (Clean y OD)\r\n-Ecualizador de graves integrado\r\n-Control de Sub\r\n-Entrada de línea\r\n-Salida de línea con simulador de altavoz\r\n-Alimentado a través de pila o fuente de alimentación opcional (artículo nº353113) no incluida\r\n-Color: Negro\r\n-Dimensiones: 11 x 17,5 x 13,8cm (ancho x alto x profundo)\r\n-Peso: 1kg",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 11,
       "categoryId": 4
    },
    {
@@ -238,7 +238,7 @@
       "discount": null,
       "description": "- Mini amplificador de auriculares para bajo BLACKSTAR AMPLUG FLY BASS.\r\n- La solución perfecta para practicar sin ruido.\r\n- Diseñado especialmente para bajas frecuencias.\r\n- Jack plegable para conectarse en cualquier tipo de bajo.\r\n- 3 canales en una sola unidad: Classic, Modern y Overdrive.\r\n- 6 loops de ritmos diferentes: Rock, Funk, R&B, Hip Hop, Blues, Metrónomo y control Tap Tempo.\r\n- Control de tono.\r\n- Funcionamiento con 2 pilas AAA (no incluidas)",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 11,
       "categoryId": 4
    },
    {
@@ -249,7 +249,7 @@
       "discount": null,
       "description": "Su impedancia es de 80 Ω.\r\nCon cancelación de ruido.\r\nEl largo del cable es de 3 m.\r\nUso apto para estudio.\r\nSonido superior y sin límites.\r\nCómodos y prácticos.\r\nLa duración de la batería depende del uso que se le de al producto.",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 10,
       "categoryId": 4
    },
    {
@@ -260,18 +260,7 @@
       "discount": null,
       "description": "Recomendado para voces, grabaciones, actuaciones, instrumentos.\r\nFormato: de mano.\r\nConector/es de salida: xlr.\r\nFrecuencia máxima: 15kHz.\r\nFrecuencia mínima: 50Hz.\r\nSentí la libertad y el dinamismo al grabar con tu micrófono de mano.\r\nCon accesorios incluidos.\r\nLa mejor calidad para tus transmisiones.\r\nAlta resolución.",
       "colorId": 1,
-      "brandId": null,
-      "categoryId": 4
-   },
-   {
-      "name": "microfono",
-      "price": 123123,
-      "status": 0,
-      "share": 12,
-      "discount": null,
-      "description": "asdasadasd",
-      "colorId": 5,
-      "brandId": null,
+      "brandId": 9,
       "categoryId": 4
    },
    {
@@ -282,7 +271,7 @@
       "discount": null,
       "description": "TROMPETA B TR-202\r\n\r\nTudel ML\r\n\r\nCampana en latón\r\n\r\nTudel de latón dorado\r\n\r\nVaras exteriores en alpaca\r\n\r\nPistones de acero inoxidable\r\n\r\nAnillo sobre la 3era válvula\r\n\r\n2 llaves de desagüe\r\n\r\nAcabado lacado",
       "colorId": 4,
-      "brandId": null,
+      "brandId": 19,
       "categoryId": 5
    },
    {
@@ -293,7 +282,7 @@
       "discount": null,
       "description": "FLAUTA FL-402E 2 CABEZAS\r\n\r\nIgual al modelo FL-402E con cabeza curva y recta Cabeza,\r\n\r\ncuerpo, pata y llaves en alpaca plateada\r\n\r\nMecanismo de Mi Con topes de corcho natural\r\n\r\nTopes de fieltro blanco\r\n\r\nZapatillas PISONI",
       "colorId": 2,
-      "brandId": null,
+      "brandId": 19,
       "categoryId": 5
    },
    {
@@ -304,7 +293,7 @@
       "discount": null,
       "description": "TROMPETA B TR-202\r\n\r\nTudel ML\r\n\r\nCampana en latón\r\n\r\nTudel de latón dorado\r\n\r\nVaras exteriores en alpaca\r\n\r\nPistones de acero inoxidable\r\n\r\nAnillo sobre la 3era válvula\r\n\r\n2 llaves de desagüe\r\n\r\nAcabado lacado",
       "colorId": 4,
-      "brandId": null,
+      "brandId": 15,
       "categoryId": 5
    },
    {
@@ -315,7 +304,7 @@
       "discount": null,
       "description": "SAXO ALTO Mi b dorado con estuche",
       "colorId": 4,
-      "brandId": null,
+      "brandId": 31,
       "categoryId": 5
    },
    {
@@ -326,7 +315,7 @@
       "discount": null,
       "description": "SAXO SOPRANO WISEMANN DSS 300 CLAVE BB SALE%\r\n\r\nClave: Bb.\r\nAcabado: Cuerpo laqueado en latón Recto.\r\nClaves auxiliares: F#.\r\nAlmohadillas con llave.\r\nResorte de aguja italiano de Acero inoxidable Grabado.\r\nBoquilla de estilo Yanagisawa.\r\nBell: Incluida.",
       "colorId": 4,
-      "brandId": null,
+      "brandId": 32,
       "categoryId": 5
    },
    {
@@ -337,7 +326,7 @@
       "discount": null,
       "description": "CLARINETE YAMAHA YCL-255. El nuevo YCL-255 es el comienzo perfecto para los jóvenes estudiantes de clarinete. Hecho en resistente resina ABS, son fáciles de sujetar. Con su nuevo apoyo para el pulgar ajustable y anilla para el cordón, ofrecen todavía una mayor comodidad al tocar. Al eliminar el anillo de metal de la campana, hemos dado al instrumento un peso aún más ligero, pero sin comprometer su robustez. Una afinación muy precisa, y una respuesta inmediata, ayuda a los estudiantes a producir un sonido redondo y claro. Llaves Nickel Silver para un timbre claro y enfocado. Nuevo apoyo para el pulgar ajustable, con anillo para el cordón. Un nuevo y ajustable apoyo para el pulgar, se ajusta a dierentes tamaños de mano, ayudando al intérprete a desarrollar una técnica correcta. Además, la anilla del cordón permite sujetar el instrumento con menos esfuerzo. Tornillos resistentes y soldadruas de plata dan a este nuevo instrumento una extraordinaria durabilidad. Una nueva campana hecha en resina ABS plástica resistente, permite que el instrumento sea ligero y tenga una respuesta mejorada. La cámara de resonancia de la campana, ayuda a la proyección del sonido y mejora la afinación en las notas más graves. Un barrilete de65 mm basado en los incluidos en los modelos de gama alta de Yamaha.El atractivo acabado mate, simula la veta de la madera, a la vez que proporciona la durabilidad añadida de la resina plástica ABS.",
       "colorId": 1,
-      "brandId": null,
+      "brandId": 1,
       "categoryId": 5
    }
 ]
