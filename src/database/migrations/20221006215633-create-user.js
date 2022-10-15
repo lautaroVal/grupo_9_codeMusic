@@ -10,12 +10,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       firstName: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       lastName: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       userName: {
@@ -34,13 +37,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       password: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       avatar: {
         type: Sequelize.STRING
       },
       rol: {
-        type: Sequelize.TINYINT
+        allowNull: false,
+        type: Sequelize.TINYINT,
+        defaultValue: 0                   // 0 = user & 1 = admin
       },
       createdAt: {
         allowNull: false,

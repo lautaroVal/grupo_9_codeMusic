@@ -1,98 +1,99 @@
 [
     {
-        "name": "Yamaha",
-        "category": ""
+        "name": "Yamaha"
     },
     {
-        "name": "Fender",
-        "category": ""
+        "name": "Fender"
     },
     {
-        "name": "Taylor",
-        "category": ""
+        "name": "Taylor"
     },
     {
-        "name": "Shure",
-        "category": ""
+        "name": "Shure"
     },
     {
-        "name": "Casio",
-        "category": ""
+        "name": "Casio"
     },
     {
-        "name": "Korg",
-        "category": ""
+        "name": "Korg"
     },
     {
-        "name": "Ampeg",
-        "category": ""
+        "name": "Ampeg"
     },
     {
-        "name": "Audio-technica",
-        "category": ""
+        "name": "Audio-technica"
     },
     {
-        "name": "Behringer",
-        "category": ""
+        "name": "Behringer"
     },
     {
-        "name": "Beyerdynamic",
-        "category": ""
+        "name": "Beyerdynamic"
     },
     {
-        "name": "Blackstar",
-        "category": ""
+        "name": "Blackstar"
     },
     {
-        "name": "Hercules",
-        "category": ""
+        "name": "Hercules"
     },
     {
-        "name": "Zildjian",
-        "category": ""
+        "name": "Zildjian"
     },
     {
-        "name": "D'addario",
-        "category": ""
+        "name": "D'addario"
     },
     {
-        "name": "Stagg",
-        "category": ""
+        "name": "Stagg"
     },
     {
-        "name": "Phonic",
-        "category": ""
+        "name": "Phonic"
     },
     {
-        "name": "Ibanez",
-        "category": ""
+        "name": "Ibanez"
     },
     {
-        "name": "Roland",
-        "category": ""
+        "name": "Roland"
     },
     {
-        "name": "Roy Benson",
-        "category": ""
+        "name": "Roy Benson"
     },
     {
-        "name": "BLG Audio",
-        "category": ""
+        "name": "BLG Audio"
     },
     {
-        "name": "Bogner Amplification",
-        "category": ""
+        "name": "Bogner Amplification"
     },
     {
-        "name": "Breyer",
-        "category": ""
+        "name": "Breyer"
     },
     {
-        "name": "Pearl",
-        "category": ""
+        "name": "Pearl"
     },
     {
-        "name": "Gator Cases",
-        "category": ""
+        "name": "Gator Cases"
+    },
+    {
+        "name": "Marshall"
+    },
+    {
+        "name": "Epiphone"
+    },
+    {
+        "name": "Cort"
+    },
+    {
+        "name": "Parquer"
+    },
+    {  
+        "name": "Mapex"
+    },
+    {
+        "name": "Artesia"
+    },
+    {
+        "name": "Lincoln Winds"
+    },
+    {
+        "name": "Wisemann"
     }
 ]
+

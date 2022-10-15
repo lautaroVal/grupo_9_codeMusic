@@ -9,21 +9,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       price: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       status: {
-        type: Sequelize.TINYINT
+        type: Sequelize.TINYINT,
+        defaultValue: 0                     // 0 = sinOferta & 1 = oferta
       },
       share: {
         type: Sequelize.INTEGER
       },
       discount: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 0
       },
       description: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       brandId: {
@@ -45,6 +50,7 @@ module.exports = {
         }
       },
       categoryId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
