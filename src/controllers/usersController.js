@@ -14,11 +14,10 @@ const usersController = {
 
     processRegister: (req, res) => {
         let errors = validationResult(req);
-    
         if (errors.isEmpty()) {
           let { firstName, lastName, email, telephone, password, password2 } = req.body;
           db.User.create({
-            name: firstName.trim(),
+            firstName: firstName.trim(),
             lastName: lastName.trim(),
             email: email.trim(),
             username: null,
@@ -30,30 +29,24 @@ const usersController = {
             biography: null,
             telephone: telephone.trim(),
             password: bcryptjs.hashSync(password, 12),
-            password: bcryptjs.hashSync(password, 12),
+            password2: bcryptjs.hashSync(password2, 12),
           })
             .then((user) => {
               db.Address.create({
                 userId: user.id,
               });
-              req.session.userLogin = {
-                id: user.id,
-                name: user.name,
-                lastname: user.lastname,
-                email: user.email,
-                telephone: user.telephone,
-                password: bcryptjs.hashSync(password, 12),
-              };
+              
+            res.redirect("/login");
+
+            res.cookie('codeMusic', req.session.userLogin, {
+                maxAge: 1000 * 60 * 60
+            });
     
-                res.cookie('codeMusic', req.session.userLogin, {
-                    maxAge: 1000 * 60 * 60
-                });
-    
-              res.redirect("/");
+              
             })
             .catch((err) => console.log(err));
         } else {
-          res.render("users/register", {
+          res.render("users/login", {
             title: "login",
             errors: errors.mapped(),
           });
