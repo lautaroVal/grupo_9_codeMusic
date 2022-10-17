@@ -7,13 +7,19 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 module.exports = {
 
-	productsList: (req, res) => {
-		const products = loadProducts();
-		return res.render('products/products', {
-			title: "Listado de productos",
-			products,
-			/* toThousand */
-		})
+	productsList: async (req, res) => {
+		try {
+			const products = await db.Product.findAll({
+				include: ['images', 'brand', 'category']
+			})
+
+			return res.render('products/products', {
+				title: "Listado de productos",
+				products,
+			})
+		} catch (error) {
+			console.log(error);
+		}
 	},
 
 	/* DETAIL */
