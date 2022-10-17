@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
 
@@ -143,8 +144,3 @@ module.exports = {
 		return res.redirect('/products');
 	}
 }
-
-
-/* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')), */
-/* (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')) */
-
