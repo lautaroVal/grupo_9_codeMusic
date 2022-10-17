@@ -86,7 +86,7 @@ const usersController = {
             res.redirect("/");
           });
         } else {
-          return res.render("users/login", {
+          return res.render("users/register", {
             title: "Login",
           });
         }
