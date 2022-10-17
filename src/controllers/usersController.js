@@ -34,21 +34,27 @@ const usersController = {
             .then((user) => {
               db.Address.create({
                 userId: user.id,
-              });
-              
-            res.redirect("/login");
+            });
+
+            req.session.userLogin = {
+                id: user.id,
+                firstName: user.firstName,
+                lastName: user.lastName,
+              };
 
             res.cookie('codeMusic', req.session.userLogin, {
                 maxAge: 1000 * 60 * 60
             });
-    
-              
+
+            res.redirect("/"); 
             })
             .catch((err) => console.log(err));
+            
         } else {
-          res.render("users/login", {
-            title: "login",
+          res.render("users/register", {
+            title: "register",
             errors: errors.mapped(),
+            old: req.body
           });
         }
       },
@@ -95,7 +101,15 @@ const usersController = {
         req.session.destroy();
         res.cookie('codeMusic', null, { maxAge: -1 });
         return res.redirect('/');
-    }
+    },
+
+
+    profile: (req, res) => {
+        return res.render("users/profile", {
+          title: "Mi Perfil",
+          User,
+        });
+      },
 }
 
 module.exports = usersController;
