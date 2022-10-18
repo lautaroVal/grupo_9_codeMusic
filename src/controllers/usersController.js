@@ -1,22 +1,18 @@
-
 const db = require('../database/models');
 const { loadUsers, storeUsers } = require('../data/usersModule');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const { Association } = require('sequelize');
-
 module.exports = {
     register: (req, res) => {
         return res.render('users/register', {
             title: 'Register'
         })
     },
-
     processRegister: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             const { firstName, lastName, email, telephone, password } = req.body;
-            
             let users = loadUsers();
             let newUser = {
                 id: users.length > 0 ? users[users.length - 1].id + 1 : 1,
@@ -46,13 +42,11 @@ module.exports = {
             })
         }
     },
-
     login: (req, res) => {
         return res.render('users/login', {
             title: 'Login'
         })
     },
-
     processLogin:async  (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
@@ -67,11 +61,9 @@ module.exports = {
                     }
                 }]
             })
-        
+       
             return res.json(users) */
-
             let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
-
             req.session.userLogin = {
                 id,
                 firstName,
@@ -81,13 +73,11 @@ module.exports = {
                 category,
                 avatar
             };
-
             if (req.body.remember) {
                 res.cookie('codeMusic', req.session.userLogin, {
                     maxAge: 1000 * 60 * 60
                 })
             };
-
             return res.redirect('/')
         } else {
             return res.render('users/login', {
@@ -96,7 +86,6 @@ module.exports = {
             })
         }
     },
-
     profile: (req, res) => {
         let users = loadUsers();
         const user = users.find(user => user.id === req.session.userLogin.id);
@@ -105,9 +94,7 @@ module.exports = {
             user,
         })
     },
-
     update: (req, res) => {
-
         /*  return res.send(req.body); */
         let errors = validationResult(req);
         if (errors.isEmpty()) {
@@ -116,7 +103,6 @@ module.exports = {
             // return res.send(req.file) REQ.FILE  <--
             let image = req.files.map((file) => file.filename);
             const obj = {name:'emanuela'}
-
           /*   db.User.update({
                 avatar: req.file?.filename
             }) */
@@ -155,10 +141,8 @@ module.exports = {
                     maxAge: 1000 * 60 * 60
                 })
             };
-
             storeUsers(usersModify);
             return res.redirect('/');
-
         } else {
             let users = loadUsers();
             const user = users.find(user => user.id === req.session.userLogin.id);
@@ -170,12 +154,9 @@ module.exports = {
             })
         }
     },
-
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('codeMusic', null, { maxAge: -1 });
         return res.redirect('/');
     }
 }
-
-
