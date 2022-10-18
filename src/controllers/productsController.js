@@ -76,46 +76,50 @@ module.exports = {
 
 	productAddStore: async (req, res) => {
 		try {
+ 			 let errors = validationResult(req);
+			if (errors.isEmpty()) { 
+				const { name, price, status, discount, description, brandId, colorId, categoryId} = req.body; 
 
-			let errors = validationResult(req);
-			if (errors.isEmpty()) {
-				const { name, price, discount, description, category, color, status } = req.body
-				 return res.send(req.files) 
-				const products = loadProducts();
-
-
-				const { id } = await db.Product.create({ ...req.body })
-
+				const { id } = await db.Product.create({
+					 ...req.body,
+					  name: name.trim(),
+					  price: +price,
+					  status,
+					  share: req.body.share ? req.body.share : 12,
+					  discount: +discount,
+					  description: description.trim()
+					})
 
 				let images = req.files.map(file => {
 					return {
 						   name: file.filename,
-						   productsId: id
+						   productId: id
 					   }
 				})
 
 				await db.Image.bulkCreate(images)
-
-			/* 	const newProduct = {
-					id: (products[products.length - 1].id + 1),
-					name: name,
-					description: description,
-					image: req.file ? req.file.filename : null,
-					category,
-					color,
-					price: +price,
-					decimals: null,
-					discount: +discount,
-					status,
-					share: 12
-				} */
-
-				/* const productsModify = [...products, newProduct];
-				storeProducts(productsModify) */
+				console.log(images.length);
+		
 				return res.redirect('/products')
 			} else {
+				const brands = await db.Brand.findAll({
+					attributes: ['id','name'],
+					order: ['name']
+				});
+				const colors = await db.Color.findAll({
+					attributes: ['id','name'],
+					order: ['name']
+				});
+				const categories = await db.Category.findAll({
+					attributes: ['id','name'],
+					order: ['name']
+				});
+				
 				return res.render('products/productAdd', {
 					title: "Crear producto",
+					brands,
+				    colors,
+				    categories,
 					errors: errors.mapped(),
 					old: req.body
 				})

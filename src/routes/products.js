@@ -17,7 +17,7 @@ router
        
         /* Acción de creación (a donde se envía el formulario)*/
 
-        .post('/productAdd',uploadImageProduct.array('image'), /* productAddValidator, */ productAddStore)
+        .post('/productAdd',uploadImageProduct.array('images'), productAddValidator,  productAddStore)
 
         /*Detalle de un producto particular*/
         .get('/productDetail/:id', productDetail)

@@ -21,7 +21,8 @@ module.exports = {
         defaultValue: 0                     // 0 = sinOferta & 1 = oferta
       },
       share: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 12
       },
       discount: {
         type: Sequelize.INTEGER,
