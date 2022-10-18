@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         as:'users',
         foreignKey:'locationId',
         otherKey:'userID',
-        through:'userlocations'
+        through:'userlocations',
+        onDelete: 'cascade'
       })
     }
   }
@@ -26,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Location',
+    paranoid:true
   });
   return Location;
 };

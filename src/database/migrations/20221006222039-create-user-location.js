@@ -11,21 +11,25 @@ module.exports = {
       },
       locationId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'locations'
+        references: {
+          model: {
+            tableName: 'locations'
           },
-          key : 'id'
-        }
+          key: 'id'
+        },
+        onDelete: 'cascade'
+
       },
       userId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'users'
+        references: {
+          model: {
+            tableName: 'users'
           },
-          key : 'id'
-        }
+          key: 'id'
+        },
+        onDelete: 'cascade'
+
       },
       createdAt: {
         allowNull: false,
