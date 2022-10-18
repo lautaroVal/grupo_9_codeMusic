@@ -6,32 +6,33 @@ const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 
 const usersController = {
-    register: (req, res) => {
+    register: async (req, res) => {
+      try {
         return res.render("users/register", {
           title: "Register",
         });
+      } catch (error) {
+        console.log(error);
+      }
     },
 
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
+      try {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-          let { firstName, lastName, email, telephone, password, password2 } = req.body;
-          db.User.create({
+          let { firstName, lastName, email, telephone, password} = req.body;
+            const user = await db.User.create({
             firstName: firstName.trim(),
             lastName: lastName.trim(),
             email: email.trim(),
-            username: null,
-            province: null,
-            location: null,
-            street: null,
-            musicFav: null,
-            gender: null,
-            biography: null,
-            telephone: telephone.trim(),
-            password: bcryptjs.hashSync(password, 12),
-            password2: bcryptjs.hashSync(password2, 12),
+            username: "",
+            musicFav: "[]",
+            gender: "",
+            biography: "",
+            telephone: +telephone.trim(),
+            password: bcryptjs.hashSync(password, 12)
           })
-            .then((user) => {
+            return ((user) => {
               db.Address.create({
                 userId: user.id,
             });
@@ -48,7 +49,6 @@ const usersController = {
 
             res.redirect("/"); 
             })
-            .catch((err) => console.log(err));
             
         } else {
           res.render("users/register", {
@@ -57,6 +57,9 @@ const usersController = {
             old: req.body
           });
         }
+      } catch (error) {
+        console.log(error);
+      }
       },
 
 
