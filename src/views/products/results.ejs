@@ -6,24 +6,24 @@
         <main>
 
             <% if (result.length > 0) { %>
-                <h4>Resultado de la búsqueda: <%= keywords %></h4>
+                <h4 class="result">Resultado de la búsqueda: <%= keywords %></h4>
             <section class="index_section_products">
             <% result.forEach(result => { %>
                  
                 <article class="index_product">
-                    <div class="index_product_img"><img src="<%= /http/.test(result.image) ? result.image : "/img/imgProducts/" + result.image %>" alt="product"></div>
+                    <div class="index_product_img"><img src="<%="/img/imgProducts/" + result.images[0].name %>" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title"><%= result.name %></h3>
                     <div class="index_product_bottom">
                         <p class="precio">$<%= result.price %><em class="decimales"></em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
+                        <p class="index_product_envío">Envío Gratis</p>
                         <a href="/products/productDetail/<%=result.id %>" class="index_button_product">Ver más</a>
                     </div>
                 </article>
             <% }) %>
         </section>
         <% }else{ %>
-            <p>No hay resultados 😒👨‍🦯</p>
+            <p class="result">No hay resultados 😒👨‍🦯</p>
             <% } %>
 
         </main>

@@ -3,6 +3,7 @@ const db = require('../database/models');
 const { loadUsers, storeUsers } = require('../data/usersModule');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const { Association } = require('sequelize');
 
 module.exports = {
     register: (req, res) => {
@@ -15,6 +16,7 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             const { firstName, lastName, email, telephone, password } = req.body;
+            
             let users = loadUsers();
             let newUser = {
                 id: users.length > 0 ? users[users.length - 1].id + 1 : 1,
@@ -25,7 +27,7 @@ module.exports = {
                 province: "",
                 location: "",
                 street: "",
-                musicFav: "",
+                musicFav: "[]",
                 gender: "",
                 biography: "",
                 telephone: +telephone,
@@ -51,9 +53,22 @@ module.exports = {
         })
     },
 
-    processLogin: (req, res) => {
+    processLogin:async  (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
+         /*  const users = await db.User.findAll({
+                include:[{
+                    association:'locations',
+                    attributes:{
+                            include:['province','street','location'],
+                    },
+                    through: {
+                        attributes: ['created']
+                    }
+                }]
+            })
+        
+            return res.json(users) */
 
             let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
 
@@ -98,13 +113,19 @@ module.exports = {
         if (errors.isEmpty()) {
             let users = loadUsers();
             const { avatar, firstName, lastName, username, gender, telephone, musicFav, province, location, street, biography } = req.body;
+            // return res.send(req.file) REQ.FILE  <--
             let image = req.files.map((file) => file.filename);
+            const obj = {name:'emanuela'}
 
+          /*   db.User.update({
+                avatar: req.file?.filename
+            }) */
             const usersModify = users.map(user => {
                 if (user.id === +req.session.userLogin.id) {
                     return {
                         ...user,
-                        avatar: image.length === 0 ? user.avatar : image[0],
+                        /* avatar: image.length === 0 ? user.avatar : image[0], */
+                        avatar: req.file.filename || user.avatar,
                         firstName: firstName?.trim(),
                         lastName: lastName?.trim(),
                         username: username.trim(),
