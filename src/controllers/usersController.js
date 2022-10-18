@@ -112,7 +112,62 @@ const usersController = {
         });
       },
 
-    update: 
+      update: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let users = loadUsers();
+            const { avatar, firstName, lastName, username, gender, telephone, musicFav, province, location, street, biography } = req.body;
+            let image = req.files.map((file) => file.filename);
+
+            const usersModify = users.map(user => {
+                if (user.id === +req.session.userLogin.id) {
+                    return {
+                        ...user,
+                        avatar: image.length === 0 ? user.avatar : image[0],
+                        firstName: firstName?.trim(),
+                        lastName: lastName?.trim(),
+                        username: username.trim(),
+                        category: user.category,
+                        gender,
+                        email: user.email,
+                        musicFav,
+                        province,
+                        location: location.trim(),
+                        street: street.trim(),
+                        biography: biography.trim(),
+                        telephone: +telephone,
+                    }
+                }
+                return user;
+            })
+            /* return res.send(usersModify); */
+            req.session.userLogin = {
+                id: req.session.userLogin.id,
+                firstName: usersModify.firstName,
+                lastName: usersModify.lastName,
+                telephone,
+                avatar
+            };
+            if (req.body.remember) {
+                res.cookie('codeMusic', req.session.userLogin, {
+                    maxAge: 1000 * 60 * 60
+                })
+            };
+
+            storeUsers(usersModify);
+            return res.redirect('/');
+
+        } else {
+            let users = loadUsers();
+            const user = users.find(user => user.id === req.session.userLogin.id);
+            return res.render('users/profile', {
+                title: 'Perfil de usuario',
+                errors: errors.mapped(),
+                old: req.body,
+                user
+            })
+        }
+    },
 }
 
 module.exports = usersController;
