@@ -24,16 +24,27 @@ module.exports = {
 	},
 
 	/* DETAIL */
-	productDetail: (req, res) => {
+	productDetail: async (req, res) => {
+		try {
+			const products = await db.Product.findByPk(req.params.id, {
+				include: ["Product"],
+				attributes: {
+				  exclude: ["created_at", "updated_at"],
+				},
+			})
+			
+		} catch (error) {
+			console.log(error);
+		}
 
-		const products = loadProducts();
+	/* 	const products = loadProducts();
 
 		const product = products.find(product => product.id === +req.params.id);
 		return res.render('products/productDetail', {
 			title: "Detalle de producto",
 			product,
 			toThousand
-		})
+		}) */
 	},
 	/* CART */
 	productCart: (req, res) => {
@@ -127,14 +138,41 @@ module.exports = {
 	},
 
 	/* EDIT */
-	productEdit: (req, res) => {
-		const products = loadProducts();
+	productEdit: async (req, res) => {
+
+		try {
+			const products = await db.Product.findByPk(req.params.id)
+			
+			const brands = await db.Brand.findAll({
+				attributes: ['id','name'],
+				order: ['name']
+			});
+			const colors = await db.Color.findAll({
+				attributes: ['id','name'],
+				order: ['name']
+			});
+			const categories = await db.Category.findAll({
+				attributes: ['id','name'],
+				order: ['name']
+			});
+
+			return res.render('products/productAdd', {
+				title: "Crear producto",
+				brands,
+				colors,
+				categories
+			})
+		} catch (error) {
+			
+		}
+
+		/* const products = loadProducts();
 		const product = products.find(product => product.id === +req.params.id);
 
 		res.render('products/productEdit', {
 			title: "Edición de producto",
 			product
-		})
+		}) */
 	},
 
 	update: (req, res) => {
