@@ -88,11 +88,10 @@ const usersController = {
                     maxAge: 1000 * 60 * 60
                 });
             }
-    
             res.redirect("/");
           });
         } else {
-          return res.render("users/register", {
+          return res.render("/login", {
             title: "Login",
           });
         }
@@ -105,9 +104,11 @@ const usersController = {
 
 
     profile: (req, res) => {
-        return res.render("users/profile", {
-          title: "Mi Perfil",
-          User,
+      let users = loadUsers();
+      const user = users.find(user => user.id === req.session.userLogin.id);
+      return res.render('users/profile', {
+          title: 'Perfil de usuario',
+          user,
         });
       },
 }
