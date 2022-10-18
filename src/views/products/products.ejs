@@ -14,7 +14,7 @@
                     <hr>
                     <h3 class="index_product_title"><%= product.name %>  </h3>
                     <div class="index_product_bottom">
-                        <p class="precio">$<%= product.price %><em class="decimales"></em></p>
+                        <p class="precio">$<%= toThousand( product.price) %><em class="decimales"></em></p>
                         <p class="index_product_envío"> Envío Gratis</p>
                         <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver más</a>
                     </div>

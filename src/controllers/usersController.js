@@ -56,7 +56,7 @@ module.exports = {
     processLogin:async  (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-          const users = await db.User.findAll({
+         /*  const users = await db.User.findAll({
                 include:[{
                     association:'locations',
                     attributes:{
@@ -68,7 +68,7 @@ module.exports = {
                 }]
             })
         
-            return res.json(users)
+            return res.json(users) */
 
             let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
 

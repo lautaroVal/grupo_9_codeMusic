@@ -26,6 +26,9 @@
     text-align: left;
 }
 
+.main_formulario textarea {
+    resize: none;
+}
 
 .main_formulario button {
     display: inline-block;

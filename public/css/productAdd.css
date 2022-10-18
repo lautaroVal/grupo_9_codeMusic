@@ -58,6 +58,7 @@
 .main_formulario textarea {
     border: 1px solid #551A8B;
     background-color: var(--ColorBlanco);
+    resize: vertical;
 }
 
 .main_formulario_radio div{

@@ -16,6 +16,7 @@ module.exports = {
 			return res.render('products/products', {
 				title: "Listado de productos",
 				products,
+				toThousand
 			})
 		} catch (error) {
 			console.log(error);
@@ -46,10 +47,31 @@ module.exports = {
 	},
 
 	/* CREATE */
-	productAdd: (req, res) => {
-		return res.render('products/productAdd', {
-			title: "Crear producto"
-		})
+	productAdd: async (req, res) => {
+		try {
+			const brands = await db.Brand.findAll({
+				attributes: ['id','name'],
+				order: ['name']
+			});
+			const colors = await db.Color.findAll({
+				attributes: ['id','name'],
+				order: ['name']
+			});
+			const categories = await db.Category.findAll({
+				attributes: ['id','name'],
+				order: ['name']
+			});
+
+			return res.render('products/productAdd', {
+				title: "Crear producto",
+				brands,
+				colors,
+				categories
+			})
+
+		} catch (error) {
+			console.log(error);
+		}
 	},
 
 	productAddStore: async (req, res) => {
@@ -58,7 +80,7 @@ module.exports = {
 			let errors = validationResult(req);
 			if (errors.isEmpty()) {
 				const { name, price, discount, description, category, color, status } = req.body
-				/* return res.send(req.files) */
+				 return res.send(req.files) 
 				const products = loadProducts();
 
 

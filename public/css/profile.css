@@ -58,6 +58,7 @@
 .profile_controls_textarea {
     border: 1px solid rgba(0, 0, 0, 0.411);
     padding: 2px;
+    resize:vertical;
 }
 
 .profile_main_form_div4 div select{
