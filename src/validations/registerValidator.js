@@ -1,4 +1,7 @@
 const { body } = require('express-validator');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const Users = db.User;
 
 module.exports = [
     body('firstName')

@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const port = 3047;
+const port = 3049;
 const morgan = require('morgan'); /* hay que hacer npm i morgan para instalar las dependencias de morgan.. */
 const session = require('express-session');
 const cookieParse = require('cookie-parser')

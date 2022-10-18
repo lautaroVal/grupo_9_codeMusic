@@ -6,7 +6,7 @@ const profileValidator = require('../validations/profileValidator');
 const uploadImges = require('../middlewares/uploadImg');
 
 const userSessionCheck = require('../middlewares/userSessionCheck');
-const {register, login, processRegister, processLogin, profile, logout} = require('../controllers/usersController');
+const {register, login, processRegister, processLogin, profile, logout, update} = require('../controllers/usersController');
 
 
 router.get('/register', register);
@@ -16,6 +16,6 @@ router.get('/login', login);
 router.post('/login', processLogin);
 router.get('/logout', logout);
 router.get('/profile', profile);
-router.post('/profile', update);
+// router.put('/profile',uploadImges.array('avatar',1), update);
 
 module.exports = router;
