@@ -10,11 +10,12 @@ const {register, login, processRegister, processLogin, profile, logout} = requir
 
 
 router.get('/register', register);
-router.post('/register', registerValidator, processRegister);
+router.post('/register', processRegister);
 
 router.get('/login', login);
 router.post('/login', processLogin);
 router.get('/logout', logout);
 router.get('/profile', profile);
+router.post('/profile', update);
 
 module.exports = router;

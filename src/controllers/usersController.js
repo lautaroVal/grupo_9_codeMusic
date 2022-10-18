@@ -111,6 +111,8 @@ const usersController = {
           user,
         });
       },
+
+    update: 
 }
 
 module.exports = usersController;
