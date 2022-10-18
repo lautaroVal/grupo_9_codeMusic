@@ -21,12 +21,12 @@
 
                     <div>
                         <label for="imagen">Imagen principal</label>
-                        <input type="file" name="image" id="imagen" accept="image/*"/><br/><br/>
+                        <input type="file" name="images" id="imagen" accept="image/*"/><br/><br/>
                     </div>
 
                     <div>
                         <label for="imagen">Imágenes secundarias</label>
-                        <input type="file" name="image" id="imagen" accept="image/*" multiple /><br/><br/>
+                        <input type="file" name="images" id="imagen" accept="image/*" multiple /><br/><br/>
                     </div>
 
                     <div>
@@ -57,22 +57,17 @@
                     <div>
                         <label for="brand" class="form-label">Elige una marca:</label>
                         <select name="brandId" id="brand">
-                            <option hidden>Elegí una marca</option>
+                            <option value="" hidden>Elegí una marca</option>
                             <% brands.forEach(({id,name}) => { %> 
                                 <option value="<%= id %>"><%= name %> </option>
                             <% }) %>
                         </select>
-                        <% if (locals.errors && errors.brand) { %>
-                            <p class="register_errors">
-                                <%= errors.brand.msg %>
-                            </p>
-                            <% } %>
                     </div>
 
                     <div>
                         <label for="color" class="form-label">Elige un color:</label>
                         <select name="colorId" id="color">
-                            <option hidden>Elegí un color</option>
+                            <option value="" hidden>Elegí un color</option>
                             <% colors.forEach(({id,name}) => { %>
                                 <option value="<%= id %>"><%= name %> </option>
                             <% }) %>
@@ -82,27 +77,27 @@
                     <div>
                         <label for="category" class="form-label">Elige una categoria:</label>
                         <select name="categoryId" id="category">
-                            <option hidden>Elegir</option>
+                            <option value="" hidden>Elegir</option>
                             <% categories.forEach(({id,name}) => { %>
                                 <option value="<%= id %>"><%= name %> </option>
                             <% }) %>
                         </select>
-                        <% if (locals.errors && errors.category) { %>
+                        <% if (locals.errors && errors.categoryId) { %>
                             <p class="register_errors">
-                                <%= errors.category.msg %>
+                                <%= errors.categoryId.msg %>
                             </p>
                             <% } %>
                     </div>
 
                     <div class="main_formulario_radio">
                         <div class="main_formulario_radio">
-                            <label for="status">Oferta:</label>
+                            <label for="status" name="status">Oferta:</label>
                             <p>
-                                <input type="radio" name="status" id="status" value="oferta" /> En
+                                <input type="radio" name="status" id="status" value="1" /> En
                                 oferta
                             </p>
                             <p>
-                                <input type="radio" name="status" id="status" value="no-oferta" />
+                                <input type="radio" name="status" id="status" value="0" />
                                 Sin oferta
                             </p>
                         </div>
