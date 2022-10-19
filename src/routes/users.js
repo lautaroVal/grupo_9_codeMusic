@@ -9,13 +9,14 @@ const userSessionCheck = require('../middlewares/userSessionCheck');
 const {register, login, processRegister, processLogin, profile, logout, update} = require('../controllers/usersController');
 
 
-router.get('/register', register);
-router.post('/register', processRegister);
-router.get('/login', login);
-router.post('/login', processLogin);
-router.get('/logout', logout);
-router.get('/profile', profile);
-// router.put('/profile',uploadImges.array('avatar',1), update);
+router
+    .get('/register', register)
+    .post('/register', registerValidator, processRegister)
+    .get('/login', login)
+    .post('/login', /* loginValidator */ processLogin)
+    .get('/profile', profileValidator,userSessionCheck, profile)
+    .put('/profile',uploadImageAvatar.single('avatar'), update)
+    .get('/logout', logout)
 
 
 module.exports = router;

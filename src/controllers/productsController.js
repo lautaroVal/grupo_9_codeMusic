@@ -150,29 +150,17 @@ module.exports = {
 	productEdit: async (req, res) => {
 
 		try {
-			const products = await db.Product.findByPk(req.params.id)
+			const products = await db.Product.findByPk(req.params.id, {
+				include: ['images', 'brand', 'category', 'color']
+			})
 
-			const brands = await db.Brand.findAll({
-				attributes: ['id','name'],
-				order: ['name']
-			});
-			const colors = await db.Color.findAll({
-				attributes: ['id','name'],
-				order: ['name']
-			});
-			const categories = await db.Category.findAll({
-				attributes: ['id','name'],
-				order: ['name']
-			});
 
 			return res.render('products/productAdd', {
-				title: "Crear producto",
-				brands,
-				colors,
-				categories
+				product
 			})
 		} catch (error) {
-			
+			console.log(error);
+
 		}
 
 		/* const products = loadProducts();

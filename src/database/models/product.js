@@ -23,6 +23,10 @@ module.exports = (sequelize, DataTypes) => {
         as: "category",
         foreignKey: "categoryId"
       });
+      this.belongsTo(models.Color, {
+        as: "colors",
+        foreignKey: "colorId"
+      });
     }
   }
   Product.init({

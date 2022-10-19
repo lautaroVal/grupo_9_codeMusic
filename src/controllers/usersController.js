@@ -76,7 +76,7 @@ module.exports = {
               lastName: user.lastName,
               email: user.email,
               telephone: user.telephone,
-              category: user.category,
+              rol: user.rol,
               avatar: user.avatar
           };
           if (req.body.remember) {
