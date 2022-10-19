@@ -14,7 +14,7 @@ router
     .get('/register', register)
     .post('/register', registerValidator, processRegister)
     .get('/login', login)
-    .post('/login', /* loginValidator, */ processLogin)
+    .post('/login', loginValidator, processLogin)
     .get('/profile', profileValidator, userSessionCheck, profile)
     .put('/profile',uploadImageAvatar.single('avatar'), update)
     .get('/logout', logout)
