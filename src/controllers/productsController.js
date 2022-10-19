@@ -26,11 +26,16 @@ module.exports = {
 	/* DETAIL */
 	productDetail: async (req, res) => {
 		try {
-			const products = await db.Product.findByPk(req.params.id, {
-				include: ["Product"],
+			const product = await db.Product.findByPk(req.params.id, {
+				include: ['images', 'brand', 'category'],
 				attributes: {
 				  exclude: ["created_at", "updated_at"],
-				},
+				},	
+			})
+			return res.render('products/productDetail', {
+				title: "Detalle de producto",
+				product,
+				toThousand
 			})
 			
 		} catch (error) {
@@ -109,8 +114,8 @@ module.exports = {
 				})
 
 				await db.Image.bulkCreate(images)
-				console.log(images.length);
-		
+/* 				console.log(images.length);
+ */		
 				return res.redirect('/products')
 			} else {
 				const brands = await db.Brand.findAll({
@@ -146,7 +151,7 @@ module.exports = {
 
 		try {
 			const products = await db.Product.findByPk(req.params.id)
-			
+
 			const brands = await db.Brand.findAll({
 				attributes: ['id','name'],
 				order: ['name']
