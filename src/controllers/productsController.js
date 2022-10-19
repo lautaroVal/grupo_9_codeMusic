@@ -76,8 +76,8 @@ module.exports = {
 
 	productAddStore: async (req, res) => {
 		try {
- 			 let errors = validationResult(req);
-			if (errors.isEmpty()) { 
+ 			  /* let errors = validationResult(req);
+			if (errors.isEmpty()) {   */
 				const { name, price, status, discount, description, brandId, colorId, categoryId} = req.body; 
 
 				const { id } = await db.Product.create({
@@ -101,7 +101,7 @@ module.exports = {
 				console.log(images.length);
 		
 				return res.redirect('/products')
-			} else {
+		/* 	 } else {
 				const brands = await db.Brand.findAll({
 					attributes: ['id','name'],
 					order: ['name']
@@ -123,7 +123,7 @@ module.exports = {
 					errors: errors.mapped(),
 					old: req.body
 				})
-			}
+			}  */
 
 		} catch (error) {
 			console.log(error);

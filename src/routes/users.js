@@ -15,7 +15,7 @@ router.get('/login', login);
 router.post('/login', processLogin);
 router.get('/logout', logout);
 router.get('/profile', profile);
-// router.put('/profile',uploadImges.array('avatar',1), update);
+router.put('/profile',uploadImges.array('avatar',1), update);
 
 
 module.exports = router;
