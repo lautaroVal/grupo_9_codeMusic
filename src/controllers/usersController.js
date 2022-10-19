@@ -5,113 +5,134 @@ const bcryptjs = require('bcryptjs');
 const { Association } = require('sequelize');
 
 module.exports = {
-  register: async (req, res) => {
-    try {
-      return res.render("users/register", {
-        title: "Register",
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  processRegister: async (req, res) => {
-    try {
-      let errors = validationResult(req);
-      if (errors.isEmpty()) {
-        let { firstName, lastName, email, telephone, password} = req.body;
-          const user = await db.User.create({
-          firstName: firstName.trim(),
-          lastName: lastName.trim(),
-          email: email.trim(),
-          username: "",
-          musicFav: "[]",
-          genre: "",
-          biography: "",
-          avatar: "default-users-image.jpg",
-          rol: 0,
-          telephone: +telephone.trim(),
-          password: bcryptjs.hashSync(password, 12)
-        })
-          return ((user) => {
-            db.Address.create({
-              userId: user.id,
-          });
-  
-          req.session.userLogin = {
-              id: user.id,
-              firstName: user.firstName,
-              lastName: user.lastName,
-            };
-  
-          res.cookie('codeMusic', req.session.userLogin, {
-              maxAge: 1000 * 60 * 60
-          });
-  
-          res.redirect("/"); 
-          })
-          
-      } else {
-        res.render("users/register", {
-          title: "register",
-          errors: errors.mapped(),
-          old: req.body
+    register: (req, res) => {
+      try {
+        return res.render("users/register", {
+          title: "Register",
         });
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
-    }
     },
 
-    processLogin: (req, res) => {
-      let errors = validationResult(req);
-      if (errors.isEmpty()) {
-        db.User.findOne({
-          where: {
-            email: req.body.email,
-          },
-        }).then((user) => {
-          req.session.userLogin = {
+    processRegister: async (req, res) => {
+      try {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+          let { firstName, lastName, email, telephone, password} = req.body;
+            const user = await db.User.create({
+            firstName: firstName.trim(),
+            lastName: lastName.trim(),
+            email: email.trim(),
+            username: "",
+            musicFav: "[]",
+            genre: "",
+            biography: "",
+            avatar: "default-users-image.jpg",
+            rol: 0,
+            telephone: +telephone.trim(),
+            password: bcryptjs.hashSync(password, 12)
+          })
+
+          if (user) {
+            let location = await db.Location.create({
+              id: user.id,
+              province: "",
+              location: "",
+              street: ""
+          })
+          if (location) {
+            await db.userLocation.create({
+              locationId: location.id,
+              userId: user.id
+            })
+          }
+
+            req.session.userLogin = {
               id: user.id,
               firstName: user.firstName,
               lastName: user.lastName,
-              email: user.email,
-              telephone: user.telephone,
-              category: user.category,
-              avatar: user.avatar
-          };
-          if (req.body.remember) {
-              res.cookie('codeMusic', req.session.userLogin, {
-                  maxAge: 1000 * 60 * 60
-              });
-          }
-          res.redirect("/");
-        });
-      } else {
-        return res.render("/login", {
-          title: "Login",
-        });
-      }
-    },
-    
+              rol: user.rolId
+            };
+
+            res.cookie('codeMusic', req.session.userLogin, {
+              maxAge: 1000 * 60 * 60
+          });
+        }
+        return res.redirect('/users/login');
+
+        } else {
+            return res.render('users/register', {
+                title: 'Register',
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+
+      } catch (error) {console.log(error)}
+      },
+
     login: (req, res) => {
         return res.render('users/login', {
             title: 'Login'
         })
     },
-  
+
+    processLogin:async  (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+         /*  const users = await db.User.findAll({
+                include:[{
+                    association:'locations',
+                    attributes:{
+                            include:['province','street','location'],
+                    },
+                    through: {
+                        attributes: ['created']
+                    }
+                }]
+            })
+        
+            return res.json(users) */
+
+            let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
+
+            req.session.userLogin = {
+                id,
+                firstName,
+                lastName,
+                email,
+                telephone,
+                category,
+                avatar
+            };
+
+            if (req.body.remember) {
+                res.cookie('codeMusic', req.session.userLogin, {
+                    maxAge: 1000 * 60 * 60
+                })
+            };
+
+            return res.redirect('/')
+        } else {
+            return res.render('users/login', {
+                title: 'Login',
+                errors: errors.mapped()
+            })
+        }
+    },
+
     profile: (req, res) => {
-      const id = req.session.userLogin?.id;
-      db.User.findByPk(id)
-        .then((user) => {
-          return res.render("users/profile", {
-            title: "Mi perfil",
+        let users = loadUsers();
+        const user = users.find(user => user.id === req.session.userLogin.id);
+        return res.render('users/profile', {
+            title: 'Perfil de usuario',
             user,
-          });
         })
-        .catch((err) => console.log(err));
     },
 
     update: (req, res) => {
+
         /*  return res.send(req.body); */
         let errors = validationResult(req);
         if (errors.isEmpty()) {
@@ -120,6 +141,7 @@ module.exports = {
             // return res.send(req.file) REQ.FILE  <--
             let image = req.files.map((file) => file.filename);
             const obj = {name:'emanuela'}
+
           /*   db.User.update({
                 avatar: req.file?.filename
             }) */
@@ -158,8 +180,10 @@ module.exports = {
                     maxAge: 1000 * 60 * 60
                 })
             };
+
             storeUsers(usersModify);
             return res.redirect('/');
+
         } else {
             let users = loadUsers();
             const user = users.find(user => user.id === req.session.userLogin.id);
@@ -171,10 +195,10 @@ module.exports = {
             })
         }
     },
+
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('codeMusic', null, { maxAge: -1 });
         return res.redirect('/');
     }
 }
-

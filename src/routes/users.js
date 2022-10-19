@@ -11,7 +11,7 @@ const {register, login, processRegister, processLogin, profile, logout, update} 
 
 router
     .get('/register', register)
-    .post('/register', registerValidator, processRegister)
+    .post('/register', registerValidator,  processRegister)
     .get('/login', login)
     .post('/login', loginValidator, processLogin)
     .get('/profile', profileValidator, userSessionCheck, profile)

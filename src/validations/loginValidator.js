@@ -7,8 +7,8 @@ module.exports = [
     .isEmail().withMessage('Debe ser un email valido').bail(),
     body('password')
     .notEmpty().withMessage('La contraseña es obligatoria').bail()
-    .custom((value, {req}) => {
+    /* .custom((value, {req}) => {
         let user = users.find(user => user.email === req.body.email.trim() && bcryptjs.compareSync(value,user.password));
         return !!user
-    }).withMessage('Credenciales inválidas')
+    }).withMessage('Credenciales inválidas') */
 ]
