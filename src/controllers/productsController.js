@@ -50,15 +50,15 @@ module.exports = {
 	productAdd: async (req, res) => {
 		try {
 			const brands = await db.Brand.findAll({
-				attributes: ['id','name'],
+				attributes: ['id', 'name'],
 				order: ['name']
 			});
 			const colors = await db.Color.findAll({
-				attributes: ['id','name'],
+				attributes: ['id', 'name'],
 				order: ['name']
 			});
 			const categories = await db.Category.findAll({
-				attributes: ['id','name'],
+				attributes: ['id', 'name'],
 				order: ['name']
 			});
 
@@ -76,54 +76,59 @@ module.exports = {
 
 	productAddStore: async (req, res) => {
 		try {
- 			  /* let errors = validationResult(req);
-			if (errors.isEmpty()) {   */
-				const { name, price, status, discount, description, brandId, colorId, categoryId} = req.body; 
+			/* let errors = validationResult(req);
+			if (errors.isEmpty()) { */
+				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
 
-				const { id } = await db.Product.create({
-					 ...req.body,
-					  name: name.trim(),
-					  price: +price,
-					  status,
-					  share: req.body.share ? req.body.share : 12,
-					  discount: +discount,
-					  description: description.trim()
-					})
-
-				let images = req.files.map(file => {
-					return {
-						   name: file.filename,
-						   productId: id
-					   }
+				const product = await db.Product.create({
+					...req.body,
+					name: name.trim(),
+					price: +price,
+					status: status ? status : 0,
+					share: share ? share : 12,
+					discount: +discount,
+					description: description.trim(),
+					brandId: +brandId,
+					colorId: +colorId,
+					categoryId: +categoryId
 				})
 
-				await db.Image.bulkCreate(images)
-				console.log(images.length);
-		
-				return res.redirect('/products')
-		/* 	 } else {
+				if (product) {
+					let images = req.files.map(file => {
+						return {
+							name: file.filename,
+							productId: product.id
+						}
+					})
+	
+					await db.Image.bulkCreate(images)
+					/* console.log(images.length); */
+					return res.redirect('/products')
+				}
+
+			/* } else {
 				const brands = await db.Brand.findAll({
-					attributes: ['id','name'],
+					attributes: ['id', 'name'],
 					order: ['name']
 				});
 				const colors = await db.Color.findAll({
-					attributes: ['id','name'],
+					attributes: ['id', 'name'],
 					order: ['name']
 				});
 				const categories = await db.Category.findAll({
-					attributes: ['id','name'],
+					attributes: ['id', 'name'],
 					order: ['name']
 				});
-				
+
 				return res.render('products/productAdd', {
 					title: "Crear producto",
 					brands,
-				    colors,
-				    categories,
+					colors,
+					categories,
 					errors: errors.mapped(),
 					old: req.body
 				})
-			}  */
+			} */
 
 		} catch (error) {
 			console.log(error);

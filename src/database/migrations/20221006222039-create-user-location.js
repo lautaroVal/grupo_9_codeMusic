@@ -38,7 +38,7 @@ module.exports = {
       updatedAt: {
         type: Sequelize.DATE
       },
-      deleteAt: {
+      deletedAt: {
         allowNull: true,
         type: Sequelize.DATE
       }

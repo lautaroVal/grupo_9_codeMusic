@@ -41,6 +41,8 @@ module.exports = {
               location: "",
               street: ""
           })
+
+          
           if (location) {
             await db.userLocation.create({
               locationId: location.id,
@@ -48,12 +50,13 @@ module.exports = {
             })
           }
 
-            req.session.userLogin = {
-              id: user.id,
-              firstName: user.firstName,
-              lastName: user.lastName,
-              rol: user.rolId
-            };
+          req.session.userLogin = {
+            id: user.id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            rol: user.rol
+          };
 
             res.cookie('codeMusic', req.session.userLogin, {
               maxAge: 1000 * 60 * 60
@@ -78,48 +81,44 @@ module.exports = {
         })
     },
 
-    processLogin:async  (req, res) => {
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-         /*  const users = await db.User.findAll({
-                include:[{
-                    association:'locations',
-                    attributes:{
-                            include:['province','street','location'],
-                    },
-                    through: {
-                        attributes: ['created']
-                    }
-                }]
-            })
-        
-            return res.json(users) */
+    processLogin: async (req, res) => {
+         try {
+           let errors = validationResult(req);
+           if (errors.isEmpty()) {
+               const userLog = await db.User.findOne({
+                 where: {
+                   email: req.body.email,
+                 },
+               })
 
-            let { id, firstName, lastName, email, telephone, category, avatar } = loadUsers().find(user => user.email === req.body.email);
-
-            req.session.userLogin = {
-                id,
-                firstName,
-                lastName,
-                email,
-                telephone,
-                category,
-                avatar
-            };
-
-            if (req.body.remember) {
-                res.cookie('codeMusic', req.session.userLogin, {
-                    maxAge: 1000 * 60 * 60
-                })
-            };
-
-            return res.redirect('/')
-        } else {
-            return res.render('users/login', {
-                title: 'Login',
-                errors: errors.mapped()
-            })
-        }
+               if (userLog) {
+                 req.session.userLogin = {
+                   id: userLog.id,
+                   firstName: userLog.firstName,
+                   lastName: userLog.lastName,
+                   email: userLog.email,
+                   rol: userLog.rol
+                 };
+                 if (req.body.remember) {
+                     res.cookie('codeMusic', req.session.userLogin, {
+                         maxAge: 1000 * 60 * 60
+                     })
+                 };
+                  res.locals.userLog = req.session.userLogin;
+              }
+   
+               return res.redirect('/')
+   
+           } else {
+               return res.render('users/login', {
+                   title: 'Login',
+                   errors: errors.mapped()
+               })
+           }
+          
+         } catch (error) {
+          console.log(error);
+         }
     },
 
     profile: (req, res) => {
