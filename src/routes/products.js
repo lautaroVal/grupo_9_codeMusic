@@ -7,7 +7,7 @@ const productAddValidator = require('../validations/productAddValidator');
 const adminUserCheck = require('../middlewares/adminUserCheck');
 const { uploadImageProduct } = require('../middlewares/uploadImg');
 
-uploadImageProduct
+
 router
         /* Listado de productos */
         .get('/', productsList)
@@ -17,7 +17,7 @@ router
        
         /* Acción de creación (a donde se envía el formulario)*/
 
-        .post('/productAdd',uploadImageProduct.array('images'), productAddValidator,  productAddStore)
+        .post('/productAdd',uploadImageProduct.array('images'), productAddValidator, productAddStore)
 
         /*Detalle de un producto particular*/
         .get('/productDetail/:id', productDetail)

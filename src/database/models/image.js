@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.belongsTo(models.Product, {
         as: "products",
-        foreignKey: "productId"
+        foreignKey: "productId",
+        onDelete: 'cascade'
       });
     }
   }
@@ -23,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Image',
+    paranoid:true
   });
   return Image;
 };

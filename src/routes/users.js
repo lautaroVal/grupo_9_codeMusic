@@ -9,10 +9,9 @@ const userSessionCheck = require('../middlewares/userSessionCheck');
 const {register, login, processRegister, processLogin, profile, logout, update} = require('../controllers/usersController');
 
 
-
 router
     .get('/register', register)
-    .post('/register', registerValidator, processRegister)
+    .post('/register', registerValidator,  processRegister)
     .get('/login', login)
     .post('/login', loginValidator, processLogin)
     .get('/profile', profileValidator, userSessionCheck, profile)

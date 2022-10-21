@@ -50,15 +50,15 @@ module.exports = {
 	productAdd: async (req, res) => {
 		try {
 			const brands = await db.Brand.findAll({
-				attributes: ['id','name'],
+				attributes: ['id', 'name'],
 				order: ['name']
 			});
 			const colors = await db.Color.findAll({
-				attributes: ['id','name'],
+				attributes: ['id', 'name'],
 				order: ['name']
 			});
 			const categories = await db.Category.findAll({
-				attributes: ['id','name'],
+				attributes: ['id', 'name'],
 				order: ['name']
 			});
 
@@ -76,50 +76,58 @@ module.exports = {
 
 	productAddStore: async (req, res) => {
 		try {
- 			 let errors = validationResult(req);
-			if (errors.isEmpty()) { 
-				const { name, price, status, discount, description, brandId, colorId, categoryId} = req.body; 
+			let errors = validationResult(req);
+			//Si no hay errores crea el producto y redirecciona a products.
+ 			if (errors.isEmpty()) {
+				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
 
-				const { id } = await db.Product.create({
-					 ...req.body,
-					  name: name.trim(),
-					  price: +price,
-					  status,
-					  share: req.body.share ? req.body.share : 12,
-					  discount: +discount,
-					  description: description.trim()
-					})
-
-				let images = req.files.map(file => {
-					return {
-						   name: file.filename,
-						   productId: id
-					   }
+				const product = await db.Product.create({
+					...req.body,
+					name: name.trim(),
+					price: +price,
+					status: status ? status : 0,
+					share: share ? share : 12,
+					discount: +discount,
+					description: description.trim(),
+					brandId: +brandId,
+					colorId: +colorId,
+					categoryId: +categoryId
 				})
 
-				await db.Image.bulkCreate(images)
-				console.log(images.length);
-		
-				return res.redirect('/products')
+				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
+				if (product) {
+					let images = req.files.map(file => {
+						return {
+							name: file.filename,
+							productId: product.id
+						}
+					})
+	
+					await db.Image.bulkCreate(images)
+				}
+				//Una vez completa la creación del producto me redirige al listado de productos.
+ 				return res.redirect('/products')
+ 
+				//Si vienen errores renderizo la vista de creación mostrandolos.
 			} else {
 				const brands = await db.Brand.findAll({
-					attributes: ['id','name'],
+					attributes: ['id', 'name'],
 					order: ['name']
 				});
 				const colors = await db.Color.findAll({
-					attributes: ['id','name'],
+					attributes: ['id', 'name'],
 					order: ['name']
 				});
 				const categories = await db.Category.findAll({
-					attributes: ['id','name'],
+					attributes: ['id', 'name'],
 					order: ['name']
 				});
-				
+
 				return res.render('products/productAdd', {
 					title: "Crear producto",
 					brands,
-				    colors,
-				    categories,
+					colors,
+					categories,
 					errors: errors.mapped(),
 					old: req.body
 				})
@@ -143,9 +151,7 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
-		/* return res.send(req.body) */
 		const { name, description, category, color, price, discount, status } = req.body;
-
 
 		const producstModify = products.map(product => {
 			if (product.id === +req.params.id) {
