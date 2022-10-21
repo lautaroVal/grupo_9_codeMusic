@@ -21,7 +21,12 @@
 
                     <div>
                         <label for="imagen">Imagen principal</label>
-                        <input type="file" name="images" id="imagen" accept="image/*"/><br/><br/>
+                        <input type="file" name="images" id="imagen" accept="image/*" /><br/><br/>
+                        <% if (locals.errors && errors.images) { %>
+                            <p class="register_errors">
+                                <%= errors.images.msg %>
+                            </p>
+                            <% } %>
                     </div>
 
                     <div>

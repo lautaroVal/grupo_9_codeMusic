@@ -76,8 +76,9 @@ module.exports = {
 
 	productAddStore: async (req, res) => {
 		try {
-			/* let errors = validationResult(req);
-			if (errors.isEmpty()) { */
+			let errors = validationResult(req);
+			//Si no hay errores crea el producto y redirecciona a products.
+ 			if (errors.isEmpty()) {
 				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
 
 				const product = await db.Product.create({
@@ -93,6 +94,7 @@ module.exports = {
 					categoryId: +categoryId
 				})
 
+				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
 				if (product) {
 					let images = req.files.map(file => {
 						return {
@@ -102,11 +104,12 @@ module.exports = {
 					})
 	
 					await db.Image.bulkCreate(images)
-					/* console.log(images.length); */
-					return res.redirect('/products')
 				}
-
-			/* } else {
+				//Una vez completa la creación del producto me redirige al listado de productos.
+ 				return res.redirect('/products')
+ 
+				//Si vienen errores renderizo la vista de creación mostrandolos.
+			} else {
 				const brands = await db.Brand.findAll({
 					attributes: ['id', 'name'],
 					order: ['name']
@@ -128,7 +131,7 @@ module.exports = {
 					errors: errors.mapped(),
 					old: req.body
 				})
-			} */
+			}
 
 		} catch (error) {
 			console.log(error);
@@ -148,9 +151,7 @@ module.exports = {
 
 	update: (req, res) => {
 		const products = loadProducts();
-		/* return res.send(req.body) */
 		const { name, description, category, color, price, discount, status } = req.body;
-
 
 		const producstModify = products.map(product => {
 			if (product.id === +req.params.id) {
