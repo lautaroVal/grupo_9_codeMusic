@@ -2,6 +2,7 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
+const {OFERTA,SINOFERTA} = require('../constants/products')
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -191,7 +192,9 @@ module.exports = {
 				brands,
 				colors,
 				categories,
-				images
+				images,
+				OFERTA,
+				SINOFERTA
 			})
 		} catch (error) {
 			console.log(error);
@@ -209,32 +212,15 @@ module.exports = {
 
 	update: async (req, res) => {
 
-/* 		try {
-			const update = await db.Product.update({
-				...req.body,
-				name: req.body.filename.trim(),
-				description: req.body.description.trim(),
-			},
-			{
-				where: {
-				  id: req.params.id,
-				}
-			})
-		} catch (error) {
-			console.log(error);
-		} */
-
-
 /*  		const products = loadProducts();
  */ 		try {
-
-			const { name, description, category, colorId, price, discount, status } = req.body;
+	 const { name, description, category, colorId, price, discount, status } = req.body;
+	 return res.send(req.body)
 
 			const producstModify = await db.Product.update({
 				...product,
 				name: name,
 				description: description,
-				image: req.file ? req.file.filename : product.image,
 				category,
 				discount: +discount,
 				colorId,
@@ -243,10 +229,20 @@ module.exports = {
 				},
 				{
 					where: {
-						id: req.body.id
+						id: req.params.id
 					}
 				}
 			)
+			if (product) {
+				let images = req.files.map(file => {
+					return {
+						name: file.filename,
+						productId: product.id
+					}
+				})
+
+				await db.Image.update(images)
+			}
 			if (producstModify) {
 				return res.redirect('/products/productDetail/' + req.params.id);
 			}

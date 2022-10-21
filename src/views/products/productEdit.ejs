@@ -24,22 +24,16 @@
 
                     <div>
                         <label for="imagen">Imagen de producto</label>
-                        <input type="file" name="image" id="imagen" accept="image/*"
+                        <input type="file" name="images" id="imagen" accept="image/*"
                             value="<%= product.image %>"><br><br>
                     </div>
 
                     <div>
                         <label for="category" class="form-label">Elige una categoria:</label>
-                        <select name="category" id="category">
-                            <option value="guitarras" <%=product.category==="guitarras" && "selected" %>>Guitarras
-                            </option>
-                            <option value="baterias" <%=product.category==="baterias" && "selected" %>>Baterias</option>
-                            <option value="teclados" <%=product.category==="teclados" && "selected" %>>Teclados y Pianos
-                            </option>
-                            <option value="microfonosYSonidos" <%=product.category==="microfonosYSonidos" && "selected"
-                                %>>Microfonos y Sonido</option>
-                            <option value="deVientos" <%=product.category==="deVientos" && "selected" %>>Instrumentos de
-                                Viento</option>
+                        <select name="categoryId" id="category">
+                            <% categories.forEach(category => { %>
+                                <option value="<%= product.category.id %>" <%=product.category.name === category.name && "selected"%>> <%= category.name%></option>
+                            <% }) %>
                         </select>
                     </div>
 
@@ -47,7 +41,7 @@
                         <label for="color" class="form-label">Elige un color:</label>
                         <select name="colorId" id="color">
                             <% colors.forEach(color => { %>
-                                <option value="<%= color.name %>" <%=product.colors.name === color.name && "selected"%>> <%= color.name%></option>
+                                <option value="<%= product.colors.id %>" <%=product.colors.name === color.name && "selected"%>> <%= color.name%></option>
                             <% }) %>
 
                         </select>
@@ -62,9 +56,9 @@
 
                     <div>
                         <label for="status">Oferta:</label>
-                        <input type="radio" name="status" id="status" value="oferta" <%=product.status==="oferta"
+                        <input type="radio" name="status" id="status" value="<%= OFERTA%>" <%=product.status==="oferta"
                             && "checked" %>> En oferta
-                        <input type="radio" name="status" id="estado" value="no-oferta" <%=product.status==="no-oferta"
+                        <input type="radio" name="status" id="estado" value="<%= SINOFERTA%>" <%=product.status==="no-oferta"
                             && "checked" %>> Sin oferta
                     </div>
 
