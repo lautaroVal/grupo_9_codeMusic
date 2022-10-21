@@ -33,9 +33,9 @@
 
                             <div>
                                 <label for="username">Nombre de usuario</label>
-                                <input type="text" name="username" id="username"
-                                    placeholder="Escribí tu nombre de usuario" class="profile_controls" value="<%= user.username ? user.username : null %>">
-                                    <p class="text-danger"><%= locals.errors && errors.username ? errors.username.msg : null %></p>
+                                <input type="text" name="userName" id="userName"
+                                    placeholder="Escribí tu nombre de usuario" class="profile_controls" value="<%= user.userName ? user.userName : null %>">
+                                    <p class="text-danger"><%= locals.errors && errors.userName ? errors.userName.msg : null %></p>
                             </div>
 
                             <div>
@@ -53,9 +53,9 @@
                                 <% } %>
                             </div>
                             <div>
-                                <label for="category">Categoría</label>
+                                <label for="category">Rol de usuario:</label>
                                 <input type="text" name="category" id="category" class="profile_controls"
-                                value="<%= user.category %>" disabled>
+                                value="<%= user.rol === ROL_ADMIN ? "Administrador" : "Regular" %>" disabled>
                             </div>
 
                         </div>
@@ -64,19 +64,19 @@
                             <h5>Género</h5>
                             <hr>
                             <div>
-                                <input value="femenino" type="radio" id="femenino" name="gender" <%=user.gender === "femenino"
+                                <input value="femenino" type="radio" id="femenino" name="genre" <%=user.genre === "femenino"
                                 && "checked" %>>
                                 <label for="femenino">Femenino</label>
                             </div>
 
                             <div>
-                                <input value="masculino" type="radio" id="masculino" name="gender" <%=user.gender === "masculino"
+                                <input value="masculino" type="radio" id="masculino" name="genre" <%=user.genre === "masculino"
                                 && "checked" %>>
                                 <label for="masculino">Masculino</label>
                             </div>
 
                             <div>
-                                <input value="otro" type="radio" id="otro" name="gender" <%=user.gender === "otro"
+                                <input value="otro" type="radio" id="otro" name="genre" <%=user.genre === "otro"
                                 && "checked" %>>
                                 <label for="otro">Otro</label>
                             </div>
@@ -108,45 +108,46 @@
                             <h5>Domicilio</h5>
                             <hr>
                             <div>
+                                
                                 <label for="province">Selecciona tu provincia</label>
                                 <select name="province" id="province" class="profile_controls">
                                     <option value="" hidden selected>Selecciona tu provincia</option>
-                                    <option value="Buenos Aires" <%=user.province ==="Buenos Aires" && "selected" %>>Buenos Aires</option>
-                                    <option value="Corrientes" <%=user.province ==="Corrientes" && "selected" %>>Corrientes</option>
-                                    <option value="Entre Ríos" <%=user.province ==="Entre Ríos" && "selected" %>>Entre Ríos</option>
-                                    <option value="Misiones" <%=user.province ==="Misiones" && "selected" %>>Misiones</option>
-                                    <option value="Santa Fé" <%=user.province ==="Santa Fé" && "selected" %>>Santa Fé</option>
-                                    <option value="Tucuman" <%=user.province ==="Tucuman" && "selected" %>>Tucumán</option>
-                                    <option value="Mendoza" <%=user.province ==="Mendoza" && "selected" %>>Mendoza</option>
-                                    <option value="Jujuy" <%=user.province ==="Jujuy" && "selected" %>>Jujuy</option>
-                                    <option value="Catamarca" <%=user.province ==="Catamarca" && "selected" %>>Catamarca</option>
-                                    <option value="Chaco" <%=user.province ==="Chaco" && "selected" %>>Chaco</option>
-                                    <option value="La Rioja" <%=user.province ==="La Rioja" && "selected" %>>La Rioja</option>
-                                    <option value="San Luis" <%=user.province ==="San Luis" && "selected" %>>San Luis</option>
-                                    <option value="San Juan" <%=user.province ==="San Juan" && "selected" %>>San Juan</option>
-                                    <option value="Córdoba" <%=user.province ==="Córdoba" && "selected" %>>Córdoba</option>
-                                    <option value="Neuquén" <%=user.province ==="Neuquén" && "selected" %>>Neuquén</option>
-                                    <option value="Chubut" <%=user.province ==="Chubut" && "selected" %>>Chubut</option>
-                                    <option value="Tucumán" <%=user.province ==="Tucumán" && "selected" %>>Tucumán</option>
-                                    <option value="Santa Cruz" <%=user.province ==="Santa Cruz" && "selected" %>>Santa Cruz</option>
-                                    <option value="Tierra del Fuego" <%=user.province ==="Tierra del Fuego" && "selected" %>>Tierra del Fuego</option>
-                                    <option value="Río Negro" <%=user.province ==="Río Negro" && "selected" %>>Río Negro</option>
-                                    <option value="Salta" <%=user.province ==="Salta" && "selected" %>>Salta</option>
-                                    <option value="Santiago del Estero" <%=user.province ==="Santiago del Estero" && "selected" %>>Santiago del Estero</option>
-                                    <option value="La Pampa" <%=user.province ==="La Pampa" && "selected" %>>La Pampa</option>
+                                    <option value="Buenos Aires" <%=user.locations[0].province ==="Buenos Aires" && "selected" %>>Buenos Aires</option>
+                                    <option value="Corrientes" <%=user.locations[0].province ==="Corrientes" && "selected" %>>Corrientes</option>
+                                    <option value="Entre Ríos" <%=user.locations[0].province ==="Entre Ríos" && "selected" %>>Entre Ríos</option>
+                                    <option value="Misiones" <%=user.locations[0].province ==="Misiones" && "selected" %>>Misiones</option>
+                                    <option value="Santa Fé" <%=user.locations[0].province ==="Santa Fé" && "selected" %>>Santa Fé</option>
+                                    <option value="Tucuman" <%=user.locations[0].province ==="Tucuman" && "selected" %>>Tucumán</option>
+                                    <option value="Mendoza" <%=user.locations[0].province ==="Mendoza" && "selected" %>>Mendoza</option>
+                                    <option value="Jujuy" <%=user.locations[0].province ==="Jujuy" && "selected" %>>Jujuy</option>
+                                    <option value="Catamarca" <%=user.locations[0].province ==="Catamarca" && "selected" %>>Catamarca</option>
+                                    <option value="Chaco" <%=user.locations[0].province ==="Chaco" && "selected" %>>Chaco</option>
+                                    <option value="La Rioja" <%=user.locations[0].province ==="La Rioja" && "selected" %>>La Rioja</option>
+                                    <option value="San Luis" <%=user.locations[0].province ==="San Luis" && "selected" %>>San Luis</option>
+                                    <option value="San Juan" <%=user.locations[0].province ==="San Juan" && "selected" %>>San Juan</option>
+                                    <option value="Córdoba" <%=user.locations[0].province ==="Córdoba" && "selected" %>>Córdoba</option>
+                                    <option value="Neuquén" <%=user.locations[0].province ==="Neuquén" && "selected" %>>Neuquén</option>
+                                    <option value="Chubut" <%=user.locations[0].province ==="Chubut" && "selected" %>>Chubut</option>
+                                    <option value="Tucumán" <%=user.locations[0].province ==="Tucumán" && "selected" %>>Tucumán</option>
+                                    <option value="Santa Cruz" <%=user.locations[0].province ==="Santa Cruz" && "selected" %>>Santa Cruz</option>
+                                    <option value="Tierra del Fuego" <%=user.locations[0].province ==="Tierra del Fuego" && "selected" %>>Tierra del Fuego</option>
+                                    <option value="Río Negro" <%=user.locations[0].province ==="Río Negro" && "selected" %>>Río Negro</option>
+                                    <option value="Salta" <%=user.locations[0].province ==="Salta" && "selected" %>>Salta</option>
+                                    <option value="Santiago del Estero" <%=user.locations[0].province ==="Santiago del Estero" && "selected" %>>Santiago del Estero</option>
+                                    <option value="La Pampa" <%=user.locations[0].province ==="La Pampa" && "selected" %>>La Pampa</option>
                                 </select>
                             </div>
                             
                             <div>
                                 <label for="location">Localidad</label>
                                 <input type="text" id="location" name="location" placeholder="Ej: San Miguel" class="profile_controls" 
-                                value="<%= user.location %>">
+                                value="<%= user.locations[0].location %>">
                             </div>
 
                             <div>
                                 <label for="street">Calle y altura</label>
                                 <input type="street" id="street" name="street" placeholder="Ej: Calle 123" class="profile_controls"
-                                value="<%= user.street %>">
+                                value="<%= user.locations[0].street %>">
                             </div>
 
                             <div>

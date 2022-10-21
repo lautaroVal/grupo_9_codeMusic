@@ -2,7 +2,7 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
-const {OFERTA,SINOFERTA} = require('../constants/products')
+const {OFERTA,SINOFERTA} = require('../constants/products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -210,7 +210,7 @@ module.exports = {
 /*  		const products = loadProducts();
  */ 		try {
 	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
-	 return res.send(req.body)
+	 return res.send(req.files)
 
 			const producstModify = await db.Product.update({
 				...product,

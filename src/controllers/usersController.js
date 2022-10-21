@@ -3,6 +3,8 @@ const { loadUsers, storeUsers } = require('../data/usersModule');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const { Association } = require('sequelize');
+const {ROL_ADMIN,ROL_USER} = require('../constants/users')
+
 
 module.exports = {
     register: (req, res) => {
@@ -55,7 +57,8 @@ module.exports = {
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
-            rol: user.rol
+            rol: user.rol,
+            avatar: user.avatar
           };
 
             res.cookie('codeMusic', req.session.userLogin, {
@@ -97,7 +100,8 @@ module.exports = {
                    firstName: userLog.firstName,
                    lastName: userLog.lastName,
                    email: userLog.email,
-                   rol: userLog.rol
+                   rol: userLog.rol,
+                   avatar: userLog.avatar
                  };
                  if (req.body.remember) {
                      res.cookie('codeMusic', req.session.userLogin, {
@@ -122,57 +126,78 @@ module.exports = {
     },
 
     profile: async (req, res) => {
-/*         let users = loadUsers();
- */
-  const id = req.session.userLogin.id;    
-  const user = await db.User.findByPk(id);
-        return res.render('users/profile', {
-            title: 'Perfil de usuario',
-            user,
+      try {
+        const id = req.session.userLogin.id; 
+        const user = await db.User.findByPk(id,{
+          include: [
+            {association: 'locations'}]
+          
         });
+       
+        if (user) {
+          //return res.json(user)
+          return res.render('users/profile', {
+              title: 'Perfil de usuario',
+              user,
+              ROL_ADMIN,
+              ROL_USER
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+     
+ 
     },
     catch (error) {
       console.log(error);
     },
 
-    update: (req, res) => {
-
-        /*  return res.send(req.body); */
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            let users = loadUsers();
-            const { avatar, firstName, lastName, username, gender, telephone, musicFav, province, location, street, biography } = req.body;
+    update: async (req, res) => {
+      //return res.send(req.body);
+      try {
+        /* let errors = validationResult(req);
+        if (errors.isEmpty()) { */
+        const {firstName, lastName, userName,rol, genre, email, telephone, musicFav, province, location, street, biography } = req.body;
+        const userModify = await db.User.update({
+         /*  ...user, */
+          /* avatar: image.length === 0 ? user.avatar : image[0], */
+          avatar: req.file?.filename || req.session.userLogin.avatar ,
+          firstName: firstName?.trim(),
+          lastName: lastName?.trim(),
+          userName: userName?.trim(),
+          rol,
+          genre,
+          email: email?.trim(),
+          musicFav,
+          province,
+          location: location?.trim(),
+          street: street?.trim(),
+          biography: biography?.trim(),
+          telephone: +telephone,
+        },{
+          where: {
+            id: req.session.userLogin.id
+          }
+        })
+        console.log(userModify);
+        if (userModify) {
+          return res.send(userModify);
+        }
+      
+      } catch (error) {
+        console.log(error);
+      }
+            
             // return res.send(req.file) REQ.FILE  <--
-            let image = req.files.map((file) => file.filename);
-            const obj = {name:'emanuela'}
+            /* let image = req.files.map((file) => file.filename);
+            const obj = {name:'emanuela'} */
 
           /*   db.User.update({
                 avatar: req.file?.filename
             }) */
-            const usersModify = users.map(user => {
-                if (user.id === +req.session.userLogin.id) {
-                    return {
-                        ...user,
-                        /* avatar: image.length === 0 ? user.avatar : image[0], */
-                        avatar: req.file.filename || user.avatar,
-                        firstName: firstName?.trim(),
-                        lastName: lastName?.trim(),
-                        username: username.trim(),
-                        category: user.category,
-                        gender,
-                        email: user.email,
-                        musicFav,
-                        province,
-                        location: location.trim(),
-                        street: street.trim(),
-                        biography: biography.trim(),
-                        telephone: +telephone,
-                    }
-                }
-                return user;
-            })
-            /* return res.send(usersModify); */
-            req.session.userLogin = {
+           
+            /* req.session.userLogin = {
                 id: req.session.userLogin.id,
                 firstName: usersModify.firstName,
                 lastName: usersModify.lastName,
@@ -186,9 +211,9 @@ module.exports = {
             };
 
             storeUsers(usersModify);
-            return res.redirect('/');
+            return res.redirect('/'); */
 
-        } else {
+       /*  } else {
             let users = loadUsers();
             const user = users.find(user => user.id === req.session.userLogin.id);
             return res.render('users/profile', {
@@ -197,7 +222,7 @@ module.exports = {
                 old: req.body,
                 user
             })
-        }
+        } */
     },
 
     logout: (req, res) => {
