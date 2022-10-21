@@ -121,13 +121,27 @@ module.exports = {
          }
     },
 
-    profile: (req, res) => {
-        let users = loadUsers();
+    profile: async (req, res) => {
+      try {
+        const user = await db.User.findOne({
+          where: {
+            email: req.session.userLogin.email
+          },
+          include: ['locations']
+        })
+        if (user) {
+          return res.json(user)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+
+        /* let users = loadUsers();
         const user = users.find(user => user.id === req.session.userLogin.id);
         return res.render('users/profile', {
             title: 'Perfil de usuario',
             user,
-        })
+        }) */
     },
 
     update: (req, res) => {
