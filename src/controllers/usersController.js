@@ -62,12 +62,19 @@ module.exports = {
     }
     },
 
+    login: (req, res) => {
+      return res.render('users/login', {
+          title: 'Login'
+      })
+  },
+
     processLogin: (req, res) => {
       let errors = validationResult(req);
       if (errors.isEmpty()) {
         db.User.findOne({
           where: {
-            email: req.body.email,
+            email: req.body.email
+            
           },
         }).then((user) => {
           req.session.userLogin = {
@@ -89,15 +96,12 @@ module.exports = {
       } else {
         return res.render("/login", {
           title: "Login",
+         errors: errors.mapped(),
+
         });
       }
     },
     
-    login: (req, res) => {
-        return res.render('users/login', {
-            title: 'Login'
-        })
-    },
   
     profile: (req, res) => {
       const id = req.session.userLogin?.id;
