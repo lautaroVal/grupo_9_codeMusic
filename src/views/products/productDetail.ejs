@@ -82,7 +82,7 @@
                     <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
                     <% if (locals.userLogin) { %>
                        
-                            <% if (userLogin.category === "Admin") { %>
+                            <% if (userLogin.rol === 1) { %>
                             <button type="button" id="edit_button"><a href="/products/edit/<%= product.id%>">Editar</a></button>
                             <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
                             <button type="submit" style="cursor: pointer;" >Eliminar</button>

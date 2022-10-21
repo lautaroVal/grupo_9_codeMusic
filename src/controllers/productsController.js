@@ -29,27 +29,27 @@ module.exports = {
 			const product = await db.Product.findByPk(req.params.id, {
 				include: ['images', 'brand', 'category'],
 				attributes: {
-				  exclude: ["created_at", "updated_at"],
-				},	
+					exclude: ["created_at", "updated_at"],
+				},
 			})
 			return res.render('products/productDetail', {
 				title: "Detalle de producto",
 				product,
 				toThousand
 			})
-			
+
 		} catch (error) {
 			console.log(error);
 		}
 
-	/* 	const products = loadProducts();
-
-		const product = products.find(product => product.id === +req.params.id);
-		return res.render('products/productDetail', {
-			title: "Detalle de producto",
-			product,
-			toThousand
-		}) */
+		/* 	const products = loadProducts();
+	
+			const product = products.find(product => product.id === +req.params.id);
+			return res.render('products/productDetail', {
+				title: "Detalle de producto",
+				product,
+				toThousand
+			}) */
 	},
 	/* CART */
 	productCart: (req, res) => {
@@ -94,7 +94,7 @@ module.exports = {
 		try {
 			let errors = validationResult(req);
 			//Si no hay errores crea el producto y redirecciona a products.
- 			if (errors.isEmpty()) {
+			if (errors.isEmpty()) {
 				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
 
 				const product = await db.Product.create({
@@ -118,12 +118,12 @@ module.exports = {
 							productId: product.id
 						}
 					})
-	
+
 					await db.Image.bulkCreate(images)
 				}
 				//Una vez completa la creación del producto me redirige al listado de productos.
- 				return res.redirect('/products')
- 
+				return res.redirect('/products')
+
 				//Si vienen errores renderizo la vista de creación mostrandolos.
 			} else {
 				const brands = await db.Brand.findAll({
@@ -158,13 +158,40 @@ module.exports = {
 	productEdit: async (req, res) => {
 
 		try {
-			const products = await db.Product.findByPk(req.params.id, {
-				include: ['images', 'brand', 'category', 'color']
-			})
 
+			const brands = await db.Brand.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			const colors = await db.Color.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			const categories = await db.Category.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			const images = await db.Image.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
 
-			return res.render('products/productAdd', {
-				product
+			const product = await db.Product.findByPk(req.params.id, {
+				include: ['brand','colors','images','category'],
+				attributes: {
+					exclude: ["created_at", "updated_at"],
+				},
+				
+			});
+
+/* 			return res.send(product.colors)
+ */			return res.render('products/productEdit', {
+				title: "Edicion del Producto",
+				product,
+				brands,
+				colors,
+				categories,
+				images
 			})
 		} catch (error) {
 			console.log(error);
@@ -180,35 +207,61 @@ module.exports = {
 		}) */
 	},
 
-	update: (req, res) => {
-		const products = loadProducts();
-		const { name, description, category, color, price, discount, status } = req.body;
+	update: async (req, res) => {
 
-		const producstModify = products.map(product => {
-			if (product.id === +req.params.id) {
-				return {
-					...product,
-					name: name,
-					description: description,
-					image: req.file ? req.file.filename : product.image,
-					category,
-					discount: +discount,
-					color,
-					price: +price,
-					status
+/* 		try {
+			const update = await db.Product.update({
+				...req.body,
+				name: req.body.filename.trim(),
+				description: req.body.description.trim(),
+			},
+			{
+				where: {
+				  id: req.params.id,
 				}
+			})
+		} catch (error) {
+			console.log(error);
+		} */
+
+
+/*  		const products = loadProducts();
+ */ 		try {
+
+			const { name, description, category, colorId, price, discount, status } = req.body;
+
+			const producstModify = await db.Product.update({
+				...product,
+				name: name,
+				description: description,
+				image: req.file ? req.file.filename : product.image,
+				category,
+				discount: +discount,
+				colorId,
+				price: +price,
+				status
+				},
+				{
+					where: {
+						id: req.body.id
+					}
+				}
+			)
+			if (producstModify) {
+				return res.redirect('/products/productDetail/' + req.params.id);
 			}
-			return product
-		})
-		storeProducts(producstModify);
-		return res.redirect('/products/productDetail/' + req.params.id);
+
+		} catch (error) {
+			console.log(error);
+		}
+
 	},
 
-	destroy: (req, res) => {
-		const products = loadProducts();
-
+	destroy: async (req, res) => {
+		/* 		const products = loadProducts();
+		 */
 		const { id } = req.params;
-		const productDelete = products.filter(products => products.id !== +id);
+		const productDelete = await db.products.destroy(products => products.id !== +id);
 		storeProducts(productDelete);
 		return res.redirect('/products');
 	}
