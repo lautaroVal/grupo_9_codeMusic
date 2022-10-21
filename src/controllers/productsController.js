@@ -178,15 +178,19 @@ module.exports = {
 			});
 
 			const product = await db.Product.findByPk(req.params.id, {
-				include: ['brand','colors','images','category'],
-				attributes: {
-					exclude: ["created_at", "updated_at"],
-				},
+				include: [
+					{association: 'brand'},
+					{association: 'colors'},
+					{association: 'images'},
+					{association: 'category',attributes: {
+						exclude: ["created_at", "updated_at"],
+					}},
+				],
 				
 			});
 
-/* 			return res.send(product.colors)
- */			return res.render('products/productEdit', {
+ 			//return res.send(product.images)
+ 			return res.render('products/productEdit', {
 				title: "Edicion del Producto",
 				product,
 				brands,
@@ -198,33 +202,27 @@ module.exports = {
 			})
 		} catch (error) {
 			console.log(error);
-
 		}
-
-		/* const products = loadProducts();
-		const product = products.find(product => product.id === +req.params.id);
-
-		res.render('products/productEdit', {
-			title: "Edición de producto",
-			product
-		}) */
 	},
 
 	update: async (req, res) => {
 
 /*  		const products = loadProducts();
  */ 		try {
-	 const { name, description, category, colorId, price, discount, status } = req.body;
+	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
 	 return res.send(req.body)
 
 			const producstModify = await db.Product.update({
 				...product,
 				name: name,
-				description: description,
-				category,
-				discount: +discount,
-				colorId,
+				images,
 				price: +price,
+				share: +share,
+				discount: +discount,
+				description: description,
+				brandId,
+				categoryId,
+				colorId,
 				status
 				},
 				{
