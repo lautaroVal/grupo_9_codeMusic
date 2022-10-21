@@ -11,15 +11,11 @@ const {register, login, processRegister, processLogin, profile, logout, update} 
 
 router
     .get('/register', register)
-    .post('/register', registerValidator, processRegister)
-
-    .get('/login',adminUserCheck, login)
+    .post('/register', registerValidator,  processRegister)
+    .get('/login', login)
     .post('/login', loginValidator, processLogin)
-
-    .get('/profile', profileValidator,userSessionCheck, profile)
+    .get('/profile', profileValidator, userSessionCheck, profile)
     .put('/profile',uploadImageAvatar.single('avatar'), update)
-
     .get('/logout', logout)
-
 
 module.exports = router;

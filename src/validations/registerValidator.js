@@ -15,11 +15,11 @@ module.exports = [
 
     body('email')
         .notEmpty().withMessage("Debe ingresar un email.").bail()
-        .isEmail().withMessage('Debe ingresar un correo electrónico válido.')
-        .custom((value, {req}) => {
+        .isEmail().withMessage('Debe ingresar un correo electrónico válido.'),
+        /* .custom((value, {req}) => {
             let user = users.find(user => user.email === value.trim());
            return !!!user;
-        }).withMessage('El email ya se encuentra registrado'),
+        }).withMessage('El email ya se encuentra registrado'), */
 
     body('telephone')
         .notEmpty().withMessage("Debe ingresar un numero"),
