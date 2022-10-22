@@ -13,17 +13,17 @@ module.exports = {
 			const products = await db.Product.findAll({
 				include: ['images', 'brand', 'category']
 			})
-
-			return res.render('products/products', {
-				title: "Listado de productos",
-				products,
-				toThousand
-			})
+			if (products.length) {
+				return res.render('products/products', {
+					title: "Listado de productos",
+					products,
+					toThousand
+				})
+			}
 		} catch (error) {
 			console.log(error);
 		}
 	},
-
 	/* DETAIL */
 	productDetail: async (req, res) => {
 		try {
@@ -33,24 +33,17 @@ module.exports = {
 					exclude: ["created_at", "updated_at"],
 				},
 			})
-			return res.render('products/productDetail', {
-				title: "Detalle de producto",
-				product,
-				toThousand
-			})
+			if (product) {
+				return res.render('products/productDetail', {
+					title: "Detalle de producto",
+					product,
+					toThousand
+				})
+			}
 
 		} catch (error) {
 			console.log(error);
 		}
-
-		/* 	const products = loadProducts();
-	
-			const product = products.find(product => product.id === +req.params.id);
-			return res.render('products/productDetail', {
-				title: "Detalle de producto",
-				product,
-				toThousand
-			}) */
 	},
 	/* CART */
 	productCart: (req, res) => {
@@ -62,7 +55,6 @@ module.exports = {
 			productId
 		})
 	},
-
 	/* CREATE */
 	productAdd: async (req, res) => {
 		try {
@@ -78,13 +70,14 @@ module.exports = {
 				attributes: ['id', 'name'],
 				order: ['name']
 			});
-
-			return res.render('products/productAdd', {
-				title: "Crear producto",
-				brands,
-				colors,
-				categories
-			})
+			if (brands && colors && categories) {
+				return res.render('products/productAdd', {
+					title: "Crear producto",
+					brands,
+					colors,
+					categories
+				})
+			}
 
 		} catch (error) {
 			console.log(error);
@@ -110,7 +103,6 @@ module.exports = {
 					colorId: +colorId,
 					categoryId: +categoryId
 				})
-
 				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
 				if (product) {
 					let images = req.files.map(file => {
@@ -119,7 +111,6 @@ module.exports = {
 							productId: product.id
 						}
 					})
-
 					await db.Image.bulkCreate(images)
 				}
 				//Una vez completa la creación del producto me redirige al listado de productos.
@@ -157,9 +148,7 @@ module.exports = {
 
 	/* EDIT */
 	productEdit: async (req, res) => {
-
 		try {
-
 			const brands = await db.Brand.findAll({
 				attributes: ['id', 'name'],
 				order: ['name']
@@ -169,10 +158,6 @@ module.exports = {
 				order: ['name']
 			});
 			const categories = await db.Category.findAll({
-				attributes: ['id', 'name'],
-				order: ['name']
-			});
-			const images = await db.Image.findAll({
 				attributes: ['id', 'name'],
 				order: ['name']
 			});
@@ -186,17 +171,14 @@ module.exports = {
 						exclude: ["created_at", "updated_at"],
 					}},
 				],
-				
 			});
 
- 			//return res.send(product.images)
  			return res.render('products/productEdit', {
 				title: "Edicion del Producto",
 				product,
 				brands,
 				colors,
 				categories,
-				images,
 				OFERTA,
 				SINOFERTA
 			})
@@ -207,10 +189,9 @@ module.exports = {
 
 	update: async (req, res) => {
 
-/*  		const products = loadProducts();
- */ 		try {
+ 		try {
 	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
-	 return res.send(req.files)
+	 return res.send(req.body)
 
 			const producstModify = await db.Product.update({
 				...product,
@@ -252,8 +233,7 @@ module.exports = {
 	},
 
 	destroy: async (req, res) => {
-		/* 		const products = loadProducts();
-		 */
+		
 		const { id } = req.params;
 		const productDelete = await db.products.destroy(products => products.id !== +id);
 		storeProducts(productDelete);

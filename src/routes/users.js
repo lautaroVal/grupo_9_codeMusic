@@ -15,7 +15,7 @@ router
     .get('/login', login)
     .post('/login', loginValidator, processLogin)
     .get('/profile', userSessionCheck, profile)
-    .put('/profile',profileValidator,uploadImageAvatar.single('avatar'), update)
+    .put('/profile',uploadImageAvatar.single('avatar'),profileValidator, update)
     .get('/logout', logout)
 
 module.exports = router;

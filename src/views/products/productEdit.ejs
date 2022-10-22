@@ -57,18 +57,18 @@
                     <div>
                         <label for="brand" class="form-label">Elige una marca:</label>
                         <select name="brandId" id="brand">
-                            <option value="" hidden>Elegí una marca</option>
+                            <option value="" disabled>Elegí una marca</option>
                             <% brands.forEach(brand => { %>
-                                <option value="<%= product.brand.id %>" <%=product.brand.name === brand.name && "selected"%>> <%=brand.name%></option>
+                                <option value="<%= brand.id %>" <%=product.brand.name === brand.name && "selected"%>> <%=brand.name%></option>
                             <% }) %>
                         </select>
 
                         <div>
                             <label for="color" class="form-label">Elige un color:</label>
                             <select name="colorId" id="color">
-                                <option value="" hidden>Elegí un color</option>
+                                <option value="" disabled>Elegí un color</option>
                                 <% colors.forEach(color => { %>
-                                    <option value="<%= product.colors.id %>" <%=product.colors.name === color.name && "selected"%>> <%= color.name%></option>
+                                    <option value="<%= color.id %>" <%=product.colors.name === color.name && "selected"%>> <%= color.name%></option>
                                 <% }) %>
     
                             </select>
@@ -77,8 +77,9 @@
                     <div>
                         <label for="category" class="form-label">Elige una categoria:</label>
                         <select name="categoryId" id="category">
+                            <option value="" disabled>Elegí una categoría</option>
                             <% categories.forEach(category => { %>
-                                <option value="<%= product.category.id %>" <%=product.category.name === category.name && "selected"%>> <%= category.name%></option>
+                                <option value="<%= category.id %>" <%=product.category.name === category.name && "selected"%>> <%= category.name%></option>
                             <% }) %>
                         </select>
                     </div>

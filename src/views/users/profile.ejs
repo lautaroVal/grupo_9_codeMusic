@@ -29,6 +29,7 @@
                             <div>
                                 <label for="lastName">Apellido</label>
                                 <input type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido" class="profile_controls" value="<%= user.lastName %>">
+                                <p class="text-danger"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></p>
                             </div>
 
                             <div>
@@ -46,11 +47,6 @@
                             <div >
                                 <label for="telephone">Teléfono(opcional):</label>
                                 <input type="number" name="telephone" id="telephone" placeholder="Ej: 1524647589" class="profile_controls" value="<%= user.telephone %>" >
-                                <% if (locals.errors && errors.telephone) { %>
-                                  <p class="register_errors">
-                                    <%= errors.telephone.msg %> 
-                                </p>
-                                <% } %>
                             </div>
                             <div>
                                 <label for="category">Rol de usuario:</label>
@@ -68,13 +64,11 @@
                                 && "checked" %>>
                                 <label for="femenino">Femenino</label>
                             </div>
-
                             <div>
                                 <input value="masculino" type="radio" id="masculino" name="genre" <%=user.genre === "masculino"
                                 && "checked" %>>
                                 <label for="masculino">Masculino</label>
                             </div>
-
                             <div>
                                 <input value="otro" type="radio" id="otro" name="genre" <%=user.genre === "otro"
                                 && "checked" %>>
@@ -139,7 +133,7 @@
                                 
                                 <label for="province">Selecciona tu provincia</label>
                                 <select name="province" id="province" class="profile_controls">
-                                    <option value="" hidden selected>Selecciona tu provincia</option>
+                                    <option value="" disabled>Selecciona tu provincia</option>
                                     <option value="Buenos Aires" <%=user.locations[0].province ==="Buenos Aires" && "selected" %>>Buenos Aires</option>
                                     <option value="Corrientes" <%=user.locations[0].province ==="Corrientes" && "selected" %>>Corrientes</option>
                                     <option value="Entre Ríos" <%=user.locations[0].province ==="Entre Ríos" && "selected" %>>Entre Ríos</option>
@@ -164,12 +158,14 @@
                                     <option value="Santiago del Estero" <%=user.locations[0].province ==="Santiago del Estero" && "selected" %>>Santiago del Estero</option>
                                     <option value="La Pampa" <%=user.locations[0].province ==="La Pampa" && "selected" %>>La Pampa</option>
                                 </select>
+                                <p class="text-danger"><%= locals.errors && errors.province ? errors.province.msg : null %></p>
                             </div>
                             
                             <div>
                                 <label for="location">Localidad</label>
                                 <input type="text" id="location" name="location" placeholder="Ej: San Miguel" class="profile_controls" 
                                 value="<%= user.locations[0].location %>">
+                                <p class="text-danger"><%= locals.errors && errors.location ? errors.location.msg : null %></p>
                             </div>
 
                             <div>
@@ -182,7 +178,6 @@
                                 <label for="biography">Acerca de mí</label>
                                 <textarea name="biography" id="biography" cols="30" rows="5" class="profile_controls_textarea">
                                     <%= user.biography %></textarea>
-
                             </div>
 
                             <div>
