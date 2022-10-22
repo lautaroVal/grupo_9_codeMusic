@@ -82,23 +82,6 @@ module.exports = {
     })
   },
 
-<<<<<<< HEAD
-    profile: async (req, res) => {
-/*         let users = loadUsers();
- */
-try {
-  const id = req.session.userLogin.id;    
-  const user = await db.User.findByPk(id);
-        return res.render('users/profile', {
-            title: 'Perfil de usuario',
-            user,
-        });
-    }
- catch (error) {
-  console.log(error);
-
-}},
-=======
   processLogin: async (req, res) => {
     try {
       let errors = validationResult(req);
@@ -108,7 +91,6 @@ try {
             email: req.body.email,         // Traigo al usuario cuyo email sea igual al que viene por el body.
           },
         })
->>>>>>> af765052d2ceb3e3d64c7653e5a6576d0fe7f193
 
         if (userLog) {                     // Si viene el usuario logueado creo la session.
           req.session.userLogin = {
@@ -171,6 +153,7 @@ try {
       let errors = validationResult(req);
       if (errors.isEmpty()) {
         const { firstName, lastName, userName, rol, genre, email, telephone, musicFav, province, location, street, biography } = req.body;
+
         const userModify = await db.User.update({                        // Edito el usuario que el id es igual al de session con los campos que mando por body.
           avatar: req.file?.filename || req.session.userLogin.avatar,
           firstName: firstName?.trim(),
@@ -179,7 +162,7 @@ try {
           rol,
           genre,
           email: email?.trim(),
-          musicFav: musicFav ? musicFav : typeof musicFav === 'string' ? [musicFav] : [],
+          musicFav: musicFav ? typeof musicFav === 'string' ? [musicFav] : musicFav : [],
           biography: biography?.trim(),
           telephone: +telephone,
         }, {

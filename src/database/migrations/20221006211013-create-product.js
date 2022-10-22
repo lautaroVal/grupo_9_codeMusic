@@ -32,11 +32,15 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
+      image: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       brandId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'brands'
+            tableName : 'Brands'
           },
             key : 'id'
         }
@@ -45,7 +49,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'colors'
+            tableName : 'Colors'
           },
             key : 'id'
         }

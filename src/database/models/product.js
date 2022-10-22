@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.TINYINT,
     share: DataTypes.INTEGER,
     discount: DataTypes.INTEGER,
+    image : DataTypes.STRING,
     description: DataTypes.TEXT,
     brandId: DataTypes.INTEGER,
     colorId: DataTypes.INTEGER,
