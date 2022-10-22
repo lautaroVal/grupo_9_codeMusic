@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.belongsTo(models.Product, {
-        as: "products",
+        as: "product",
         foreignKey: "productId",
         onDelete: 'cascade'
       });
@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Image.init({
     name: DataTypes.STRING,
-    productId: DataTypes.INTEGER
+    productId: DataTypes.INTEGER,
+    
   }, {
     sequelize,
     modelName: 'Image',

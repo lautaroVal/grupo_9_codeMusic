@@ -16,49 +16,79 @@
                         <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica"
                             value="<%= product.name %>">
                     </div>
-                    <div>
-                        <label for="description">Descripcion</label>
-                        <textarea name="description" id="description" cols="50"
-                            rows="10"><%= product.description %></textarea>
-                    </div>
-
-                    <div>
-                        <label for="imagen">Imagen de producto</label>
-                        <input type="file" name="images" id="imagen" accept="image/*"
-                            value="<%= product.image %>"><br><br>
-                    </div>
-
-                    <div>
-                        <label for="category" class="form-label">Elige una categoria:</label>
-                        <select name="categoryId" id="category">
-                            <% categories.forEach(category => { %>
-                                <option value="<%= product.category.id %>" <%=product.category.name === category.name && "selected"%>> <%= category.name%></option>
-                            <% }) %>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="color" class="form-label">Elige un color:</label>
-                        <select name="colorId" id="color">
-                            <% colors.forEach(color => { %>
-                                <option value="<%= product.colors.id %>" <%=product.colors.name === color.name && "selected"%>> <%= color.name%></option>
-                            <% }) %>
-
-                        </select>
-                    </div>
                     
+                    <div>
+                        <label for="imagen">Imagen principal</label>
+                        <input type="file" name="images" id="imagen" accept="image/*" value="<%= product.images[0].name %>"/><br/><br/>
+                    </div>
+
+                    
+                    <h5><%= product.images[0].name %> </h5> 
+                    
+
+                    <div>
+                        <label for="imagen">Imágenes secundarias</label>
+                        <input type="file" name="images" id="imagen" accept="image/*" multiple /><br/><br/>
+                    </div>
+
                     <div>
                         <label for="precio">Precio</label>
                         <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000"
                             value="<%= product.price %>">
                     </div>
 
+                    <div>
+                        <label for="share">Cuotas</label>
+                        <input type="number" id="share" name="share" value="<%= product.share %>"/>
+                    </div>
+
+
+                    <div>
+                        <label for="discount">Descuento</label>
+                        <input type="number" id="discount" name="discount" value="<%= product.discount %>"/>
+                    </div>
+
+                    <div>
+                        <label for="description">Descripción</label>
+                        <textarea name="description" id="description" cols="50"
+                            rows="10"><%= product.description %></textarea>
+                    </div>
+
+                    <div>
+                        <label for="brand" class="form-label">Elige una marca:</label>
+                        <select name="brandId" id="brand">
+                            <option value="" disabled>Elegí una marca</option>
+                            <% brands.forEach(brand => { %>
+                                <option value="<%= brand.id %>" <%=product.brand.name === brand.name && "selected"%>> <%=brand.name%></option>
+                            <% }) %>
+                        </select>
+
+                        <div>
+                            <label for="color" class="form-label">Elige un color:</label>
+                            <select name="colorId" id="color">
+                                <option value="" disabled>Elegí un color</option>
+                                <% colors.forEach(color => { %>
+                                    <option value="<%= color.id %>" <%=product.colors.name === color.name && "selected"%>> <%= color.name%></option>
+                                <% }) %>
+    
+                            </select>
+                        </div>
+
+                    <div>
+                        <label for="category" class="form-label">Elige una categoria:</label>
+                        <select name="categoryId" id="category">
+                            <option value="" disabled>Elegí una categoría</option>
+                            <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>" <%=product.category.name === category.name && "selected"%>> <%= category.name%></option>
+                            <% }) %>
+                        </select>
+                    </div>
 
                     <div>
                         <label for="status">Oferta:</label>
-                        <input type="radio" name="status" id="status" value="<%= OFERTA%>" <%=product.status==="oferta"
+                        <input type="radio" name="status" id="status" value="<%= OFERTA%>" <%=product.status=== OFERTA
                             && "checked" %>> En oferta
-                        <input type="radio" name="status" id="estado" value="<%= SINOFERTA%>" <%=product.status==="no-oferta"
+                        <input type="radio" name="status" id="estado" value="<%= SINOFERTA%>" <%=product.status=== SINOFERTA
                             && "checked" %>> Sin oferta
                     </div>
 

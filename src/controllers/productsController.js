@@ -2,7 +2,7 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
-const {OFERTA,SINOFERTA} = require('../constants/products')
+const {OFERTA,SINOFERTA} = require('../constants/products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -13,17 +13,17 @@ module.exports = {
 			const products = await db.Product.findAll({
 				include: ['images', 'brand', 'category']
 			})
-
-			return res.render('products/products', {
-				title: "Listado de productos",
-				products,
-				toThousand
-			})
+			if (products.length) {
+				return res.render('products/products', {
+					title: "Listado de productos",
+					products,
+					toThousand
+				})
+			}
 		} catch (error) {
 			console.log(error);
 		}
 	},
-
 	/* DETAIL */
 	productDetail: async (req, res) => {
 		try {
@@ -33,24 +33,17 @@ module.exports = {
 					exclude: ["created_at", "updated_at"],
 				},
 			})
-			return res.render('products/productDetail', {
-				title: "Detalle de producto",
-				product,
-				toThousand
-			})
+			if (product) {
+				return res.render('products/productDetail', {
+					title: "Detalle de producto",
+					product,
+					toThousand
+				})
+			}
 
 		} catch (error) {
 			console.log(error);
 		}
-
-		/* 	const products = loadProducts();
-	
-			const product = products.find(product => product.id === +req.params.id);
-			return res.render('products/productDetail', {
-				title: "Detalle de producto",
-				product,
-				toThousand
-			}) */
 	},
 	/* CART */
 	productCart: (req, res) => {
@@ -62,7 +55,6 @@ module.exports = {
 			productId
 		})
 	},
-
 	/* CREATE */
 	productAdd: async (req, res) => {
 		try {
@@ -78,13 +70,14 @@ module.exports = {
 				attributes: ['id', 'name'],
 				order: ['name']
 			});
-
-			return res.render('products/productAdd', {
-				title: "Crear producto",
-				brands,
-				colors,
-				categories
-			})
+			if (brands && colors && categories) {
+				return res.render('products/productAdd', {
+					title: "Crear producto",
+					brands,
+					colors,
+					categories
+				})
+			}
 
 		} catch (error) {
 			console.log(error);
@@ -110,7 +103,6 @@ module.exports = {
 					colorId: +colorId,
 					categoryId: +categoryId
 				})
-
 				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
 				if (product) {
 					let images = req.files.map(file => {
@@ -119,7 +111,6 @@ module.exports = {
 							productId: product.id
 						}
 					})
-
 					await db.Image.bulkCreate(images)
 				}
 				//Una vez completa la creación del producto me redirige al listado de productos.
@@ -157,9 +148,7 @@ module.exports = {
 
 	/* EDIT */
 	productEdit: async (req, res) => {
-
 		try {
-
 			const brands = await db.Brand.findAll({
 				attributes: ['id', 'name'],
 				order: ['name']
@@ -172,58 +161,49 @@ module.exports = {
 				attributes: ['id', 'name'],
 				order: ['name']
 			});
-			const images = await db.Image.findAll({
-				attributes: ['id', 'name'],
-				order: ['name']
-			});
 
 			const product = await db.Product.findByPk(req.params.id, {
-				include: ['brand','colors','images','category'],
-				attributes: {
-					exclude: ["created_at", "updated_at"],
-				},
-				
+				include: [
+					{association: 'brand'},
+					{association: 'colors'},
+					{association: 'images'},
+					{association: 'category',attributes: {
+						exclude: ["created_at", "updated_at"],
+					}},
+				],
 			});
 
-/* 			return res.send(product.colors)
- */			return res.render('products/productEdit', {
+ 			return res.render('products/productEdit', {
 				title: "Edicion del Producto",
 				product,
 				brands,
 				colors,
 				categories,
-				images,
 				OFERTA,
 				SINOFERTA
 			})
 		} catch (error) {
 			console.log(error);
-
 		}
-
-		/* const products = loadProducts();
-		const product = products.find(product => product.id === +req.params.id);
-
-		res.render('products/productEdit', {
-			title: "Edición de producto",
-			product
-		}) */
 	},
 
 	update: async (req, res) => {
 
-/*  		const products = loadProducts();
- */ 		try {
-	 const { name, description, category, colorId, price, discount, status } = req.body;
+ 		try {
+	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
+	 return res.send(req.body)
 
 			const producstModify = await db.Product.update({
 				...product,
 				name: name,
-				description: description,
-				category,
-				discount: +discount,
-				colorId,
+				images,
 				price: +price,
+				share: +share,
+				discount: +discount,
+				description: description,
+				brandId,
+				categoryId,
+				colorId,
 				status
 				},
 				{
@@ -253,18 +233,10 @@ module.exports = {
 	},
 
 	destroy: async (req, res) => {
-		try {
-		const product = await db.Product.destroy({
-				where : {
-					id : req.params.id
-				}})
-				if (product) {
-				return res.redirect('/products')	
-				}
-
-		} catch (error) {
-			console.log(error);
-
-		}
-	},
+		
+		const { id } = req.params;
+		const productDelete = await db.products.destroy(products => products.id !== +id);
+		storeProducts(productDelete);
+		return res.redirect('/products');
+	}
 }
