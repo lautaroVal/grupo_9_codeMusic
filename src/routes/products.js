@@ -25,7 +25,7 @@ router
         /* Formulario de edición de productos */
         .get('/edit/:id',adminUserCheck, productEdit)
         /* Acción de edición (a donde se envía el formulario): */
-        .put('/productEdit/:id', uploadImageProduct.array('image'), update)
+        .put('/productEdit/:id', uploadImageProduct.array('images'), update)
 
         /* Acción de borrado */
         .delete('/delete/:id', destroy)

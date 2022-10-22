@@ -22,22 +22,21 @@
                     <h1>OFERTAS</h1>
                     <section class="index_section_products">
                         <% oferta.forEach((product,index)=> { %>
-                            
-                                <article class="index_product">
-                                    <div class="index_product_img"><img
-                                            src="<%= "/img/imgProducts/" + product.images[0].name %>" alt="product"></div>
-                                    <hr>
-                                    <h3 class="index_product_title">
-                                        <%= product.name %>
-                                    </h3>
-                                    <div class="index_product_bottom">
-                                        <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
-                                        <p class="index_product_envío"> Envío Gratis</p>
-                                        <a href="/products/productDetail/<%=product.id %>"
-                                            class="index_button_product">Ver más</a>
-                                    </div>
-                                </article>
-                                <% }) %>
+
+                            <article class="index_product">
+                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.images[0].name %>" alt="product"></div>
+                                <hr>
+                                <h3 class="index_product_title">
+                                    <%= product.name %>
+                                </h3>
+                                <div class="index_product_bottom">
+                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
+                                    <p class="index_product_envío"> Envío Gratis</p>
+                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
+                                        más</a>
+                                </div>
+                            </article>
+                            <% }) %>
 
                     </section>
 
@@ -153,10 +152,10 @@
                             </p>
                         </div>
                         <% guitarras.forEach((product,index)=> { %>
-                         
+
                             <article class="index_product">
-                                <div class="index_product_img"><img
-                                        src="<%=" /img/imgProducts/" + product.images[0].name %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
+                                        product.images[0].name %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -168,7 +167,7 @@
                                         más</a>
                                 </div>
                             </article>
-                        
+
                             <%}) %>
 
                     </section>
@@ -183,8 +182,8 @@
                         <% baterias.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img
-                                    src="<%=" /img/imgProducts/" + product.images[0].name %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
+                                        product.images[0].name %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -210,8 +209,8 @@
                         <% teclados.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img
-                                    src="<%=" /img/imgProducts/" + product.images[0].name %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
+                                        product.images[0].name %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -236,8 +235,8 @@
                         <% microfonosYSonido.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img
-                                    src="<%=" /img/imgProducts/" + product.images[0].name %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
+                                        product.images[0].name %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -262,8 +261,8 @@
                         <% deVientos.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img
-                                    src="/img/imgProducts/<%=product.images[0].name %>" alt="product"></div>
+                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.images[0].name %>"
+                                        alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -283,7 +282,7 @@
 
             </main>
 
-            <div id="whatsapp" >
+            <div id="whatsapp">
                 <a href="#">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>

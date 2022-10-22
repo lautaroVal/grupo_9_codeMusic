@@ -382,8 +382,8 @@
 
     .productDetail_main_section_top_izq article {
         background-color: var(--ColorBlanco);
-        height: 150px;
-        width: 150px;
+/*         height: 150px;
+ */        width: 150px;
         border-radius: 10px;
         align-items: center;
         transition: 1.2s;
