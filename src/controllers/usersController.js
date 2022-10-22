@@ -154,14 +154,12 @@ module.exports = {
     },
 
     update: async (req, res) => {
-      //return res.send(req.body);
       try {
-        /* let errors = validationResult(req);
-        if (errors.isEmpty()) { */
+         let errors = validationResult(req);
+         return res.send(errors)
+        if (errors.isEmpty()) { 
         const {firstName, lastName, userName,rol, genre, email, telephone, musicFav, province, location, street, biography } = req.body;
         const userModify = await db.User.update({
-         /*  ...user, */
-          /* avatar: image.length === 0 ? user.avatar : image[0], */
           avatar: req.file?.filename || req.session.userLogin.avatar ,
           firstName: firstName?.trim(),
           lastName: lastName?.trim(),
@@ -169,10 +167,7 @@ module.exports = {
           rol,
           genre,
           email: email?.trim(),
-          musicFav,
-          province,
-          location: location?.trim(),
-          street: street?.trim(),
+          musicFav: musicFav ? musicFav : typeof musicFav === 'string' ? [musicFav] : [] ,  //musicFav ? musicFav === 'string' ? musicFav : [],
           biography: biography?.trim(),
           telephone: +telephone,
         },{
@@ -180,24 +175,44 @@ module.exports = {
             id: req.session.userLogin.id
           }
         })
-        console.log(userModify);
+        
         if (userModify) {
-          return res.send(userModify);
+          await db.Location.update({
+          province,
+          location: location?.trim(),
+          street: street?.trim(),
+          },{
+            where: {
+              id: req.session.userLogin.id
+            }
+          })
         }
+        return res.redirect('/');
+
+      } else {
+        const id = req.session.userLogin.id; 
+        const user = await db.User.findByPk(id,{
+          include: [
+            {association: 'locations'}]
+        });
+       
+        if (user) {
+          return res.render('users/profile', {
+              title: 'Perfil de usuario',
+              errors: errors.mapped(),
+              old: req.body,
+              user,
+              ROL_ADMIN,
+              ROL_USER
+          });
+    } 
+  }
       
       } catch (error) {
         console.log(error);
       }
-            
-            // return res.send(req.file) REQ.FILE  <--
-            /* let image = req.files.map((file) => file.filename);
-            const obj = {name:'emanuela'} */
-
-          /*   db.User.update({
-                avatar: req.file?.filename
-            }) */
-           
-            /* req.session.userLogin = {
+    
+             /* req.session.userLogin = {
                 id: req.session.userLogin.id,
                 firstName: usersModify.firstName,
                 lastName: usersModify.lastName,
@@ -208,21 +223,9 @@ module.exports = {
                 res.cookie('codeMusic', req.session.userLogin, {
                     maxAge: 1000 * 60 * 60
                 })
-            };
+            }; */
 
-            storeUsers(usersModify);
-            return res.redirect('/'); */
-
-       /*  } else {
-            let users = loadUsers();
-            const user = users.find(user => user.id === req.session.userLogin.id);
-            return res.render('users/profile', {
-                title: 'Perfil de usuario',
-                errors: errors.mapped(),
-                old: req.body,
-                user
-            })
-        } */
+         
     },
 
     logout: (req, res) => {
