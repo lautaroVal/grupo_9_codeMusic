@@ -1,6 +1,6 @@
 'use strict';
 
-const imagesDB = require('../../data/images.json');
+const imagesDB = require('../data/images.json');
 const images = imagesDB.map(image => {
   return {
     ...image,

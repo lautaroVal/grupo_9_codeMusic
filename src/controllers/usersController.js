@@ -153,6 +153,7 @@ module.exports = {
       let errors = validationResult(req);
       if (errors.isEmpty()) {
         const { firstName, lastName, userName, rol, genre, email, telephone, musicFav, province, location, street, biography } = req.body;
+
         const userModify = await db.User.update({                        // Edito el usuario que el id es igual al de session con los campos que mando por body.
           avatar: req.file?.filename || req.session.userLogin.avatar,
           firstName: firstName?.trim(),
@@ -161,7 +162,7 @@ module.exports = {
           rol,
           genre,
           email: email?.trim(),
-          musicFav: musicFav ? musicFav : typeof musicFav === 'string' ? [musicFav] : [],
+          musicFav: musicFav ? typeof musicFav === 'string' ? [musicFav] : musicFav : [],
           biography: biography?.trim(),
           telephone: +telephone,
         }, {

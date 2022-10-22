@@ -88,9 +88,10 @@ module.exports = {
 		try {
 			let errors = validationResult(req);
 			//Si no hay errores crea el producto y redirecciona a products.
+			return res.send(req.files.images)
+
 			if (errors.isEmpty()) {
 				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
-
 				const product = await db.Product.create({
 					...req.body,
 					name: name.trim(),
@@ -98,6 +99,7 @@ module.exports = {
 					status: status ? status : 0,
 					share: share ? share : 12,
 					discount: +discount,
+					image : req.files.image.length ? req.files.image[0].filename : 'imagen por defecto!!!',
 					description: description.trim(),
 					brandId: +brandId,
 					colorId: +colorId,
