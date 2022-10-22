@@ -124,16 +124,18 @@ module.exports = {
     profile: async (req, res) => {
 /*         let users = loadUsers();
  */
+try {
   const id = req.session.userLogin.id;    
   const user = await db.User.findByPk(id);
         return res.render('users/profile', {
             title: 'Perfil de usuario',
             user,
         });
-    },
-    catch (error) {
-      console.log(error);
-    },
+    }
+ catch (error) {
+  console.log(error);
+
+}},
 
     update: (req, res) => {
 

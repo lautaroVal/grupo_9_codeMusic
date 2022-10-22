@@ -215,7 +215,6 @@ module.exports = {
 /*  		const products = loadProducts();
  */ 		try {
 	 const { name, description, category, colorId, price, discount, status } = req.body;
-	 return res.send(req.body)
 
 			const producstModify = await db.Product.update({
 				...product,
@@ -254,11 +253,18 @@ module.exports = {
 	},
 
 	destroy: async (req, res) => {
-		/* 		const products = loadProducts();
-		 */
-		const { id } = req.params;
-		const productDelete = await db.products.destroy(products => products.id !== +id);
-		storeProducts(productDelete);
-		return res.redirect('/products');
-	}
+		try {
+		const product = await db.Product.destroy({
+				where : {
+					id : req.params.id
+				}})
+				if (product) {
+				return res.redirect('/products')	
+				}
+
+		} catch (error) {
+			console.log(error);
+
+		}
+	},
 }
