@@ -82,23 +82,6 @@ module.exports = {
     })
   },
 
-<<<<<<< HEAD
-    profile: async (req, res) => {
-/*         let users = loadUsers();
- */
-try {
-  const id = req.session.userLogin.id;    
-  const user = await db.User.findByPk(id);
-        return res.render('users/profile', {
-            title: 'Perfil de usuario',
-            user,
-        });
-    }
- catch (error) {
-  console.log(error);
-
-}},
-=======
   processLogin: async (req, res) => {
     try {
       let errors = validationResult(req);
@@ -108,7 +91,6 @@ try {
             email: req.body.email,         // Traigo al usuario cuyo email sea igual al que viene por el body.
           },
         })
->>>>>>> af765052d2ceb3e3d64c7653e5a6576d0fe7f193
 
         if (userLog) {                     // Si viene el usuario logueado creo la session.
           req.session.userLogin = {
