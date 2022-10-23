@@ -44,6 +44,10 @@
     display: none;
 }
 
+.productCart_footer_suscrip button {
+    cursor: pointer;
+}
+
 
 @media (min-width: 768px) {
 

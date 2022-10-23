@@ -1,5 +1,5 @@
 .editAdd {
-    background-image: linear-gradient(135deg, #F2F5F9, #9a75ca, #3f54a8, #2e2c8bd7, #631da5, #691faf, #551A8B);
+    background-image: linear-gradient(135deg,#541a8bad, #9a75ca, #3f54a8, #2e2c8bd7, #631da5, #691faf, #551A8B);
     background-size: 500%;
 }
 .main_formulario {
@@ -16,7 +16,7 @@
     margin-top: 20px;
     padding: 20px;
     font-family: 'calibri';
-    box-shadow: 0px 0px 5px;
+    box-shadow: -10px 10px 17px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -84,9 +84,9 @@
 }
 
 .main_formulario button:hover {
-    background-color: #541a8bbb;
-    color: var(--ColorNegro);
-    border: 1px solid var(--ColorNegro);
+    background-color: var(--ColorNegro);
+    /* color: #541a8bbb; */
+    cursor: pointer;
 }
 
 @media (min-width: 1024px) {

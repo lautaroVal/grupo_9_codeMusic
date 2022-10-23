@@ -17,15 +17,16 @@
                     <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo">
                     </article>
                     <article class="productDetail_main_section_top_izq_fto1"><img
-                        src="/img/imgProducts/<%=image.name%>" alt="foto1"></article>
+                        src="/img/imgProducts/<%=image.file%>" alt="foto1"></article>
                     <article class="productDetail_main_section_top_izq_fto2"><img
-                        src="/img/imgProducts/<%=image.name%>" alt="foto2"></article>
+                        src="/img/imgProducts/<%=image.file%>" alt="foto2"></article>
                 </aside>
-    
+                
+                <% }) %>
+                
                 <article class="productDetail_main_section_top_centr">
-                    <img src="/img/imgProducts/<%=image.name%>" alt="centro">
+                    <img src="/img/imgProducts/<%=product.image%>" alt="centro">
                 </article>
-            <% }) %>
 
             <aside class="productDetail_main_section_top_derech">
                 <div class="productDetail_main_section_top_derech_title">
@@ -53,10 +54,10 @@
                     <% product.images.forEach(image => { %>
                      
                         <div>
-                            <img  src="/img/imgProducts/<%=image.name%>" alt="art1">
+                            <img  src="/img/imgProducts/<%=image.file%>" alt="art1">
                         </div>
     
-                        <div class="productDetail_main_section_top_derech_colores_art2"><img src="/img/imgProducts/<%=image.name%>" alt="art2">
+                        <div class="productDetail_main_section_top_derech_colores_art2"><img src="/img/imgProducts/<%=image.file%>" alt="art2">
                         </div>
                     <% }) %>
                 </div>
@@ -161,6 +162,12 @@
         </section>
         
     </main>
+
+    <div id="whatsapp">
+        <a href="#">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <%- include('../partials/footer') %> 
 

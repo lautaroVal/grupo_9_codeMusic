@@ -88,8 +88,7 @@ module.exports = {
 		try {
 			let errors = validationResult(req);
 			//Si no hay errores crea el producto y redirecciona a products.
-			return res.send(req.files.images)
-
+			//return res.send(req.files.images)
 			if (errors.isEmpty()) {
 				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
 				const product = await db.Product.create({
@@ -99,7 +98,7 @@ module.exports = {
 					status: status ? status : 0,
 					share: share ? share : 12,
 					discount: +discount,
-					image : req.files.image.length ? req.files.image[0].filename : 'imagen por defecto!!!',
+					image : req.files.image ? req.files.image[0].filename : 'Img-default.jpg',
 					description: description.trim(),
 					brandId: +brandId,
 					colorId: +colorId,
@@ -107,9 +106,9 @@ module.exports = {
 				})
 				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
 				if (product) {
-					let images = req.files.map(file => {
+					let images = req.files.images.map(file => {
 						return {
-							name: file.filename,
+							file: file.filename,
 							productId: product.id
 						}
 					})
@@ -190,7 +189,6 @@ module.exports = {
 	},
 
 	update: async (req, res) => {
-
  		try {
 	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
 	 return res.send(req.body)
