@@ -3,9 +3,9 @@ const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
 const {OFERTA,SINOFERTA} = require('../constants/products');
-/* const { FORCE } = require('sequelize/types/index-hints');
- */
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 
 module.exports = {
 
