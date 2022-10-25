@@ -11,18 +11,19 @@
     <main class="productDetail_main">
 
         <section class="productDetail_main_section_top">
-            <% product.images.forEach(image => { %>
-             
-                <aside class="productDetail_main_section_top_izq">
-                    <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo">
-                    </article>
-                    <article class="productDetail_main_section_top_izq_fto1"><img
-                        src="/img/imgProducts/<%=image.file%>" alt="foto1"></article>
-                    <article class="productDetail_main_section_top_izq_fto2"><img
-                        src="/img/imgProducts/<%=image.file%>" alt="foto2"></article>
+            
+            <aside class="productDetail_main_section_top_izq">
+                <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo"> <!-- Poner imagen de marcas dinámico -->
+                </article>
+                    <article class="productDetail_main_section_top_izq_fto1"><% if (product.images.length) { %>
+                        <img src="/img/imgProducts/<%=product.images[0].file%>" alt="foto1">
+                        <% } %>
+                            </article>
+                    <article class="productDetail_main_section_top_izq_fto2"><% if (product.images.length) { %>
+                        <img src="/img/imgProducts/<%=product.images[1].file%>" alt="foto1">
+                        <% } %></article>
                 </aside>
                 
-                <% }) %>
                 
                 <article class="productDetail_main_section_top_centr">
                     <img src="/img/imgProducts/<%=product.image%>" alt="centro">
@@ -51,15 +52,17 @@
                     <div>
                         <h5> Otros Colores</h5>
                     </div>
-                    <% product.images.forEach(image => { %>
                      
                         <div>
-                            <img  src="/img/imgProducts/<%=image.file%>" alt="art1">
+                            <% if (product.images.length) { %>
+                                <img src="/img/imgProducts/<%=product.images[0].file%>" alt="art1">                                
+                                <% } %>
                         </div>
     
-                        <div class="productDetail_main_section_top_derech_colores_art2"><img src="/img/imgProducts/<%=image.file%>" alt="art2">
+                        <div class="productDetail_main_section_top_derech_colores_art2"> <% if (product.images.length) { %>
+                            <img src="/img/imgProducts/<%=product.images[1].file%>" alt="art2">                                
+                            <% } %>
                         </div>
-                    <% }) %>
                 </div>
 
                 <div class="productDetail_main_section_top_derech_stock">
