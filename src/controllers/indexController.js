@@ -20,7 +20,7 @@ module.exports = {
     try {
       const oferta = await db.Product.findAll({
         where: {
-          status: 1
+          status: 1                                 // Implementar oferta según discount.
         },
         include: ['images', 'brand', 'category']
       });

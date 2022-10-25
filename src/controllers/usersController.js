@@ -21,7 +21,7 @@ module.exports = {
       let errors = validationResult(req);
       if (errors.isEmpty()) {
         let { firstName, lastName, email, telephone, password } = req.body;
-        const user = await db.User.create({             // Creo un usuario nuevo con lo que viene por body.
+        const user = await db.User.create({                      // Creo un usuario nuevo con lo que viene por body.
           firstName: firstName.trim(),
           lastName: lastName.trim(),
           email: email.trim(),
@@ -221,7 +221,7 @@ module.exports = {
   },
 
   logout: (req, res) => {
-    req.session.destroy();                            //Elimino la session para desloguear al usuario
+    req.session.destroy();                            //Elimino la session para deloguear al usuario
     res.cookie('codeMusic', null, { maxAge: -1 });    // Y mato a la cookie.
     return res.redirect('/');
   }
