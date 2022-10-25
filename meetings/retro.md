@@ -79,3 +79,20 @@ no avisar en los cambios generales*
 ### Hacer Menos:
 *Entrar en detalles no tan importantes que nos atrase o perjudique*
 
+---
+
+## Retro Sprint 6
+### Seguir Haciendo:
+*Dividir las tareas para que sea mucho mas práctico.*
+
+### Hacer Más:
+*Seguir motivandonos para poder terminar la cursada.*
+
+### Empezar a Hacer:
+*Realizar mas reuniones y ser mas puntuales con las entregas de los sprint.*
+
+### Dejar De Hacer:
+*Demorarnos con la entrega de los sprint.*
+
+### Hacer Menos:
+*Entrar en detalles no tan importantes que nos atrase o perjudique*
