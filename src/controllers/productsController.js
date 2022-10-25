@@ -251,13 +251,14 @@ module.exports = {
 					id: id
 				}
 			});
-			/* if (productDelete) {
+			if (productDelete === 1) {
 				await db.Image.destroy({
 					where: {
-						id: id
-					}
+						productId: id
+					},
+					force: true
 				})
-			} */
+			}
 			return res.redirect('/products')
 
 		} catch (error) {
