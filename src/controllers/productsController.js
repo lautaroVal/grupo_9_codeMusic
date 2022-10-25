@@ -106,7 +106,7 @@ module.exports = {
 					categoryId: +categoryId
 				})
 				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
-				if (product) {
+				if (req.files.images) {
 					let images = req.files.images.map(file => {
 						return {
 							file: file.filename,
