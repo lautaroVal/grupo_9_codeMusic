@@ -2,8 +2,9 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
-const {OFERTA,SINOFERTA} = require('../constants/products');
-
+const { OFERTA, SINOFERTA } = require('../constants/products');
+/* const { FORCE } = require('sequelize/types/index-hints');
+ */
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 module.exports = {
@@ -98,7 +99,7 @@ module.exports = {
 					status: status ? status : 0,
 					share: share ? share : 12,
 					discount: +discount,
-					image : req.files.image ? req.files.image[0].filename : 'Img-default.jpg',
+					image: req.files.image ? req.files.image[0].filename : 'Img-default.jpg',
 					description: description.trim(),
 					brandId: +brandId,
 					colorId: +colorId,
@@ -165,16 +166,18 @@ module.exports = {
 
 			const product = await db.Product.findByPk(req.params.id, {
 				include: [
-					{association: 'brand'},
-					{association: 'colors'},
-					{association: 'images'},
-					{association: 'category',attributes: {
-						exclude: ["created_at", "updated_at"],
-					}},
+					{ association: 'brand' },
+					{ association: 'colors' },
+					{ association: 'images' },
+					{
+						association: 'category', attributes: {
+							exclude: ["created_at", "updated_at"],
+						}
+					},
 				],
 			});
 
- 			return res.render('products/productEdit', {
+			return res.render('products/productEdit', {
 				title: "Edicion del Producto",
 				product,
 				brands,
@@ -189,13 +192,14 @@ module.exports = {
 	},
 
 	update: async (req, res) => {
- 		try {
-	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
+		try {
+			const { name, price, share, discount, description, brandId, categoryId, colorId, status } = req.body;
+			//return res.send(req.files.image)
 
-			const producstModify = await db.Product.update({
-				...product,
+			let productModify = await db.Product.update({
+				...req.body,
 				name: name,
-				images,
+				image: req.files.image?.filename,
 				price: +price,
 				share: +share,
 				discount: +discount,
@@ -204,26 +208,32 @@ module.exports = {
 				categoryId,
 				colorId,
 				status
-				},
+			},
 				{
 					where: {
 						id: req.params.id
 					}
 				}
 			)
-			if (product) {
-				let images = req.files.map(file => {
-					return {
-						name: file.filename,
-						productId: product.id
-					}
+			if (productModify) {                               //             ¡¡ REVISAR !!
+				await db.Image.destroy({
+					where: {
+						productId: req.params.id,
+					},
+					force: true
 				})
+				/* if (imagesDB) {
+					let images = req.files.images.map(file => {
+						return {
+							name: file.filename,
+							productId: req.params.id
+						}
+					})
+					await db.Image.bulkCreate(images)
+				}	 */
 
-				await db.Image.update(images)
 			}
-			if (producstModify) {
-				return res.redirect('/products/productDetail/' + req.params.id);
-			}
+			return res.redirect('/products/productDetail/' + req.params.id);
 
 		} catch (error) {
 			console.log(error);
@@ -232,10 +242,22 @@ module.exports = {
 	},
 
 	destroy: async (req, res) => {
-		
-		const { id } = req.params;
-		const productDelete = await db.products.destroy(products => products.id !== +id);
-		storeProducts(productDelete);
-		return res.redirect('/products');
+		try {
+			const { id } = req.params;
+			const productDelete = await db.Product.destroy({
+				where: {
+					id: id
+				}
+			});
+			/* 		storeProducts(productDelete);
+			 */
+			if (productDelete) {
+				return res.redirect('/products')
+			}
+		} catch (error) {
+			console.log(error);
+		}
+
+		;
 	}
 }

@@ -29,9 +29,6 @@ module.exports = [
         }).catch( () => Promise.reject('El usuario ya está registrado!'))
     }),
 
-    body('telephone')
-        .notEmpty().withMessage("Debe ingresar un numero"),
-
     body('password')
         .notEmpty().withMessage("Debe ingresar una contraseña.").bail()
         .isLength({ min: 6, max: 12 }).withMessage('Debe tener entre 6 y 12 caracteres.'),
