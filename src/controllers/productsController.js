@@ -196,7 +196,7 @@ module.exports = {
 	update: async (req, res) => {
 		try {
 			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
-			let productModify = await db.Product.update({
+			await db.Product.update({
 				...req.body,
 				name: name,
 				image: req.files.image ? req.files.image[0].filename : image,
