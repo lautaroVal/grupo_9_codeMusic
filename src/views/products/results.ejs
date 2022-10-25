@@ -5,13 +5,13 @@
     <%- include('../partials/header') %>
         <main>
 
-            <% if (result.length > 0) { %>
+            <% if (result.length > 0 && keywords) { %>
                 <h4 class="result">Resultado de la búsqueda: <%= keywords %></h4>
             <section class="index_section_products">
             <% result.forEach(result => { %>
                  
                 <article class="index_product">
-                    <div class="index_product_img"><img src="<%="/img/imgProducts/" + result.images %>" alt="product"></div>
+                    <div class="index_product_img"><img src="<%="/img/imgProducts/" + result.image %>" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title"><%= result.name %></h3>
                     <div class="index_product_bottom">
@@ -27,6 +27,13 @@
             <% } %>
 
         </main>
+
+        <div id="whatsapp">
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
         <%- include('../partials/footer') %> 
 
     </body>
