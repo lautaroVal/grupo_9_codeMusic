@@ -55,7 +55,6 @@ module.exports = {
         include: ['images', 'brand', 'category']
       });
 
-      //return res.send(oferta)
       return res.render("index", {
         title: "Code Music",
         oferta,
@@ -73,7 +72,6 @@ module.exports = {
   },
 
   search: async (req, res) => {
-
     try {
       const { keywords } = req.query;
       const result = await db.Product.findAll({
@@ -90,11 +88,13 @@ module.exports = {
         include: ['images', 'brand', 'category']
       })
 
-      return res.render("products/results", {
-        title: "Resultado de búsqueda",
-        keywords,
-        result
-      })
+      if (result) {
+        return res.render("products/results", {
+          title: "Resultado de búsqueda",
+          keywords,
+          result
+        })
+      }
       
     } catch (error) {
       console.log(error);

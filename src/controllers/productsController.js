@@ -3,7 +3,8 @@ const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
 const {OFERTA,SINOFERTA} = require('../constants/products');
-
+/* const { FORCE } = require('sequelize/types/index-hints');
+ */
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 module.exports = {
@@ -190,13 +191,13 @@ module.exports = {
 
 	update: async (req, res) => {
  		try {
-	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
-	 return res.send(req.body)
+	 const { name,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
+	 //return res.send(req.files.image)
 
-			const producstModify = await db.Product.update({
-				...product,
+			 let productModify = await db.Product.update({
+				...req.body,
 				name: name,
-				images,
+				image: req.files.image?.filename,
 				price: +price,
 				share: +share,
 				discount: +discount,
@@ -212,19 +213,25 @@ module.exports = {
 					}
 				}
 			)
-			if (product) {
-				let images = req.files.map(file => {
-					return {
-						name: file.filename,
-						productId: product.id
-					}
+			if (productModify) {                               //             ¡¡ REVISAR !!
+				 await db.Image.destroy({
+					where: {
+						productId: req.params.id,
+					},
+					force: true
 				})
-
-				await db.Image.update(images)
+						/* if (imagesDB) {
+							let images = req.files.images.map(file => {
+								return {
+									name: file.filename,
+									productId: req.params.id
+								}
+							})
+							await db.Image.bulkCreate(images)
+						}	 */			   
+				
 			}
-			if (producstModify) {
-				return res.redirect('/products/productDetail/' + req.params.id);
-			}
+			return res.redirect('/products/productDetail/' + req.params.id);	
 
 		} catch (error) {
 			console.log(error);

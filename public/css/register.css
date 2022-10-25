@@ -60,10 +60,18 @@
     height: 35px;
     margin-left: 30px;
     margin-right: 20px;
-    background-color: #202040;
+    background-color: #551A8B;
     color: white;
     text-transform: uppercase;
     border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register_div button:hover, .login_div button:hover {
+    background-color: var(--ColorNegro);
+    cursor: pointer;
 }
 
 .register_p_a, .login_p_a {
