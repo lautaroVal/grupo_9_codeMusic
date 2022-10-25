@@ -13,12 +13,15 @@
         <section class="productDetail_main_section_top">
             
             <aside class="productDetail_main_section_top_izq">
-                <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo">
+                <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo"> <!-- Poner imagen de marcas dinámico -->
                 </article>
-                    <article class="productDetail_main_section_top_izq_fto1"><img
-                        src="/img/imgProducts/<%=product.images[0].file%>" alt="foto1"></article>
-                    <article class="productDetail_main_section_top_izq_fto2"><img
-                        src="/img/imgProducts/<%=product.images[1].file%>" alt="foto2"></article>
+                    <article class="productDetail_main_section_top_izq_fto1"><% if (product.images.length) { %>
+                        <img src="/img/imgProducts/<%=product.images[0].file%>" alt="foto1">
+                        <% } %>
+                            </article>
+                    <article class="productDetail_main_section_top_izq_fto2"><% if (product.images.length) { %>
+                        <img src="/img/imgProducts/<%=product.images[1].file%>" alt="foto1">
+                        <% } %></article>
                 </aside>
                 
                 
@@ -34,7 +37,7 @@
 
                 <div>
                     <p class="productDetail_main_section_top_derech_price">$<%= toThousand( product.price) %> </p>
-                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((product.price / 12).toFixed(2)) %>  sin interes</span>
+                    <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((product.price / 12).toFixed(2)) %>  sin interés</span>
                     </p>
 
                 </div>
@@ -51,10 +54,14 @@
                     </div>
                      
                         <div>
-                            <img  src="/img/imgProducts/<%=product.images[0].file%>" alt="art1">
+                            <% if (product.images.length) { %>
+                                <img src="/img/imgProducts/<%=product.images[0].file%>" alt="art1">                                
+                                <% } %>
                         </div>
     
-                        <div class="productDetail_main_section_top_derech_colores_art2"><img src="/img/imgProducts/<%=product.images[1].file%>" alt="art2">
+                        <div class="productDetail_main_section_top_derech_colores_art2"> <% if (product.images.length) { %>
+                            <img src="/img/imgProducts/<%=product.images[1].file%>" alt="art2">                                
+                            <% } %>
                         </div>
                 </div>
 

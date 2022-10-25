@@ -2,10 +2,10 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
-const { OFERTA, SINOFERTA } = require('../constants/products');
-/* const { FORCE } = require('sequelize/types/index-hints');
- */
+const {OFERTA,SINOFERTA} = require('../constants/products');
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 
 module.exports = {
 
@@ -56,6 +56,7 @@ module.exports = {
 			productId
 		})
 	},
+
 	/* CREATE */
 	productAdd: async (req, res) => {
 		try {
@@ -89,7 +90,6 @@ module.exports = {
 		try {
 			let errors = validationResult(req);
 			//Si no hay errores crea el producto y redirecciona a products.
-			//return res.send(req.files.images)
 			if (errors.isEmpty()) {
 				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
 				const product = await db.Product.create({
@@ -177,15 +177,18 @@ module.exports = {
 				],
 			});
 
-			return res.render('products/productEdit', {
-				title: "Edicion del Producto",
-				product,
-				brands,
-				colors,
-				categories,
-				OFERTA,
-				SINOFERTA
-			})
+			if (product) {
+				return res.render('products/productEdit', {
+					title: "Edicion del Producto",
+					product,
+					brands,
+					colors,
+					categories,
+					OFERTA,
+					SINOFERTA
+				})
+			}
+
 		} catch (error) {
 			console.log(error);
 		}
@@ -195,11 +198,10 @@ module.exports = {
 		try {
 			const { name, price, share, discount, description, brandId, categoryId, colorId, status } = req.body;
 			//return res.send(req.files.image)
-
 			let productModify = await db.Product.update({
 				...req.body,
 				name: name,
-				image: req.files.image?.filename,
+				image: req.files.image ? req.files.image[0].filename : 'Img-default.jpg',
 				price: +price,
 				share: +share,
 				discount: +discount,
@@ -215,22 +217,23 @@ module.exports = {
 					}
 				}
 			)
-			if (productModify) {                               //             ¡¡ REVISAR !!
-				await db.Image.destroy({
+			if (req.files.images) {                               //             ¡¡ REVISAR !!
+				let imagesDB = await db.Image.destroy({
 					where: {
 						productId: req.params.id,
 					},
 					force: true
 				})
-				/* if (imagesDB) {
+				//console.log(imagesDB)
+				if (imagesDB >= 0) {
 					let images = req.files.images.map(file => {
 						return {
-							name: file.filename,
+							file: file.filename,
 							productId: req.params.id
 						}
 					})
 					await db.Image.bulkCreate(images)
-				}	 */
+				}	
 
 			}
 			return res.redirect('/products/productDetail/' + req.params.id);
@@ -238,7 +241,6 @@ module.exports = {
 		} catch (error) {
 			console.log(error);
 		}
-
 	},
 
 	destroy: async (req, res) => {
@@ -249,15 +251,18 @@ module.exports = {
 					id: id
 				}
 			});
-			/* 		storeProducts(productDelete);
-			 */
-			if (productDelete) {
-				return res.redirect('/products')
-			}
+			/* if (productDelete) {
+				await db.Image.destroy({
+					where: {
+						id: id
+					}
+				})
+			} */
+			return res.redirect('/products')
+
 		} catch (error) {
 			console.log(error);
-		}
-
-		;
+		}	
 	}
+
 }

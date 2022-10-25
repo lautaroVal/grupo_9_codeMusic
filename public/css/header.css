@@ -102,6 +102,7 @@
     top: 5px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .productDetail_header_search form button i {

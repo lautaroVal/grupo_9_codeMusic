@@ -20,6 +20,7 @@
                     </div>
 
                     <h1>OFERTAS</h1>
+                    
                     <section class="index_section_products">
                         <% oferta.forEach((product,index)=> { %>
 
@@ -29,6 +30,7 @@
                                 <h3 class="index_product_title">
                                     <%= product.name %>
                                 </h3>
+                                
                                 <div class="index_product_bottom">
                                     <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
                                     <p class="index_product_envío"> Envío Gratis</p>
