@@ -1,6 +1,9 @@
 /* MAIN */ 
 
 /* MAIN CARROUSEL */
+html {
+    scroll-behavior: smooth;
+}
 
 .figure_banner {
     width: 100%;
