@@ -23,13 +23,13 @@
                             <div>
                                 <label for="firstName">Nombre</label>
                                 <input type="text" name="firstName" id="firstName" placeholder="Escribí tu nombre" class="profile_controls" value="<%= user.firstName %>">
-                                <p class="text-danger"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></p>
+                                <p class="text-danger" style="color: red;"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></p>
                             </div>
 
                             <div>
                                 <label for="lastName">Apellido</label>
                                 <input type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido" class="profile_controls" value="<%= user.lastName %>">
-                                <p class="text-danger"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></p>
+                                <p class="text-danger" style="color: red;"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></p>
                             </div>
 
                             <div>
@@ -195,3 +195,7 @@
     </body>
 
 </html>
+
+Img-1663007944800.png
+
+Img-1662864085586.png

@@ -1,6 +1,5 @@
 const db = require('../database/models');
 const { Op } = require('sequelize');
-const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator')
 const {OFERTA,SINOFERTA} = require('../constants/products');
 
@@ -197,7 +196,6 @@ module.exports = {
 	update: async (req, res) => {
 		try {
 			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
-			//return res.send(req.files.image)
 			let productModify = await db.Product.update({
 				...req.body,
 				name: name,
@@ -217,7 +215,7 @@ module.exports = {
 					}
 				}
 			)
-			if (req.files.images) {                               //             ¡¡ REVISAR !!
+			if (req.files.images) {                               
 				let imagesDB = await db.Image.destroy({
 					where: {
 						productId: req.params.id,
@@ -251,13 +249,14 @@ module.exports = {
 					id: id
 				}
 			});
-			/* if (productDelete) {
+			if (productDelete === 1) {
 				await db.Image.destroy({
 					where: {
-						id: id
-					}
+						productId: id
+					},
+					force: true
 				})
-			} */
+			}
 			return res.redirect('/products')
 
 		} catch (error) {
