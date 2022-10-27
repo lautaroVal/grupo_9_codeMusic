@@ -2,6 +2,8 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { validationResult } = require('express-validator')
 const {OFERTA,SINOFERTA} = require('../constants/products');
+const { loadProducts} = require('../data/productsModule');
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
