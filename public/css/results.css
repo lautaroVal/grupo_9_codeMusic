@@ -1,8 +1,8 @@
-.result {
-    margin: 0 50px ;
-}
+/* .result_main {
+    height:80vh ;
+} */
 
-p.result {
+.result_main_p {
     margin: 0 50px 400px ;
     color: red;
 }

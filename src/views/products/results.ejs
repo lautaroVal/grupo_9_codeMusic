@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head') %> 
-<body>
+<body class="result">
     <%- include('../partials/header') %>
-        <main>
+        <main class="result_main">
 
             <% if (result.length > 0 && keywords) { %>
                 <h4 class="result">Resultado de la búsqueda: <%= keywords %></h4>
@@ -21,9 +21,9 @@
                     </div>
                 </article>
             <% }) %>
-        </section>
+            </section>
         <% }else{ %>
-            <p class="result">No hay resultados 😒👨‍🦯</p>
+            <p class="result_main_p" style="height:5vh;">No hay resultados 😒👨‍🦯</p>
             <% } %>
 
         </main>

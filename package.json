@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "reset-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
+    "create:db": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "reset:db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "dev:reset":"npm run reset:db && nodemon app.js"
+
   },
   "repository": {
     "type": "git",
