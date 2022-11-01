@@ -21,6 +21,9 @@ h1 {
    justify-content: space-evenly;
    margin-left: 50px;
 }
+.productCart_detalleProducto_basura_img{
+   width: 40px;
+}
 
 .boton {
    background-color: white;
