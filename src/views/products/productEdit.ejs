@@ -2,10 +2,10 @@
 <html lang="en">
 <%- include('../partials/head') %>
 
-    <body class="editAdd">
+    <body class="body_edit">
         <%- include('../partials/header') %>
             <main class="main_formulario">
-                <h4>Editar producto: <%= product.name %>
+                <h4 class="edit_titulo">Editar producto: <%= product.name %>
                 </h4>
 
                 <form class="main_formulario_contenedor" action="/products/productEdit/<%= product.id %>?_method=PUT"

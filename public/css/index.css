@@ -32,18 +32,18 @@ html {
     text-align: center;
     font-family: sans-serif;
     margin: 0 auto 20px;
-    width: 100%;
+    width: 100vw;
 }
 
 .index_medios_de_pago img {
-    width: 290px;
+    width: 48vw;
 }
 
 .index h1 {
     color: var(--ColorAzulOscuro);
     margin-bottom: 20px;
     font-weight:bolder;
-    font-family: Hind ;
+    font-family: "Hind" ;
 }
 
 .index_section_products {
@@ -318,9 +318,9 @@ FOOTER */
     justify-content: center;
 }
 
-.index_medios_de_pago img {
+/* .index_medios_de_pago img {
     width: 360px;
-}
+} */
 
 .index_section_products {
     display: flex;
