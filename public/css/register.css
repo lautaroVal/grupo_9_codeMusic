@@ -28,8 +28,9 @@
     display: flex;
     flex-wrap: wrap;
     color: var(--ColorNegro);
-    margin:0 auto;
+    margin:0 auto 30px;
     gap: 20px 0;
+    width: 80%;
 }
 
 .register_div, .login_div {
@@ -48,11 +49,12 @@
 }
 
 .register_input, .login_input {
-    width: 300PX;
+    width: 100%;
     height: 30px;
     border-radius: 20px;
     background-color: #D9D9D9;
     margin: auto;
+    padding-left: 5px;
 }
 
 .register_div button, .login_div button {
@@ -98,13 +100,13 @@
         flex-direction: column;
     }
     .register_input, .login_input {
-        width: 500px;
+        width: 300px;
     }
 }
 
 
 @media (min-width: 1024px) {
     .register_input, .login_input {
-        width: 600px;
+        width: 350px;
     }
 }
