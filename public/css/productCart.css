@@ -27,6 +27,8 @@ h1.productCart_main-h1 {
    gap: 2px;
    margin-bottom: 15px;
    justify-content: space-around;
+   padding-bottom: 10px;
+   border-bottom: 0.3px solid rgba(128, 128, 128, 0.562);
 }
 
 .productCart_detalleProducto {
@@ -59,7 +61,6 @@ h1.productCart_main-h1 {
 
 .productCart_detalleProducto_imagenbateria {
    width: 5em;
-   /* height: 120px; */
    margin: 0;
 }
 
