@@ -2,10 +2,10 @@
 <html lang="en">
 <%- include('../partials/head') %>
 
-    <body class="editAdd">
+    <body class="body_add">
         <%- include('../partials/header') %>
             <main class="main_formulario">
-                <h4>Agregar producto</h4>
+                <h4 class="add_titulo">Agregar producto</h4>
 
                 <form class="main_formulario_contenedor" action="/products/productAdd" method="POST"
                     enctype="multipart/form-data">
@@ -21,7 +21,7 @@
 
                     <div>
                         <label for="imagen">Imagen principal</label>
-                        <input type="file" name="images" id="imagen" accept="image/*" /><br/><br/>
+                        <input type="file" name="image" id="imagen" accept="image/*" /><br/><br/>
                         <% if (locals.errors && errors.images) { %>
                             <p class="register_errors">
                                 <%= errors.images.msg %>

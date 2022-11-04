@@ -6,52 +6,65 @@
         <%- include('../partials/header') %>
             <main class="profile_main">
 
-                <section class="profile_main_section">
+                <h3 class="profile_titulo">Mi perfil </h3>
+                
+                <form class="profile_main_form" action="/users/profile?_method=PUT" method="post"
+                enctype="multipart/form-data">
 
-                    <h3>Mi perfil </h3>
-                    
-                    <form class="profile_main_form" action="/users/profile?_method=PUT" method="post" enctype="multipart/form-data">
+                    <section class="profile_main_section">
+
                         <img src="/img/users/<%= user.avatar %>" alt="usuario" class="profile_img">
 
                         <div class="profile_main_divAvatar">
-                            <label for="avatar" style="cursor:pointer;" class="profile_main_divAvatar_label">Cambiar imagen de perfil</label>
-                            <input hidden type="file" id="avatar" name="avatar" >
+                            <label for="avatar" style="cursor:pointer;" class="profile_main_divAvatar_label">Cambiar
+                                imagen de perfil</label>
+                            <input hidden type="file" id="avatar" name="avatar">
                         </div>
 
                         <div class="profile_main_form_div1">
 
                             <div>
                                 <label for="firstName">Nombre</label>
-                                <input type="text" name="firstName" id="firstName" placeholder="Escribí tu nombre" class="profile_controls" value="<%= user.firstName %>">
-                                <p class="text-danger"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></p>
+                                <input type="text" name="firstName" id="firstName" placeholder="Escribí tu nombre"
+                                    class="profile_controls" value="<%= user.firstName %>">
+                                <p class="text-danger" style="color: red;">
+                                    <%= locals.errors && errors.firstName ? errors.firstName.msg : null %>
+                                </p>
                             </div>
 
                             <div>
                                 <label for="lastName">Apellido</label>
-                                <input type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido" class="profile_controls" value="<%= user.lastName %>">
-                                <p class="text-danger"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></p>
+                                <input type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido"
+                                    class="profile_controls" value="<%= user.lastName %>">
+                                <p class="text-danger" style="color: red;">
+                                    <%= locals.errors && errors.lastName ? errors.lastName.msg : null %>
+                                </p>
                             </div>
 
                             <div>
                                 <label for="username">Nombre de usuario</label>
                                 <input type="text" name="userName" id="userName"
-                                    placeholder="Escribí tu nombre de usuario" class="profile_controls" value="<%= user.userName ? user.userName : null %>">
-                                    <p class="text-danger"><%= locals.errors && errors.userName ? errors.userName.msg : null %></p>
+                                    placeholder="Escribí tu nombre de usuario" class="profile_controls"
+                                    value="<%= user.userName ? user.userName : null %>">
+                                <p class="text-danger">
+                                    <%= locals.errors && errors.userName ? errors.userName.msg : null %>
+                                </p>
                             </div>
 
                             <div>
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" name="email" id="email" placeholder="Escribí tu correo electrónico" class="profile_controls"
-                                value="<%= user.email %>" disabled >
+                                <input type="email" name="email" id="email" placeholder="Escribí tu correo electrónico"
+                                    class="profile_controls" value="<%= user.email %>" disabled>
                             </div>
-                            <div >
+                            <div>
                                 <label for="telephone">Teléfono(opcional):</label>
-                                <input type="number" name="telephone" id="telephone" placeholder="Ej: 1524647589" class="profile_controls" value="<%= user.telephone %>" >
+                                <input type="number" name="telephone" id="telephone" placeholder="Ej: 1524647589"
+                                    class="profile_controls" value="<%= user.telephone %>">
                             </div>
                             <div>
                                 <label for="category">Rol de usuario:</label>
                                 <input type="text" name="category" id="category" class="profile_controls"
-                                value="<%= user.rol === ROL_ADMIN ? "Administrador" : "Regular" %>" disabled>
+                                    value="<%= user.rol === ROL_ADMIN ? " Administrador" : "Regular" %>" disabled>
                             </div>
 
                         </div>
@@ -60,137 +73,182 @@
                             <h5>Género</h5>
                             <hr>
                             <div>
-                                <input value="femenino" type="radio" id="femenino" name="genre" <%=user.genre === "femenino"
-                                && "checked" %>>
+                                <input value="femenino" type="radio" id="femenino" name="genre"
+                                    <%=user.genre==="femenino" && "checked" %>>
                                 <label for="femenino">Femenino</label>
                             </div>
                             <div>
-                                <input value="masculino" type="radio" id="masculino" name="genre" <%=user.genre === "masculino"
-                                && "checked" %>>
+                                <input value="masculino" type="radio" id="masculino" name="genre"
+                                    <%=user.genre==="masculino" && "checked" %>>
                                 <label for="masculino">Masculino</label>
                             </div>
                             <div>
-                                <input value="otro" type="radio" id="otro" name="genre" <%=user.genre === "otro"
-                                && "checked" %>>
+                                <input value="otro" type="radio" id="otro" name="genre" <%=user.genre==="otro"
+                                    && "checked" %>>
                                 <label for="otro">Otro</label>
                             </div>
-
+                        </div>
+                        
+                        <div class="profile_biography">
+                            <label for="biography">Acerca de mí</label>
+                            <textarea name="biography" id="biography" cols="40" rows="10" maxlength="650"
+                                class="profile_controls_textarea">
+                                    <%= user.biography %></textarea>
                         </div>
 
+                    </section>
+
+                    <section>
                         <div class="profile_main_form_div3">
                             <h5>Géneros de música favoritos</h5>
                             <hr>
                             <div>
-                                <input value="Rock" type="checkbox" id="Rock" name="musicFav" <%=user.musicFav?.includes("Rock") && "checked" %>>
+                                <input value="Rock" type="checkbox" id="Rock" name="musicFav"
+                                    <%=user.musicFav?.includes("Rock") && "checked" %>>
                                 <label for="Rock">Rock</label>
                             </div>
                             <div>
-                                <input value="Jazz" type="checkbox" id="Jazz" name="musicFav" <%=user.musicFav?.includes("Jazz") && "checked" %>>
+                                <input value="Jazz" type="checkbox" id="Jazz" name="musicFav"
+                                    <%=user.musicFav?.includes("Jazz") && "checked" %>>
                                 <label for="Jazz">Jazz</label>
                             </div>
                             <div>
-                                <input value="Clásica" type="checkbox" id="Clásica" name="musicFav" <%=user.musicFav?.includes("Clásica") && "checked" %>>
+                                <input value="Clásica" type="checkbox" id="Clásica" name="musicFav"
+                                    <%=user.musicFav?.includes("Clásica") && "checked" %>>
                                 <label for="Clásica">Música Clásica</label>
                             </div>
                             <div>
-                                <input value="Pop" type="checkbox" id="Pop" name="musicFav" <%=user.musicFav?.includes("Pop") && "checked" %>>
+                                <input value="Pop" type="checkbox" id="Pop" name="musicFav"
+                                    <%=user.musicFav?.includes("Pop") && "checked" %>>
                                 <label for="Pop">Pop</label>
                             </div>
                             <div>
-                                <input value="Electrónica" type="checkbox" id="Electrónica" name="musicFav" <%=user.musicFav?.includes("Electrónica") && "checked" %>>
+                                <input value="Electrónica" type="checkbox" id="Electrónica" name="musicFav"
+                                    <%=user.musicFav?.includes("Electrónica") && "checked" %>>
                                 <label for="Electrónica">Electrónica</label>
                             </div>
                             <div>
-                                <input value="Folklore" type="checkbox" id="Folklore" name="musicFav" <%=user.musicFav?.includes("Folklore") && "checked" %>>
+                                <input value="Folklore" type="checkbox" id="Folklore" name="musicFav"
+                                    <%=user.musicFav?.includes("Folklore") && "checked" %>>
                                 <label for="Folklore">Folklore</label>
                             </div>
                             <div>
-                                <input value="Tango" type="checkbox" id="Tango" name="musicFav" <%=user.musicFav?.includes("Tango") && "checked" %>>
+                                <input value="Tango" type="checkbox" id="Tango" name="musicFav"
+                                    <%=user.musicFav?.includes("Tango") && "checked" %>>
                                 <label for="Tango">Tango</label>
                             </div>
                             <div>
-                                <input value="Reguetón" type="checkbox" id="Reguetón" name="musicFav" <%=user.musicFav?.includes("Reguetón") && "checked" %>>
+                                <input value="Reguetón" type="checkbox" id="Reguetón" name="musicFav"
+                                    <%=user.musicFav?.includes("Reguetón") && "checked" %>>
                                 <label for="Reguetón">Reguetón</label>
                             </div>
                             <div>
-                                <input value="Reggae" type="checkbox" id="Reggae" name="musicFav" <%=user.musicFav?.includes("Reggae") && "checked" %>>
+                                <input value="Reggae" type="checkbox" id="Reggae" name="musicFav"
+                                    <%=user.musicFav?.includes("Reggae") && "checked" %>>
                                 <label for="Reggae">Reggae</label>
                             </div>
                             <div>
-                                <input value="Punk" type="checkbox" id="Punk" name="musicFav" <%=user.musicFav?.includes("Punk") && "checked" %>>
+                                <input value="Punk" type="checkbox" id="Punk" name="musicFav"
+                                    <%=user.musicFav?.includes("Punk") && "checked" %>>
                                 <label for="Punk">Punk</label>
                             </div>
                             <div>
-                                <input value="Otro" type="checkbox" id="Otro" name="musicFav" <%=user.musicFav?.includes("Otro") && "checked" %>>
+                                <input value="Otro" type="checkbox" id="Otro" name="musicFav"
+                                    <%=user.musicFav?.includes("Otro") && "checked" %>>
                                 <label for="Otro">Otro</label>
                             </div>
                         </div>
-
+    
                         <div class="profile_main_form_div4">
                             <h5>Domicilio</h5>
                             <hr>
                             <div>
-                                
+    
                                 <label for="province">Selecciona tu provincia</label>
                                 <select name="province" id="province" class="profile_controls">
                                     <option value="" disabled>Selecciona tu provincia</option>
-                                    <option value="Buenos Aires" <%=user.locations[0].province ==="Buenos Aires" && "selected" %>>Buenos Aires</option>
-                                    <option value="Corrientes" <%=user.locations[0].province ==="Corrientes" && "selected" %>>Corrientes</option>
-                                    <option value="Entre Ríos" <%=user.locations[0].province ==="Entre Ríos" && "selected" %>>Entre Ríos</option>
-                                    <option value="Misiones" <%=user.locations[0].province ==="Misiones" && "selected" %>>Misiones</option>
-                                    <option value="Santa Fé" <%=user.locations[0].province ==="Santa Fé" && "selected" %>>Santa Fé</option>
-                                    <option value="Tucuman" <%=user.locations[0].province ==="Tucuman" && "selected" %>>Tucumán</option>
-                                    <option value="Mendoza" <%=user.locations[0].province ==="Mendoza" && "selected" %>>Mendoza</option>
-                                    <option value="Jujuy" <%=user.locations[0].province ==="Jujuy" && "selected" %>>Jujuy</option>
-                                    <option value="Catamarca" <%=user.locations[0].province ==="Catamarca" && "selected" %>>Catamarca</option>
-                                    <option value="Chaco" <%=user.locations[0].province ==="Chaco" && "selected" %>>Chaco</option>
-                                    <option value="La Rioja" <%=user.locations[0].province ==="La Rioja" && "selected" %>>La Rioja</option>
-                                    <option value="San Luis" <%=user.locations[0].province ==="San Luis" && "selected" %>>San Luis</option>
-                                    <option value="San Juan" <%=user.locations[0].province ==="San Juan" && "selected" %>>San Juan</option>
-                                    <option value="Córdoba" <%=user.locations[0].province ==="Córdoba" && "selected" %>>Córdoba</option>
-                                    <option value="Neuquén" <%=user.locations[0].province ==="Neuquén" && "selected" %>>Neuquén</option>
-                                    <option value="Chubut" <%=user.locations[0].province ==="Chubut" && "selected" %>>Chubut</option>
-                                    <option value="Tucumán" <%=user.locations[0].province ==="Tucumán" && "selected" %>>Tucumán</option>
-                                    <option value="Santa Cruz" <%=user.locations[0].province ==="Santa Cruz" && "selected" %>>Santa Cruz</option>
-                                    <option value="Tierra del Fuego" <%=user.locations[0].province ==="Tierra del Fuego" && "selected" %>>Tierra del Fuego</option>
-                                    <option value="Río Negro" <%=user.locations[0].province ==="Río Negro" && "selected" %>>Río Negro</option>
-                                    <option value="Salta" <%=user.locations[0].province ==="Salta" && "selected" %>>Salta</option>
-                                    <option value="Santiago del Estero" <%=user.locations[0].province ==="Santiago del Estero" && "selected" %>>Santiago del Estero</option>
-                                    <option value="La Pampa" <%=user.locations[0].province ==="La Pampa" && "selected" %>>La Pampa</option>
+                                    <option value="Buenos Aires" <%=user.locations[0].province==="Buenos Aires"
+                                        && "selected" %>>Buenos Aires</option>
+                                    <option value="Corrientes" <%=user.locations[0].province==="Corrientes" && "selected" %>
+                                        >Corrientes</option>
+                                    <option value="Entre Ríos" <%=user.locations[0].province==="Entre Ríos" && "selected" %>
+                                        >Entre Ríos</option>
+                                    <option value="Misiones" <%=user.locations[0].province==="Misiones" && "selected" %>
+                                        >Misiones</option>
+                                    <option value="Santa Fé" <%=user.locations[0].province==="Santa Fé" && "selected" %>
+                                        >Santa Fé</option>
+                                    <option value="Tucuman" <%=user.locations[0].province==="Tucuman" && "selected" %>
+                                        >Tucumán</option>
+                                    <option value="Mendoza" <%=user.locations[0].province==="Mendoza" && "selected" %>
+                                        >Mendoza</option>
+                                    <option value="Jujuy" <%=user.locations[0].province==="Jujuy" && "selected" %>>Jujuy
+                                    </option>
+                                    <option value="Catamarca" <%=user.locations[0].province==="Catamarca" && "selected" %>
+                                        >Catamarca</option>
+                                    <option value="Chaco" <%=user.locations[0].province==="Chaco" && "selected" %>>Chaco
+                                    </option>
+                                    <option value="La Rioja" <%=user.locations[0].province==="La Rioja" && "selected" %>>La
+                                        Rioja</option>
+                                    <option value="San Luis" <%=user.locations[0].province==="San Luis" && "selected" %>>San
+                                        Luis</option>
+                                    <option value="San Juan" <%=user.locations[0].province==="San Juan" && "selected" %>>San
+                                        Juan</option>
+                                    <option value="Córdoba" <%=user.locations[0].province==="Córdoba" && "selected" %>
+                                        >Córdoba</option>
+                                    <option value="Neuquén" <%=user.locations[0].province==="Neuquén" && "selected" %>
+                                        >Neuquén</option>
+                                    <option value="Chubut" <%=user.locations[0].province==="Chubut" && "selected" %>>Chubut
+                                    </option>
+                                    <option value="Tucumán" <%=user.locations[0].province==="Tucumán" && "selected" %>
+                                        >Tucumán</option>
+                                    <option value="Santa Cruz" <%=user.locations[0].province==="Santa Cruz" && "selected" %>
+                                        >Santa Cruz</option>
+                                    <option value="Tierra del Fuego" <%=user.locations[0].province==="Tierra del Fuego"
+                                        && "selected" %>>Tierra del Fuego</option>
+                                    <option value="Río Negro" <%=user.locations[0].province==="Río Negro" && "selected" %>
+                                        >Río Negro</option>
+                                    <option value="Salta" <%=user.locations[0].province==="Salta" && "selected" %>>Salta
+                                    </option>
+                                    <option value="Santiago del Estero"
+                                        <%=user.locations[0].province==="Santiago del Estero" && "selected" %>>Santiago del
+                                        Estero</option>
+                                    <option value="La Pampa" <%=user.locations[0].province==="La Pampa" && "selected" %>>La
+                                        Pampa</option>
                                 </select>
-                                <p class="text-danger"><%= locals.errors && errors.province ? errors.province.msg : null %></p>
+                                <p class="text-danger">
+                                    <%= locals.errors && errors.province ? errors.province.msg : null %>
+                                </p>
                             </div>
-                            
+    
                             <div>
                                 <label for="location">Localidad</label>
-                                <input type="text" id="location" name="location" placeholder="Ej: San Miguel" class="profile_controls" 
-                                value="<%= user.locations[0].location %>">
-                                <p class="text-danger"><%= locals.errors && errors.location ? errors.location.msg : null %></p>
+                                <input type="text" id="location" name="location" placeholder="Ej: San Miguel"
+                                    class="profile_controls" value="<%= user.locations[0].location %>">
+                                <p class="text-danger">
+                                    <%= locals.errors && errors.location ? errors.location.msg : null %>
+                                </p>
                             </div>
-
+    
                             <div>
                                 <label for="street">Calle y altura</label>
-                                <input type="street" id="street" name="street" placeholder="Ej: Calle 123" class="profile_controls"
-                                value="<%= user.locations[0].street %>">
+                                <input type="street" id="street" name="street" placeholder="Ej: Calle 123"
+                                    class="profile_controls" value="<%= user.locations[0].street %>">
                             </div>
-
-                            <div>
-                                <label for="biography">Acerca de mí</label>
-                                <textarea name="biography" id="biography" cols="30" rows="5" class="profile_controls_textarea">
-                                    <%= user.biography %></textarea>
-                            </div>
-
-                            <div>
-                                <button type="button" class="profile_main_form_button"><a href="/">Cancelar</a></button>
-                                <button type="submit" class="profile_main_form_button" style="cursor:pointer ;">Guardar cambios</button>
-                            </div>
+    
                         </div>
-                    </form>
+                        
+                    </section>
 
-                </section>
+                    <div class="profile_main_form_button-div">
+                        <button type="button" class="profile_main_form_button"><a href="/">Cancelar</a></button>
+                        <button type="submit" class="profile_main_form_button" style="cursor:pointer ;">Guardar
+                            cambios</button>
+                    </div>
+                    
+                </form>
 
             </main>
-            <!-- copie y pegue el footer y se soluciono -->
+
             <%- include('../partials/footer') %>
     </body>
 

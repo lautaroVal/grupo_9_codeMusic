@@ -5,14 +5,14 @@ module.exports = [
     .notEmpty().withMessage("Debe ingresar un nombre.").bail()
     .isLength({min: 3}).withMessage('Debe contener 3 caracteres como mínimo.').bail()
     .isLength({max: 80}).withMessage('Debe contener 60 caracteres como máximo.'),
-    body('images')
+    /*  body('image')
     .custom((value,{req}) => {
-        if(req.files.length){
+        if(req.file){
             return true
         }else {
             return false
         }
-    }).withMessage('Debes agregar imagen del producto'),
+    }).withMessage('Debes agregar imagen del producto'),  */
     body('description')
     .notEmpty().withMessage('Debe ingresar una descripción'),
     body('price')

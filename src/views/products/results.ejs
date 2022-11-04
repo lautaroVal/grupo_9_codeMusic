@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head') %> 
-<body>
+<body class="result">
     <%- include('../partials/header') %>
-        <main>
+        <main class="result_main">
 
-            <% if (result.length > 0) { %>
+            <% if (result.length > 0 && keywords) { %>
                 <h4 class="result">Resultado de la búsqueda: <%= keywords %></h4>
             <section class="index_section_products">
             <% result.forEach(result => { %>
                  
                 <article class="index_product">
-                    <div class="index_product_img"><img src="<%="/img/imgProducts/" + result.images[0].name %>" alt="product"></div>
+                    <div class="index_product_img"><img src="<%="/img/imgProducts/" + result.image %>" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title"><%= result.name %></h3>
                     <div class="index_product_bottom">
@@ -21,12 +21,19 @@
                     </div>
                 </article>
             <% }) %>
-        </section>
+            </section>
         <% }else{ %>
-            <p class="result">No hay resultados 😒👨‍🦯</p>
+            <p class="result_main_p" style="height:5vh;">No hay resultados 😒👨‍🦯</p>
             <% } %>
 
         </main>
+
+        <div id="whatsapp">
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
         <%- include('../partials/footer') %> 
 
     </body>

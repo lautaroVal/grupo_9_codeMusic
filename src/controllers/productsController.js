@@ -1,10 +1,12 @@
 const db = require('../database/models');
 const { Op } = require('sequelize');
 const { loadProducts, storeProducts } = require('../data/productsModule');
-const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
 const {OFERTA,SINOFERTA} = require('../constants/products');
 
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 
 module.exports = {
 
@@ -55,6 +57,7 @@ module.exports = {
 			productId
 		})
 	},
+
 	/* CREATE */
 	productAdd: async (req, res) => {
 		try {
@@ -90,7 +93,6 @@ module.exports = {
 			//Si no hay errores crea el producto y redirecciona a products.
 			if (errors.isEmpty()) {
 				const { name, price, status, share, discount, description, brandId, colorId, categoryId } = req.body;
-
 				const product = await db.Product.create({
 					...req.body,
 					name: name.trim(),
@@ -98,16 +100,17 @@ module.exports = {
 					status: status ? status : 0,
 					share: share ? share : 12,
 					discount: +discount,
+					image: req.files.image ? req.files.image[0].filename : 'Img-default.jpg',
 					description: description.trim(),
 					brandId: +brandId,
 					colorId: +colorId,
 					categoryId: +categoryId
 				})
 				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
-				if (product) {
-					let images = req.files.map(file => {
+				if (req.files.images) {
+					let images = req.files.images.map(file => {
 						return {
-							name: file.filename,
+							file: file.filename,
 							productId: product.id
 						}
 					})
@@ -164,39 +167,41 @@ module.exports = {
 
 			const product = await db.Product.findByPk(req.params.id, {
 				include: [
-					{association: 'brand'},
-					{association: 'colors'},
-					{association: 'images'},
-					{association: 'category',attributes: {
-						exclude: ["created_at", "updated_at"],
-					}},
+					{ association: 'brand' },
+					{ association: 'colors' },
+					{ association: 'images' },
+					{
+						association: 'category', attributes: {
+							exclude: ["created_at", "updated_at"],
+						}
+					},
 				],
 			});
 
- 			return res.render('products/productEdit', {
-				title: "Edicion del Producto",
-				product,
-				brands,
-				colors,
-				categories,
-				OFERTA,
-				SINOFERTA
-			})
+			if (product) {
+				return res.render('products/productEdit', {
+					title: "Edicion del Producto",
+					product,
+					brands,
+					colors,
+					categories,
+					OFERTA,
+					SINOFERTA
+				})
+			}
+
 		} catch (error) {
 			console.log(error);
 		}
 	},
 
 	update: async (req, res) => {
-
- 		try {
-	 const { name,images,price,share,discount,description,brandId,categoryId, colorId, status } = req.body;
-	 return res.send(req.body)
-
-			const producstModify = await db.Product.update({
-				...product,
+		try {
+			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
+			await db.Product.update({
+				...req.body,
 				name: name,
-				images,
+				image: req.files.image ? req.files.image[0].filename : image,
 				price: +price,
 				share: +share,
 				discount: +discount,
@@ -205,38 +210,60 @@ module.exports = {
 				categoryId,
 				colorId,
 				status
-				},
+			},
 				{
 					where: {
 						id: req.params.id
 					}
 				}
 			)
-			if (product) {
-				let images = req.files.map(file => {
-					return {
-						name: file.filename,
-						productId: product.id
-					}
+			if (req.files.images) {                               
+				let imagesDB = await db.Image.destroy({
+					where: {
+						productId: req.params.id,
+					},
+					force: true
 				})
+				//console.log(imagesDB)
+				if (imagesDB >= 0) {
+					let images = req.files.images.map(file => {
+						return {
+							file: file.filename,
+							productId: req.params.id
+						}
+					})
+					await db.Image.bulkCreate(images)
+				}	
 
-				await db.Image.update(images)
 			}
-			if (producstModify) {
-				return res.redirect('/products/productDetail/' + req.params.id);
-			}
+			return res.redirect('/products/productDetail/' + req.params.id);
 
 		} catch (error) {
 			console.log(error);
 		}
-
 	},
 
 	destroy: async (req, res) => {
-		
-		const { id } = req.params;
-		const productDelete = await db.products.destroy(products => products.id !== +id);
-		storeProducts(productDelete);
-		return res.redirect('/products');
+		try {
+			const { id } = req.params;
+			const productDelete = await db.Product.destroy({
+				where: {
+					id: id
+				}
+			});
+			if (productDelete === 1) {
+				await db.Image.destroy({
+					where: {
+						productId: id
+					},
+					force: true
+				})
+			}
+			return res.redirect('/products')
+
+		} catch (error) {
+			console.log(error);
+		}	
 	}
+
 }

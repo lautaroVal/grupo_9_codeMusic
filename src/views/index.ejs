@@ -14,21 +14,21 @@
                 <div class="main_container">
 
                     <div class="index_medios_de_pago">
-                        <p>
-                            <img src="\img\index\mp-chicosvg1.jpg" alt="medios de pago">
-                        </p>
+                            <img src="\img\index\mp-chicosvg1.jpg" alt="medios de pago">                       
                     </div>
 
                     <h1>OFERTAS</h1>
+                    
                     <section class="index_section_products">
                         <% oferta.forEach((product,index)=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.images[0].name %>" alt="product"></div>
+                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.image %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
                                 </h3>
+                                
                                 <div class="index_product_bottom">
                                     <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
                                     <p class="index_product_envío"> Envío Gratis</p>
@@ -155,7 +155,7 @@
 
                             <article class="index_product">
                                 <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.images[0].name %>" alt="product"></div>
+                                        product.image %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -183,7 +183,7 @@
 
                             <article class="index_product">
                                 <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.images[0].name %>" alt="product"></div>
+                                        product.image %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -210,7 +210,7 @@
 
                             <article class="index_product">
                                 <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.images[0].name %>" alt="product"></div>
+                                        product.image %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -236,7 +236,7 @@
 
                             <article class="index_product">
                                 <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.images[0].name %>" alt="product"></div>
+                                        product.image %>" alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -261,7 +261,7 @@
                         <% deVientos.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.images[0].name %>"
+                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.image %>"
                                         alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
@@ -283,7 +283,7 @@
             </main>
 
             <div id="whatsapp">
-                <a href="#">
+                <a href="https://www.whatsapp.com/" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>

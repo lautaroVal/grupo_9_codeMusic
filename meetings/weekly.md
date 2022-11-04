@@ -34,3 +34,16 @@
 
 # Qué va a hacer hoy.
 ### Terminar algunos detalles del sprint 5 y motivarnos con el siguiente sprint para no atrasarnos y poder entregar a tiempo.
+
+---
+
+### SPRINT 6
+
+# Qué hizo ayer.
+### Se requirio la ayuda del profesor con los detalles ya que nos encontramos con inconvenientes para realizar la entrega del sprint 6.
+
+# Si se encontró con algún impedimento.
+### Nos encontramos con impedimentos personales, tecnicos(update,profile,seeders etc...), de tiempo, eso demoro la entrega del sprint y tuvimos que recurrir a ayuda de un profesor en varias ocaciones para poder seguir avanzando.
+
+# Qué va a hacer hoy.
+### Terminar algunos detalles del sprint 6 y motivarnos con el siguiente sprint para no atrasarnos y poder entregar a tiempo.

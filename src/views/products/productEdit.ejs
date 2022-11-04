@@ -2,10 +2,10 @@
 <html lang="en">
 <%- include('../partials/head') %>
 
-    <body class="editAdd">
+    <body class="body_edit">
         <%- include('../partials/header') %>
             <main class="main_formulario">
-                <h4>Editar producto: <%= product.name %>
+                <h4 class="edit_titulo">Editar producto: <%= product.name %>
                 </h4>
 
                 <form class="main_formulario_contenedor" action="/products/productEdit/<%= product.id %>?_method=PUT"
@@ -16,15 +16,10 @@
                         <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica"
                             value="<%= product.name %>">
                     </div>
-                    
                     <div>
                         <label for="imagen">Imagen principal</label>
-                        <input type="file" name="images" id="imagen" accept="image/*" value="<%= product.images[0].name %>"/><br/><br/>
-                    </div>
-
-                    
-                    <h5><%= product.images[0].name %> </h5> 
-                    
+                        <input type="file" name="image" id="imagen" accept="image/*" value="<%= product.image %>"/><br/><br/>
+                    </div>                   
 
                     <div>
                         <label for="imagen">Imágenes secundarias</label>

@@ -78,7 +78,7 @@
               </div>
 
               <div class="register_div">
-                <label class="register_label" for="terminos">Acepto <a href="#">términos y condiciones</a></label>
+                <label class="register_label" for="terminos">Acepto <a href="#" style="color: blue;">términos y condiciones</a></label>
                 <input  type="checkbox" id="terminos" name="terminos">
                 <% if (locals.errors && errors.terminos) { %>
                     <p class="register_errors">
@@ -88,10 +88,10 @@
               </div>
             
               <div class="register_div">
-                  <button type="submit" style="cursor: pointer;">Crear cuenta</button>
+                  <button type="submit" >Crear cuenta</button>
               </div> 
               <div class="register_p_a">
-                <p> ¿Ya tenés cuenta? <a href="/users/login">Iniciá sesión</a></p>
+                <p> ¿Ya tenés cuenta? <a href="/users/login" style="color: blue;">Iniciá sesión</a></p>
               </div>
               
           </form>

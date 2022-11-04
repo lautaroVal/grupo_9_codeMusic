@@ -9,8 +9,7 @@
             <% products.forEach(product => { %>
                  
                 <article class="index_product">
-                    <div class="index_product_img"><img src="/img/imgProducts/<%=product.images[0].name%>" alt="product"></div>
-                    <!-- <div class="index_product_img"><img src="/img/imgProducts/<%= product.image%>" alt="product"></div> -->
+                    <div class="index_product_img"><img src="/img/imgProducts/<%= product.image%>" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title"><%= product.name %>  </h3>
                     <div class="index_product_bottom">
@@ -24,6 +23,13 @@
         </section>
 
         </main>
+
+        <div id="whatsapp">
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
         <%- include('../partials/footer') %> 
 
     </body>
