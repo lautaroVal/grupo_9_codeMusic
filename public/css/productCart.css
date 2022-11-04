@@ -1,51 +1,66 @@
-h1 {
+.productCart_main {
+   margin: auto;
+   width: 95vw;
+}
+
+h1.productCart_main-h1 {
    text-align: center;
    padding: 10px;
    margin: 0px;
    margin-top: 10px;
 }
 
-.productCart_main_menu {
-   list-style: none;
+.productCart_section_contenedor {
    display: flex;
-   justify-content: space-evenly;
-   font-size: 15px;
-   padding: 0px;
+   flex-direction: column;
+   padding: 3vw;
+   gap: 10px;
 }
-
 
 /* Main productos */
+.productCart_main_menu {
+   list-style: none;
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   align-content: space-evenly;
+   font-size: 15px;
+   gap: 2px;
+   margin-bottom: 15px;
+   justify-content: space-around;
+}
 
 .productCart_detalleProducto {
-   display: flex;
-   justify-content: space-evenly;
-   margin-left: 50px;
-}
-.productCart_detalleProducto_basura_img{
-   width: 40px;
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   align-content: space-evenly;
+   align-items: center;
+   margin-bottom: 30px;
+   gap: 2px;
+   padding-bottom: 10px;
+   border-bottom: 0.3px solid rgba(128, 128, 128, 0.562);
+   justify-content: space-around;
 }
 
-.boton {
-   background-color: white;
-   border: 1px solid black;
-   font-size: 20px;
-   padding: 0px 20px;
+.productCart_detalleProducto div {
+   display: flex;
+}
+
+.item1 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 /* Main productos bateria */
-
-.productCart_detalleProducto_imagenbateria {
-   width: 150px;
-   height: 120px;
-   display: flex;
+.productCart_detalleProducto_nombreProducto_bateria {
+   font-size: 13px;
+   margin-bottom: 10px;
 }
 
-.productCart_detalleProducto_nombreProducto_bateria {
-
-   margin-top: 30px;
-   font-size: 13px;
-   margin-right: 20px;
-   margin-bottom: 30px;
+.productCart_detalleProducto_imagenbateria {
+   width: 5em;
+   /* height: 120px; */
+   margin: 0;
 }
 
 .productCart_detalleProducto_botonbateria {
@@ -55,14 +70,25 @@ h1 {
    margin-top: 30px;
 }
 
+.productCart_detalleProducto_basura_img{
+   width: 25px;
+   margin: 0;
+}
+
+.boton {
+   background-color: white;
+   border: 1px solid black;
+   font-size: 20px;
+   padding: 0px 20px;
+}
+
+
 .productCart_detalleProducto_ {
    display: flex;
    justify-content: space-evenly;
 }
 
 .productCart_detalleProducto_precioBateria {
-   padding-right: 30px;
-   padding-top: 35px;
    font-style: bold;
 }
 
@@ -146,4 +172,18 @@ h1 {
    font-weight: bold;
    margin-bottom: 20px;
    font-size: 20px;
+}
+
+@media (min-width: 768px){
+
+   .productCart_detalleProducto_imagenbateria {
+      width: 8em;
+   }
+
+}
+
+
+@media (min-width: 1024){
+
+
 }
