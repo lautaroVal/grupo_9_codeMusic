@@ -28,6 +28,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(express.json());
+
 app.use(session({
   secret: 'Code Music secret',
   resave: false,
@@ -61,7 +62,6 @@ app.use(function(err, req, res, next) {
   
   app.listen(port, () => console.log('server running in http://localhost:' + port));
 
-
   
 /* app.use('/*', (req, res, next) => {
     try {
@@ -71,12 +71,4 @@ app.use(function(err, req, res, next) {
     }
 }); */
 
-
-/* app.use('/', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'index.html')));
-app.use('/productDetail', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')));
-app.use('/productCart', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')));
-app.use('/register', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'register.html')));
-app.use('/login', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'login.html'))); */
-
-/* Recuerden cuando bajan todo hacer el "npm i express" */
 
