@@ -1,4 +1,4 @@
-const db = require('../database/models');
+const db = require('../../database/models');
 const bcryptjs = require('bcryptjs');
 const { Association } = require('sequelize');
 const { ROL_ADMIN, ROL_USER } = require('../../constants/users')
