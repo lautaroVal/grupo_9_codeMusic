@@ -20,7 +20,7 @@ app.use(express.json());
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
-const userApis = require('./routes/userApis');
+const userApis = require('./routes/usersApis');
 const productsApis = require('./routes/productsApis');
 
 

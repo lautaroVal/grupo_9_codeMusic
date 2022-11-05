@@ -1,10 +1,10 @@
 const { Router } = require('express');
 const express = require('express');
-const userApis = require('../controllers/Apis/userApis');
+const usersApis = require('../controllers/Apis/usersApis');
 const router = express.Router();
 
 router
-    .get('/', userApis.list )
-    .get('/:id', userApis.profile)
+    .get('/', usersApis.list )
+    .get('/:id', usersApis.profile)
     
-module.exports = (router)
+module.exports = router
