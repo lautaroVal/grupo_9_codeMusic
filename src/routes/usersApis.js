@@ -1,4 +1,3 @@
-const { Router } = require('express');
 const express = require('express');
 const userApis = require('../controllers/Apis/userApis');
 const router = express.Router();

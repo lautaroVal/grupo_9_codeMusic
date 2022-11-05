@@ -1,8 +1,7 @@
-const db = require('../database/models');
+const db = require('../../database/models');
 const { Op } = require('sequelize');
-const { loadProducts, storeProducts } = require('../data/productsModule');
 const { validationResult } = require('express-validator');
-const {OFERTA,SINOFERTA} = require('../constants/products');
+const {OFERTA,SINOFERTA} = require('../../constants/products');
 
 module.exports = {
 
