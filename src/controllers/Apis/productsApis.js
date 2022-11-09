@@ -1,6 +1,5 @@
 const db = require('../../database/models');
 const { Op } = require('sequelize');
-const { validationResult } = require('express-validator');
 const {OFERTA,SINOFERTA} = require('../../constants/products');
 
 module.exports = {
