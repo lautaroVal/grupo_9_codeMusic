@@ -2,6 +2,7 @@ const db = require('../../database/models');
 const { Op } = require('sequelize');
 const { OFERTA, SINOFERTA } = require('../../constants/products');
 
+
 module.exports = {
 
 	list: async (req, res) => {

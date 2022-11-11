@@ -178,6 +178,8 @@ module.exports = {
 				],
 			});
 
+			
+
 			if (product) {
 				return res.render('products/productEdit', {
 					title: "Edicion del Producto",
@@ -266,4 +268,5 @@ module.exports = {
 		}	
 	}
 
+	
 }
