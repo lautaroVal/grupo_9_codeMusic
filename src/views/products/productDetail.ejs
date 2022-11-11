@@ -19,13 +19,14 @@
                         <article class="productDetail_main_section_top_izq_fto1">
                             <!-- Hacer el foreach de las imagenes para que no rompa -->
                             <% if (product.images.length) { %>
-                                <img src="/img/imgProducts/<%=product.images[0].file%>" alt="foto1">
-                                <% } %>
+                                <% product.images.forEach(image => { %>
+
                         </article>
                         <article class="productDetail_main_section_top_izq_fto2">
-                            <% if (product.images.length) { %>
-                                <img src="/img/imgProducts/<%=product.images[1].file%>" alt="foto1">
-                                <% } %>
+                            <img src="/img/imgProducts/<%=image.file%>" alt="foto1">
+                            <img src="/img/imgProducts/<%=image.file%>" alt="foto1">
+                            <% }) %>
+                            <% } %>
                         </article>
                     </aside>
 
@@ -57,12 +58,14 @@
                             </div>
                                 <div>
                                     <% if (product.images.length) { %>
-                                        <img src="/img/imgProducts/<%=product.images[0].file%>" alt="art1">
-                                        <% } %>
+                                        <% product.images.forEach((image, i) => { %>                                   
+                                           <img src="/img/imgProducts/<%=image.file%>" alt="art1">
                                 </div>
-                                <div class="productDetail_main_section_top_derech_colores_art2"> <% if (product.images.length) { %>
-                                    <img src="/img/imgProducts/<%=product.images[1].file%>" alt="art2">
-                                    <% } %>
+                                <div class="productDetail_main_section_top_derech_colores_art2">
+                                    <img src="/img/imgProducts/<%=image.file%>" alt="art2">
+                                    <% }) %>
+                                        <% } %>
+                                    
                                 </div>
                         </div>
                         <div class="productDetail_main_section_top_derech_stock">
