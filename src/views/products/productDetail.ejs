@@ -22,7 +22,7 @@
                                 <img src="/img/imgProducts/<%=product.images[0].file%>" alt="foto1">
                                 <% } %>
                         </article>
-                        <article class="productDetail_main_section_top_izq_fto2">
+                        <article class="productDetail_main_section_top_izq_fto1">
                             <% if (product.images.length) { %>
                                 <img src="/img/imgProducts/<%=product.images[1].file%>" alt="foto1">
                                 <% } %>
@@ -31,12 +31,13 @@
 
 
                     <article class="productDetail_main_section_top_centr">
+                        <h2 class="productDetail_name1"><%= product.name %> </h2>
                         <img src="/img/imgProducts/<%=product.image%>" alt="centro">
                     </article>
 
                     <aside class="productDetail_main_section_top_derech">
                         <div class="productDetail_main_section_top_derech_title">
-                            <h2><%= product.name %> </h2>
+                            <h2 class="productDetail_name2"><%= product.name %> </h2>
                             <div class="productDetail_main_section_top_centr_h5">
                                 <h5> <%= product.description %></h5>
                             </div>
