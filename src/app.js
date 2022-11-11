@@ -44,7 +44,6 @@ app.use(localsUserCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-
 app.use('/api/users', userApis);
 app.use('/api/products', productsApis)
 

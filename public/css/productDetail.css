@@ -403,9 +403,11 @@
     .productDetail_main_section_top_izq {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+/*         justify-content: space-evenly;
+ */     
         align-items: center;
         width: 10%;
+        gap: 200px;
     }
 
     .productDetail_main_section_top_izq article {
@@ -424,9 +426,9 @@
 
     .productDetail_main_section_top_izq article img {
         width:100%;
-        position: absolute;
+        /* position: absolute;
         left: 5px;
-        top: 5px;
+        top: 5px; */
         border-radius: 10px;
         overflow: hidden;
         object-fit: contain;
