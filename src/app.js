@@ -20,6 +20,9 @@ app.use(express.json());
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+const userApis = require('./routes/APIs/usersApis');
+const productsApis = require('./routes/APIs/productsApis');
+
 
 app.use(cookieParse());
 app.set('views', path.join(__dirname, 'views'));
@@ -41,6 +44,9 @@ app.use(localsUserCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+
+app.use('/api/users', userApis);
+app.use('/api/products', productsApis)
 
 
 app.use(function(req, res, next) {
@@ -70,13 +76,4 @@ app.use(function(err, req, res, next) {
         res.send(error)
     }
 }); */
-
-
-/* app.use('/', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'index.html')));
-app.use('/productDetail', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')));
-app.use('/productCart', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')));
-app.use('/register', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'register.html')));
-app.use('/login', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'login.html'))); */
-
-/* Recuerden cuando bajan todo hacer el "npm i express" */
 

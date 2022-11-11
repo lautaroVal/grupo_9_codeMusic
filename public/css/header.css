@@ -4,6 +4,33 @@
     color: var(--ColorGris);
 }
 
+.productDetail_header_sign {
+    background-color: rgba(167, 167, 167, 0.7);
+    color: #551A8B;
+    font-weight:100;
+    font-size: 15px;
+}
+
+.productDetail_header_sign span {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 37ch;
+    animation: typing 4s steps(37) infinite, blink 5s infinite step-end alternate;
+    overflow: hidden;
+    
+}
+
+@keyframes typing {
+    from {width: 0}
+}
+
+@keyframes blink {
+    50% { border-color: transparent}
+}
+
 .productDetail_header_container {
     margin-bottom: 15px;
 }

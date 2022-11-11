@@ -168,7 +168,7 @@ module.exports = {
 			const product = await db.Product.findByPk(req.params.id, {
 				include: [
 					{ association: 'brand' },
-					{ association: 'colors' },
+					{ association: 'color' },
 					{ association: 'images' },
 					{
 						association: 'category', attributes: {
@@ -177,6 +177,8 @@ module.exports = {
 					},
 				],
 			});
+
+			
 
 			if (product) {
 				return res.render('products/productEdit', {
@@ -266,4 +268,5 @@ module.exports = {
 		}	
 	}
 
+	
 }
