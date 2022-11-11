@@ -63,7 +63,7 @@
                             <select name="colorId" id="color">
                                 <option value="" disabled>Elegí un color</option>
                                 <% colors.forEach(color => { %>
-                                    <option value="<%= color.id %>" <%=product.colors.name === color.name && "selected"%>> <%= color.name%></option>
+                                    <option value="<%= color.id %>" <%=product.color.name === color.name && "selected"%>> <%= color.name%></option>
                                 <% }) %>
     
                             </select>

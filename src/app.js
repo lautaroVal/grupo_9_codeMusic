@@ -20,8 +20,8 @@ app.use(express.json());
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
-const userApis = require('./routes/usersApis');
-const productsApis = require('./routes/productsApis');
+const userApis = require('./routes/APIs/usersApis');
+const productsApis = require('./routes/APIs/productsApis');
 
 
 app.use(cookieParse());
@@ -44,6 +44,7 @@ app.use(localsUserCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+
 app.use('/api/users', userApis);
 app.use('/api/products', productsApis)
 
