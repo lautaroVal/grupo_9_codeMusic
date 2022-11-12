@@ -62,8 +62,9 @@
                             <label for="color" class="form-label">Elige un color:</label>
                             <select name="colorId" id="color">
                                 <option value="" disabled>Elegí un color</option>
+                                
                                 <% colors.forEach(color => { %>
-                                    <option value="<%= color.id %>" <%=product.color.name === color.name && "selected"%>> <%= color.name%></option>
+                                    <option value="<%= color.id %>" <%=product.color && product.color.name === color.name ? "selected": null%>> <%= color.name%></option>
                                 <% }) %>
     
                             </select>

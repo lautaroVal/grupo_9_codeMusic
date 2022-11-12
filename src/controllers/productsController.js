@@ -199,6 +199,8 @@ module.exports = {
 
 	update: async (req, res) => {
 		try {
+			let errors = validationResult(req);
+			if (errors.isEmpty()){
 			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
 			await db.Product.update({
 				...req.body,
@@ -240,7 +242,31 @@ module.exports = {
 			}
 			return res.redirect('/products/productDetail/' + req.params.id);
 
-		} catch (error) {
+		}else{
+			const brands = await db.Brand.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			const colors = await db.Color.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			const categories = await db.Category.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			return res.redirect('/products/productDetail/' + req.params.id);
+
+			
+			/* return res.render('/products/productEdit/', {
+				title: "editar producto",
+				brands,
+				colors,
+				categories,
+				errors: errors.mapped(),
+				old: req.body
+			}) */
+		}}catch (error) {
 			console.log(error);
 		}
 	},
