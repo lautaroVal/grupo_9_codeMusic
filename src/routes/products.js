@@ -26,7 +26,7 @@ router
         /* Formulario de edición de productos */
         .get('/edit/:id',adminUserCheck, productEdit)
         /* Acción de edición (a donde se envía el formulario): */
-        .put('/productEdit/:id', uploadImageProduct.fields([ {name:'image'}, {name:'images'}]),editValidator, update)
+        .put('/edit/:id', uploadImageProduct.fields([ {name:'image'}, {name:'images'}]),editValidator, update)
 
         /* Acción de borrado */
         .delete('/delete/:id', destroy)

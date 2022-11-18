@@ -8,95 +8,132 @@
                 <h4 class="edit_titulo">Editar producto: <%= product.name %>
                 </h4>
 
-                <form class="main_formulario_contenedor" action="/products/productEdit/<%= product.id %>?_method=PUT"
+                <form class="main_formulario_contenedor" action="/products/edit/<%= product.id %>?_method=PUT"
                     method="POST" enctype="multipart/form-data">
 
                     <div>
                         <label for="name">Nombre del producto</label>
                         <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica"
                             value="<%= product.name %>">
-                            <% if (locals.errors && errors.name) { %>
-                                <p class="register_errors">
-                                    <%= errors.name.msg %>
-                                </p>
-                                <% } %>
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="register_errors">
+                                <%= errors.name.msg %>
+                            </p>
+                            <% } %>
                     </div>
                     <div>
                         <label for="imagen">Imagen principal</label>
-                        <input type="file" name="image" id="imagen" accept="image/*" value="<%= product.image %>"/><br/><br/>
-                    </div>                   
+                        <input type="file" name="image" id="imagen" accept="image/*"
+                            value="<%= product.image %>" /><br /><br />
+                    </div>
 
                     <div>
                         <label for="imagen">Imágenes secundarias</label>
-                        <input type="file" name="images" id="imagen" accept="image/*" multiple /><br/><br/>
+                        <input type="file" name="images" id="imagen" accept="image/*" multiple /><br /><br />
                     </div>
 
                     <div>
                         <label for="precio">Precio</label>
                         <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000"
                             value="<%= product.price %>">
+                        <% if (locals.errors && errors.price) { %>
+                            <p class="register_errors">
+                                <%= errors.price.msg %>
+                            </p>
+                            <% } %>
                     </div>
 
                     <div>
                         <label for="share">Cuotas</label>
-                        <input type="number" id="share" name="share" value="<%= product.share %>"/>
+                        <input type="number" id="share" name="share" value="<%= product.share %>" />
                     </div>
 
 
                     <div>
                         <label for="discount">Descuento</label>
-                        <input type="number" id="discount" name="discount" value="<%= product.discount %>"/>
+                        <input type="number" id="discount" name="discount" value="<%= product.discount %>" />
                     </div>
 
                     <div>
                         <label for="description">Descripción</label>
                         <textarea name="description" id="description" cols="50"
                             rows="10"><%= product.description %></textarea>
+                        <% if (locals.errors && errors.description) { %>
+                            <p class="register_errors">
+                                <%= errors.description.msg %>
+                            </p>
+                            <% } %>
                     </div>
 
                     <div>
                         <label for="brand" class="form-label">Elige una marca:</label>
                         <select name="brandId" id="brand">
                             <option value="" disabled>Elegí una marca</option>
-                            <% brands.forEach(brand => { %>
-                                <option value="<%= brand.id %>" <%=product.brand.name === brand.name && "selected"%>> <%=brand.name%></option>
-                            <% }) %>
+                            <% brands.forEach(brand=> { %>
+                                <option value="<%= brand.id %>" <%=product.brand.name===brand.name && "selected" %>>
+                                    <%=brand.name%>
+                                </option>
+                                <% }) %>
+                                    <% if (locals.errors && errors.brandId) { %>
+                                        <p class="register_errors">
+                                            <%= errors.brandId.msg %>
+                                        </p>
+                                        <% } %>
                         </select>
 
                         <div>
                             <label for="color" class="form-label">Elige un color:</label>
                             <select name="colorId" id="color">
                                 <option value="" disabled>Elegí un color</option>
-                                
-                                <% colors.forEach(color => { %>
-                                    <option value="<%= color.id %>" <%=product.color && product.color.name === color.name ? "selected": null%>> <%= color.name%></option>
-                                <% }) %>
-    
+
+                                <% colors.forEach(color=> { %>
+                                    <option value="<%= color.id %>" <%=product.color && product.color.name===color.name
+                                        ? "selected" : null%>> <%= color.name%>
+                                    </option>
+                                    <% }) %>
+                                        <% if (locals.errors && errors.colorId) { %>
+                                            <p class="register_errors">
+                                                <%= errors.colorId.msg %>
+                                            </p>
+                                            <% } %>
+
                             </select>
                         </div>
 
-                    <div>
-                        <label for="category" class="form-label">Elige una categoria:</label>
-                        <select name="categoryId" id="category">
-                            <option value="" disabled>Elegí una categoría</option>
-                            <% categories.forEach(category => { %>
-                                <option value="<%= category.id %>" <%=product.category.name === category.name && "selected"%>> <%= category.name%></option>
-                            <% }) %>
-                        </select>
-                    </div>
+                        <div>
+                            <label for="category" class="form-label">Elige una categoria:</label>
+                            <select name="categoryId" id="category">
+                                <option value="" disabled>Elegí una categoría</option>
+                                <% categories.forEach(category=> { %>
+                                    <option value="<%= category.id %>" <%=product.category.name===category.name
+                                        && "selected" %>> <%= category.name%>
+                                    </option>
+                                    <% }) %>
+                                        <% if (locals.errors && errors.categoryId) { %>
+                                            <p class="register_errors">
+                                                <%= errors.categoryId.msg %>
+                                            </p>
+                                            <% } %>
+                            </select>
+                        </div>
 
-                    <div>
-                        <label for="status">Oferta:</label>
-                        <input type="radio" name="status" id="status" value="<%= OFERTA%>" <%=product.status=== OFERTA
-                            && "checked" %>> En oferta
-                        <input type="radio" name="status" id="estado" value="<%= SINOFERTA%>" <%=product.status=== SINOFERTA
-                            && "checked" %>> Sin oferta
-                    </div>
+                        <div>
+                            <label for="status">Oferta:</label>
+                            <input type="radio" name="status" id="status" value="<%= OFERTA%>"
+                                <%=product.status===OFERTA && "checked" %>> En oferta
+                            <input type="radio" name="status" id="estado" value="<%= SINOFERTA%>"
+                                <%=product.status===SINOFERTA && "checked" %>> Sin oferta
+                            <% if (locals.errors && errors.status) { %>
+                                <p class="register_errors">
+                                    <%= errors.status.msg %>
+                                </p>
+                                <% } %>
+                        </div>
 
 
-                    <div class="formulario_enviar">
-                        <button type="submit">Enviar</button>
-                    </div>
+                        <div class="formulario_enviar">
+                            <button type="submit">Enviar</button>
+                        </div>
 
                 </form>
 
