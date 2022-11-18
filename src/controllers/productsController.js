@@ -7,7 +7,6 @@ const {OFERTA,SINOFERTA} = require('../constants/products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-
 module.exports = {
 
 	productsList: async (req, res) => {
@@ -182,7 +181,7 @@ module.exports = {
 
 			if (product) {
 				return res.render('products/productEdit', {
-					title: "Edicion del Producto",
+					title: "Edición del Producto",
 					product,
 					brands,
 					colors,
@@ -200,6 +199,7 @@ module.exports = {
 	update: async (req, res) => {
 		try {
 			let errors = validationResult(req);
+			//return res.send(errors)
 			if (errors.isEmpty()){
 			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
 			await db.Product.update({
@@ -255,17 +255,31 @@ module.exports = {
 				attributes: ['id', 'name'],
 				order: ['name']
 			});
-			return res.redirect('/products/productDetail/' + req.params.id);
 
-			
-			/* return res.render('/products/productEdit/', {
-				title: "editar producto",
+			const product = await db.Product.findByPk(req.params.id, {
+				include: [
+					{ association: 'brand' },
+					{ association: 'color' },
+					{ association: 'images' },
+					{
+						association: 'category', attributes: {
+							exclude: ["created_at", "updated_at"],
+						}
+					},
+				],
+			});
+	
+			 return res.render('products/productEdit', {
+				title: "Edición del Producto",
+				product,
 				brands,
 				colors,
 				categories,
+				OFERTA,
+				SINOFERTA,
 				errors: errors.mapped(),
 				old: req.body
-			}) */
+			}) 
 		}}catch (error) {
 			console.log(error);
 		}
