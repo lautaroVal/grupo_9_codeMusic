@@ -197,7 +197,6 @@ module.exports = {
 	update: async (req, res) => {
 		try {
 			let errors = validationResult(req);
-			return res.send(errors)
 			if (errors.isEmpty()){
 			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
 			await db.Product.update({
@@ -276,7 +275,6 @@ module.exports = {
 				OFERTA,
 				SINOFERTA,
 				errors: errors.mapped(),
-				old: req.body
 			}) 
 		}}catch (error) {
 			console.log(error);
