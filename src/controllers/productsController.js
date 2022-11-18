@@ -178,8 +178,6 @@ module.exports = {
 				],
 			});
 
-			
-
 			if (product) {
 				return res.render('products/productEdit', {
 					title: "Edicion del Producto",
@@ -255,17 +253,17 @@ module.exports = {
 				attributes: ['id', 'name'],
 				order: ['name']
 			});
-			return res.redirect('/products/productDetail/' + req.params.id);
-
+/* 			return res.render('/products/productDetail/' + req.params.id);
+ */
 			
-			/* return res.render('/products/productEdit/', {
+			return res.render('/products/productEdit/' + req.params.id, {
 				title: "editar producto",
 				brands,
 				colors,
 				categories,
 				errors: errors.mapped(),
 				old: req.body
-			}) */
+			}) 
 		}}catch (error) {
 			console.log(error);
 		}
