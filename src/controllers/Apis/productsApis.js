@@ -57,10 +57,33 @@ module.exports = {
 	detail: async (req, res) => {
 		try {
 			const product = await db.Product.findByPk(req.params.id, {
-				include: ['images', 'brand', 'category'],
+				include: [
+					{
+						association: 'images',
+						attributes: {
+					exclude: ['createdAt', 'updatedAt']
+				}
+					}, {
+						association: 'brand',
+						attributes: {
+					exclude: ['createdAt', 'updatedAt']
+				}
+					}, {
+						association: 'category',
+						attributes: {
+					exclude: ['createdAt', 'updatedAt']
+				}
+					}, {
+						association: 'color',
+						attributes: {
+					exclude: ['createdAt', 'updatedAt']
+				}
+					}
+				],
 				attributes: {
-					exclude: ["created_at", "updated_at"],
+					exclude: ["createdAt", "updatedAt",'deletedAt',"brandId","colorId","categoryId"],
 				},
+        
 			})
 			if (product) {
 				res.status(200).json({
@@ -74,6 +97,11 @@ module.exports = {
 
 		} catch (error) {
 			console.log(error);
-		}
+			return res.status(error.status || 500).json({
+				ok: false,
+				msg: error.message ? error.message : 'Comuníquese con el administrador del sitio'
+		})
 	}
+}
+
 }

@@ -12,6 +12,9 @@
                     <div>
                         <label for="name">Nombre del producto</label>
                         <input type="text" id="name" name="name" placeholder="Ejempo: Guitarra Electrica" />
+                        <div>
+                            <p></p>
+                        </div>
                         <% if (locals.errors && errors.name) { %>
                             <p class="register_errors">
                                 <%= errors.name.msg %>
@@ -115,6 +118,8 @@
             </main>
 
             <%- include('../partials/footer') %>
+
+            <script src="/js/productsValidator.js"></script>
     </body>
 
 </html>

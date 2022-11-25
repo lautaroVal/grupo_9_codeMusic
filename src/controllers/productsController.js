@@ -7,7 +7,6 @@ const {OFERTA,SINOFERTA} = require('../constants/products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-
 module.exports = {
 
 	productsList: async (req, res) => {
@@ -178,17 +177,16 @@ module.exports = {
 				],
 			});
 
-			
-
 			if (product) {
 				return res.render('products/productEdit', {
-					title: "Edicion del Producto",
+					title: "Edición del Producto",
 					product,
 					brands,
 					colors,
 					categories,
 					OFERTA,
-					SINOFERTA
+					SINOFERTA,
+					old: req.body
 				})
 			}
 
@@ -199,6 +197,9 @@ module.exports = {
 
 	update: async (req, res) => {
 		try {
+			let errors = validationResult(req);
+			//return res.send(errors)
+			if (errors.isEmpty()){
 			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
 			await db.Product.update({
 				...req.body,
@@ -240,7 +241,44 @@ module.exports = {
 			}
 			return res.redirect('/products/productDetail/' + req.params.id);
 
-		} catch (error) {
+		}else{
+			const brands = await db.Brand.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			const colors = await db.Color.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+			const categories = await db.Category.findAll({
+				attributes: ['id', 'name'],
+				order: ['name']
+			});
+
+			const product = await db.Product.findByPk(req.params.id, {
+				include: [
+					{ association: 'brand' },
+					{ association: 'color' },
+					{ association: 'images' },
+					{
+						association: 'category', attributes: {
+							exclude: ["created_at", "updated_at"],
+						}
+					},
+				],
+			});
+	
+			 return res.render('products/productEdit', {
+				title: "Edición del Producto",
+				product,
+				brands,
+				colors,
+				categories,
+				OFERTA,
+				SINOFERTA,
+				errors: errors.mapped(),
+			}) 
+		}}catch (error) {
 			console.log(error);
 		}
 	},

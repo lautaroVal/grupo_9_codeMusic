@@ -6,3 +6,4 @@ router
     .get('/', list)
     .get('/:id', detail)
 module.exports = router
+
