@@ -54,6 +54,44 @@
     font-size: 18px;
 }
 
+.button_img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.div_imageView2 {
+    display: flex ;
+    flex-wrap: wrap ;
+    flex-direction: row !important;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 0 !important;
+}
+
+.div_imageView2_card {
+    height: 160px;
+    width: 30%;
+}
+
+.input_img-principal {
+    display: flex;
+    align-items: center;
+}
+
+.div_imageView_card {
+    height: 160px;
+    width: 30%;
+    margin: auto;
+}
+
+#imageView,#imageView1,#imageView2,#imageView3  {
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain; 
+}
+
 .main_formulario select {
     width: 100%;
     background: var(--ColorBlanco);
@@ -94,6 +132,10 @@
     background-color: var(--ColorNegro);
     /* color: #541a8bbb; */
     cursor: pointer;
+}
+
+.validatorInput {
+    background-color: red;
 }
 
 @media (min-width: 1024px) {
