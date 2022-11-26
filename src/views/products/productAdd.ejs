@@ -38,26 +38,25 @@
             name="name"
             placeholder="Ejempo: Guitarra Electrica"
           />
-          <div hidden>
-            <p></p>
-          </div>
+          <span id="msgName"></span>
           <% if (locals.errors && errors.name) { %>
           <p class="register_errors"><%= errors.name.msg %></p>
           <% } %>
         </div>
 
         <div class="input_img-principal">
-          <label for="image1" class="btn btn-secondary py-0 fs-3 button_img"
+          <label for="image1" class="btn btn-secondary button_img"
             >Imagen principal</label
           >
           <input
             type="file"
-            class="form-control"
+            class="form-control btn-sm"
             name="image"
             id="image1"
             accept="image/*"
             hidden
           />
+          <span id="msgImg"></span>
           <% if (locals.errors && errors.images) { %>
           <p class="register_errors"><%= errors.images.msg %></p>
           <% } %>
@@ -66,9 +65,9 @@
           </div>
         </div>
 
-        <div>
-          <label for="image2" class="btn btn-secondary py-0 fs-3"
-            >Imágenes secundarias(Opcional)</label
+        <div class="input_img-secundary">  
+          <label for="image2" class="btn btn-secondary button_img"
+            >Imágenes secundarias<i>(Opcional)</i></label
           >
           <input
             type="file"
@@ -90,7 +89,6 @@
               <img src="" alt="" height="100%" id="imageView3" />
             </p>
           </div>
-          <br /><br />
         </div>
 
         <div>
@@ -102,6 +100,7 @@
             name="price"
             placeholder="Ejemplo: $50.000"
           />
+          <span id="msgPrice"></span>
           <% if (locals.errors && errors.price) { %>
           <p class="register_errors"><%= errors.price.msg %></p>
           <% } %>
@@ -115,6 +114,7 @@
             id="discount"
             name="discount"
           />
+          <span id="msgDiscount"></span>
         </div>
 
         <div>
@@ -125,6 +125,7 @@
             id="description"
             name="description"
           ></textarea>
+          <span id="msgDescription"></span>
           <% if (locals.errors && errors.description) { %>
           <p class="register_errors"><%= errors.description.msg %></p>
           <% } %>
@@ -158,24 +159,25 @@
             <option value="<%= id %>"><%= name %></option>
             <% }) %>
           </select>
+          <span id="msgCategory"></span>
           <% if (locals.errors && errors.categoryId) { %>
           <p class="register_errors"><%= errors.categoryId.msg %></p>
           <% } %>
         </div>
 
-        <div class="main_formulario_radio">
-          <div class="main_formulario_radio">
+          <div class="main_formulario_status">
             <label for="status" name="status">Oferta:</label>
-            <p>
+            <div>
+            <p class="main_formulario_status-radio">
               <input type="radio" name="status" id="status" value="1" /> En
               oferta
             </p>
-            <p>
+            <p class="main_formulario_status-radio">
               <input type="radio" name="status" id="status" value="0" />
               Sin oferta
             </p>
+            </div>
           </div>
-        </div>
 
         <div class="formulario_enviar">
           <button type="submit">Enviar</button>

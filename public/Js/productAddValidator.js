@@ -1,16 +1,99 @@
 console.log("productAdd success!");
-window.addEventListener('load', (e) => {
+window.addEventListener('load', () => {
 
-    let name = document.querySelector('#name');
-    let image2 = $('image2');
-    let image1 = $('image1');
+    msgError = (element, msg, event) => {
+        $(element).style.color = "red";
+        $(element).innerHTML = msg;
+        event.target.classList.add("is-invalid");
+    }
 
-    name.addEventListener('focus', (e) => {
-        e.target.classList.add('validatorInput');
-        console.log(e);
+    $("name").addEventListener('blur', (e) => {
+        console.log("hola mundo");
+        switch (true) {
+            case !$("name").value.trim():
+              msgError("msgName", "El nombre es requerido", e)
+              break;
+            case $("name").value.length < 7:
+              msgError("msgName", "El nombre de debe tener como mínimo 7 caracteres", e)
+              break;
+              case $("name").value.length >= 60:
+                msgError("msgName", "El nombre no debe superar los 60 caracteres", e)
+                break;
+            default:
+              $("msgName").innerHTML = null;
+              e.target.classList.remove('is-invalid')
+              break;
+          }
     })
 
-    image1.addEventListener('change', (e) => {
+    $("price").addEventListener('blur', (e) => {
+        console.log("hola mundo");
+        switch (true) {
+            case !$("price").value.trim():
+              msgError("msgPrice", "El precio es requerido", e)
+              break;
+            case +$("price").value <= 0:
+              msgError("msgPrice", "El precio no puede ser 0 o negativo", e)
+              break;
+            default:
+              $("msgPrice").innerHTML = null;
+              e.target.classList.remove('is-invalid')
+              break;
+          }
+    })
+
+    $("discount").addEventListener('blur', (e) => {
+        console.log(typeof $("discount").value);
+        switch (true) {
+            case !$("discount").value: 
+            $("msgDiscount").innerHTML = null;
+            e.target.classList.remove('is-invalid')
+            break;
+            case +$("discount").value < 0:
+              msgError("msgDiscount", "El descuento no puede ser negativo", e)
+              break;
+              case +$("discount").value > 100:
+              msgError("msgDiscount", "El descuento no puede ser mayor a 100", e)
+              break;
+            default:
+              $("msgDiscount").innerHTML = null;
+              e.target.classList.remove('is-invalid')
+              break;
+          }
+    })
+
+    $("description").addEventListener('blur', (e) => {
+        console.log("hola mundo");
+        switch (true) {
+            case !$("description").value.trim():
+              msgError("msgDescription", "La descripción es requerida", e)
+              break;
+            case $("description").value.trim().length < 20:
+              msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo", e)
+              break;
+              case $("description").value.trim().length >= 500:
+              msgError("msgDescription", "La descripción no puede superar 500 caracteres", e)
+              break;
+            default:
+              $("msgDescription").innerHTML = null;
+              e.target.classList.remove('is-invalid')
+              break;
+          }
+    })
+
+    $("category").addEventListener('blur', (e) => {
+        switch (true) {
+            case !$("category").value.trim():
+              msgError("msgCategory", "La categoria es requerida", e)
+              break;
+            default:
+              $("msgCategory").innerHTML = null;
+              e.target.classList.remove('is-invalid')
+              break;
+          }
+    })
+
+    $("image1").addEventListener('change', (e) => {
         const file = e.target.files[0]
         let reader = new FileReader();
         reader.readAsDataURL(file);
@@ -19,12 +102,9 @@ window.addEventListener('load', (e) => {
         }
     })
 
-    image2.addEventListener('change', (e) => {
+    $("image2").addEventListener('change', (e) => {
         const files = e.target.files
-        let img1 = $('imageView1');
-        let img2 = $('imageView2');
-        let img3 = $('imageView3');
-        imgs = [img1,img2,img3]
+        imgs = [$('imageView1'),$('imageView2'),$('imageView3')]
         for (const file of files) {
             let reader = new FileReader();
             reader.readAsDataURL(file);
