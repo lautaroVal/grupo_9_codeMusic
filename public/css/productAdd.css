@@ -15,7 +15,7 @@
 }
 
 .main_formulario form {
-    border: var(--ColorNegro) 1px solid;
+    border: none;
     border-radius: 20px;
     width: 50%;
     color: var(--ColorNegro);
@@ -54,6 +54,47 @@
     font-size: 18px;
 }
 
+.button_img {
+   /*  width: 70%; */
+    margin: 0 auto;
+}
+
+.input_img-principal {
+    display: flex;
+    align-items: center;
+}
+
+.div_imageView_card {
+    height: 160px;
+    width: 30%;
+    margin: auto;
+}
+
+/* .input_img-secundary {  
+} */
+
+.div_imageView2 {
+    display: flex ;
+    flex-wrap: nowrap ;
+    flex-direction: row !important;
+    gap: 12px;
+    justify-content: center;
+    /* margin-bottom: 0 !important; */
+}
+
+.div_imageView2_card {
+    height: 160px;
+    width: 30%;
+    margin: 0;
+}
+
+#imageView,#imageView1,#imageView2,#imageView3  {
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain; 
+}
+
 .main_formulario select {
     width: 100%;
     background: var(--ColorBlanco);
@@ -68,12 +109,24 @@
     resize: vertical;
 }
 
-.main_formulario_radio div{
+.main_formulario_status div {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.main_formulario_status-radio {
+    display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
+    margin: 0;
+}
+
+#status {
+    font-size: 10px;
+    width: 17px;
+    margin: 0;
 }
 
 .main_formulario button {
@@ -94,6 +147,11 @@
     background-color: var(--ColorNegro);
     /* color: #541a8bbb; */
     cursor: pointer;
+}
+
+.validatorInput {
+    color: red;
+    background-color: aqua;
 }
 
 @media (min-width: 1024px) {
