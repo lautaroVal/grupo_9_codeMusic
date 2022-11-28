@@ -26,11 +26,11 @@
 
       <form
         class="main_formulario_contenedor needs-validation"
-        enctype="multipart/form-data"
+        enctype="multipart/form-data" action="/products/productAdd" method="POST"
         novalidate
       >
         <div>
-          <label for="name">Nombre del producto</label>
+          <label for="name">Nombre del producto:</label>
           <input
             type="text"
             class="form-control"
@@ -46,7 +46,7 @@
 
         <div class="input_img-principal">
           <label for="image1" class="btn btn-secondary button_img"
-            >Imagen principal</label
+            >Imagen principal:</label
           >
           <input
             type="file"
@@ -67,7 +67,7 @@
 
         <div class="input_img-secundary">  
           <label for="image2" class="btn btn-secondary button_img"
-            >Imágenes secundarias<i>(Opcional)</i></label
+            >Imágenes secundarias<i>(Opcional):</i></label
           >
           <input
             type="file"
@@ -92,7 +92,7 @@
         </div>
 
         <div>
-          <label for="price">Precio</label>
+          <label for="price">Precio:</label>
           <input
             type="number"
             class="form-control"
@@ -107,7 +107,7 @@
         </div>
 
         <div>
-          <label for="discount">Descuento</label>
+          <label for="discount">Descuento:</label>
           <input
             type="number"
             class="form-control"
@@ -118,13 +118,14 @@
         </div>
 
         <div>
-          <label for="description">Descripcion</label>
+          <label for="description">Descripción:</label>
           <textarea
             rows="5"
             class="form-control"
             id="description"
             name="description"
           ></textarea>
+          <p id="descriptionInfo" style="align-self: flex-start;" hidden><span id="numberCharacters"></span> disponibles</p>
           <span id="msgDescription"></span>
           <% if (locals.errors && errors.description) { %>
           <p class="register_errors"><%= errors.description.msg %></p>

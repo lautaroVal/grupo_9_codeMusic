@@ -7,21 +7,25 @@ window.addEventListener('load', () => {
         event.target.classList.add("is-invalid");
     }
 
+    let totalCharacters = 500;
+    let numberCharacters = 500;
+
     $("name").addEventListener('blur', (e) => {
         console.log("hola mundo");
         switch (true) {
             case !$("name").value.trim():
-              msgError("msgName", "El nombre es requerido", e)
+              msgError("msgName", "El nombre es requerido.", e)
               break;
             case $("name").value.length < 7:
-              msgError("msgName", "El nombre de debe tener como mínimo 7 caracteres", e)
+              msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
               break;
               case $("name").value.length >= 60:
-                msgError("msgName", "El nombre no debe superar los 60 caracteres", e)
+                msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
                 break;
             default:
               $("msgName").innerHTML = null;
               e.target.classList.remove('is-invalid')
+              e.target.classList.add('is-valid');
               break;
           }
     })
@@ -30,14 +34,15 @@ window.addEventListener('load', () => {
         console.log("hola mundo");
         switch (true) {
             case !$("price").value.trim():
-              msgError("msgPrice", "El precio es requerido", e)
+              msgError("msgPrice", "El precio es requerido.", e)
               break;
             case +$("price").value <= 0:
-              msgError("msgPrice", "El precio no puede ser 0 o negativo", e)
+              msgError("msgPrice", "El precio no puede ser 0 o negativo.", e)
               break;
             default:
               $("msgPrice").innerHTML = null;
               e.target.classList.remove('is-invalid')
+              e.target.classList.add('is-valid');
               break;
           }
     })
@@ -50,14 +55,15 @@ window.addEventListener('load', () => {
             e.target.classList.remove('is-invalid')
             break;
             case +$("discount").value < 0:
-              msgError("msgDiscount", "El descuento no puede ser negativo", e)
+              msgError("msgDiscount", "El descuento no puede ser negativo.", e)
               break;
               case +$("discount").value > 100:
-              msgError("msgDiscount", "El descuento no puede ser mayor a 100", e)
+              msgError("msgDiscount", "El descuento no puede ser mayor a 100.", e)
               break;
             default:
               $("msgDiscount").innerHTML = null;
               e.target.classList.remove('is-invalid')
+              e.target.classList.add('is-valid');
               break;
           }
     })
@@ -66,29 +72,51 @@ window.addEventListener('load', () => {
         console.log("hola mundo");
         switch (true) {
             case !$("description").value.trim():
-              msgError("msgDescription", "La descripción es requerida", e)
+              msgError("msgDescription", "La descripción es requerida.", e)
               break;
             case $("description").value.trim().length < 20:
-              msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo", e)
+              msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
               break;
               case $("description").value.trim().length >= 500:
-              msgError("msgDescription", "La descripción no puede superar 500 caracteres", e)
+              msgError("msgDescription", "La descripción no puede superar 500 caracteres.", e)
               break;
             default:
               $("msgDescription").innerHTML = null;
               e.target.classList.remove('is-invalid')
+              e.target.classList.add('is-valid');
               break;
           }
     })
 
+    $("description").addEventListener("keyup", function (e) {
+   
+        numberCharacters = totalCharacters -  +this.value.length
+    
+       $('numberCharacters').innerHTML =  numberCharacters;
+    
+       if(numberCharacters <= 0){
+        $('descriptionInfo').hidden = true;
+        msgError("msgDescription", "La descripción no debe superar los 500 caracteres.", e)
+       }else if (numberCharacters > 480) {
+        $('descriptionInfo').hidden = true;
+        msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
+       }else {
+        $('descriptionInfo').hidden = false;
+        e.target.classList.remove('is-invalid');
+        e.target.classList.remove('is-valid');
+        $("msgDescription").innerHTML = null;
+       }
+    });
+
     $("category").addEventListener('blur', (e) => {
         switch (true) {
             case !$("category").value.trim():
-              msgError("msgCategory", "La categoria es requerida", e)
+              msgError("msgCategory", "Debe seleccionar una categoría", e)
               break;
             default:
               $("msgCategory").innerHTML = null;
               e.target.classList.remove('is-invalid')
+              e.target.classList.add('is-valid');
               break;
           }
     })
