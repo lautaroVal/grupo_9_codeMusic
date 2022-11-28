@@ -145,7 +145,6 @@ window.addEventListener('load', () => {
             }
         }
 
-
     })
 
 

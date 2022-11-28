@@ -46,7 +46,6 @@
     background: var(--ColorBlanco);
     color: var(--ColorBlanco);
     color: var(--ColorNegro);
-    padding: 10px;
     border-radius: 4px;
     margin: 0 0 8px 0;
     border: 1px solid #551A8B;
@@ -125,8 +124,6 @@
 
 #status {
     font-size: 10px;
-    width: 17px;
-    margin: 0;
 }
 
 .main_formulario button {
