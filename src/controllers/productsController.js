@@ -185,7 +185,8 @@ module.exports = {
 					colors,
 					categories,
 					OFERTA,
-					SINOFERTA
+					SINOFERTA,
+					old: req.body
 				})
 			}
 
@@ -197,6 +198,7 @@ module.exports = {
 	update: async (req, res) => {
 		try {
 			let errors = validationResult(req);
+			//return res.send(errors)
 			if (errors.isEmpty()){
 			const { name, price, share, discount, description, brandId, categoryId, colorId, image, status } = req.body;
 			await db.Product.update({
