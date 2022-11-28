@@ -5,7 +5,7 @@ module.exports = [
     .notEmpty().withMessage("El nombre es requerido.").bail()
     .isLength({min: 7}).withMessage('El nombre debe tener como mínimo 7 caracteres.').bail()
     .isLength({max: 60}).withMessage('El nombre no puede superar los 60 caracteres.'),
-    /*  body('image')
+     /* body('image')
     .custom((value,{req}) => {
         if(req.file){
             return true
