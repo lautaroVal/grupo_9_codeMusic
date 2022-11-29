@@ -138,9 +138,9 @@ window.addEventListener('load', () => {
             reader.readAsDataURL(file);
             reader.onload = () => {
                 console.log(reader);
-                for (let i = 0; i < imgs.length; i++) {
-                        imgs[i].src = reader.result 
-                }
+              /*  for (let i = 0; i < files.length; i++) {  */
+                        imgs[0].src = reader.result 
+               /*   }  */
 
             }
         }
