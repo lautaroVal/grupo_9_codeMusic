@@ -10,6 +10,14 @@ window.addEventListener('load', () => {
     let totalCharacters = 500;
     let numberCharacters = 500;
 
+    $('form_add').addEventListener('submit', (e) => {
+
+      const elements = $('form_add').elements;
+      /* console.log(elements); */
+      e.preventDefault();
+      let error = {};
+
+
     $("name").addEventListener('blur', (e) => {
         console.log("hola mundo");
         switch (true) {
@@ -144,10 +152,22 @@ window.addEventListener('load', () => {
 
             }
         }
-
-        
-
     })
+
+    
+     
+  
+    if(Object.keys(errores).length >= 1){
+
+      erName.innerText = (errores.name) ? errores.name : '';
+
+      } else {
+        !error &&  $('form_add').submit()
+      }
+     
+  
+      
+  })
 
 
 
