@@ -133,24 +133,17 @@ window.addEventListener('load', (event) => {
     if (files.length) {
       try {
         
-      
       let reader1 = new FileReader();
        reader1.readAsDataURL(files[0]);
       reader1.onload = () => {
         imgs[0].src = reader1.result
-        
       }
-    
-
      
         const reader2 = new FileReader();
         reader2.readAsDataURL(files[1]);
         reader2.onload = () => {
-          imgs[1].src = reader2.result
-          
+          imgs[1].src = reader2.result   
         }
-      
-
       
       const reader3 = new FileReader();
       reader3.readAsDataURL(files[2]);

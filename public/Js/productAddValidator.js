@@ -9,26 +9,20 @@ window.addEventListener('load', () => {
 
     let totalCharacters = 500;
     let numberCharacters = 500;
-
-    $('form_add').addEventListener('submit', (e) => {
-
-      const elements = $('form_add').elements;
-      /* console.log(elements); */
-      e.preventDefault();
-      let error = {};
+    let errores = {};
 
 
     $("name").addEventListener('blur', (e) => {
         console.log("hola mundo");
         switch (true) {
             case !$("name").value.trim():
-              msgError("msgName", "El nombre es requerido.", e)
+              errores.name = msgError("msgName", "El nombre es requerido.", e)
               break;
             case $("name").value.length < 7:
-              msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
+              errores.name = msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
               break;
               case $("name").value.length >= 60:
-                msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
+                errores.name = msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
                 break;
             default:
               $("msgName").innerHTML = null;
@@ -42,10 +36,10 @@ window.addEventListener('load', () => {
         console.log("hola mundo");
         switch (true) {
             case !$("price").value.trim():
-              msgError("msgPrice", "El precio es requerido.", e)
+              errores.price = msgError("msgPrice", "El precio es requerido.", e)
               break;
             case +$("price").value <= 0:
-              msgError("msgPrice", "El precio no puede ser 0 o negativo.", e)
+              errores.price = msgError("msgPrice", "El precio no puede ser 0 o negativo.", e)
               break;
             default:
               $("msgPrice").innerHTML = null;
@@ -140,30 +134,63 @@ window.addEventListener('load', () => {
 
     $("image2").addEventListener('change', (e) => {
         const files = e.target.files
-        imgs = [$('imageView1'),$('imageView2'),$('imageView3')]
-        for (const file of files) {
+        imgs = [$('imageView1'),$('imageView2'),$('imageView3')];
+        
+        if (files.length) {
+          try {
+             
+          let reader1 = new FileReader();
+           reader1.readAsDataURL(files[0]);
+          reader1.onload = () => {
+            imgs[0].src = reader1.result
+          }
+        
+            const reader2 = new FileReader();
+            reader2.readAsDataURL(files[1]);
+            reader2.onload = () => {
+              imgs[1].src = reader2.result
+            }
+          
+          const reader3 = new FileReader();
+          reader3.readAsDataURL(files[2]);
+          reader3.onload = () => {
+            imgs[2].src = reader3.result             
+          }
+        
+        } catch (error) {
+          imgs[2].src = "https://avalos.sv/wp-content/uploads/295-default-featured-image.png" 
+        }
+        }
+
+        /* for (const file of files) {
             let reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = () => {
                 console.log(reader);
-              /*  for (let i = 0; i < files.length; i++) {  */
+                for (let i = 0; i < files.length; i++) {  
                         imgs[0].src = reader.result 
-               /*   }  */
+                  }  
 
             }
-        }
+        } */
+
     })
 
-    
+    $('form_add').addEventListener('submit', (e) => {
+      /* const elements = $('form_add').elements; */
+      /* console.log(elements); */
+      e.preventDefault();
+      console.log(Object.keys(errores).length);
      
   
     if(Object.keys(errores).length >= 1){
-
-      erName.innerText = (errores.name) ? errores.name : '';
-
+      $('msgError').innerText = "Algunos tienen errores y/o están vacíos."
       } else {
-        !error &&  $('form_add').submit()
-      }
+        !errores &&  $('form_add').submit()
+      }   
+
+
+      
      
   
       
