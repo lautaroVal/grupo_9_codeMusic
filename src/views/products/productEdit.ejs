@@ -15,27 +15,52 @@
                         <label for="name">Nombre del producto</label>
                         <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica"
                             value="<%= product.name %>">
+                        <span id="msgName"></span>
                         <% if (locals.errors && errors.name) { %>
                             <p class="register_errors">
                                 <%= errors.name.msg %>
                             </p>
                             <% } %>
                     </div>
-                    <div>
-                        <label for="imagen">Imagen principal</label>
-                        <input type="file" name="image" id="imagen" accept="image/*"
-                            value="<%= product.image %>" /><br /><br />
+
+                    <div class="input_img-principal">
+                        <label for="image1" class="btn btn-secondary button_img">Imagen principal:</label>
+                        <input type="file" class="form-control btn-sm" name="image" id="image1" accept="image/*"
+                            hidden />
+                        <span id="msgImg"></span>
+                        <% if (locals.errors && errors.images) { %>
+                            <p class="register_errors">
+                                <%= errors.images.msg %>
+                            </p>
+                            <% } %>
+                                <div class="div_imageView_card">
+                                    <img src="/img/imgProducts/<%=product.image%>" alt="" height="100%" id="imageView">
+                                </div>
                     </div>
 
-                    <div>
-                        <label for="imagen">Imágenes secundarias</label>
-                        <input type="file" name="images" id="imagen" accept="image/*" multiple /><br /><br />
+                    <div class="input_img-secundary">
+                        <label for="image2" class="btn btn-secondary button_img">Imágenes
+                            secundarias<i>(Opcional):</i></label>
+                        <input type="file" class="form-control" name="images" id="image2" accept="image/*" multiple
+                            hidden />
+                        <div class="div_imageView2">
+                            <p class="div_imageView2_card">
+                                <img src="" alt="" height="100%" id="imageView1" />
+                            </p>
+                            <p class="div_imageView2_card">
+                                <img src="" alt="" height="100%" id="imageView2" />
+                            </p>
+                            <p class="div_imageView2_card">
+                                <img src="" alt="" height="100%" id="imageView3" />
+                            </p>
+                        </div>
                     </div>
 
                     <div>
                         <label for="precio">Precio</label>
-                        <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000"
-                            value="<%= product.price %>">
+                        <input type="number" id="precio" name="price" class="form-control"
+                            placeholder="Ejemplo: $50.000" value="<%= product.price %>">
+                        <span id="msgPrice"></span>
                         <% if (locals.errors && errors.price) { %>
                             <p class="register_errors">
                                 <%= errors.price.msg %>
@@ -51,13 +76,30 @@
 
                     <div>
                         <label for="discount">Descuento</label>
-                        <input type="number" id="discount" name="discount" value="<%= product.discount %>" />
+                        <input type="number" id="discount" name="discount" class="form-control"
+                            value="<%= product.discount %>" />
+                        <span id="msgDiscount"></span>
                     </div>
 
                     <div>
                         <label for="description">Descripción</label>
-                        <textarea name="description" id="description" cols="50"
-                            rows="10"><%= product.description %></textarea>
+
+                        <textarea
+                         class="form-control"
+                          name="description"
+                          id="description"
+                          cols="50"
+                          rows="10"><%= product.description %>
+                        </textarea>
+
+                        <p id="descriptionInfo"
+                          style="align-self: flex-start;"
+                          hidden>
+                          <span id="numberCharacters"></span> disponibles
+                        </p>
+
+                        <span id="msgDescription"></span>
+
                         <% if (locals.errors && errors.description) { %>
                             <p class="register_errors">
                                 <%= errors.description.msg %>
@@ -109,6 +151,7 @@
                                         && "selected" %>> <%= category.name%>
                                     </option>
                                     <% }) %>
+                                        <span id="msgCategory"></span>
                                         <% if (locals.errors && errors.categoryId) { %>
                                             <p class="register_errors">
                                                 <%= errors.categoryId.msg %>
@@ -139,7 +182,8 @@
 
             </main>
             <%- include('../partials/footer') %>
-            <%- include('../partials/script') %>
+                <%- include('../partials/script') %>
+                    <script src="/Js/productEditValidator.js"></script>
     </body>
 
 </html>
