@@ -363,6 +363,10 @@ FOOTER */
     .index_product_hide2 {
         display: flex;
     }
+    .index_medios_de_pago img {
+        width: 55vw;
+        height: 55px;
+    }
 
 
 }
