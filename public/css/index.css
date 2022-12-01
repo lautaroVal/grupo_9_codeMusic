@@ -36,7 +36,8 @@ html {
 }
 
 .index_medios_de_pago img {
-    width: 48vw;
+    width: 100vw;
+    height: 60px;
 }
 
 .index h1 {
