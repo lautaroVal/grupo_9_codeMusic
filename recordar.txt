@@ -1,0 +1,3 @@
+-------- PENDIENTES -----------
+
+- validar email que no este registrado (register)
