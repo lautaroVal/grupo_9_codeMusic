@@ -43,3 +43,8 @@ module.exports = {
   uploadImageProduct : createStorage('imgProducts'),
   uploadImageAvatar :  createStorage('users'),
 };
+
+
+
+
+ 
