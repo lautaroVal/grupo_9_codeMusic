@@ -18,6 +18,11 @@ window.addEventListener('load', function () {
     }
     
     let errores = {};
+
+    firstName.addEventListener('focus', function (e) {
+      e.target.classList.remove('is-invalid');
+      e.target.classList.remove('is-valid');
+     })
         
     firstName.addEventListener('blur', (e) => {
         switch (true) {
@@ -36,10 +41,16 @@ window.addEventListener('load', function () {
                   e.target.classList.add('is-valid');
                   btn.disabled = false;
                   btn.style.cursor = "cursor";
+                  delete errores.firstName;
                   break;
                 }
                 console.log(errores);
       })
+
+      lastName.addEventListener('focus', function (e) {
+        e.target.classList.remove('is-invalid');
+        e.target.classList.remove('is-valid');
+       })
 
       lastName.addEventListener('blur', (e) => {
         switch (true) {
@@ -58,6 +69,7 @@ window.addEventListener('load', function () {
                   e.target.classList.add('is-valid');
                   btn.disabled = false;
                   btn.style.cursor = "cursor";
+                  delete errores.lastName;
                   break;
                 }
                 console.log(errores);
@@ -87,7 +99,7 @@ window.addEventListener('load', function () {
             $('msgError').innerText = "Debes completar bien los campos requeridos.";
             $('msgError').style.color = "red"
             } else {
-              $('form_add').submit()
+              $('form_profile').submit()
             }   
       }
     })

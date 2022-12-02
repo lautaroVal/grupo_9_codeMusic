@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
                 errores.name = msgError("msgNombre", "El nombre es requerido.", e)
                 break;
             case $("nombre").value.length < 3:
-                errores.name = msgError("msgNombre", "El nombre debe tener como mínimo 7 caracteres.", e)
+                errores.name = msgError("msgNombre", "El nombre debe tener como mínimo 3 caracteres.", e)
                 break;
             case $("nombre").value.length >= 60:
                 errores.name = msgError("msgNombre", "El nombre no puede superar los 60 caracteres.", e)
@@ -69,13 +69,13 @@ window.addEventListener('load', () => {
     $("apellido").addEventListener('blur', (e) => {
         switch (true) {
             case !$("apellido").value.trim():
-                errores.apellido = msgError("msgApellido", "El nombre es requerido.", e)
+                errores.apellido = msgError("msgApellido", "El apellido es requerido.", e)
                 break;
             case $("apellido").value.length < 3:
-                errores.apellido = msgError("msgApellido", "El nombre debe tener como mínimo 7 caracteres.", e)
+                errores.apellido = msgError("msgApellido", "El apellido debe tener como mínimo 3 caracteres.", e)
                 break;
             case $("apellido").value.length >= 60:
-                errores.apellido = msgError("msgApellido", "El nombre no puede superar los 60 caracteres.", e)
+                errores.apellido = msgError("msgApellido", "El apellido no puede superar los 60 caracteres.", e)
                 break;
             default:
                 $("msgApellido").innerHTML = null;
