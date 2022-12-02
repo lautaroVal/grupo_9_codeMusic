@@ -13,7 +13,7 @@
         novalidate 
       >
         <div>
-          <label for="name">Nombre del producto:</label>
+          <label for="name">Nombre del producto:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
           <input
             type="text"
             class="form-control"
@@ -29,7 +29,7 @@
 
         <div class="input_img-principal">
           <label for="image1" class="btn btn-secondary button_img"
-            >Imagen principal:</label
+            >Imagen principal:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label
           >
           <input
             type="file"
@@ -44,7 +44,7 @@
           <p class="register_errors"><%= errors.images.msg %></p>
           <% } %>
           <div class="div_imageView_card">
-            <img src="" alt="" height="100%" id="imageView">
+            <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView">
           </div>
         </div>
 
@@ -63,19 +63,19 @@
           />
           <div class="div_imageView2">
             <p class="div_imageView2_card">
-              <img src="" alt="" height="100%" id="imageView1" />
+              <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView1" />
             </p>
             <p class="div_imageView2_card">
-                <img src="" alt="" height="100%" id="imageView2" />
+                <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView2" />
               </p>
             <p class="div_imageView2_card">
-              <img src="" alt="" height="100%" id="imageView3" />
+              <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView3" />
             </p>
           </div>
         </div>
 
         <div>
-          <label for="price">Precio:</label>
+          <label for="price">Precio:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
           <input
             type="number"
             class="form-control"
@@ -101,7 +101,7 @@
         </div>
 
         <div>
-          <label for="description">Descripción:</label>
+          <label for="description">Descripción:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
           <textarea
             rows="5"
             class="form-control"
@@ -112,6 +112,20 @@
           <span id="msgDescription"></span>
           <% if (locals.errors && errors.description) { %>
           <p class="register_errors"><%= errors.description.msg %></p>
+          <% } %>
+        </div>
+        
+        <div>
+          <label for="category" class="form-label">Elige una categoria:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
+          <select class="form-control" name="categoryId" id="category">
+            <option value="" hidden>Elegir</option>
+            <% categories.forEach(({id,name}) => { %>
+            <option value="<%= id %>"><%= name %></option>
+            <% }) %>
+          </select>
+          <span id="msgCategory"></span>
+          <% if (locals.errors && errors.categoryId) { %>
+          <p class="register_errors"><%= errors.categoryId.msg %></p>
           <% } %>
         </div>
 
@@ -133,20 +147,6 @@
             <option value="<%= id %>"><%= name %></option>
             <% }) %>
           </select>
-        </div>
-
-        <div>
-          <label for="category" class="form-label">Elige una categoria:</label>
-          <select class="form-control" name="categoryId" id="category">
-            <option value="" hidden>Elegir</option>
-            <% categories.forEach(({id,name}) => { %>
-            <option value="<%= id %>"><%= name %></option>
-            <% }) %>
-          </select>
-          <span id="msgCategory"></span>
-          <% if (locals.errors && errors.categoryId) { %>
-          <p class="register_errors"><%= errors.categoryId.msg %></p>
-          <% } %>
         </div>
 
           <div class="main_formulario_status">

@@ -1,4 +1,4 @@
-console.log("productAdd success!");
+console.log("productAdd success !");
 window.addEventListener('load', () => {
 
     msgError = (element, msg, event) => {
@@ -7,33 +7,61 @@ window.addEventListener('load', () => {
         event.target.classList.add("is-invalid");
     }
 
+    /* const readerImgs = (i = 0) => {
+      reader = new FileReader();
+      reader.readAsDataURL(files[i]);
+     reader.onload = () => {
+       imgs[i].src = reader.result
+     }
+    } */
+
     let totalCharacters = 500;
     let numberCharacters = 500;
     let errores = {};
 
+    let 
+     name = $("name"),
+     price = $("price"),
+     discount = $("discount"),
+     description = $("description"),
+     category = $("category"),
+     image1 = $("image1"),
+     image2 = $("image2")
 
-    $("name").addEventListener('blur', (e) => {
-        console.log("hola mundo");
-        switch (true) {
-            case !$("name").value.trim():
-              errores.name = msgError("msgName", "El nombre es requerido.", e)
-              break;
-            case $("name").value.length < 7:
-              errores.name = msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
-              break;
-              case $("name").value.length >= 60:
-                errores.name = msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
-                break;
-            default:
-              $("msgName").innerHTML = null;
-              e.target.classList.remove('is-invalid')
-              e.target.classList.add('is-valid');
-              break;
-          }
+
+     name.addEventListener('focus', function (e) {
+      e.target.classList.remove('is-invalid');
+      e.target.classList.remove('is-valid');
     })
 
-    $("price").addEventListener('blur', (e) => {
-        console.log("hola mundo");
+    name.addEventListener('blur', (e) => {
+      switch (true) {
+        case !$("name").value.trim():
+          errores.name = msgError("msgName", "El nombre es requerido.", e)
+          break;
+          case $("name").value.length < 7:
+            errores.name = msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
+            break;
+            case $("name").value.length >= 60:
+              errores.name = msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
+              break;
+              default:
+                $("msgName").innerHTML = null;
+                e.target.classList.remove('is-invalid')
+                e.target.classList.add('is-valid');
+                delete errores.name
+                break;
+              }
+              console.log(errores);
+    })
+
+    
+    price.addEventListener('focus', function (e) {
+      e.target.classList.remove('is-invalid');
+      e.target.classList.remove('is-valid');
+     })
+
+    price.addEventListener('blur', (e) => {
         switch (true) {
             case !$("price").value.trim():
               errores.price = msgError("msgPrice", "El precio es requerido.", e)
@@ -45,11 +73,18 @@ window.addEventListener('load', () => {
               $("msgPrice").innerHTML = null;
               e.target.classList.remove('is-invalid')
               e.target.classList.add('is-valid');
+              delete errores.price
               break;
           }
+          console.log(errores);
     })
 
-    $("discount").addEventListener('blur', (e) => {
+    discount.addEventListener('focus', function (e) {
+      e.target.classList.remove('is-invalid');
+      e.target.classList.remove('is-valid');
+     })
+
+    discount.addEventListener('blur', (e) => {
         console.log(typeof $("discount").value);
         switch (true) {
             case !$("discount").value: 
@@ -57,40 +92,49 @@ window.addEventListener('load', () => {
             e.target.classList.remove('is-invalid')
             break;
             case +$("discount").value < 0:
-              msgError("msgDiscount", "El descuento no puede ser negativo.", e)
+              errores.discount = msgError("msgDiscount", "El descuento no puede ser negativo.", e)
               break;
               case +$("discount").value > 100:
-              msgError("msgDiscount", "El descuento no puede ser mayor a 100.", e)
+                errores.discount = msgError("msgDiscount", "El descuento no puede ser mayor a 100.", e)
               break;
             default:
               $("msgDiscount").innerHTML = null;
               e.target.classList.remove('is-invalid')
               e.target.classList.add('is-valid');
+              delete errores.discount
               break;
-          }
+            }
+            console.log(errores);
     })
 
-    $("description").addEventListener('blur', (e) => {
+    /* description.addEventListener('focus', function (e) {
+      e.target.classList.remove('is-invalid');
+      e.target.classList.remove('is-valid');
+     }) */
+
+    description.addEventListener('blur', (e) => {
         console.log("hola mundo");
         switch (true) {
-            case !$("description").value.trim():
-              msgError("msgDescription", "La descripción es requerida.", e)
+            case !description.value.trim():
+              errores.description = msgError("msgDescription", "La descripción es requerida.", e)
               break;
-            case $("description").value.trim().length < 20:
-              msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
+            case description.value.trim().length < 20:
+              errores.description = msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
               break;
-              case $("description").value.trim().length >= 500:
-              msgError("msgDescription", "La descripción no puede superar 500 caracteres.", e)
+              case description.value.trim().length >= 500:
+              errores.description = msgError("msgDescription", "La descripción no puede superar 500 caracteres.", e)
               break;
             default:
               $("msgDescription").innerHTML = null;
-              e.target.classList.remove('is-invalid')
+              e.target.classList.remove('is-invalid');
               e.target.classList.add('is-valid');
+              delete errores.description
               break;
-          }
+            }
+            console.log(errores);
     })
 
-    $("description").addEventListener("keyup", function (e) {
+    description.addEventListener("keyup", function (e) {
    
         numberCharacters = totalCharacters -  +this.value.length
     
@@ -98,10 +142,10 @@ window.addEventListener('load', () => {
     
        if(numberCharacters <= 0){
         $('descriptionInfo').hidden = true;
-        msgError("msgDescription", "La descripción no debe superar los 500 caracteres.", e)
+         msgError("msgDescription", "La descripción no debe superar los 500 caracteres.", e)
        }else if (numberCharacters > 480) {
         $('descriptionInfo').hidden = true;
-        msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
+         msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
        }else {
         $('descriptionInfo').hidden = false;
         e.target.classList.remove('is-invalid');
@@ -110,29 +154,38 @@ window.addEventListener('load', () => {
        }
     });
 
-    $("category").addEventListener('blur', (e) => {
+    category.addEventListener('focus', function (e) {
+      e.target.classList.remove('is-invalid');
+      e.target.classList.remove('is-valid');
+     })
+
+    category.addEventListener('blur', (e) => {
         switch (true) {
-            case !$("category").value.trim():
-              msgError("msgCategory", "Debe seleccionar una categoría", e)
+            case !category.value.trim():
+              errores.category = msgError("msgCategory", "Debe seleccionar una categoría", e)
               break;
             default:
               $("msgCategory").innerHTML = null;
               e.target.classList.remove('is-invalid')
               e.target.classList.add('is-valid');
+              delete errores.category
               break;
           }
+          console.log(errores);
     })
 
-    $("image1").addEventListener('change', (e) => {
+    image1.addEventListener('change', (e) => {
         const file = e.target.files[0]
         let reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = () => {
-            $('imageView').src = reader.result
-        }
+            $('imageView').src = reader.result;
+            $("msgImg").innerHTML = null;
+            delete errores.image1
+          }
     })
 
-    $("image2").addEventListener('change', (e) => {
+    image2.addEventListener('change', (e) => {
         const files = e.target.files
         imgs = [$('imageView1'),$('imageView2'),$('imageView3')];
         
@@ -176,24 +229,27 @@ window.addEventListener('load', () => {
 
     })
 
+    
     $('form_add').addEventListener('submit', (e) => {
-      /* const elements = $('form_add').elements; */
-      /* console.log(elements); */
       e.preventDefault();
-      console.log(Object.keys(errores).length);
-     
-  
-    if(Object.keys(errores).length >= 1){
-      $('msgError').innerText = "Algunos tienen errores y/o están vacíos."
-      } else {
-        !errores &&  $('form_add').submit()
-      }   
-
-
+      const inputs = [name,price,description,category];
+      //console.log(Object.keys(errores));
       
-     
-  
-      
+      if ($('imageView').src == "https://avalos.sv/wp-content/uploads/295-default-featured-image.png") {
+        errores.image1 = msgError("msgImg", "La imagen principal es requerida.", e)
+          } 
+
+      for (let i = 0; i < inputs.length ; i++) {
+        
+        if(inputs[i].value.length == 0  || Object.keys(errores).length >= 1){
+          console.log(inputs[i].value.length);
+          inputs[i].classList.contains('is-valid') || inputs[i].classList.add("is-invalid");
+          $('msgError').innerText = "Debes completar bien los campos requeridos.";
+          $('msgError').style.color = "red"
+          } else {
+            $('form_add').submit()
+          }   
+    }
   })
 
 
