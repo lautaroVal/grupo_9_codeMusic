@@ -8,12 +8,12 @@
                 <h4 class="edit_titulo">Editar producto: <%= product.name %>
                 </h4>
 
-                <form class="main_formulario_contenedor" action="/products/edit/<%= product.id %>?_method=PUT"
+                <form class="main_formulario_contenedor" id="editForm" action="/products/edit/<%= product.id %>?_method=PUT"
                     method="POST" enctype="multipart/form-data">
 
                     <div>
                         <label for="name">Nombre del producto</label>
-                        <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica"
+                        <input type="text" name="name" id="nombre" placeholder="Ejempo: Guitarra Electrica"
                             value="<%= product.name %>">
                         <span id="msgName"></span>
                         <% if (locals.errors && errors.name) { %>
@@ -176,6 +176,7 @@
 
                         <div class="formulario_enviar">
                             <button type="submit">Enviar</button>
+                            <span id="msgError"></span>
                         </div>
 
                 </form>

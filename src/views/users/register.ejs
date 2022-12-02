@@ -15,7 +15,7 @@
 
           <div class="register_txt"><p>Creá tu cuenta y comprá desde tu casa.</p></div>
           
-          <form class="register_form" action="/users/register" method="POST">
+          <form class="register_form" id="registerForm" action="/users/register" method="POST">
               <div class="register_div">
                   <label class="register_label" for="nombre">Nombre:</label>
                   <input class="register_input form-control"
@@ -94,9 +94,10 @@
                   </p>
                   <% } %>
               </div>
-            
+
               <div class="register_div">
-                  <button type="submit" >Crear cuenta</button>
+                <button type="submit" >Crear cuenta</button>
+                <span id="msgError"></span>
               </div> 
               <div class="register_p_a">
                 <p> ¿Ya tenés cuenta? <a href="/users/login" style="color: blue;">Iniciá sesión</a></p>

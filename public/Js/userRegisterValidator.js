@@ -42,18 +42,18 @@ window.addEventListener('load', () => {
     } */ //esto todavia no lo toque...
     const exRegEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
     const exRegPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,12}/
-
+    let errores = {};
 
     $("nombre").addEventListener('blur', (e) => {
         switch (true) {
             case !$("nombre").value.trim():
-                msgError("msgNombre", "El nombre es requerido.", e)
+                errores.name = msgError("msgNombre", "El nombre es requerido.", e)
                 break;
             case $("nombre").value.length < 3:
-                msgError("msgNombre", "El nombre debe tener como mínimo 7 caracteres.", e)
+                errores.name = msgError("msgNombre", "El nombre debe tener como mínimo 7 caracteres.", e)
                 break;
             case $("nombre").value.length >= 60:
-                msgError("msgNombre", "El nombre no puede superar los 60 caracteres.", e)
+                errores.name = msgError("msgNombre", "El nombre no puede superar los 60 caracteres.", e)
                 break;
             default:
                 $("msgNombre").innerHTML = null;
@@ -69,13 +69,13 @@ window.addEventListener('load', () => {
     $("apellido").addEventListener('blur', (e) => {
         switch (true) {
             case !$("apellido").value.trim():
-                msgError("msgApellido", "El nombre es requerido.", e)
+                errores.apellido = msgError("msgApellido", "El nombre es requerido.", e)
                 break;
             case $("apellido").value.length < 3:
-                msgError("msgApellido", "El nombre debe tener como mínimo 7 caracteres.", e)
+                errores.apellido = msgError("msgApellido", "El nombre debe tener como mínimo 7 caracteres.", e)
                 break;
             case $("apellido").value.length >= 60:
-                msgError("msgApellido", "El nombre no puede superar los 60 caracteres.", e)
+                errores.apellido = msgError("msgApellido", "El nombre no puede superar los 60 caracteres.", e)
                 break;
             default:
                 $("msgApellido").innerHTML = null;
@@ -91,13 +91,13 @@ window.addEventListener('load', () => {
     $('Email').addEventListener('blur', async function(e){
         switch (true) {
             case !this.value.trim():
-                msgError('errorEmail',"El email es obligatorio", e);
+                errores.Email = msgError('errorEmail',"El email es obligatorio", e);
                 break;
             case !exRegEmail.test(this.value):
-                msgError('errorEmail',"El email tiene un formato inválido", e);
+                errores.Email = msgError('errorEmail',"El email tiene un formato inválido", e);
                 break
       /*       case await verifyEmail(this.value):
-                msgError('errorEmail',"El email ya se encuentra registrado", e);
+                errores.Email = msgError('errorEmail',"El email ya se encuentra registrado", e);
                 break */
             default:
                 validField('errorEmail',e)
@@ -112,10 +112,10 @@ window.addEventListener('load', () => {
     $('password').addEventListener('blur', function(e){
         switch (true) {
             case !this.value.trim():
-                msgError('msgPassword',"La contraseña es obligatoria", e);
+                errores.password = msgError('msgPassword',"La contraseña es obligatoria", e);
                 break;
             case !exRegPass.test(this.value):
-                msgError('msgPassword',"La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial", e);
+                errores.password = msgError('msgPassword',"La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial", e);
                 break
             default:
                 validField('msgPassword',e)
@@ -130,10 +130,10 @@ window.addEventListener('load', () => {
     $('password2').addEventListener('blur', function(e){
         switch (true) {
             case !this.value.trim():
-                msgError('msgPassword2',"Debes confirmar tu contraseña", e);
+                errores.password2 = msgError('msgPassword2',"Debes confirmar tu contraseña", e);
                 break;
             case this.value !== $('password').value:
-                msgError('msgPassword2',"Las contraseñas no coinciden", e);
+                errores.password2 = msgError('msgPassword2',"Las contraseñas no coinciden", e);
                 break
             default:
                 validField('msgPassword2',e)
@@ -149,5 +149,25 @@ window.addEventListener('load', () => {
     $('terminos').addEventListener('click', (e) => {
         $('errorTerms').innerText = null
     });
+
+     
+    $('registerForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const inputs = [nombre,apellido,Email,password,password2,terminos];
+        //console.log(Object.keys(errores));
+  
+        for (let i = 0; i < inputs.length ; i++) {
+          
+          if(inputs[i].value.length == 0  || Object.keys(errores).length >= 1){
+            console.log(inputs[i].value.length);
+            inputs[i].classList.contains('is-valid') || inputs[i].classList.add("is-invalid");
+            $('msgError').innerText = "Debes completar bien los campos requeridos.";
+            $('msgError').style.color = "red"
+            } else {
+              $('registerForm').submit()
+            }   
+      }
+    })
+  
 
 })
