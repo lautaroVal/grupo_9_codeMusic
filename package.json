@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
+    "client:start" : "cd admin && npm start",
     "create:db": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "reset:db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "dev:reset":"npm run reset:db && nodemon app.js"
