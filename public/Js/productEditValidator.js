@@ -149,7 +149,6 @@ window.addEventListener('load', (event) => {
       reader3.readAsDataURL(files[2]);
       reader3.onload = () => {
         imgs[2].src = reader3.result
-         
       }
     
     } catch (error) {
@@ -168,4 +167,5 @@ window.addEventListener('load', (event) => {
       }
     } */
   })
+  
 })

@@ -1,11 +1,11 @@
 console.log("productAdd success !");
 window.addEventListener('load', () => {
 
-    msgError = (element, msg, event) => {
-        $(element).style.color = "red";
-        $(element).innerHTML = msg;
-        event.target.classList.add("is-invalid");
-    }
+  msgError = (element, msg, event) => {
+    $(element).style.color = "red";
+    $(element).innerHTML = msg;
+    event.target.classList.add("is-invalid");
+  }
 
     /* const readerImgs = (i = 0) => {
       reader = new FileReader();
@@ -107,11 +107,6 @@ window.addEventListener('load', () => {
             console.log(errores);
     })
 
-    /* description.addEventListener('focus', function (e) {
-      e.target.classList.remove('is-invalid');
-      e.target.classList.remove('is-valid');
-     }) */
-
     description.addEventListener('blur', (e) => {
         console.log("hola mundo");
         switch (true) {
@@ -151,8 +146,10 @@ window.addEventListener('load', () => {
         e.target.classList.remove('is-invalid');
         e.target.classList.remove('is-valid');
         $("msgDescription").innerHTML = null;
-       }
-    });
+        e.target.classList.remove('is-invalid')
+        e.target.classList.add('is-valid');
+    }
+  })
 
     category.addEventListener('focus', function (e) {
       e.target.classList.remove('is-invalid');
@@ -253,5 +250,5 @@ window.addEventListener('load', () => {
   })
 
 
-
+      
 })

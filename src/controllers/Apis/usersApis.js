@@ -31,7 +31,6 @@ module.exports = {
                 include: [
                     { association: 'locations' }]
                     
-
             });
 
             if (user) {                                     // Si viene user renderizo la vista de profile.
