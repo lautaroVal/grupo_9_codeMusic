@@ -110,7 +110,7 @@ window.addEventListener('load', (event) => {
         msgError("msgCategory", "Debe seleccionar una categoría", e)
         break;
       default:
-        $("msgCategory").innerHTML = '';
+        $("msgCategory").innerHTML = null;
         e.target.classList.remove('is-invalid')
         e.target.classList.add('is-valid');
         break;
