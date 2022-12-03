@@ -45,13 +45,19 @@
                             hidden />
                         <div class="div_imageView2">
                             <p class="div_imageView2_card">
-                                <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView1" />
+                                <img src="<% if (product.images[0].file) { %>
+                                    /img/imgProducts/<%=product.images[0].file%>
+                                <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%>" alt="" height="100%" id="imageView1" />
                             </p>
                             <p class="div_imageView2_card">
-                                <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView2" />
+                                <img src="<% if (product.images[1].file) { %>
+                                    /img/imgProducts/<%=product.images[1].file%>
+                                <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%>" alt="" height="100%" id="imageView2" />
                             </p>
                             <p class="div_imageView2_card">
-                                <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView3" />
+                                <img src="<% if (product.images.length && product.images[2]) { %>
+                                    /img/imgProducts/<%=product.images[2].file%>
+                                <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%> " alt="" height="100%" id="imageView3" />
                             </p>
                         </div>
                     </div>

@@ -7,14 +7,6 @@ window.addEventListener('load', () => {
     event.target.classList.add("is-invalid");
   }
 
-    /* const readerImgs = (i = 0) => {
-      reader = new FileReader();
-      reader.readAsDataURL(files[i]);
-     reader.onload = () => {
-       imgs[i].src = reader.result
-     }
-    } */
-
     let totalCharacters = 500;
     let numberCharacters = 500;
     let errores = {};
