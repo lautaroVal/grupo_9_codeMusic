@@ -31,6 +31,10 @@ a{
     color: var(--ColorBlanco);
 }
 
+a:hover{
+    color: var(--ColorBlanco);
+}
+
 p{
     font-size: 15px;
 }

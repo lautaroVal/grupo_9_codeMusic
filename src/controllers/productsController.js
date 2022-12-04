@@ -97,7 +97,7 @@ module.exports = {
 					name: name.trim(),
 					price: +price,
 					status: status ? status : 0,
-					share: share ? share : 12,
+					share: +share ? +share : 12,
 					discount: +discount,
 					image: req.files.image ? req.files.image[0].filename : 'Img-default.jpg',
 					description: description.trim(),

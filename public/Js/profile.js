@@ -2,6 +2,8 @@ console.log("profile success!");
 
 window.addEventListener('load', function () {
     
+    const exRegAlfa = /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/
+
     let firstName = $("firstName");
     let lastName = $("lastName");
     let avatar = $("avatar");
@@ -28,6 +30,9 @@ window.addEventListener('load', function () {
         switch (true) {
           case !firstName.value.trim():
             errores.firstName = msgError("msgFirstName", "El nombre es requerido.", e)
+            break;
+            case !exRegAlfa.test(firstName.value):
+            errores.firstName = msgError("msgFirstName", "Solo se permiten caracteres alfabéticos.", e)
             break;
             case firstName.value.length < 3:
               errores.firstName = msgError("msgFirstName", "El nombre debe tener como mínimo 3 caracteres.", e)
@@ -56,6 +61,9 @@ window.addEventListener('load', function () {
         switch (true) {
           case !lastName.value.trim():
             errores.lastName = msgError("msgLastName", "El apellido es requerido.", e)
+            break;
+            case !exRegAlfa.test(lastName.value):
+            errores.lastName = msgError("msgLastName", "Solo se permiten caracteres alfabéticos.", e)
             break;
             case lastName.value.length < 3:
               errores.lastName = msgError("msgLastName", "El apellido debe tener como mínimo 3 caracteres.", e)
