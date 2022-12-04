@@ -206,7 +206,7 @@ module.exports = {
 				name: name,
 				image: req.files.image ? req.files.image[0].filename : image,
 				price: +price,
-				share: +share,
+				share: +share ? +share : 0,
 				discount: +discount,
 				description: description,
 				brandId,

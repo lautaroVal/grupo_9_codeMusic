@@ -1,3 +1,4 @@
 -------- PENDIENTES -----------
 
-- validar email que no este registrado (register)
+- validar email que no esté registrado (register)
+- validar el tipo de archivo de imagen y la cantidad en productAdd

@@ -1,93 +1,107 @@
-
 console.log("productAdd success!")
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
+
   msgError = (element, msg, event) => {
     $(element).style.color = "red";
     $(element).innerHTML = msg;
     event.target.classList.add("is-invalid");
   }
 
+  const validField = (element,{target}) => {
+    $(element).innerHTML = null;
+    target.classList.remove('is-invalid')
+    target.classList.add('is-valid');
+};
+
+ 
+
   let totalCharacters = 500;
   let numberCharacters = 500;
   let errores = {};
 
+  let 
+     name = $("name"),
+     price = $("price"),
+     description = $("description"),
+     category = $("category")
 
-  $("nombre").addEventListener('blur', (e) => {
+
+  name.addEventListener('blur', (e) => {
     switch (true) {
-      case !$("nombre").value.trim():
-        errores.nombre = msgError("msgName", "El nombre es requerido.", e)
+      case !name.value.trim():
+        errores.name = msgError("msgName", "El nombre es requerido.", e)
         break;
-      case $("nombre").value.length < 7:
-        errores.nombre = msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
+      case name.value.length < 7:
+        errores.name = msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
         break;
-      case $("nombre").value.length >= 60:
-        errores.nombre = msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
+      case name.value.length >= 60:
+        errores.name = msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
         break;
       default:
-        $("msgName").innerHTML = null;
-        e.target.classList.remove('is-invalid')
-        e.target.classList.add('is-valid');
+        validField("msgName",e);
+        delete errores.name
         break;
     }
+    console.log(errores)
   });
 
 
-  $("precio").addEventListener('blur', (e) => {
+  price.addEventListener('blur', (e) => {
     switch (true) {
-      case !$("precio").value.trim():
-        errores.precio = msgError("msgPrice", "El precio es requerido.", e)
+      case !price.value.trim():
+        errores.price = msgError("msgPrice", "El precio es requerido.", e)
         break;
-      case +$("precio").value <= 0:
-        errores.precio = msgError("msgPrice", "El precio no puede ser 0 o negativo.", e)
+      case +price.value <= 0:
+        errores.price = msgError("msgPrice", "El precio no puede ser 0 o negativo.", e)
         break;
       default:
-        $("msgPrice").innerHTML = null;
-        e.target.classList.remove('is-invalid')
-        e.target.classList.add('is-valid');
+        validField("msgPrice",e);
+        delete errores.price
         break;
     }
+    console.log(errores)
   });
 
-  $("discount").addEventListener('blur', (e) => {
+  discount.addEventListener('blur', (e) => {
     switch (true) {
-      case !$("discount").value:
+      case !discount.value:
         $("msgDiscount").innerHTML = null;
         e.target.classList.remove('is-invalid')
         break;
-      case +$("discount").value < 0:
+      case +discount.value < 0:
         errores.discount = msgError("msgDiscount", "El descuento no puede ser negativo.", e)
         break;
-      case +$("discount").value > 100:
+      case +discount.value > 100:
         errores.discount = msgError("msgDiscount", "El descuento no puede ser mayor a 100.", e)
         break;
       default:
-        $("msgDiscount").innerHTML = null;
-        e.target.classList.remove('is-invalid')
-        e.target.classList.add('is-valid');
+        validField("msgDiscount",e);
+        delete errores.discount
         break;
     }
+    console.log(errores)
   });
 
-  $("description").addEventListener('blur', (e) => {
+  description.addEventListener('blur', (e) => {
     switch (true) {
-      case !$("description").value.trim():
+      case !description.value.trim():
         errores.description = msgError("msgDescription", "La descripción es requerida.", e)
         break;
-      case $("description").value.trim().length < 20:
+      case description.value.trim().length < 20:
         errores.description = msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
         break;
-      case $("description").value.trim().length >= 500:
+      case description.value.trim().length >= 500:
         errores.description = msgError("msgDescription", "La descripción no puede superar 500 caracteres.", e)
         break;
       default:
-        $("msgDescription").innerHTML = null;
-        e.target.classList.remove('is-invalid')
-        e.target.classList.add('is-valid');
+        validField("msgDescription",e);
+        delete errores.description;
         break;
     }
+    console.log(errores)
   })
 
-  $("description").addEventListener("keyup", function (e) {
+  description.addEventListener("keyup", function (e) {
 
     numberCharacters = totalCharacters - +this.value.length
 
@@ -95,10 +109,10 @@ window.addEventListener('load', (event) => {
 
     if (numberCharacters <= 0) {
       $('descriptionInfo').hidden = true;
-      errores.description = msgError("msgDescription", "La descripción no debe superar los 500 caracteres.", e)
+      msgError("msgDescription", "La descripción no debe superar los 500 caracteres.", e)
     } else if (numberCharacters > 480) {
       $('descriptionInfo').hidden = true;
-      errores.description = msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
+      msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
     } else {
       $('descriptionInfo').hidden = false;
       e.target.classList.remove('is-invalid');
@@ -107,17 +121,17 @@ window.addEventListener('load', (event) => {
     }
   });
 
-  $("category").addEventListener('blur', (e) => {
+  category.addEventListener('blur', (e) => {
     switch (true) {
-      case !$("category").value.trim():
+      case !category.value.trim():
         errores.category = msgError("msgCategory", "Debe seleccionar una categoría", e)
         break;
       default:
-        $("msgCategory").innerHTML = null;
-        e.target.classList.remove('is-invalid')
-        e.target.classList.add('is-valid');
+        validField("msgCategory",e);
+        delete errores.category
         break;
     }
+    console.log(errores)
   });
 
   $("image1").addEventListener('change', (e) => {
@@ -160,10 +174,10 @@ window.addEventListener('load', (event) => {
     }
   });
 
-  $('editForm').addEventListener('submit', (e) => {
+  $('edit_Form').addEventListener('submit', (e) => {
     e.preventDefault();
-    const inputs = [precio,nombre, description, category];
-    //console.log(Object.keys(errores));
+    const inputs = [price,name,description,category];
+    console.log(Object.keys(errores));
 
     for (let i = 0; i < inputs.length; i++) {
 
@@ -173,9 +187,10 @@ window.addEventListener('load', (event) => {
         $('msgError').innerText = "Debes completar bien los campos requeridos.";
         $('msgError').style.color = "red"
       } else {
-        $('editForm').submit()
+        $('edit_Form').submit()
       }
     }
 
+    
   });
 })

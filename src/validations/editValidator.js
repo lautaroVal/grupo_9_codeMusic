@@ -3,29 +3,24 @@ const { body } = require('express-validator');
 module.exports = [
 
     body('name')
-        .notEmpty().withMessage("Debe ingresar un nombre.").bail()
-        .isLength({ min: 3 }).withMessage('Debe contener 3 caracteres como mínimo.').bail()
-        .isLength({ max: 255 }).withMessage('Debe contener 60 caracteres como máximo.'),
+        .notEmpty().withMessage("El nombre es requerido.").bail()
+        .isLength({ min: 7 }).withMessage('El nombre debe tener como mínimo 7 caracteres.').bail()
+        .isLength({ max: 60 }).withMessage('El nombre no puede superar los 60 caracteres.'),
 
     body('price')
-        .notEmpty().withMessage("Debe ingresar un precio.").bail(),
+        .notEmpty().withMessage("Debe ingresar un precio.").bail()
+        .isNumeric().withMessage("Debe ingresar un valor númerico"),
+
+   /*  body('discount')
+        .isNumeric().withMessage("Debe ingresar un valor númerico"), */
 
     body('description')
-        .notEmpty().withMessage("Debe ingresar un descripcion.").bail()
+        .notEmpty().withMessage("Debe ingresar un descripción.").bail()
         .isLength({ min: 20 }).withMessage('Debe contener 20 caracteres como mínimo.').bail()
-        .isLength({ max: 255 }).withMessage('Debe contener 255 caracteres como máximo.'),
-
-    body('brandId')
-        .notEmpty().withMessage("Debe ingresar una marca.").bail(),
-
-    body('colorId')
-        .notEmpty().withMessage("Debe ingresar un color.").bail(),
+        .isLength({ max: 500 }).withMessage('Debe contener 255 caracteres como máximo.'),
 
     body('categoryId')
-        .notEmpty().withMessage("Debe ingresar una categoría.").bail(),
-
-    body('status')
-        .notEmpty().withMessage("Debe ingresar la oferta.").bail()
+        .notEmpty().withMessage("Debe ingresar una categoría.")
 
 
 ]

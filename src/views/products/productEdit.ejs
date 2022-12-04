@@ -8,12 +8,12 @@
                 <h4 class="edit_titulo">Editar producto: <%= product.name %>
                 </h4>
 
-                <form class="main_formulario_contenedor" id="editForm" action="/products/edit/<%= product.id %>?_method=PUT"
+                <form class="main_formulario_contenedor" id="edit_Form" action="/products/edit/<%= product.id %>?_method=PUT"
                     method="POST" enctype="multipart/form-data">
 
                     <div>
                         <label for="name">Nombre del producto</label>
-                        <input type="text" name="name" id="nombre" class="form-control" placeholder="Ejempo: Guitarra Electrica"
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Ejempo: Guitarra Electrica"
                             value="<%= product.name %>">
                         <span id="msgName"></span>
                         <% if (locals.errors && errors.name) { %>
@@ -45,12 +45,12 @@
                             hidden />
                         <div class="div_imageView2">
                             <p class="div_imageView2_card">
-                                <img src="<% if (product.images[0].file) { %>
+                                <img src="<% if (product.images.length && product.images[0]) { %>
                                     /img/imgProducts/<%=product.images[0].file%>
                                 <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%>" alt="" height="100%" id="imageView1" />
                             </p>
                             <p class="div_imageView2_card">
-                                <img src="<% if (product.images[1].file) { %>
+                                <img src="<% if (product.images.length && product.images[1]) { %>
                                     /img/imgProducts/<%=product.images[1].file%>
                                 <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%>" alt="" height="100%" id="imageView2" />
                             </p>
@@ -63,8 +63,8 @@
                     </div>
 
                     <div>
-                        <label for="precio">Precio</label>
-                        <input type="number" id="precio" name="price" class="form-control"
+                        <label for="price">Precio</label>
+                        <input type="number" id="price" name="price" class="form-control"
                             placeholder="Ejemplo: $50.000" value="<%= product.price %>">
                         <span id="msgPrice"></span>
                         <% if (locals.errors && errors.price) { %>
@@ -128,6 +128,7 @@
                                         </p>
                                         <% } %>
                         </select>
+                    </div>
 
                         <div>
                             <label for="color" class="form-label">Elige un color:</label>

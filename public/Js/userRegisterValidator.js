@@ -47,20 +47,22 @@ window.addEventListener('load', () => {
     $("nombre").addEventListener('blur', (e) => {
         switch (true) {
             case !$("nombre").value.trim():
-                errores.name = msgError("msgNombre", "El nombre es requerido.", e)
+                errores.nombre = msgError("msgNombre", "El nombre es requerido.", e)
                 break;
             case $("nombre").value.length < 3:
-                errores.name = msgError("msgNombre", "El nombre debe tener como mínimo 3 caracteres.", e)
+                errores.nombre = msgError("msgNombre", "El nombre debe tener como mínimo 3 caracteres.", e)
                 break;
             case $("nombre").value.length >= 60:
-                errores.name = msgError("msgNombre", "El nombre no puede superar los 60 caracteres.", e)
+                errores.nombre = msgError("msgNombre", "El nombre no puede superar los 60 caracteres.", e)
                 break;
             default:
                 $("msgNombre").innerHTML = null;
                 e.target.classList.remove('is-invalid')
                 e.target.classList.add('is-valid');
+                delete errores.nombre
                 break;
         }
+        console.log(errores);
     })
     $('nombre').addEventListener('focus', function({target}){
         cleanField('msgNombre', target)
@@ -79,10 +81,12 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $("msgApellido").innerHTML = null;
-                e.target.classList.remove('is-invalid')
+                e.target.classList.remove('is-invalid');
                 e.target.classList.add('is-valid');
+                delete errores.apellido
                 break;
-        }
+            }
+            console.log(errores);
     })
     $('apellido').addEventListener('focus', function({target}){
         cleanField('msgApellido', target)
@@ -101,8 +105,10 @@ window.addEventListener('load', () => {
                 break */
             default:
                 validField('errorEmail',e)
+                delete errores.Email
                 break;
-        }
+            }
+            console.log(errores);
     });
     
     $('Email').addEventListener('focus', function({target}){
@@ -118,9 +124,11 @@ window.addEventListener('load', () => {
                 errores.password = msgError('msgPassword',"La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial", e);
                 break
             default:
-                validField('msgPassword',e)
+                validField('msgPassword',e);
+                delete errores.password
                 break;
-        }
+            }
+            console.log(errores);
     });
     
     $('password').addEventListener('focus', function({target}){
@@ -136,9 +144,11 @@ window.addEventListener('load', () => {
                 errores.password2 = msgError('msgPassword2',"Las contraseñas no coinciden", e);
                 break
             default:
-                validField('msgPassword2',e)
+                validField('msgPassword2',e);
+                delete errores.password2
                 break;
-        }
+            }
+            console.log(errores);
     });
     
     
