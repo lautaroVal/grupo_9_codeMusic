@@ -8,42 +8,44 @@
 
                 <h3 class="profile_titulo">Mi perfil </h3>
                 
-                <form class="profile_main_form" action="/users/profile?_method=PUT" method="post"
-                enctype="multipart/form-data">
+                <form class="profile_main_form" id="form_profile" action="/users/profile?_method=PUT" method="POST"
+                enctype="multipart/form-data" >
 
                     <section class="profile_main_section">
 
-                        <img src="/img/users/<%= user.avatar %>" alt="usuario" class="profile_img">
+                        <img src="/img/users/<%= user.avatar %>" alt="usuario" style="object-fit: contain;" class="profile_img" id="avatarView">
 
                         <div class="profile_main_divAvatar">
                             <label for="avatar" style="cursor:pointer;" class="profile_main_divAvatar_label">Cambiar
                                 imagen de perfil</label>
-                            <input hidden type="file" id="avatar" name="avatar">
+                            <input class="form-control" hidden type="file" id="avatar" name="avatar">
                         </div>
 
                         <div class="profile_main_form_div1">
 
                             <div>
                                 <label for="firstName">Nombre</label>
-                                <input type="text" name="firstName" id="firstName" placeholder="Escribí tu nombre"
+                                <input class="form-control" type="text" name="firstName" id="firstName" placeholder="Escribí tu nombre"
                                     class="profile_controls" value="<%= user.firstName %>">
                                 <p class="text-danger" style="color: red;">
+                                    <span id="msgFirstName"></span>
                                     <%= locals.errors && errors.firstName ? errors.firstName.msg : null %>
                                 </p>
                             </div>
 
                             <div>
                                 <label for="lastName">Apellido</label>
-                                <input type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido"
+                                <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Escribí tu apellido"
                                     class="profile_controls" value="<%= user.lastName %>">
                                 <p class="text-danger" style="color: red;">
+                                    <span id="msgLastName"></span>
                                     <%= locals.errors && errors.lastName ? errors.lastName.msg : null %>
                                 </p>
                             </div>
 
                             <div>
                                 <label for="username">Nombre de usuario</label>
-                                <input type="text" name="userName" id="userName"
+                                <input class="form-control" type="text" name="userName" id="userName"
                                     placeholder="Escribí tu nombre de usuario" class="profile_controls"
                                     value="<%= user.userName ? user.userName : null %>">
                                 <p class="text-danger">
@@ -53,17 +55,17 @@
 
                             <div>
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" name="email" id="email" placeholder="Escribí tu correo electrónico"
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Escribí tu correo electrónico"
                                     class="profile_controls" value="<%= user.email %>" disabled>
                             </div>
                             <div>
                                 <label for="telephone">Teléfono(opcional):</label>
-                                <input type="number" name="telephone" id="telephone" placeholder="Ej: 1524647589"
+                                <input class="form-control" type="number" name="telephone" id="telephone" placeholder="Ej: 1524647589"
                                     class="profile_controls" value="<%= user.telephone %>">
                             </div>
                             <div>
                                 <label for="category">Rol de usuario:</label>
-                                <input type="text" name="category" id="category" class="profile_controls"
+                                <input class="form-control" type="text" name="category" id="category" class="profile_controls"
                                     value="<%= user.rol === ROL_ADMIN ? " Administrador" : "Regular" %>" disabled>
                             </div>
 
@@ -238,18 +240,21 @@
                         </div>
                         
                     </section>
+                    
 
                     <div class="profile_main_form_button-div">
                         <button type="button" class="profile_main_form_button"><a href="/">Cancelar</a></button>
-                        <button type="submit" class="profile_main_form_button" style="cursor:pointer ;">Guardar
+                        <button type="submit" class="profile_main_form_button form-control" id="btn-guardar" style="cursor:pointer;" disabled>Guardar
                             cambios</button>
+                            <span id="msgError"></span>
                     </div>
-                    
                 </form>
 
             </main>
 
             <%- include('../partials/footer') %>
+            <script src="/Js/profile.js"></script> 
+            <%- include('../partials/script') %>
     </body>
 
 </html>

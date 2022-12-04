@@ -16,34 +16,42 @@
                         <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo">
                             <!-- Poner imagen de marcas dinámico -->
                         </article>
-                        <article class="productDetail_main_section_top_izq_fto1">
-                            <!-- Hacer el foreach de las imagenes para que no rompa -->
-                            <% if (product.images.length) { %>
-                                <img src="/img/imgProducts/<%=product.images[0].file%>" alt="foto1">
+                        <!-- Hacer el foreach de las imagenes para que no rompa -->
+
+                        <% if (product.images.length) { %>
+                            <% for( let i=0; i < product.images.length; i++ ) { %>
+                                <article class="productDetail_main_section_top_izq_fto1">
+
+                                    <img src="/img/imgProducts/<%=product.images[i].file%>" alt="foto1">
+                                </article>
                                 <% } %>
-                        </article>
-                        <article class="productDetail_main_section_top_izq_fto2">
-                            <% if (product.images.length) { %>
-                                <img src="/img/imgProducts/<%=product.images[1].file%>" alt="foto1">
-                                <% } %>
-                        </article>
+                                    <% } %>
                     </aside>
 
 
                     <article class="productDetail_main_section_top_centr">
+                        <h2 class="productDetail_name1">
+                            <%= product.name %>
+                        </h2>
                         <img src="/img/imgProducts/<%=product.image%>" alt="centro">
                     </article>
 
                     <aside class="productDetail_main_section_top_derech">
                         <div class="productDetail_main_section_top_derech_title">
-                            <h2><%= product.name %> </h2>
+                            <h2 class="productDetail_name2">
+                                <%= product.name %>
+                            </h2>
                             <div class="productDetail_main_section_top_centr_h5">
-                                <h5> <%= product.description %></h5>
+                                <h5>
+                                    <%= product.description %>
+                                </h5>
                             </div>
                         </div>
                         <div>
-                            <p class="productDetail_main_section_top_derech_price">$<%= toThousand( product.price) %> </p>
-                            <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%= toThousand((product.price / 12).toFixed(2)) %>  sin interés</span>
+                            <p class="productDetail_main_section_top_derech_price">$<%= toThousand( product.price) %>
+                            </p>
+                            <p class="productDetail_main_section_top_derech_cuotas">en <span>12 x $<%=
+                                        toThousand((product.price / 12).toFixed(2)) %> sin interés</span>
                             </p>
                         </div>
                         <div class="productDetail_main_section_top_derech_tarjetas">
@@ -55,15 +63,15 @@
                             <div>
                                 <h5> Otros Colores</h5>
                             </div>
-                                <div>
-                                    <% if (product.images.length) { %>
-                                        <img src="/img/imgProducts/<%=product.images[0].file%>" alt="art1">
-                                        <% } %>
-                                </div>
-                                <div class="productDetail_main_section_top_derech_colores_art2"> <% if (product.images.length) { %>
-                                    <img src="/img/imgProducts/<%=product.images[1].file%>" alt="art2">
+
+                            <% if (product.images.length) { %>
+                                <% for( let i=0; i < product.images.length; i++ ) { %>
+                                    <div class="productDetail_main_section_top_derech_colores_art2">
+                                        <img src="/img/imgProducts/<%=product.images[i].file%>" alt="art2">
+                                    </div>
                                     <% } %>
-                                </div>
+                                        <% } %>
+
                         </div>
                         <div class="productDetail_main_section_top_derech_stock">
                             <h4>Stock disponible</h4>
@@ -84,13 +92,14 @@
                             <button type="button">Comprar</button>
                             <button type="button">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
                             <% if (locals.userLogin) { %>
-                                    <% if (userLogin.rol === 1) { %>
-                                    <button type="button" id="edit_button"><a href="/products/edit/<%= product.id%>">Editar</a></button>
-                                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                                    <button type="submit" style="cursor: pointer;" >Eliminar</button>
-                                     <% } %>
-                                     <% } %>
-                            </form>
+                                <% if (userLogin.rol===1) { %>
+                                    <button type="button" id="edit_button"><a
+                                            href="/products/edit/<%= product.id%>">Editar</a></button>
+                                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                        <button type="submit" style="cursor: pointer;">Eliminar</button>
+                                        <% } %>
+                                            <% } %>
+                                    </form>
                         </div>
                     </aside>
 
@@ -171,7 +180,7 @@
 
             <%- include('../partials/footer') %>
 
-
+            <%- include('../partials/script') %>
     </body>
 
 </html>

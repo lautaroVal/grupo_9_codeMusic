@@ -5,8 +5,14 @@
 }
 
 .productDetail_header_sign {
+<<<<<<< HEAD
     background-color: #a7a7a7;
     color: #ffffff;
+=======
+    background-color: rgba(167, 167, 167, 0.7);
+    color: #551A8B;
+    font-weight:100;
+>>>>>>> develop
     font-size: 15px;
 }
 
@@ -119,6 +125,7 @@
     min-width: 175px;
     border-radius: 10px;
     padding: 2px;
+    font-family: none;
 }
 
 .productDetail_header_search form button {
@@ -201,7 +208,9 @@
         height: 36px;
         width: 200%;
         position: relative;
-        right: 85px;
+        right: 90px;
+        padding-left: 5px;
+        font-size: revert;
     }
 
     .productDetail_header_search form button {
@@ -262,9 +271,13 @@
     .productDetail_header_top_icon {
         display: flex;
         position: relative;
-        bottom: 5px;
+       /*  bottom: 5px; */
         gap: 18px;
         font-size: 30px;
+    }
+
+    .productDetail_header_top_icon-ul {
+        margin-bottom: 0;
     }
 
     .productDetail_header_top_icon_cart {
@@ -287,13 +300,14 @@
         margin: 0;
         padding: 12px;
         width: 100%;
+        height: 55px
     }
 
     .productDetail_header_navbar ul {
         display: flex;
         gap: 0 55px;
         text-align: center;
-        
+        margin-bottom: 0
     }
 
     .productDetail_header_navbar li {
@@ -304,10 +318,12 @@
         text-decoration: none;
         border-radius: 10px;
         padding: 6px;
-        transition: 0.8s;
+        transition: 0.4s;
     }
 
     .productDetail_header_navbar li:hover{
         background-color: black;
+        color: white;
     }
+    
 }
