@@ -1,11 +1,14 @@
 console.log("productAdd success!")
 window.addEventListener('load', () => {
 
-  msgError = (element, msg, event) => {
+  msgError = (element, msg, event, arrErrors = {}) => {
     $(element).style.color = "red";
     $(element).innerHTML = msg;
     event.target.classList.add("is-invalid");
+    arrErrors[event.target.name] = msg;
+    return arrErrors;
   }
+
 
   const validField = (element,{target}) => {
     $(element).innerHTML = null;
@@ -23,23 +26,24 @@ window.addEventListener('load', () => {
      name = $("name"),
      price = $("price"),
      description = $("description"),
-     category = $("category")
+     category = $("category");
+
 
 
   name.addEventListener('blur', (e) => {
     switch (true) {
       case !name.value.trim():
-        errores.name = msgError("msgName", "El nombre es requerido.", e)
+        errores = msgError("msgName", "El nombre es requerido.", e, errores);
         break;
       case name.value.length < 7:
-        errores.name = msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e)
+        errores = msgError("msgName", "El nombre debe tener como mínimo 7 caracteres.", e, errores);
         break;
       case name.value.length >= 60:
-        errores.name = msgError("msgName", "El nombre no puede superar los 60 caracteres.", e)
+        errores = msgError("msgName", "El nombre no puede superar los 60 caracteres.", e, errores);
         break;
       default:
         validField("msgName",e);
-        delete errores.name
+        delete errores[e.target.name];
         break;
     }
     console.log(errores)
@@ -49,14 +53,14 @@ window.addEventListener('load', () => {
   price.addEventListener('blur', (e) => {
     switch (true) {
       case !price.value.trim():
-        errores.price = msgError("msgPrice", "El precio es requerido.", e)
+        errores = msgError("msgPrice", "El precio es requerido.", e, errores)
         break;
       case +price.value <= 0:
-        errores.price = msgError("msgPrice", "El precio no puede ser 0 o negativo.", e)
+        errore = msgError("msgPrice", "El precio no puede ser 0 o negativo.", e, errores)
         break;
       default:
         validField("msgPrice",e);
-        delete errores.price
+        delete errores[e.target.name]
         break;
     }
     console.log(errores)
@@ -69,14 +73,14 @@ window.addEventListener('load', () => {
         e.target.classList.remove('is-invalid')
         break;
       case +discount.value < 0:
-        errores.discount = msgError("msgDiscount", "El descuento no puede ser negativo.", e)
+        errores = msgError("msgDiscount", "El descuento no puede ser negativo.", e, errores)
         break;
       case +discount.value > 100:
-        errores.discount = msgError("msgDiscount", "El descuento no puede ser mayor a 100.", e)
+        errores = msgError("msgDiscount", "El descuento no puede ser mayor a 100.", e, errores)
         break;
       default:
         validField("msgDiscount",e);
-        delete errores.discount
+        delete errores[e.target.name]
         break;
     }
     console.log(errores)
@@ -85,17 +89,17 @@ window.addEventListener('load', () => {
   description.addEventListener('blur', (e) => {
     switch (true) {
       case !description.value.trim():
-        errores.description = msgError("msgDescription", "La descripción es requerida.", e)
+        errores = msgError("msgDescription", "La descripción es requerida.", e, errores)
         break;
       case description.value.trim().length < 20:
-        errores.description = msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e)
+        errores = msgError("msgDescription", "La descripción debe tener 20 caracteres como mínimo.", e, errores)
         break;
       case description.value.trim().length >= 500:
-        errores.description = msgError("msgDescription", "La descripción no puede superar 500 caracteres.", e)
+        errores = msgError("msgDescription", "La descripción no puede superar 500 caracteres.", e, errores)
         break;
       default:
         validField("msgDescription",e);
-        delete errores.description;
+        delete errores[e.target.name]
         break;
     }
     console.log(errores)
@@ -124,11 +128,11 @@ window.addEventListener('load', () => {
   category.addEventListener('blur', (e) => {
     switch (true) {
       case !category.value.trim():
-        errores.category = msgError("msgCategory", "Debe seleccionar una categoría", e)
+        errores = msgError("msgCategory", "Debe seleccionar una categoría", e, errores)
         break;
       default:
         validField("msgCategory",e);
-        delete errores.category
+        delete errores[e.target.name]
         break;
     }
     console.log(errores)
@@ -177,20 +181,43 @@ window.addEventListener('load', () => {
   $('edit_Form').addEventListener('submit', (e) => {
     e.preventDefault();
     const inputs = [price,name,description,category];
-    console.log(Object.keys(errores));
+    const erroresKeys = Object.keys(errores);
+    console.log(Object.keys(erroresKeys));
 
-    for (let i = 0; i < inputs.length; i++) {
+    inputs.forEach((input) => {
+      erroresKeys.forEach( (field) => {
+        if (input.name === field) {
+          input.classList.add("is-invalid");
+        }
+      });
+    });
+
+    if (!erroresKeys.length) {
+      $('edit_Form').submit()
+    } else {
+      $('msgError').innerText = "Debes completar bien los campos requeridos.";
+      $('msgError').style.color = "red";
+    }
+
+    
+  });
+
+
+
+   /*  for (let i = 0; i < inputs.length; i++) {
 
       if (inputs[i].value.length == 0 || Object.keys(errores).length >= 1) {
         console.log(inputs[i].value.length);
-        inputs[i].classList.contains('is-valid') || inputs[i].classList.add("is-invalid");
+        if (!inputs[i].classList.contains('is-valid')) {
+          inputs[i].classList.add("is-invalid");
+        }
+
         $('msgError').innerText = "Debes completar bien los campos requeridos.";
         $('msgError').style.color = "red"
       } else {
         $('edit_Form').submit()
       }
-    }
+    } */
 
     
-  });
 })

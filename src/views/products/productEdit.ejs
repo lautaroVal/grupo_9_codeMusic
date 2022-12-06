@@ -114,6 +114,24 @@
                     </div>
 
                     <div>
+                        <label for="category" class="form-label">Elige una categoria:</label>
+                        <select name="categoryId" id="category" class="form-control">
+                            <option value="" disabled>Elegí una categoría</option>
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>" <%=product.category.name===category.name
+                                    && "selected" %>> <%= category.name%>
+                                </option>
+                                <% }) %>
+                                    <span id="msgCategory"></span>
+                                    <% if (locals.errors && errors.categoryId) { %>
+                                        <p class="register_errors">
+                                            <%= errors.categoryId.msg %>
+                                        </p>
+                                        <% } %>
+                        </select>
+                    </div>
+
+                    <div>
                         <label for="brand" class="form-label">Elige una marca:</label>
                         <select name="brandId" id="brand" class="form-control">
                             <option value="" disabled>Elegí una marca</option>
@@ -149,23 +167,7 @@
                             </select>
                         </div>
 
-                        <div>
-                            <label for="category" class="form-label">Elige una categoria:</label>
-                            <select name="categoryId" id="category" class="form-control">
-                                <option value="" disabled>Elegí una categoría</option>
-                                <% categories.forEach(category=> { %>
-                                    <option value="<%= category.id %>" <%=product.category.name===category.name
-                                        && "selected" %>> <%= category.name%>
-                                    </option>
-                                    <% }) %>
-                                        <span id="msgCategory"></span>
-                                        <% if (locals.errors && errors.categoryId) { %>
-                                            <p class="register_errors">
-                                                <%= errors.categoryId.msg %>
-                                            </p>
-                                            <% } %>
-                            </select>
-                        </div>
+                        
 
                         <div>
                             <label for="status">Oferta:</label>
