@@ -114,14 +114,38 @@
                     </div>
 
                     <div>
+                        <label for="category" class="form-label">Elige una categoria:</label>
+                        <select name="categoryId" id="category" class="form-control">
+                            <option value="" disabled>Elegí una categoría</option>
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>" <%=product.category.name===category.name
+                                    && "selected" %>> <%= category.name%>
+                                </option>
+                                <% }) %>
+                                    <span id="msgCategory"></span>
+                                    <% if (locals.errors && errors.categoryId) { %>
+                                        <p class="register_errors">
+                                            <%= errors.categoryId.msg %>
+                                        </p>
+                                        <% } %>
+                        </select>
+                    </div>
+
+                    <div>
                         <label for="brand" class="form-label">Elige una marca:</label>
                         <select name="brandId" id="brand" class="form-control">
                             <option value="" disabled>Elegí una marca</option>
-                            <% brands.forEach(brand=> { %>
-                                <option value="<%= brand.id %>" <%=product.brand.name===brand.name && "selected" %>>
-                                    <%=brand.name%>
-                                </option>
-                                <% }) %>
+                            <% if (product.brand) { %>
+                                <% brands.forEach(brand=> { %>
+                                    <option value="<%= brand.id %>" <%=product.brand.name===brand.name && "selected" %>>
+                                        <%=brand.name%>
+                                    </option>
+                                    <% }) %>
+                            <% }else {%>
+                                <% brands.forEach(({id,name}) => { %>
+                                    <option value="<%= id %>"><%= name %></option>
+                                    <% }) %>
+                            <% } %>
                                     <% if (locals.errors && errors.brandId) { %>
                                         <p class="register_errors">
                                             <%= errors.brandId.msg %>
@@ -134,38 +158,26 @@
                             <label for="color" class="form-label">Elige un color:</label>
                             <select name="colorId" id="color" class="form-control">
                                 <option value="" disabled>Elegí un color</option>
-
-                                <% colors.forEach(color=> { %>
-                                    <option value="<%= color.id %>" <%=product.color && product.color.name===color.name
-                                        ? "selected" : null%>> <%= color.name%>
-                                    </option>
-                                    <% }) %>
+                                <% if (product.color) { %>
+                                    <% colors.forEach(color=> { %>
+                                        <option value="<%= color.id %>" <%=product.color && product.color.name===color.name
+                                            ? "selected" : null%>> <%= color.name%>
+                                        </option>
+                                        <% }) %>
+                                <% } else {%> 
+                                    <% colors.forEach(({id,name}) => { %>
+                                        <option value="<%= id %>"><%= name %></option>
+                                        <% }) %>
+                                        <% } %>
                                         <% if (locals.errors && errors.colorId) { %>
                                             <p class="register_errors">
                                                 <%= errors.colorId.msg %>
                                             </p>
                                             <% } %>
-
                             </select>
                         </div>
 
-                        <div>
-                            <label for="category" class="form-label">Elige una categoria:</label>
-                            <select name="categoryId" id="category" class="form-control">
-                                <option value="" disabled>Elegí una categoría</option>
-                                <% categories.forEach(category=> { %>
-                                    <option value="<%= category.id %>" <%=product.category.name===category.name
-                                        && "selected" %>> <%= category.name%>
-                                    </option>
-                                    <% }) %>
-                                        <span id="msgCategory"></span>
-                                        <% if (locals.errors && errors.categoryId) { %>
-                                            <p class="register_errors">
-                                                <%= errors.categoryId.msg %>
-                                            </p>
-                                            <% } %>
-                            </select>
-                        </div>
+                        
 
                         <div>
                             <label for="status">Oferta:</label>

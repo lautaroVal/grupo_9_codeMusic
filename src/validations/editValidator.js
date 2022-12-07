@@ -17,7 +17,7 @@ module.exports = [
     body('description')
         .notEmpty().withMessage("Debe ingresar un descripción.").bail()
         .isLength({ min: 20 }).withMessage('Debe contener 20 caracteres como mínimo.').bail()
-        .isLength({ max: 500 }).withMessage('Debe contener 255 caracteres como máximo.'),
+        .isLength({ max: 500 }).withMessage('Debe contener 500 caracteres como máximo.'),
 
     body('categoryId')
         .notEmpty().withMessage("Debe ingresar una categoría.")

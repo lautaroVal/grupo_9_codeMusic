@@ -14,19 +14,26 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Image, {
         as: "images",
         foreignKey: "productId",
-        onDelete: 'cascade'
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
       });
       this.belongsTo(models.Brand, {
         as: "brand",
-        foreignKey: "brandId"
+        foreignKey: "brandId",
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
       });
       this.belongsTo(models.Category, {
         as: "category",
-        foreignKey: "categoryId"
+        foreignKey: "categoryId",
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
       });
       this.belongsTo(models.Color, {
         as: "color",
-        foreignKey: "colorId"
+        foreignKey: "colorId",
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
       });
     }
   }
