@@ -1,9 +1,14 @@
-/* MAIN */ 
+/* BODY */
+.index {
+    width: 100%;
+}
 
-/* MAIN CARROUSEL */
+/* MAIN */ 
 html {
     scroll-behavior: smooth;
 }
+
+/* MAIN CARROUSEL */
 
 .figure_banner {
     width: 100%;
@@ -19,7 +24,7 @@ html {
 /* MAIN PRODUCTS */
 
 .main_container {
-    width: 95%;
+    width: 98%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -271,7 +276,7 @@ html {
     position: fixed;
     right: 20px;
     font-size: 25px;
-    padding: 5px 10px;
+    padding: 4px 12px;
     border-radius: 50%;
 }
 
