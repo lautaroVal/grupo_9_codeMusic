@@ -16,8 +16,8 @@ module.exports = [
     body('price')
         .notEmpty().withMessage("El precio es requerido.").bail()
         .isNumeric().withMessage("Debe ingresar un valor númerico"),
-    body('discount')
-        .isNumeric().withMessage("Debe ingresar un valor númerico"),
+   /*  body('discount')
+        .isNumeric().withMessage("Debe ingresar un valor númerico"), */
     body('description')
         .notEmpty().withMessage('La descripción es requerida.')
         .isLength({ min: 20 }).withMessage('La descripción debe tener 20 caracteres como mínimo.').bail()

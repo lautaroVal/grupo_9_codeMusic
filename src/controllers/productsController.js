@@ -95,15 +95,15 @@ module.exports = {
 				const product = await db.Product.create({
 					...req.body,
 					name: name.trim(),
-					price: +price,
+					price: +price,            
 					status: status ? status : 0,
 					share: +share ? +share : 12,
 					discount: +discount,
 					image: req.files.image ? req.files.image[0].filename : 'Img-default.jpg',
 					description: description.trim(),
-					brandId: +brandId,
-					colorId: +colorId,
-					categoryId: +categoryId
+					brandId: +brandId ? +brandId  : null,             
+					colorId: +colorId ? +colorId : null,             
+					categoryId: +categoryId ? +categoryId : null       
 				})
 				// Si crea el producto traigo los propiedades name y productId de las imágenes y las creo.
 				if (req.files.images) {
@@ -209,9 +209,9 @@ module.exports = {
 				share: +share ? +share : 0,
 				discount: +discount,
 				description: description,
-				brandId,
-				categoryId,
-				colorId,
+				brandId : +brandId ? +brandId : null,
+				categoryId: +categoryId ? +categoryId : null,
+				colorId: +colorId ? +colorId : null,
 				status
 			},
 				{
