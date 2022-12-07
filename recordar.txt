@@ -2,4 +2,4 @@
 
 - validar email que no esté registrado (register)
 - validar el tipo de archivo de imagen y la cantidad en productAdd
-- arreglar que cuando haces submit en edit te marca error todos los campos y no solo el que tiene error.
+
