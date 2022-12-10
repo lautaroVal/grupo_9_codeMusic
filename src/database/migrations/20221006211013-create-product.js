@@ -38,6 +38,7 @@ module.exports = {
       },
       brandId: {
         type: Sequelize.INTEGER,
+        defaultValue: null,
         references : {
           model : {
             tableName : 'Brands'
@@ -47,6 +48,7 @@ module.exports = {
       },
       colorId: {
         type: Sequelize.INTEGER,
+        defaultValue: null,
         references : {
           model : {
             tableName : 'Colors'
