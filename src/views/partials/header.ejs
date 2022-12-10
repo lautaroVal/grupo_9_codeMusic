@@ -3,16 +3,19 @@
         <span>🔥 Envíos gratis a todo el país 🔥</span>
     </div>
 <div class="productDetail_header">
-    <section class="productDetail_header_top">
-        <div class="productDetail_header_top_burger">
-            <button><i class="fa fa-bars"></i></button>
 
+    <section class="productDetail_header_top">
+
+        <div class="productDetail_header_top_burger" id="burguerMenu">
+            <button id="burguerMenu"><i class="fa fa-bars" ></i></button>
         </div>
+
         <div class="productDetail_header_top_logo">
             <a href="/">
                 <img src="/img/LOGO-CODEMUSIC.png" alt="Code Music" title="Code Music">
             </a>
         </div>
+
         <div class="productDetail_header_top_icon">
             <% if (locals.userLogin) { %>
                 <ul class="productDetail_header_top_icon-ul">
@@ -29,6 +32,7 @@
             </a>
             <% } %>
         </div>
+
     </section>
     
     <div class="productDetail_header_search">
@@ -37,9 +41,10 @@
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
+    
 </div>
 
-<nav class="productDetail_header_navbar">
+<div class="productDetail_header_navbar" id="NavBurguer">
     <ul>
         <li><a href="/products">Todos los productos</a></li>
         <li><a href="..#guitar">Guitarras</a></li>
@@ -48,6 +53,7 @@
         <li><a href="..#microphone">Micrófonos y sonido</a></li>
         <li><a href="..#wind">Instrumentos de vientos</a></li>
     </ul>
-</nav>
+</div>
 
+<script src="/js/header.js"></script>
 </header>
