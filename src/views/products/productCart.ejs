@@ -21,8 +21,8 @@
                     <article class="productCart_detalleProducto">
 
                         <div class="item1">
-                            <p class="productCart_detalleProducto_nombreProducto_bateria">bateriaMapex</p>
-                            <img class="productCart_detalleProducto_imagenbateria" src="/img/bateriaMapex.jpg">
+                            <p class="productCart_detalleProducto_nombreProducto_bateria"><% product.name %></p>
+                            <img class="productCart_detalleProducto_imagenbateria" src="/img/<% product.image %>">
                         </div>
 
                         <div>
@@ -78,11 +78,7 @@
                 </section>
             </main>
 
-            <div id="whatsapp">
-                <a href="#">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-            </div>
+            <%- include('../partials/whatsapp') %>  
 
             <%- include('../partials/footer') %>
 

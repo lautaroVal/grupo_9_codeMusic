@@ -1,4 +1,7 @@
 'use strict';
+
+const { SINOFERTA } = require("../../constants/products");
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Products', {
@@ -18,7 +21,7 @@ module.exports = {
       },
       status: {
         type: Sequelize.TINYINT,
-        defaultValue: 0                     // 0 = sinOferta & 1 = oferta
+        defaultValue: SINOFERTA                     // 0 = sinOferta & 1 = oferta
       },
       share: {
         type: Sequelize.INTEGER,

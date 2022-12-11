@@ -13,20 +13,11 @@ const cors = require('cors');
 
 const app = express();
 
+/* -- MIDDLEWARES --*/
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-/* -- ROUTES --*/
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var productsRouter = require('./routes/products');
-
-const mainApi = require('./routes/APIs/apiMain');
-const userApi = require('./routes/APIs/apiUsers');
-const productsApi = require('./routes/APIs/apiProducts');
-
-/* -- MIDDLEWARES --*/
 app.use(cookieParse());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -44,14 +35,14 @@ app.use(cors());
 app.use(cookieCheck);
 app.use(localsUserCheck);
 
+/* -- ROUTES --*/
+app.use('/', require('./routes/index'));
+app.use('/users', require('./routes/users'));
+app.use('/products', require('./routes/products'));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/products', productsRouter);
-
-app.use('/api', mainApi);
-app.use('/api/users', userApi);
-app.use('/api/products', productsApi)
+app.use('/api', require('./routes/APIs/apiMain'));
+app.use('/api/users', require('./routes/APIs/apiUsers'));
+app.use('/api/products', require('./routes/APIs/apiProducts'));
 
 
 app.use((req, res, next) => {

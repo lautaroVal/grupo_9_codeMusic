@@ -127,10 +127,11 @@ module.exports = {
       const id = req.session.userLogin.id;
       const user = await db.User.findByPk(id, {         //Traigo al usuario cuyo id es igual al guardado en session del usuario logueado.
         include: [
-          { association: 'locations' }]
-
-      });
-
+          { association: 'locations' },]
+          
+        });
+/*         return res.json(user)
+ */
       if (user) {                                     // Si viene user renderizo la vista de profile.
         return res.render('users/profile', {
           title: 'Perfil de usuario',
