@@ -52,6 +52,11 @@
 }
 
 /* header top */
+.menuBurguer{
+    border-radius: 5px;
+    background-color: var(--ColorNegro);
+    color: white;
+}
 
 .productDetail_header_top {
     display: flex;
@@ -60,6 +65,7 @@
     justify-content: space-between;
     margin: auto;
     width: 100%;
+    right: 43px;
 }
 
 .productDetail_header_top_burger {
@@ -102,6 +108,8 @@
 
 .productDetail_header_top_icon_login {
     font-size: 25px;
+    position: relative;
+    left: 28px;
 }
 
 .productDetail_header_top_icon_cart {
@@ -146,16 +154,9 @@
 }
 
 .productDetail_header_navbar li:hover {
-    background-color: rgb(228, 228, 228);
+    background-color:#551A8B;
     color: rgb(42, 42, 42);
 }
-
-/* .productDetail_header_navbar li {
-    display: none;
-    list-style: none;
-    list-style-type: none;
-    margin: 3px;
-} */
 
 /* header search */
 
@@ -215,8 +216,8 @@
 
     .productDetail_header_top_burger button {
         font-size: 28px;
-        width: 38px;
-        height: 38px;
+        width: 32px;
+        height: 27px;
     }
 
     .productDetail_header_top_logo {
@@ -233,8 +234,8 @@
 
     .productDetail_header_top_icon {
         display: flex;
-        gap: 0 18px;
-        font-size: 30px;
+        gap: 0 38px;
+        font-size: 28px;
     }
 
     .productDetail_header_top_li {
@@ -311,7 +312,7 @@
 
     .productDetail_header_top_logo img {
         width: 100%;
-        margin: 0;
+        margin: 0px 0px 0px 40px;
         padding: 0;
         position: 0;
     }
@@ -341,14 +342,26 @@
     }
 
     /* header nav */
+    .productDetail_header_navbar {
+        box-shadow: 2px 0px 5px 2px rgb(41, 41, 41);
+        width: 200px;
+        height: 50vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+        margin: 109px 0px 0px 0px;
+        transform: translate(-600px);
+    }
 
     .productDetail_header_navbar {
         position: relative;
         background-color: #38184C;
         margin: 0;
-        padding: 12px;
+        padding: 11px;
         width: 100%;
-        height: 55px
+        height: 55px;
+        left: 600px;
     }
 
     .productDetail_header_navbar ul {
