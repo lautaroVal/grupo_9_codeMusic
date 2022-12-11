@@ -1,9 +1,7 @@
-let
-iconBurguer = document.getElementById('burguerMenu')
-menu = document.getElementById('NavBurguer')
+let iconBurguer = document.getElementById('burguerMenu')
+let menu = document.getElementById('NavBurguer')
 
 iconBurguer.addEventListener('click', (e) => {
-    console.log('holA')
-    menu.classList.toggle('.active')
-    menu.classList.toggle('.opacity')
+    menu.classList.toggle('active')
+    menu.classList.toggle('opacity')
 })
