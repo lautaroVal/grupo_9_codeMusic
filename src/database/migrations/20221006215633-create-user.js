@@ -1,4 +1,7 @@
 'use strict';
+
+const { ROL_USER } = require("../../constants/users");
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Users', {
@@ -45,7 +48,7 @@ module.exports = {
       rol: {
         allowNull: false,
         type: Sequelize.TINYINT,
-        defaultValue: 0                   // 0 = user & 1 = admin
+        defaultValue: ROL_USER                   // 0 = user & 1 = admin
       },
       createdAt: {
         allowNull: false,
