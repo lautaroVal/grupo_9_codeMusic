@@ -1,5 +1,6 @@
 /* HEADER */
-.index, .productDetail {
+.index,
+.productDetail {
     background-color: var(--ColorGris);
     color: var(--ColorGris);
 }
@@ -23,15 +24,19 @@
     width: 37ch;
     animation: typing 4s steps(37) infinite, blink 5s infinite step-end alternate;
     overflow: hidden;
-    
+
 }
 
 @keyframes typing {
-    from {width: 0}
+    from {
+        width: 0
+    }
 }
 
 @keyframes blink {
-    50% { border-color: transparent}
+    50% {
+        border-color: transparent
+    }
 }
 
 .productDetail_header_container {
@@ -47,29 +52,42 @@
 }
 
 /* header top */
+.menuBurguer{
+    border-radius: 5px;
+    background-color: var(--ColorNegro);
+    color: white;
+}
 
 .productDetail_header_top {
     display: flex;
     align-items: center;
-    /* position: relative; */
+    position: relative;
     justify-content: space-between;
     margin: auto;
     width: 100%;
+    right: 43px;
 }
 
-.productDetail_header_top_burger button {
-    background-color: var(--ColorNegro);
-    color: var(--ColorBlanco);
+.productDetail_header_top_burger {
+    margin: 40px 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.productDetail_header_top_burger i {
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
     font-size: 18px;
     width: 28px;
-    height: 28px;
+    height: 20px;
     border: none;
 }
 
 .productDetail_header_top_logo {
     width: 40%;
     max-width: 220px;
-    margin:auto;
+    margin: auto;
 }
 
 .productDetail_header_top_logo img {
@@ -77,7 +95,7 @@
 }
 
 .productDetail_header_top_icon {
-    position:relative;
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -90,6 +108,8 @@
 
 .productDetail_header_top_icon_login {
     font-size: 25px;
+    position: relative;
+    left: 28px;
 }
 
 .productDetail_header_top_icon_cart {
@@ -98,13 +118,44 @@
 
 /* header nav */
 
-.productDetail_header_navbar li {
-    display: none;
-    list-style: none;
-    list-style-type: none;
-    margin: 3px;
-    text-decoration: none;
+.productDetail_header_navbar {
+    box-shadow: 2px 0px 5px 2px rgb(41, 41, 41);
+    width: 200px;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    margin: 109px 0px 0px 0px;
+    transform: translate(-600px);
+}
 
+.active {
+    transform: translate(0px);
+}
+
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s ease;
+}
+
+.productDetail_header_navbar ul {
+    list-style: none;
+}
+
+
+.productDetail_header_navbar li {
+    color: white;
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+.productDetail_header_navbar li:hover {
+    background-color:#551A8B;
+    color: rgb(42, 42, 42);
 }
 
 /* header search */
@@ -138,7 +189,7 @@
 
 .productDetail_header_search form button i {
     border: none;
-    
+
 }
 
 .index_header_search_form button i {
@@ -165,8 +216,8 @@
 
     .productDetail_header_top_burger button {
         font-size: 28px;
-        width: 38px;
-        height: 38px;
+        width: 32px;
+        height: 27px;
     }
 
     .productDetail_header_top_logo {
@@ -183,8 +234,8 @@
 
     .productDetail_header_top_icon {
         display: flex;
-        gap: 0 18px;
-        font-size: 30px;
+        gap: 0 38px;
+        font-size: 28px;
     }
 
     .productDetail_header_top_li {
@@ -258,10 +309,10 @@
         padding: 0;
         left: 0;
     }
-    
+
     .productDetail_header_top_logo img {
         width: 100%;
-        margin: 0;
+        margin: 0px 0px 0px 40px;
         padding: 0;
         position: 0;
     }
@@ -269,7 +320,7 @@
     .productDetail_header_top_icon {
         display: flex;
         position: relative;
-       /*  bottom: 5px; */
+        /*  bottom: 5px; */
         gap: 18px;
         font-size: 30px;
     }
@@ -291,14 +342,26 @@
     }
 
     /* header nav */
+    .productDetail_header_navbar {
+        box-shadow: 2px 0px 5px 2px rgb(41, 41, 41);
+        width: 200px;
+        height: 50vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+        margin: 109px 0px 0px 0px;
+        transform: translate(-600px);
+    }
 
     .productDetail_header_navbar {
         position: relative;
         background-color: #38184C;
         margin: 0;
-        padding: 12px;
+        padding: 11px;
         width: 100%;
-        height: 55px
+        height: 55px;
+        left: 600px;
     }
 
     .productDetail_header_navbar ul {
@@ -319,9 +382,9 @@
         transition: 0.4s;
     }
 
-    .productDetail_header_navbar li:hover{
+    .productDetail_header_navbar li:hover {
         background-color: black;
         color: white;
     }
-    
+
 }
