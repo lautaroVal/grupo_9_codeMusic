@@ -7,38 +7,73 @@
         <%- include('./partials/header') %>
 
             <main>
-                <figure class="figure_banner">
-                    <img src="/img/index/banner-codemusic.jpg" alt="Carrousel">
-                </figure>
+                <div class="carrousel">
+                    <div class="carrousel__contenedor">
+                        <button aria-label="Anterior" class="carrousel__anterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+
+                        <div class="carrousel__lista">
+                            <div class="carrousel__elemento">
+                                <img src="/img/index/banner-codemusic.jpg" alt="Tienda Code Music">
+                            </div>
+                            <div class="carrousel_elemento">
+                                <img src="/img/index/CODEMUSIC-Banner.png" alt="Tarjeta Code Music">
+                            </div>
+                        </div>
+
+                        <button aria-label="Siguiente" class="carrousel__siguiente">
+                            <i class="fa-solid fa-chevron-rigth"></i>
+                        </button>
+                    </div>
+
+                    <div role="tablist" class="carrousel__indicadores"></div>
+                </div>
 
                 <div class="main_container">
 
                     <div class="index_medios_de_pago">
-                            <img src="\img\index\mp-chicosvg1.jpg" alt="medios de pago">                       
+                        <img src="\img\index\mp-chicosvg1.jpg" alt="medios de pago">
                     </div>
 
                     <h1>OFERTAS</h1>
-                    
-                    <section class="index_section_products">
-                        <% oferta.forEach((product,index)=> { %>
 
+                    <div class="slider__offer">
+                    <div class="slider__contenedor">
+
+                       <button aria-label="Anterior" class="slider__anterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>             
+                    
+                       <section class="index_section_products offer">
+                        <% oferta.forEach((product,index)=> { %>
                             <article class="index_product">
-                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.image %>" alt="product"></div>
+                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.image%>"
+                                        alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
                                 </h3>
-                                
+
                                 <div class="index_product_bottom">
                                     <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
-                                    <p class="index_product_envío"> Envío Gratis</p>
-                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
-                                        más</a>
+                                    <p class="index_product_envío">Envío Gratis</p>
+                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver más</a>
                                 </div>
                             </article>
                             <% }) %>
+                        </section>
+                    
+                       <button aria-label="Siguiente" class="slider__siguiente">
+                             <i class="fa-solid fa-chevron-right"></i>
+                        </button>    
 
-                    </section>
+                        <!-- <div role="tablist" class="slider__indicadores"></div>     -->             
+                    </div>
+                    </div>
+
+
+
 
                     <div class="index_div_info">
                         <article>
@@ -154,8 +189,8 @@
                         <% guitarras.forEach((product,index)=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.image %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                    alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -182,8 +217,8 @@
                         <% baterias.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.image %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                    alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -209,8 +244,8 @@
                         <% teclados.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.image %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                    alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -235,8 +270,8 @@
                         <% microfonosYSonido.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" +
-                                        product.image %>" alt="product"></div>
+                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                    alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
                                     <%= product.name %>
@@ -282,11 +317,13 @@
 
             </main>
 
-            <%- include('./partials/whatsapp') %>  
+            <%- include('./partials/whatsapp') %>
 
-            <%- include('./partials/footer') %>
+                <%- include('./partials/footer') %>
 
-            <%- include('./partials/script') %>
+                    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
+                    <script src="/Js/carrousel.js"></script>
+                    <%- include('./partials/script') %>
     </body>
 
 </html>
