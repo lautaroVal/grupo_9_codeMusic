@@ -7,28 +7,33 @@
         <%- include('./partials/header') %>
 
             <main>
-                <div class="carrousel">
-                    <div class="carrousel__contenedor">
-                        <button aria-label="Anterior" class="carrousel__anterior">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </button>
 
-                        <div class="carrousel__lista">
-                            <div class="carrousel__elemento">
-                                <img src="/img/index/banner-codemusic.jpg" alt="Tienda Code Music">
-                            </div>
-                            <div class="carrousel_elemento">
-                                <img src="/img/index/CODEMUSIC-Banner.png" alt="Tarjeta Code Music">
-                            </div>
-                        </div>
-
-                        <button aria-label="Siguiente" class="carrousel__siguiente">
-                            <i class="fa-solid fa-chevron-rigth"></i>
-                        </button>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/img/index/banner-codemusic.jpg" class="d-block w-100" alt="Tienda Code Music">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/index/CODEMUSIC-Banner.png" class="d-block w-100" alt="Tarjeta Code Music">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/index/banner-codemusic.jpg" class="d-block w-100" alt="Tienda Code Music">
+                      </div>
                     </div>
-
-                    <div role="tablist" class="carrousel__indicadores"></div>
-                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
 
                 <div class="main_container">
 
@@ -321,8 +326,7 @@
 
                 <%- include('./partials/footer') %>
 
-                    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
-                    <script src="/Js/carrousel.js"></script>
+                   <!--  <script src="/Js/carrousel.js"></script> -->
                     <%- include('./partials/script') %>
     </body>
 
