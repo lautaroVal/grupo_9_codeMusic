@@ -10,7 +10,7 @@ html {
 
 /*  CARROUSEL */
 
-.carrousel {
+/* .carrousel {
     width: 100%;
     margin: 0 auto 5px;
 }
@@ -19,34 +19,12 @@ html {
     width: 100%; 
     min-height: 150px;
     margin: 0;
-}
+} */
 
-.carrousel__contenedor {
-    position: relative;
-}
-
-.carrousel__anterior, .carrousel__siguiente {
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 30px;
-    border: none;
-    top: calc(50% - 35px);
-    cursor: pointer;
-    line-height: 30px;
-    text-align: center;
-    background-color: none;
-    color: white;
-    opacity: 20%;
-    z-index: 10;
-}
-
-.carrousel__anterior {
-    left: 0px;
-}
-
-.carrousel__siguiente {
-    right: 0px;
+.carousel-item {
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /* MAIN PRODUCTS */
@@ -361,6 +339,7 @@ html {
     font-size: 25px;
     padding: 4px 12px;
     border-radius: 50%;
+    z-index: 100;
 }
 
 /* 
@@ -397,9 +376,10 @@ FOOTER */
 @media (min-width: 768px) {
 
     /* MAIN  CARROUSEL */
-.figure_banner {
-    height: initial;
-}
+    .carousel-item {
+        height: 48vh;
+        background-size: 100% 100%;
+    }
 
 /* MAIN PRODUCTS */
 .main_container {
@@ -407,15 +387,11 @@ FOOTER */
     justify-content: center;
 }
 
-/* .index_medios_de_pago img {
-    width: 360px;
-} */
 
 .index_section_products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-   /*  gap: 1px; */
 }
 
 #guitarras, #batterys, #pianos, #microphones, #winds {
@@ -438,11 +414,15 @@ FOOTER */
     justify-content: space-between;
 }
 
-
 }
 /* 
 ----------------------------------------------------------------------- */
 @media (min-width: 1024px) {
+
+    .carousel-item {
+        height: 65vh;
+        background-size: 100%;
+    }
 
     .index_section_products {
         justify-content: space-around;

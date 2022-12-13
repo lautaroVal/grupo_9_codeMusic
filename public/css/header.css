@@ -173,15 +173,16 @@
     height: 26px;
     min-width: 175px;
     border-radius: 10px;
-    padding: 2px;
+    padding: 4px;
     font-family: none;
+    border: none;
 }
 
 .productDetail_header_search form button {
     position: absolute;
     outline: none;
-    right: 6px;
-    top: 5px;
+    right: 8px;
+    top: 2px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -189,7 +190,6 @@
 
 .productDetail_header_search form button i {
     border: none;
-
 }
 
 .index_header_search_form button i {
@@ -267,7 +267,7 @@
         outline: none;
         font-size: 18px;
         right: -75px;
-        top: 8px;
+        top: 6px;
         background-color: transparent;
     }
 
