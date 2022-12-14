@@ -128,6 +128,7 @@
     transition: all .5s ease;
     margin: 109px 0px 0px 0px;
     transform: translate(-600px);
+    z-index: 10;
 }
 
 .active {
