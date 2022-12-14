@@ -1,99 +1,131 @@
 [
     {
-        "name": "Yamaha"
+        "name": "Yamaha",
+        "image": "yamaha.png"
     },
     {
-        "name": "Fender"
+        "name": "Fender",
+        "image": "fender.png"
     },
     {
-        "name": "Taylor"
+        "name": "Taylor",
+        "image": "taylor.png"
     },
     {
-        "name": "Shure"
+        "name": "Shure",
+        "image": "shure.png"
     },
     {
-        "name": "Casio"
+        "name": "Casio",
+        "image": "casio.png"
     },
     {
-        "name": "Korg"
+        "name": "Korg",
+        "image": "korg.png"
     },
     {
-        "name": "Ampeg"
+        "name": "Ampeg",
+        "image": "ampeg.png"
     },
     {
-        "name": "Audio-technica"
+        "name": "Audio-technica",
+        "image": "audio-technica.png"
     },
     {
-        "name": "Behringer"
+        "name": "Behringer",
+        "image": "behringer.png"
     },
     {
-        "name": "Beyerdynamic"
+        "name": "Beyerdynamic",
+        "image": "beyerdynamic.png"
     },
     {
-        "name": "Blackstar"
+        "name": "Blackstar",
+        "image": "blackstar.png"
     },
     {
-        "name": "Hercules"
+        "name": "Hercules",
+        "image": "hercules.png"
     },
     {
-        "name": "Zildjian"
+        "name": "Zildjian",
+        "image": "zildjian.png"
     },
     {
-        "name": "D'addario"
+        "name": "D'addario",
+        "image": "d'addario.png"
     },
     {
-        "name": "Stagg"
+        "name": "Stagg",
+        "image": "stagg.png"
     },
     {
-        "name": "Phonic"
+        "name": "Phonic",
+        "image": "phonic.png"
     },
     {
-        "name": "Ibanez"
+        "name": "Ibanez",
+        "image": "ibanez.png"
     },
     {
-        "name": "Roland"
+        "name": "Roland",
+        "image": "roland.png"
     },
     {
-        "name": "Roy Benson"
+        "name": "Roy Benson",
+        "image": "roybenson.png"
     },
     {
-        "name": "BLG Audio"
+        "name": "BLG Audio",
+        "image": "blgaudio.png"
     },
     {
-        "name": "Bogner Amplification"
+        "name": "Bogner Amplification",
+        "image": "bogneramplification.png"
     },
     {
-        "name": "Breyer"
+        "name": "Breyer",
+        "image": "breyer.png"
     },
     {
-        "name": "Pearl"
+        "name": "Pearl",
+        "image": "pearl.png"
     },
     {
-        "name": "Gator Cases"
+        "name": "Gator Cases",
+        "image": "gatorcases.png"
     },
     {
-        "name": "Marshall"
+        "name": "Marshall",
+        "image": "marshall.png"
     },
     {
-        "name": "Epiphone"
+        "name": "Epiphone",
+        "image": "epiphone.png"
     },
     {
-        "name": "Cort"
+        "name": "Cort",
+        "image": "cort.png"
     },
     {
-        "name": "Parquer"
+        "name": "Parquer",
+        "image": "parquer.png"
     },
     {  
-        "name": "Mapex"
+        "name": "Mapex",
+        "image": "mapex.png"
     },
     {
-        "name": "Artesia"
+        "name": "Artesia",
+        "image": "artesia.png"
     },
     {
-        "name": "Lincoln Winds"
+        "name": "Lincoln Winds",
+        "image": "lincolnwinds.png"
     },
     {
-        "name": "Wisemann"
+        "name": "Wisemann",
+        "image": "wisemann.png"
     }
 ]
 

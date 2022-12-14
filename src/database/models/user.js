@@ -17,7 +17,13 @@ module.exports = (sequelize, DataTypes) => {
         otherKey:'locationId',
         through:'userlocations',
         onDelete: 'cascade'
-      })
+      });
+      this.hasMany(models.Order, {
+        as: "Orders",
+        foreignKey: "userId",
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
+      });
     }
   }
   User.init({

@@ -1,5 +1,4 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Orders', {
@@ -25,11 +24,11 @@ module.exports = {
         },
         onDelete: 'cascade'
       },
-      statusId: {
+      statuId: {
         type: Sequelize.INTEGER,
         references: {
           model:{
-            tableName: 'Statuses'
+            tableName: 'Status'
           },
           key: 'id'
         },
@@ -40,11 +39,9 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
         type: Sequelize.DATE
       },
       deletedAt: {
-        allowNull: true,
         type: Sequelize.DATE
       }
     });

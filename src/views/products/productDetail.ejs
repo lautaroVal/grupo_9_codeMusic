@@ -13,10 +13,8 @@
                 <section class="productDetail_main_section_top">
 
                     <aside class="productDetail_main_section_top_izq">
-                        <article class="productDetail_main_section_top_izq_marca"><img src="/img/Mapex.jpg" alt="logo">
-                            <!-- Poner imagen de marcas dinámico -->
+                        <article class="productDetail_main_section_top_izq_marca"><img src="/img/index/<%= product.brand.image %>" alt="logo">
                         </article>
-                        <!-- Hacer el foreach de las imagenes para que no rompa -->
 
                         <% if (product.images.length) { %>
                             <% for( let i=0; i < product.images.length; i++ ) { %>

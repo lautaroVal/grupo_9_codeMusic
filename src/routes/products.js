@@ -25,14 +25,16 @@ router
 
         /* Formulario de edición de productos */
         .get('/edit/:id',adminUserCheck, productEdit)
+        /* Carrito de compras */
+        
+        .get('/productCart', productCart)
+
         /* Acción de edición (a donde se envía el formulario): */
         .put('/edit/:id', uploadImageProduct.fields([ {name:'image'}, {name:'images'}]),editValidator, update)
 
         /* Acción de borrado */
         .delete('/delete/:id', destroy)
 
-        /* Carrito de compras */
-        .get('/productCart', productCart)
 
 
 module.exports = router;

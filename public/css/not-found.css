@@ -8,15 +8,14 @@
 }
 
 .notFound-div {
-    /* background-color: rgba(255, 255, 255, 0.062); */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 90%;
 }
 
-.notFound_title {
-    /* font-family: ; */
-}
-
-.notFound-p {
-
+.notFound-img {
+    height: 20vh;
 }
 
 .notFound-ul {
@@ -28,5 +27,6 @@
     list-style: none;
     font-style: none;
     line-height: none;
-    /* color: ; */
 }
+
+
