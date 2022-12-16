@@ -62,7 +62,26 @@ module.exports = {
           res.cookie('codeMusic', req.session.userLogin, {         //Y también creo una cokkie
             maxAge: 1000 * 60 * 60
           });
-        }
+        };
+        /* Carrito */
+        db.Order.findOne({
+          where: {
+            userId: id,
+            statusId: 1
+          },
+          include : ({
+            association: 'carts',
+            include : [{
+              association:'product',
+              include: ['images']
+            }]
+          })
+        }).then(order => {
+          res.session.cart = {
+            
+          }
+        })
+
         return res.redirect('/users/login');
 
       } else {
