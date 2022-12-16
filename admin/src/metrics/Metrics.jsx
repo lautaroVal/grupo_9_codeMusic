@@ -35,11 +35,11 @@ export const Metrics = () => {
 					...state.products,
 					value : data.totalProducts
 				},
-				products : {
+				users : {
 					...state.users,
 					value : data.totalUsers
 				},
-				products : {
+				categories : {
 					...state.categories,
 					value : data.totalCategories
 				}
