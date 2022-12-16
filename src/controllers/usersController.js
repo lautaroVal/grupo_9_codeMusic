@@ -132,11 +132,14 @@ module.exports = {
             total: order.total,
             products: order.carts
           }
+
           return res.redirect('/');
+
         }else {
           db.Order.create({
             userId: req.session.userLogin.id,
             statusId: 1
+
           }).then(order => {
             req.session.orderCart = {
               userId: order.userId,
@@ -146,7 +149,6 @@ module.exports = {
             return res.redirect('/');
           })
         }
-
 
       } else {
         return res.render('users/login', {
