@@ -88,7 +88,7 @@
                         </div>
                         <div class="productDetail_main_section_top_derech_button">
                             <button type="button">Comprar</button>
-                            <button type="button" onclick="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
+                            <button type="button" id="addCart" onclick="addCartItem('<%=product.id%>')">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
                             <% if (locals.userLogin) { %>
                                 <% if (userLogin.rol===1) { %>
                                     <button type="button" id="edit_button"><a
@@ -175,6 +175,7 @@
             <%- include('../partials/footer') %>
 
             <%- include('../partials/script') %>
+            <script src="../../../Js/orderCart.js"></script>
     </body>
 
 </html>

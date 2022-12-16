@@ -146,6 +146,8 @@ module.exports = {
               total: 0,
               products: []
             }
+            return res.send(req.session.orderCarts)
+
             return res.redirect('/');
           })
         }
