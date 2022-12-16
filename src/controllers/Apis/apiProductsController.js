@@ -37,7 +37,7 @@ module.exports = {
 				}
 			})
 			if (products.length) {
-				res.status(200).json({
+				return res.status(200).json({
 					meta: {
 						ok: true,
 						count: products.length,

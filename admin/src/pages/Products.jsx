@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Info } from '../components/products/Info';
 import { Table } from '../components/products/Table';
 import { UseFetch } from '../hooks/UseFetch';
@@ -11,7 +10,7 @@ export const Products = () => {
     data: []
   });
 
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
     UseFetch('/products')
@@ -63,12 +62,12 @@ export const Products = () => {
           </div>
         </div>
         <div className="col-4">
-          {
+           {
             <Info
             {...product}
           />
 
-          }
+          } 
          
         </div>
       </div>
