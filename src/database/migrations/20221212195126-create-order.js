@@ -24,11 +24,11 @@ module.exports = {
         },
         onDelete: 'cascade'
       },
-      statuId: {
+      statusId: {
         type: Sequelize.INTEGER,
         references: {
           model:{
-            tableName: 'Status'
+            tableName: 'Statuses'
           },
           key: 'id'
         },

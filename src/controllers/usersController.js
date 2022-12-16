@@ -63,24 +63,6 @@ module.exports = {
             maxAge: 1000 * 60 * 60
           });
         };
-        /* Carrito */
-        db.Order.findOne({
-          where: {
-            userId: id,
-            statusId: 1
-          },
-          include : ({
-            association: 'carts',
-            include : [{
-              association:'product',
-              include: ['images']
-            }]
-          })
-        }).then(order => {
-          res.session.cart = {
-            
-          }
-        })
 
         return res.redirect('/users/login');
 
@@ -127,7 +109,44 @@ module.exports = {
           };
           res.locals.userLog = req.session.userLogin;
         }
-        return res.redirect('/')
+        /* Carrito */
+
+        const order = await db.Order.findOne({
+          where: {
+            userId: req.session.userLogin.id,
+            statusId: 1
+          },
+          include: [{
+            association: 'carts',
+            include: [{
+              association: 'product',
+              attributes: {
+                include: ['name','price','image']
+              },
+            }]
+          }]
+        })
+        if (order) {
+          req.session.orderCart = {
+            userId: order.userId,
+            total: order.total,
+            products: order.carts
+          }
+          return res.redirect('/');
+        }else {
+          db.Order.create({
+            userId: req.session.userLogin.id,
+            statusId: 1
+          }).then(order => {
+            req.session.orderCart = {
+              userId: order.userId,
+              total: 0,
+              products: []
+            }
+            return res.redirect('/');
+          })
+        }
+
 
       } else {
         return res.render('users/login', {

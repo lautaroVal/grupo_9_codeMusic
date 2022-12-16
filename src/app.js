@@ -46,7 +46,6 @@ app.use('/api/products', require('./routes/APIs/apiProducts'));
 app.use('/api/carts', require('./routes/APIs/apiCarts'));
 
 
-
 app.use((req, res, next) => {
     try {
         return res.status(404).render('not-found')

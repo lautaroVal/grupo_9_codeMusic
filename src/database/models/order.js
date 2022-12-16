@@ -12,20 +12,20 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.hasMany(models.Cart, {
-        as: "Carts",
-        foreignKey: "cartId",
+        as: "carts",
+        foreignKey: "orderId",
         onDelete: 'cascade',
         onUpdate: 'cascade'
       });
       this.belongsTo(models.User, {
-        as: "User",
+        as: "user",
         foreignKey: "userId",
         onDelete: 'cascade',
         onUpdate: 'cascade'
       });
-      this.belongsTo(models.Statu, {
-        as: "Statu",
-        foreignKey: "statuId",
+      this.belongsTo(models.Status, {
+        as: "status",
+        foreignKey: "statusId",
         onDelete: 'cascade',
         onUpdate: 'cascade'
       });
@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     date: DataTypes.DATE,
     total: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
-    statuId: DataTypes.INTEGER
+    statusId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Order',
