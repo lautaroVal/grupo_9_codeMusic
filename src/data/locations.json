@@ -2,22 +2,26 @@
     {
       "province": "Buenos Aires",
       "location": "San Miguel",
-      "street" : "Av. Presidente Perón"
+      "street" : "Av. Presidente Perón",
+      "active": true
     },
     {
       "province": "Tucumán",
       "location": "San Miguel",
-      "street" : "123"
+      "street" : "123",
+      "active": true
     },
     {
       "province": "Buenos Aires",
       "location": "Jose c paz",
-      "street" : "123"
+      "street" : "123",
+      "active": true
     },
     {
       "province": "Buenos Aires",
       "location": "Berisso",
-      "street" : "larrea"
+      "street" : "larrea",
+      "active": true
     }
   ]
   

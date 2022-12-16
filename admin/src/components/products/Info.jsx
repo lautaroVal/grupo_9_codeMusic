@@ -13,7 +13,7 @@ export const Info = ({ name, price, discount, description, brand, category, imag
                         <label>Nombre:</label>
                         <p className='m-0'><b>{name}</b></p>
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                         <label >Marca:</label>
                         <p className='m-0'><b>{brand?.name}</b></p>
                     </li>
