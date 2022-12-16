@@ -4,7 +4,7 @@ import { UseFetch } from "../hooks/UseFetch";
 import { Metric } from "./Metric";
 
 export const Metrics = () => {
-
+    /* console.log(process.env.REACT_APP_API_URL_BASE); */
 	const [state, setState] = useState({
 		products: {
 			title: "Total productos",
@@ -35,17 +35,16 @@ export const Metrics = () => {
 					...state.products,
 					value : data.totalProducts
 				},
-				products : {
+				users : {
 					...state.users,
 					value : data.totalUsers
 				},
-				products : {
+				categories : {
 					...state.categories,
 					value : data.totalCategories
 				}
 			})
-		}).catch(error => console.error)
-		   
+		}).catch(() => console.error)
 	}, [])
 
 

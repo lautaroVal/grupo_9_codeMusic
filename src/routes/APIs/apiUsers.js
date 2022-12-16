@@ -1,9 +1,10 @@
 const express = require('express');
-const userApis = require('../../controllers/Apis/apiUsersController');
 const router = express.Router();
+const { list, profile, image } = require('../../controllers/Apis/apiUsersController');
 
 router
-    .get('/', userApis.list )
-    .get('/:id', userApis.profile)
+    .get('/', list )
+    .get('/:id', profile)
+    .get('/:img', image)
     
 module.exports = router
