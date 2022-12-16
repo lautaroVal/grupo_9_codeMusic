@@ -17,6 +17,10 @@ module.exports = {
       street: {
         type: Sequelize.STRING
       },
+      active: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

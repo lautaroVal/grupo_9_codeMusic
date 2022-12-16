@@ -1,7 +1,7 @@
 const db = require('../../database/models');
 const path = require('path')
 const bcryptjs = require('bcryptjs');
-const { Association } = require('sequelize');
+const { literal } = require('sequelize');
 const { ROL_ADMIN, ROL_USER } = require('../../constants/users');
 
 
@@ -12,17 +12,9 @@ module.exports = {
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
-                include: [
-                    {
-                        association: 'locations',
-                        attributes: {
-                            exclude: ['createdAt', 'updatedAt', 'deletedAt']
-                        }
-                    }
-                ],
-                attributes: {
-					exclude: ['createdAt', 'updatedAt', 'deletedAt']
-				}
+                attributes: ['id','firstName','lastName','email',
+                [literal(`CONCAT('${req.protocol}://${req.get('host')}${req.baseUrl}/', id)`),'detail']
+            ]
             })
             console.log(users)
 
@@ -32,7 +24,7 @@ module.exports = {
                     status: 200,
                     count: users.length,
                 },
-                    data: users
+                    users
             })
         } catch (error) {
             console.log(error);
@@ -43,20 +35,26 @@ module.exports = {
         }
     },
 
-    profile: async (req, res) => {
+    detail: async (req, res) => {
         try {
-            const user = await db.User.findByPk(req.params.id, {         //Traigo al usuario cuyo id es igual al guardado en session del usuario logueado.
+            const options = {         
                 include: [
                     { association: 'locations',
                     attributes: {
-                        exclude: ['createdAt','updatedAt','deletedAt']
-                    }
-                 }],
+                        exclude: ['street','createdAt','updatedAt','deletedAt']
+                    },
+                    through: {
+                        attributes: []
+                      }
+                 }
+                ],
                  attributes: {
-                    exclude: ['createdAt','updatedAt','deletedAt',]
+                    exclude: ['telephone','password','rol','createdAt','updatedAt','deletedAt',],
+                    include:[[literal(`CONCAT( '${req.protocol}://${req.get('host')}/api/users/image/',avatar )`),'avatar']]
                  }
                     
-            });
+            }
+            const user = await db.User.findByPk(req.params.id, options); //Traigo al usuario cuyo id es igual al guardado en session del usuario logueado.
 
             if (user) {                                     // Si viene user renderizo la vista de profile.
                 res.status(200).json({
@@ -75,5 +73,9 @@ module.exports = {
 			})
         }
 
-    }
+    },
+    update: (req,res) => {
+    },
+    remove: (req,res) => {
+    },
 }

@@ -40,7 +40,8 @@ module.exports = {
             id: user.id,
             province: "",
             location: "",
-            street: ""
+            street: "",
+            active: true,
           })
 
           if (location) {                                 // Y si me crea Location creo registro en la tabla pivot con sus foreignKey.
@@ -209,8 +210,9 @@ module.exports = {
           biography: biography?.trim(),
           telephone: +telephone,
         }, {
-          where: {
-            id: req.session.userLogin.id
+          where: {                                   /* Edito el perfil cuando el id sea el del logueado y la ubicación sea activa */
+            id: req.session.userLogin.id,          
+            address : address.active
           }
         })
 

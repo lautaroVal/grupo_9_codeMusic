@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
   Location.init({
     province: DataTypes.STRING,
     location: DataTypes.STRING,
-    street: DataTypes.STRING
+    street: DataTypes.STRING,
+    active: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Location',
