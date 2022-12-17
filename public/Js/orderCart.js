@@ -18,7 +18,7 @@ const showCart = (items) => {
            </div> 
             
             <div class="productCart_detalleProducto_basura">
-                <img class="productCart_detalleProducto_basura_img" src="/img/logoBasura.png">
+                <img class="productCart_detalleProducto_basura_img" src="/img/cart/logoBasura.png">
             </div>`
         });
     }

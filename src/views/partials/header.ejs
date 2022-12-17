@@ -19,8 +19,9 @@
         <div class="productDetail_header_top_icon">
             <% if (locals.userLogin) { %>
                 <div class="dropdown" style="display: flex; flex-direction: row; align-items: center; gap: 18px;">
-                    <button class="btn btn-secondary dropdown-toggle btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Perfil
+                    <p>Hola <br> <%= userLogin.firstName %> ! </p>
+                    <button class="btn btn-secondary dropdown-toggle btn-light" style="background-color: transparent; border: none; color: white; width: 50px; height: 40px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="/img/users/<%=userLogin.avatar ? userLogin.avatar : "default-users-image.jpg"%>" class="rounded-circle" style="width: 100%; height:auto;overflow: hidden;" alt="...">
                     </button>
                     <ul class="dropdown-menu">
                       <li><a href="/users/profile" class="dropdown-item">Mi perfil</a></li>

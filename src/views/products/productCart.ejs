@@ -19,18 +19,20 @@
                     </article>
                     
                     <article class="productCart_detalleProducto" id="orderCarts">
-
+                        <% if (!locals.userLogin) { %>
+                             <span style="color:red;position:relative; left: 22vw;">Para poder hacer órdenes en el carrito debes loguearte.</span>
+                            <% } %>
                     </article>
 
                 </section>
 
                 <section class="productCart_main_compra">
                     <div class="productCart_main_compra_container">
-                        <img class="productCart_main_compra_envioGratis_logo" src="/img/logoCamion.png"
+                        <img class="productCart_main_compra_envioGratis_logo" src="/img/cart/logoCamion.png"
                             alt="Envio gratis">
                         <p class="productCart_main_compra_envioGratis">Envío Gratis</p>
-                        <img class="productCart_main_compra_logovisa" src="/img/logoVisa.png" alt="logo visa">
-                        <img class="productCart_main_compra_logovisa" src="/img/logoMastercard.png"
+                        <img class="productCart_main_compra_logovisa" src="/img/cart/logoVisa.png" alt="logo visa">
+                        <img class="productCart_main_compra_logovisa" src="/img/cart/logoMastercard.png"
                             alt="logo mastercard">
                     </div>
                     <div>
