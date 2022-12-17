@@ -13,7 +13,7 @@
                 <section class="productDetail_main_section_top">
 
                     <aside class="productDetail_main_section_top_izq">
-                        <article class="productDetail_main_section_top_izq_marca"><img src="/img/index/<%= product.brand.image %>" alt="logo">
+                        <article class="productDetail_main_section_top_izq_marca"><img src="/img/index/<%= product.brand?.image %>" alt="logo">
                         </article>
 
                         <% if (product.images.length) { %>
@@ -31,7 +31,7 @@
                         <h2 class="productDetail_name1">
                             <%=product.name%>
                         </h2>
-                        <img src="/img/imgProducts/<%=product.image%>" alt="centro">
+                        <img src="/img/products/<%=product.image%>" alt="Imagen Principal">
                     </article>
 
                     <aside class="productDetail_main_section_top_derech">
@@ -53,9 +53,9 @@
                             </p>
                         </div>
                         <div class="productDetail_main_section_top_derech_tarjetas">
-                            <img src="/img/logoVisa.png" alt="">
-                            <img src="/img/logoMastercard.png" alt="">
-                            <img src="/img/MercadoPago.jpg" alt="">
+                            <img src="/img/cart/logoVisa.png" alt="">
+                            <img src="/img/cart/logoMastercard.png" alt="">
+                            <img src="/img/cart/MercadoPago.jpg" alt="">
                         </div>
                         <div class="productDetail_main_section_top_derech_colores">
                             <div>

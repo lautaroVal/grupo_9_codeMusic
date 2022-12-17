@@ -1,6 +1,5 @@
 const db = require('../database/models');
 const { Op } = require('sequelize');
-/* const { loadProducts, storeProducts } = require('../data/productsModule'); */
 const { validationResult } = require('express-validator');
 const {OFERTA,SINOFERTA} = require('../constants/products');
 
@@ -49,12 +48,8 @@ module.exports = {
 	},
 	/* CART */
 	productCart: (req, res) => {
-		/* const products = loadProducts();
-		const productId = products.find(product => product.id === +req.params.id); */
-
 		res.render('products/productCart', {
-			title: "Carrito de compras"/* ,
-			productId */
+			title: "Carrito de compras"
 		})
 	},
 

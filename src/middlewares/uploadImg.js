@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const createStorage = (
-  entityOrFolderName = "imgProducts"
+  entityOrFolderName = "img"
 ) => {
 const folder = path.join(__dirname,`../../public/img/${entityOrFolderName}` )
 
@@ -40,7 +40,7 @@ const folder = path.join(__dirname,`../../public/img/${entityOrFolderName}` )
 };
 
 module.exports = {
-  uploadImageProduct : createStorage('imgProducts'),
+  uploadImageProduct : createStorage('products'),
   uploadImageAvatar :  createStorage('users'),
 };
 

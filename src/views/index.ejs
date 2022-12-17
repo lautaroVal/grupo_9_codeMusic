@@ -49,7 +49,7 @@
                         <section class="glider">
                             <% oferta.forEach((product,index)=> { %>
                                 <article class="index_product">
-                                    <div class="index_product_img"><img src="/img/imgProducts/<%=product.image%>"
+                                    <div class="index_product_img"><img src="/img/products/<%=product.image%>"
                                             alt="product"></div>
                                     <hr>
                                     <h3 class="index_product_title">
@@ -187,7 +187,7 @@
                         <% guitarras.forEach((product,index)=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
                                     alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
@@ -215,7 +215,7 @@
                         <% baterias.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
                                     alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
@@ -242,7 +242,7 @@
                         <% teclados.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
                                     alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
@@ -268,7 +268,7 @@
                         <% microfonosYSonido.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/imgProducts/" + product.image %>"
+                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
                                     alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
@@ -294,7 +294,7 @@
                         <% deVientos.forEach(product=> { %>
 
                             <article class="index_product">
-                                <div class="index_product_img"><img src="/img/imgProducts/<%=product.image %>"
+                                <div class="index_product_img"><img src="/img/products/<%=product.image %>"
                                         alt="product"></div>
                                 <hr>
                                 <h3 class="index_product_title">
@@ -322,19 +322,7 @@
                     <%- include('./partials/script') %>
                         <script src="/Js/glider.js"></script>
                         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-                        <script>
-                            new Glider(document.querySelector('.glider'), {
-                                slidesToShow: 6,
-                                slidesToScroll: 6,
-                                arrows: {
-                                    prev: '.glider-prev',
-                                    next: '.glider-next'
-                                }
-                            });
-                            AOS.init({
-                                duration: 1000
-                        });
-                        </script>
+                        <script src="/Js/index.js"></script>
     </body>
 
 </html>
