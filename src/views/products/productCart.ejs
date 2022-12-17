@@ -19,7 +19,9 @@
                     </article>
                     
                     <article class="productCart_detalleProducto" id="orderCarts">
-
+                        <% if (!locals.userLogin) { %>
+                             <span style="color:red;position:relative; left: 22vw;">Para poder hacer órdenes en el carrito debes loguearte.</span>
+                            <% } %>
                     </article>
 
                 </section>

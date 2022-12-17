@@ -43,46 +43,34 @@
                     <div class="index_medios_de_pago">
                         <img src="\img\index\mp-chicosvg1.jpg" alt="medios de pago">
                     </div>
-
+                
                     <h1>OFERTAS</h1>
+                    <div class="glider-contain">
+                        <section class="glider">
+                            <% oferta.forEach((product,index)=> { %>
+                                <article class="index_product">
+                                    <div class="index_product_img"><img src="/img/imgProducts/<%=product.image%>"
+                                            alt="product"></div>
+                                    <hr>
+                                    <h3 class="index_product_title">
+                                        <%= product.name %>
+                                    </h3>
 
-                    <div class="slider__offer">
-                        <div class="slider__contenedor">
+                                    <div class="index_product_bottom">
+                                        <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em>
+                                        </p>
+                                        <p class="index_product_envío">Envío Gratis</p>
+                                        <a href="/products/productDetail/<%=product.id %>"
+                                            class="index_button_product">Ver
+                                            más</a>
+                                    </div>
+                                </article>
+                                <% }) %>
+                        </section>
+                        <button aria-label="Previous" class="glider-prev" style="left: 7px;"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next" style="right: 7px;"><i class="fa-solid fa-chevron-right"></i></button>
 
-                            <button aria-label="Anterior" class="slider__anterior">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-
-                            <section class="index_section_products offer">
-                                <% oferta.forEach((product,index)=> { %>
-                                    <article class="index_product">
-                                        <div class="index_product_img"><img src="/img/imgProducts/<%=product.image%>"
-                                                alt="product"></div>
-                                        <hr>
-                                        <h3 class="index_product_title">
-                                            <%= product.name %>
-                                        </h3>
-
-                                        <div class="index_product_bottom">
-                                            <p class="precio">$<%= toThousand(product.price) %><em
-                                                        class="decimales">99</em></p>
-                                            <p class="index_product_envío">Envío Gratis</p>
-                                            <a href="/products/productDetail/<%=product.id %>"
-                                                class="index_button_product">Ver más</a>
-                                        </div>
-                                    </article>
-                                    <% }) %>
-                            </section>
-
-                            <button aria-label="Siguiente" class="slider__siguiente">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-
-                            <!-- <div role="tablist" class="slider__indicadores"></div>     -->
-                        </div>
                     </div>
-
-
 
 
                     <div class="index_div_info">
@@ -191,7 +179,7 @@
                     </div>
 
                     <section class="index_section_products" id="guitar">
-                        <div id="guitarras">
+                        <div id="guitarras" data-aos="fade-right">
                             <p>
                             <h2>Guitarras</h2>
                             </p>
@@ -218,7 +206,7 @@
                     </section>
 
                     <section class="index_section_products" id="battery">
-                        <div id="batterys">
+                        <div id="batterys" data-aos="fade-left">
                             <p>
                             <h2>Baterias</h2>
                             </p>
@@ -245,7 +233,7 @@
                     </section>
 
                     <section class="index_section_products" id="piano">
-                        <div id="pianos">
+                        <div id="pianos" data-aos="fade-right">
                             <p>
                             <h2>Teclados</h2>
                             </p>
@@ -272,7 +260,7 @@
                     </section>
 
                     <section class="index_section_products" id="microphone">
-                        <div id="microphones">
+                        <div id="microphones" data-aos="fade-left">
                             <p>
                             <h2>Micrófonos y sonido</h2>
                             </p>
@@ -298,7 +286,7 @@
                     </section>
 
                     <section class="index_section_products" id="wind">
-                        <div id="winds">
+                        <div id="winds" data-aos="fade-right">
                             <p>
                             <h2>Instrumentos de viento</h2>
                             </p>
@@ -332,11 +320,21 @@
                 <%- include('./partials/footer') %>
 
                     <%- include('./partials/script') %>
+                        <script src="/Js/glider.js"></script>
+                        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                        <script>
+                            new Glider(document.querySelector('.glider'), {
+                                slidesToShow: 6,
+                                slidesToScroll: 6,
+                                arrows: {
+                                    prev: '.glider-prev',
+                                    next: '.glider-next'
+                                }
+                            });
+                            AOS.init({
+                                duration: 1000
+                        });
+                        </script>
     </body>
 
 </html>
-
-
-
-
-
