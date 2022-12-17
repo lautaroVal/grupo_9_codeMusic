@@ -129,6 +129,7 @@ module.exports = {
         })
         if (order) {
           req.session.orderCart = {
+            id: order.id,
             userId: order.userId,
             total: order.total,
             products: order.carts
@@ -143,6 +144,7 @@ module.exports = {
 
           }).then(order => {
             req.session.orderCart = {
+              id: order.id,
               userId: order.userId,
               total: 0,
               products: []

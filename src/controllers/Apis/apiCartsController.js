@@ -23,7 +23,7 @@ module.exports = {
         try {
             const { productId } = req.body;
             let item = req.session.orderCart.items.find(item => item.product.id === +productId);
-
+            
             if (item) {
 
                 await db.Cart.update(

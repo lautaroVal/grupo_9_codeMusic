@@ -27,15 +27,13 @@ const showCart = (items) => {
 $('addCart') && $('addCart').addEventListener('click', async (e) => {
 
     try {
-        let response = await fetch('/api/carts');
+        let response = await fetch('/api/Carts');
         let result = await response.json()
 
-        console.log(result.data);
         if (result.ok) {
             const { items } = result.data;
             showCart(items)
         }
-
     } catch (error) {
         console.error;
     }
@@ -45,10 +43,10 @@ $('addCart') && $('addCart').addEventListener('click', async (e) => {
 const addCartItem = async (productId) => {
 
     try {
-        let response = await fetch('/api/carts',{
+        let response = await fetch('/api/Carts',{
             method : 'POST',
             body : JSON.stringify({
-                productId,
+                productId
             }),
             headers : {
                 "Content-Type" : "application/json"
@@ -61,7 +59,7 @@ const addCartItem = async (productId) => {
             const {items} = result.data;
             showCart(items)
         }        
-
+   
     } catch (error) {
         console.error
 
@@ -71,7 +69,7 @@ const addCartItem = async (productId) => {
 const removeCartItem = async (productId) => {
 
     try {
-        let response = await fetch('/api/carts',{
+        let response = await fetch('/api/Carts',{
             method : 'DELETE',
             body : JSON.stringify({
                 productId,

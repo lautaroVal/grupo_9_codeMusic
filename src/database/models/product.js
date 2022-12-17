@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         onUpdate: 'cascade'
       });
       this.hasMany(models.Cart, {
-        as: "Carts",
+        as: "carts",
         foreignKey: "productId",
         onDelete: 'cascade',
         onUpdate: 'cascade'
