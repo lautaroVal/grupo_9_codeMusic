@@ -36,7 +36,6 @@ module.exports = {
                         }
                     }
                 )
-
                 const itemsModify = req.session.orderCart.items.map(element => {
                     if (element.id === item.id) {
                         element.quantity = element.quantity + 1;

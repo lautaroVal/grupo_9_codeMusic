@@ -213,7 +213,7 @@ module.exports = {
         }, {
           where: {                                   /* Edito el perfil cuando el id sea el del logueado y la ubicación sea activa */
             id: req.session.userLogin.id,          
-            address : address.active
+      
           }
         })
 
