@@ -12,15 +12,17 @@
 
                     <article>
                         <ul class="productCart_main_menu">
-                            <li class="item1">Productos</li>
+                            <li>#</li>
+                            <li class="itemProduct">Productos</li>
                             <li>Cantidad</li>
                             <li>Precio</li>
+                            <li>Subtotal</li>
                         </ul>
                     </article>
                     
                     <article class="productCart_detalleProducto" id="orderCarts">
                         <% if (!locals.userLogin) { %>
-                             <span style="color:red;position:relative; left: 22vw;">Para poder hacer órdenes en el carrito debes loguearte.</span>
+                             <p class="alert alert-warning" id="rowCart">Para poder hacer órdenes en el carrito debes loguearte.</p>
                             <% } %>
                     </article>
 
@@ -47,7 +49,7 @@
             <%- include('../partials/footer') %>
 
             <%- include('../partials/script') %>
-            <script src="../../../Js/orderCart.js"></script>
+            <script src="/Js/orderCartView.js"></script>
     </body>
 
 </html>
