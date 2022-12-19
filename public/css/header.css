@@ -13,18 +13,16 @@
     border-bottom: 1px solid #551A8B;
 }
 
-
-
 .productDetail_header_sign span {
     display: block;
     font-family: 'Courier New', Courier, monospace;
     margin: auto;
+    font-weight:700;
     white-space: nowrap;
     border-right: 4px solid;
     width: 37ch;
-    animation: typing 4s steps(37) infinite, blink 5s infinite step-end alternate;
+    animation: typing 5s steps(37) infinite, blink 5s infinite step-end alternate;
     overflow: hidden;
-
 }
 
 @keyframes typing {
