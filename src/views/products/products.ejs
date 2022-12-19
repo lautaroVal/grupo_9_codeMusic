@@ -9,12 +9,11 @@
             <% products.forEach(product => { %>
                  
                 <article class="index_product">
-                    <div class="index_product_img"><img src="/img/imgProducts/<%=product.image ?  product.image: 'dp.jpg' %>" alt="product"></div>
-                    <!-- <div class="index_product_img"><img src="/img/imgProducts/<%= product.image%>" alt="product"></div> -->
+                    <div class="index_product_img"><img src="/img/products/<%= product.image%>" alt="product"></div>
                     <hr>
                     <h3 class="index_product_title"><%= product.name %>  </h3>
                     <div class="index_product_bottom">
-                        <p class="precio">$<%= product.price %><em class="decimales"></em></p>
+                        <p class="precio">$<%= toThousand( product.price) %><em class="decimales"></em></p>
                         <p class="index_product_envío"> Envío Gratis</p>
                         <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver más</a>
                     </div>
@@ -24,8 +23,11 @@
         </section>
 
         </main>
-        <%- include('../partials/footer') %> 
 
+        <%- include('../partials/whatsapp') %>  
+
+        <%- include('../partials/footer') %> 
+        <%- include('../partials/script') %>
     </body>
     
     </html>

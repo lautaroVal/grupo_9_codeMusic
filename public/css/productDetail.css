@@ -3,7 +3,11 @@
 .productDetail_main {
     background-color: var(--colorGris);
     color: var(--ColorNegro);
-    width: 100%;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
 }
 
 /* main top */
@@ -11,23 +15,38 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: var(--colorGris);
-
+    border: 0.1px solid #0000001f;
+    border-radius: 7px;
+    background: white;
+    margin: 20px;
 }
 
 /* main top izq */
 .productDetail_main_section_top_izq {
     display: none;
     width: 100%;
-    background-color: var(--colorGris);
+    background-color: transparent;
 }
 
 /* main top centr */
 
 .productDetail_main_section_top_centr {
-    background-color: var(--colorGris);
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     border-radius: 8px;
+    justify-content: center;
+}
+
+.productDetail_name1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    width:100%;
+}
+
+.productDetail_name2 {
+    display:none;
 }
 
 .productDetail_main_section_top_centr img {
@@ -54,7 +73,7 @@
     margin: 5px;
     margin-right: 5px;
     width: 98%;
-    background-color: var(--ColorBlanco);
+    background-color: transparent;
     transition: 1.2s;
 }
 
@@ -95,7 +114,7 @@
     display: flex;
     margin: 15px;
     align-items: center;
-    gap: 10px;
+    gap: 3px;
     width: 100%;
 }
 
@@ -154,6 +173,7 @@
     color: black;
     padding: 5px;
     border-radius: 10px;
+    cursor: pointer;
     transition: 1.2s;
 }
 
@@ -222,7 +242,7 @@
 
     .productDetail_main_section_top_centr {
         display: flex;
-        background-color: var(--colorGris);
+        background-color: transparent;
         width: 100%;
         justify-content: center;
         padding: 10px;
@@ -244,7 +264,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding: 5px;
         gap: 10px 0;
+    }
+    .productDetail_main_section_top_centr_h5{
+        height: 150px;
+        overflow: scroll;
     }
 
     .productDetail_main_section_top_derech_price {
@@ -298,7 +323,7 @@
     }
 
     .productDetail_div_info {
-        background-color: var(--ColorBlanco);
+        background-color: transparent;
         color: var(--ColorNegro);
         display: flex;
         flex-wrap: wrap;
@@ -343,7 +368,7 @@
 
     .productDetail_main_section_bottom div {
         width: 100%;
-        background-color: var(--ColorBlanco);
+        background-color: transparent;
     }
 
     .productDetail_main_section_bottom div p {
@@ -366,8 +391,11 @@
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: auto;
         width: 99%;
+    }
+
+    .productDetail_name1 {
+        display:none;
     }
 
     /* main top izq */
@@ -375,15 +403,18 @@
     .productDetail_main_section_top_izq {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+/*         justify-content: space-evenly;
+ */     
         align-items: center;
-        width: 15%;
+        width: 10%;
+        gap: 200px;
     }
 
     .productDetail_main_section_top_izq article {
-        background-color: var(--ColorBlanco);
-        height: 150px;
-        width: 150px;
+        background-color: transparent;
+        /* height: 150px; */
+        width: 90px;
+        position: relative;
         border-radius: 10px;
         align-items: center;
         transition: 1.2s;
@@ -394,10 +425,10 @@
     }
 
     .productDetail_main_section_top_izq article img {
-        width: 93%;
-        position: relative;
+        width:100%;
+        /* position: absolute;
         left: 5px;
-        top: 5px;
+        top: 5px; */
         border-radius: 10px;
         overflow: hidden;
         object-fit: contain;
@@ -405,7 +436,7 @@
 
     .productDetail_main_section_top_izq article img:hover {
         transition: 1.3s;
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
 
     /* main top centr */
@@ -416,13 +447,19 @@
     }
 
     .productDetail_main_section_top_centr img {
-        width: 60%;
+        width: 70%;
+        height: 40%;
+        object-fit:contain;
     }
 
     /* main top derch */
 
     .productDetail_main_section_top_derech {
-        width: 28%;
+        width: 33%;
+    }
+
+    .productDetail_name2 {
+        display:block;
     }
 
     .productDetail_main_section_top_derech_price {
@@ -451,7 +488,7 @@
     }
 
     .productDetail_main_section_top_derech_colores img {
-        width: 11vh;
+        width: 5vh;
         border-radius: 5px;
     }
 

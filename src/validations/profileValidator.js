@@ -1,22 +1,15 @@
 const { body } = require('express-validator');
-const bcryptjs = require('bcryptjs');
-const users = require('../data/usersModule').loadUsers();
 
 module.exports = [
     body('firstName')
-    .notEmpty().withMessage("Debe ingresar un nombre.").bail(),
+    .notEmpty().withMessage("El nombre es requerido.").bail()
+    .isAlpha('en-US').withMessage('Solo se permiten caracteres alfabéticos.').bail()
+    .isLength({ min: 3 }).withMessage('El nombre debe tener como mínimo 3 caracteres.').bail()
+    .isLength({ max: 60 }).withMessage('El nombre no puede superar los 60 caracteres.'),
+
     body('lastName')
-    .notEmpty().withMessage("Debe ingresar un apellido.").bail(),
-    body('username')
-    .notEmpty().withMessage("Debe ingresar un nombre de usuario.").bail(),
-    body('genero')
-    .notEmpty().withMessage("Debe seleccionar un genero").bail(),
-    body('generomusic')
-    .notEmpty().withMessage("Debe seleccionar al menos un genero").bail(),
-    body('provincia')
-    .notEmpty().withMessage("Debe seleccionar una provincia").bail(),
-    body('localidad')
-    .notEmpty().withMessage("Debe indicar una localidad").bail(),
-    body('domicilio')
-    .notEmpty().withMessage("Debe indicar un domicilio").bail()
+    .notEmpty().withMessage("El apellido es requerido.").bail()
+    .isAlpha('en-US').withMessage('Solo se permiten caracteres alfabéticos.').bail()
+    .isLength({ min: 3 }).withMessage('El apellido debe tener como mínimo 3 caracteres.').bail()
+    .isLength({ max: 60 }).withMessage('El apellido no puede superar los 60 caracteres.'),
 ]

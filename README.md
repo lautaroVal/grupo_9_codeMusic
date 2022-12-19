@@ -1,4 +1,4 @@
-# Code Music (Sprint 5)
+# Code Music (Sprint 6)
 
 ## Temática del sitio Web: Venta de Instrumentos Musicales.
 ## Audiencia: Público en General:
@@ -60,20 +60,3 @@ ___
 ### FIGMA 
 
 - <a href="https://www.figma.com/file/I5e7w7A5tfnc3DbIbWO7Ud/CodeMusic?node-id=297%3A919"> Figma</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

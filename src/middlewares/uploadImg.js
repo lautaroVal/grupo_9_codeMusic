@@ -1,24 +1,50 @@
-const multer = require('multer');
-const path = require('path');
+const multer = require("multer");
+const fs = require('fs')
+const path = require('path')
 
-const storageImg = multer.diskStorage({
-    destination: (req,file,cb) => {
-        if(file.fieldname === 'image'){
-            cb(null, './public/img/imgProducts')
-        } else if (file.fieldname === 'avatar'){
-            cb(null, './public/img/users')
-        }else{
-            cb(null, './public/img')
-        }
+const createStorage = (
+  entityOrFolderName = "img"
+) => {
+const folder = path.join(__dirname,`../../public/img/${entityOrFolderName}` )
+
+/* Si la carpeta no existe la crea */
+  if(!fs.existsSync(folder)){
+    fs.mkdirSync(folder)
+  }
+
+ const storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+      callback(null, `./public/img/${entityOrFolderName}`);
     },
-    filename: (req,file,cb) => {
-        console.log(file);
-        cb(null, 'Img-' + Date.now() + path.extname(file.originalname))
+    filename: (req, file, callback) => {
+      callback(null, `${entityOrFolderName}-${Date.now()}-${file.originalname}`);
+    },
+  });
+
+  const fileFilter = (req, file, callback) => {
+    if (!/image\//.test(file.mimetype)) {
+    req.fileValidationError = "Archivo invalido";
+      return callback(null, false);
     }
-});
+    callback(null, true);
+  };
 
-const uploadImges = multer({
-    storage : storageImg
-});
+  const uploads = {}
+  uploads[entityOrFolderName] = multer({
+    storage,
+    fileFilter,
+  })
+  
+  return uploads[entityOrFolderName]
 
-module.exports = uploadImges
+};
+
+module.exports = {
+  uploadImageProduct : createStorage('products'),
+  uploadImageAvatar :  createStorage('users'),
+};
+
+
+
+
+ 

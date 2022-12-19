@@ -1,24 +1,40 @@
 <header class="productDetail_header_container">
+    <div class="productDetail_header_sign">
+        <span>🔥 Envíos gratis a todo el país 🔥</span>
+    </div>
 <div class="productDetail_header">
-    <section class="productDetail_header_top">
-        <div class="productDetail_header_top_burger">
-            <button><i class="fa fa-bars"></i></button>
 
+    <section class="productDetail_header_top">
+
+        <div class="productDetail_header_top_burger" id="burguerMenu">
+            <button id="burguerMenu" class="menuBurguer"><i class="fa fa-bars" ></i></button>
         </div>
+
         <div class="productDetail_header_top_logo">
             <a href="/">
                 <img src="/img/LOGO-CODEMUSIC.png" alt="Code Music" title="Code Music">
             </a>
         </div>
+        
+
         <div class="productDetail_header_top_icon">
             <% if (locals.userLogin) { %>
-                <ul>
-                    <% if (userLogin.category === "Admin") { %>
-                        <a href="/products/productAdd" class="productDetail_header_top_li">Vender</a>
-                    <% } %>
-                <a href="/users/profile" class="productDetail_header_top_li">Mi perfil</a>
-                <a href="/users/logout" class="productDetail_header_top_li">Salir</a>
-                </ul>
+                <div class="dropdown productDetail_header_top_menu" >
+                    <button class="btn btn-secondary dropdown-toggle btn-light productDetail_header_top_icon_avatar"  type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="/img/users/<%=userLogin.avatar ? userLogin.avatar : "default-users-image.jpg"%>" class="rounded-circle" alt="...">
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="/users/profile" class="dropdown-item">Mi perfil</a></li>
+                      <li><a href="/products/productCart" class="dropdown-item">Carrito</a></li>
+                      <li><% if (userLogin.rol === 1) { %>
+                        <a href="/products/productAdd" class="dropdown-item">Vender</a>
+                        <% } %></li>
+                        <li><a href="/users/logout" class="dropdown-item">Salir</a></li>
+                    </ul>
+                    <a href="/products/productCart" class="productDetail_header_top_icon_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                  </div>
             <% }else{ %>
             <a href="/users/login" class="productDetail_header_top_icon_login"><i class="fa-solid fa-circle-user"></i></a>
             <a href="/products/productCart" class="productDetail_header_top_icon_cart">
@@ -26,6 +42,7 @@
             </a>
             <% } %>
         </div>
+
     </section>
     
     <div class="productDetail_header_search">
@@ -34,17 +51,19 @@
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
+    
 </div>
 
-<nav class="productDetail_header_navbar">
+<div class="productDetail_header_navbar" id="navBurguer">
     <ul>
         <li><a href="/products">Todos los productos</a></li>
         <li><a href="..#guitar">Guitarras</a></li>
         <li><a href="..#battery">Baterias</a></li>
-        <li><a href="..#piano">Teclados y pianos</a></li>
+        <li><a href="..#piano">Teclados</a></li>
         <li><a href="..#microphone">Micrófonos y sonido</a></li>
         <li><a href="..#wind">Instrumentos de vientos</a></li>
     </ul>
-</nav>
+</div>
+<script src="../../../Js/burguerMenu.js"></script>
 
 </header>

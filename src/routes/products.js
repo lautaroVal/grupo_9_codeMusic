@@ -4,8 +4,10 @@ const router = express.Router();
 const { productDetail, productCart, productAdd, productEdit, productsList, productAddStore, update, destroy} = require('../controllers/productsController');
 
 const productAddValidator = require('../validations/productAddValidator');
-const uploadImges = require('../middlewares/uploadImg')
+const editValidator = require('../validations/editValidator');
 const adminUserCheck = require('../middlewares/adminUserCheck');
+const { uploadImageProduct } = require('../middlewares/uploadImg');
+
 
 router
         /* Listado de productos */
@@ -16,21 +18,23 @@ router
        
         /* Acción de creación (a donde se envía el formulario)*/
 
-        .post('/productAdd',uploadImges.single('image'), productAddValidator, productAddStore)
+        .post('/productAdd',uploadImageProduct.fields([ {name:'image'}, {name:'images'}]), productAddValidator, productAddStore)
 
         /*Detalle de un producto particular*/
         .get('/productDetail/:id', productDetail)
 
         /* Formulario de edición de productos */
         .get('/edit/:id',adminUserCheck, productEdit)
+        /* Carrito de compras */
+        
+        .get('/productCart', productCart)
+
         /* Acción de edición (a donde se envía el formulario): */
-        .put('/productEdit/:id', uploadImges.single('image'), update)
+        .put('/edit/:id', uploadImageProduct.fields([ {name:'image'}, {name:'images'}]),editValidator, update)
 
         /* Acción de borrado */
         .delete('/delete/:id', destroy)
 
-        /* Carrito de compras */
-        .get('/productCart', productCart)
 
 
 module.exports = router;

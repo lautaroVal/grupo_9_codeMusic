@@ -1,11 +1,46 @@
 /* HEADER */
-.index, .productDetail {
+.index,
+.productDetail {
     background-color: var(--ColorGris);
     color: var(--ColorGris);
 }
 
+.productDetail_header_sign {
+    background-color: black;
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    border-bottom: 1px solid #551A8B;
+}
+
+
+
+.productDetail_header_sign span {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 37ch;
+    animation: typing 4s steps(37) infinite, blink 5s infinite step-end alternate;
+    overflow: hidden;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
 .productDetail_header_container {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .productDetail_header {
@@ -17,38 +52,62 @@
 }
 
 /* header top */
+.menuBurguer{
+    border-radius: 5px;
+    background-color: var(--ColorNegro);
+    color: white;
+}
 
 .productDetail_header_top {
     display: flex;
     align-items: center;
-    /* position: relative; */
+    position: relative;
     justify-content: space-between;
     margin: auto;
     width: 100%;
+    right: 43px;
 }
 
-.productDetail_header_top_burger button {
-    background-color: var(--ColorNegro);
-    color: var(--ColorBlanco);
+.productDetail_header_top_burger {
+    margin: 40px 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.productDetail_header_top_burger i {
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
     font-size: 18px;
     width: 28px;
-    height: 28px;
+    height: 20px;
     border: none;
 }
 
 .productDetail_header_top_logo {
     width: 40%;
     max-width: 220px;
-    margin:auto;
+    margin: auto;
 }
 
 .productDetail_header_top_logo img {
     width: 100%;
 }
 
+.productDetail_header_top_icon_avatar {
+    border-radius: 35px;
+    width: 65px;
+    height: 48px;
+}
+
+.productDetail_header_top_icon_avatar img{
+    width: 23px;
+}
+
 .productDetail_header_top_icon {
-    position:relative;
+    position: relative;
     display: flex;
+    left: 31px;
     align-items: center;
 }
 
@@ -60,6 +119,8 @@
 
 .productDetail_header_top_icon_login {
     font-size: 25px;
+    position: relative;
+    left: 28px;
 }
 
 .productDetail_header_top_icon_cart {
@@ -68,13 +129,45 @@
 
 /* header nav */
 
-.productDetail_header_navbar li {
-    display: none;
-    list-style: none;
-    list-style-type: none;
-    margin: 3px;
-    text-decoration: none;
+.productDetail_header_navbar {
+    box-shadow: 2px 0px 5px 2px rgb(41, 41, 41);
+    width: 200px;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    margin: 109px 0px 0px 0px;
+    transform: translate(-600px);
+    z-index: 10;
+}
 
+.active {
+    transform: translate(0px);
+}
+
+.opacity {
+    background-color: rgba(1, 2, 3, 0.7);
+    transition: all .5s ease;
+}
+
+.productDetail_header_navbar ul {
+    list-style: none;
+}
+
+
+.productDetail_header_navbar li {
+    color: white;
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+.productDetail_header_navbar li:hover {
+    background-color:#551A8B;
+    color: rgb(42, 42, 42);
 }
 
 /* header search */
@@ -92,21 +185,23 @@
     height: 26px;
     min-width: 175px;
     border-radius: 10px;
-    padding: 2px;
+    padding: 4px;
+    font-family: none;
+    border: none;
 }
 
 .productDetail_header_search form button {
     position: absolute;
     outline: none;
-    right: 6px;
-    top: 5px;
+    right: 8px;
+    top: 2px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .productDetail_header_search form button i {
     border: none;
-    
 }
 
 .index_header_search_form button i {
@@ -129,12 +224,14 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
+        position: relative;
+        right: 30px;
     }
 
     .productDetail_header_top_burger button {
         font-size: 28px;
-        width: 38px;
-        height: 38px;
+        width: 32px;
+        height: 27px;
     }
 
     .productDetail_header_top_logo {
@@ -148,11 +245,15 @@
         margin: auto;
     }
 
+    .productDetail_header_top_menu{
+        position: relative;
+        right: 16px;
+    }
 
     .productDetail_header_top_icon {
         display: flex;
-        gap: 0 18px;
-        font-size: 30px;
+        gap: 0 38px;
+        font-size: 28px;
     }
 
     .productDetail_header_top_li {
@@ -161,7 +262,11 @@
 
     .productDetail_header_top_icon_cart {
         display: inline-block;
-        font-size: 25;
+        font-size: 25px;
+
+    }
+    .productDetail_header_top_icon_cart img {
+        width: 22px;
     }
 
     /* header search */
@@ -174,7 +279,9 @@
         height: 36px;
         width: 200%;
         position: relative;
-        right: 85px;
+        right: 90px;
+        padding-left: 5px;
+        font-size: revert;
     }
 
     .productDetail_header_search form button {
@@ -182,7 +289,7 @@
         outline: none;
         font-size: 18px;
         right: -75px;
-        top: 8px;
+        top: 6px;
         background-color: transparent;
     }
 
@@ -224,10 +331,10 @@
         padding: 0;
         left: 0;
     }
-    
+
     .productDetail_header_top_logo img {
         width: 100%;
-        margin: 0;
+        margin: 0px 0px 0px 40px;
         padding: 0;
         position: 0;
     }
@@ -235,14 +342,20 @@
     .productDetail_header_top_icon {
         display: flex;
         position: relative;
-        bottom: 5px;
-        gap: 18px;
+        /*  bottom: 5px; */
+        gap: 45px;
         font-size: 30px;
+    }
+
+    .productDetail_header_top_icon-ul {
+        margin-bottom: 0;
     }
 
     .productDetail_header_top_icon_cart {
         display: flex;
         font-size: 25px;
+        align-items: center;
+        margin: 0px 0px 0px 15px;
     }
 
     /* header search */
@@ -253,21 +366,33 @@
     }
 
     /* header nav */
+    .productDetail_header_navbar {
+        box-shadow: 2px 0px 5px 2px rgb(41, 41, 41);
+        width: 200px;
+        height: 50vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+        margin: 109px 0px 0px 0px;
+        transform: translate(-600px);
+    }
 
     .productDetail_header_navbar {
         position: relative;
         background-color: #38184C;
         margin: 0;
-        padding: 12px;
+        padding: 11px;
         width: 100%;
-        border-radius: 10px;
+        height: 55px;
+        left: 600px;
     }
 
     .productDetail_header_navbar ul {
         display: flex;
-        gap: 0 55px;
+        gap: 26px;
         text-align: center;
-        
+        margin-bottom: 0
     }
 
     .productDetail_header_navbar li {
@@ -278,10 +403,18 @@
         text-decoration: none;
         border-radius: 10px;
         padding: 6px;
-        transition: 0.8s;
+        transition: 0.4s;
     }
 
-    .productDetail_header_navbar li:hover{
+    .productDetail_header_navbar li:hover {
         background-color: black;
+        color: white;
     }
+    .productDetail_header_top_menu{
+        display: flex;
+        position: relative;
+        right: 16px;
+        margin: 5px;
+    }
+
 }

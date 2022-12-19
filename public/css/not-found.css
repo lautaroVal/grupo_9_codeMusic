@@ -1,0 +1,32 @@
+.notFound {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.notFound-div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 90%;
+}
+
+.notFound-img {
+    height: 20vh;
+}
+
+.notFound-ul {
+    list-style: none;
+    font-style: none;
+}
+
+.notFound-ul a {
+    list-style: none;
+    font-style: none;
+    line-height: none;
+}
+
+

@@ -1,26 +1,29 @@
-/* MAIN */ 
-
-/* MAIN CARROUSEL */
-
-.figure_banner {
+/* BODY */
+.index {
     width: 100%;
-    margin: 0 auto 5px;
 }
 
-.figure_banner img {
-    width: 100%; 
-    min-height: 150px;
-    margin: 0;
+/* MAIN */ 
+html {
+    scroll-behavior: smooth;
+}
+
+/*  CARROUSEL */
+
+.carousel-item {
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /* MAIN PRODUCTS */
 
 .main_container {
-    width: 95%;
+    width: 98%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .index_medios_de_pago {
@@ -28,22 +31,26 @@
     padding: 0px;
     text-align: center;
     font-family: sans-serif;
-    margin: 0 auto 20px;
-    width: 100%;
+    margin: 0 auto 60px;
+    width: 100vw;
 }
 
 .index_medios_de_pago img {
-    width: 290px;
+    width: 100vw;
+    height: 60px;
 }
 
 .index h1 {
     color: var(--ColorAzulOscuro);
     margin-bottom: 20px;
     font-weight:bolder;
-    font-family: Hind ;
+    font-family: "Hind";
+    width: 100%;
+    display: inline;
+    text-align: center;
 }
 
-.index_section_products {
+.index_section_products, .glider-track {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -51,11 +58,51 @@
     margin-bottom: 70px;
 }
 
-.index_section_products hr {
+.index_section_products hr, .glider-track hr {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 5px;
 }
+/* Slider de productos */
+
+
+.offer .glider-track {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.glider-prev, .glider-next {
+    position: absolute !important;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    /* background-color: none; */
+   /*  color: white; */
+    
+    z-index: 10; 
+}
+
+ .glider-prev {
+    left: 0px !important;
+}
+
+.glider-next {
+    right: 0px !important;
+} 
+
 /* 
 #guitarras, #batterys, #pianos, #microphones, #winds  {  
 } */
@@ -88,7 +135,7 @@
     justify-content: center;
 } 
 #microphones{
-    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-wallace-chuck-3587478.jpg') no-repeat -23px center;
+    background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-wallace-chuck-3587478.jpg') no-repeat -13px center;
     background-size: cover;
     padding: 20px; 
     display: flex;
@@ -132,7 +179,7 @@
 }
 
 /* .index_product */
-.index_section_products article:hover {
+.index_section_products article:hover, .glider-track  article:hover{
     box-shadow: 1px 1px 10px rgb(84, 115, 138);
 }
 
@@ -267,8 +314,9 @@
     position: fixed;
     right: 20px;
     font-size: 25px;
-    padding: 5px 10px;
+    padding: 4px 12px;
     border-radius: 50%;
+    z-index: 100;
 }
 
 /* 
@@ -305,9 +353,10 @@ FOOTER */
 @media (min-width: 768px) {
 
     /* MAIN  CARROUSEL */
-.figure_banner {
-    height: initial;
-}
+    .carousel-item {
+        height: 48vh;
+        background-size: 100% 100%;
+    }
 
 /* MAIN PRODUCTS */
 .main_container {
@@ -315,15 +364,11 @@ FOOTER */
     justify-content: center;
 }
 
-.index_medios_de_pago img {
-    width: 360px;
-}
 
 .index_section_products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-   /*  gap: 1px; */
 }
 
 #guitarras, #batterys, #pianos, #microphones, #winds {
@@ -346,11 +391,15 @@ FOOTER */
     justify-content: space-between;
 }
 
-
 }
 /* 
 ----------------------------------------------------------------------- */
 @media (min-width: 1024px) {
+
+    .carousel-item {
+        height: 65vh;
+        background-size: 100%;
+    }
 
     .index_section_products {
         justify-content: space-around;
@@ -359,6 +408,11 @@ FOOTER */
     .index_product_hide2 {
         display: flex;
     }
+    .index_medios_de_pago img {
+        width: 55vw;
+        height: 55px;
+    }
+    
 
 
 }

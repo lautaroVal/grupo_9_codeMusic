@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('../partials/head') %> 
+<%- include('../partials/head') %>
 
-<body class="productCart">
-    <%- include('../partials/header') %>
-    <main>
-        <h1>Carrito de Compras</h1>
-        <br>
-            <div>
-                <section class="productCart_main_contenedor">
+    <body class="productCart">
+        <%- include('../partials/header') %>
+            <main class="productCart_main">
+                <h1 class="productCart_main-h1">Carrito de Compras</h1>
+                <br>
+
+                <section class="productCart_section_contenedor">
+
                     <article>
                         <ul class="productCart_main_menu">
-                            <li>Productos</li>
+                            <li>#</li>
+                            <li class="itemProduct">Productos</li>
                             <li>Cantidad</li>
                             <li>Precio</li>
+                            <li>Subtotal</li>
                         </ul>
-                    </article>  
-
-                    <article class="productCart_detalleProducto">
-                        <img class="productCart_detalleProducto_imagenbateria" src="/img/bateriaMapex.jpg">
-                    <div>
-                        <p class="productCart_detalleProducto_nombreProducto_bateria"></p>
-                        <button class="boton">+  1  -</button>        
-                    </div>
-                    <div class="productCart_detalleProducto_">
-                        <p class="productCart_detalleProducto_precioBateria">$109.780</p>
-                        <img class="productCart_detalleProducto_basura" src="/img/logoBasura.png">
-                    </div>
+                    </article>
+                    
+                    <article class="productCart_detalleProducto" id="orderCarts">
+                        <% if (!locals.userLogin) { %>
+                             <p class="alert alert-warning" id="rowCart">Para poder hacer órdenes en el carrito debes loguearte.</p>
+                            <% } %>
                     </article>
 
-                    <article class="productCart_detalleProducto">
-                        <img class="productCart_detalleProducto_imagenguitarra" src="/img/GuitarraElectrica.jpg">
-                    <div>
-                        <p class="productCart_detalleProducto_nombreProducto_guitarra"></p>
-                        <button class="boton">+  1  -</button>
-                    </div>
-                    <div class="productCart_detalleProducto_">
-                        <p class="productCart_detalleProducto_precioBateria">$19.375</p>
-                        <img class="productCart_detalleProducto_basura" src="/img/logoBasura.png">
-                    </div>
-                    </article>
-                </section> 
-            </div>
-                <div class="productCart_main_compra">
+                </section>
+
+                <section class="productCart_main_compra">
                     <div class="productCart_main_compra_container">
-                        <img class="productCart_main_compra_envioGratis_logo" src="/img/logoCamion.png" alt="Envio gratis">
+                        <img class="productCart_main_compra_envioGratis_logo" src="/img/cart/logoCamion.png"
+                            alt="Envio gratis">
                         <p class="productCart_main_compra_envioGratis">Envío Gratis</p>
-                        <img class="productCart_main_compra_logovisa" src="/img/logoVisa.png" alt="logo visa">
-                        <img class="productCart_main_compra_logovisa" src="/img/logoMastercard.png" alt="logo mastercard">
+                        <img class="productCart_main_compra_logovisa" src="/img/cart/logoVisa.png" alt="logo visa">
+                        <img class="productCart_main_compra_logovisa" src="/img/cart/logoMastercard.png"
+                            alt="logo mastercard">
                     </div>
                     <div>
                         <p class="productCart_main_compra_total">Total $129.155</p>
-                        <button class="productCart_main_compra_boton">COMPRAR</button>  
+                        <button class="productCart_main_compra_boton">COMPRAR</button>
                     </div>
-    </main>
+                </section>
+            </main>
 
-    <%- include('../partials/footer') %> 
+            <%- include('../partials/whatsapp') %>  
 
+            <%- include('../partials/footer') %>
 
-</body>
+            <%- include('../partials/script') %>
+            <script src="/Js/orderCartView.js"></script>
+    </body>
+
 </html>

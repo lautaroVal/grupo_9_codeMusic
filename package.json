@@ -4,8 +4,13 @@
   "description": "- **Nombre**: `Lautaro Valenzuela`\r - **Edad**: `22`\r - **Localidad**: `San Miguel`\r - **Dedicación**: Estudiante de Progrmación Web Full Stack. Estudiante universitario de Contador Público en primer año.\r - **Biografia**: *Nací el 10/03/2000 en el Palomar, Bs As, Argentina. Actualmente vivo en San miguel. Mi educación alcanzada es: Secundario Técnico finalizado en 2019, titulo Maestro Mayor de obras. Estudie 2 años en un conservatorio de musica pero no lo finalizé. Mis hobbies son tocar la guitarra y el piano. Tambien me gusta jugar un poco al futbol.\r Y hoy estoy haciendo este curso porque tenía curiosidad, hace tiempo, de sumergirme en el mundo de la tecnología por eso aproveché la oportunidad con entusiasmo.*",
   "main": "src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node src/app.js",
+    "server": "nodemon src/app.js",
+    "client:start": "cd admin && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client:start\"",
+    "create:db": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "reset:db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "dev:reset": "npm run reset:db && nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -21,15 +26,22 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.24.0",
+    "sequelize-cli": "^6.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
   }
 }

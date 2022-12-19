@@ -1,12 +1,10 @@
-const { loadProducts, storeProducts } = require("../data/productsModule");
+
+const db = require('../database/models');
+const { Op } = require('sequelize');
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 
-const limitSeisProductForCategoryOrStatus = (
-  arr,
-  filterName,
-  filterParam = "category"
-) => {
+const limitSeisProductForCategoryOrStatus = (arr, filterName, filterParam = "category") => {
   let arrFilter = arr.filter((product) => product[filterParam] === filterName);
   let newArr = [];
   for (let index = 0; index < arrFilter.length; index++) {
@@ -19,73 +17,92 @@ const limitSeisProductForCategoryOrStatus = (
 };
 
 module.exports = {
-  index: (req, res) => {
-    const products = loadProducts();
-    const guitarras = limitSeisProductForCategoryOrStatus(
-      products,
-      "guitarras"
-    );
-    const baterias = limitSeisProductForCategoryOrStatus(products, "baterias");
-    const teclados = limitSeisProductForCategoryOrStatus(products, "teclados");
-    const microfonosYSonidos = limitSeisProductForCategoryOrStatus(
-      products,
-      "microfonosYSonidos"
-    );
-    const deVientos = limitSeisProductForCategoryOrStatus(
-      products,
-      "deVientos"
-    );
-    const oferta = limitSeisProductForCategoryOrStatus(
-      products,
-      "oferta",
-      "status"
-    );
-    res.render("index", {
-      title: "Code Music",
-      oferta,
-      guitarras,
-      baterias,
-      teclados,
-      microfonosYSonidos,
-      deVientos,
-      toThousand,
-    });
+  index: async (req, res) => {
+    try {
+      const oferta = await db.Product.findAll({
+        where: {
+          status: 1                                 // Implementar oferta según discount.
+        },
+        include: ['images', 'brand', 'category']
+      });
+      const guitarras = await db.Product.findAll({
+        where: {
+          categoryId: 1
+        },
+        include: ['images', 'brand', 'category']
+      });
+      const baterias = await db.Product.findAll({
+        where: {
+          categoryId: 2
+        },
+        include: ['images', 'brand', 'category']
+      });
+      const teclados = await db.Product.findAll({
+        where: {
+          categoryId: 3
+        },
+        include: ['images', 'brand', 'category']
+      });
+      const microfonosYSonido = await db.Product.findAll({
+        where: {
+          categoryId: 4
+        },
+        include: ['images', 'brand', 'category']
+      });
+      const deVientos = await db.Product.findAll({
+        where: {
+          categoryId: 5
+        },
+        include: ['images', 'brand', 'category']
+      });
+
+      return res.render("index", {
+        title: "Code Music",
+        oferta,
+        guitarras,
+        baterias,
+        teclados,
+        microfonosYSonido,
+        deVientos,
+        toThousand,
+      });
+
+    } catch (error) {
+      console.log(error)
+    }
   },
-  search: (req, res) => {
-	let {keywords} = req.query;
-	const products = loadProducts();
 
-	let result = products.filter(product => product.name?.toLowerCase().includes(keywords.toLowerCase()));
+  search: async (req, res) => {
+    try {
+      const { keywords } = req.query;
+      const result = await db.Product.findAll({
+        where: {
+          [Op.or]: [
+            {
+              name: {[Op.substring]: keywords}
+            },
+            {
+              description: {[Op.substring]: keywords}
+            }
+          ]
+        },
+        include: ['images', 'brand', 'category']
+      })
 
-	return res.render("products/results",{
-    title: "Resultado de búsqueda",
-		keywords,
-		result
-	})
-}
+      if (result) {
+        return res.render("products/results", {
+          title: "Resultado de búsqueda",
+          keywords,
+          result
+        })
+      }
+      
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
 };
 
 
 
-/* module.exports = {
-	index: (req, res) => {
-		const products = loadProducts();
-		const guitarras = limitSeis(products.filter(product => product.category === "guitarras"));
-		const baterias = limitSeis(products.filter(product => product.category === "baterias"));
-		const teclados = limitSeis(products.filter(product => product.category === "teclados"));
-		const microfonosYSonidos = limitSeis(products.filter(product => product.category === "microfonosYSonidos"));
-		const deVientos = limitSeis(products.filter(product => product.category === "deVientos"));
-		const oferta = limitSeis(products.filter(product => product.status === "oferta"));
-		res.render('index', {
-			oferta,
-			guitarras,
-			baterias,
-			teclados,
-			microfonosYSonidos,
-			deVientos,
-			toThousand
-		})
-	},
-
-};
- */

@@ -14,8 +14,9 @@
         <form class="login_form" action="" method="POST">
             
             <div class="login_div">
-                <label class="login_label" for="Email">Email</label>
-                <input class="login_input" type="text" name="email" id="Email" placeholder="Ej: tunombre@email.com">
+                <label class="login_label" for="email">Email</label>
+                <input class="login_input form-control" type="text" name="email" id="email" placeholder="Ej: tunombre@email.com">
+                <span id="msgEmail"></span>
                 <% if (locals.errors && errors.email) { %>
                   <p class="login_errors">
                     <%= errors.email.msg %> 
@@ -25,14 +26,15 @@
             
             <div class="login_div">
                 <label class="login_label" for="password">Contraseña</label>
-                <input class="login_input" type="password" name="password" id="password" placeholder="Escribe tu contraseña">
+                <input class="login_input form-control" type="password" name="password" id="password" placeholder="Escribe tu contraseña">
+                <span id="msgPassword"></span>
                 <% if (locals.errors && errors.password) { %>
                   <p class="login_errors">
                     <%= errors.password.msg %> 
                 </p>
                 <% } %>
             </div>
-            <div class="login_div">
+            <div class="login_div remember">
               <input  type="checkbox" id="recordarme" name="remember">
             <label class="login_label" for="recordarme">Recordarme</label>
             </div>
@@ -43,18 +45,20 @@
               <button type="submit">Ingresá</button>
             </div>
             <div class="login_p_a">
-                <p> ¿No tenés cuenta aún? <a href="/users/register">Registrate</a></p>
+                <p> ¿No tenés cuenta aún? <a href="/users/register" style="color: blue;">Registrate</a></p>
               </div>
             
         </form>
 
       </section>
     </main>
+
+    <%- include('../partials/whatsapp') %>  
     
-    <!-- copie y pegue el footer y se soluciono -->
     <%- include('../partials/footer') %> 
 
 
-    
+    <script src="/Js/login.js"></script>
+    <%- include('../partials/script') %>
 </body>
 </html>

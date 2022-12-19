@@ -1,22 +1,23 @@
- .register_main, .login_main {
+ /*---------- REGISTER MAIN ----------*/
+ .register_main {
     display: flex;
     flex-wrap: wrap;
     padding: 2px;
     margin: 0 auto;
     flex-direction: column;
 } 
-.register_inicio h1, .login_inicio h1 {
+.register_inicio h1 {
     color: #301B3F;
     margin-top: 10px;
     text-align: center;
 }
-.register_inicio-cuenta p, .login_inicio-cuenta p {
+.register_inicio-cuenta p {
     color: var(--ColorNegro);
     font-size: 13px;
     text-align: center;
 
 }
-.register_txt p, .login_olvidaste-contra p {
+.register_txt p {
     color: var(--ColorNegro);
     font-size: 13px;
     margin-top: 10px;
@@ -24,21 +25,37 @@
     text-align: center;
 }
 
-.register_form, .login_form {
+/*--------- FORMULARIO ----------*/
+.register_form {
     display: flex;
     flex-wrap: wrap;
     color: var(--ColorNegro);
-    margin:0 auto;
+    margin:0 auto 30px;
     gap: 20px 0;
+    width: 80%;
 }
 
-.register_div, .login_div {
+.register_div {
     display: flex;
     flex-direction: column;
     margin: auto;
+    align-items: center
 }
 
-.register_label, .login_label {
+.terminos {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.terminos label {
+    margin-bottom: 0;
+}
+
+.form-check-input {
+    margin-top: 0;
+}
+
+.register_label {
     margin: auto;
     margin-bottom: 10px;
 }
@@ -47,56 +64,65 @@
     margin: auto;
 }
 
-.register_input, .login_input {
-    width: 300PX;
+.register_input {
+    width: 100%;
     height: 30px;
     border-radius: 20px;
     background-color: #D9D9D9;
     margin: auto;
+    padding-left: 5px;
 }
 
-.register_div button, .login_div button {
+.register_div button {
     width: 160px;
     height: 35px;
     margin-left: 30px;
     margin-right: 20px;
-    background-color: #202040;
+    background-color: #551A8B;
     color: white;
     text-transform: uppercase;
     border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.register_p_a, .login_p_a {
+.register_div button:hover {
+    background-color: var(--ColorNegro);
+    cursor: pointer;
+}
+
+.register_p_a {
     text-align: center;    
 }
 
-.register_p_a p, .login_p_a p {
+.register_p_a p {
     font-size: 13px;    
 }
 
-.register_p_a p a, .login_p_a p a {
+.register_p_a p a {
     color: #611696;    
 }
 
-.register_errors, .login_errors {
+.register_errors {
     color: red;
 }
 
 
 @media (min-width: 768px) {
-    .register_form, .login_form {
+    .register_form {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    .register_input, .login_input {
-        width: 500px;
+    .register_input {
+        width: 300px;
     }
 }
 
 
 @media (min-width: 1024px) {
-    .register_input, .login_input {
-        width: 600px;
+    .register_input {
+        width: 350px;
     }
 }

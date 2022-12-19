@@ -1,80 +1,65 @@
+/* -- REQUIRES --*/
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const port = 3049;
-const morgan = require('morgan'); /* hay que hacer npm i morgan para instalar las dependencias de morgan.. */
+const port = process.env.PORT;
+const morgan = require('morgan'); 
 const session = require('express-session');
-const cookieParse = require('cookie-parser')
+const cookieParse = require('cookie-parser');
 const localsUserCheck = require('./middlewares/localsUserCheck');
 const cookieCheck = require('./middlewares/cookieCheck');
-
 const methodOverride = require('method-override');
+const cors = require('cors');
 
 const app = express();
 
+/* -- MIDDLEWARES --*/
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var productsRouter = require('./routes/products');
-
-app.use(cookieParse());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cookieParse());
 app.use(session({
   secret: 'Code Music secret',
   resave: false,
   saveUninitialized: true
 }));
+app.use(cors());
 
 app.use(cookieCheck);
 app.use(localsUserCheck);
 
+/* -- ROUTES --*/
+app.use('/', require('./routes/index'));
+app.use('/users', require('./routes/users'));
+app.use('/products', require('./routes/products'));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/products', productsRouter);
+app.use('/api/auth', require("./routes/APIs/auth"));
+app.use('/api/users', require('./routes/APIs/apiUsers'));
+app.use('/api/products', require('./routes/APIs/apiProducts'));
+app.use('/api/categories', require('./routes/APIs/apiCategories'));
+app.use('/api/carts', require('./routes/APIs/apiCarts'));
 
 
-app.use(function(req, res, next) {
-    next(createError(404));
-  }); 
-  
+app.use((req, res, next) => {
+    try {
+        return res.status(404).render('not-found')
+    } catch (error) {
+        console.log(error);
+    }
+});
 
-app.use(function(err, req, res, next) {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-  
-    // render the error page
-    res.status(err.status || 500);
-    res.render('not-found');
-  });
 
-  
+  /* -- STARTING THE SERVER --*/
   app.listen(port, () => console.log('server running in http://localhost:' + port));
 
 
   
-/* app.use('/*', (req, res, next) => {
-    try {
-        
-    } catch (error) {
-        res.send(error)
-    }
-}); */
 
-
-/* app.use('/', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'index.html')));
-app.use('/productDetail', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productDetail.html')));
-app.use('/productCart', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')));
-app.use('/register', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'register.html')));
-app.use('/login', (req,res) => res.sendFile(path.resolve(__dirname, 'views', 'login.html'))); */
-
-/* Recuerden cuando bajan todo hacer el "npm i express" */
 

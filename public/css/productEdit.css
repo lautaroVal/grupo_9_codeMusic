@@ -1,3 +1,14 @@
+.body_edit {
+    background-image: linear-gradient(135deg,#541a8bad, #9a75ca, #3f54a8, #2e2c8bd7, #631da5, #691faf, #551A8B);
+    background-size: 500%;
+}
+
+.edit_titulo {
+    color: white;
+    font-size: 27px;
+    text-shadow: 2px 2px 4px #000000
+}
+
 .main_formulario {
     margin: 40px 0;
     width: 100%;
@@ -12,7 +23,6 @@
 
 .main_formulario input{
     width: 90%;
-    height: 32px;
     margin-top: 7px;
     border-radius: 20px;
     background-color: #D9D9D9;
@@ -26,18 +36,23 @@
     text-align: left;
 }
 
+.main_formulario textarea {
+    resize: none;
+}
 
 .main_formulario button {
     display: inline-block;
     width: 80%;
+    background-color: #551A8B;
     margin-left: 30px;
     margin-right: 20px;
     text-transform: uppercase;
     transition: 0.5s;
+    border: none;
 }
 
 .main_formulario button:hover {
-    background-color: #202040;
-    color: white;
-    border: 2px solid #202040;
+    background-color: var(--ColorNegro);
+    /* color: #551A8B; */
+    cursor: pointer;
 }

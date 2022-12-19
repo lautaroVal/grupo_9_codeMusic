@@ -6,13 +6,13 @@
     --ColorAzul: #0000ff;
     --ColorVerde: #46A656;
 }
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;    
 
 }
-
 body {
     font-family: 'Montserrat';
     background-color: var(--ColorGris);
@@ -28,6 +28,10 @@ ul, ol{
 
 a{
     text-decoration: none;
+    color: var(--ColorBlanco);
+}
+
+a:hover{
     color: var(--ColorBlanco);
 }
 

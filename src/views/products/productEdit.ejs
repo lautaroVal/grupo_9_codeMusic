@@ -2,89 +2,208 @@
 <html lang="en">
 <%- include('../partials/head') %>
 
-    <body class="editAdd">
+    <body class="body_edit">
         <%- include('../partials/header') %>
             <main class="main_formulario">
-                <h4>Editar producto: <%= product.name %>
+                <h4 class="edit_titulo">Editar producto: <%= product.name %>
                 </h4>
 
-                <form class="main_formulario_contenedor" action="/products/productEdit/<%= product.id %>?_method=PUT"
+                <form class="main_formulario_contenedor" id="edit_Form" action="/products/edit/<%= product.id %>?_method=PUT"
                     method="POST" enctype="multipart/form-data">
 
                     <div>
                         <label for="name">Nombre del producto</label>
-                        <input type="text" name="name" id="name" placeholder="Ejempo: Guitarra Electrica"
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Ejempo: Guitarra Electrica"
                             value="<%= product.name %>">
+                        <span id="msgName"></span>
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="register_errors">
+                                <%= errors.name.msg %>
+                            </p>
+                            <% } %>
                     </div>
-                    <div>
-                        <label for="description">Descripcion</label>
-                        <textarea name="description" id="description" cols="50"
-                            rows="10"><%= product.description %></textarea>
+
+                    <div class="input_img-principal">
+                        <label for="image1" class="btn btn-secondary button_img">Imagen principal:</label>
+                        <input type="file" class="form-control btn-sm" name="image" id="image1" accept="image/*"
+                            hidden />
+                        <span id="msgImg"></span>
+                        <% if (locals.errors && errors.images) { %>
+                            <p class="register_errors">
+                                <%= errors.images.msg %>
+                            </p>
+                            <% } %>
+                                <div class="div_imageView_card">
+                                    <img src="/img/products/<%=product.image%>" alt="" height="100%" id="imageView">
+                                </div>
+                    </div>
+
+                    <div class="input_img-secundary">
+                        <label for="image2" class="btn btn-secondary button_img">Imágenes
+                            secundarias<i>(Opcional):</i></label>
+                        <input type="file" class="form-control" name="images" id="image2" accept="image/*" multiple
+                            hidden />
+                        <div class="div_imageView2">
+                            <p class="div_imageView2_card">
+                                <img src="<% if (product.images.length && product.images[0]) { %>
+                                    /img/imgProducts/<%=product.images[0].file%>
+                                <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%>" alt="" height="100%" id="imageView1" />
+                            </p>
+                            <p class="div_imageView2_card">
+                                <img src="<% if (product.images.length && product.images[1]) { %>
+                                    /img/imgProducts/<%=product.images[1].file%>
+                                <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%>" alt="" height="100%" id="imageView2" />
+                            </p>
+                            <p class="div_imageView2_card">
+                                <img src="<% if (product.images.length && product.images[2]) { %>
+                                    /img/imgProducts/<%=product.images[2].file%>
+                                <% }else{%> https://avalos.sv/wp-content/uploads/295-default-featured-image.png<% }%> " alt="" height="100%" id="imageView3" />
+                            </p>
+                        </div>
                     </div>
 
                     <div>
-                        <label for="imagen">Imagen de producto</label>
-                        <input type="file" name="image" id="imagen" accept="image/*"
-                            value="<%= product.image %>"><br><br>
+                        <label for="price">Precio</label>
+                        <input type="number" id="price" name="price" class="form-control"
+                            placeholder="Ejemplo: $50.000" value="<%= product.price %>">
+                        <span id="msgPrice"></span>
+                        <% if (locals.errors && errors.price) { %>
+                            <p class="register_errors">
+                                <%= errors.price.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+
+                    <div>
+                        <label for="share">Cuotas</label>
+                        <input type="number" class="form-control" id="share" name="share" value="<%= product.share %>" />
+                    </div>
+
+
+                    <div>
+                        <label for="discount">Descuento</label>
+                        <input type="number" id="discount" name="discount" class="form-control"
+                            value="<%= product.discount %>" />
+                        <span id="msgDiscount"></span>
+                    </div>
+
+                    <div>
+                        <label for="description">Descripción</label>
+
+                        <textarea
+                         class="form-control"
+                          name="description"
+                          id="description"
+                          cols="50"
+                          rows="10"><%= product.description %>
+                        </textarea>
+
+                        <p id="descriptionInfo"
+                          style="align-self: flex-start;"
+                          hidden>
+                          <span id="numberCharacters"></span> disponibles
+                        </p>
+
+                        <span id="msgDescription"></span>
+
+                        <% if (locals.errors && errors.description) { %>
+                            <p class="register_errors">
+                                <%= errors.description.msg %>
+                            </p>
+                            <% } %>
                     </div>
 
                     <div>
                         <label for="category" class="form-label">Elige una categoria:</label>
-                        <select name="category" id="category">
-                            <option value="guitarras" <%=product.category==="guitarras" && "selected" %>>Guitarras
-                            </option>
-                            <option value="baterias" <%=product.category==="baterias" && "selected" %>>Baterias</option>
-                            <option value="teclados" <%=product.category==="teclados" && "selected" %>>Teclados y Pianos
-                            </option>
-                            <option value="microfonosYSonidos" <%=product.category==="microfonosYSonidos" && "selected"
-                                %>>Microfonos y Sonido</option>
-                            <option value="deVientos" <%=product.category==="deVientos" && "selected" %>>Instrumentos de
-                                Viento</option>
+                        <select name="categoryId" id="category" class="form-control">
+                            <option value="" disabled>Elegí una categoría</option>
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>" <%=product.category.name===category.name
+                                    && "selected" %>> <%= category.name%>
+                                </option>
+                                <% }) %>
+                                    <span id="msgCategory"></span>
+                                    <% if (locals.errors && errors.categoryId) { %>
+                                        <p class="register_errors">
+                                            <%= errors.categoryId.msg %>
+                                        </p>
+                                        <% } %>
                         </select>
                     </div>
 
                     <div>
-                        <label for="color" class="form-label">Elige un color:</label>
-                        <select name="color" id="color">
-
-                            <option value="negro" <%=product.color==="negro" && "selected" %>>Negro</option>
-                            <option value="blanco" <%=product.color==="blanco" && "selected" %>>Blanco</option>
-                            <option value="rojo" <%=product.color==="rojo" && "selected" %>>Rojo</option>
-                            <option value="dorado" <%=product.color==="dorado" && "selected" %>>Dorado</option>
-                            <option value="plateado" <%=product.color==="plateado" && "selected" %>>Plateado</option>
-                            <option value="marron" <%=product.color==="marron" && "selected" %>>Marrón</option>
-                            <option value="azul" <%=product.color==="azul" && "selected" %>>Azul</option>
-                            <option value="amarillo" <%=product.color==="amarillo" && "selected" %>>Amarillo</option>
-                            <option value="verde" <%=product.color==="verde" && "selected" %>>Verde</option>
-                            <option value="naranja" <%=product.color==="naranja" && "selected" %>>Naranja</option>
-                            <option value="violeta" <%=product.color==="violeta" && "selected" %>>Violeta</option>
+                        <label for="brand" class="form-label">Elige una marca:</label>
+                        <select name="brandId" id="brand" class="form-control">
+                            <option value="" disabled>Elegí una marca</option>
+                            <% if (product.brand) { %>
+                                <% brands.forEach(brand=> { %>
+                                    <option value="<%= brand.id %>" <%=product.brand.name===brand.name && "selected" %>>
+                                        <%=brand.name%>
+                                    </option>
+                                    <% }) %>
+                            <% }else {%>
+                                <% brands.forEach(({id,name}) => { %>
+                                    <option value="<%= id %>"><%= name %></option>
+                                    <% }) %>
+                            <% } %>
+                                    <% if (locals.errors && errors.brandId) { %>
+                                        <p class="register_errors">
+                                            <%= errors.brandId.msg %>
+                                        </p>
+                                        <% } %>
                         </select>
                     </div>
-                    
-                    <div>
-                        <label for="precio">Precio</label>
-                        <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000"
-                            value="<%= product.price %>">
-                    </div>
+
+                        <div>
+                            <label for="color" class="form-label">Elige un color:</label>
+                            <select name="colorId" id="color" class="form-control">
+                                <option value="" disabled>Elegí un color</option>
+                                <% if (product.color) { %>
+                                    <% colors.forEach(color=> { %>
+                                        <option value="<%= color.id %>" <%=product.color && product.color.name===color.name
+                                            ? "selected" : null%>> <%= color.name%>
+                                        </option>
+                                        <% }) %>
+                                <% } else {%> 
+                                    <% colors.forEach(({id,name}) => { %>
+                                        <option value="<%= id %>"><%= name %></option>
+                                        <% }) %>
+                                        <% } %>
+                                        <% if (locals.errors && errors.colorId) { %>
+                                            <p class="register_errors">
+                                                <%= errors.colorId.msg %>
+                                            </p>
+                                            <% } %>
+                            </select>
+                        </div>
+
+                        
+
+                        <div>
+                            <label for="status">Oferta:</label>
+                            <input type="radio" name="status" id="status" value="<%= OFERTA%>"
+                                <%=product.status===OFERTA && "checked" %>> En oferta
+                            <input type="radio" name="status" id="estado" value="<%= SINOFERTA%>"
+                                <%=product.status===SINOFERTA && "checked" %>> Sin oferta
+                            <% if (locals.errors && errors.status) { %>
+                                <p class="register_errors">
+                                    <%= errors.status.msg %>
+                                </p>
+                                <% } %>
+                        </div>
 
 
-                    <div>
-                        <label for="estado">Oferta:</label>
-                        <input type="radio" name="status" id="estado" value="oferta" <%=product.status==="oferta"
-                            && "checked" %>> En oferta
-                        <input type="radio" name="status" id="estado" value="no-oferta" <%=product.status==="no-oferta"
-                            && "checked" %>> Sin oferta
-                    </div>
-
-
-                    <div class="formulario_enviar">
-                        <button type="submit">Enviar</button>
-                    </div>
+                        <div class="formulario_enviar">
+                            <button type="submit">Enviar</button>
+                            <span id="msgError"></span>
+                        </div>
 
                 </form>
 
             </main>
             <%- include('../partials/footer') %>
+                <%- include('../partials/script') %>
+                    <script src="/Js/productEdit.js"></script>
     </body>
 
 </html>

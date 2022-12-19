@@ -1,5 +1,0 @@
-Header y Footer : # 00000
-Navegación : # 202040
-Body : # F2F5F9
-Secciones y tipografias: FFFFFF
-

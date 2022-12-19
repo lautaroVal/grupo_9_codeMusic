@@ -1,0 +1,131 @@
+[
+    {
+        "name": "Yamaha",
+        "image": "yamaha.png"
+    },
+    {
+        "name": "Fender",
+        "image": "fender.png"
+    },
+    {
+        "name": "Taylor",
+        "image": "taylor.png"
+    },
+    {
+        "name": "Shure",
+        "image": "shure.png"
+    },
+    {
+        "name": "Casio",
+        "image": "casio.png"
+    },
+    {
+        "name": "Korg",
+        "image": "korg.png"
+    },
+    {
+        "name": "Ampeg",
+        "image": "ampeg.png"
+    },
+    {
+        "name": "Audio-technica",
+        "image": "audio-technica.png"
+    },
+    {
+        "name": "Behringer",
+        "image": "behringer.png"
+    },
+    {
+        "name": "Beyerdynamic",
+        "image": "beyerdynamic.png"
+    },
+    {
+        "name": "Blackstar",
+        "image": "blackstar.png"
+    },
+    {
+        "name": "Hercules",
+        "image": "hercules.png"
+    },
+    {
+        "name": "Zildjian",
+        "image": "zildjian.png"
+    },
+    {
+        "name": "D'addario",
+        "image": "d'addario.png"
+    },
+    {
+        "name": "Stagg",
+        "image": "stagg.png"
+    },
+    {
+        "name": "Phonic",
+        "image": "phonic.png"
+    },
+    {
+        "name": "Ibanez",
+        "image": "ibanez.png"
+    },
+    {
+        "name": "Roland",
+        "image": "roland.png"
+    },
+    {
+        "name": "Roy Benson",
+        "image": "roybenson.png"
+    },
+    {
+        "name": "BLG Audio",
+        "image": "blgaudio.png"
+    },
+    {
+        "name": "Bogner Amplification",
+        "image": "bogneramplification.png"
+    },
+    {
+        "name": "Breyer",
+        "image": "breyer.png"
+    },
+    {
+        "name": "Pearl",
+        "image": "pearl.png"
+    },
+    {
+        "name": "Gator Cases",
+        "image": "gatorcases.png"
+    },
+    {
+        "name": "Marshall",
+        "image": "marshall.jpg"
+    },
+    {
+        "name": "Epiphone",
+        "image": "epiphone.png"
+    },
+    {
+        "name": "Cort",
+        "image": "cort.png"
+    },
+    {
+        "name": "Parquer",
+        "image": "parquer.png"
+    },
+    {  
+        "name": "Mapex",
+        "image": "mapex.jpg"
+    },
+    {
+        "name": "Artesia",
+        "image": "artesia.png"
+    },
+    {
+        "name": "Lincoln Winds",
+        "image": "lincolnwinds.png"
+    },
+    {
+        "name": "Wisemann",
+        "image": "wisemann.png"
+    }
+]
+

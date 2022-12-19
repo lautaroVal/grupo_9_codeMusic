@@ -1,107 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+  <%- include('../partials/head') %>
 
-    <body class="editAdd">
-        <%- include('../partials/header') %>
-            <main class="main_formulario">
-                <h4>Agrega un producto</h4>
+  <body class="body_add">
+    <%- include('../partials/header') %>
+    <main class="main_formulario">
+      <h4 class="add_titulo">Agregar producto</h4>
 
-                <form class="main_formulario_contenedor" action="/products/productAdd" method="POST"
-                    enctype="multipart/form-data">
+      <form
+        class="main_formulario_contenedor needs-validation" id="form_add"
+        enctype="multipart/form-data" action="/products/productAdd" method="POST"
+        novalidate 
+      >
+        <div>
+          <label for="name">Nombre del producto:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Ejempo: Guitarra Electrica"
+          />
+          <span id="msgName"></span>
+          <% if (locals.errors && errors.name) { %>
+          <p class="register_errors"><%= errors.name.msg %></p>
+          <% } %>
+        </div>
 
-                    <div>
-                        <label for="Name">Nombre del producto</label>
-                        <input type="text" id="Name" name="name" placeholder="Ejempo: Guitarra Electrica">
-                        <% if (locals.errors && errors.name) { %>
-                            <p class="register_errors">
-                                <%= errors.name.msg %>
-                            </p>
-                            <% } %>
-                    </div>
+        <div class="input_img-principal">
+          <label for="image1" class="btn btn-secondary button_img"
+            >Imagen principal:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label
+          >
+          <input
+            type="file"
+            class="form-control btn-sm"
+            name="image"
+            id="image1"
+            accept="image/*"
+            hidden
+          />
+          <span id="msgImg"></span>
+          <% if (locals.errors && errors.images) { %>
+          <p class="register_errors"><%= errors.images.msg %></p>
+          <% } %>
+          <div class="div_imageView_card">
+            <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView">
+          </div>
+        </div>
 
-                    <div>
-                        <label for="imagen">Imagen de producto</label>
-                        <input type="file" name="image" id="imagen" accept="image/*"><br><br>
-                    </div>
+        <div class="input_img-secundary">  
+          <label for="image2" class="btn btn-secondary button_img"
+            >Imágenes secundarias<i>(Opcional):</i></label
+          >
+          <input
+            type="file"
+            class="form-control"
+            name="images"
+            id="image2"
+            accept="image/*"
+            multiple
+            hidden
+          />
+          <div class="div_imageView2">
+            <p class="div_imageView2_card">
+              <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView1" />
+            </p>
+            <p class="div_imageView2_card">
+                <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView2" />
+              </p>
+            <p class="div_imageView2_card">
+              <img src="https://avalos.sv/wp-content/uploads/295-default-featured-image.png" alt="" height="100%" id="imageView3" />
+            </p>
+          </div>
+        </div>
 
-                    <div>
-                        <label for="Description">Descripcion</label>
-                        <textarea rows="5" id="Description" name="description"></textarea>
-                        <% if (locals.errors && errors.description) { %>
-                            <p class="register_errors">
-                                <%= errors.description.msg %>
-                            </p>
-                            <% } %>
-                    </div>
+        <div>
+          <label for="price">Precio:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            placeholder="Ejemplo: $50.000"
+          />
+          <span id="msgPrice"></span>
+          <% if (locals.errors && errors.price) { %>
+          <p class="register_errors"><%= errors.price.msg %></p>
+          <% } %>
+        </div>
 
-                    <div>
-                        <label for="precio">Precio</label>
-                        <input type="number" id="precio" name="price" placeholder="Ejemplo: $50.000">
-                        <% if (locals.errors && errors.price) { %>
-                            <p class="register_errors">
-                                <%= errors.price.msg %>
-                            </p>
-                            <% } %>
-                    </div>
+        <div>
+          <label for="share">Cuotas</label>
+          <input type="number" class="form-control" id="share" name="share" />
+      </div>
 
-                    <div>
-                        <label for="discount">Descuento</label>
-                        <input type="number" id="discount" name="discount">
-                    </div>
+        <div>
+          <label for="discount">Descuento:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="discount"
+            name="discount"
+          />
+          <span id="msgDiscount"></span>
+        </div>
 
-                    <div>
+        <div>
+          <label for="description">Descripción:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
+          <textarea
+            rows="5"
+            class="form-control"
+            id="description"
+            name="description"
+          ></textarea>
+          <p id="descriptionInfo" style="align-self: flex-start;" hidden><span id="numberCharacters"></span> disponibles</p>
+          <span id="msgDescription"></span>
+          <% if (locals.errors && errors.description) { %>
+          <p class="register_errors"><%= errors.description.msg %></p>
+          <% } %>
+        </div>
+        
+        <div>
+          <label for="category" class="form-label">Elige una categoria:<em style="color: rgba(255, 0, 0, 0.671);">*</em></label>
+          <select class="form-control" name="categoryId" id="category">
+            <option value="" hidden>Elegir</option>
+            <% categories.forEach(({id,name}) => { %>
+            <option value="<%= id %>"><%= name %></option>
+            <% }) %>
+          </select>
+          <span id="msgCategory"></span>
+          <% if (locals.errors && errors.categoryId) { %>
+          <p class="register_errors"><%= errors.categoryId.msg %></p>
+          <% } %>
+        </div>
 
-                        <label for="category" class="form-label">Elige una categoria:</label>
-                        <select name="category" id="category">
-                            <option>Elegir</option>
-                            <option value="guitarras">Guitarras</option>
-                            <option value="baterias">Baterias</option>
-                            <option value="teclados">Teclados y Pianos</option>
-                            <option value="microfonosYSonidos">Microfonos y Sonido</option>
-                            <option value="deVientos">Instrumentos de Viento</option>
-                        </select>
-                        <% if (locals.errors && errors.category) { %>
-                            <p class="register_errors">
-                                <%= errors.category.msg %>
-                            </p>
-                            <% } %>
-                    </div>
+        <div>
+          <label for="brand" class="form-label">Elige una marca:</label>
+          <select class="form-control" name="brandId" id="brand">
+            <option value="" hidden>Elegí una marca</option>
+            <% brands.forEach(({id,name}) => { %>
+            <option value="<%= id %>"><%= name %></option>
+            <% }) %>
+          </select>
+        </div>
 
-                    <div class="main_formulario_radio">
-                        <div>
-                            <label for="color" class="form-label">Elige un color:</label>
-                            <select name="color" id="color">
-                                <option value="negro">Negro</option>
-                                <option value="blanco">Blanco</option>
-                                <option value="rojo">Rojo</option>
-                                <option value="dorado">Dorado</option>
-                                <option value="plateado">Plateado</option>
-                                <option value="marron">Marrón</option>
-                                <option value="azul">Azul</option>
-                                <option value="amarillo">Amarillo</option>
-                                <option value="verde">Verde</option>
-                                <option value="naranja">Naranja</option>
-                                <option value="violeta">Violeta</option>
-                            </select>
+        <div>
+          <label for="color" class="form-label">Elige un color:</label>
+          <select class="form-control" name="colorId" id="color">
+            <option value="" hidden>Elegí un color</option>
+            <% colors.forEach(({id,name}) => { %>
+            <option value="<%= id %>"><%= name %></option>
+            <% }) %>
+          </select>
+        </div>
 
-                        </div>
-                        <div class="main_formulario_radio">
-                            <label for="estado">Oferta:</label>
-                            <p><input type="radio" name="status" id="estado" value="oferta"> En oferta</p>
-                            <p><input type="radio" name="status" id="estado" value="no-oferta"> Sin oferta</p>
-                        </div>
-                    </div>
+          <div class="main_formulario_status">
+            <label for="status" name="status">Oferta:</label>
+            <div>
+            <p class="main_formulario_status-radio">
+              <input type="radio" name="status" id="status" value="1" /> En
+              oferta
+            </p>
+            <p class="main_formulario_status-radio">
+              <input type="radio" name="status" id="status" value="0" />
+              Sin oferta
+            </p>
+            </div>
+          </div>
+          
+          <div class="formulario_enviar">
+            <button id="btn-submit" type="submit">Enviar</button>
+            <span id="msgError"></span>
+        </div>
+      </form>
+    </main>
 
-                    <div class="formulario_enviar">
-                        <button type="submit">Enviar</button>
-                    </div>
+    <%- include('../partials/footer') %>
 
-                </form>
-                
-            </main>
-
-            <%- include('../partials/footer') %>
-    </body>
-
+    <script src="/js/productAdd.js"></script>
+    <%- include('../partials/script') %>
+  </body>
 </html>
