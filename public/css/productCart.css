@@ -21,7 +21,7 @@ h1.productCart_main-h1 {
 .productCart_main_menu {
    list-style: none;
    display: grid;
-   grid-template-columns: auto auto auto auto;
+   grid-template-columns: auto auto auto auto auto;
    align-content: space-evenly;
    font-size: 15px;
    gap: 2px;
@@ -33,7 +33,7 @@ h1.productCart_main-h1 {
 
 .productCart_detalleProducto {
    display: grid;
-   grid-template-columns: auto auto auto auto;
+   grid-template-columns: auto auto auto auto auto;
    align-content: space-evenly;
    align-items: center;
    margin-bottom: 30px;
@@ -47,7 +47,7 @@ h1.productCart_main-h1 {
    display: flex;
 }
 
-.item1 {
+.itemProduct {
    display: flex;
    flex-direction: column;
    align-items: center;
