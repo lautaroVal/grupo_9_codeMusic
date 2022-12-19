@@ -15,13 +15,13 @@
                 <img src="/img/LOGO-CODEMUSIC.png" alt="Code Music" title="Code Music">
             </a>
         </div>
+        
 
         <div class="productDetail_header_top_icon">
             <% if (locals.userLogin) { %>
-                <div class="dropdown" style="display: flex; flex-direction: row; align-items: center; gap: 18px;">
-                    <p>Hola <br> <%= userLogin.firstName %> ! </p>
-                    <button class="btn btn-secondary dropdown-toggle btn-light" style="background-color: transparent; border: none; color: white; width: 50px; height: 40px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                        <img src="/img/users/<%=userLogin.avatar ? userLogin.avatar : "default-users-image.jpg"%>" class="rounded-circle" style="width: 100%; height:auto;overflow: hidden;" alt="...">
+                <div class="dropdown productDetail_header_top_menu" >
+                    <button class="btn btn-secondary dropdown-toggle btn-light productDetail_header_top_icon_avatar"  type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="/img/users/<%=userLogin.avatar ? userLogin.avatar : "default-users-image.jpg"%>" class="rounded-circle" alt="...">
                     </button>
                     <ul class="dropdown-menu">
                       <li><a href="/users/profile" class="dropdown-item">Mi perfil</a></li>
@@ -54,7 +54,7 @@
     
 </div>
 
-<div class="productDetail_header_navbar" id="NavBurguer">
+<div class="productDetail_header_navbar" id="navBurguer">
     <ul>
         <li><a href="/products">Todos los productos</a></li>
         <li><a href="..#guitar">Guitarras</a></li>
@@ -64,4 +64,6 @@
         <li><a href="..#wind">Instrumentos de vientos</a></li>
     </ul>
 </div>
+<script src="../../../Js/burguerMenu.js"></script>
+
 </header>
