@@ -99,7 +99,10 @@
 }
 
 .productDetail_header_top_icon_avatar img{
-    width: 23px;
+    width: 34px;
+    position: relative;
+    right: 3px;
+    top: -5px;
 }
 
 .productDetail_header_top_icon {
