@@ -84,8 +84,8 @@
     border: 1px solid rgba(0, 0, 0, 0.411);
     padding: 2px;
     resize: vertical;
-    width: 60vw;
-    margin: 0px 0px 0px 5px;
+    width: 150%;
+    margin: auto;
 }
 
 .profile_main_form_div4 div select{
@@ -97,18 +97,16 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: -63px 0px 10px 35px;
+    margin: -63px 0px 0px 21px;
 }
 
 .profile_main_form_button {
     /* height: 30px;
     margin-top: 5px; */
     display: inline-block;
-    width: 60%;
+    width: 100%;
     background-color: #551A8B;
     color: white;
-    margin-left: 30px;
-    margin-right: 20px;
     padding: 10px;
     border: none;
     text-transform: uppercase;
@@ -149,11 +147,18 @@
     .profile_main_form_div4 div select{
         height: 30px;
         border-radius: 5px;
-        width: 44%;
+        width: 235px;
     }
     .profile_main_form_button-div {
         display: flex;
         flex-direction: row;
+    }
+    .profile_controls_textarea {
+        border: 1px solid rgba(0, 0, 0, 0.411);
+        padding: 2px;
+        resize: vertical;
+        width: 150%;
+        margin: 0px 0px 0px 10px;
     }
 
 }
@@ -165,6 +170,10 @@
     .profile_main_form_div4 div select{
         height: 30px;
         border-radius: 5px;
-        width: 46%;
+        width: 335px;
+    }
+    .profile_main_form_button {
+        width: 35%;
+        margin: 0px 0px 52px 92px;
     }
 }
