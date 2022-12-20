@@ -1,5 +1,10 @@
 console.log('orderCart success!');
 
+const notAdd =() => {
+        alert("Debes loguearte para poder agregar productos a tu carrito")
+}
+
+
 const addCartItem = async (productId) => {
 
     try {

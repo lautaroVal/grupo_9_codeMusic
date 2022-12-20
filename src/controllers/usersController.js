@@ -119,11 +119,10 @@ module.exports = {
           },
           include: [{
             association: 'carts',
+            attributes: ['id','quantity'],
             include: [{
               association: 'product',
-              attributes: {
-                include: ['name','price','image']
-              },
+              attributes: ['id','name','price','discount','image'],
             }]
           }]
         })
@@ -132,7 +131,7 @@ module.exports = {
             id: order.id,
             userId: order.userId,
             total: order.total,
-            products: order.carts
+            items: order.carts
           }
 
           return res.redirect('/');
@@ -147,7 +146,7 @@ module.exports = {
               id: order.id,
               userId: order.userId,
               total: 0,
-              products: []
+              items: []
             }
 
             return res.redirect('/');

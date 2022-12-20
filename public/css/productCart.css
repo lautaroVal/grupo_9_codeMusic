@@ -21,7 +21,7 @@ h1.productCart_main-h1 {
 .productCart_main_menu {
    list-style: none;
    display: grid;
-   grid-template-columns: auto auto auto auto auto;
+   grid-template-columns: auto auto auto auto auto auto;
    align-content: space-evenly;
    font-size: 15px;
    gap: 2px;
@@ -33,7 +33,7 @@ h1.productCart_main-h1 {
 
 .productCart_detalleProducto {
    display: grid;
-   grid-template-columns: auto auto auto auto auto;
+   grid-template-columns: auto auto auto auto auto auto;
    align-content: space-evenly;
    align-items: center;
    margin-bottom: 30px;
@@ -51,6 +51,31 @@ h1.productCart_main-h1 {
    display: flex;
    flex-direction: column;
    align-items: center;
+   width: min-content;
+}
+
+.boton {
+   display: flex;
+   flex-direction: column;
+}
+
+.boton input {
+   padding-left: 4px;
+   width: 8%;
+   border: none;
+}
+
+.botonSubtract,.botonAdd {
+   border: none;
+   background-color: none;
+}
+
+.botonSubtract{
+    color: red;
+}
+
+.botonAdd {
+    color: green;
 }
 
 /* Main productos bateria */
@@ -75,14 +100,6 @@ h1.productCart_main-h1 {
    width: 25px;
    margin: 0;
 }
-
-.boton {
-   background-color: white;
-   border: 1px solid black;
-   font-size: 20px;
-   padding: 0px 20px;
-}
-
 
 .productCart_detalleProducto_ {
    display: flex;
@@ -175,10 +192,17 @@ h1.productCart_main-h1 {
    font-size: 20px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 375px){
 
    .productCart_detalleProducto_imagenbateria {
       width: 8em;
+   }
+
+   .boton {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 3px;
    }
 
 }

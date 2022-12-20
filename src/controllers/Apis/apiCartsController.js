@@ -24,25 +24,27 @@ module.exports = {
 
             const { productId } = req.body; /* Este body viene de lo que envíamos desde el onclick del botón de agregar al carrito */
 
-            await db.Cart.create({
+            const newCartItem = await db.Cart.create({
                 quantity: 1,
                 productId,
                 orderId: req.session.orderCart.id
             })
 
-            let { id, name, price, discount, image } = await db.Product.findByPk(productId);
+            const cartItem = await db.Cart.findByPk(newCartItem.id,{
+                attributes: ['id','quantity'],
+                include : [
+                    {
+                        association: 'product',
+                        attributes: ['id','name','price','discount','image'],
+                    }
+                ]
+            })
 
             req.session.orderCart = {
                 ...req.session.orderCart,
-                products: [
-                    req.session.orderCart.products,
-                    {
-                        id,
-                        name,
-                        price,
-                        discount,
-                        image: image.file
-                    }
+                items: [
+                    ...req.session.orderCart.items,
+                    cartItem
                 ]
             }
 
