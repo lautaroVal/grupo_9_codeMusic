@@ -16,7 +16,24 @@ module.exports = {
 			const totalProducts = await db.Product.count();
             const totalUsers = await db.User.count();
             const totalCategories = await db.Category.count();
-			const products = await db.Product.findAll({
+			const {      
+				page = 1,
+				offset = 0,
+				limit = 10,
+				sales = 0,
+				salesDiscount = 0,
+				price = 0,
+				order = "ASC",
+				sortBy = "name",
+				search = "",} = req.query;
+
+			limit = +limit > 10 ? 10 : +limit;
+			page = +page <= 0 || isNaN(page) ? 1 : page;
+			page -= 1;
+			offset = page * limit;
+
+			let products = await db.Product.findAll({
+				limit, offset, order, page,
 				include: [
 					{
 						association: 'images',
@@ -67,6 +84,7 @@ module.exports = {
 		}
 
 	},
+
 	detail: async (req, res) => {
 		try {
 			const product = await db.Product.findByPk(req.params.id, {
@@ -116,16 +134,15 @@ module.exports = {
 			})
 		}
 	},
+
 	store: (req, res) => {
 
 	 },
 
-	
 	update: async (req, res) => {
 
 	},
 
-	
 	destroy: (req, res) => {
 
 	 },
