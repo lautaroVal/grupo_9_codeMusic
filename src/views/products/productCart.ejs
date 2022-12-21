@@ -10,36 +10,38 @@
 
                 <section class="productCart_section_contenedor">
 
-                    <article>
-                        <ul class="productCart_main_menu">
-                            <li>#</li>
-                            <li class="itemProduct">Productos</li>
-                            <li>Cantidad</li>
-                            <li>Precio</li>
-                            <li>Subtotal</li>
-                        </ul>
+                    <article class="productCart_main_menu">
+                            <p>#</p>
+                            <p class="itemProduct">Productos</p>
+                            <p>Cantidad</p>
+                            <p>Precio</p>
+                            <p>Subtotal</p>
+                            <p></p>
                     </article>
                     
                     <article class="productCart_detalleProducto" id="orderCarts">
                         <% if (!locals.userLogin) { %>
-                             <p class="alert alert-warning ms-5" id="rowCart">Para poder hacer órdenes en el carrito debes loguearte.</p>
+                             <p class="alert alert-warning ms-5" id="rowCart">Para poder hacer órdenes en el carrito debes <a href="/users/login" style="color: blue;">loguearte</a>.</p>
                             <% } %>
+                        
+                    </article>
+                    <article class="productCart_total">
+                        <div class="productCart_total-div">
+                            <p class="productCart_main_compra_total" id="total"></p>
+                            <button class="productCart_main_compra_boton">COMPRAR</button>
+                        </div>
                     </article>
 
                 </section>
 
                 <section class="productCart_main_compra">
-                    <div class="productCart_main_compra_container">
+                    <div class="productCart_main_compra-div">
                         <img class="productCart_main_compra_envioGratis_logo" src="/img/cart/logoCamion.png"
                             alt="Envio gratis">
                         <p class="productCart_main_compra_envioGratis">Envío Gratis</p>
                         <img class="productCart_main_compra_logovisa" src="/img/cart/logoVisa.png" alt="logo visa">
                         <img class="productCart_main_compra_logovisa" src="/img/cart/logoMastercard.png"
                             alt="logo mastercard">
-                    </div>
-                    <div>
-                        <p class="productCart_main_compra_total">Total $129.155</p>
-                        <button class="productCart_main_compra_boton">COMPRAR</button>
                     </div>
                 </section>
             </main>
