@@ -21,51 +21,9 @@ module.exports = {
     addItem: async (req, res) => {
 
         try {
-
             const { productId } = req.body; /* Este body viene de lo que envíamos desde el onclick del botón de agregar al carrito */
-
-            const newCartItem = await db.Cart.create({
-                quantity: 1,
-                productId,
-                orderId: req.session.orderCart.id
-            })
-
-            const cartItem = await db.Cart.findByPk(newCartItem.id,{
-                attributes: ['id','quantity'],
-                include : [
-                    {
-                        association: 'product',
-                        attributes: ['id','name','price','discount','image'],
-                    }
-                ]
-            })
-
-            req.session.orderCart = {
-                ...req.session.orderCart,
-                items: [
-                    ...req.session.orderCart.items,
-                    cartItem
-                ]
-            }
-
-            return res.status(200).json({
-                ok: true,
-                data: req.session.orderCart || null
-            })
-
-        } catch (error) {
-            return res.status(error.status || 500).json({
-                ok: false,
-                msg: error.message || 'Upps, un error!'
-            });
-        }
-
-
-
-        /* try {
-            const { productId } = req.body;
             let item = req.session.orderCart.items.find(item => item.product.id === +productId);
-            
+
             if (item) {
 
                 await db.Cart.update(
@@ -91,31 +49,33 @@ module.exports = {
                     items: itemsModify
                 }
 
-            } else {
-                const newCartItem = await db.Cart.create({
-                    quantity: 1,
-                    productId,
-                    orderId: req.session.orderCart.id
-                });
+            }  else {
 
-                const cartItem = await db.Cart.findByPk(newCartItem.id, {
-                    attributes: ['id', 'quantity'],
-                    include: [
-                        {
-                            association: 'product',
-                            attributes: ['id', 'name', 'price', 'discount', 'image']
-                        }
-                    ]
-                })
+            const newCartItem = await db.Cart.create({
+                quantity: 1,
+                productId,
+                orderId: req.session.orderCart.id
+            })
 
-                req.session.orderCart = {
-                    ...req.session.orderCart,
-                    items: [
-                        ...req.session.orderCart.items,
-                        cartItem
-                    ]
-                }
+            const cartItem = await db.Cart.findByPk(newCartItem.id,{
+                attributes: ['id','quantity'],
+                include : [
+                    {
+                        association: 'product',
+                        attributes: ['id','name','price','discount','image'],
+                    }
+                ]
+            })
+
+            req.session.orderCart = {
+                ...req.session.orderCart,
+                items: [
+                    ...req.session.orderCart.items,
+                    cartItem
+                ]
             }
+
+        }
 
             return res.status(200).json({
                 ok: true,
@@ -127,12 +87,13 @@ module.exports = {
                 ok: false,
                 msg: error.message || 'Upps, un error!'
             });
-        } */
+        }
+
     },
 
     removeItem: async (req, res) => {
 
-        /*    try {
+           try {
                const { productId } = req.body;
                let item = req.session.orderCart.items.find(item => item.product.id === +productId);
    
@@ -186,7 +147,7 @@ module.exports = {
                    ok: false,
                    msg: error.message || 'Upps, un error!'
                });
-           } */
+           }
     },
 
     removeAllItem: async (req, res) => {
