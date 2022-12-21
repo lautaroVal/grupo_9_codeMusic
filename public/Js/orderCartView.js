@@ -32,7 +32,8 @@ const showCart = (items) => {
                 <img class="productCart_detalleProducto_basura_img" src="/img/cart/logoBasura.png">
             </div>
             `
-            $('total').innerHTML = `Total $${result }`
+            $('total').innerHTML = null
+            $('total').innerHTML = `Total $${result}`
             
         });
     }else {

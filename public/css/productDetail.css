@@ -165,7 +165,7 @@
 }
 
 
-.productDetail_main_section_top_derech_button button {
+.productDetail_main_section_top_derech_button button, .comprar {
     margin: 10px;
     width: 65%;
     font-size: 15px;
@@ -177,7 +177,7 @@
     transition: 1.2s;
 }
 
-.productDetail_main_section_top_derech_button button:hover {
+.productDetail_main_section_top_derech_button button:hover, .comprar:hover {
     background-color: black;
     color: white;
     box-shadow: 8px 3px 20px -1px var(--ColorNegro);

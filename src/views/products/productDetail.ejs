@@ -87,17 +87,21 @@
                             </div>
                         </div>
                         <div class="productDetail_main_section_top_derech_button">
-                            <button type="button">Comprar</button>
+                            <form action="/products/productCart">
+                            <button type="submit" style="width: 250px;" 
+                                onclick="addCartItem('<%=product.id%>');"
+                               >Comprar</button></form>
                             <button type="button" id="addCart" <% if (!locals.userLogin) { %>
                              onclick="notAdd()"
                             <% } %> 
-                            onclick="addCartItem('<%=product.id%>')">Agregar al carrito<i class="fa-solid fa-cart-shopping" hidden></i></button>
+                            onclick="addCartItem('<%=product.id%>'); addAlert()">Agregar al carrito<i class="fa-solid fa-cart-shopping" hidden></i></button>
+                        </form>
                             <% if (locals.userLogin) { %>
                                 <% if (userLogin.rol===1) { %>
                                     <button type="button" id="edit_button"><a
                                             href="/products/edit/<%= product.id%>">Editar</a></button>
                                     <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                                        <button type="submit" style="cursor: pointer;">Eliminar</button>
+                                        <button type="submit" id="delete" style="cursor: pointer;">Eliminar</button>
                                         <% } %>
                                             <% } %>
                                     </form>
