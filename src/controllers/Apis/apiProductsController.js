@@ -75,6 +75,7 @@ module.exports = {
 					data: products
 				})
 			}
+
 		} catch (error) {
 			console.log(error);
 			return res.status(error.status || 500).json({
