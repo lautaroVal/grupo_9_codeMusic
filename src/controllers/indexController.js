@@ -18,6 +18,7 @@ const limitSeisProductForCategoryOrStatus = (arr, filterName, filterParam = "cat
 
 module.exports = {
   index: async (req, res) => {
+    /* return res.send(req.session.userLogin) */
     try {
       const oferta = await db.Product.findAll({
         where: {

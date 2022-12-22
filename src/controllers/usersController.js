@@ -51,7 +51,7 @@ module.exports = {
             })
           }
 
-          req.session.userLogin = {                       //Una vez creado el usuario creo session.
+          /* req.session.userLogin = {                       //Una vez creado el usuario creo session.
             id: user.id,
             firstName: user.firstName,
             lastName: user.lastName,
@@ -62,7 +62,7 @@ module.exports = {
 
           res.cookie('codeMusic', req.session.userLogin, {         //Y también creo una cokkie
             maxAge: 1000 * 60 * 60
-          });
+          }); */
         };
 
         return res.redirect('/users/login');
@@ -119,10 +119,10 @@ module.exports = {
           },
           include: [{
             association: 'carts',
-            attributes: ['id','quantity'],
+            attributes: ['id', 'quantity'],
             include: [{
               association: 'product',
-              attributes: ['id','name','price','discount','image'],
+              attributes: ['id', 'name', 'price', 'discount', 'image'],
             }]
           }]
         })
@@ -136,7 +136,7 @@ module.exports = {
 
           return res.redirect('/');
 
-        }else {
+        } else {
           db.Order.create({
             userId: req.session.userLogin.id,
             statusId: 1
@@ -171,10 +171,9 @@ module.exports = {
       const user = await db.User.findByPk(id, {         //Traigo al usuario cuyo id es igual al guardado en session del usuario logueado.
         include: [
           { association: 'locations' },]
-          
-        });
-/*         return res.json(user)
- */
+
+      });
+      
       if (user) {                                     // Si viene user renderizo la vista de profile.
         return res.render('users/profile', {
           title: 'Perfil de usuario',
@@ -211,8 +210,7 @@ module.exports = {
           telephone: +telephone,
         }, {
           where: {                                   /* Edito el perfil cuando el id sea el del logueado y la ubicación sea activa */
-            id: req.session.userLogin.id,          
-      
+            id: req.session.userLogin.id,
           }
         })
 
@@ -226,6 +224,13 @@ module.exports = {
               id: req.session.userLogin.id
             }
           })
+
+          req.session.userLogin = {
+              ...req.session.userLogin,
+              avatar:  req.file?.filename
+            };
+           
+            res.locals.userLog = req.session.userLogin;
         }
         return res.redirect('/');
 
