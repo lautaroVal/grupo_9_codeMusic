@@ -31,29 +31,29 @@ const addCartItem = async (productId) => {
 };
 
 const addAlert = ()=> {
-    Swal.fire(
-        'Producto agregado!',
-        'Lo vas a encontrar en tu carrito de compras!',
-        'success'
-      )
+    Swal.fire({
+        title:'Producto agregado!',
+        text:'Lo vas a encontrar en tu carrito de compras!',
+        position:'top-end',
+        icon: 'success'
+})
 }
 
-$("delete").addEventListener("click", (e) => {
+$("delete").addEventListener("submit", (e) => {
     e.preventDefault()
     Swal.fire({
         title: 'Estás seguro?',
-        text: "No podras revertir una vez borrado",
+        text: "No podrás revertir una vez eliminado.",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Si, eliminar!',
+        cancelButtonText: 'Cancelar'
       }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
+                'Borrado exitoso!'
                 )
                 $("delete").submit()
         }

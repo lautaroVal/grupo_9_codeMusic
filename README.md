@@ -1,11 +1,8 @@
-# Code Music (Sprint 6)
+# Code Music 
 
 ## Temática del sitio Web: Venta de Instrumentos Musicales.
-## Audiencia: Público en General:
 
 #### *Somos un grupo de estudiantes de Programación Web Full Stack, teniendo nuestro primer desafío al crear un e-commerce e ir aprendiendo en el camino. Con muchos ánimos de progresar y de seguir aprendiendo.*
-
-![Diseño sin título](https://user-images.githubusercontent.com/106128572/179658494-a3c542c4-30f9-44c5-9570-2883ba74f688.gif)
 
 
 ### Descripción de los Participantes 

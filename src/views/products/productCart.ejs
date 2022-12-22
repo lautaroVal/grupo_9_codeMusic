@@ -27,8 +27,10 @@
                     </article>
                     <article class="productCart_total">
                         <div class="productCart_total-div">
+                            <% if (locals.userLogin) { %>
                             <p class="productCart_main_compra_total" id="total"></p>
-                            <button class="productCart_main_compra_boton">COMPRAR</button>
+                            <button class="productCart_main_compra_boton" id="productCart_comprar">COMPRAR</button>
+                            <% } %>
                         </div>
                     </article>
 
@@ -44,6 +46,62 @@
                             alt="logo mastercard">
                     </div>
                 </section>
+
+                <aside class="menu_compra" id="aside_compra">
+                    <b id="productCar_close" style="cursor: pointer;">x</b>
+                    <div class="menu_compra_datos">
+                    <h2>Confirmar Compra</h2>
+                    <p>Total (n articulos)</p> 
+                    <p>ARS $12.345</p>
+                    </div>
+            
+                    <div class="menu_compra_metodos">
+                        <h4>Método de pago</h4>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                               <b>+</b>Agregar Método De Pago
+                              </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+            
+                                <label id="credit-card-number">
+                                    Número de tarjeta de crédito/débito
+                                  </label>
+                                  <input aria-labelledby="credit-card-number" data-focus-default="true" name="cardNumber" autocomplete="off" maxlength="20" id="ember32" class="credit-card-form__card-number ember-text-field ember-view" type="text">
+                                  <div class="credit-card-form__icons">
+                                    <img class="productCart_main_compra_logovisa" src="/img/cart/logoVisa.png" alt="logo visa">
+                                    <img class="productCart_main_compra_logovisa" src="/img/cart/logoMastercard.png" alt="logo mastercard">
+                                    <br>
+                                    <label id="credit-card-holder-name">
+                                        Titular de la tarjeta
+                                      </label>
+                                      <input aria-labelledby="credit-card-holder-name" name="cardholderName" autocomplete="off" maxlength="32" id="ember35" class="ember-text-field ember-view" type="text">
+                                      <br>
+                                      <label id="credit-card-expiration-date">
+                                        Fecha de vencimiento
+                                      </label>
+                                      <input type="date" placeholder="Mes">
+                                      <br>
+                                      <label for="cvv">CVV</label><br>
+                                      <input type="text" name="cvv" id="cvv">
+                                      <br>
+                                      <label for="cuil">Número de CUIT/CUIL/DNI</label>
+                                      <input type="text" name="cuil" id="cuil">
+            
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+            
+                    <div class="menu_compra_finalizar">
+                        <button class="btn btn-light">Encargar Y Pagar</button>
+                    </div>
+                </aside>
+
+               
             </main>
 
             <%- include('../partials/whatsapp') %>  
@@ -53,5 +111,6 @@
             <%- include('../partials/script') %>
             <script src="/Js/orderCartView.js"></script>
     </body>
+
 
 </html>

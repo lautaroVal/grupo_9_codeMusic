@@ -1,3 +1,8 @@
+.productCart {
+   position: relative;
+  
+}
+
 .productCart_main {
    margin: auto;
    width: 95vw;
@@ -206,7 +211,47 @@ text-align: center;}
    height: 50px;
    margin-bottom: 0px;
 }
+/* Menú desplegable de Compra */
+.menu_compra {
+   display: none;
+}
 
+.compraActive {
+   position: fixed;
+   bottom: 0px;
+   right: 0px;
+   background-color: black;
+   height: 100vh;
+   width: 30vw;
+   padding: 30px 50px 15vh;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   gap: 8vh;
+   z-index: 100;
+   border-left: 1px solid black;
+  
+}
+
+.menu_compra b {
+   align-self: flex-end;
+   font-size: 30px;
+}
+
+/*  .menu_compra_datos {
+ } */
+
+.menu_compra_metodos {
+   overflow-y:auto;
+}
+
+.menu_compra_finalizar {
+    align-self: center;
+    position: absolute;
+    bottom: 5vh;
+    z-index: 110;
+}
+ 
 
 @media (min-width: 375px){
 
@@ -232,5 +277,6 @@ text-align: center;}
 
 @media (min-width: 1024){
 
+   
 
 }

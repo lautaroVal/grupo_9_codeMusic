@@ -17,7 +17,7 @@ const showCart = (items) => {
             <div>
             <div class="item3">
                 <button class="botonAdd" onclick="addCartItem('${product.id}')">+</button>
-                <input type="text" value="${quantity}" />
+                <input type="text" value="${quantity}" disabled/>
                 <button class="botonSubtract" onclick="removeCartItem('${product.id}')">-</button>
             </div>
             </div>
@@ -113,5 +113,13 @@ const removeCartItem = async (productId) => {
 };
 
 
+$("productCart_comprar").addEventListener("click", () => {
+    $("aside_compra").classList.add('compraActive');
+    $("aside_compra").style.display = "flex";
+    console.log("Click!!!");
+})
 
-
+$("productCar_close").addEventListener("click", () => {
+    $("aside_compra").style.display = "none";
+    console.log("Click!!!");
+})
