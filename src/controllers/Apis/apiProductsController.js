@@ -16,24 +16,8 @@ module.exports = {
 			const totalProducts = await db.Product.count();
             const totalUsers = await db.User.count();
             const totalCategories = await db.Category.count();
-			const {      
-				page = 1,
-				offset = 0,
-				limit = 10,
-				sales = 0,
-				salesDiscount = 0,
-				price = 0,
-				order = "ASC",
-				sortBy = "name",
-				search = "",} = req.query;
-
-			limit = +limit > 10 ? 10 : +limit;
-			page = +page <= 0 || isNaN(page) ? 1 : page;
-			page -= 1;
-			offset = page * limit;
-
 			let products = await db.Product.findAll({
-				limit, offset, order, page,
+
 				include: [
 					{
 						association: 'images',
@@ -75,6 +59,7 @@ module.exports = {
 					data: products
 				})
 			}
+
 		} catch (error) {
 			console.log(error);
 			return res.status(error.status || 500).json({
