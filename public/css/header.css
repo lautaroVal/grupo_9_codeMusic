@@ -138,7 +138,7 @@
 .productDetail_header_top_icon_login {
     font-size: 25px;
     position: relative;
-    left: 17px;
+    left: 12px;
 }
 
 .productDetail_header_top_icon_cart {
@@ -270,8 +270,9 @@
 
     .productDetail_header_top_icon {
         display: flex;
-        gap: 0 38px;
+        gap: 0 22px;
         font-size: 28px;
+        margin: 0px 9px 0px 12px;
     }
 
     .productDetail_header_top_li {
@@ -359,10 +360,7 @@
 
     .productDetail_header_top_icon {
         display: flex;
-        position: relative;
-        /*  bottom: 5px; */
-        gap: 45px;
-        font-size: 30px;
+        margin: 0px 25px 1px 0px
     }
 
     .productDetail_header_top_icon-ul {
@@ -373,7 +371,7 @@
         display: flex;
         font-size: 25px;
         align-items: center;
-        margin: 0px 0px 0px 15px;
+        margin: 0px 0px 0px 7px;
     }
 
     /* header search */
