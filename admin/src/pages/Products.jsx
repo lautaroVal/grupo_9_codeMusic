@@ -10,8 +10,6 @@ export const Products = () => {
     data: []
   });
 
-  const [product, setProduct] = useState([]);
-
   useEffect(() => {
     UseFetch('/products')
       .then(({ meta, data }) => {
@@ -25,6 +23,9 @@ export const Products = () => {
       }).catch(() => console.error)
 
   }, []);
+  
+  const [product, setProduct] = useState([]);
+
 
   const getInfo = (id) => {
     UseFetch(`/products/${id}`)

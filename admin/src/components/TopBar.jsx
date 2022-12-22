@@ -1,6 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { UseFetch } from '../hooks/UseFetch';
+
 
 export const TopBar = () => {
+
+		const [user, setUser] = useState(['/images/Basic_Ui_(186).jpg']);
+		
+		/*   useEffect(() => {
+			UseFetch('/users/1')
+			  .then(({ meta, data }) => {
+		
+				if (meta.ok) {
+				  setUser({
+					data
+				  })
+				  console.log(user);
+				}
+			  }).catch(() => console.error)
+		
+		  }, []); */
+
+		 
+
+
   return (
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -29,7 +51,7 @@ export const TopBar = () => {
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
 								<span className="mr-2 d-none d-lg-inline text-gray-600 small">Jordan Walke</span>
-								<img className="img-profile rounded-circle" src="assets/images/jordan-walke.png" alt="Jordan Walke - Creador de React" width="60"/>
+								<img className="img-profile rounded-circle" src={user} alt="Jordan Walke - Creador de React" width="60"/>
 							</a>
 						</li>
 

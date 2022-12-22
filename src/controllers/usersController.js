@@ -230,7 +230,7 @@ module.exports = {
               avatar:  req.file?.filename
             };
            
-            res.locals.userLog = req.session.userLogin;
+          
         }
         return res.redirect('/');
 

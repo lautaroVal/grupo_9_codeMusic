@@ -49,7 +49,9 @@ html {
     display: inline;
     text-align: center;
 }
-
+.glider-contain {
+    margin-bottom: 75px !important;
+}
 .index_section_products, .glider-track {
     display: flex;
     flex-wrap: wrap;

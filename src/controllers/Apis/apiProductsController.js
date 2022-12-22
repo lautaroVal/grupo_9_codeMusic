@@ -1,5 +1,5 @@
 const db = require('../../database/models');
-const { Op } = require('sequelize');
+const { Op, literal } = require('sequelize');
 const path = require('path')
 const { OFERTA, SINOFERTA } = require('../../constants/products');
 
@@ -7,7 +7,7 @@ const { OFERTA, SINOFERTA } = require('../../constants/products');
 module.exports = {
 	image: (req, res) => {
 		res.sendFile(
-			path.join(__dirname, `../../public/img/imgProducts/${req.params.img}`)
+			path.join(__dirname, `../../public/img/products/${req.params.img}`)
 		)
 	},
 
@@ -16,7 +16,7 @@ module.exports = {
 			const totalProducts = await db.Product.count();
             const totalUsers = await db.User.count();
             const totalCategories = await db.Category.count();
-			const {      
+			/* const {      
 				page = 1,
 				offset = 0,
 				limit = 10,
@@ -31,9 +31,9 @@ module.exports = {
 			page = +page <= 0 || isNaN(page) ? 1 : page;
 			page -= 1;
 			offset = page * limit;
-
+ */
 			let products = await db.Product.findAll({
-				limit, offset, order, page,
+				/* limit, offset, order, page, */
 				include: [
 					{
 						association: 'images',
@@ -113,7 +113,8 @@ module.exports = {
 				],
 				attributes: {
 					exclude: ["createdAt", "updatedAt", 'deletedAt', "brandId", "colorId", "categoryId"],
-				},
+				/* 	include:[[literal(`CONCAT( '${req.protocol}://${req.get('host')}/api/products/image/',image )`),'image']]
+				 */},
 
 			})
 			if (product) {

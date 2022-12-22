@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import "./SideBar.css";
 
 export const SideBar = () => {
   return (
-    <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" >
 
 			<Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
 				<div className="sidebar-brand-icon">
