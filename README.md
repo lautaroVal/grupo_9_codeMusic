@@ -1,8 +1,9 @@
 # Code Music 
-
-## Temática del sitio Web: Venta de Instrumentos Musicales.
+##Proyecto Integrador. Grupo 9.
 
 #### *Somos un grupo de estudiantes de Programación Web Full Stack, teniendo nuestro primer desafío al crear un e-commerce e ir aprendiendo en el camino. Con muchos ánimos de progresar y de seguir aprendiendo.*
+
+## Temática del sitio Web: Venta de Instrumentos Musicales.
 
 
 ### Descripción de los Participantes 
