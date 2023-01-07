@@ -19,6 +19,7 @@ body {
     font-family: 'Montserrat';
     background-color: var(--ColorGris);
     margin: 0;
+    overflow-x: hidden;
 }
 li{
     list-style: none;

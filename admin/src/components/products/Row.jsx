@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export const Row = ({ id, name, price, brand, getInfo }) => {
   return (
     <tr>

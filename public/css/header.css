@@ -51,7 +51,7 @@
 
 /* header top */
 .menuBurguer{
-    border-radius: 5px;
+    border: none;
     background-color: var(--ColorNegro);
     color: white;
 }
@@ -383,7 +383,7 @@
 
     /* header nav */
     .productDetail_header_navbar {
-        box-shadow: 2px 0px 5px 2px rgb(41, 41, 41);
+        box-shadow: none;
         width: 200px;
         height: 50vh;
         position: absolute;

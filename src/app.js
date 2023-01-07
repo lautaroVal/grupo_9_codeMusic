@@ -13,13 +13,12 @@ const cors = require('cors');
 
 const app = express();
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 /* -- MIDDLEWARES --*/
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
@@ -30,10 +29,10 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-app.use(cors());
 
 app.use(cookieCheck);
 app.use(localsUserCheck);
+app.use(cors());
 
 /* -- ROUTES --*/
 app.use('/', require('./routes/index'));

@@ -34,7 +34,7 @@
 }
 .glider-slide {
   user-select: none;
-  justify-content: center;
+  /* justify-content: center; */
   align-content: center;
   width: 100%;
 }
@@ -52,11 +52,10 @@
   background: none;
   padding: 0;
   z-index: 2;
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: none;
   left: -23px;
   border: 0;
-  top: 30%;
   cursor: pointer;
   color: #666;
   opacity: 1;
@@ -79,6 +78,8 @@
   opacity: .25;
   color: #666;
   cursor: default;
+  font-size: 30px;
+  top: calc(45%);
 }
 .glider-slide {
   min-width: 150px;

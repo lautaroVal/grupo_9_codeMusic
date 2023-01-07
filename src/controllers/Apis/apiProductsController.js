@@ -97,8 +97,8 @@ module.exports = {
 				],
 				attributes: {
 					exclude: ["createdAt", "updatedAt", 'deletedAt', "brandId", "colorId", "categoryId"],
-				/* 	include:[[literal(`CONCAT( '${req.protocol}://${req.get('host')}/api/products/image/',image )`),'image']]
-				 */},
+/* 					include:[[literal(`CONCAT( '${req.protocol}://${req.get('host')}/api/products/img/',image )`),'imageUrl']]
+ */				},
 
 			})
 			if (product) {

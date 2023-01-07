@@ -87,22 +87,19 @@ html {
     width: 30px;
     height: 30px;
     border: none;
-    top: calc(50% - 35px);
+    top: calc(45%);
     cursor: pointer;
     line-height: 30px;
     text-align: center;
-    /* background-color: none; */
-   /*  color: white; */
-    
     z-index: 10; 
 }
 
  .glider-prev {
-    left: 0px !important;
+    left: 0px;
 }
 
 .glider-next {
-    right: 0px !important;
+    right: 0px;
 } 
 
 /* 
@@ -117,7 +114,10 @@ html {
     align-items: center;
     width: 100%;
     justify-content: center;
+    position: sticky !important;
+    left: 38px;
 }
+
 #batterys{
     background: linear-gradient(rgba(5, 7, 12, 0.415), rgba(5, 7, 12, 0.415)), url('../img/index/pexels-jadson-thomas-542553.jpg') no-repeat center center;
     background-size: cover;
@@ -126,6 +126,8 @@ html {
     align-items: center;
     width: 100%;
     justify-content: center;
+    position: sticky !important;
+    right: 38px;
 } 
 #pianos{
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-torsten-dettlaff-2876659.jpg') no-repeat center center;
@@ -135,6 +137,8 @@ html {
     align-items: center;
     width: 100%;
     justify-content: center;
+    position: sticky !important;
+    left: 38px;
 } 
 #microphones{
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-wallace-chuck-3587478.jpg') no-repeat -13px center;
@@ -144,6 +148,8 @@ html {
     align-items: center;
     width: 100%;
     justify-content: center;
+    position: sticky !important;
+    right: 38px;
 }
 
 #winds  {
@@ -154,7 +160,34 @@ html {
     align-items: center;
     width: 100%;
     justify-content: center;
+    position: sticky !important;
+    left: 38px;
 }
+
+#article_guitar {
+    position: relative;
+    right: 12px
+}
+#article_battery {
+    position: relative;
+    left: 12px
+}
+
+#article_piano {
+    position: relative;
+    right: 12px;
+}
+
+#article_microphone {
+    position: relative;
+    left: 12px
+}
+
+#article_wind {
+    position: relative;
+    right: 12px;
+}
+
 
 #guitarras h2, #batterys h2, #pianos h2, #microphones h2, #winds h2 {
     color: var(--ColorBlanco);
@@ -374,7 +407,9 @@ FOOTER */
 }
 
 #guitarras, #batterys, #pianos, #microphones, #winds {
-   width: 150px;
+    width: 158px !important;
+    position: relative;
+    z-index: 10;
 }
 
 #batterys, #microphones {

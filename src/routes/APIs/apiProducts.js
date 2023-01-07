@@ -5,7 +5,7 @@ const router = express.Router();
 router
     .get('/', list)
     .get('/:id', detail)
-    .get("/image/:img", image)
+    .get("/img/:img", image)
 
 module.exports = router
 

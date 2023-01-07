@@ -43,7 +43,7 @@
                     <div class="index_medios_de_pago">
                         <img src="\img\index\mp-chicosvg1.jpg" alt="medios de pago">
                     </div>
-                
+
                     <h1>OFERTAS</h1>
                     <div class="glider-contain">
                         <section class="glider">
@@ -67,8 +67,10 @@
                                 </article>
                                 <% }) %>
                         </section>
-                        <button aria-label="Previous" class="glider-prev" style="left: 7px;"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button aria-label="Next" class="glider-next" style="right: 7px;"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button aria-label="Previous" class="glider-prev" style="left: 7px;"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next" style="right: 7px;"><i
+                                class="fa-solid fa-chevron-right"></i></button>
 
                     </div>
 
@@ -178,122 +180,143 @@
                         </div>
                     </div>
 
-                    <section class="index_section_products" id="guitar">
-                        <div id="guitarras" data-aos="fade-right">
-                            <p>
-                            <h2>Guitarras</h2>
-                            </p>
-                        </div>
-                        <% guitarras.forEach((product,index)=> { %>
+                    <div class="glider-contain">
+                        <section class="glider2" id="guitar">
+                            <div id="guitarras" data-aos="fade-right">
+                                <p>
+                                <h2>Guitarras</h2>
+                                </p>
+                            </div>
+                            <% guitarras.forEach((product,index)=> { %>
+                                <article class="index_product" id="article_guitar">
+                                    <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
+                                        alt="product"></div>
+                                    <hr>
+                                    <h3 class="index_product_title">
+                                        <%= product.name %>
+                                    </h3>
+                                    <div class="index_product_bottom">
+                                        <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em>
+                                        </p>
+                                        <p class="index_product_envío"> Envío Gratis</p>
+                                        <a href="/products/productDetail/<%=product.id %>"
+                                            class="index_button_product">Ver
+                                            más</a>
+                                    </div>
+                                </article>
+                                <%}) %>
+                        </section>
+                        <button aria-label="Previous" class="glider-prev prev2" style="left: 200px;"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next next2" style="right: 7px;"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
 
-                            <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
-                                    alt="product"></div>
-                                <hr>
-                                <h3 class="index_product_title">
-                                    <%= product.name %>
-                                </h3>
-                                <div class="index_product_bottom">
-                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
-                                    <p class="index_product_envío"> Envío Gratis</p>
-                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
-                                        más</a>
-                                </div>
-                            </article>
+                    <div class="glider-contain">
+                        <section class="glider3" id="battery">
+                            <div id="batterys" data-aos="fade-left">
+                                <p>
+                                <h2>Baterias</h2>
+                                </p>
+                            </div>
+                            <% baterias.forEach(product=> { %>
+                                <article class="index_product" id="article_battery">
+                                    <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
+                                        alt="product"></div>
+                                    <hr>
+                                    <h3 class="index_product_title">
+                                        <%= product.name %>
+                                    </h3>
+                                    <div class="index_product_bottom">
+                                        <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em>
+                                        </p>
+                                        <p class="index_product_envío"> Envío Gratis</p>
+                                        <a href="/products/productDetail/<%=product.id %>"
+                                            class="index_button_product">Ver
+                                            más</a>
+                                    </div>
+                                </article>
+                                <% }) %>
+                        </section>
+                        <button aria-label="Previous" class="glider-prev prev3" style="left: 7px;"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next next3" style="right: 200px;"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
 
-                            <%}) %>
+                    <div class="glider-contain">
+                        <section class="glider4" id="piano">
+                            <div id="pianos" data-aos="fade-right">
+                                <p>
+                                <h2>Teclados</h2>
+                                </p>
+                            </div>
+                            <% teclados.forEach(product=> { %>
+                                <article class="index_product" id="article_piano">
+                                    <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
+                                        alt="product"></div>
+                                    <hr>
+                                    <h3 class="index_product_title">
+                                        <%= product.name %>
+                                    </h3>
+                                    <div class="index_product_bottom">
+                                        <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em>
+                                        </p>
+                                        <p class="index_product_envío"> Envío Gratis</p>
+                                        <a href="/products/productDetail/<%=product.id %>"
+                                            class="index_button_product">Ver
+                                            más</a>
+                                    </div>
+                                </article>
+                                <% }) %>
+                        </section>
+                        <button aria-label="Previous" class="glider-prev prev4" style="left: 200px;"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next next4" style="right: 7px;"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
 
-                    </section>
+                    <div class="glider-contain">
+                        <section class="glider5" id="microphone">
+                            <div id="microphones" data-aos="fade-left">
+                                <p>
+                                <h2>Micrófonos y sonido</h2>
+                                </p>
+                            </div>
+                            <% microfonosYSonido.forEach(product=> { %>
+                                <article class="index_product" id="article_microphone">
+                                    <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
+                                        alt="product"></div>
+                                    <hr>
+                                    <h3 class="index_product_title">
+                                        <%= product.name %>
+                                    </h3>
+                                    <div class="index_product_bottom">
+                                        <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em>
+                                        </p>
+                                        <p class="index_product_envío"> Envío Gratis</p>
+                                        <a href="/products/productDetail/<%=product.id %>"
+                                            class="index_button_product">Ver
+                                            más</a>
+                                    </div>
+                                </article>
+                                <% }) %>
+                        </section>
+                        <button aria-label="Previous" class="glider-prev prev5" style="left: 7px;"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next next5" style="right: 200px;"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
 
-                    <section class="index_section_products" id="battery">
-                        <div id="batterys" data-aos="fade-left">
-                            <p>
-                            <h2>Baterias</h2>
-                            </p>
-                        </div>
-
-                        <% baterias.forEach(product=> { %>
-
-                            <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
-                                    alt="product"></div>
-                                <hr>
-                                <h3 class="index_product_title">
-                                    <%= product.name %>
-                                </h3>
-                                <div class="index_product_bottom">
-                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
-                                    <p class="index_product_envío"> Envío Gratis</p>
-                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
-                                        más</a>
-                                </div>
-                            </article>
-                            <% }) %>
-
-                    </section>
-
-                    <section class="index_section_products" id="piano">
-                        <div id="pianos" data-aos="fade-right">
-                            <p>
-                            <h2>Teclados</h2>
-                            </p>
-                        </div>
-
-                        <% teclados.forEach(product=> { %>
-
-                            <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
-                                    alt="product"></div>
-                                <hr>
-                                <h3 class="index_product_title">
-                                    <%= product.name %>
-                                </h3>
-                                <div class="index_product_bottom">
-                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
-                                    <p class="index_product_envío"> Envío Gratis</p>
-                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
-                                        más</a>
-                                </div>
-                            </article>
-                            <% }) %>
-
-                    </section>
-
-                    <section class="index_section_products" id="microphone">
-                        <div id="microphones" data-aos="fade-left">
-                            <p>
-                            <h2>Micrófonos y sonido</h2>
-                            </p>
-                        </div>
-                        <% microfonosYSonido.forEach(product=> { %>
-
-                            <article class="index_product">
-                                <div class="index_product_img"><img src="<%=" /img/products/" + product.image %>"
-                                    alt="product"></div>
-                                <hr>
-                                <h3 class="index_product_title">
-                                    <%= product.name %>
-                                </h3>
-                                <div class="index_product_bottom">
-                                    <p class="precio">$<%= toThousand(product.price) %><em class="decimales">99</em></p>
-                                    <p class="index_product_envío"> Envío Gratis</p>
-                                    <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver
-                                        más</a>
-                                </div>
-                            </article>
-                            <% }) %>
-
-                    </section>
-
-                    <section class="index_section_products" id="wind">
+                    <div class="glider-contain">
+                    <section class="glider6" id="wind">
                         <div id="winds" data-aos="fade-right">
                             <p>
                             <h2>Instrumentos de viento</h2>
                             </p>
                         </div>
                         <% deVientos.forEach(product=> { %>
-
-                            <article class="index_product">
+                            <article class="index_product" id="article_wind">
                                 <div class="index_product_img"><img src="/img/products/<%=product.image %>"
                                         alt="product"></div>
                                 <hr>
@@ -309,8 +332,11 @@
                                 </div>
                             </article>
                             <% }) %>
-
                     </section>
+                    <button aria-label="Previous" class="glider-prev prev6" style="left: 200px;"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button aria-label="Next" class="glider-next next6" style="right: 7px;"><i
+                        class="fa-solid fa-chevron-right"></i></button>
                 </div>
 
             </main>
