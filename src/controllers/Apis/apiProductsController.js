@@ -13,10 +13,31 @@ module.exports = {
 
 	list: async (req, res) => {
 		try {
-			const totalProducts = await db.Product.count();
-            const totalUsers = await db.User.count();
-            const totalCategories = await db.Category.count();
-			let products = await db.Product.findAll({
+			/* ---------Mover---------- */
+			//const totalProducts = await db.Product.count();
+			//const totalUsers = await db.User.count();
+			//const totalCategories = await db.Category.count();
+			/* ---------*****----------- */
+
+			let { page = 1, limit = 10, offset = 0, order = 'ASC', sortBy = 'name' } = req.query;
+
+			//const typeSort = ['name', 'price', 'discount', 'category', 'brand'];
+
+
+			limit = +limit > 10 ? 10 : +limit;
+
+			/* sortBy = typeSort.includes(sortBy) ? sortBy : 'name'; */
+
+			page = +page <= 0 || isNaN(page) ? 1 : +page;
+
+			page -= 1;
+
+			offset = page * limit;
+
+			let options = {
+				limit,
+				offset,
+				/* group: 'categoryId', */
 				include: [
 					{
 						association: 'images',
@@ -30,6 +51,7 @@ module.exports = {
 						}
 					}, {
 						association: 'category',
+						group: 'name',
 						attributes: {
 							exclude: ['createdAt', 'updatedAt']
 						}
@@ -44,26 +66,59 @@ module.exports = {
 				attributes: {
 					exclude: ['categoryId', 'brandId', 'colorId', 'createdAt', 'updatedAt', 'deletedAt']
 				}
-			})
-			if (products.length) {
-				return res.status(200).json({
-					meta: {
-						ok: true,
-						count: products.length,
-						countByCategory: {
-							totalCategories,
-							totalUsers,
-							totalProducts}
-					},
-					data: products
+			}
+
+			//return res.send({count})
+			const { count, rows: products } = await db.Product.findAndCountAll(options);
+
+			if (!products.length) {
+				return res.status(204).json({
+					ok: true,
+					status: 204,
+					message: "No hay productos en esta página"
 				})
 			}
+
+			const existPrev = page > 0 && offset <= count;
+
+			const existNext = Math.floor(count / limit) >= (page + 1);      
+
+			let urlPrev = null;
+			let urlNext = null;
+
+			if (existPrev) {
+				urlPrev = `${req.protocol}://${req.get('host')}${req.baseUrl}?page=${page}`
+			}
+
+			if (existNext) {
+				urlNext = `${req.protocol}://${req.get('host')}${req.baseUrl}?page=${page + 2}`
+			}
+
+			const totalsCategories = ["guitarras","baterias","teclados","sonido","vientos"].map((category) => {
+					return {
+						category
+					}
+			})
+
+			return res.status(200).json({
+				meta: {
+					ok: true,
+					status: 200
+				},
+				data: {
+					totalProducts: products.length,
+					countByCategory: totalsCategories,
+					prev: urlPrev,
+					next: urlNext,
+					products
+				}
+			})
 
 		} catch (error) {
 			console.log(error);
 			return res.status(error.status || 500).json({
 				ok: false,
-				msg: error.message ? error.message : 'Comuníquese con el administrador del sitio'
+				msg: error.message || 'Comuníquese con el administrador del sitio'
 			})
 		}
 
@@ -122,7 +177,7 @@ module.exports = {
 
 	store: (req, res) => {
 
-	 },
+	},
 
 	update: async (req, res) => {
 
@@ -130,6 +185,6 @@ module.exports = {
 
 	destroy: (req, res) => {
 
-	 },
+	},
 
 }
