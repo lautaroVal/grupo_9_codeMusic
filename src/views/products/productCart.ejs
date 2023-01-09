@@ -27,9 +27,9 @@
                     </article>
                     <article class="productCart_total">
                         <div class="productCart_total-div">
-                            <% if (locals.userLogin) { %>
-                            <p class="productCart_main_compra_total" id="total"></p>
-                            <button class="productCart_main_compra_boton" id="productCart_comprar">COMPRAR</button>
+                            <% if (locals.userLogin ) { %>
+                            <p class="productCart_main_compra_total" id="total"></p> 
+                            <button class="productCart_main_compra_boton" id="productCart_comprar" hidden>COMPRAR</button>
                             <% } %>
                         </div>
                     </article>
@@ -107,7 +107,7 @@
             <%- include('../partials/whatsapp') %>  
 
             <%- include('../partials/footer') %>
-
+            
             <%- include('../partials/script') %>
             <script src="/Js/orderCartView.js"></script>
     </body>

@@ -1,5 +1,7 @@
 console.log('login success!')
-window.addEventListener('load', () => {
+console.log(localStorage.enlace);
+window.addEventListener('load', (e) => {
+
 
 const msgError = (element, msg, event) => {
     $(element).style.color = "red";
@@ -16,6 +18,7 @@ const validField = (element,{target}) => {
 
 const exRegEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
 
+//let form = $('login_form');
 
 
     $('email').addEventListener('blur', async function(e){

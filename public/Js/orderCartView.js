@@ -2,6 +2,7 @@ console.log('orederCart View Success!!');
 
 const showCart = (items) => {
     if (items.length) {
+            $("productCart_comprar").hidden = false
         $('orderCarts').innerHTML = null;
         items.forEach(({product, quantity, i}) => {
             $('orderCarts').innerHTML += `
@@ -37,10 +38,14 @@ const showCart = (items) => {
             
         });
     }else {
-        $('orderCarts').innerHTML = ` <p class="alert alert-warning ms-5">Aún no has agregado productos a tu carrito.</p>`
+        $('orderCarts').innerHTML = ` <p class="alert alert-warning ms-5">Aún no has agregado productos a tu carrito.</p>`;
+        $("productCart_comprar").hidden = true
+        $('total').innerHTML = null
     }
 
 }
+
+
 
 window.addEventListener('load', async () => {
     try {

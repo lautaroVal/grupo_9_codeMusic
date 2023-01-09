@@ -2,7 +2,9 @@ const db = require('../database/models');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const { Association } = require('sequelize');
-const { ROL_ADMIN, ROL_USER } = require('../constants/users')
+const { ROL_ADMIN, ROL_USER } = require('../constants/users');
+
+
 
 
 module.exports = {
@@ -79,12 +81,15 @@ module.exports = {
   },
 
   login: (req, res) => {
+    
     return res.render('users/login', {
       title: 'Login'
     })
   },
 
   processLogin: async (req, res) => {
+    let {path} = req.query;
+    //return res.send(path)
     try {
       let errors = validationResult(req);
       if (errors.isEmpty()) {
@@ -132,6 +137,9 @@ module.exports = {
             items: order.carts
           }
 
+          if (path) {
+            return res.redirect(path);
+          }
           return res.redirect('/');
 
         } else {

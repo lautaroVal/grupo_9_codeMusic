@@ -87,15 +87,15 @@
                             </div>
                         </div>
                         <div class="productDetail_main_section_top_derech_button">
-                            <form action="/products/productCart">
-                            <button type="submit" style="width: 250px;" 
-                                onclick="addCartItem('<%=product.id%>');"
-                               >Comprar</button></form>
+                            <button type="button" style="width: 250px;" <% if (!locals.userLogin) { %>
+                                onclick="notAdd()"
+                               <% } %> 
+                                onclick="addCartItem('<%=product.id%>'); addRedirect();"
+                               >Comprar</button>
                             <button type="button" id="addCart" <% if (!locals.userLogin) { %>
                              onclick="notAdd()"
                             <% } %> 
                             onclick="addCartItem('<%=product.id%>'); addAlert()">Agregar al carrito<i class="fa-solid fa-cart-shopping" hidden></i></button>
-                        </form>
                             <% if (locals.userLogin) { %>
                                 <% if (userLogin.rol===1) { %>
                                     <button type="button" id="edit_button"><a
@@ -182,7 +182,7 @@
             <%- include('../partials/footer') %>
 
             <%- include('../partials/script') %>
-            <script src="../../../Js/orderCart.js"></script>
+            <script src="../../../Js/detailViewAndCart.js"></script>
     </body>
 
 </html>
