@@ -5,21 +5,21 @@ import { Category } from "./Category";
 
 const Categories = () => {
 
-    const [state, setState] = useState({
-        loading:true,
-        categories: []
-    });
+    const [countCat, setCountCat] = useState({
+      loading:true,
+      categories: []
+  });
 
-    useEffect(() => {
+  useEffect(() => {
 
-        UseFetch('/categories')
-        .then(({data}) => {
-            setState({
-                loading: false,
-                categories: data
-            })
-        })
-    }, [])
+      UseFetch('/products')
+      .then(({data}) => {
+          setCountCat({
+              loading: false,
+              categories: data.countByCategory
+          })
+      })
+  }, []);
 
   return (
     <div className="col-lg-6 mb-4">
@@ -33,14 +33,14 @@ const Categories = () => {
           <div className="row">
 
            {
-            state.loading
+            countCat.loading
             ?
             <p>Cargando...</p>
             :
-            state.categories.map((category, index) => (
+            countCat.categories.map((category, index) => (
                 <Category {...category} key={category.name + index}/>
             ))
-           }
+          }
 
           </div>
         </div>

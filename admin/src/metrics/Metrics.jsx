@@ -28,20 +28,20 @@ export const Metrics = () => {
 
 	useEffect(() => {
 
-		UseFetch('/products')
-		.then(({meta}) => {
+		UseFetch('/totals')
+		.then(({data}) => {
 			setState({
 				products : {
 					...state.products,
-					value : meta.countByCategory.totalProducts
+					value : data.totalProducts
 				},
 				users : {
 					...state.users,
-					value : meta.countByCategory.totalUsers
+					value : data.totalUsers
 				},
 				categories : {
 					...state.categories,
-					value : meta.countByCategory.totalCategories
+					value : data.totalCategories
 				}
 			})
 		}).catch(() => console.error)

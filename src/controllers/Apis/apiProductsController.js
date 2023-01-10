@@ -7,22 +7,15 @@ const { OFERTA, SINOFERTA } = require('../../constants/products');
 module.exports = {
 	image: (req, res) => {
 		res.sendFile(
-			path.join(__dirname, `../../public/img/products/${req.params.img}`)
+			path.join(__dirname, `../../../public/img/products/${req.params.img}`)
 		)
 	},
 
 	list: async (req, res) => {
 		try {
-			/* ---------Mover---------- */
-			//const totalProducts = await db.Product.count();
-			//const totalUsers = await db.User.count();
-			//const totalCategories = await db.Category.count();
-			/* ---------*****----------- */
-
 			let { page = 1, limit = 10, offset = 0, order = 'ASC', sortBy = 'name' } = req.query;
 
 			//const typeSort = ['name', 'price', 'discount', 'category', 'brand'];
-
 
 			limit = +limit > 10 ? 10 : +limit;
 
@@ -37,7 +30,6 @@ module.exports = {
 			let options = {
 				limit,
 				offset,
-				/* group: 'categoryId', */
 				include: [
 					{
 						association: 'images',
@@ -51,7 +43,6 @@ module.exports = {
 						}
 					}, {
 						association: 'category',
-						group: 'name',
 						attributes: {
 							exclude: ['createdAt', 'updatedAt']
 						}
@@ -64,12 +55,14 @@ module.exports = {
 				]
 				,
 				attributes: {
-					exclude: ['categoryId', 'brandId', 'colorId', 'createdAt', 'updatedAt', 'deletedAt']
+					exclude: ['categoryId', 'brandId', 'colorId', 'createdAt', 'updatedAt', 'deletedAt'],
+					include: [
+						[literal(`CONCAT('${req.protocol}://${req.get('host')}${req.baseUrl}/', id)`),'detail']
+					]
 				}
 			}
 
-			//return res.send({count})
-			const { count, rows: products } = await db.Product.findAndCountAll(options);
+			const { count, rows: products } = await db.Product.findAndCountAll(options);		
 
 			if (!products.length) {
 				return res.status(204).json({
@@ -94,11 +87,31 @@ module.exports = {
 				urlNext = `${req.protocol}://${req.get('host')}${req.baseUrl}?page=${page + 2}`
 			}
 
-			const totalsCategories = ["guitarras","baterias","teclados","sonido","vientos"].map((category) => {
-					return {
-						category
-					}
-			})
+			const {count: countCategory} = await db.Product.findAndCountAll({group: 'categoryId',})
+
+			let countCat = [
+				{
+					name:"Guitarras",
+					count: countCategory[0].count,
+				},
+				{
+					name:"Baterias",
+					count: countCategory[1].count,
+				},
+				{
+					name:"Teclados",
+					count: countCategory[2].count,
+				},
+				{
+					name:"Sonido",
+					count: countCategory[3].count,
+				},
+				{
+					name:"Vientos",
+					count: countCategory[4].count,
+				}
+			] 
+				
 
 			return res.status(200).json({
 				meta: {
@@ -106,8 +119,9 @@ module.exports = {
 					status: 200
 				},
 				data: {
-					totalProducts: products.length,
-					countByCategory: totalsCategories,
+					totalProducts: count,
+					count: products.length,
+					countByCategory: countCat,
 					prev: urlPrev,
 					next: urlNext,
 					products
@@ -152,8 +166,10 @@ module.exports = {
 				],
 				attributes: {
 					exclude: ["createdAt", "updatedAt", 'deletedAt', "brandId", "colorId", "categoryId"],
-/* 					include:[[literal(`CONCAT( '${req.protocol}://${req.get('host')}/api/products/img/',image )`),'imageUrl']]
- */				},
+					include: [
+						[literal(`CONCAT( '${req.protocol}://${req.get('host')}/api/products/img/', product.image )`),'image']
+					]
+				},
 
 			})
 			if (product) {

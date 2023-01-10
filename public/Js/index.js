@@ -1,5 +1,21 @@
 console.log('Index success!!!');
 window.addEventListener('load', () => {
+   
+/*     var elementoFijo = $("battery");
+    var elementoFijoR = elementoFijo.getBoundingClientRect().left;
+    console.log(elementoFijo.getBoundingClientRect()); 
+
+    var elementosSlider = $("article_battery");
+    
+    for (var i = 0; i < elementosSlider.length; i++) {
+        var elementoSliderG = elementosSlider[i].getBoundingClientRect();
+        if (elementoSliderG.rigth > elementoFijoR) {
+        elementosSlider[i].style.visibility = "hidden";
+        } else {
+            elementosSlider[i].style.visibility = "visible";
+    }
+} */
+
 
     new Glider(document.querySelector('.glider'), {
         slidesToShow: 2,
@@ -175,7 +191,7 @@ window.addEventListener('load', () => {
         ]
     });
 
-    
+
     AOS.init({
         duration: 1000
     });

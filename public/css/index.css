@@ -116,6 +116,7 @@ html {
     justify-content: center;
     position: sticky !important;
     left: 38px;
+    overflow: hidden;
 }
 
 #batterys{

@@ -88,9 +88,8 @@ module.exports = {
   },
 
   processLogin: async (req, res) => {
-    let {path} = req.query;
-    //return res.send(path)
     try {
+      let {path} = req.query;
       let errors = validationResult(req);
       if (errors.isEmpty()) {
         const userLog = await db.User.findOne({

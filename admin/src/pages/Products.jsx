@@ -17,7 +17,7 @@ export const Products = () => {
         if (meta.ok) {
           setProducts({
             loading: false,
-            data
+            data: data.products
           })
         }
       }).catch(() => console.error)

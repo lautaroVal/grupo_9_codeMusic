@@ -1,6 +1,6 @@
 console.log('orderCart success!');
 
-const notAdd =() => {
+const notAdd = () => {
 Swal.fire(
     'No tienes cuenta?',
     'Debes loguearte para poder agregar productos a tu carrito',
@@ -14,10 +14,7 @@ Swal.fire(
 
 setData = () => {
     path = location.pathname;
-    /* localStorage.setItem("enlace",path)
-    let data = localStorage.getItem("enlace") */
     return location.href =`http://localhost:3049/users/login?path=${path}`;
-    console.log(path);
 }
 
 

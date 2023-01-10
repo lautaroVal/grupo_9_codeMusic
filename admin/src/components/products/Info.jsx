@@ -7,7 +7,7 @@ export const Info = ({ name, price, discount, description, brand, category, imag
                 <h5>Información</h5>
             </div>
             <div className="card-body">
-                <img className='img-thumbnail' src="" alt=""/>
+                <img className='img-thumbnail' style={{ width: "242px", height: "182px", objectFit: "contain" }} src={image} alt="Detalle Instrumento"/>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">
                         <label>Nombre:</label>
