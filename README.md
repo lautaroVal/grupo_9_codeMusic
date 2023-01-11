@@ -11,7 +11,7 @@
 - **Nombre**: `Lautaro Valenzuela`
 - **Edad**: `22`
 - **Localidad**: `San Miguel`
-- **Dedicación**: Estudiante de Progrmación Web Full Stack y estudiante de la carrera de Contador Público.
+- **Dedicación**: Estudiante de Progrmación Web Full Stack.
 - **Biografía**: *Soy desarrollador web full stack y dí mis primeros pasos con esta hermosa cursada que me brindó muchas herramientas y experiencias. Estudie 2 años en un conservatorio de música pero no lo finalizé. Mis hobbies son tocar la guitarra y el piano.
 Y hoy estoy haciendo este curso porque tenía curiosidad y entusiasmo de sumergirme en el mundo de la tecnología.🚀*
 
