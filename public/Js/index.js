@@ -1,21 +1,27 @@
 console.log('Index success!!!');
 window.addEventListener('load', () => {
-   
-/*     var elementoFijo = $("battery");
-    var elementoFijoR = elementoFijo.getBoundingClientRect().left;
+    
+/* $("guitar").addEventListener("scroll",() => {
+   console.log("hiciste scroll en guitarras");
+    var elementoFijo = $("guitarras");
     console.log(elementoFijo.getBoundingClientRect()); 
-
-    var elementosSlider = $("article_battery");
+    var elementosSlider = $("article_guitar");
+    elementosSlider.hidden = true
+    console.log(elementosSlider);
     
     for (var i = 0; i < elementosSlider.length; i++) {
+        var elementoFijoG = elementoFijo.getBoundingClientRect()
         var elementoSliderG = elementosSlider[i].getBoundingClientRect();
-        if (elementoSliderG.rigth > elementoFijoR) {
+        if (elementoSliderG.left <= 209 ) {
+            console.log("pase por detras de elemento fijo");
         elementosSlider[i].style.visibility = "hidden";
-        } else {
+        elementosSlider[i].hidden = true;
+    } else {
             elementosSlider[i].style.visibility = "visible";
+            elementosSlider[i].hidden = fale;
     }
-} */
-
+}
+}) */
 
     new Glider(document.querySelector('.glider'), {
         slidesToShow: 2,

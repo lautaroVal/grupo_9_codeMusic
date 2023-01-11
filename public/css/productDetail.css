@@ -19,6 +19,7 @@
     border-radius: 7px;
     background: white;
     margin: 20px;
+    padding: 15px 10px;
 }
 
 /* main top izq */
@@ -50,13 +51,13 @@
 }
 
 .productDetail_main_section_top_centr img {
-    width: 38%;
+    /* width: 38%; */
     position: relative;
     left: 2px;
-    margin: auto;
-    border-radius: 5px;
+    margin-top: 38px;
+    /* border-radius: 5px; */
     overflow: hidden;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .productDetail_main_section_top_centr img:hover {
@@ -415,6 +416,8 @@
         /* height: 150px; */
         width: 90px;
         position: relative;
+        left: -15px;
+        top: 15px;
         border-radius: 10px;
         align-items: center;
         transition: 1.2s;
@@ -425,10 +428,7 @@
     }
 
     .productDetail_main_section_top_izq article img {
-        width:100%;
-        /* position: absolute;
-        left: 5px;
-        top: 5px; */
+        width:100%; 
         border-radius: 10px;
         overflow: hidden;
         object-fit: contain;

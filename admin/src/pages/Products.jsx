@@ -7,21 +7,32 @@ export const Products = () => {
 
   const [products, setProducts] = useState({
     loading: true,
-    data: []
+    data: [],
+    pages: 0,
+    prev: null,
+    next:null
   });
 
-  useEffect(() => {
-    UseFetch('/products')
+  const getData = async (endpoint) => {
+    await UseFetch(endpoint)
       .then(({ meta, data }) => {
 
         if (meta.ok) {
           setProducts({
             loading: false,
-            data: data.products
+            data: data.products,
+            pages: data.totalPages,
+            total: data.totalProducts,
+            prev: data.prev,
+            next: data.next,
+            page: data.page
           })
         }
       }).catch(() => console.error)
+  }
 
+  useEffect(() => {
+    getData('/products')
   }, []);
   
   const [product, setProduct] = useState([]);
@@ -55,7 +66,7 @@ export const Products = () => {
                   <p>cargando...</p>
                   :
                   <Table
-                    products={products.data}
+                    products={products.data} pagination={products} getData={getData}
                     getInfo={getInfo}
                   />
               }

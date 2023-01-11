@@ -13,7 +13,7 @@ module.exports = {
 
 	list: async (req, res) => {
 		try {
-			let { page = 1, limit = 10, offset = 0, order = 'ASC', sortBy = 'name' } = req.query;
+			let { page = 1, limit = 10, offset = 15, order = 'ASC', sortBy = 'name' } = req.query;
 
 			//const typeSort = ['name', 'price', 'discount', 'category', 'brand'];
 
@@ -74,7 +74,7 @@ module.exports = {
 
 			const existPrev = page > 0 && offset <= count;
 
-			const existNext = Math.floor(count / limit) >= (page + 1);      
+			const existNext = Math.floor(count / limit) > (page + 1);    
 
 			let urlPrev = null;
 			let urlNext = null;
@@ -120,8 +120,10 @@ module.exports = {
 				},
 				data: {
 					totalProducts: count,
-					count: products.length,
+					countPage: products.length,
 					countByCategory: countCat,
+					totalPages: Math.floor(count / limit),
+					page: page + 1,
 					prev: urlPrev,
 					next: urlNext,
 					products
