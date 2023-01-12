@@ -53,12 +53,13 @@ export const Products = () => {
 
   return (
     <div className='container'>
+      <div className="d-sm-flex align-items-center justify-content-between mb-4">
+						<h1 className="h3 mb-0 text-gray-800">Productos</h1>
+					</div>
       <div className="row">
         <div className="col-8">
           <div className="card">
-            <div className="card-header">
-              <h5>Productos</h5>
-            </div>
+            
             <div className="card-body">
               {
                 products.loading

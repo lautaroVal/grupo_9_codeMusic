@@ -12,7 +12,7 @@ module.exports = {
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
-                attributes: ['id','firstName','lastName','email',
+                attributes: ['id','firstName','lastName','email',"rol",
                 [literal(`CONCAT('${req.protocol}://${req.get('host')}${req.baseUrl}/', id)`),'detail']
             ]
             })
@@ -49,7 +49,7 @@ module.exports = {
                  }
                 ],
                  attributes: {
-                    exclude: ['telephone','password','rol','createdAt','updatedAt','deletedAt',],
+                    exclude: ['telephone','password','createdAt','updatedAt','deletedAt',],
                     include:[[literal(`CONCAT( '${req.protocol}://${req.get('host')}/api/users/image/',avatar )`),'avatar']]
                  }
                     
