@@ -199,7 +199,7 @@ html {
 
 
 /* .index_product */
-.index_product, .index_product_hide, .index_product_hide2{
+.index_product{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -253,7 +253,6 @@ html {
     font-weight: 500;
 }
 
-
 .index_product_envío {
     color: var(--ColorAzul);
     margin-bottom: 10px;
@@ -274,11 +273,6 @@ html {
     color: white;
 }
 
-/* MAIN ARTICLES OCULTOS */
-
-.index_product_hide, .index_product_hide2 {
-    display: none;
-}
 
 /* MAIN INFO */
 
@@ -342,18 +336,6 @@ html {
     width: 90px;
 }
 
-/* Whatsapp */
-#whatsapp  {
-    background-color: green;
-    color: #000000;
-    bottom: 90px;
-    position: fixed;
-    right: 20px;
-    font-size: 25px;
-    padding: 4px 12px;
-    border-radius: 50%;
-    z-index: 100;
-}
 
 /* 
 ----------------------------------------------------
@@ -442,10 +424,7 @@ FOOTER */
     .index_section_products {
         justify-content: space-around;
     }
-
-    .index_product_hide2 {
-        display: flex;
-    }
+    
     .index_medios_de_pago img {
         width: 55vw;
         height: 55px;

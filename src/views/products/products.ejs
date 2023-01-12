@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head') %> 
-<body>
+<body class="products">
     <%- include('../partials/header') %>
-        <main>
+        <main class="products_main">
 
-            <section class="index_section_products">
-            <% products.forEach(product => { %>
-                 
-                <article class="index_product">
-                    <div class="index_product_img"><img src="/img/products/<%= product.image%>" alt="product"></div>
-                    <hr>
-                    <h3 class="index_product_title"><%= product.name %>  </h3>
-                    <div class="index_product_bottom">
-                        <p class="precio">$<%= toThousand( product.price) %><em class="decimales"></em></p>
-                        <p class="index_product_envío"> Envío Gratis</p>
-                        <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver más</a>
-                    </div>
-                </article>
+            <aside class="border border-light bg-white products_aside">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active text-secondary bg-dark" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Todos</a>
+                    <a class="nav-link text-secondary" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Destacados</a>
+                    <a class="nav-link text-secondary" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Ofertas</a>
+                    <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Últimos agregados</a>
+                  </div>
+            </aside>
 
-            <% }) %>
-        </section>
+            <div class="products_page">
+                
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination d-flex justify-content-end">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true" style="color: #38184C;">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#" style="color: #38184C;">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#" style="color: #38184C;">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#" style="color: #38184C;">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true" style="color: #38184C;">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+    
+                <section class="products_section">
+                <% products.forEach(product => { %>
+                     
+                    <article class="index_product products_card">
+                        <div class="index_product_img"><img src="/img/products/<%= product.image%>" alt="product"></div>
+                        <hr>
+                        <h3 class="index_product_title"><%= product.name %>  </h3>
+                        <div class="index_product_bottom">
+                            <p class="precio">$<%= toThousand( product.price) %><em class="decimales"></em></p>
+                            <p class="index_product_envío"> Envío Gratis</p>
+                            <a href="/products/productDetail/<%=product.id %>" class="index_button_product">Ver más</a>
+                        </div>
+                    </article>
+    
+                <% }) %>
+            </section>
+    
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true" style="color: #38184C;">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#" style="color: #38184C;">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#" style="color: #38184C;">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#" style="color: #38184C;">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true" style="color: #38184C;">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
 
         </main>
 
