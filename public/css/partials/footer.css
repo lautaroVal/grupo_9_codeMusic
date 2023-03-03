@@ -57,6 +57,7 @@
         justify-content: space-around;
         flex-direction: row;
         text-align: inherit;
+        position: relative;
     }
 
     /* footer nav */
@@ -79,6 +80,12 @@
         font-size: 25px;
         padding: 2px;
         margin: 3px;
+    }
+
+    #Copyright {
+        position: absolute;
+        bottom: 0vh;
+        margin: 0;
     }
 }
 

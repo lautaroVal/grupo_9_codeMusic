@@ -66,8 +66,12 @@ html {
     margin-bottom: 5px;
 }
 /* Slider de productos */
-
-
+.glider-track {
+    width: 986px;
+}
+.glider-slide {
+    width: 43vw !important;
+}
 .offer .glider-track {
     width: 100%;
     margin: 0;
@@ -94,19 +98,22 @@ html {
     z-index: 10; 
 }
 
- .glider-prev {
+.glider-prev {
     left: 0px;
 }
-
 .glider-next {
     right: 0px;
 } 
+
+.prev2, .next3, .prev4, .next5, .prev6, .next2, .prev3, .next4, .prev5, .next6 {
+    display: none;
+}
 
 /* 
 #guitarras, #batterys, #pianos, #microphones, #winds  {  
 } */
 
-#guitarras{
+#guitarrasD, #guitarrasM {
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-méline-waxx-165971.jpg') no-repeat center center;
     background-size: cover;
     padding: 20px; 
@@ -119,7 +126,7 @@ html {
     overflow: hidden;
 }
 
-#batterys{
+#batterysD, #batterysM{
     background: linear-gradient(rgba(5, 7, 12, 0.415), rgba(5, 7, 12, 0.415)), url('../img/index/pexels-jadson-thomas-542553.jpg') no-repeat center center;
     background-size: cover;
     padding: 20px; 
@@ -130,7 +137,8 @@ html {
     position: sticky !important;
     right: 38px;
 } 
-#pianos{
+
+#pianosD, #pianosM{
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-torsten-dettlaff-2876659.jpg') no-repeat center center;
     background-size: cover;
     padding: 20px; 
@@ -141,7 +149,8 @@ html {
     position: sticky !important;
     left: 38px;
 } 
-#microphones{
+
+#microphonesD, #microphonesM{
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-wallace-chuck-3587478.jpg') no-repeat -13px center;
     background-size: cover;
     padding: 20px; 
@@ -153,7 +162,7 @@ html {
     right: 38px;
 }
 
-#winds  {
+#windsD, #windsM {
     background: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)), url('../img/index/pexels-cottonbro-4709822.jpg') no-repeat center center;
     background-size: cover;
     padding: 20px; 
@@ -163,6 +172,10 @@ html {
     justify-content: center;
     position: sticky !important;
     left: 38px;
+}
+
+#pianosD, #batterysD, #guitarrasD, #microphonesD, #windsD {
+    display: none;
 }
 
 #article_guitar {
@@ -190,7 +203,7 @@ html {
 }
 
 
-#guitarras h2, #batterys h2, #pianos h2, #microphones h2, #winds h2 {
+#guitarrasD h2, #batterysD h2, #pianosD h2, #microphonesD h2, #windsD h2 {
     color: var(--ColorBlanco);
     font-size: 18px;
     text-align: center;
@@ -389,13 +402,26 @@ FOOTER */
     justify-content: space-around;
 }
 
-#guitarras, #batterys, #pianos, #microphones, #winds {
+/* FLECHAS SLIDER */
+.prev2, .next3, .prev4, .next5, .prev6, .next2, .prev3, .next4, .prev5, .next6 {
+    display: block;
+}
+
+#guitarrasD, #batterysD, #pianosD, #microphonesD, #windsD {
     width: 158px !important;
     position: relative;
     z-index: 10;
 }
 
-#batterys, #microphones {
+#guitarrasM, #pianosM, #batterysM, #microphonesM, #windsM  { 
+    display: none;
+}
+
+#guitarrasD, #pianosD, #batterysD, #microphonesD, #windsD {
+    display: flex;
+}
+
+#batterysD, #microphonesD {
     order: 1;
 }
 
